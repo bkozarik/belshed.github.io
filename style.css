@@ -2,4 +2,45 @@ body {
     height: 100vh;
     width: 100%;
     background-color: pink;
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    font-family: 'Rubik', sans-serif;
+}
+
+.header {
+    height: 100px;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    max-width: 1170px;
+    margin: 100px auto;
+}
+
+.cards {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.card {
+    height: 155px;
+    width: 155px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    background-color: #fafafa;
+    border: 1px solid #e6e6e6;
+}
+
+.card__link {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
 }

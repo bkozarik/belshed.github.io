@@ -1,5 +1,3 @@
-/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
-
 body {
   background-color: #000;
   font-family: 'Montserrat', sans-serif;
@@ -65,7 +63,6 @@ body {
   border-radius: 30px;
   color: #fff;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#368069), to(#122023));
-  background-image: -o-linear-gradient(top, #368069 0%, #122023 100%);
   background-image: linear-gradient(to bottom, #368069 0%, #122023 100%);
   font-size: 16px;
   font-weight: normal;
@@ -236,13 +233,11 @@ body {
   padding: 30px 0px 26px 26px;
   border: 1px solid #bbb;
   -webkit-transition: .15s ease-out;
-  -o-transition: .15s ease-out;
   transition: .15s ease-out;
 }
 
 .benefit:hover {
   -webkit-transition: .15s ease-out;
-  -o-transition: .15s ease-out;
   transition: .15s ease-out;
   -webkit-box-shadow: -3px 2px 29px rgba(19, 51, 4, 0.36);
           box-shadow: -3px 2px 29px rgba(19, 51, 4, 0.36);
@@ -297,8 +292,7 @@ body {
   top: 100%;
   left: 50%;
   -webkit-transform: translate(-50%, -47%) rotate(45deg);
-          -ms-transform: translate(-50%, -47%) rotate(45deg);
-      transform: translate(-50%, -47%) rotate(45deg);
+          transform: translate(-50%, -47%) rotate(45deg);
 }
 
 .green-text {
@@ -412,7 +406,6 @@ body {
 .types {
   border: 1px solid #bbb;
   -webkit-transition: .2s ease-out;
-  -o-transition: .2s ease-out;
   transition: .2s ease-out;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -442,15 +435,13 @@ body {
   top: 100%;
   left: 50%;
   -webkit-transform: translate(-50%, -47%) rotate(45deg);
-          -ms-transform: translate(-50%, -47%) rotate(45deg);
-      transform: translate(-50%, -47%) rotate(45deg);
+          transform: translate(-50%, -47%) rotate(45deg);
 }
 
 .types:hover {
   -webkit-box-shadow: -3px 2px 29px rgba(19, 51, 4, 0.36);
           box-shadow: -3px 2px 29px rgba(19, 51, 4, 0.36);
   -webkit-transition: .2s ease-out;
-  -o-transition: .2s ease-out;
   transition: .2s ease-out;
 }
 
@@ -518,14 +509,12 @@ body {
 .the-expert a:hover {
   text-decoration: none;
   -webkit-transition: .5s ease-out;
-  -o-transition: .5s ease-out;
   transition: .5s ease-out;
   color: #086447;
 }
 
 .the-expert a:hover::after {
   -webkit-transition: .5s ease-out;
-  -o-transition: .5s ease-out;
   transition: .5s ease-out;
   width: 100%;
   left: 0;
@@ -533,7 +522,6 @@ body {
 
 .the-expert a::after {
   -webkit-transition: .5s ease-out;
-  -o-transition: .5s ease-out;
   transition: .5s ease-out;
   content: '';
   background-color: #086447;
@@ -595,14 +583,12 @@ body {
 .vest__you-link:hover {
   text-decoration: none;
   -webkit-transition: .5s ease-out;
-  -o-transition: .5s ease-out;
   transition: .5s ease-out;
   color: #000;
 }
 
 .vest__you-link:hover::after {
   -webkit-transition: .5s ease-out;
-  -o-transition: .5s ease-out;
   transition: .5s ease-out;
   width: 100%;
   left: 0;
@@ -610,7 +596,6 @@ body {
 
 .vest__you-link::after {
   -webkit-transition: .5s ease-out;
-  -o-transition: .5s ease-out;
   transition: .5s ease-out;
   content: '';
   background-color: #000;
@@ -750,11 +735,9 @@ body {
   display: block;
   width: 100%;
   -webkit-transform: scale(0);
-          -ms-transform: scale(0);
-      transform: scale(0);
+          transform: scale(0);
   -webkit-transform-origin: center;
-          -ms-transform-origin: center;
-      transform-origin: center;
+          transform-origin: center;
   border-radius: 50%;
   z-index: 2;
   background-color: #000;
@@ -762,7 +745,6 @@ body {
   top: 0;
   left: 0;
   -webkit-transition: .4s ease-in-out;
-  -o-transition: .4s ease-in-out;
   transition: .4s ease-in-out;
 }
 
@@ -775,7 +757,6 @@ body {
   z-index: 3;
   background-color: transparent;
   -webkit-transition: .4s ease-out;
-  -o-transition: .4s ease-out;
   transition: .4s ease-out;
   background-image: url(/img/play-ico.png);
   background-repeat: no-repeat;
@@ -790,20 +771,16 @@ body {
 
 .playVideo:hover::after {
   -webkit-transition: .4s ease-in-out;
-  -o-transition: .4s ease-in-out;
   transition: .4s ease-in-out;
   -webkit-transform: scale(2);
-          -ms-transform: scale(2);
-      transform: scale(2);
+          transform: scale(2);
 }
 
 .playVideo:hover::before {
   -webkit-transition: .4s ease-out;
-  -o-transition: .4s ease-out;
   transition: .4s ease-out;
   -webkit-transform: scale(1.05);
-          -ms-transform: scale(1.05);
-      transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 .comments {
@@ -811,7 +788,6 @@ body {
   height: 600px;
   overflow: hidden;
   -webkit-transition: 1s ease-in-out;
-  -o-transition: 1s ease-in-out;
   transition: 1s ease-in-out;
 }
 
@@ -901,7 +877,7 @@ body {
 
 .prohibition__img {
   display: block;
-  display: none;
+  display-display: none;
 }
 
 @media screen and (min-width: 415px) {
@@ -920,3 +896,4 @@ body {
     display: none;
   }
 }
+/*# sourceMappingURL=style.css.map */
