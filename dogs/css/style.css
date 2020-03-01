@@ -88,14 +88,14 @@ body {
   padding-top: 40px;
   background-color: #fff;
   height: 849px;
-  background-image: url(/img/head-page-bg.png);
+  background-image: url(img/head-page-bg.png);
   background-position-x: right;
   background-repeat: no-repeat;
 }
 
 @media (max-width: 415px) {
   .head-page {
-    background-image: url(/img/mobile-bg1.png);
+    background-image: url(img/mobile-bg1.png);
     background-position-y: bottom;
     background-position-x: center;
     background-repeat: no-repeat;
@@ -323,13 +323,13 @@ body {
 }
 
 .benefit-item-bg-1 {
-  background-image: url(/img/benefit-1-bg.png);
+  background-image: url(img/benefit-1-bg.png);
   background-repeat: no-repeat;
 }
 
 @media (max-width: 415px) {
   .benefit-item-bg-1 {
-    background-image: url(/img/benefits-page-mob-bg.png);
+    background-image: url(img/benefits-page-mob-bg.png);
     background-position-y: bottom;
     background-position-x: center;
     background-repeat: no-repeat;
@@ -338,13 +338,13 @@ body {
 }
 
 .benefit-item-bg-2 {
-  background-image: url(/img/benefit-2-bg.png);
+  background-image: url(img/benefit-2-bg.png);
   background-repeat: no-repeat;
 }
 
 @media (max-width: 415px) {
   .benefit-item-bg-2 {
-    background-image: url(/img/benefits-page-mob-bg.png);
+    background-image: url(img/benefits-page-mob-bg.png);
     background-position-y: bottom;
     background-position-x: center;
     background-repeat: no-repeat;
@@ -353,13 +353,13 @@ body {
 }
 
 .benefit-item-bg-3 {
-  background-image: url(/img/benefit-3-bg.png);
+  background-image: url(img/benefit-3-bg.png);
   background-repeat: no-repeat;
 }
 
 @media (max-width: 415px) {
   .benefit-item-bg-3 {
-    background-image: url(/img/benefits-page-mob-bg.png);
+    background-image: url(img/benefits-page-mob-bg.png);
     background-position-y: bottom;
     background-position-x: center;
     background-repeat: no-repeat;
@@ -368,13 +368,13 @@ body {
 }
 
 .benefit-item-bg-4 {
-  background-image: url(/img/benefit-4-bg.png);
+  background-image: url(img/benefit-4-bg.png);
   background-repeat: no-repeat;
 }
 
 @media (max-width: 415px) {
   .benefit-item-bg-4 {
-    background-image: url(/img/benefits-page-mob-bg.png);
+    background-image: url(img/benefits-page-mob-bg.png);
     background-position-y: bottom;
     background-position-x: center;
     background-repeat: no-repeat;
@@ -550,7 +550,7 @@ body {
 .vest {
   background-color: #fff;
   text-align: center;
-  background-image: url(/img/bgg.png);
+  background-image: url(img/bgg.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-position-y: bottom;
@@ -664,14 +664,14 @@ body {
 
 .comfort {
   background-color: #fff;
-  background-image: url(/img/comfort-bg.png);
+  background-image: url(img/comfort-bg.png);
   background-repeat: no-repeat;
   background-position-x: right;
 }
 
 @media screen and (max-width: 415px) {
   .comfort {
-    background-image: url(/img/comfort-mobile-bg.png);
+    background-image: url(img/comfort-mobile-bg.png);
     background-position-x: 215px;
     background-position-y: bottom;
   }
@@ -758,7 +758,7 @@ body {
   background-color: transparent;
   -webkit-transition: .4s ease-out;
   transition: .4s ease-out;
-  background-image: url(/img/play-ico.png);
+  background-image: url(img/play-ico.png);
   background-repeat: no-repeat;
   background-position-x: center;
   background-position-y: center;
@@ -875,12 +875,10 @@ body {
   }
 }
 
-@media (max-width: 415px) {
-  .prohibition__img {
-    display: none;
-  }
+.prohibition__img {
+  display: block;
+  display-display: none;
 }
-
 
 @media screen and (min-width: 415px) {
   .prohibition .cross-wrap {
