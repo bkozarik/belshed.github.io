@@ -327,6 +327,7 @@ body {
   background-repeat: no-repeat;
 }
 
+
 @media (max-width: 415px) {
   .benefit-item-bg-1 {
     background-image: url(/dogs/img/benefits-page-mob-bg.png);
