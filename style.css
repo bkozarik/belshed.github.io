@@ -37,10 +37,20 @@ body {
     -o-border-radius: 5px;
     background-color: #fafafa;
     border: 1px solid #e6e6e6;
+    position: relative;
 }
 
 .card__link {
+    height: 100%;
+    width: 100%;
+    display: block;
     text-decoration: none;
     color: #000;
     font-weight: bold;
+}
+
+.card__wrap, .card__img {
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
 }
