@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', function(){
     let next = document.querySelector('.content__next');
     let list_item = document.querySelector('.content__item');
     let list_items = document.querySelectorAll('.content__item');
-    
     let px = 0;
 
     list_items.forEach(function(item, index){
@@ -13,8 +12,9 @@ document.addEventListener('DOMContentLoaded', function(){
     });
 
     list.style.width = (parseInt(list_items[0].style.width, 10)) * list_items.length + 'px';
-    
-    prev.addEventListener('click', function(){
+
+    function prevSlide()
+    {
         if(px != 0)
         {
             px +=  (list_item.offsetWidth);
@@ -24,9 +24,10 @@ document.addEventListener('DOMContentLoaded', function(){
             px = 0;
         }
         list.style.transform = 'translateX(' + px + 'px)';
-    });
+    }
 
-    next.addEventListener('click', function(){
+    function nextSlide()
+    {
         if(px != 0 - ((list_item.offsetWidth) * (list_items.length - 1)))
         {
             px -=  (list_item.offsetWidth);
@@ -36,5 +37,8 @@ document.addEventListener('DOMContentLoaded', function(){
             px = 0;
         }
         list.style.transform = 'translateX(' + px + 'px)';
-    });
+    }
+
+    prev.addEventListener('click', prevSlide);
+    next.addEventListener('click', nextSlide);
 });
