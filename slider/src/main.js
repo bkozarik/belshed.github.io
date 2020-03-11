@@ -7,12 +7,14 @@ document.addEventListener('DOMContentLoaded', function(){
     let list_items = document.querySelectorAll('.content__item');
     let px = 0;
 
-    list_items.forEach(function(item, index){
-        item.style.width = content.clientWidth + 'px';
-    });
-
-    list.style.width = (parseInt(list_items[0].style.width, 10)) * list_items.length + 'px';
-
+    function sync()
+    {
+        list_items.forEach(function(item, index){
+            item.style.width = content.clientWidth + 'px';
+        });
+    
+        list.style.width = (parseInt(list_items[0].style.width, 10)) * list_items.length + 'px';
+    }
     function prevSlide()
     {
         if(px != 0)
@@ -41,4 +43,6 @@ document.addEventListener('DOMContentLoaded', function(){
 
     prev.addEventListener('click', prevSlide);
     next.addEventListener('click', nextSlide);
+    let timerSync = setInterval(sync, 100);
+    //let timerSwipe = setInterval(nextSlide, 8000);
 });

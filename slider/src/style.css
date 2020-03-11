@@ -6,6 +6,8 @@ body {
     height: 100vh;
     width: 100%;
     background-image: linear-gradient(to top right, rgb(76, 189, 136), rgb(89, 190, 148), rgb(103, 192, 160), rgb(116, 193, 172), rgb(130, 195, 184), rgb(143, 196, 196), rgb(139, 196, 187), rgb(135, 195, 179), rgb(131, 195, 170), rgb(127, 195, 161), rgb(123, 194, 153), rgb(119, 194, 144));
+    background-repeat: no-repeat;
+    background-size: cover;
     margin: 0;
     padding: 0;
     font-size: 18px;
@@ -20,6 +22,7 @@ body {
     background-color: transparent;
     overflow: hidden;
     position: relative;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
 }
 
 .content__list {
