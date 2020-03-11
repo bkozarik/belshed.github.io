@@ -49,8 +49,14 @@ body {
     -moz-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     -o-transform: translateY(-50%);
+    opacity: .7;
+    cursor: pointer;
 }
 
+.content__prev:focus,
+.content__next:focus {
+    outline: none;
+}
 .content__next{
     left: 100%;
     transform: translate(-100%, -50%);
