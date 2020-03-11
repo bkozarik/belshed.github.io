@@ -7,13 +7,17 @@ document.addEventListener('DOMContentLoaded', function(){
     let list_items = document.querySelectorAll('.content__item');
     
     let px = 0;
+
     list_items.forEach(function(item, index){
         item.style.width = content.clientWidth + 'px';
     });
+
+    list.style.width = (parseInt(list_items[0].style.width, 10)) * list_items.length + 'px';
+    
     prev.addEventListener('click', function(){
         if(px != 0)
         {
-            px +=  (list_item.offsetWidth + 40);
+            px +=  (list_item.offsetWidth);
         }
         else
         {
@@ -23,9 +27,9 @@ document.addEventListener('DOMContentLoaded', function(){
     });
 
     next.addEventListener('click', function(){
-        if(px != 0 - ((list_item.offsetWidth + 40) * (list_items.length - 1)))
+        if(px != 0 - ((list_item.offsetWidth) * (list_items.length - 1)))
         {
-            px -=  (list_item.offsetWidth + 40);
+            px -=  (list_item.offsetWidth);
         }
         else
         {
