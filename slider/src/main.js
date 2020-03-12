@@ -45,11 +45,11 @@ document.addEventListener('DOMContentLoaded', function(){
 
     function compare()
     {
-        if((endPos - startPos) > 200)
+        if((endPos - startPos) > 100)
         {
             prevSlide();
         }
-        else if((startPos - endPos) > 200)
+        else if((startPos - endPos) > 100)
         {
             nextSlide();
         }
