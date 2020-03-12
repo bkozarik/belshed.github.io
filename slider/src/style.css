@@ -12,10 +12,12 @@ body {
     padding: 0;
     font-size: 18px;
     font-family: 'Rubik', sans-serif;
-    padding: 100px 30px;
+    padding: 0px 30px;
 }
 
 .content {
+    top: 50%;
+    transform: translateY(-50%);
     margin: 0px auto;
     height: 400px;
     max-width: 800px;
@@ -23,6 +25,10 @@ body {
     overflow: hidden;
     position: relative;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
 }
 
 .content__list {
