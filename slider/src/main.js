@@ -61,7 +61,6 @@ document.addEventListener('DOMContentLoaded', function(){
         evt.preventDefault();
         startPos = evt.changedTouches[0].pageX;
         console.log(startPos);
-        compare();
     }
 
     function handleMove(evt)
