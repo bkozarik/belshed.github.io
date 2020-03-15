@@ -2,6 +2,14 @@ $mainText: #1D1D1D
 $purpleText: #5306E1
 $orangeText: #FFA801
 
+.orange-text
+    color: $orangeText
+
+.purple-text
+    color: $purpleText
+
+.main-text
+    color: $mainText
 *
     box-sizing: border-box
     font-family: 'Open Sans', sans-serif
@@ -12,11 +20,12 @@ $orangeText: #FFA801
     color: $mainText
 
 .head-page
-    background-image: url(/src/img/header-page_bg.png)
+    background-image: url(../src/img/header-page_bg.png)
     background-repeat: no-repeat
     background-size: cover
     height: 100vh
     width: 100%
+    padding-top: 10px
 
 .header 
     background-color: #fff
@@ -67,19 +76,211 @@ $orangeText: #FFA801
 .login
     padding: 10px 15px
 
-.big-title
+.section__head
     font-size: 40px
     line-height: 45px
     font-weight: bold
 
 .slider
-    margin-top: 120px
+    margin-top: 40px
+
+.slide__control
+    display: flex
+    align-items: center
+
+.slide__text
+    margin-top: 80px
 
 .slider__title
     color: #fff
+
+.entrude
+    padding-top: 20px
+    padding-bottom: 20px
+    width: 100%
 
 .slider__text
     color: #fff
 
 .orange-text
     color: $orangeText
+
+.play
+    height: 65px
+    width: 65px
+    border-radius: 100%
+    border: none
+    background-color: $orangeText
+    position: relative
+    &__vertical
+        position: absolute
+        width: 3px
+        height: 30px
+        display: block
+        background-color: #f1f1f1
+        transform: translate(20px,-50%)
+    &__triangle
+        position: absolute
+        width: 3px
+        height: 30px
+        display: block
+        background-color: #f1f1f1
+        transform: translate(27px,-50%)
+        &::before
+            content: ''
+            position: absolute
+            width: 3px
+            height: 25px
+            display: block
+            background-color: #f1f1f1
+            transform: translate(0px, 5%) rotate(-54deg)
+            transform-origin: top
+        &::after
+            content: ''
+            position: absolute
+            width: 3px
+            height: 25px
+            display: block
+            background-color: #f1f1f1
+            transform: translate(0px, 16%) rotate(55deg)
+            transform-origin: bottom
+
+.slider-btn
+    padding: 20px 60px
+    border-radius: 0px 33.5px 33.5px 33.5px
+
+.how
+    padding-top: 60px
+
+.section__head
+
+.how__list
+    list-style-type: none
+    position: relative
+.how__item
+    display: flex
+    &:hover 
+        .how__text
+            display: block
+        
+.how__name
+    margin-bottom: 20px
+    display: flex
+    justify-content: center
+    align-items: center
+    border-radius: 10px
+    padding: 20px 0px
+    width: 100%
+    background-color: #f1f1f1
+    transition: .3s ease
+    position: relative
+    &:hover
+        background-color: $purpleText
+        transition: .3s ease
+        &::before
+            transition: .3s ease
+            background-color: $purpleText
+            color: #f1f1f1
+            font-weight: bold
+        .how__p
+            transition: .3s ease
+            color: #f1f1f1
+            font-weight: bold
+    &::before
+        transition: .3s ease
+        content: ''
+        height: 66px
+        width: 66px
+        background-color: #f1f1f1
+        border-radius: 50%
+        display: flex
+        justify-content: center
+        align-items: center
+        position: absolute
+        left: -76px
+
+.how__text
+    position: absolute
+    display: none
+    padding: 20px
+    border-radius: 10px
+    background-color: #f1f1f1
+
+.how__item:nth-child(1)
+    .how__name::before
+        content: '1'
+    .how__text
+        top: 0px
+.how__item:nth-child(2)
+    .how__name::before
+        content: '2'
+    .how__text
+        top: -82px
+.how__item:nth-child(3)
+    .how__name::before
+        content: '3'
+    .how__text
+        top: -164px
+.how__item:nth-child(4)
+    .how__name::before
+        content: '4'
+    .how__text
+        top: -246px
+     
+.how__p
+    transition: .3s ease
+    margin: 0
+    color: $purpleText
+
+.partners
+    margin-top: 120px
+    overflow: hidden
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    padding-bottom: 60px
+    &__logos
+        transform: translateX(0px)
+        display: flex
+    &__img-wrap
+        margin-right: 67px
+
+.advantages
+    background: rgb(25,9,54)
+    background: linear-gradient(29deg, rgba(25,9,54,1) 0%, rgba(44,14,102,1) 50%, rgba(27,11,60,1) 100%)
+    padding: 60px 0px
+    &__grid
+        display: grid
+        grid-template-columns: 220px 220px
+        grid-column-gap: 135px
+        grid-row-gap: 80px
+        margin-top: 60px
+    &__item
+        max-width: 220px
+    &__title
+        text-align: right
+        color: #fff
+        font-weight: bold
+        font-size: 20px
+        line-height: 27px
+        margin-bottom: 15px
+    &__text
+        color: #fff
+        font-size: 16px
+        line-height: 22px
+    &__diag
+        margin-left: 15px
+    
+.portfolio
+    padding: 60px 0px
+    p
+        font-size: 16px
+        line-height: 22px
+    &__list
+        list-style-position: inside
+    &__item
+        font-size: 16px
+        line-height: 22px
+    .section__head
+        margin-bottom: 35px
