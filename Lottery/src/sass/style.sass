@@ -258,6 +258,11 @@ $orangeText: #FFA801
         margin-top: 60px
     &__item
         max-width: 220px
+        &:hover
+            .advantages__diag
+                transition: .2s ease-in
+                box-shadow: 0 10px 100px #421d8a
+                transform: scale(1.2)
     &__title
         text-align: right
         color: #fff
@@ -270,6 +275,7 @@ $orangeText: #FFA801
         font-size: 16px
         line-height: 22px
     &__diag
+        transition: .2s ease-in
         margin-left: 15px
     
 .portfolio
@@ -284,3 +290,81 @@ $orangeText: #FFA801
         line-height: 22px
     .section__head
         margin-bottom: 35px
+    &__wrapper
+        display: flex
+        width: 2000px
+        position: relative
+        margin-bottom: 20px
+    &__slider
+        width: 660px
+        overflow: hidden
+    &__slide
+        margin: 0 10px
+        display: inline-block
+        height: 415px
+        width: 635px
+    &__img
+        object-fit: contain
+    &__prev
+        position: absolute
+        top: 50%
+        transform: translate(61%, -50%)
+        height: 60px
+        width: 32px
+        border: none
+        background-color: transparent
+        &::after
+            content: ''
+            top: 0
+            position: absolute
+            background: rgba(29, 29, 29, 0.2)
+            border-radius: 2.5px
+            width: 5px
+            height: 44px
+            transform: rotate(40deg)
+            transform-origin: center
+        &::before
+            content: ''
+            top: 50%
+            position: absolute
+            background: rgba(29, 29, 29, 0.2)
+            border-radius: 2.5px
+            width: 5px
+            height: 44px
+            transform: rotate(-40deg)
+            transform-origin: center
+            
+    &__next
+        position: absolute
+        top: 50%
+        transform: translate(calc(635px - 42%), -50%)
+        height: 60px
+        width: 32px
+        border: none
+        background-color: transparent
+        &::after
+            content: ''
+            top: 0
+            position: absolute
+            background: rgba(29, 29, 29, 0.2)
+            border-radius: 2.5px
+            width: 5px
+            height: 44px
+            transform: rotate(-40deg)
+            transform-origin: center
+        &::before
+            content: ''
+            top: 50%
+            position: absolute
+            background: rgba(29, 29, 29, 0.2)
+            border-radius: 2.5px
+            width: 5px
+            height: 44px
+            transform: rotate(40deg)
+            transform-origin: center
+    &__radios
+        display: flex
+        justify-content: center
+    &__radio
+        margin-right: 10px
+        
