@@ -467,3 +467,108 @@ $orangeText: #FFA801
     &__buy:hover
         transition: .3s ease-in
         background: linear-gradient(234.31deg, #5306E1 0%, #8627E3 100%)
+
+.coments
+    padding: 60px 0px
+
+    &__slider
+
+    &__slide
+
+    &__photo
+
+    &__item
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        margin-top: 60px
+        width: 500px
+        background-color: #f1f1f1
+        height: 200px
+        border-radius: 50%
+        position: relative
+        padding: 0px 50px
+    &__name
+        font-weight: bold
+        margin-bottom: 15px
+        font-size: 20px
+        line-height: 27px
+        color: #5306E1
+    &__coment
+        font-size: 16px
+        line-height: 22px
+        color: #1D1D1D
+
+.form
+    background: rgb(25,9,54)
+    background: linear-gradient(29deg, rgba(25,9,54,1) 0%, rgba(44,14,102,1) 50%, rgba(27,11,60,1) 100%)
+    padding: 60px 0px
+    .section__head
+        text-align: center
+        margin-bottom: 30px
+    &__wrap
+        background-color: #fff
+        width: 100%
+        border-radius: 10px
+        border: 10px solid #8023E3
+        padding: 45px 95px 25px 95px
+    
+    &__fields
+        width: 100%
+        input
+            border: none
+            border-bottom: 2px solid #1D1D1D
+            width: 100%
+            margin-bottom: 30px
+            font-weight: bold
+            font-size: 20px
+            line-height: 27px
+            color: #1d1d1d
+            &:focus
+                outline: none
+    &__name
+
+    &__label
+        padding-right: 100px
+        margin-left: 65px
+        position: relative
+        cursor: pointer
+        transition: .2s ease-in-out
+        user-select: none
+        span
+            &::before
+                content: ''
+                left: -65px
+                display: block
+                position: absolute
+                background-color: transparent
+                background-color: #ffa801
+                height: 40px
+                width: 40px
+                border-radius: 10px
+            &::after
+                content: ''
+                top: 0
+                display: none
+                position: absolute
+                background-color: transparent
+                background-color: #fff
+                transform: translate(-275%, 50%)
+                height: 20px
+                width: 20px
+                border-radius: 10px
+                transition: .2s ease-in-out
+        
+    &__button
+        color: #fff !important
+        padding-left: 40px
+        padding-right: 40px
+    &__agreement
+        display: none
+
+    &__agreement:checked + span::after
+        transition: .2s ease-in-out
+        display: block
+        margin-bottom: 0px !important
+        
