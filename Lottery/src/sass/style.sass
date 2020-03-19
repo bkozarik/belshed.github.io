@@ -296,15 +296,16 @@ $orangeText: #FFA801
         position: relative
         margin-bottom: 20px
     &__slider
-        width: 660px
+        max-width: 660px
         overflow: hidden
     &__slide
         margin: 0 10px
         display: inline-block
         height: 415px
-        width: 635px
+        max-width: 635px
+        object-fit: cover
     &__img
-        object-fit: contain
+        object-fit: cover
     &__prev
         position: absolute
         top: 50%
@@ -367,4 +368,102 @@ $orangeText: #FFA801
         justify-content: center
     &__radio
         margin-right: 10px
+
+.price
+    background: rgb(25,9,54)
+    background: linear-gradient(29deg, rgba(25,9,54,1) 0%, rgba(44,14,102,1) 50%, rgba(27,11,60,1) 100%)
+    padding: 60px 0px
+    .section__head
+        text-align: right
+    &__checkbox
+        display: none
+    &__span
+        position: relative
+        cursor: pointer
+        user-select: none
+        &::before
+            content: "Месяц"
+            transition: .2s
+            padding: 15px 40px
+            font-size: 16px
+            line-height: 22px
+            color: #fff
+            background-color: #FFA801
+            border-radius: 6px 0px 0px 6px
+            width: 128px
+            user-select: none
+            position: absolute
+        &::after
+            content: "Год"
+            transition: .2s
+            transform: translateX(100%)
+            padding: 15px 40px
+            font-size: 16px
+            line-height: 22px
+            color: #1d1d1d
+            background-color: #fff
+            border-radius: 0px 6px 6px 0px
+            width: 128px
+            user-select: none
+            position: absolute
+    &__checkbox:checked + &__span::before
+        background-color: #fff
+        color: #1d1d1d
+    &__checkbox:checked + &__span::after
+        background-color: #FFA801
+        color: #fff
+
+.rate
+    margin-top: 30px
+    padding: 22px
+    background-color: #fff
+    border-radius: 10px
+    width: 100%
+    min-height: 300px
+    display: flex
+    flex-direction: column
+    align-items: center
+    color: #1D1D1D
+    &__head
+        font-size: 20px
+        line-height: 27px
+        font-weight: bold
+    &__disc
+        font-size: 11.5px
+        line-height: 16px
+    &__features
         
+    &__feature
+        font-size: 16px
+        line-height: 22px
+        list-style-position: inside
+        margin-bottom: 15px
+    &__br
+        display: block
+        width: 190px
+        height: 3px
+        background: #FFA801
+        border-radius: 2px
+    &__price
+        font-weight: bold
+        font-size: 20px
+        line-height: 27px
+        text-transform: lowercase
+        margin: 12px 0px
+        color: #5306E1
+    &__buy
+        font-size: 20px
+        line-height: 27px
+        text-transform: uppercase
+        font-weight: bold
+        border: none
+        width: 100%
+        padding: 10px
+        background: #C4C4C4
+        border-radius: 10px
+        color: #fff
+        outline: none
+        transition: .3s ease-in
+    &__buy:hover
+        transition: .3s ease-in
+        background: linear-gradient(234.31deg, #5306E1 0%, #8627E3 100%)
