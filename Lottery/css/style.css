@@ -26,7 +26,7 @@
   background-image: url(../src/img/header-page_bg.png);
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
+  height: 80vh;
   width: 100%;
   padding-top: 10px;
 }
@@ -839,5 +839,24 @@
   transition: .2s ease-in-out;
   display: block;
   margin-bottom: 0px !important;
+}
+
+.footer {
+  padding: 20px 0px;
+  background-color: #fff;
+}
+
+.footer__link-list {
+  margin: 0;
+}
+
+.footer__link {
+  list-style-type: none;
+}
+
+.footer__link a {
+  font-size: 16px;
+  line-height: 22px;
+  color: #1D1D1D;
 }
 /*# sourceMappingURL=style.css.map */
