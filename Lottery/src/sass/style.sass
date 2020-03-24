@@ -19,6 +19,39 @@ $orangeText: #FFA801
     font-size: 16px
     color: $mainText
 
+.radio
+    position: relative
+    margin: 10px
+    user-select: none
+    &__span::before
+        content: ''
+        top: 0
+        left: 0
+        width: 14px
+        height: 14px
+        border-radius: 50%
+        background-color: #f1f1f1
+        position: absolute
+        cursor: pointer
+    &__span::after
+        content: ''
+        top: 0
+        left: 0
+        width: 14px
+        height: 14px
+        border-radius: 50%
+        background-color: #FFA801
+        position: absolute
+        cursor: pointer
+        opacity: 0
+        z-index: 2
+        transition: opacity .2s ease-out
+    input
+        display: none
+    input:checked + .radio__span::after
+        opacity: 1
+        transition: opacity .2s ease-out
+    
 .head-page
     background-image: url(../src/img/header-page_bg.png)
     background-repeat: no-repeat
@@ -382,7 +415,7 @@ $orangeText: #FFA801
     &__next
         position: absolute
         top: 50%
-        transform: translate(calc(635px - 42%), -50%)
+        transform: translate(calc(610px - 50%), -50%)
         height: 60px
         width: 32px
         border: none
@@ -410,6 +443,7 @@ $orangeText: #FFA801
     &__radios
         display: flex
         justify-content: center
+        height: 40px
     &__radio
         margin-right: 10px
 

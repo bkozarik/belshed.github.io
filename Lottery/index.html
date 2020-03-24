@@ -23,11 +23,11 @@
                                 <span></span>
                             </div>
                             <ul class="header__nav">
-                                <li class="header__nav__item"><a href="#" class="header__link">Как это работает</a></li>
-                                <li class="header__nav__item"><a href="#" class="header__link">Почему мы</a></li>
-                                <li class="header__nav__item"><a href="#" class="header__link">Тарифы</a></li>
-                                <li class="header__nav__item"><a href="#" class="header__link">Портфолио</a></li>
-                                <li class="header__nav__item"><a href="#" class="header__link">Отзывы</a></li>
+                                <li class="header__nav__item"><a href="#how" class="header__link">Как это работает</a></li>
+                                <li class="header__nav__item"><a href="#advantages" class="header__link">Почему мы</a></li>
+                                <li class="header__nav__item"><a href="#price" class="header__link">Тарифы</a></li>
+                                <li class="header__nav__item"><a href="#portfolio" class="header__link">Портфолио</a></li>
+                                <li class="header__nav__item"><a href="#coments" class="header__link">Отзывы</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -70,10 +70,19 @@
                                         <div class="col-md-1">
                                             <label for="play" class="slider__text">Смотреть видео</label>
                                         </div>
-                                        <div class="col-md-1 offset-md-1">
-                                            <input type="radio" name="sliderPage" checked>
-                                            <input type="radio" name="sliderPage">
-                                            <input type="radio" name="sliderPage">
+                                        <div class="col-md-2 offset-md-1">
+                                            <label class="radio">
+                                                <input type="radio" name="sliderPage1" checked>
+                                                <span class="radio__span"></span>
+                                            </label>
+                                            <label class="radio">
+                                                <input type="radio" name="sliderPage1">
+                                                <span class="radio__span"></span>
+                                            </label>
+                                            <label class="radio">
+                                                <input type="radio" name="sliderPage1">
+                                                <span class="radio__span"></span>
+                                            </label>
                                         </div>
                                         <div class="col-md-3 offset-md-1">
                                             <input type="button" class="button slider-btn" value="Следующий виджет">
@@ -93,9 +102,21 @@
                                 </div>
                                 <div class="col-md-7">
                                     <div class="slide__control">
-                                        <input type="radio" name="sliderPage" >
-                                        <input type="radio" name="sliderPage">
-                                        <input type="radio" name="sliderPage">
+                                        <label class="radio">
+                                            <input type="radio" name="sliderPage2">
+                                            <span class="radio__span"></span>
+                                            <span class="radio__span"></span>
+                                        </label>
+                                        <label class="radio">
+                                            <input type="radio" name="sliderPage2" checked>
+                                            <span class="radio__span"></span>
+                                            <span class="radio__span"></span>
+                                        </label>
+                                        <label class="radio">
+                                            <input type="radio" name="sliderPage2">
+                                            <span class="radio__span"></span>
+                                            <span class="radio__span"></span>
+                                        </label>
                                         <input type="button" class="button slider-btn" value="Следующий виджет">
                                     </div>
                                 </div>
@@ -112,9 +133,18 @@
                                 </div>
                                 <div class="col-md-7">
                                     <div class="slide__control">
-                                        <input type="radio" name="sliderPage" >
-                                        <input type="radio" name="sliderPage">
-                                        <input type="radio" name="sliderPage">
+                                        <label class="radio">
+                                            <input type="radio" name="sliderPage3">
+                                            <span class="radio__span"></span>
+                                        </label>
+                                        <label class="radio">
+                                            <input type="radio" name="sliderPage3">
+                                            <span class="radio__span"></span>
+                                        </label>
+                                        <label class="radio">
+                                            <input type="radio" name="sliderPage3" checked>
+                                            <span class="radio__span"></span>
+                                        </label>
                                         <input type="button" class="button slider-btn" value="Следующий виджет">
                                     </div>
                                 </div>
@@ -127,7 +157,7 @@
         </div>
     </div>
 </section>
-<section class="how">
+<section id="how" class="how">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-md-2">
@@ -226,19 +256,43 @@
                         </div>
                     </div>
                     <div class="partner__radios">
-                        <input type="radio" name="partner__radio" class="partners__radio" checked>
-                        <input type="radio" name="partner__radio" class="partners__radio">
-                        <input type="radio" name="partner__radio" class="partners__radio">
-                        <input type="radio" name="partner__radio" class="partners__radio">
-                        <input type="radio" name="partner__radio" class="partners__radio">
-                        <input type="radio" name="partner__radio" class="partners__radio">
+                        <label class="radio">
+                            <input type="radio" name="partner__radio" class="partners__radio" checked>
+                            <span class="radio__span"></span>
+                            <span class="radio__span"></span>
+                        </label>
+                        <label class="radio">
+                            <input type="radio" name="partner__radio" class="partners__radio">
+                            <span class="radio__span"></span>
+                            <span class="radio__span"></span>
+                        </label>
+                        <label class="radio">
+                            <input type="radio" name="partner__radio" class="partners__radio">
+                            <span class="radio__span"></span>
+                            <span class="radio__span"></span>
+                        </label>
+                        <label class="radio">
+                            <input type="radio" name="partner__radio" class="partners__radio">
+                            <span class="radio__span"></span>
+                            <span class="radio__span"></span>
+                        </label>
+                        <label class="radio">
+                            <input type="radio" name="partner__radio" class="partners__radio">
+                            <span class="radio__span"></span>
+                            <span class="radio__span"></span>
+                        </label>
+                        <label class="radio">
+                            <input type="radio" name="partner__radio" class="partners__radio">
+                            <span class="radio__span"></span>
+                            <span class="radio__span"></span>
+                        </label>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
-<section class="advantages">
+<section id="advantages" class="advantages">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-6">
@@ -274,7 +328,7 @@
         </div>
     </div>
 </section>
-<section class="portfolio">
+<section id="portfolio" class="portfolio">
     <div class="container">
         <div class="row">
             <div class="col-md-5">
@@ -308,16 +362,25 @@
 
                     
                     <div class="portfolio__radios">
-                        <input type="radio" class="portfolio__radio" name="portfolio__radio" checked>
-                        <input type="radio" class="portfolio__radio" name="portfolio__radio">
-                        <input type="radio" class="portfolio__radio" name="portfolio__radio">
+                        <label class="radio">
+                            <input type="radio" name="portfolio__radio" class="portfolio__radio" checked>
+                            <span class="radio__span"></span>
+                        </label>
+                        <label class="radio">
+                            <input type="radio" name="portfolio__radio" class="portfolio__radio">
+                            <span class="radio__span"></span>
+                        </label>
+                        <label class="radio">
+                            <input type="radio" name="portfolio__radio" class="portfolio__radio">
+                            <span class="radio__span"></span>
+                        </label>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
-<section class="price">
+<section id="price" class="price">
     <div class="container">
         <div class="row justify-content-between">
             <div class="col-md-3">
@@ -407,7 +470,7 @@
         </div>
     </div>
 </section>
-<section class="coments">
+<section id="coments" class="coments">
     <div class="container">
         <div class="row">
             <div class="col-md-3">
