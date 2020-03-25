@@ -1,0 +1,103 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(to top right, rgb(76, 189, 136), rgb(89, 190, 148), rgb(103, 192, 160), rgb(116, 193, 172), rgb(130, 195, 184), rgb(143, 196, 196), rgb(139, 196, 187), rgb(135, 195, 179), rgb(131, 195, 170), rgb(127, 195, 161), rgb(123, 194, 153), rgb(119, 194, 144));
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    font-family: 'Rubik', sans-serif;
+    padding: 0px 30px;
+}
+
+.slider__item {
+    width: 300px;
+    height: 200px;
+    background-color: aqua;
+    margin: 5px;
+}
+
+.slick-track {
+    display: flex;
+    align-items: flex-start;
+}
+
+.slick-list {
+    overflow: hidden;
+}
+
+.slider {
+    position: relative;
+    padding: 0px 50px;
+}
+
+.slider .slick-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    z-index: 3;
+}
+
+.slider .slick-arrow.slick-prev {
+    left: 0;
+}
+
+.slider .slick-arrow.slick-next {
+    right: 0;
+}
+
+.slider .slick-dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.slider .slick-dots li {
+    list-style-type: none;
+    margin: 0px 10px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.slider .slick-dots button {
+    font-size: 0;
+    height: 15px;
+    width: 15px;
+    border: none;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    background-color: yellow;
+    outline: none;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+    -webkit-transition: .2s ease-in-out;
+    -moz-transition: .2s ease-in-out;
+    -ms-transition: .2s ease-in-out;
+    -o-transition: .2s ease-in-out;
+}
+
+.slider .slick-dots li.slick-active button{
+    transition: .2s ease-in-out;
+    background-color: transparent;
+    border: 1px solid yellow;
+    -webkit-transition: .2s ease-in-out;
+    -moz-transition: .2s ease-in-out;
+    -ms-transition: .2s ease-in-out;
+    -o-transition: .2s ease-in-out;
+}
