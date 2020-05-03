@@ -1,0 +1,702 @@
+$prestige: 'Prestige Normal', arial
+$compact: 'Compact', sans-serif
+
+$milk: #FCFCF5
+$black: #0E0C0A
+
+
+*
+    box-sizing: border-box
+    margin: 0
+    padding: 0
+    font-family: $prestige
+    color: $black
+    transition: all .2s ease-in-out 0s
+    text-decoration: none
+    outline: none
+
+button
+    &:hover
+        cursor: pointer    
+
+body
+    background-color: $milk
+    height: 3000px
+
+.light-button, .dark-button, .trans-button
+    width: 100%
+    display: block
+    text-align: center
+    margin: 18px 0
+    font-size: 15px
+    line-height: 22px
+    text-transform: uppercase
+    text-decoration: none
+    font-family: $prestige
+    border: 1px solid $black
+    padding: 13px 0
+
+.trans-button
+    background-color: transparent
+    color: $milk
+    &:hover
+        background-color: rgba(0, 0, 0, .5)
+
+.light-button
+    background-color: $milk
+    color: $black
+    &:hover
+        background-color: $black
+        color: $milk
+
+.dark-button
+    background-color: $black
+    color: $milk
+    &:hover
+        background-color: $milk
+        color: $black
+
+h1 h2
+    font-family: $compact
+
+section
+    margin-top: 70px
+
+.h1-title
+    font-size: 100px
+    line-height: 110px
+    color: $milk
+    text-transform: uppercase
+
+.dark-section
+    background-color: $black
+
+.content
+    padding: 0px 15px
+    max-width: 1280px
+    margin: 0 auto
+    //overflow: hidden
+
+.mobile-content
+    padding: 0
+
+.header
+    width: 100%
+    height: 82px
+    border-top: 4px solid $black
+    border-bottom: 4px solid $black
+    position: relative
+    z-index: 4
+    &::after, &::before
+        content: ''
+        display: block
+        position: absolute
+        width: 100%
+        height: 2px
+        background-color: $black
+    &::after
+        top: 4px
+    &::before
+        bottom: 4px
+    &__popup
+        padding: 40px 16px
+        background-color: $milk
+        max-width: 375px
+        transform: translateY(-100%)
+        &-wrap
+            height: 100%
+            width: 100%
+            z-index: 3
+            background-color: rgba(0, 0, 0, .7)
+            overflow: hidden
+        &-line
+            display: block
+            height: 1px
+            background-color: $black
+            opacity: 0.1
+            margin: 32px 0
+
+.nav
+    display: flex
+    width: 100%
+    height: 82px
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    &__button
+        background-color: transparent
+        border: none
+        &:hover
+            cursor: pointer
+    &__big-text
+        font-family: $prestige
+        text-transform: uppercase
+        font-size: 18px
+        line-height: 24px
+        letter-spacing: 0.05em
+
+.banner
+    
+    .text
+        color: $milk
+    &__wrap
+        padding-top: 75px
+        padding-left: 90px
+        width: 40%
+        position: absolute
+    &__image
+        width: 100%
+        position: relative
+        background-color: rgba(0, 0, 0, .7)
+    &__bg
+        height: 100%
+        width: 100%
+        object-fit: cover
+    &__buttons
+        position: absolute
+        bottom: 0
+        padding-left: 90px
+        padding-bottom: 85px
+        width: 40%
+
+
+.author
+    &__wrapper
+        padding: 30px 90px
+        display: flex
+    &__link
+        color: $milk
+        text-transform: uppercase
+        font-size: 32px
+        line-height: 38px
+        letter-spacing: 0.01em
+    &__insta
+        margin-right: 50px
+
+.learning
+    .text
+        margin-top: 30px
+        margin-bottom: 40px
+        color: $black
+        span
+            display: inline-block
+            background-color: $black
+            color: $milk
+
+    .light-button
+        display: none
+    .dark-button
+        width: 100%
+    &__wrapper
+        display: flex
+        justify-content: space-between
+        min-width: 0
+    &__about
+        width: 310px
+    &__counter
+        display: inline-block
+        color: #FCFCF5
+        margin: 0  10px !important
+    &__slider
+        min-width: 0
+        margin-left: 140px
+    &__item
+        overflow: hidden
+        margin: 0px 13px
+        &:nth-child(1)
+            margin-left: 0
+            
+    &__title
+        bottom: 0
+        position: absolute
+        text-align: center
+        width: inherit
+        min-width: 150px
+        .author__link
+            font-size: 26px
+            margin-bottom: 50px
+        .text
+            color: $milk
+            margin-bottom: 13px
+    &__img
+        height: 100%
+        width: 100%
+        object-fit: cover
+    &__control
+        display: flex
+        align-items: center
+        .prev-button
+            background-image: url(/photograd/img/prev-arrow.svg)
+            background-position: center
+            background-repeat: no-repeat
+        .next-button
+            background-image: url(/photograd/img/nex-arrow.svg)
+            background-position: center
+            background-repeat: no-repeat
+
+    .slick-arrow
+        width: 48px
+        height: 48px
+        border: 1px solid #0E0C0A
+        background-color: transparent
+        font-size: 0
+
+.text
+    font-size: 21px
+    line-height: 30px
+    color: $milk
+
+.common-title
+    font-size: 60px
+    line-height: 70px
+    letter-spacing: 0.01em
+    text-transform: uppercase    
+    
+    
+
+.friends
+    padding: 95px 0px
+    &__text
+        max-width: 460px            
+        .text
+            margin-bottom: 50px
+        .common-title
+            color: $milk
+            margin-bottom: 40px
+    &__percent
+        font-size: 150px
+        line-height: 85px
+        color: $milk
+        margin-bottom: 26px
+    &__content
+        display: flex
+    &__mobile
+        display: none
+    &__parts
+        margin-top: 15px
+        display: flex
+        text-align: center
+        align-items: center
+        justify-content: center
+        flex-wrap: nowrap
+    &__wrapper
+        margin-left: 50px
+    &__sub
+        padding-left: 30px
+        text-align: center
+    &__percentage
+        padding: 80px 80px 50px 80px
+        border: 2px solid $milk
+        min-height: 335px
+        margin-left: 30px
+        margin-bottom: 30px
+        flex: 1 1
+
+.task
+    &__wrap
+        display: flex
+        flex-direction: row
+    &__part
+        border: 2px solid $black
+        padding: 50px 50px 25px 50px
+        flex: 1 1
+        &:nth-child(2)
+            margin-left: 30px
+        .text
+            color: $black
+        span
+            display: inline-block
+            width: 100%
+            height: 2px
+            background-color: $black
+        .dark-button
+            margin-top: 40px
+        .trans-button
+            color: $black
+    &__cards
+        display: none
+    &__gallery
+        display: grid
+        grid-template-columns: repeat(4, 1fr)
+        grid-gap: .7em
+    &__card
+        background-color: $black
+        min-height: 200px   
+        display: flex
+        align-items: center
+        justify-content: center
+        text-align: center
+        .text
+            text-transform: uppercase   
+            color: $milk
+    &__img
+            width: 100%
+            height: 100%
+            object-fit: cover
+        
+.portfolio
+    .content    
+        display: flex
+        flex-direction: column
+        align-items: center
+        text-align: center
+    .common-title
+        color: $milk   
+    .trans-button
+        margin-top: 30px
+        border-color: $milk
+        max-width: 350px   
+        &:hover
+            background-color: $milk
+            color: $black
+    .text
+        margin: 30px 0px
+    &__img
+        width: 100%
+        height: 100%
+        object-fit: cover
+    &__gallery
+        display: grid
+        max-width: 100%
+        grid-auto-flow: column
+        grid-template-columns: repeat(auto-fill, 1fr)
+        grid-template-rows: 1fr 1fr
+        grid-gap: .7em
+
+.comments
+    .text
+        color: $black
+    .light-button
+        margin-top: 60px
+        margin-bottom: 100px
+    &__wrap
+        display: flex
+        flex-direction: row
+    &__left
+        flex: 0 0 auto
+        width: 30%
+        margin-right: 70px
+        .text
+            font-size: 15px
+    &__right
+        .comments__info
+                display: none
+    &__counter
+        display: inline-block
+    &__slider
+        width: 800px
+        min-width: 0
+    &__item-wrap
+        p
+            width: 500px
+
+    &__link
+        text-decoration: underline
+    &__control
+        display: flex
+        margin-bottom: 40px
+        align-items: center
+        .prev-button
+            background-image: url(/photograd/img/prev-arrow.svg)
+            background-position: center
+            background-repeat: no-repeat
+        .next-button
+            background-image: url(/photograd/img/nex-arrow.svg)
+            background-position: center
+            background-repeat: no-repeat
+
+    .slick-arrow
+        width: 48px
+        height: 48px
+        border: 1px solid #0E0C0A
+        background-color: transparent
+        font-size: 0
+        
+.footer
+    display: none
+    .text
+        font-size: 15px
+    background-color: $black
+    a
+        color: $milk
+
+@media screen and ( max-width: 1280px )
+    .friends
+        .text
+            font-size: 17px
+        .friends__percent
+            font-size: 100px
+    
+    .portfolio 
+        padding: 60px 0px  
+        .trans-button
+            margin-top: 10px
+            border-color: $milk
+            max-width: 250px   
+            &:hover
+                background-color: $milk
+                color: $black
+        .text
+            margin: 20px 0px
+        &__img
+            width: 100%
+            height: 100%
+            object-fit: scale-down
+        &__item
+            display: flex
+            align-items: center
+            justify-content: center
+            width: 260px
+            height: 260px
+            overflow: hidden
+        &__gallery
+            grid-gap: .5em
+            grid-template-columns: repeat(3, 1fr)
+            grid-template-rows: repeat(3, 1fr)
+
+    .comments
+        &__slider
+            width: 600px
+
+@media screen and ( max-width: 1000px )
+    .banner
+        .light-button
+            display: none
+        .banner__wrap 
+            padding-top: 30px
+        
+        .banner__buttons
+            padding-bottom: 20px
+        .h1-title 
+            font-size: 69px
+            line-height: 78px
+    .friends
+        &__parts
+            flex-wrap: wrap
+        &__percentage
+            padding: 60px 20px 10px 20px
+            max-width: 400px
+    .comments
+        &__slider
+            width: 500px
+        
+
+@media screen and ( max-width: 769px )
+    .banner
+        .light-button
+            display: block
+    section
+        margin-top: 30px
+
+    .h1-title
+        font-size: 61px
+        line-height: 80px
+        text-align: center
+        color: $black
+    
+    .common-title
+        font-size: 52px
+        line-height: 60px
+
+    .banner
+        .text
+            text-align: center
+            color: $black
+        &__image
+            position: static
+            background-color: transparent
+        &__wrap
+            position: static
+            padding: 0
+            width: 100%
+        &__buttons
+            position: static
+            width: 100%
+            padding: 0
+        .trans-button
+            background-color: $black
+    
+    .author
+        .text
+            text-align: center
+        &__wrapper
+            padding: 30px
+            display: flex
+            flex-direction: column
+            align-items: center
+        &__link
+    
+        &__insta
+            margin-right: 0
+            margin-bottom: 20px
+    
+    .learning
+        .text
+            color: $black
+
+        button
+            width: 100%
+        .light-button
+            display: block
+        .dark-button
+            display: none
+        &__wrapper
+            flex-direction: column
+        &__about
+            width: 100%
+        &__control
+            display: none
+        &__slider
+            margin: 0
+        &__img
+            height: 200px
+            width: 150px
+            object-fit: cover
+        &__item
+            .text
+                color: $milk
+                font-size: 14px
+                line-height: 17px
+            .author__link
+                font-size: 17px
+                margin-bottom: 20px
+
+    .friends
+        padding: 60px 0px
+        &__text
+            width: 100%
+        &__mobile
+            margin-top: 20px
+            display: block
+        &__desc
+            display: none
+        .text
+            margin-bottom: 15px
+            font-size: 16px
+            line-height: 17px
+        .common-title
+            color: $milk
+            margin-bottom: 15px
+        &__percent
+            font-size: 63px
+            line-height: 71px
+            margin-bottom: 26px
+            padding-top: 20px
+        &__content
+            flex-direction: column
+        &__parts
+            margin-top: 0px
+            display: flex
+            flex-wrap: nowrap
+            flex-direction: row
+            align-items: normal 
+        &__wrapper
+            margin: 0
+        &__sub
+            border-top: 2px solid $milk
+            border-bottom: 2px solid $milk
+            padding: 20px 0
+            p
+                text-align: center
+        &__percentage
+            padding: 0
+            max-width: 410px
+            min-height: 0   
+            border: 2px solid $milk
+            margin-left: 0
+            flex: 0 50%
+            &:nth-child(2)
+                margin-left: 10px
+            .text
+                font-size: 16px
+                
+    .task
+        &__wrap
+            flex-direction: column
+        &__part
+            border: none
+            padding: 0
+            flex: 1 1
+            position: relative
+            &:nth-child(2)
+                margin-left: 0px
+                margin-top: 30px
+                border-top: 2px solid $black
+                padding-top: 30px
+                .light-button
+                    display: none
+                .trans-button
+                    color: $black
+                .dark-button
+                    margin: 0
+                &::after
+                    content: ''
+                    top: -12px
+                    position: absolute
+                    display: block
+                    width: 100%
+                    height: 4px
+                    background-color: $black
+        &__cards
+            display: grid
+            grid-template-columns: 1fr 1fr
+            grid-gap: .7em
+        &__gallery
+            margin-top: 20px
+            grid-template-columns: 1fr 1fr
+
+    .portfolio 
+        padding: 60px 0px  
+        .trans-button
+            margin-top: 10px
+            border-color: $milk
+            max-width: 250px   
+            &:hover
+                background-color: $milk
+                color: $black
+        .text
+            margin: 20px 0px
+        &__img
+            width: 100%
+            height: 100%
+            object-fit: scale-down
+        &__item
+            display: flex
+            align-items: center
+            justify-content: center
+            width: 160px
+            height: 160px
+            overflow: hidden
+        &__gallery
+            grid-gap: .5em
+            grid-template-columns: repeat(2, 1fr)
+            grid-template-rows: repeat(4, 1fr)
+
+    .comments
+        .text
+            color: $black
+        .light-button
+            margin-top: 20px
+            margin-bottom: 25px
+        &__wrap
+            flex-direction: column
+        &__left
+            flex: 0 0 auto
+            width: 100%
+            margin-right: 0px
+            .text
+                font-size: 15px
+        &__counter
+            display: inline-block
+        &__slider
+            width: 300px
+            min-width: 0
+        &__link
+            text-decoration: underline
+        &__control
+            margin-bottom: 10px
+            margin-top: 21px
+    
+    .footer
+        padding-top: 20px
+        display: block
