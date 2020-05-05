@@ -117,12 +117,20 @@ section
             z-index: 3
             background-color: rgba(0, 0, 0, .7)
             overflow: hidden
+            position: absolute
         &-line
             display: block
             height: 1px
             background-color: $black
             opacity: 0.1
             margin: 32px 0
+    &__popup-login
+        padding: 40px 16px
+        background-color: $milk
+        min-width: 375px
+        right: 0
+        position: absolute
+        transform: translate(-100%,-100%)
 
 .nav
     display: flex

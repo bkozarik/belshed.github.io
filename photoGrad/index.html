@@ -12,13 +12,13 @@
     <header class="header">
         <div class="content">
             <nav class="nav">
-                <button class="nav__button nav__big-text">
+                <button id="help" class="nav__button nav__big-text">
                     Помощь
                 </button>
                 <div class="logo">
                     <a href="/photoGrad/index.html"><img src="/photoGrad/img/Logo.svg" alt="logo" class="logo__img"></a>
                 </div>
-                <button class="nav__button nav__big-text">
+                <button id="login" class="nav__button nav__big-text">
                     Войти
                 </button>
             </nav>
@@ -26,12 +26,22 @@
     </header>
     <div class="header__popup-wrap" style="display: none;">
         <div class="content mobile-content">
-            <div class="header__popup">
+            <div class="header__popup" style="display: none;">
                 <span class="nav__big-text">
                     Помощь
                 </span>
                 <a class="light-button" href="#">Написать в Telegram</a>
                 <a class="light-button" href="#">Написать в WhatsApp</a>
+                <a class="light-button" href="tel:+79944261980">+79944261980</a>
+                <span class="header__popup-line"></span>
+                <a class="dark-button" href="#">Стать жителем города</a>
+            </div>
+
+            <div class="header__popup-login" style="display: none;">
+                <span class="nav__big-text">
+                    Войти
+                </span>
+                <a class="light-button" href="#">Войти</a>
                 <a class="light-button" href="tel:+79944261980">+79944261980</a>
                 <span class="header__popup-line"></span>
                 <a class="dark-button" href="#">Стать жителем города</a>
