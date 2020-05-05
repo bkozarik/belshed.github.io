@@ -1,13 +1,13 @@
 @font-face
     font-family: Compact
-    src: url(../fonts/compact.ttf)
+    src: url("../fonts/сompact.ttf") format("truetype")
     
 @font-face
     font-family: Prestige
-    src: url(../fonts/prestige.ttf)
+    src: url("../fonts/prestige.ttf") format("truetype")
 
 $prestige: Prestige, arial
-$compact: Compact, arial
+$compact: Compact
 
 $milk: #FCFCF5
 $black: #0E0C0A
@@ -710,6 +710,8 @@ section
                 font-size: 15px
         &__counter
             display: inline-block
+        &__info
+            display: none
         &__slider
             width: 300px
             min-width: 0
