@@ -1,5 +1,13 @@
-$prestige: 'Prestige Normal', arial
-$compact: 'Compact', sans-serif
+@font-face
+    font-family: Compact
+    src: url(../fonts/compact.ttf)
+    
+@font-face
+    font-family: Prestige
+    src: url(../fonts/prestige.ttf)
+
+$prestige: Prestige, arial
+$compact: Compact, arial
 
 $milk: #FCFCF5
 $black: #0E0C0A
@@ -21,14 +29,13 @@ button
 
 body
     background-color: $milk
-    height: 3000px
 
 .light-button, .dark-button, .trans-button
     width: 100%
     display: block
     text-align: center
     margin: 18px 0
-    font-size: 15px
+    font-size: 18px
     line-height: 22px
     text-transform: uppercase
     text-decoration: none
@@ -67,6 +74,7 @@ section
     line-height: 110px
     color: $milk
     text-transform: uppercase
+    font-family: $compact
 
 .dark-section
     background-color: $black
@@ -192,14 +200,15 @@ section
         justify-content: space-between
         min-width: 0
     &__about
-        width: 310px
+        width: 2410px
     &__counter
         display: inline-block
         color: #FCFCF5
         margin: 0  10px !important
     &__slider
         min-width: 0
-        margin-left: 140px
+        margin-left: 35px
+
     &__item
         overflow: hidden
         margin: 0px 13px
@@ -250,7 +259,8 @@ section
     font-size: 60px
     line-height: 70px
     letter-spacing: 0.01em
-    text-transform: uppercase    
+    text-transform: uppercase
+    font-family: $compact  
     
     
 
@@ -482,6 +492,9 @@ section
         
 
 @media screen and ( max-width: 769px )
+    .light-button, .dark-button, .trans-button
+        font-size: 15px
+
     .banner
         .light-button
             display: block
