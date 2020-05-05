@@ -1,0 +1,35 @@
+@font-face {
+  font-family: 'Compact';
+  src: url('../fonts/Compact.svg#Compact') format('svg'),
+       url('../fonts/Compact.ttf') format('truetype'),
+       url('../fonts/Compact.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'сompact';
+  src: url('../fonts/сompact.eot');
+  src: url('../fonts/сompact.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/сompact.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PrestigeNormal';
+  src: url('../fonts/PrestigeNormal.svg') format('svg'),
+       url('../fonts/PrestigeNormal.ttf') format('truetype'),
+       url('../fonts/PrestigeNormal.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'prestige';
+  src: url('../fonts/prestige.eot');
+  src: url('../fonts/prestige.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/prestige.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
