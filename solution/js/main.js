@@ -100,50 +100,50 @@ $(document).ready(function () {
           case 'fasade':
             $($('.steps-list__link')[0]).toggleClass('active');
             if($($('.steps-list__link')[0]).hasClass('active')){
-              $($('.steps-list__link')[0]).find('i').css('background', 'url(../img/icons/i-minus.png) center no-repeat #f4f4f4');
+              $($('.steps-list__link')[0]).find('i').css('background', 'url(../solution/img/icons/i-minus.png) center no-repeat #f4f4f4');
             }
             else{
-              $($('.steps-list__link')[0]).find('i').css('background', 'url(../img/icons/i-plus.png) center no-repeat #fff');
+              $($('.steps-list__link')[0]).find('i').css('background', 'url(../solution/img/icons/i-plus.png) center no-repeat #fff');
             }
           break
     
           case 'glass-table':
             $($('.steps-list__link')[1]).toggleClass('active');
             if($($('.steps-list__link')[1]).hasClass('active')){
-              $($('.steps-list__link')[1]).find('i').css('background', 'url(../img/icons/i-minus.png) center no-repeat #f4f4f4');
+              $($('.steps-list__link')[1]).find('i').css('background', 'url(../solution/img/icons/i-minus.png) center no-repeat #f4f4f4');
             }
             else{
-              $($('.steps-list__link')[1]).find('i').css('background', 'url(../img/icons/i-plus.png) center no-repeat #fff');
+              $($('.steps-list__link')[1]).find('i').css('background', 'url(../solution/img/icons/i-plus.png) center no-repeat #fff');
             }
           break
     
           case 'apron':
             $($('.steps-list__link')[2]).toggleClass('active');
             if($($('.steps-list__link')[2]).hasClass('active')){
-              $($('.steps-list__link')[2]).find('i').css('background', 'url(../img/icons/i-minus.png) center no-repeat #f4f4f4');
+              $($('.steps-list__link')[2]).find('i').css('background', 'url(../solution/img/icons/i-minus.png) center no-repeat #f4f4f4');
             }
             else{
-              $($('.steps-list__link')[2]).find('i').css('background', 'url(../img/icons/i-plus.png) center no-repeat #fff');
+              $($('.steps-list__link')[2]).find('i').css('background', 'url(../solution/img/icons/i-plus.png) center no-repeat #fff');
             }
           break
     
           case 'shelf':
             $($('.steps-list__link')[6]).toggleClass('active');
             if($($('.steps-list__link')[6]).hasClass('active')){
-              $($('.steps-list__link')[6]).find('i').css('background', 'url(../img/icons/i-minus.png) center no-repeat #f4f4f4');
+              $($('.steps-list__link')[6]).find('i').css('background', 'url(../solution/img/icons/i-minus.png) center no-repeat #f4f4f4');
             }
             else{
-              $($('.steps-list__link')[6]).find('i').css('background', 'url(../img/icons/i-plus.png) center no-repeat #fff');
+              $($('.steps-list__link')[6]).find('i').css('background', 'url(../solution/img/icons/i-plus.png) center no-repeat #fff');
             }
           break
     
           case 'shield':
             $($('.steps-list__link')[15]).toggleClass('active');
             if($($('.steps-list__link')[15]).hasClass('active')){
-              $($('.steps-list__link')[15]).find('i').css('background', 'url(../img/icons/i-minus.png) center no-repeat #f4f4f4');
+              $($('.steps-list__link')[15]).find('i').css('background', 'url(../solution/img/icons/i-minus.png) center no-repeat #f4f4f4');
             }
             else{
-              $($('.steps-list__link')[15]).find('i').css('background', 'url(../img/icons/i-plus.png) center no-repeat #fff');
+              $($('.steps-list__link')[15]).find('i').css('background', 'url(../solution/img/icons/i-plus.png) center no-repeat #fff');
             }
           break
         }
