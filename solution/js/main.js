@@ -209,11 +209,11 @@ $(document).ready(function () {
 
     if($(this).hasClass('active')){
       $('.steps__dot.' + $(this)[0].classList[1]).toggleClass('active');
-      $(this).find('i').css('background', 'url(../img/icons/i-minus.png) center no-repeat #f4f4f4');
+      $(this).find('i').css('background', 'url(../solution/img/icons/i-minus.png) center no-repeat #f4f4f4');
     }
     else{
       $('.steps__dot.' + $(this)[0].classList[1]).toggleClass('active');
-      $(this).find('i').css('background', 'url(../img/icons/i-plus.png) center no-repeat #fff');
+      $(this).find('i').css('background', 'url(../solution/img/icons/i-plus.png) center no-repeat #fff');
     }
     
     switch(chosen_zone){
