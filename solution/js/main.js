@@ -167,7 +167,7 @@ $(document).ready(function () {
     $('.modal-pp').css('display', 'none');
   });
 
-  $('span.number__item')[1].innerText = '/ ' + $('.indicators__item').length;
+  $('span.number__item')[1].innerText = '/' + $('.indicators__item').length;
 
   $('a#next_step').on('click', function (event) {
     event.preventDefault();
@@ -610,7 +610,7 @@ $(document).ready(function () {
     scrollbar: {
       el: '.swiper-scrollbar',
       hide: false,
-      slidesPerView: 1,
+      slidesPerView: 3,
     },
     pagination: {
       el: '.swiper-pagination',

@@ -270,7 +270,7 @@
   }
   .indicators__txt {
     color: #373737;
-    font-size: 18px !important;
+    font-size: 16px !important;
     -webkit-transform: translateY(0);
         -ms-transform: translateY(0);
             transform: translateY(0);
@@ -361,6 +361,12 @@
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
+  .indicators.fx{
+    margin-left: 5px;
+  }
+  .steps__head a.btn {
+    padding: 17px 24px;
+  }
   .panel {
     padding-left: 15px;
   }
