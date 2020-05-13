@@ -101,59 +101,59 @@ $(document).ready(function () {
           case 'partitions':
             $($('.steps-list__link')[11]).toggleClass('active');
             if($($('.steps-list__link')[11]).hasClass('active')){
-              $($('.steps-list__link')[11]).find('i').css('background', 'url(../solution/img/icons/i-minus.png) center no-repeat #f4f4f4');
+              $($('.steps-list__link')[11]).find('i').css('background', 'url(/solution/img/icons/i-minus.png) center no-repeat #f4f4f4');
             }
             else{
-              $($('.steps-list__link')[11]).find('i').css('background', 'url(../solution/img/icons/i-plus.png) center no-repeat #fff');
+              $($('.steps-list__link')[11]).find('i').css('background', 'url(/solution/img/icons/i-plus.png) center no-repeat #fff');
             }
           break
     
           case 'tv':
             $($('.steps-list__link')[7]).toggleClass('active');
             if($($('.steps-list__link')[7]).hasClass('active')){
-              $($('.steps-list__link')[7]).find('i').css('background', 'url(../solution/img/icons/i-minus.png) center no-repeat #f4f4f4');
+              $($('.steps-list__link')[7]).find('i').css('background', 'url(/solution/img/icons/i-minus.png) center no-repeat #f4f4f4');
             }
             else{
-              $($('.steps-list__link')[7]).find('i').css('background', 'url(../solution/img/icons/i-plus.png) center no-repeat #fff');
+              $($('.steps-list__link')[7]).find('i').css('background', 'url(/solution/img/icons/i-plus.png) center no-repeat #fff');
             }
           break
     
           case 'wall':
             $($('.steps-list__link')[4]).toggleClass('active');
             if($($('.steps-list__link')[4]).hasClass('active')){
-              $($('.steps-list__link')[4]).find('i').css('background', 'url(../solution/img/icons/i-minus.png) center no-repeat #f4f4f4');
+              $($('.steps-list__link')[4]).find('i').css('background', 'url(/solution/img/icons/i-minus.png) center no-repeat #f4f4f4');
             }
             else{
-              $($('.steps-list__link')[4]).find('i').css('background', 'url(../solution/img/icons/i-plus.png) center no-repeat #fff');
+              $($('.steps-list__link')[4]).find('i').css('background', 'url(/solution/img/icons/i-plus.png) center no-repeat #fff');
             }
           break
     
           case 'servant':
             $($('.steps-list__link')[3]).toggleClass('active');
             if($($('.steps-list__link')[3]).hasClass('active')){
-              $($('.steps-list__link')[3]).find('i').css('background', 'url(../solution/img/icons/i-minus.png) center no-repeat #f4f4f4');
+              $($('.steps-list__link')[3]).find('i').css('background', 'url(/solution/img/icons/i-minus.png) center no-repeat #f4f4f4');
             }
             else{
-              $($('.steps-list__link')[3]).find('i').css('background', 'url(../solution/img/icons/i-plus.png) center no-repeat #fff');
+              $($('.steps-list__link')[3]).find('i').css('background', 'url(/solution/img/icons/i-plus.png) center no-repeat #fff');
             }
           break
     
           case 'glass-table':
             $($('.steps-list__link')[1]).toggleClass('active');
             if($($('.steps-list__link')[1]).hasClass('active')){
-              $($('.steps-list__link')[1]).find('i').css('background', 'url(../solution/img/icons/i-minus.png) center no-repeat #f4f4f4');
+              $($('.steps-list__link')[1]).find('i').css('background', 'url(/solution/img/icons/i-minus.png) center no-repeat #f4f4f4');
             }
             else{
-              $($('.steps-list__link')[1]).find('i').css('background', 'url(../solution/img/icons/i-plus.png) center no-repeat #fff');
+              $($('.steps-list__link')[1]).find('i').css('background', 'url(/solution/img/icons/i-plus.png) center no-repeat #fff');
             }
           break
           case 'glass-furniture':
             $($('.steps-list__link')[10]).toggleClass('active');
             if($($('.steps-list__link')[10]).hasClass('active')){
-              $($('.steps-list__link')[10]).find('i').css('background', 'url(../solution/img/icons/i-minus.png) center no-repeat #f4f4f4');
+              $($('.steps-list__link')[10]).find('i').css('background', 'url(/solution/img/icons/i-minus.png) center no-repeat #f4f4f4');
             }
             else{
-              $($('.steps-list__link')[10]).find('i').css('background', 'url(../solution/img/icons/i-plus.png) center no-repeat #fff');
+              $($('.steps-list__link')[10]).find('i').css('background', 'url(/solution/img/icons/i-plus.png) center no-repeat #fff');
             }
           break
         }
@@ -163,40 +163,40 @@ $(document).ready(function () {
           case 'mirror':
             $($('.steps-list__link')[9]).toggleClass('active');
             if($($('.steps-list__link')[9]).hasClass('active')){
-              $($('.steps-list__link')[9]).find('i').css('background', 'url(../solution/img/icons/i-minus.png) center no-repeat #f4f4f4');
+              $($('.steps-list__link')[9]).find('i').css('background', 'url(/solution/img/icons/i-minus.png) center no-repeat #f4f4f4');
             }
             else{
-              $($('.steps-list__link')[9]).find('i').css('background', 'url(../solution/img/icons/i-plus.png) center no-repeat #fff');
+              $($('.steps-list__link')[9]).find('i').css('background', 'url(/solution/img/icons/i-plus.png) center no-repeat #fff');
             }
           break
     
           case 'fasade':
             $($('.steps-list__link')[0]).toggleClass('active');
             if($($('.steps-list__link')[0]).hasClass('active')){
-              $($('.steps-list__link')[0]).find('i').css('background', 'url(../solution/img/icons/i-minus.png) center no-repeat #f4f4f4');
+              $($('.steps-list__link')[0]).find('i').css('background', 'url(/solution/img/icons/i-minus.png) center no-repeat #f4f4f4');
             }
             else{
-              $($('.steps-list__link')[0]).find('i').css('background', 'url(../solution/img/icons/i-plus.png) center no-repeat #fff');
+              $($('.steps-list__link')[0]).find('i').css('background', 'url(/solution/img/icons/i-plus.png) center no-repeat #fff');
             }
           break
     
           case 'shower-screen':
             $($('.steps-list__link')[19]).toggleClass('active');
             if($($('.steps-list__link')[19]).hasClass('active')){
-              $($('.steps-list__link')[19]).find('i').css('background', 'url(../solution/img/icons/i-minus.png) center no-repeat #f4f4f4');
+              $($('.steps-list__link')[19]).find('i').css('background', 'url(/solution/img/icons/i-minus.png) center no-repeat #f4f4f4');
             }
             else{
-              $($('.steps-list__link')[19]).find('i').css('background', 'url(../solution/img/icons/i-plus.png) center no-repeat #fff');
+              $($('.steps-list__link')[19]).find('i').css('background', 'url(/solution/img/icons/i-plus.png) center no-repeat #fff');
             }
           break
     
           case 'wall':
             $($('.steps-list__link')[4]).toggleClass('active');
             if($($('.steps-list__link')[4]).hasClass('active')){
-              $($('.steps-list__link')[4]).find('i').css('background', 'url(../solution/img/icons/i-minus.png) center no-repeat #f4f4f4');
+              $($('.steps-list__link')[4]).find('i').css('background', 'url(/solution/img/icons/i-minus.png) center no-repeat #f4f4f4');
             }
             else{
-              $($('.steps-list__link')[4]).find('i').css('background', 'url(../solution/img/icons/i-plus.png) center no-repeat #fff');
+              $($('.steps-list__link')[4]).find('i').css('background', 'url(/solution/img/icons/i-plus.png) center no-repeat #fff');
             }
           break
         }
@@ -206,60 +206,60 @@ $(document).ready(function () {
           case 'wall':
             $($('.steps-list__link')[4]).toggleClass('active');
             if($($('.steps-list__link')[4]).hasClass('active')){
-              $($('.steps-list__link')[4]).find('i').css('background', 'url(../solution/img/icons/i-minus.png) center no-repeat #f4f4f4');
+              $($('.steps-list__link')[4]).find('i').css('background', 'url(/solution/img/icons/i-minus.png) center no-repeat #f4f4f4');
             }
             else{
-              $($('.steps-list__link')[4]).find('i').css('background', 'url(../solution/img/icons/i-plus.png) center no-repeat #fff');
+              $($('.steps-list__link')[4]).find('i').css('background', 'url(/solution/img/icons/i-plus.png) center no-repeat #fff');
             }
           break
     
           case 'closet':
             $($('.steps-list__link')[8]).toggleClass('active');
             if($($('.steps-list__link')[8]).hasClass('active')){
-              $($('.steps-list__link')[8]).find('i').css('background', 'url(../solution/img/icons/i-minus.png) center no-repeat #f4f4f4');
+              $($('.steps-list__link')[8]).find('i').css('background', 'url(/solution/img/icons/i-minus.png) center no-repeat #f4f4f4');
             }
             else{
-              $($('.steps-list__link')[8]).find('i').css('background', 'url(../solution/img/icons/i-plus.png) center no-repeat #fff');
+              $($('.steps-list__link')[8]).find('i').css('background', 'url(/solution/img/icons/i-plus.png) center no-repeat #fff');
             }
           break
 
           case 'glass-furniture':
             $($('.steps-list__link')[10]).toggleClass('active');
             if($($('.steps-list__link')[10]).hasClass('active')){
-              $($('.steps-list__link')[10]).find('i').css('background', 'url(../solution/img/icons/i-minus.png) center no-repeat #f4f4f4');
+              $($('.steps-list__link')[10]).find('i').css('background', 'url(/solution/img/icons/i-minus.png) center no-repeat #f4f4f4');
             }
             else{
-              $($('.steps-list__link')[10]).find('i').css('background', 'url(../solution/img/icons/i-plus.png) center no-repeat #fff');
+              $($('.steps-list__link')[10]).find('i').css('background', 'url(/solution/img/icons/i-plus.png) center no-repeat #fff');
             }
           break
     
           case 'mirror':
             $($('.steps-list__link')[9]).toggleClass('active');
             if($($('.steps-list__link')[9]).hasClass('active')){
-              $($('.steps-list__link')[9]).find('i').css('background', 'url(../solution/img/icons/i-minus.png) center no-repeat #f4f4f4');
+              $($('.steps-list__link')[9]).find('i').css('background', 'url(/solution/img/icons/i-minus.png) center no-repeat #f4f4f4');
             }
             else{
-              $($('.steps-list__link')[9]).find('i').css('background', 'url(../solution/img/icons/i-plus.png) center no-repeat #fff');
+              $($('.steps-list__link')[9]).find('i').css('background', 'url(/solution/img/icons/i-plus.png) center no-repeat #fff');
             }
           break
     
           case 'pedestal':
             $($('.steps-list__link')[12]).toggleClass('active');
             if($($('.steps-list__link')[12]).hasClass('active')){
-              $($('.steps-list__link')[12]).find('i').css('background', 'url(../solution/img/icons/i-minus.png) center no-repeat #f4f4f4');
+              $($('.steps-list__link')[12]).find('i').css('background', 'url(/solution/img/icons/i-minus.png) center no-repeat #f4f4f4');
             }
             else{
-              $($('.steps-list__link')[12]).find('i').css('background', 'url(../solution/img/icons/i-plus.png) center no-repeat #fff');
+              $($('.steps-list__link')[12]).find('i').css('background', 'url(/solution/img/icons/i-plus.png) center no-repeat #fff');
             }
           break
     
           case 'glass':
             $($('.steps-list__link')[14]).toggleClass('active');
             if($($('.steps-list__link')[14]).hasClass('active')){
-              $($('.steps-list__link')[14]).find('i').css('background', 'url(../solution/img/icons/i-minus.png) center no-repeat #f4f4f4');
+              $($('.steps-list__link')[14]).find('i').css('background', 'url(/solution/img/icons/i-minus.png) center no-repeat #f4f4f4');
             }
             else{
-              $($('.steps-list__link')[14]).find('i').css('background', 'url(../solution/img/icons/i-plus.png) center no-repeat #fff');
+              $($('.steps-list__link')[14]).find('i').css('background', 'url(/solution/img/icons/i-plus.png) center no-repeat #fff');
             }
           break
         }
@@ -269,40 +269,40 @@ $(document).ready(function () {
           case 'cupboard':
             $($('.steps-list__link')[21]).toggleClass('active');
             if($($('.steps-list__link')[21]).hasClass('active')){
-              $($('.steps-list__link')[21]).find('i').css('background', 'url(../solution/img/icons/i-minus.png) center no-repeat #f4f4f4');
+              $($('.steps-list__link')[21]).find('i').css('background', 'url(/solution/img/icons/i-minus.png) center no-repeat #f4f4f4');
             }
             else{
-              $($('.steps-list__link')[21]).find('i').css('background', 'url(../solution/img/icons/i-plus.png) center no-repeat #fff');
+              $($('.steps-list__link')[21]).find('i').css('background', 'url(/solution/img/icons/i-plus.png) center no-repeat #fff');
             }
           break
     
           case 'mirror':
             $($('.steps-list__link')[9]).toggleClass('active');
             if($($('.steps-list__link')[9]).hasClass('active')){
-              $($('.steps-list__link')[9]).find('i').css('background', 'url(../solution/img/icons/i-minus.png) center no-repeat #f4f4f4');
+              $($('.steps-list__link')[9]).find('i').css('background', 'url(/solution/img/icons/i-minus.png) center no-repeat #f4f4f4');
             }
             else{
-              $($('.steps-list__link')[9]).find('i').css('background', 'url(../solution/img/icons/i-plus.png) center no-repeat #fff');
+              $($('.steps-list__link')[9]).find('i').css('background', 'url(/solution/img/icons/i-plus.png) center no-repeat #fff');
             }
           break
     
           case 'marker-desk':
             $($('.steps-list__link')[17]).toggleClass('active');
             if($($('.steps-list__link')[17]).hasClass('active')){
-              $($('.steps-list__link')[17]).find('i').css('background', 'url(../solution/img/icons/i-minus.png) center no-repeat #f4f4f4');
+              $($('.steps-list__link')[17]).find('i').css('background', 'url(/solution/img/icons/i-minus.png) center no-repeat #f4f4f4');
             }
             else{
-              $($('.steps-list__link')[17]).find('i').css('background', 'url(../solution/img/icons/i-plus.png) center no-repeat #fff');
+              $($('.steps-list__link')[17]).find('i').css('background', 'url(/solution/img/icons/i-plus.png) center no-repeat #fff');
             }
           break
 
           case 'child-furniture':
             $($('.steps-list__link')[18]).toggleClass('active');
             if($($('.steps-list__link')[18]).hasClass('active')){
-              $($('.steps-list__link')[18]).find('i').css('background', 'url(../solution/img/icons/i-minus.png) center no-repeat #f4f4f4');
+              $($('.steps-list__link')[18]).find('i').css('background', 'url(/solution/img/icons/i-minus.png) center no-repeat #f4f4f4');
             }
             else{
-              $($('.steps-list__link')[18]).find('i').css('background', 'url(../solution/img/icons/i-plus.png) center no-repeat #fff');
+              $($('.steps-list__link')[18]).find('i').css('background', 'url(/solution/img/icons/i-plus.png) center no-repeat #fff');
             }
           break
         }
@@ -312,50 +312,50 @@ $(document).ready(function () {
           case 'wall':
             $($('.steps-list__link')[4]).toggleClass('active');
             if($($('.steps-list__link')[4]).hasClass('active')){
-              $($('.steps-list__link')[4]).find('i').css('background', 'url(../solution/img/icons/i-minus.png) center no-repeat #f4f4f4');
+              $($('.steps-list__link')[4]).find('i').css('background', 'url(/solution/img/icons/i-minus.png) center no-repeat #f4f4f4');
             }
             else{
-              $($('.steps-list__link')[4]).find('i').css('background', 'url(../solution/img/icons/i-plus.png) center no-repeat #fff');
+              $($('.steps-list__link')[4]).find('i').css('background', 'url(/solution/img/icons/i-plus.png) center no-repeat #fff');
             }
           break
     
           case 'furniture':
             $($('.steps-list__link')[5]).toggleClass('active');
             if($($('.steps-list__link')[5]).hasClass('active')){
-              $($('.steps-list__link')[5]).find('i').css('background', 'url(../solution/img/icons/i-minus.png) center no-repeat #f4f4f4');
+              $($('.steps-list__link')[5]).find('i').css('background', 'url(/solution/img/icons/i-minus.png) center no-repeat #f4f4f4');
             }
             else{
-              $($('.steps-list__link')[5]).find('i').css('background', 'url(../solution/img/icons/i-plus.png) center no-repeat #fff');
+              $($('.steps-list__link')[5]).find('i').css('background', 'url(/solution/img/icons/i-plus.png) center no-repeat #fff');
             }
           break
     
           case 'closet':
             $($('.steps-list__link')[8]).toggleClass('active');
             if($($('.steps-list__link')[8]).hasClass('active')){
-              $($('.steps-list__link')[8]).find('i').css('background', 'url(../solution/img/icons/i-minus.png) center no-repeat #f4f4f4');
+              $($('.steps-list__link')[8]).find('i').css('background', 'url(/solution/img/icons/i-minus.png) center no-repeat #f4f4f4');
             }
             else{
-              $($('.steps-list__link')[8]).find('i').css('background', 'url(../solution/img/icons/i-plus.png) center no-repeat #fff');
+              $($('.steps-list__link')[8]).find('i').css('background', 'url(/solution/img/icons/i-plus.png) center no-repeat #fff');
             }
           break
     
           case 'mirror':
             $($('.steps-list__link')[9]).toggleClass('active');
             if($($('.steps-list__link')[9]).hasClass('active')){
-              $($('.steps-list__link')[9]).find('i').css('background', 'url(../solution/img/icons/i-minus.png) center no-repeat #f4f4f4');
+              $($('.steps-list__link')[9]).find('i').css('background', 'url(/solution/img/icons/i-minus.png) center no-repeat #f4f4f4');
             }
             else{
-              $($('.steps-list__link')[9]).find('i').css('background', 'url(../solution/img/icons/i-plus.png) center no-repeat #fff');
+              $($('.steps-list__link')[9]).find('i').css('background', 'url(/solution/img/icons/i-plus.png) center no-repeat #fff');
             }
           break
     
           case 'doors':
             $($('.steps-list__link')[13]).toggleClass('active');
             if($($('.steps-list__link')[13]).hasClass('active')){
-              $($('.steps-list__link')[13]).find('i').css('background', 'url(../solution/img/icons/i-minus.png) center no-repeat #f4f4f4');
+              $($('.steps-list__link')[13]).find('i').css('background', 'url(/solution/img/icons/i-minus.png) center no-repeat #f4f4f4');
             }
             else{
-              $($('.steps-list__link')[13]).find('i').css('background', 'url(../solution/img/icons/i-plus.png) center no-repeat #fff');
+              $($('.steps-list__link')[13]).find('i').css('background', 'url(/solution/img/icons/i-plus.png) center no-repeat #fff');
             }
           break
         }
@@ -365,50 +365,50 @@ $(document).ready(function () {
           case 'fasade':
             $($('.steps-list__link')[0]).toggleClass('active');
             if($($('.steps-list__link')[0]).hasClass('active')){
-              $($('.steps-list__link')[0]).find('i').css('background', 'url(../solution/img/icons/i-minus.png) center no-repeat #f4f4f4');
+              $($('.steps-list__link')[0]).find('i').css('background', 'url(/solution/img/icons/i-minus.png) center no-repeat #f4f4f4');
             }
             else{
-              $($('.steps-list__link')[0]).find('i').css('background', 'url(../solution/img/icons/i-plus.png) center no-repeat #fff');
+              $($('.steps-list__link')[0]).find('i').css('background', 'url(/solution/img/icons/i-plus.png) center no-repeat #fff');
             }
           break
     
           case 'glass-table':
             $($('.steps-list__link')[1]).toggleClass('active');
             if($($('.steps-list__link')[1]).hasClass('active')){
-              $($('.steps-list__link')[1]).find('i').css('background', 'url(../solution/img/icons/i-minus.png) center no-repeat #f4f4f4');
+              $($('.steps-list__link')[1]).find('i').css('background', 'url(/solution/img/icons/i-minus.png) center no-repeat #f4f4f4');
             }
             else{
-              $($('.steps-list__link')[1]).find('i').css('background', 'url(../solution/img/icons/i-plus.png) center no-repeat #fff');
+              $($('.steps-list__link')[1]).find('i').css('background', 'url(/solution/img/icons/i-plus.png) center no-repeat #fff');
             }
           break
     
           case 'apron':
             $($('.steps-list__link')[2]).toggleClass('active');
             if($($('.steps-list__link')[2]).hasClass('active')){
-              $($('.steps-list__link')[2]).find('i').css('background', 'url(../solution/img/icons/i-minus.png) center no-repeat #f4f4f4');
+              $($('.steps-list__link')[2]).find('i').css('background', 'url(/solution/img/icons/i-minus.png) center no-repeat #f4f4f4');
             }
             else{
-              $($('.steps-list__link')[2]).find('i').css('background', 'url(../solution/img/icons/i-plus.png) center no-repeat #fff');
+              $($('.steps-list__link')[2]).find('i').css('background', 'url(/solution/img/icons/i-plus.png) center no-repeat #fff');
             }
           break
     
           case 'shelf':
             $($('.steps-list__link')[6]).toggleClass('active');
             if($($('.steps-list__link')[6]).hasClass('active')){
-              $($('.steps-list__link')[6]).find('i').css('background', 'url(../solution/img/icons/i-minus.png) center no-repeat #f4f4f4');
+              $($('.steps-list__link')[6]).find('i').css('background', 'url(/solution/img/icons/i-minus.png) center no-repeat #f4f4f4');
             }
             else{
-              $($('.steps-list__link')[6]).find('i').css('background', 'url(../solution/img/icons/i-plus.png) center no-repeat #fff');
+              $($('.steps-list__link')[6]).find('i').css('background', 'url(/solution/img/icons/i-plus.png) center no-repeat #fff');
             }
           break
     
           case 'shield':
             $($('.steps-list__link')[15]).toggleClass('active');
             if($($('.steps-list__link')[15]).hasClass('active')){
-              $($('.steps-list__link')[15]).find('i').css('background', 'url(../solution/img/icons/i-minus.png) center no-repeat #f4f4f4');
+              $($('.steps-list__link')[15]).find('i').css('background', 'url(/solution/img/icons/i-minus.png) center no-repeat #f4f4f4');
             }
             else{
-              $($('.steps-list__link')[15]).find('i').css('background', 'url(../solution/img/icons/i-plus.png) center no-repeat #fff');
+              $($('.steps-list__link')[15]).find('i').css('background', 'url(/solution/img/icons/i-plus.png) center no-repeat #fff');
             }
           break
         }
@@ -715,12 +715,12 @@ $(document).ready(function () {
     if($(this).hasClass('active')){
       $('.steps__dot.' + $(this)[0].classList[1]).toggleClass('active', true);
       $($(this)[0]).css('font-weight', '600');
-      $(this).find('i').css('background', 'url(../img/icons/i-minus.png) center no-repeat #f4f4f4');
+      $(this).find('i').css('background', 'url(/solution/img/icons/i-minus.png) center no-repeat #f4f4f4');
     }
     else{
       $($(this)[0]).css('font-weight', '400');
       $('.steps__dot.' + $(this)[0].classList[1]).toggleClass('active');
-      $(this).find('i').css('background', 'url(../img/icons/i-plus.png) center no-repeat #fff');
+      $(this).find('i').css('background', 'url(/solution/img/icons/i-plus.png) center no-repeat #fff');
     }
     
     choozeGlass(chosen_zone, $(this)[0]);
@@ -747,13 +747,13 @@ $(document).ready(function () {
     let color = $(this).find('img').attr('title');
     switch(color){
       case 'красный':
-        $('.steps__image').css('background', 'url(img/zones/red.jpg) center top / cover no-repeat #fff');
+        $('.steps__image').css('background', 'url(/solutionimg/zones/red.jpg) center top / cover no-repeat #fff');
       break
       case 'зеленый':
-        $('.steps__image').css('background', 'url(img/zones/green.jpg) center top / cover no-repeat #fff');
+        $('.steps__image').css('background', 'url(/solutionimg/zones/green.jpg) center top / cover no-repeat #fff');
       break
       case 'синий':
-        $('.steps__image').css('background', 'url(img/zones/blue.jpg) center top / cover no-repeat #fff');
+        $('.steps__image').css('background', 'url(/solutionimg/zones/blue.jpg) center top / cover no-repeat #fff');
       break
     }
   });
