@@ -484,6 +484,7 @@ $(document).ready(function () {
         $('form.steps__form').find('input[type="hidden"]')[2].value += ($(this)[0].firstChild.title + ';\n');
       });
       $(".steps__image").attr('class', 'steps__image steps__image__small');
+      $('.steps__image.steps__image__small').css('max-height', '792px');
       $('.steps__image.steps__image__small').css('background', window.prevBg);
     }
   });
