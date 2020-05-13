@@ -747,13 +747,13 @@ $(document).ready(function () {
     let color = $(this).find('img').attr('title');
     switch(color){
       case 'красный':
-        $('.steps__image').css('background', 'url(/solutionimg/zones/red.jpg) center top / cover no-repeat #fff');
+        $('.steps__image').css('background', 'url(/solution/img/zones/red.jpg) center top / cover no-repeat #fff');
       break
       case 'зеленый':
-        $('.steps__image').css('background', 'url(/solutionimg/zones/green.jpg) center top / cover no-repeat #fff');
+        $('.steps__image').css('background', 'url(/solution/img/zones/green.jpg) center top / cover no-repeat #fff');
       break
       case 'синий':
-        $('.steps__image').css('background', 'url(/solutionimg/zones/blue.jpg) center top / cover no-repeat #fff');
+        $('.steps__image').css('background', 'url(/solution/img/zones/blue.jpg) center top / cover no-repeat #fff');
       break
     }
   });
