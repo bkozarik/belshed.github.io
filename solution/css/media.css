@@ -367,6 +367,15 @@
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
+  .steps-list{
+    min-height: 0;
+  }
+
+
+  .steps-nav{
+    min-height: 0;
+  }
+
   .indicators.fx{
     margin-left: 5px;
   }
