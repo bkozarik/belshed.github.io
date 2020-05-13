@@ -535,16 +535,23 @@ $(document).ready(function () {
   });
   
   $('.indicators__item').on('click', function(){
-    $('a#next_step').css('display', 'block');
+    // $('a#next_step').css('display', 'block');
     if($(this).hasClass('ready')){
-      console.log(11);
       let curr_quiz_step = quiz_step;
       switch($(this).find('.indicators__txt')[0].innerText){
         case 'ВЫБОР ЗОНЫ':
           quiz_step = 0;
+          $('.steps-list__link').each(function(){
+            $(this).removeAttr('style');
+            $(this).find('i').removeAttr('style');
+          });
         break
         case 'ВЫБОР ПРЕДМЕТА':
           quiz_step = 1;
+          $('.steps-list__link').each(function(){
+            $(this).removeAttr('style');
+            $(this).find('i').removeAttr('style');
+          });
         break
         case 'ВЫБОР СТЕКЛА':
           quiz_step = 2;
@@ -553,7 +560,15 @@ $(document).ready(function () {
           quiz_step = 3;
         break
       }
-      console.log(quiz_step);
+      $('a.active').removeClass('active');
+      $('.steps__image__small').removeClass('steps__image__small');
+      let next_steps = Array.from(Array(4).keys());
+      next_steps.forEach((element) => {
+        if(element > quiz_step){
+          $($('.indicators__item')[element]).removeClass('ready');
+          $('form.steps__form').find('input[type="hidden"]')[element].value = '';
+        }
+      });
       if(quiz_step <= curr_quiz_step){
         $('.indicators__item').each((element, value) => {
           $(value).removeClass('active');
