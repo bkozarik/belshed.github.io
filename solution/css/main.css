@@ -285,9 +285,19 @@ body {
   padding-top: 75px;
 }
 
+.steps__item_3 .alt-row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 .steps__wrap {
   width: 290px;
   padding: 0 15px;
+  
+}
+
+.steps__item_3 .steps__wrap {
+  float: left;
 }
 
 /* Steps head */
@@ -309,8 +319,7 @@ body {
   -o-border-radius: 50%;
   background-color: transparent;
   border: 6px solid #8ec9c9;
-  /* box-shadow: 0px 0px 10px #2c3642; */
-  position: relative;
+  position: absolute;
   z-index: 200;
   transition: all .1s ease-in;
   -webkit-transition: all .1s ease-in;
@@ -346,50 +355,51 @@ body {
 }
 
 .steps__kitchen #fasade {
-  top: 56%;
+  top: 63%;
   left: 65%;
-  display: block;
+  position: absolute;
+  display: inline-block;
 }
 .steps__kitchen #glass-table{
-  top: 52%;
+  top: 63%;
   left: 30%;
   display: block;
 }
 .steps__kitchen #apron{
-  top: 29%;
-  left: 72%;
+  top: 41%;
+  left: 71%;
   display: block;
 }
 .steps__kitchen #shield{
-  top: 42%;
-  left: 0%;
+  top: 66%;
+  left: 1%;
   display: block;
 }
 .steps__kitchen #shelf{
-  top: 20%;
+  top: 32%;
   left: 81%;
   display: block;
 }
 
 .steps__guest #partitions{
   display: block;
-  top: 3%;
+  top: 24%;
   left: 39%;
 }
 .steps__guest #tv{
   display: block;
-  top: 25%;
-  left: 69%;
+  top: 34%;
+  left: 65%;
 }
 .steps__guest #wall{
   display: block;
-  top: 12%;
-  left: 70%;
+  top: 20%;
+  left: 64%;
 }
 .steps__guest #servant{
   display: block;
   top: 40%;
-  left: 5%;
+  left: 10%;
 }
 .steps__guest #glass-table{
   display: block;
@@ -398,62 +408,62 @@ body {
 }
 .steps__guest #glass-furniture{
   display: block;
-  top: 45%;
-  left: 59%;
+  top: 55%;
+  left: 58%;
 }
 
 
 .steps__wc #mirror{
   display: block;
-  top: 25%;
+  top: 36%;
   left: 45%;
 }
 .steps__wc #shower-screen{
   display: block;
-  top: 12%;
+  top: 26%;
   left: 74%;
 }
 .steps__wc #wall{
   display: block;
-  top: 11%;
+  top: 16%;
   left: 23%;
 }
 .steps__wc #fasade{
   display: block;
-  top: 55%;
+  top: 64%;
   left: 26%;
 }
 
 
 .steps__bedroom #wall{
   display: block;
-  top: 20%;
+  top: 23%;
   left: 56%;
 }
 .steps__bedroom #closet{
   display: block;
-  top: 22%;
+  top: 28%;
   left: 94%;
 }
 .steps__bedroom #mirror{
   display: block;
-  top: 13%;
+  top: 20%;
   left: 43%;
 }
 .steps__bedroom #glass-furniture{
   display: block;
-  top: 46%;
+  top: 53%;
   left: 64%;
 }
 .steps__bedroom #pedestal{
   display: block;
-  top: 43%;
+  top: 52%;
   left: 45%;
 }
 .steps__bedroom #glass{
   display: block;
-  top: 9%;
-  left: 21%;
+  top: 22%;
+  left: 26%;
 }
 
 
@@ -464,12 +474,12 @@ body {
 }
 .steps__child #child-furniture{
   display: block;
-  top: 15%;
+  top: 21%;
   left: 54%;
 }
 .steps__child #marker-desk{
   display: block;
-  top: 36%;
+  top: 40%;
   left: 37%;
 }
 .steps__child #cupboard{
@@ -491,18 +501,18 @@ body {
 }
 .steps__hall #mirror{
   display: block;
-  top: 18%;
-  left: 28.5%;
+  top: 29%;
+  left: 31.5%;
 }
 .steps__hall #furniture{
   display: block;
-  top: 47%;
-  left: 24%;
+  top: 52%;
+  left: 27%;
 }
 .steps__hall #doors{
   display: block;
-  top: 13%;
-  left: 42%;
+  top: 28%;
+  left: 43%;
 }
 
 
@@ -666,8 +676,22 @@ body {
   position: absolute;
   width: 80%;
   max-width: 1750px;
+  min-height: 792px;
   max-height: 792px;
   height: 99%;
+}
+
+.steps__image_3 {
+  width: 80%;
+  position: relative;
+  float: right;
+  max-width: 83%;
+  height: 792px;
+  height: 99%;
+}
+
+.steps__image_3 img {
+  right: 0;
 }
 
 .steps-list {

@@ -204,9 +204,19 @@
     margin-top: 25px;
   }
 }
-
+@media only screen and (min-width : 992px) {
+  .steps__wrap {
+    max-width: 20%;
+  }
+}
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
+  .steps__image_3{
+    display: none;
+  }
+  .steps-list, .steps-nav {
+    min-height: 0;
+  }
   .panel {
     display: none;
     margin-left: 0;
