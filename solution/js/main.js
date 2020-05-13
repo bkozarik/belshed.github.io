@@ -341,6 +341,7 @@ $(document).ready(function () {
       $('.steps__image.steps__image__small').css('background', window.prevBg);
     }
     $(this).css('display', 'none');
+    mySwiper2.update();
   });
   
   function choozeGlass(chosen_zone, obj){
@@ -663,10 +664,6 @@ $(document).ready(function () {
       event.stopPropagation();
   });
 
-  // $('.swiper-slide.tabs__name').each(function(){
-  //   $(this).toggleClass('active', false);
-  // });
-
   // Maskedinput
   $(function($){
     $('.phone-mask').mask(('+7 ') + '(999) 999-99-99');
@@ -700,15 +697,12 @@ $(document).ready(function () {
 
   // Tabs
   $('.tabs__item').not(':first').hide();
-  // $('.tabs__name').click(function() {
-  //   $('.tabs__name').removeClass('active').eq($(this).index()).addClass('active');
-  //   $('.tabs__item').hide().eq($(this).index()).fadeIn()
-  // }).eq(0).addClass('active');
 
   // Swiper
   var mySwiper = new Swiper ('.swiper-container', {
     spaceBetween: 15,
     slidesPerView: 'auto',
+    updateOnWindowResize: true,
     scrollbar: {
       el: '.swiper-scrollbar',
       hide: false,
@@ -728,7 +722,8 @@ $(document).ready(function () {
 
   var mySwiper1 = new Swiper ('.swiper-container1', {
     spaceBetween: 10,
-    slidesPerView: 3,
+    slidesPerView: 2,
+    updateOnWindowResize: true,
     scrollbar: {
       el: '.swiper-scrollbar',
       hide: false,
@@ -749,5 +744,6 @@ $(document).ready(function () {
       }
     }
   })
-
+  var mySwiper2 = document.querySelector('.swiper-container1').swiper;
+  mySwiper2.update();
 });
