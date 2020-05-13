@@ -1,6 +1,12 @@
 @charset "UTF-8";
 /*==========  Desktop First Method  ==========*/
 
+@media only screen and (min-width : 1930px) {
+  .steps__image{
+    max-width: 1542px;
+  }
+}
+
 @media only screen and (min-height : 700px) {
   .intro {
     height: 100vh;
