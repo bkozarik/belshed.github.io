@@ -332,10 +332,16 @@ $(document).ready(function () {
       $('.bloom__link.active').each(function(){ 
         $('form.steps__form').find('input[type="hidden"]')[2].value += ($(this)[0].firstChild.title + ';\n');
       });
-      $('.accordion.accordion_indent').find('li.active').each(function(value, element){
-        $('form.steps__form').find('input[type="hidden"]')[3].value += ($(element).find('.steps-list__txt')[0].innerText + ';\n');
-      });
-      $('form.steps__form').find('input[type="hidden"]')[3].value += $('.tabs__name.active')[0].innerText + ';\n';
+      if ($(window).width() > '992'){
+        $('.accordion.accordion_indent').find('li.active').each(function(value, element){
+          $('form.steps__form').find('input[type="hidden"]')[3].value += ($(element).find('.steps-list__txt')[0].innerText + ';\n');
+        });
+      }
+      else{
+        $('.tabs__name.active').each(function(value, element){
+          $('form.steps__form').find('input[type="hidden"]')[3].value += $(element)[0].innerText + ';\n';
+        });
+      }
       $('.steps__image.steps__image__small').css('object-fit', 'cover');
       $(".steps__image").attr('class', 'steps__image steps__image__small');
       $('.steps__image.steps__image__small').css('background', window.prevBg);
@@ -416,7 +422,7 @@ $(document).ready(function () {
             glass_arr = [0, 1, 2, 3, 4, 5, 6, 7, 8];
           break
           case 'glass-furniture':
-            glass_arr = [0, 1, 2, 3, 4, 5, 6];
+            glass_arr = [0, 1, 2, 3, 5, 6];
           break
           case 'mirror':
             glass_arr = [4];
