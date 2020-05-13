@@ -1070,6 +1070,7 @@ input[type="checkbox"]:checked + span:before {
   background: #f6f6f6;
   transition: all .3s;
   text-transform: uppercase;
+  display: none;
 }
 
 .tabs__name.active {

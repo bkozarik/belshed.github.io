@@ -60,7 +60,8 @@ $(document).ready(function () {
 
     arr.forEach((element) => {
       $('.steps-list__item')[element].style.display = 'block';
-    })
+    });
+    
   });
 
   $('a.sw__link').on('click', function (event) {
@@ -112,324 +113,152 @@ $(document).ready(function () {
   });
 
   $('.steps__dot').on('click', function(event) {
+    let pos;
     switch(chosen_zone){
       case 'ГОСТИННАЯ':
         switch($(this)[0].id){
           case 'partitions':
-            $($('.steps-list__link')[11]).toggleClass('active');
-            if($($('.steps-list__link')[11]).hasClass('active')){
-              $($('.steps-list__link')[11]).find('i').css('background', 'url(/solution/img/icons/i-minus.png) center no-repeat #f4f4f4');
-            }
-            else{
-              $($('.steps-list__link')[11]).find('i').css('background', 'url(/solution/img/icons/i-plus.png) center no-repeat #fff');
-            }
+            pos = 11;
           break
     
           case 'tv':
-            $($('.steps-list__link')[7]).toggleClass('active');
-            if($($('.steps-list__link')[7]).hasClass('active')){
-              $($('.steps-list__link')[7]).find('i').css('background', 'url(/solution/img/icons/i-minus.png) center no-repeat #f4f4f4');
-            }
-            else{
-              $($('.steps-list__link')[7]).find('i').css('background', 'url(/solution/img/icons/i-plus.png) center no-repeat #fff');
-            }
+            pos = 7;
           break
     
           case 'wall':
-            $($('.steps-list__link')[4]).toggleClass('active');
-            if($($('.steps-list__link')[4]).hasClass('active')){
-              $($('.steps-list__link')[4]).find('i').css('background', 'url(/solution/img/icons/i-minus.png) center no-repeat #f4f4f4');
-            }
-            else{
-              $($('.steps-list__link')[4]).find('i').css('background', 'url(/solution/img/icons/i-plus.png) center no-repeat #fff');
-            }
+            pos = 4;
           break
     
           case 'servant':
-            $($('.steps-list__link')[3]).toggleClass('active');
-            if($($('.steps-list__link')[3]).hasClass('active')){
-              $($('.steps-list__link')[3]).find('i').css('background', 'url(/solution/img/icons/i-minus.png) center no-repeat #f4f4f4');
-            }
-            else{
-              $($('.steps-list__link')[3]).find('i').css('background', 'url(/solution/img/icons/i-plus.png) center no-repeat #fff');
-            }
+            pos = 3;
           break
     
           case 'glass-table':
-            $($('.steps-list__link')[1]).toggleClass('active');
-            if($($('.steps-list__link')[1]).hasClass('active')){
-              $($('.steps-list__link')[1]).find('i').css('background', 'url(/solution/img/icons/i-minus.png) center no-repeat #f4f4f4');
-            }
-            else{
-              $($('.steps-list__link')[1]).find('i').css('background', 'url(/solution/img/icons/i-plus.png) center no-repeat #fff');
-            }
+            pos = 1;
           break
           case 'glass-furniture':
-            $($('.steps-list__link')[10]).toggleClass('active');
-            if($($('.steps-list__link')[10]).hasClass('active')){
-              $($('.steps-list__link')[10]).find('i').css('background', 'url(/solution/img/icons/i-minus.png) center no-repeat #f4f4f4');
-            }
-            else{
-              $($('.steps-list__link')[10]).find('i').css('background', 'url(/solution/img/icons/i-plus.png) center no-repeat #fff');
-            }
+            pos = 10;
           break
         }
       break
       case 'САН УЗЕЛ':
         switch($(this)[0].id){
           case 'mirror':
-            $($('.steps-list__link')[9]).toggleClass('active');
-            if($($('.steps-list__link')[9]).hasClass('active')){
-              $($('.steps-list__link')[9]).find('i').css('background', 'url(/solution/img/icons/i-minus.png) center no-repeat #f4f4f4');
-            }
-            else{
-              $($('.steps-list__link')[9]).find('i').css('background', 'url(/solution/img/icons/i-plus.png) center no-repeat #fff');
-            }
+            pos = 9;
           break
     
           case 'fasade':
-            $($('.steps-list__link')[0]).toggleClass('active');
-            if($($('.steps-list__link')[0]).hasClass('active')){
-              $($('.steps-list__link')[0]).find('i').css('background', 'url(/solution/img/icons/i-minus.png) center no-repeat #f4f4f4');
-            }
-            else{
-              $($('.steps-list__link')[0]).find('i').css('background', 'url(/solution/img/icons/i-plus.png) center no-repeat #fff');
-            }
+            pos = 0;
           break
     
           case 'shower-screen':
-            $($('.steps-list__link')[19]).toggleClass('active');
-            if($($('.steps-list__link')[19]).hasClass('active')){
-              $($('.steps-list__link')[19]).find('i').css('background', 'url(/solution/img/icons/i-minus.png) center no-repeat #f4f4f4');
-            }
-            else{
-              $($('.steps-list__link')[19]).find('i').css('background', 'url(/solution/img/icons/i-plus.png) center no-repeat #fff');
-            }
+            pos = 19;
           break
     
           case 'wall':
-            $($('.steps-list__link')[4]).toggleClass('active');
-            if($($('.steps-list__link')[4]).hasClass('active')){
-              $($('.steps-list__link')[4]).find('i').css('background', 'url(/solution/img/icons/i-minus.png) center no-repeat #f4f4f4');
-            }
-            else{
-              $($('.steps-list__link')[4]).find('i').css('background', 'url(/solution/img/icons/i-plus.png) center no-repeat #fff');
-            }
+            pos = 4;
           break
         }
       break
       case 'СПАЛЬНЯ':
         switch($(this)[0].id){
           case 'wall':
-            $($('.steps-list__link')[4]).toggleClass('active');
-            if($($('.steps-list__link')[4]).hasClass('active')){
-              $($('.steps-list__link')[4]).find('i').css('background', 'url(/solution/img/icons/i-minus.png) center no-repeat #f4f4f4');
-            }
-            else{
-              $($('.steps-list__link')[4]).find('i').css('background', 'url(/solution/img/icons/i-plus.png) center no-repeat #fff');
-            }
+            pos = 4;
           break
     
           case 'closet':
-            $($('.steps-list__link')[8]).toggleClass('active');
-            if($($('.steps-list__link')[8]).hasClass('active')){
-              $($('.steps-list__link')[8]).find('i').css('background', 'url(/solution/img/icons/i-minus.png) center no-repeat #f4f4f4');
-            }
-            else{
-              $($('.steps-list__link')[8]).find('i').css('background', 'url(/solution/img/icons/i-plus.png) center no-repeat #fff');
-            }
+            pos = 8;
           break
 
           case 'glass-furniture':
-            $($('.steps-list__link')[10]).toggleClass('active');
-            if($($('.steps-list__link')[10]).hasClass('active')){
-              $($('.steps-list__link')[10]).find('i').css('background', 'url(/solution/img/icons/i-minus.png) center no-repeat #f4f4f4');
-            }
-            else{
-              $($('.steps-list__link')[10]).find('i').css('background', 'url(/solution/img/icons/i-plus.png) center no-repeat #fff');
-            }
+            pos = 10;
           break
     
           case 'mirror':
-            $($('.steps-list__link')[9]).toggleClass('active');
-            if($($('.steps-list__link')[9]).hasClass('active')){
-              $($('.steps-list__link')[9]).find('i').css('background', 'url(/solution/img/icons/i-minus.png) center no-repeat #f4f4f4');
-            }
-            else{
-              $($('.steps-list__link')[9]).find('i').css('background', 'url(/solution/img/icons/i-plus.png) center no-repeat #fff');
-            }
+            pos = 9;
           break
     
           case 'pedestal':
-            $($('.steps-list__link')[12]).toggleClass('active');
-            if($($('.steps-list__link')[12]).hasClass('active')){
-              $($('.steps-list__link')[12]).find('i').css('background', 'url(/solution/img/icons/i-minus.png) center no-repeat #f4f4f4');
-            }
-            else{
-              $($('.steps-list__link')[12]).find('i').css('background', 'url(/solution/img/icons/i-plus.png) center no-repeat #fff');
-            }
+            pos = 12;
           break
     
           case 'glass':
-            $($('.steps-list__link')[14]).toggleClass('active');
-            if($($('.steps-list__link')[14]).hasClass('active')){
-              $($('.steps-list__link')[14]).find('i').css('background', 'url(/solution/img/icons/i-minus.png) center no-repeat #f4f4f4');
-            }
-            else{
-              $($('.steps-list__link')[14]).find('i').css('background', 'url(/solution/img/icons/i-plus.png) center no-repeat #fff');
-            }
+            pos = 14;
           break
         }
       break
       case 'ДЕТСКАЯ':
         switch($(this)[0].id){
           case 'cupboard':
-            $($('.steps-list__link')[21]).toggleClass('active');
-            if($($('.steps-list__link')[21]).hasClass('active')){
-              $($('.steps-list__link')[21]).find('i').css('background', 'url(/solution/img/icons/i-minus.png) center no-repeat #f4f4f4');
-            }
-            else{
-              $($('.steps-list__link')[21]).find('i').css('background', 'url(/solution/img/icons/i-plus.png) center no-repeat #fff');
-            }
+            pos = 21;
           break
     
           case 'mirror':
-            $($('.steps-list__link')[9]).toggleClass('active');
-            if($($('.steps-list__link')[9]).hasClass('active')){
-              $($('.steps-list__link')[9]).find('i').css('background', 'url(/solution/img/icons/i-minus.png) center no-repeat #f4f4f4');
-            }
-            else{
-              $($('.steps-list__link')[9]).find('i').css('background', 'url(/solution/img/icons/i-plus.png) center no-repeat #fff');
-            }
+            pos = 9;
           break
     
           case 'marker-desk':
-            $($('.steps-list__link')[17]).toggleClass('active');
-            if($($('.steps-list__link')[17]).hasClass('active')){
-              $($('.steps-list__link')[17]).find('i').css('background', 'url(/solution/img/icons/i-minus.png) center no-repeat #f4f4f4');
-            }
-            else{
-              $($('.steps-list__link')[17]).find('i').css('background', 'url(/solution/img/icons/i-plus.png) center no-repeat #fff');
-            }
+            pos = 17;
           break
 
           case 'child-furniture':
-            $($('.steps-list__link')[18]).toggleClass('active');
-            if($($('.steps-list__link')[18]).hasClass('active')){
-              $($('.steps-list__link')[18]).find('i').css('background', 'url(/solution/img/icons/i-minus.png) center no-repeat #f4f4f4');
-            }
-            else{
-              $($('.steps-list__link')[18]).find('i').css('background', 'url(/solution/img/icons/i-plus.png) center no-repeat #fff');
-            }
+            pos = 18;
           break
         }
       break
       case 'ПРИХОЖАЯ':
         switch($(this)[0].id){
           case 'wall':
-            $($('.steps-list__link')[4]).toggleClass('active');
-            if($($('.steps-list__link')[4]).hasClass('active')){
-              $($('.steps-list__link')[4]).find('i').css('background', 'url(/solution/img/icons/i-minus.png) center no-repeat #f4f4f4');
-            }
-            else{
-              $($('.steps-list__link')[4]).find('i').css('background', 'url(/solution/img/icons/i-plus.png) center no-repeat #fff');
-            }
+            pos = 4;
           break
     
           case 'furniture':
-            $($('.steps-list__link')[5]).toggleClass('active');
-            if($($('.steps-list__link')[5]).hasClass('active')){
-              $($('.steps-list__link')[5]).find('i').css('background', 'url(/solution/img/icons/i-minus.png) center no-repeat #f4f4f4');
-            }
-            else{
-              $($('.steps-list__link')[5]).find('i').css('background', 'url(/solution/img/icons/i-plus.png) center no-repeat #fff');
-            }
+            pos = 5;
           break
     
           case 'closet':
-            $($('.steps-list__link')[8]).toggleClass('active');
-            if($($('.steps-list__link')[8]).hasClass('active')){
-              $($('.steps-list__link')[8]).find('i').css('background', 'url(/solution/img/icons/i-minus.png) center no-repeat #f4f4f4');
-            }
-            else{
-              $($('.steps-list__link')[8]).find('i').css('background', 'url(/solution/img/icons/i-plus.png) center no-repeat #fff');
-            }
+            pos = 8;
           break
     
           case 'mirror':
-            $($('.steps-list__link')[9]).toggleClass('active');
-            if($($('.steps-list__link')[9]).hasClass('active')){
-              $($('.steps-list__link')[9]).find('i').css('background', 'url(/solution/img/icons/i-minus.png) center no-repeat #f4f4f4');
-            }
-            else{
-              $($('.steps-list__link')[9]).find('i').css('background', 'url(/solution/img/icons/i-plus.png) center no-repeat #fff');
-            }
+            pos = 9;
           break
     
           case 'doors':
-            $($('.steps-list__link')[13]).toggleClass('active');
-            if($($('.steps-list__link')[13]).hasClass('active')){
-              $($('.steps-list__link')[13]).find('i').css('background', 'url(/solution/img/icons/i-minus.png) center no-repeat #f4f4f4');
-            }
-            else{
-              $($('.steps-list__link')[13]).find('i').css('background', 'url(/solution/img/icons/i-plus.png) center no-repeat #fff');
-            }
+            pos = 13;
           break
         }
       break
       case 'КУХНЯ':
         switch($(this)[0].id){
           case 'fasade':
-            $($('.steps-list__link')[0]).toggleClass('active');
-            if($($('.steps-list__link')[0]).hasClass('active')){
-              $($('.steps-list__link')[0]).find('i').css('background', 'url(/solution/img/icons/i-minus.png) center no-repeat #f4f4f4');
-            }
-            else{
-              $($('.steps-list__link')[0]).find('i').css('background', 'url(/solution/img/icons/i-plus.png) center no-repeat #fff');
-            }
+            pos = 0;
           break
     
           case 'glass-table':
-            $($('.steps-list__link')[1]).toggleClass('active');
-            if($($('.steps-list__link')[1]).hasClass('active')){
-              $($('.steps-list__link')[1]).find('i').css('background', 'url(/solution/img/icons/i-minus.png) center no-repeat #f4f4f4');
-            }
-            else{
-              $($('.steps-list__link')[1]).find('i').css('background', 'url(/solution/img/icons/i-plus.png) center no-repeat #fff');
-            }
+            pos = 1;
           break
     
           case 'apron':
-            $($('.steps-list__link')[2]).toggleClass('active');
-            if($($('.steps-list__link')[2]).hasClass('active')){
-              $($('.steps-list__link')[2]).find('i').css('background', 'url(/solution/img/icons/i-minus.png) center no-repeat #f4f4f4');
-            }
-            else{
-              $($('.steps-list__link')[2]).find('i').css('background', 'url(/solution/img/icons/i-plus.png) center no-repeat #fff');
-            }
+            pos = 2;
           break
     
           case 'shelf':
-            $($('.steps-list__link')[6]).toggleClass('active');
-            if($($('.steps-list__link')[6]).hasClass('active')){
-              $($('.steps-list__link')[6]).find('i').css('background', 'url(/solution/img/icons/i-minus.png) center no-repeat #f4f4f4');
-            }
-            else{
-              $($('.steps-list__link')[6]).find('i').css('background', 'url(/solution/img/icons/i-plus.png) center no-repeat #fff');
-            }
+            pos = 6;
           break
     
           case 'shield':
-            $($('.steps-list__link')[15]).toggleClass('active');
-            if($($('.steps-list__link')[15]).hasClass('active')){
-              $($('.steps-list__link')[15]).find('i').css('background', 'url(/solution/img/icons/i-minus.png) center no-repeat #f4f4f4');
-            }
-            else{
-              $($('.steps-list__link')[15]).find('i').css('background', 'url(/solution/img/icons/i-plus.png) center no-repeat #fff');
-            }
+            pos = 15;
           break
         }
       break
+    }
+    $($('.steps-list__link')[pos]).toggleClass('active');
+    if($($('.steps-list__link')[pos]).hasClass('active')){
+      $($('.steps-list__link')[pos]).find('i').css('background', 'url(/solution/img/icons/i-minus.png) center no-repeat #f4f4f4');
+    }
+    else{
+      $($('.steps-list__link')[pos]).find('i').css('background', 'url(/solution/img/icons/i-plus.png) center no-repeat #fff');
     }
   });
 
@@ -483,7 +312,8 @@ $(document).ready(function () {
       value.attributes[1].value = 'display: none;';
     });
     $('.indicators__item')[quiz_step - 1].classList.value = 'indicators__item ready';
-    $('.indicators__item')[quiz_step].classList.value = 'indicators__item active';
+    $($('.indicators__item')[quiz_step]).addClass('indicators__item active');
+    $('.indicators__item.ready').find('span').addClass('available');
     $('span.number__item.active')[0].innerText = quiz_step + 1;
 
     $('.steps__item')[quiz_step].attributes[1].value = 'display: block;';
@@ -510,48 +340,31 @@ $(document).ready(function () {
       $(".steps__image").attr('class', 'steps__image steps__image__small');
       $('.steps__image.steps__image__small').css('background', window.prevBg);
     }
+    $(this).css('display', 'none');
   });
   
   function choozeGlass(chosen_zone, obj){
+    let glass_arr = [];
     switch(chosen_zone){
       case 'ГОСТИННАЯ':
         switch(obj.classList[1]){
           case 'partitions':
-            $($('ul.accordion.accordion_indent>li')[1]).css('display', 'block');
-            $($('ul.accordion.accordion_indent>li')[3]).css('display', 'block');
-            $($('ul.accordion.accordion_indent>li')[6]).css('display', 'block');
-            $($('ul.accordion.accordion_indent>li')[7]).css('display', 'block');
-            $($('ul.accordion.accordion_indent>li')[8]).css('display', 'block');
-            $($('ul.accordion.accordion_indent>li')[9]).css('display', 'block');
+            glass_arr = [1, 3, 6, 7, 8, 9];
           break
           case 'tv':
-            $($('ul.accordion.accordion_indent>li')[6]).css('display', 'block');
+            glass_arr = [6];
           break
           case 'wall':
-            $($('ul.accordion.accordion_indent>li')[0]).css('display', 'block');
-            $($('ul.accordion.accordion_indent>li')[2]).css('display', 'block');
-            $($('ul.accordion.accordion_indent>li')[6]).css('display', 'block');
+            glass_arr = [0, 2, 6];
           break
           case 'servant':
-            $($('ul.accordion.accordion_indent>li')[1]).css('display', 'block');
-            $($('ul.accordion.accordion_indent>li')[3]).css('display', 'block');
-            $($('ul.accordion.accordion_indent>li')[6]).css('display', 'block');
-            $($('ul.accordion.accordion_indent>li')[8]).css('display', 'block');
-            $($('ul.accordion.accordion_indent>li')[9]).css('display', 'block');
+            glass_arr = [1, 3, 6, 8, 9];
           break
           case 'glass-table':
-            $($('ul.accordion.accordion_indent>li')[1]).css('display', 'block');
-            $($('ul.accordion.accordion_indent>li')[3]).css('display', 'block');
-            $($('ul.accordion.accordion_indent>li')[6]).css('display', 'block');
-            $($('ul.accordion.accordion_indent>li')[8]).css('display', 'block');
+            glass_arr = [1, 3, 6, 8];
           break
           case 'glass-furniture':
-            $($('ul.accordion.accordion_indent>li')[0]).css('display', 'block');
-            $($('ul.accordion.accordion_indent>li')[1]).css('display', 'block');
-            $($('ul.accordion.accordion_indent>li')[2]).css('display', 'block');
-            $($('ul.accordion.accordion_indent>li')[3]).css('display', 'block');
-            $($('ul.accordion.accordion_indent>li')[6]).css('display', 'block');
-            $($('ul.accordion.accordion_indent>li')[7]).css('display', 'block');
+            glass_arr = [0, 1, 2, 3, 6, 7];
           break
         }
       break
@@ -559,30 +372,19 @@ $(document).ready(function () {
       case 'КУХНЯ':
         switch(obj.classList[1]){
           case 'apron':
-            $($('ul.accordion.accordion_indent>li')[0]).css('display', 'block');
+            glass_arr = [0];
           break
           case 'fasade':
-            $($('ul.accordion.accordion_indent>li')[0]).css('display', 'block');
-            $($('ul.accordion.accordion_indent>li')[2]).css('display', 'block');
-            $($('ul.accordion.accordion_indent>li')[6]).css('display', 'block');
+            glass_arr = [0, 2, 5];
           break
           case 'glass-table':
-            $($('ul.accordion.accordion_indent>li')[1]).css('display', 'block');
-            $($('ul.accordion.accordion_indent>li')[3]).css('display', 'block');
-            $($('ul.accordion.accordion_indent>li')[8]).css('display', 'block');
+            glass_arr = [1, 3, 7];
           break
           case 'shelf':
-            $($('ul.accordion.accordion_indent>li')[1]).css('display', 'block');
-            $($('ul.accordion.accordion_indent>li')[3]).css('display', 'block');
-            $($('ul.accordion.accordion_indent>li')[7]).css('display', 'block');
+            glass_arr = [1, 3, 6];
           break
           case 'shield':
-            $($('ul.accordion.accordion_indent>li')[0]).css('display', 'block');
-            $($('ul.accordion.accordion_indent>li')[1]).css('display', 'block');
-            $($('ul.accordion.accordion_indent>li')[2]).css('display', 'block');
-            $($('ul.accordion.accordion_indent>li')[3]).css('display', 'block');
-            $($('ul.accordion.accordion_indent>li')[6]).css('display', 'block');
-            $($('ul.accordion.accordion_indent>li')[8]).css('display', 'block');
+            glass_arr = [0, 1, 2, 3, 5, 7];
           break
         }
       break
@@ -590,25 +392,16 @@ $(document).ready(function () {
       case 'САН УЗЕЛ':
         switch(obj.classList[1]){
           case 'mirror':
-            $($('ul.accordion.accordion_indent>li')[4]).css('display', 'block');
+            glass_arr = [4];
           break
           case 'wall':
-            $($('ul.accordion.accordion_indent>li')[0]).css('display', 'block');
-            $($('ul.accordion.accordion_indent>li')[2]).css('display', 'block');
+            glass_arr = [0, 2];
           break
           case 'shower-screen':
-            $($('ul.accordion.accordion_indent>li')[1]).css('display', 'block');
-            $($('ul.accordion.accordion_indent>li')[3]).css('display', 'block');
-            $($('ul.accordion.accordion_indent>li')[6]).css('display', 'block');
-            $($('ul.accordion.accordion_indent>li')[7]).css('display', 'block');
-            $($('ul.accordion.accordion_indent>li')[10]).css('display', 'block');
+            glass_arr = [1, 3, 5, 6, 9];
           break
           case 'fasade':
-            $($('ul.accordion.accordion_indent>li')[0]).css('display', 'block');
-            $($('ul.accordion.accordion_indent>li')[1]).css('display', 'block');
-            $($('ul.accordion.accordion_indent>li')[2]).css('display', 'block');
-            $($('ul.accordion.accordion_indent>li')[3]).css('display', 'block');
-            $($('ul.accordion.accordion_indent>li')[6]).css('display', 'block');
+            glass_arr = [0, 1, 2, 3, 5];
           break
         }
       break
@@ -616,41 +409,22 @@ $(document).ready(function () {
       case 'СПАЛЬНЯ':
         switch(obj.classList[1]){
           case 'wall':
-            $($('ul.accordion.accordion_indent>li')[0]).css('display', 'block');
-            $($('ul.accordion.accordion_indent>li')[2]).css('display', 'block');
+            glass_arr = [0, 2];
           break
           case 'closet':
-            $($('ul.accordion.accordion_indent>li')[0]).css('display', 'block');
-            $($('ul.accordion.accordion_indent>li')[1]).css('display', 'block');
-            $($('ul.accordion.accordion_indent>li')[2]).css('display', 'block');
-            $($('ul.accordion.accordion_indent>li')[3]).css('display', 'block');
-            $($('ul.accordion.accordion_indent>li')[4]).css('display', 'block');
-            $($('ul.accordion.accordion_indent>li')[5]).css('display', 'block');
-            $($('ul.accordion.accordion_indent>li')[6]).css('display', 'block');
-            $($('ul.accordion.accordion_indent>li')[7]).css('display', 'block');
-            $($('ul.accordion.accordion_indent>li')[8]).css('display', 'block');
+            glass_arr = [0, 1, 2, 3, 4, 5, 6, 7, 8];
           break
           case 'glass-furniture':
-            $($('ul.accordion.accordion_indent>li')[0]).css('display', 'block');
-            $($('ul.accordion.accordion_indent>li')[1]).css('display', 'block');
-            $($('ul.accordion.accordion_indent>li')[2]).css('display', 'block');
-            $($('ul.accordion.accordion_indent>li')[3]).css('display', 'block');
-            $($('ul.accordion.accordion_indent>li')[5]).css('display', 'block');
-            $($('ul.accordion.accordion_indent>li')[6]).css('display', 'block');
-            $($('ul.accordion.accordion_indent>li')[7]).css('display', 'block');
-            
+            glass_arr = [0, 1, 2, 3, 4, 5, 6];
           break
           case 'mirror':
-            $($('ul.accordion.accordion_indent>li')[4]).css('display', 'block');
+            glass_arr = [4];
           break
           case 'pedestal':
-            $($('ul.accordion.accordion_indent>li')[1]).css('display', 'block');
-            $($('ul.accordion.accordion_indent>li')[3]).css('display', 'block');
+            glass_arr = [1, 3];
           break
           case 'glass':
-            $($('ul.accordion.accordion_indent>li')[1]).css('display', 'block');
-            $($('ul.accordion.accordion_indent>li')[6]).css('display', 'block');
-            $($('ul.accordion.accordion_indent>li')[8]).css('display', 'block');
+            glass_arr = [1, 6, 8];
           break
         }
       break
@@ -658,26 +432,16 @@ $(document).ready(function () {
       case 'ДЕТСКАЯ':
         switch(obj.classList[1]){
           case 'cupboard':
-            $($('ul.accordion.accordion_indent>li')[0]).css('display', 'block');
-            $($('ul.accordion.accordion_indent>li')[1]).css('display', 'block');
-            $($('ul.accordion.accordion_indent>li')[2]).css('display', 'block');
-            $($('ul.accordion.accordion_indent>li')[3]).css('display', 'block');
-            $($('ul.accordion.accordion_indent>li')[4]).css('display', 'block');
-            $($('ul.accordion.accordion_indent>li')[5]).css('display', 'block');
-            $($('ul.accordion.accordion_indent>li')[6]).css('display', 'block');
-            $($('ul.accordion.accordion_indent>li')[7]).css('display', 'block');
+            glass_arr = [0, 1, 2, 3, 4, 5, 6, 7];
           break
           case 'marker-desk':
-            $($('ul.accordion.accordion_indent>li')[0]).css('display', 'block');
-            $($('ul.accordion.accordion_indent>li')[2]).css('display', 'block');
-            $($('ul.accordion.accordion_indent>li')[4]).css('display', 'block');
+            glass_arr = [0, 2, 4];
           break
           case 'mirror':
-            $($('ul.accordion.accordion_indent>li')[4]).css('display', 'block');
+            glass_arr = [4];
           break
           case 'child-furniture':
-            $($('ul.accordion.accordion_indent>li')[0]).css('display', 'block');
-            $($('ul.accordion.accordion_indent>li')[2]).css('display', 'block');
+            glass_arr = [0, 2];
           break
         }
       break
@@ -685,56 +449,32 @@ $(document).ready(function () {
       case 'ПРИХОЖАЯ':
         switch(obj.classList[1]){
           case 'furniture':
-            $($('ul.accordion.accordion_indent>li')[0]).css('display', 'block');
-            $($('ul.accordion.accordion_indent>li')[1]).css('display', 'block');
-            $($('ul.accordion.accordion_indent>li')[2]).css('display', 'block');
-            $($('ul.accordion.accordion_indent>li')[3]).css('display', 'block');
-            $($('ul.accordion.accordion_indent>li')[4]).css('display', 'block');
-            $($('ul.accordion.accordion_indent>li')[5]).css('display', 'block');
-            $($('ul.accordion.accordion_indent>li')[6]).css('display', 'block');
+            glass_arr = [0, 1, 2, 3, 4, 5, 6];
           break
           case 'closet':
-            $($('ul.accordion.accordion_indent>li')[0]).css('display', 'block');
-            $($('ul.accordion.accordion_indent>li')[1]).css('display', 'block');
-            $($('ul.accordion.accordion_indent>li')[2]).css('display', 'block');
-            $($('ul.accordion.accordion_indent>li')[3]).css('display', 'block');
-            $($('ul.accordion.accordion_indent>li')[4]).css('display', 'block');
-            $($('ul.accordion.accordion_indent>li')[5]).css('display', 'block');
-            $($('ul.accordion.accordion_indent>li')[6]).css('display', 'block');
-            $($('ul.accordion.accordion_indent>li')[8]).css('display', 'block');
-            $($('ul.accordion.accordion_indent>li')[9]).css('display', 'block');
+            glass_arr = [0, 1, 2, 3, 4, 5, 6, 7, 8];
           break
           case 'door':
-            $($('ul.accordion.accordion_indent>li')[0]).css('display', 'block');
-            $($('ul.accordion.accordion_indent>li')[1]).css('display', 'block');
-            $($('ul.accordion.accordion_indent>li')[2]).css('display', 'block');
-            $($('ul.accordion.accordion_indent>li')[3]).css('display', 'block');
-            $($('ul.accordion.accordion_indent>li')[4]).css('display', 'block');
-            $($('ul.accordion.accordion_indent>li')[5]).css('display', 'block');
-            $($('ul.accordion.accordion_indent>li')[6]).css('display', 'block');
-            $($('ul.accordion.accordion_indent>li')[8]).css('display', 'block');
-            $($('ul.accordion.accordion_indent>li')[9]).css('display', 'block');
-          break
-          case 'marker-desk':
-            $($('ul.accordion.accordion_indent>li')[0]).css('display', 'block');
-            $($('ul.accordion.accordion_indent>li')[2]).css('display', 'block');
-            $($('ul.accordion.accordion_indent>li')[4]).css('display', 'block');
+            glass_arr = [0, 1, 2, 3, 4, 5, 6, 7, 8];
           break
           case 'mirror':
-            $($('ul.accordion.accordion_indent>li')[4]).css('display', 'block');
+            glass_arr = [4];
           break
           case 'wall':
-            $($('ul.accordion.accordion_indent>li')[0]).css('display', 'block');
-            $($('ul.accordion.accordion_indent>li')[2]).css('display', 'block');
+            glass_arr = [0, 2];
           break
         }
       break
     }
+    glass_arr.forEach((element) => {
+      $($('ul.accordion.accordion_indent>li')[element]).css('display', 'block');
+      $($('.tabs__name')[element]).css('display', 'block');
+    });
   }
-
+  
   $('.steps-list__link').on('click', function (event) {
     event.preventDefault();
-
+    $('a#next_step').css('display', 'block');
     $(this).toggleClass('active');
 
     if($(this).hasClass('active')){
@@ -784,39 +524,50 @@ $(document).ready(function () {
         $('.tabs__img').css('background', 'url(img/zones/blue.jpg) center top / cover no-repeat #fff');
       break
     }
+    $('a#next_step').css('display', 'block');
   });
   
-  $('.indicators__item > span').on('click', function(event){
-    let curr_quiz_step = quiz_step;
-    switch($(this)[0].previousElementSibling.innerText){
-      case 'ВЫБОР ЗОНЫ':
-        quiz_step = 0;
-      break
-      case 'ВЫБОР ПРЕДМЕТА':
-        quiz_step = 1;
-      break
-      case 'ВЫБОР СТЕКЛА':
-        quiz_step = 2;
-      break
-      case 'АНКЕТА':
-        quiz_step = 3;
-      break
-    }
-    if(quiz_step <= curr_quiz_step){
-      $('.indicators__item').each((element, value) => {
-        $(value).removeClass('active');
-        console.log(element);
-      });
-      $(this).parent().removeClass('ready');
-      $(this).parent().addClass('active');
-  
-      $('.steps__item').each((element, value) => {
-        $(value).css('display', 'none');
-      });
-      $('span.number__item.active')[0].innerText = quiz_step + 1;
-      $($('.steps__item')[quiz_step]).css('display', 'block');
-    }
+  $('.indicators__item').on('click', function(){
+    $('a#next_step').css('display', 'block');
+    if($(this).hasClass('ready')){
+      console.log(11);
+      let curr_quiz_step = quiz_step;
+      switch($(this).find('.indicators__txt')[0].innerText){
+        case 'ВЫБОР ЗОНЫ':
+          quiz_step = 0;
+        break
+        case 'ВЫБОР ПРЕДМЕТА':
+          quiz_step = 1;
+        break
+        case 'ВЫБОР СТЕКЛА':
+          quiz_step = 2;
+        break
+        case 'АНКЕТА':
+          quiz_step = 3;
+        break
+      }
+      console.log(quiz_step);
+      if(quiz_step <= curr_quiz_step){
+        $('.indicators__item').each((element, value) => {
+          $(value).removeClass('active');
+        });
+        $(this).removeClass('ready');
+        $(this).addClass('active');
     
+        $('.steps__item').each((element, value) => {
+          $(value).css('display', 'none');
+        });
+
+        $('form.steps__form').find('input[type="hidden"]')[quiz_step].value = '';
+        if(quiz_step == 2){
+          $('form.steps__form').find('input[type="hidden"]')[quiz_step].value = '';
+          $('form.steps__form').find('input[type="hidden"]')[quiz_step + 1].value = '';
+        }
+        $('span.number__item.active')[0].innerText = quiz_step + 1;
+        $($('.steps__item')[quiz_step]).css('display', 'block');
+      }
+    
+    }
   });
 
   $($('form.modal__form')[0]).find('input').on('change', function (event){
@@ -877,6 +628,10 @@ $(document).ready(function () {
     });
   });
 
+  $('.tabs__name').on('click', function(){
+    $(this).toggleClass('active');
+  });
+
   // Show menu
   $('.navbar-toggle').click(function() {
     $(this).toggleClass('active');
@@ -907,6 +662,10 @@ $(document).ready(function () {
       $('.modal').fadeOut();
       event.stopPropagation();
   });
+
+  // $('.swiper-slide.tabs__name').each(function(){
+  //   $(this).toggleClass('active', false);
+  // });
 
   // Maskedinput
   $(function($){
@@ -941,10 +700,10 @@ $(document).ready(function () {
 
   // Tabs
   $('.tabs__item').not(':first').hide();
-  $('.tabs__name').click(function() {
-    $('.tabs__name').removeClass('active').eq($(this).index()).addClass('active');
-    $('.tabs__item').hide().eq($(this).index()).fadeIn()
-  }).eq(0).addClass('active');
+  // $('.tabs__name').click(function() {
+  //   $('.tabs__name').removeClass('active').eq($(this).index()).addClass('active');
+  //   $('.tabs__item').hide().eq($(this).index()).fadeIn()
+  // }).eq(0).addClass('active');
 
   // Swiper
   var mySwiper = new Swiper ('.swiper-container', {
