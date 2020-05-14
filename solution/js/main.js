@@ -261,10 +261,14 @@ $(document).ready(function () {
     else{
       $($('.steps-list__link')[pos]).find('i').css('background', 'url(/solution/img/icons/i-plus.png) center no-repeat #fff');
     }
-  });
-
-  $('.steps__dot').on('click', function (event) {
-    $(this).toggleClass('active');
+    
+    if($(this).hasClass('active')){
+      $(this).toggleClass('active', false);
+    }
+    else if(!($(this).hasClass('active'))){
+      $(this).toggleClass('active', true);
+    }
+    
 
     choozeGlass(chosen_zone, $(this)[0]);
   });
