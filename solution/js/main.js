@@ -114,6 +114,7 @@ $(document).ready(function () {
 
   $('.steps__dot').on('click', function(event) {
     let pos;
+    $('a#next_step').css('display', 'block');
     switch(chosen_zone){
       case 'ГОСТИННАЯ':
         switch($(this)[0].id){
