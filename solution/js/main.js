@@ -264,7 +264,7 @@ $(document).ready(function () {
   });
 
   $('.steps__dot').on('click', function (event) {
-    $(this).toggleClass('active');
+    //$(this).toggleClass('active');
 
     choozeGlass(chosen_zone, $(this)[0]);
   });
