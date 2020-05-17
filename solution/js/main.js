@@ -7,7 +7,6 @@ $(document).ready(function () {
     event.preventDefault();
     chosen_zone = $(this)[0].innerText;
     $('a#next_step').css('display', 'block');
-    console.log(chosen_zone);
     $('.steps-list__item').each((element, value) => {
       value.style.display = 'none';
     });
@@ -18,7 +17,7 @@ $(document).ready(function () {
 
     let arr = [];
     console.log('arr generated');
-    switch(chosen_zone){
+    switch(window.chosen_zone){
       case 'ГОСТИННАЯ':
         console.log(chosen_zone);
         arr = [1, 3, 4, 7, 10, 11];
