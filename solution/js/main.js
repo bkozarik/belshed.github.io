@@ -25,14 +25,14 @@ $(document).ready(function () {
       case 'КУХНЯ':
         arr = [0, 1, 2, 6, 15];
         $('.steps__image_3').toggleClass('steps__kitchen');
-        $('.steps__image').css('background','url(img/zones/2.jpg) center top/contain no-repeat');
+        $('.steps__image').css('background','url(img/zones/2.jpg) center top/cover no-repeat');
         $('.steps__image_3>img').attr('src','img/zones/2.jpg');
       break
 
       case 'САН УЗЕЛ':
         arr = [0, 4, 9, 19];
         $('.steps__image_3').toggleClass('steps__wc');
-        $('.steps__image').css('background','url(img/zones/3.jpg) center top/contain no-repeat');
+        $('.steps__image').css('background','url(img/zones/3.jpg) center top/cover no-repeat');
         $('.steps__image_3>img').attr('src','img/zones/3.jpg');
       break
 
@@ -261,7 +261,7 @@ $(document).ready(function () {
     else{
       $($('.steps-list__link')[pos]).find('i').css('background', 'url(/solution/img/icons/i-plus.png) center no-repeat #fff');
     }
-    
+
     if($(this).hasClass('active')){
       $(this).toggleClass('active', false);
     }
@@ -347,9 +347,9 @@ $(document).ready(function () {
           $('form.steps__form').find('input[type="hidden"]')[3].value += $(element)[0].innerText + ';\n';
         });
       }
-      $('.steps__image.steps__image__small').css('object-fit', 'cover');
       $(".steps__image").attr('class', 'steps__image steps__image__small');
       $('.steps__image.steps__image__small').css('background', window.prevBg);
+      $('.steps__image.steps__image__small').css('object-fit', 'cover !important');
     }
     $(this).css('display', 'none');
     mySwiper2.update();

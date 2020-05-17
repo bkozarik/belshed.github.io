@@ -284,12 +284,20 @@ body {
 .steps {
   padding-top: 75px;
 }
-
+/* clear fis start */
 .steps__item_3 .alt-row:after {
-  content: "";
-  display: table;
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
   clear: both;
+  height: 0;
 }
+
+* html .alt-row { height: 1%; }
+.alt-row { display: block; }
+/* clear fis end */
+
 .steps__wrap {
   width: 290px;
   padding: 0 15px;
