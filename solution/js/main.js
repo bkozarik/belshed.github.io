@@ -58,6 +58,7 @@ $(document).ready(function () {
         $('.steps__image_3>img').attr('src','img/zones/6.jpg');
       break
     }
+    console.log(arr);
     arr.forEach((element) => {
       $('.steps-list__item')[element].style.display = 'block';
     });
