@@ -10,7 +10,6 @@ $(document).ready(function () {
     $('.steps-list__item').each((element, value) => {
       value.style.display = 'none';
     });
-    console.log('all turned off');
     $('a.steps-nav__link').toggleClass('active', false);
     $(this).toggleClass('active');
     $(".steps__image_3").attr('class', 'steps__image_3');
@@ -19,6 +18,7 @@ $(document).ready(function () {
     console.log('arr generated');
     switch(window.chosen_zone){
       case 'ГОСТИННАЯ':
+        case 'ГОСТИННАЯ\n':
         console.log(chosen_zone);
         arr = [1, 3, 4, 7, 10, 11];
         $('.steps__image_3').toggleClass('steps__guest');
