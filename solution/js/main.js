@@ -2,6 +2,7 @@ $(document).ready(function () {
   let quiz_step = 0;
   let chosen_zone = '';
   let prevBg;
+  let arr = new Array();
   $('a.steps-nav__link').on('click', function (event) {
     event.preventDefault();
     chosen_zone = $(this)[0].innerText;
@@ -15,54 +16,54 @@ $(document).ready(function () {
     $(this).toggleClass('active');
     $(".steps__image_3").attr('class', 'steps__image_3');
 
-    let arr = new Array();
+    
     console.log('arr generated');
     switch(chosen_zone){
       case 'ГОСТИННАЯ':
-        arr = [1, 3, 4, 7, 10, 11];
+        window.arr = [1, 3, 4, 7, 10, 11];
         $('.steps__image_3').toggleClass('steps__guest');
         $('.steps__image').css('background','url(img/zones/1.jpg) center top/cover no-repeat');
         $('.steps__image_3>img').attr('src','img/zones/1.jpg');
       break
 
       case 'КУХНЯ':
-        arr = [0, 1, 2, 6, 15];
+        window.arr = [0, 1, 2, 6, 15];
         $('.steps__image_3').toggleClass('steps__kitchen');
         $('.steps__image').css('background','url(img/zones/2.jpg) center top/cover no-repeat');
         $('.steps__image_3>img').attr('src','img/zones/2.jpg');
       break
 
       case 'САН УЗЕЛ':
-        arr = [0, 4, 9, 19];
+        window.arr = [0, 4, 9, 19];
         $('.steps__image_3').toggleClass('steps__wc');
         $('.steps__image').css('background','url(img/zones/3.jpg) center top/cover no-repeat');
         $('.steps__image_3>img').attr('src','img/zones/3.jpg');
       break
 
       case 'СПАЛЬНЯ':
-        arr = [4, 8, 9, 10, 12, 14];
+        window.arr = [4, 8, 9, 10, 12, 14];
         $('.steps__image_3').toggleClass('steps__bedroom');
         $('.steps__image').css('background','url(img/zones/4.jpg) center top/cover no-repeat');
         $('.steps__image_3>img').attr('src','img/zones/4.jpg');
       break
 
       case 'ДЕТСКАЯ':
-        arr = [9, 17, 18, 20];
+        window.arr = [9, 17, 18, 20];
         $('.steps__image_3').toggleClass('steps__child');
         $('.steps__image').css('background','url(img/zones/5.jpg) center top/cover no-repeat');
         $('.steps__image_3>img').attr('src','img/zones/5.jpg');
       break
 
       case 'ПРИХОЖАЯ':
-        arr = [4, 5, 8, 9, 13];
+        window.arr = [4, 5, 8, 9, 13];
         $('.steps__image_3').toggleClass('steps__hall');
         $('.steps__image').css('background','url(img/zones/6.jpg) center top/cover no-repeat');
         $('.steps__image_3>img').attr('src','img/zones/6.jpg');
       break
     }
-    console.log(arr);
+    console.log(window.arr);
     console.log(chosen_zone);
-    arr.forEach((element) => {
+    window.arr.forEach((element) => {
       $('.steps-list__item')[element].style.display = 'block';
     });
     
