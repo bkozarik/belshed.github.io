@@ -13,7 +13,7 @@ $(document).ready(function () {
     $(this).toggleClass('active');
 
     $(".steps__image_3").attr('class', 'steps__image_3');
-
+    arr = [];
     switch(chosen_zone){
       case 'ГОСТИННАЯ':
         arr = [1, 3, 4, 7, 10, 11];
