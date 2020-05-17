@@ -26,7 +26,7 @@ $(document).ready(function () {
       break
 
       case 'КУХНЯ':
-        console.log(chosen_zone);
+      case 'КУХНЯ\n':
         arr = [0, 1, 2, 6, 15];
         $('.steps__image_3').toggleClass('steps__kitchen');
         $('.steps__image').css('background','url(img/zones/2.jpg) center top/cover no-repeat');
@@ -34,7 +34,7 @@ $(document).ready(function () {
       break
 
       case 'САН УЗЕЛ':
-        console.log(chosen_zone);
+      case 'САН УЗЕЛ\n':
         arr = [0, 4, 9, 19];
         $('.steps__image_3').toggleClass('steps__wc');
         $('.steps__image').css('background','url(img/zones/3.jpg) center top/cover no-repeat');
@@ -42,7 +42,7 @@ $(document).ready(function () {
       break
 
       case 'СПАЛЬНЯ': 
-      console.log(chosen_zone);
+      case 'СПАЛЬНЯ\n':
         arr = [4, 8, 9, 10, 12, 14];
         $('.steps__image_3').toggleClass('steps__bedroom');
         $('.steps__image').css('background','url(img/zones/4.jpg) center top/cover no-repeat');
@@ -50,7 +50,7 @@ $(document).ready(function () {
       break
 
       case 'ДЕТСКАЯ':
-        console.log(chosen_zone);
+      case 'ДЕТСКАЯ\n':
         arr = [9, 17, 18, 20];
         $('.steps__image_3').toggleClass('steps__child');
         $('.steps__image').css('background','url(img/zones/5.jpg) center top/cover no-repeat');
@@ -58,14 +58,13 @@ $(document).ready(function () {
       break
 
       case 'ПРИХОЖАЯ':
-        console.log(chosen_zone);
+      case 'ПРИХОЖАЯ\n':
         arr = [4, 5, 8, 9, 13];
         $('.steps__image_3').toggleClass('steps__hall');
         $('.steps__image').css('background','url(img/zones/6.jpg) center top/cover no-repeat');
         $('.steps__image_3>img').attr('src','img/zones/6.jpg');
       break
     }
-    console.log(arr);
     arr.forEach((element) => {
       $('.steps-list__item')[element].style.display = 'block';
     });
@@ -126,6 +125,7 @@ $(document).ready(function () {
     $('a#next_step').css('display', 'block');
     switch(chosen_zone){
       case 'ГОСТИННАЯ':
+      case 'ГОСТИННАЯ\n':
         switch($(this)[0].id){
           case 'partitions':
             pos = 11;
@@ -152,6 +152,7 @@ $(document).ready(function () {
         }
       break
       case 'САН УЗЕЛ':
+      case 'САН УЗЕЛ\n':
         switch($(this)[0].id){
           case 'mirror':
             pos = 9;
@@ -171,6 +172,7 @@ $(document).ready(function () {
         }
       break
       case 'СПАЛЬНЯ':
+        case 'СПАЛЬНЯ\n':
         switch($(this)[0].id){
           case 'wall':
             pos = 4;
@@ -198,6 +200,7 @@ $(document).ready(function () {
         }
       break
       case 'ДЕТСКАЯ':
+      case 'ДЕТСКАЯ\n':
         switch($(this)[0].id){
           case 'cupboard':
             pos = 21;
@@ -217,6 +220,7 @@ $(document).ready(function () {
         }
       break
       case 'ПРИХОЖАЯ':
+      case 'ПРИХОЖАЯ\n':
         switch($(this)[0].id){
           case 'wall':
             pos = 4;
@@ -240,6 +244,7 @@ $(document).ready(function () {
         }
       break
       case 'КУХНЯ':
+      case 'КУХНЯ\n':
         switch($(this)[0].id){
           case 'fasade':
             pos = 0;
@@ -368,6 +373,7 @@ $(document).ready(function () {
     let glass_arr = [];
     switch(chosen_zone){
       case 'ГОСТИННАЯ':
+      case 'ГОСТИННАЯ\n':
         switch(obj.classList[1]){
           case 'partitions':
             glass_arr = [1, 3, 6, 7, 8, 9];
@@ -391,6 +397,7 @@ $(document).ready(function () {
       break
 
       case 'КУХНЯ':
+      case 'КУХНЯ\n':
         switch(obj.classList[1]){
           case 'apron':
             glass_arr = [0];
@@ -411,6 +418,7 @@ $(document).ready(function () {
       break
 
       case 'САН УЗЕЛ':
+      case 'САН УЗЕЛ\n':
         switch(obj.classList[1]){
           case 'mirror':
             glass_arr = [4];
@@ -428,6 +436,7 @@ $(document).ready(function () {
       break
 
       case 'СПАЛЬНЯ':
+      case 'СПАЛЬНЯ\n':
         switch(obj.classList[1]){
           case 'wall':
             glass_arr = [0, 2];
@@ -451,6 +460,7 @@ $(document).ready(function () {
       break
 
       case 'ДЕТСКАЯ':
+      case 'ДЕТСКАЯ\n':
         switch(obj.classList[1]){
           case 'cupboard':
             glass_arr = [0, 1, 2, 3, 4, 5, 6, 7];
@@ -468,6 +478,7 @@ $(document).ready(function () {
       break
 
       case 'ПРИХОЖАЯ':
+      case 'ПРИХОЖАЯ\n':
         switch(obj.classList[1]){
           case 'furniture':
             glass_arr = [0, 1, 2, 3, 4, 5, 6];
