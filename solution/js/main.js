@@ -20,50 +20,50 @@ $(document).ready(function () {
     console.log('arr generated');
     switch(chosen_zone){
       case 'ГОСТИННАЯ':
-        window.arr = [1, 3, 4, 7, 10, 11];
+        arr = [1, 3, 4, 7, 10, 11];
         $('.steps__image_3').toggleClass('steps__guest');
         $('.steps__image').css('background','url(img/zones/1.jpg) center top/cover no-repeat');
         $('.steps__image_3>img').attr('src','img/zones/1.jpg');
       break
 
       case 'КУХНЯ':
-        window.arr = [0, 1, 2, 6, 15];
+        arr = [0, 1, 2, 6, 15];
         $('.steps__image_3').toggleClass('steps__kitchen');
         $('.steps__image').css('background','url(img/zones/2.jpg) center top/cover no-repeat');
         $('.steps__image_3>img').attr('src','img/zones/2.jpg');
       break
 
       case 'САН УЗЕЛ':
-        window.arr = [0, 4, 9, 19];
+        arr = [0, 4, 9, 19];
         $('.steps__image_3').toggleClass('steps__wc');
         $('.steps__image').css('background','url(img/zones/3.jpg) center top/cover no-repeat');
         $('.steps__image_3>img').attr('src','img/zones/3.jpg');
       break
 
       case 'СПАЛЬНЯ':
-        window.arr = [4, 8, 9, 10, 12, 14];
+        arr = [4, 8, 9, 10, 12, 14];
         $('.steps__image_3').toggleClass('steps__bedroom');
         $('.steps__image').css('background','url(img/zones/4.jpg) center top/cover no-repeat');
         $('.steps__image_3>img').attr('src','img/zones/4.jpg');
       break
 
       case 'ДЕТСКАЯ':
-        window.arr = [9, 17, 18, 20];
+        arr = [9, 17, 18, 20];
         $('.steps__image_3').toggleClass('steps__child');
         $('.steps__image').css('background','url(img/zones/5.jpg) center top/cover no-repeat');
         $('.steps__image_3>img').attr('src','img/zones/5.jpg');
       break
 
       case 'ПРИХОЖАЯ':
-        window.arr = [4, 5, 8, 9, 13];
+        arr = [4, 5, 8, 9, 13];
         $('.steps__image_3').toggleClass('steps__hall');
         $('.steps__image').css('background','url(img/zones/6.jpg) center top/cover no-repeat');
         $('.steps__image_3>img').attr('src','img/zones/6.jpg');
       break
     }
-    console.log(window.arr);
+    console.log(arr);
     console.log(chosen_zone);
-    window.arr.forEach((element) => {
+    arr.forEach((element) => {
       $('.steps-list__item')[element].style.display = 'block';
     });
     
