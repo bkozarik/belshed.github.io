@@ -15,7 +15,6 @@ $(document).ready(function () {
     $(".steps__image_3").attr('class', 'steps__image_3');
 
     let arr = [];
-    console.log('arr generated');
     switch(chosen_zone){
       case 'ГОСТИННАЯ':
       case 'ГОСТИННАЯ\n':
