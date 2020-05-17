@@ -16,10 +16,9 @@ $(document).ready(function () {
 
     let arr = [];
     console.log('arr generated');
-    switch(window.chosen_zone){
+    switch(chosen_zone){
       case 'ГОСТИННАЯ':
-        case 'ГОСТИННАЯ\n':
-        console.log(chosen_zone);
+      case 'ГОСТИННАЯ\n':
         arr = [1, 3, 4, 7, 10, 11];
         $('.steps__image_3').toggleClass('steps__guest');
         $('.steps__image').css('background','url(img/zones/1.jpg) center top/cover no-repeat');
