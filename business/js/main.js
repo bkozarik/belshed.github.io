@@ -1,9 +1,6 @@
 $(document).ready(function(){
     let slider = document.querySelector('.swiper-container1');
     let slider2 = document.querySelector('.swiper-container2');
-    var swiper = document.querySelector('.swiper-container').swiper
-    var swiper1 = document.querySelector('.swiper-container1').swiper
-    var swiper2 = document.querySelector('.swiper-container2').swiper
     let about_swiper1;
     let about_swiper2;
     let hiddenOffset;
@@ -50,10 +47,10 @@ $(document).ready(function(){
                     type: 'bullets',
                 },
                 breakpoints: {
-                    540: {
+                    780: {
                         slidesPerView: 3,
                     },
-                    320:{
+                    400:{
                         slidesPerView: 2,
                     },
                     300: {
@@ -87,10 +84,10 @@ $(document).ready(function(){
                 },
                 updateOnWindowResize: true,
                 breakpoints: {
-                    540: {
+                    780: {
                         slidesPerView: 3,
                     },
-                    320:{
+                    400:{
                         slidesPerView: 2,
                     },
                     300: {
@@ -132,6 +129,9 @@ $(document).ready(function(){
     mobileSwiper1();
     mobileSwiper2();
     asideMove();
+    let swiper = document.querySelector('.swiper-container').swiper
+    let swiper1 = document.querySelector('.swiper-container1').swiper
+    let swiper2 = document.querySelector('.swiper-container2').swiper
     $(window).resize(()=>{
         swiper.update();
         swiper1.update();
