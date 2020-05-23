@@ -1,6 +1,9 @@
 $(document).ready(function(){
     let slider = document.querySelector('.swiper-container1');
     let slider2 = document.querySelector('.swiper-container2');
+    var swiper = document.querySelector('.swiper-container').swiper
+    var swiper1 = document.querySelector('.swiper-container1').swiper
+    var swiper2 = document.querySelector('.swiper-container2').swiper
     let about_swiper1;
     let about_swiper2;
     let hiddenOffset;
@@ -12,6 +15,10 @@ $(document).ready(function(){
         grabCursor:true,
         updateOnWindowResize: true,
         loop: true,
+        pagination: {
+            el: '.swiper-pagination1',
+            type: 'bullets',
+        },
         breakpoints: {
             1000:{
                 slidesPerView: 6,
@@ -38,6 +45,10 @@ $(document).ready(function(){
                 spaceBetween: 10,
                 slidesPerView: 3,
                 updateOnWindowResize: true,
+                pagination: {
+                    el: '.swiper-pagination',
+                    type: 'bullets',
+                },
                 breakpoints: {
                     540: {
                         slidesPerView: 3,
@@ -70,6 +81,10 @@ $(document).ready(function(){
                 grabCursor:true,
                 spaceBetween: 10,
                 slidesPerView: 3,
+                pagination: {
+                    el: '.swiper-pagination2',
+                    type: 'bullets',
+                },
                 updateOnWindowResize: true,
                 breakpoints: {
                     540: {
@@ -102,8 +117,8 @@ $(document).ready(function(){
             let aside_enter = $('.aside__enter');
             $('.main__video').before(aside_enter);
             if($('.main__text').height() >= 2000){
-                $('.main__text').toggleClass('hidden', true);
-                $('.main__button').css('display', 'block');
+                //$('.main__text').toggleClass('hidden', true);
+                //$('.main__button').css('display', 'block');
             }
             else{
                 $('.main__button').css('display', 'none');
@@ -118,6 +133,9 @@ $(document).ready(function(){
     mobileSwiper2();
     asideMove();
     $(window).resize(()=>{
+        swiper.update();
+        swiper1.update();
+        swiper2.update();
         mobileSwiper1();
         mobileSwiper2();
         asideMove();
