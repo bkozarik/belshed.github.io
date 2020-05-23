@@ -1,8 +1,4 @@
-$font: 'Lato Regular'
-$font_medium: 'Lato Medium'
-$font_bold: 'Lato Bold'
-$font_heavy: 'Lato Heavy'
-$font_black: 'Lato Black'
+$font: 'Lato'
 
 $main_grey: #E8E8E8
     
@@ -66,7 +62,7 @@ body
                 transform: skewX(15deg)
                 margin-right: 25px
             span
-                font-family: $font_heavy
+                font-weight: 800
                 font-size: 12px
                 display: block
                 max-width: 170px
@@ -76,7 +72,7 @@ body
                 width: 80px
                 margin-left: 35px
         &-container>span
-            font-family: $font_medium
+            font-weight: 500
             font-size: 13px
             float: right
     &__burger
@@ -123,20 +119,20 @@ body
         text-decoration: none
         color: #000
         font-size: 18px
-        font-family: $font_black
+        font-weight: 900
     &__recall
         outline: none
         line-height: 16px
         color: #C5020B
         font-size: 10px
         text-transform: uppercase
-        font-family: $font_black
+        font-weight: 900
     &__login
         &-link
             text-decoration: none
             text-transform: uppercase
             font-size: 11px
-            font-family: $font_black
+            font-weight: 900
             &:nth-of-type(1)
                 color: #000
             &:nth-of-type(2)
@@ -150,7 +146,7 @@ body
             text-decoration: none
             font-size: 11px
             color: #000
-            font-family: $font_black
+            font-weight: 900
             &:nth-of-type(2)
                 text-transform: none
                 line-height: 18px
@@ -180,7 +176,7 @@ body
         a
             color: #000
             line-height: 19px
-            font-family: $font_black
+            font-weight: 900
             text-transform: uppercase
             text-decoration: none
             font-size: 13px
@@ -212,7 +208,7 @@ body
         transform: translateY(-50%)
         text-transform: uppercase
         font-size: 31px
-        font-family: $font_black
+        font-weight: 900
         text-align: center
 
 .container-main
@@ -251,10 +247,10 @@ body
     &__red-text
         font-size: 18px
         color: #AF0109
-        font-family: $font_medium
+        font-weight: 500
     &__header
         font-size: 14px
-        font-family: $font_medium
+        font-weight: 500
         text-transform: uppercase
         color: #000
     &__author
@@ -262,9 +258,9 @@ body
             line-height: 18px
             text-transform: uppercase
             font-size: 12px
-            font-family: $font_medium
+            font-weight: 500
         p:nth-of-type(3)
-            font-family: $font_black
+            font-weight: 900
     &__player
         background-color: #F3F4F4
         width: 410px
@@ -350,6 +346,7 @@ body
     float: right
     color: #000
     font-family: $font
+    font-weight: normal
     padding: 15px 36px
     background-color: $main_grey
     transition: all .2s ease-in-out 0s
@@ -376,7 +373,7 @@ body
         width: 100%
         padding: 10px 30px 10px 10px
         &-link
-            font-family: $font_black
+            font-weight: 900
             font-size: 16px
             text-transform: uppercase
             text-decoration: none
@@ -397,7 +394,7 @@ body
             margin: 25px 0px 25px 35px
             span
                 text-transform: uppercase
-                font-family: $font_medium
+                font-weight: 500
         &-item
             margin-bottom: 5px
     &__header
@@ -416,7 +413,7 @@ body
             text-decoration: none
             display: block
             color: #000
-            font-family: $font_heavy
+            font-weight: 800
             font-size: 13px
             
             padding: 10px
@@ -434,7 +431,7 @@ body
             width: 100%
             margin-bottom: 12px
             font-size: 13px
-            font-family: $font_medium
+            font-weight: 500
             &:hover
                 background-color: #c9c9c9
     &__news
@@ -473,7 +470,7 @@ body
         justify-content: space-between
         span
             font-size: 12px
-            font-family: $font_medium
+            font-weight: 500
             
     &__policy
         text-align: center
@@ -489,7 +486,7 @@ body
                 transform: skewX(15deg)
                 margin-right: 15px
             span
-                font-family: $font_heavy
+                font-weight: 800
                 font-size: 8px !important
                 display: block
                 max-width: 130px
@@ -499,7 +496,7 @@ body
                 width: 60px
                 margin-left: 15px
         &-container>span
-            font-family: $font_medium
+            font-weight: 500
             font-size: 10px
             float: right
     &__skew
