@@ -3,6 +3,7 @@ $(document).ready(function(){
     let slider2 = document.querySelector('.swiper-container2');
     let about_swiper1;
     let about_swiper2;
+    let currentOffset;
 
     var mySwiper = new Swiper ('.swiper-container', {
         spaceBetween: 20,
@@ -123,10 +124,13 @@ $(document).ready(function(){
     $('.main__button>a').on('click', function (event){
         event.preventDefault();
 
+        if($('.main__text').hasClass('hidden') == false){
+            $('body, html').animate({scrollTop: ($('.main__text').offset().top + 600)});
+        }
+
         $('.main__text').toggleClass('hidden');
 
         if($('.main__text').hasClass('hidden')){
-
             $(this).text('Полный текст статьи');
         }
         else{
