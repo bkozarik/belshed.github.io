@@ -105,6 +105,12 @@ $(document).ready(function(){
                 $('.main__text').toggleClass('hidden', true);
                 $('.main__button').css('display', 'block');
             }
+            else{
+                $('.main__button').css('display', 'none');
+            }
+        }
+        else{
+            $('.main__button').css('display', 'none');
         }
     }
 
