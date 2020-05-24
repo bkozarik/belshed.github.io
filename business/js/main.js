@@ -67,6 +67,7 @@ $(document).ready(function(){
 
             if(slider.classList.contains('swiper-container-initialized')){
                 about_swiper1.destroy();
+                delete about_swiper1;
             }
         }
     }
@@ -103,6 +104,7 @@ $(document).ready(function(){
 
             if(slider2.classList.contains('swiper-container-initialized')){
                 about_swiper2.destroy();
+                delete about_swiper2;
             }
         }
     }
@@ -124,13 +126,17 @@ $(document).ready(function(){
     mobileSwiper1();
     mobileSwiper2();
     asideMove();
-    let swiper1 = $('.swiper-container1')[0].swiper
-    let swiper2 = $('.swiper-container2')[0].swiper
+    
     $(window).resize(()=>{
 
         if(about_swiper1 && about_swiper2){
-            swiper1.update();
-            swiper2.update();
+            try{
+                let swiper1 = $('.swiper-container1')[0].swiper
+                let swiper2 = $('.swiper-container2')[0].swiper
+                swiper1.update();
+                swiper2.update();
+            }
+            catch(e){}
         }
         mobileSwiper1();
         mobileSwiper2();
