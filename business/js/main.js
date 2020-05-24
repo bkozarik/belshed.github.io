@@ -123,19 +123,24 @@ $(document).ready(function(){
         }
         else{
             $('.main__button').css('display', 'none');
+            $('.aside__info').before($('.aside__enter'));
         }
     }
 
     mobileSwiper1();
     mobileSwiper2();
     asideMove();
-    let swiper = document.querySelector('.swiper-container').swiper
-    let swiper1 = document.querySelector('.swiper-container1').swiper
-    let swiper2 = document.querySelector('.swiper-container2').swiper
+    let swiper1 = $('.swiper-container1').swiper
+    let swiper2 = $('.swiper-container2').swiper
     $(window).resize(()=>{
-        swiper.update();
-        swiper1.update();
-        swiper2.update();
+        
+        if(slider.classList.contains('swiper-container-initialized')){
+            //swiper1.update();
+        }
+        if(slider2.classList.contains('swiper-container-initialized')){
+            //swiper2.update();
+        }
+        
         mobileSwiper1();
         mobileSwiper2();
         asideMove();
@@ -144,6 +149,12 @@ $(document).ready(function(){
     $('.header__burger').on('click', (event)=>{
         $('.header__burger').toggleClass('active');
         $('.header__mobile').toggleClass('active');
+        if($('.header__burger').hasClass('active')){
+            $('body').css('overflow-y', 'hidden');
+        }
+        else{
+            $('body').css('overflow-y', 'auto');
+        }
     });
 
     $('.main__button>a').on('click', function (event){
@@ -163,5 +174,12 @@ $(document).ready(function(){
         else{
             $(this).text('Скрыть текст статьи');
         }
+    });
+
+    $('.main__play-button').on('click', function(event){
+        event.preventDefault();
+        $(this).fadeOut();
+        $('.main__player>video')[0].play();
+        $('.main__player>video').attr('controls', 'true');
     });
 });

@@ -36,6 +36,7 @@ body
         right: -300px
         z-index: -1
         height: 100vh
+        overflow-y: auto
         &-wrap
             display: flex
             flex-direction: column-reverse
@@ -110,13 +111,31 @@ body
         width: 60px
     &__city
         border: none
+        width: 150px
+        text-transform: uppercase
         border-bottom: 2px solid $main_grey
         appearance: none
         padding: 7px
+        font-weight: 800
+        display: block
         &:hover
             cursor: pointer
         &:focus
             outline: none
+    &__select
+        position: relative
+        &::after
+            content: ''
+            display: block
+            position: absolute
+            height: 25px
+            width: 25px
+            background: url('../img/arrow_down.svg')
+            background-size: contain
+            background-repeat: no-repeat
+            background-position: center
+            top: 0
+            right: 0
     &__contacts
         display: flex
         flex-direction: column
@@ -272,7 +291,16 @@ body
     &__player
         background-color: #F3F4F4
         width: 410px
-        height: 235px
+        position: relative
+        a
+            z-index: 1
+            position: absolute
+        video
+            width: 100%
+            top: 0
+            left: 0
+            object-fit: contain
+            z-index: 0
     &__play-button
         top: 50%
         left: 50%
