@@ -1,28 +1,36 @@
 @media screen and ( min-width:  1001px)
     .nav
-        padding: 0px 20px
+        padding: 0px 50px
     .swiper-pagination, .swiper-pagination1, .swiper-pagination2
         display: none
     .swiper-container1, .swiper-container2
         .swiper-slide
             width: auto
 @media screen and ( max-width:  1500px)
-    .header, .footer
-        .container
-            max-width: 1100px
+    
     .nav
         &__item
             a
                 font-size: 12px
+@media screen and ( max-width:  1380px)
+    body
+        background-position-x: 20px
+
+@media screen and ( max-width:  1310px)
+    body
+        background-image: none
+
 @media screen and ( max-width:  1160px)
+    
     .container
         padding: 0px 40px
         &-main
             flex-direction: column-reverse
     .header
+        padding-top: 10px
         .nav
-            margin-top: 60px
-        padding-top: 20px
+            padding: 0px 30px
+            margin-top: 70px
         &__content
             align-items: center
             position: fixed
@@ -125,8 +133,6 @@
 
 
 @media screen and ( max-width:  860px)
-    body
-        background-image: none
     .main
         &__header
             font-size: 18px
