@@ -4,7 +4,7 @@ $(document).ready(function(){
     let about_swiper1;
     let about_swiper2;
     let hiddenOffset;
-    let shownOffset;
+    let shownOffset; 
 
     var mySwiper = new Swiper ('.swiper-container', {
         spaceBetween: 20,
@@ -69,7 +69,6 @@ $(document).ready(function(){
                 about_swiper1.destroy();
             }
         }
-
     }
 
     function mobileSwiper2(){
@@ -106,18 +105,13 @@ $(document).ready(function(){
                 about_swiper2.destroy();
             }
         }
-
     }
     
     function asideMove(){
         if(window.innerWidth <= 1160){
             let aside_enter = $('.aside__enter');
             $('.main__video').before(aside_enter);
-            if($('.main__text').height() >= 2000){
-                //$('.main__text').toggleClass('hidden', true);
-                //$('.main__button').css('display', 'block');
-            }
-            else{
+            if($('.main__text').height() < 2000){
                 $('.main__button').css('display', 'none');
             }
         }
@@ -130,17 +124,14 @@ $(document).ready(function(){
     mobileSwiper1();
     mobileSwiper2();
     asideMove();
-    let swiper1 = $('.swiper-container1').swiper
-    let swiper2 = $('.swiper-container2').swiper
+    let swiper1 = $('.swiper-container1')[0].swiper
+    let swiper2 = $('.swiper-container2')[0].swiper
     $(window).resize(()=>{
-        
-        if(slider.classList.contains('swiper-container-initialized')){
-            //swiper1.update();
+
+        if(about_swiper1 && about_swiper2){
+            swiper1.update();
+            swiper2.update();
         }
-        if(slider2.classList.contains('swiper-container-initialized')){
-            //swiper2.update();
-        }
-        
         mobileSwiper1();
         mobileSwiper2();
         asideMove();

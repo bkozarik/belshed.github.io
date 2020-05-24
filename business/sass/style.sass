@@ -15,6 +15,7 @@ body
     background-repeat: no-repeat
     background-position-x: center
     background-position-y: 100px
+    background-size: contain
     overflow-x: hidden
 
 .container
@@ -199,7 +200,7 @@ body
     background-color: #C5020B
 
 .nav
-    margin-top: 60px
+    margin-top: 10px
     &__list
         width: 100%
         display: flex
@@ -347,7 +348,6 @@ body
             cursor: pointer
     &__text
         width: 100%
-        background-color: #fff
         padding: 15px 20px 30px 20px
         margin-bottom: 20px
         overflow: hidden
@@ -526,6 +526,25 @@ body
     position: relative
     margin: 45px 0px    
     border-top: 2px solid #c9c9c9
+    &__social
+        display: flex
+        margin-bottom: 10px
+        a   
+            margin-right: 10px
+            background-color: $main_grey
+            display: block
+            height: 30px
+            width: 30px
+            border-radius: 50%
+            text-align: center
+            line-height: 30px
+            color: #fff
+            &:last-child
+                margin-right: 0
+            &:hover
+                box-shadow: 0 0 7px #c9c9c9
+                background-color: #c9c9c9
+
     &__content
         margin-top: 50px
         display: flex
