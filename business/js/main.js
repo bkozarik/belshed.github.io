@@ -134,6 +134,7 @@ $(document).ready(function(){
             $('.main__searchbtn').removeAttr('style');
             $('.main__searchfield').after($('.main__searchbtn'));
         }
+        
         if(window.innerWidth <= 630){
             $('.how .main__text.slide').slideUp(300);
             $('.how__text-title>i').css('display', 'inline-block');

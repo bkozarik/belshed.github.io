@@ -84,6 +84,12 @@ $main_grey: #E8E8E8
         &__tenders
             &_pages
                 justify-content: center
+        &__tender
+            &-bottom-footer
+                padding: 0px 40px 15px
+            &-body 
+                p
+                    padding-right: 140px
         .swiper-container
             max-width: 100%
         .button
@@ -164,6 +170,24 @@ $main_grey: #E8E8E8
                 max-width: 100%
         &__player
             width: 100%
+        &__tender
+            &-body
+            
+            &-body
+                padding-bottom: 20px
+                p
+                    padding-right: 0px
+            &-bottom
+                padding-top: 20px
+            &-documents
+                text-align: center
+                right: 0
+                top: -20px
+                width: 100%
+                max-width: none
+                span
+                    &::after
+                        top: 3px
         
             
 
@@ -211,7 +235,9 @@ $main_grey: #E8E8E8
             padding: 15px 10px 20px
         &__tender
             .main__text
-                padding: 15px 20px   
+                padding: 15px 20px 
+            &-bottom-footer
+                padding: 0px 20px 15px
     .how
         &__title
             font-size: 18px
