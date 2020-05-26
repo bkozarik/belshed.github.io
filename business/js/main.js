@@ -1,6 +1,7 @@
 $(document).ready(function(){
     let slider = document.querySelector('.swiper-container1');
     let slider2 = document.querySelector('.swiper-container2');
+    let slider_gallery = document.querySelector('.main__sertificates');
     let about_swiper1;
     let about_swiper2;
     let hiddenOffset;
@@ -108,6 +109,44 @@ $(document).ready(function(){
             }
         }
     }
+
+    function mobileGalery(){
+        if(window.innerWidth <= 1000 && slider_gallery.dataset.mobile == 'false'){
+            gallery_swiper = new Swiper ('.main__sertificates', {
+                grabCursor:true,
+                spaceBetween: 10,
+                slidesPerView: 3,
+                pagination: {
+                    el: '.swiper-gallery',
+                    type: 'bullets',
+                },
+                updateOnWindowResize: true,
+                breakpoints: {
+                    780: {
+                        slidesPerView: 3,
+                    },
+                    470:{
+                        slidesPerView: 2,
+                    },
+                    300: {
+                        slidesPerView: 1,
+                        spaceBetween: 20,
+                    }
+                },
+            })
+
+            slider_gallery.dataset.mobile = 'true';
+        }
+
+        if(window.innerWidth > 1000){
+            slider_gallery.dataset.mobile = 'false';
+
+            if(slider_gallery.classList.contains('swiper-container-initialized')){
+                gallery_swiper.destroy();
+                delete gallery_swiper;
+            }
+        }
+    }
     
     function windowResize(){
         if(window.innerWidth <= 1160){
@@ -134,7 +173,6 @@ $(document).ready(function(){
             $('.main__searchbtn').removeAttr('style');
             $('.main__searchfield').after($('.main__searchbtn'));
         }
-        
         if(window.innerWidth <= 630){
             $('.how .main__text.slide').slideUp(300);
             $('.how__text-title>i').css('display', 'inline-block');
@@ -156,6 +194,7 @@ $(document).ready(function(){
     mobileSwiper1();
     mobileSwiper2();
     windowResize();
+    mobileGalery();
     checkPage();
 
     $(window).resize(()=>{
@@ -171,6 +210,7 @@ $(document).ready(function(){
         }
         mobileSwiper1();
         mobileSwiper2();
+        mobileGalery();
         windowResize();
     });
 
