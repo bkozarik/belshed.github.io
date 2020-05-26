@@ -267,6 +267,7 @@ $(document).ready(function(){
         let path = $(this).find('img').attr('src')
         let pathLen = $(this).find('img').attr('src').length
         let imgPos;
+        let formats = ['.jpeg', '.jpg', '.gif', '.png'];
 
         switch(pathLen){
             case 23:
@@ -278,7 +279,7 @@ $(document).ready(function(){
         }
 
         let pathBigSertificate = `/business/img/big_serts/sert${imgPos}.png`;
-        
+
         $('.popup__wrap>img').attr('src', pathBigSertificate);
         $('.popup').fadeIn();
         $('.popup').css('display', 'flex');
