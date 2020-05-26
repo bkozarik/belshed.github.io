@@ -269,13 +269,8 @@ $(document).ready(function(){
         let imgPos;
         let formats = ['.jpeg', '.jpg', '.gif', '.png'];
 
-        switch(pathLen){
-            case 23:
-                imgPos = Number(path.substring(18,19));
-            break
-            case 24:
-                imgPos = Number(path.substring(18,20));
-            break
+        if(path.indexOf('sert') != -1){
+            imgPos = path.substring(path.indexOf('sert') + 'sert'.length, path.indexOf('.'));
         }
 
         let pathBigSertificate = `/business/img/big_serts/sert${imgPos}.png`;
