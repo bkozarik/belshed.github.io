@@ -290,6 +290,8 @@ body
         align-items: center
     &__sertificate
         margin: 5px 0px
+        &:hover
+            cursor: pointer
     &__video
         border-bottom: 2px solid #707070
         display: flex
@@ -792,3 +794,38 @@ body
         a
             &:hover
                 opacity: .7
+
+.popup
+    position: fixed
+    height: 100vh
+    width: 100%
+    background-color: rgba(0, 0, 0, 0.8)
+    z-index: 1000
+    top: 0
+    left: 0
+    overflow: hidden
+    display: none
+    justify-content: center
+    align-items: center
+    padding: 20px
+    &__wrap
+        position: relative
+        z-index: 1000
+        i
+            width: 1.1em
+            height: 1.1em
+            border-radius: 50%
+            background-color: #fff
+            text-align: center
+            line-height: 1.1em
+            position: absolute
+            right: 0
+            top: 0
+            transform: translate(100%, -100%)
+            &:hover
+                cursor: pointer
+        img
+            max-width: 600px
+            width: 100%
+            height: auto
+            object-fit: cover

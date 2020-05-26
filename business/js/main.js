@@ -262,4 +262,30 @@ $(document).ready(function(){
             }
         }
     });
+
+    $('.main__sertificate').on('click', function(){
+        let path = $(this).find('img').attr('src')
+        let pathLen = $(this).find('img').attr('src').length
+        let imgPos;
+
+        switch(pathLen){
+            case 23:
+                imgPos = Number(path.substring(18,19));
+            break
+            case 24:
+                imgPos = Number(path.substring(18,20));
+            break
+        }
+
+        let pathBigSertificate = `/business/img/big_serts/sert${imgPos}.png`;
+        
+        $('.popup__wrap>img').attr('src', pathBigSertificate);
+        $('.popup').fadeIn();
+        $('.popup').css('display', 'flex');
+    });
+
+    $('.popup').on('click', function(){
+        $(this).fadeOut(100);
+        $('.popup__wrap>img').removeAttr('src');
+    });
 });
