@@ -1,3 +1,5 @@
+$main_grey: #E8E8E8
+    
 @media screen and ( min-width:  1001px)
     .nav
         padding: 0px 50px
@@ -53,6 +55,9 @@
                 display: flex
                 flex-direction: column
                 align-items: flex-start
+    .purchise-header
+        h1
+            font-size: 25px
     .main
         &-header
             h1
@@ -75,6 +80,9 @@
             margin-bottom: 5px
         &__partners
             &-header
+                justify-content: center
+        &__tenders
+            &_pages
                 justify-content: center
         .swiper-container
             max-width: 100%
@@ -130,6 +138,17 @@
 @media screen and ( max-width:  1000px)
     .nav
         margin-top: 30px
+    .main
+        &__tenders
+            padding: 25px 0px 10px
+        &__tender
+            .main__text
+                font-size: 14px
+    .how
+        .container
+            padding: 0px 25px
+        .main__text
+            font-size: 16px
 
 
 @media screen and ( max-width:  860px)
@@ -149,6 +168,9 @@
             
 
 @media screen and ( max-width:  630px)
+    .purchise-header
+        h1
+            font-size: 22px
     .swiper-container2
         padding-top: 0px
         margin-top: 30px
@@ -175,10 +197,30 @@
         .nav
             padding-top: 0px
     .main
+        &__search
+            padding: 0px 10px
+            &_wrap
+                padding: 0px 10px
+        &__searchfield
+            height: 50px
+        &__undersearch
+            padding: 0px 10px
         &__video
             padding: 10px 10px
         &__text
             padding: 15px 10px 20px
+        &__tender
+            .main__text
+                padding: 15px 20px   
+    .how
+        &__title
+            font-size: 18px
+            line-height: 30px
+        &__text-title
+        .container
+            padding: 0px 15px
+        .main__text
+            font-size: 16px
     .footer
         margin-bottom: 5px
         &__content
@@ -186,8 +228,36 @@
             flex-direction: column
             &>*
                 margin: 10px 0px
+@media screen and ( max-width:  530px)
+    .main
+        &__search
+            &_wrap
+                border: none
+                flex-direction: column
+        &__searchfield
+            width: 100%
+            padding: 10px
+            border: 2px solid $main_grey
+        &__searchbtn
+            margin: 10px 0px
+            width: 80%
+        &__tender
+            &-bottom-footer
+                display: flex
+                flex-direction: column
+            &-bottom-item
+                display: flex
+                flex-direction: row
+                justify-content: space-between
+                span
+                    font-size: 14px
+                    margin-bottom: 10px
+
 
 @media screen and ( max-width:  400px)
+    .purchise-header
+        h1
+            font-size: 18px
     .header
         &__skew
             width: 20px
@@ -198,8 +268,28 @@
                 margin-left: 0
                 margin-right: 5px
     .main
+        &__search
+            padding: 0
+            &_wrap
+                padding: 0
+        &__searchfield
+            font-size: 14px
+            text-align: center
+        &__undersearch
+            a, span
+                font-size: 13px
+            a
+                text-align: right
         &__partners
             padding: 0px 15px
+
+        &__tender
+            &-bottom-footer
+                padding: 0px 0px 15px
+                span
+                    font-size: 13px
+            .main__text
+                padding: 15px 0px  
     .aside
         &__news
             padding: 15px 0px

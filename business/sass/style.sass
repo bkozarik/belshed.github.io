@@ -23,6 +23,9 @@ body
     margin: 0px auto
     padding: 0px
 
+
+
+
 .header
     width: 100%
     padding-top: 30px
@@ -239,18 +242,29 @@ body
                 transform: scaleX(1)
                 
 
-.main-header
-    height: 120px
+.main-header, .purchise-header
+    min-height: 120px
     margin-bottom: 60px
     background: url('../img/r_map.png')
     background-repeat: no-repeat
     background-position-x: 87%
+    position: relative
+.purchise-header
     h1
         top: 50%
-        position: relative
+        position: absolute
         transform: translateY(-50%)
         text-transform: uppercase
-        font-size: 31px
+        font-size: 26px
+        font-weight: 900
+        text-align: center
+.main-header
+    h1
+        top: 50%
+        position: absolute
+        transform: translateY(-50%)
+        text-transform: uppercase
+        font-size: 28px
         font-weight: 900
         text-align: center
 
@@ -261,8 +275,9 @@ body
 .main
     max-width: 760px
     float: left
+    position: relative
+    border-top: 2px solid #707070
     &__video
-        border-top: 2px solid #707070
         border-bottom: 2px solid #707070
         display: flex
         justify-content: space-between
@@ -274,19 +289,54 @@ body
             display: flex
             flex-direction: column
             justify-content: space-around
-        &::after
-            content: ''
-            display: block
-            position: absolute
-            left: 0
-            top: 0
-            transform: translateY(-92%)
-            background: url('../img/flag.png')
-            background-repeat: no-repeat
-            background-position: 0 0
-            background-size: contain
-            width: 55px
-            height: 20px
+    &__link
+        text-decoration: none
+        color: #358DE0
+    &__search
+        &_wrap
+            display: flex
+            justify-content: space-between
+            align-items: center
+            border: 1px solid #B2B2B2
+            background-color: #fff
+            padding: 0px 20px
+    &__searchfield
+        width: 80%
+        height: 60px
+        appearance: none
+        border: none
+        outline: none
+        font-size: 16px
+    &__searchbtn
+        text-transform: uppercase
+        border: none
+        background-color: #B3020A
+        padding: 10px 25px
+        color: #fff
+        font-size: 13px
+        font-weight: bold
+    &__undersearch
+        display: flex
+        margin-top: 5px
+        justify-content: space-between
+        padding: 0px 20px
+        span, a
+            font-size: 16px
+            font-weight: lighter
+            color: #000000
+    &::after
+        content: ''
+        display: block
+        position: absolute
+        left: 0
+        top: 0
+        transform: translateY(-92%)
+        background: url('../img/flag.png')
+        background-repeat: no-repeat
+        background-position: 0 0
+        background-size: contain
+        width: 55px
+        height: 20px
     &__red-text
         font-size: 18px
         font-style: italic 
@@ -346,15 +396,94 @@ body
         &:hover
             background-color: #eeeeee
             cursor: pointer
+    &__tenders
+        background-color: #fff
+        padding: 35px 35px 10px
+        box-shadow: 0 0 55px $main_grey
+        margin-top: 50px
+        &_pages
+            margin-bottom: 20px
+            display: flex
+            justify-content: flex-end
+    &__tender
+        margin-bottom: 20px
+        &-bottom-footer
+            padding: 0px 20px 15px
+            display: flex
+            justify-content: space-between
+        &-bottom-item
+            display: flex
+            flex-direction: column
+            span
+                font-size: 14px
+        .main__text
+            margin: 0
+        width: 100%
+        &-head
+            background-color: #669BCD
+            font-size: 17px
+            font-weight: 900
+            color: #ffffff
+            display: flex
+            align-items: center
+            justify-content: space-between
+            padding: 0px 30px
+            min-height: 40px
+        &-body
+            background-color: #fff
+            padding: 0px 10px
+            border-right: 2px solid $main_grey
+            border-left: 2px solid $main_grey
+            p
+                font-size: 17px
+        &-bottom
+            background-color: $main_grey
+            padding: 0px 10px
+    &__pagination
+        &-item
+            color: #000
+            text-decoration: none
+            font-weight: bold
+            height: 1.8em
+            text-align: center
+            line-height: 1.8em
+            width: 1.8em
+            border-radius: 50%
+            display: inline-block
+            font-size: 15px
+            &:hover
+                background-color: $main_grey
+            &.active
+                background-color: $main_grey
+            &.back, &.forw
+                width: auto
+                height: auto
+                display: inline
+                &:hover
+                    background-color: transparent
+            &.back
+                display: none
+
+            
+                
     &__text
         width: 100%
-        padding: 15px 20px 30px 20px
+        padding: 20px
         margin-bottom: 20px
         overflow: hidden
         height: auto
-        p
-            font-size: 17px
-            line-height: 1.8em
+        font-weight: medium
+        font-size: 17px
+        line-height: 1.8em
+        &_italic
+            font-style: italic
+        &_bg
+            background-color: $main_grey
+            padding: 35px 40px
+        span
+            text-transform: uppercase
+            font-weight: bold
+
     &__button
         margin-bottom: 20px
         display: none
@@ -521,6 +650,37 @@ body
         margin-bottom: 1em
         display: block
         text-align: right
+
+.how
+    margin-top: 60px
+    .container
+        padding: 0px 40px
+    .main__text
+        padding: 0px 0px
+        li
+            list-style-type: none
+            margin-bottom: 10px
+    &__title
+        font-size: 21px
+        font-weight: 800
+    &__text
+        &-title
+            margin: 15px 0px
+            display: inline-block
+            font-size: 18px
+            font-weight: 800
+            position: relative
+            i   
+                padding-left: 5px
+                transform: scale(1.4)
+            &.active
+                i
+                    padding-right: 5px
+                    transform: scale(1.4) rotate(180deg)
+                    
+
+
+
 
 .footer
     position: relative
