@@ -1287,7 +1287,9 @@ button, button:hover, button:focus, button:active
 .block__flex{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}
 .block__caption{margin-top:10px;font-size:13px;text-align:center}
 .block__item{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;max-width:340px}
-.block__img-wrap img{height:100%;width:100%;-o-object-fit:contain;object-fit:contain}
+.block__img-wrap img{height:100%;max-height: 95px;max-width: 95px;-o-object-fit:contain;object-fit:contain}
+.block__img-wrap {display: flex; align-items: center;}
+.block__img-wrap p {margin-left: 5px; font-weight: 600; opacity: .6;}
 
 /* --- Footer --- */
 .navigation-footer {
