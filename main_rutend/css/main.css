@@ -854,6 +854,7 @@ button, button:hover, button:focus, button:active
 .block__img-wrap {display: flex; align-items: center;}
 .block__img-wrap p {margin-left: 5px; font-weight: 600; opacity: .6;}
 
+
 .presentation__btn {
   position: absolute;
   width: 92px;
