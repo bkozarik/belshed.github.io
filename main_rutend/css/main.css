@@ -844,7 +844,7 @@ button, button:hover, button:focus, button:active
 	margin-left: auto;
 }
 
-.block{max-width:752px;margin:20px 0px;padding:20px 65px 20px;background-color: #fff;}
+.block{max-width:752px;margin:20px 0px 20px 36px;padding:20px 65px 20px;background-color: #fff;}
 .block__title{margin-bottom:15px}.block__h2,.block__p{text-align:center}.block__h2{font-size:15px;font-weight:800;margin-bottom:5px}
 .block__link{text-decoration:none;color:#11AEDA}.block__link:hover{opacity:0.7}.block__p{font-size:12px;font-weight:bold;text-transform:uppercase;letter-spacing:0.5px}
 .block__flex{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}
