@@ -1,0 +1,125 @@
+@media screen and ( min-width: 830px )
+    .banner
+        &__body
+            width: 50%
+        &__wrapper
+            display: flex
+        &__bg
+            z-index: 10
+            flex: 0 0 50%
+            transform: translate(-100%, -10%)
+            img
+                height: 100%
+                width: 100%
+                object-fit: contain
+    
+    .about
+        display: flex
+        .container
+            height: 100%    
+            display: flex
+            align-items: center
+        &__body
+            width: 50%
+        &__bg
+            z-index: 10
+            flex: 0 0 40%
+            transform: translate(-100%, 0)
+            max-height: 565px
+            img
+                height: 100%
+                width: 100%
+                object-fit: contain
+    .footer
+        &__links
+            margin-left: 80px
+    
+@media screen and ( max-width: 830px )
+    .header
+        &__content
+            display: none
+    .banner
+        padding-top: 0
+        &__title
+            margin-top: 20px
+        &__wrapper
+            display: flex
+            flex-direction: column-reverse
+        &__logo-wrap
+            display: none
+        &__img
+            transform: translateX(20%)
+        &__benefits
+            margin-bottom: 30px
+        &__links
+            display: none
+        .button
+            width: 100%
+    .section__title
+        margin-bottom: 40px
+    .services
+        &__wrapper
+            flex-direction: column
+        &__swiper
+            margin-top: 0
+    .service
+        &__wrap
+            padding: 0px 10px
+            display: flex
+            flex-direction: column
+        &__bg
+            order: -1
+            position: relative
+        &__title
+            margin-top: 10px
+            font-size: 20px
+            order: 0
+        &__features
+            display: flex
+            flex-wrap: wrap
+            order: 1
+        &__item
+            font-size: 14px
+        &__list
+            order: 2
+        &__price
+            margin-left: 0
+            margin-bottom: 30px
+            order: 3
+        &__button
+            order: 4
+        
+    .about
+        display: flex
+        flex-direction: column-reverse
+        &__body
+            margin-bottom: 100px
+        &__bg
+            img
+                max-width: 80%
+                position: relative
+                left: 50%
+                transform: translateX(-50%)
+    .footer
+        &__content
+            flex-direction: column
+        &__links
+            flex-wrap: wrap
+
+@media screen and ( max-width: 500px )
+    .footer
+        &__content
+            padding-top: 70px
+            padding-bottom: 30px
+        &__group
+            margin-top: 30px
+        &__logo
+            display: flex
+            justify-content: center
+            margin-bottom: 40px
+            p
+                display: none
+        &__links
+            flex-wrap: nowrap
+            flex-direction: column
+            

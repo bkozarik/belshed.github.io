@@ -1,0 +1,358 @@
+$dark_black: #070714
+$light_black: #424250
+$blue: #4A4AE1
+$dark_grey: #7A7A99
+$light_grey: #D8D9E6    
+    
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    font-family: 'Monserrat'
+    font-size: 14px
+    transition: all .2s ease-out 0s
+
+body
+    width: 100%
+    min-height: 100vh
+    // overflow-x: hidden
+
+.button
+    background-color: $blue
+    text-transform: uppercase
+    display: inline-block
+    position: relative
+    font-family: 'Geometria'
+    font-size: 16px
+    text-decoration: none
+    text-align: center
+    color: #fff
+    padding: 15px 45px
+
+.container
+    margin: 0px auto
+    padding: 0px 25px
+    max-width: 1120px
+
+.section__title
+    font-weight: 800
+    font-size: 28px
+    color: #000
+    text-align: center
+    margin-bottom: 50px
+
+.header
+    padding: 40px 0px
+    background-color: #EFF2F4
+    &__content
+        display: flex
+        justify-content: space-between
+    &__nav
+    &__list
+        display: flex
+    &__item
+        list-style-type: none
+    &__item + &__item
+        margin-left: 50px
+    &__contacts
+        .header__contact + .header__contact
+            margin-left: 70px
+    &__contact
+        text-decoration: none
+        color: $dark_black
+        text-decoration: none
+        display: inline-block
+        position: relative
+        line-height: 28px
+        font-weight: 600px
+        img
+            position: relative
+            transform: translateY(30%)
+        &:hover
+            color: #4A4AE1
+
+    &__link
+        color: $dark_black
+        text-decoration: none
+        display: inline-block
+        position: relative
+        line-height: 28px
+        font-weight: 500px
+        &::after
+            content: ''
+            display: inline-block
+            position: absolute
+            bottom: -3px
+            left: 0
+            width: 50%
+            height: 1px
+            background-color: $dark_black
+            transform: scaleX(0)
+            transition: all .2s ease-out 0s
+            transform-origin: left
+        &:hover
+            &::after
+                transform: scaleX(1)
+        img
+            position: relative
+            transform: translateY(30%)
+
+.banner
+    padding-top: 80px
+    padding-bottom: 40px
+    background-color: #EFF2F4
+    &__content
+        flex: 0 0 100%
+    &__title
+        font-size: 20px
+        font-weight: 800
+        margin-bottom: 20px
+    &__bg
+        overflow: hidden
+    &__logo-wrap
+    &__logo
+        width: 100%
+        object-fit: contain
+    &__benefits
+        margin: 50px 0px 65px 0px
+    &__item + &__item
+        margin-top: 15px
+    &__item
+        display: flex
+        align-items: center
+        color: $light_black
+        span
+            margin-left: 10px
+            font-family: 'Geometria'
+            font-weight: normal
+            font-size: 16px
+    &__img
+        max-width: 100%
+    &__links
+        display: flex
+        justify-content: space-between
+    &__link
+        text-decoration: none
+        color: $dark_black
+        opacity: .4
+        font-size: 16px
+        font-weight: 500
+        img
+            transform: translateY(35%)
+            margin-right: 20px
+        &:hover
+            opacity: 1
+    &__link + &__link
+        margin-left: 35px
+
+.compare
+    padding: 80px 0px
+    &__slider
+        margin: 0 auto
+        max-width: 800px
+
+.services
+    padding-bottom: 60px
+    &__pagination
+        margin-top: 50px
+        text-align: center
+    &__wrapper
+        display: flex
+    &__swiper
+        margin-top: 50px
+        width: 1023px
+        height: 452px
+        overflow: hidden
+    &__controll
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+    &__buttons
+        display: flex
+        flex-direction: column
+        a
+            margin-top: 5px
+            margin-left: 5px
+            display: inline-block
+            height: 43px
+            width: 43px
+            border: 1px solid $dark_black
+            color: $dark_black
+            text-align: center
+            line-height: 40px
+            &:hover
+                background-color: $dark_black
+                color: #fff
+            &:focus
+                outline: none
+
+.service
+    &__current
+        font-weight: 500
+        font-size: 32px
+        color: $dark_black
+    &__total
+        font-size: 20px
+        color: $light_grey
+    &__group
+        margin-bottom: 30px
+
+    &__divide
+        display: inline-block
+        width: 80%
+        height: 1px
+        background-color: $light_grey
+        transform: rotate(-10deg)
+    &__wrap
+        overflow: hidden
+        position: relative
+        background-image: linear-gradient(180deg, rgba(255, 255, 255, 0), rgba(247, 248, 250, .99))
+        padding: 27px 50px
+        
+    &__title
+        font-size: 20px
+        font-weight: 500
+    &__features
+        margin-top: 10px
+        margin-bottom: 30px
+    &__feature + &__feature
+        margin-left: 10px
+    &__feature
+        padding: 5px 15px
+        border: 1px solid $dark_grey
+        color: $dark_grey
+        text-transform: uppercase
+        border-radius: 20px
+        font-size: 12px
+    &__price
+        font-size: 16px
+        color: $dark_black
+        font-weight: 800
+        margin-left: 120px
+    &__list
+        padding-left: 16px
+        margin-bottom: 40px
+        display: flex
+        flex-direction: column
+        flex-wrap: wrap
+        max-height: 260px
+        max-width: 600px
+        align-items: flex-start
+    &__item + &__item
+        margin-top: 15px    
+    &__item
+        color: $light_black
+        font-size: 16px
+        line-height: 16px
+        font-family: 'Geometria'
+        list-style-type: none
+        position: relative
+        &::before
+            content: '—'
+            position: absolute
+            top: -2px
+            left: 0
+            transform: translateX(-115%)
+    &__bg
+        position: absolute
+        object-fit: contain
+        right: 0
+        bottom: 0
+
+.portfolio
+    padding-top: 80px
+    .swiper-slide
+        max-height: 370px
+    &__swiper
+        max-height: 420px
+        max-width: 1000px
+        position: relative
+        overflow: hidden
+        .swiper-pagination
+            top: auto !important
+            bottom: 0 !important
+            position: relative
+            left: 50% !important    
+            transform: translate(-30%, 50px)
+        .swiper-pagination-progressbar
+            max-width: 230px
+        .swiper-pagination-progressbar-fill
+            background: $dark_black !important
+            
+    &__item
+        img
+            position: relative
+            left: 50%
+            transform: translateX(-50%)
+            max-height: 175px
+            width: 100%
+            display: block
+            object-fit: contain
+
+.about
+    //background-color: #EFF2F4
+    margin-top: 50px
+    padding-top: 20px
+    &__title
+        text-align: left
+        margin-bottom: 30px
+    &__img
+        max-width: 100%
+    &__content
+        flex: 0 0 100%
+    &__text
+        font-size: 16px
+        font-family: 'Geometria'
+        line-height: 20px
+
+.footer
+    background-color: #424250
+    &__content
+        padding: 50px 0px
+        display: flex
+        justify-content: space-between
+    &__logo
+        padding-top: 60px
+        p
+            margin-top: 50px
+            font-size: 14px
+            font-family: 'Geometria'
+            color: #7A7A99
+    &__wrap
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+    &__links
+        display: flex
+        justify-content: space-between
+        flex: 1 1 60%
+    &__link + &__link
+        margin-top: 10px
+    &__link
+        color: #fff
+        text-decoration: none
+        position: relative
+        display: inline-block
+        &::after
+            content: ''
+            position: absolute
+            display: inline-block
+            height: 1px
+            width: 50%
+            background-color: #fff
+            bottom: -2px
+            left: 0
+            transform-origin: left
+            transition: all .2s ease-out 0s
+            transform: scale(0)
+        &:hover::after
+            transform: scale(1)
+    &__title
+        color: #fff
+        text-transform: uppercase
+        font-weight: 800
+        font-size: 14px
+        margin-bottom: 20px
+    &__group
+        display: flex
+        flex-direction: column
