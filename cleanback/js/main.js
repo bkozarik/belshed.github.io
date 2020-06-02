@@ -89,10 +89,10 @@ $(document).ready(function(){
     let portfolioSwiper = new Swiper ('.portfolio__swiper', {
         direction: 'horizontal',
         grabCursor: true,
-        pagination: {
-            el: '.swiper-pagination',
-            type: 'progressbar',
-        },
+        scrollbar: {
+            el: '.swiper-scrollbar',
+            hide: false,
+          },
         breakpoints: {
             800: {
                 slidesPerView: 3,
@@ -105,4 +105,7 @@ $(document).ready(function(){
             },
         }
     })
+    let service = document.querySelector('.services__swiper').swiper;
+    service.slideTo(1);
+    incSwiper();
 });

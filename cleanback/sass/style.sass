@@ -69,10 +69,10 @@ body
     &__nav
     &__list
         display: flex
-    &__item
-        list-style-type: none
-    &__item + &__item
-        margin-left: 50px
+        &__item
+            list-style-type: none
+        &__item + &__item
+            margin-left: 50px
     &__contacts
         .header__contact + .header__contact
             margin-left: 70px
@@ -259,7 +259,7 @@ body
         margin-left: 120px
     &__list
         padding-left: 16px
-        margin-bottom: 40px
+        margin-bottom: 10px
         display: flex
         flex-direction: column
         flex-wrap: wrap
@@ -291,20 +291,15 @@ body
     .swiper-slide
         max-height: 370px
     &__swiper
-        max-height: 420px
+        padding-bottom: 20px
         max-width: 1000px
         position: relative
         overflow: hidden
-        .swiper-pagination
-            top: auto !important
-            bottom: 0 !important
-            position: relative
-            left: 50% !important    
-            transform: translate(-30%, 50px)
-        .swiper-pagination-progressbar
-            max-width: 230px
-        .swiper-pagination-progressbar-fill
-            background: $dark_black !important
+        .swiper-scrollbar
+            position: absolute !important
+            width: 30% !important
+            left: 50% !important
+            transform: translateX(-50%) !important
             
     &__item
         img
