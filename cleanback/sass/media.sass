@@ -1,4 +1,17 @@
+$dark_black: #070714
+$light_black: #424250
+$blue: #4A4AE1
+$dark_grey: #7A7A99
+$light_grey: #D8D9E6   
+    
 @media screen and ( min-width: 830px )
+    .mobile__menu
+        display: none
+    .header
+        &__nav, &__contacts
+            display: block
+        &__logo, &__burger
+            display: none
     .banner
         &__body
             width: 50%
@@ -13,6 +26,14 @@
                 width: 100%
                 object-fit: contain
     
+    .services
+        &__controll
+            display: flex
+        &__next, &__prev
+            justify-self: flex-end
+    .service__mobile
+        display: none
+
     .about
         display: flex
         .container
@@ -35,9 +56,91 @@
             margin-left: 80px
     
 @media screen and ( max-width: 830px )
+    .mobile__menu
+        display: block
+        position: fixed
+        height: 100vh
+        width: 60%
+        background-color: #D8D9E6
+        opacity: .98
+        transform: translateX(100%)
+        right: 0
+        top: 0
+        padding: 70px 30px 30px
+        .header__list
+            flex-direction: column
+            .header__item + .header__item
+                margin: 15px 0 0 0
+            
+        .header__contacts
+            margin-top: 50px
+            flex-direction: column
+            .header__contact + .header__contact
+                margin: 30px 0 0 0
+        .banner__social
+            position: absolute
+            bottom: 0
+            flex-direction: column
+            .banner__link
+                margin-left: 0px
+                margin-bottom: 30px
+        &.active
+            transform: translateX(0)
     .header
-        &__content
+        position: fixed
+        width: 100%
+        z-index: 100
+        padding: 20px 0px
+        max-height: 70px
+        &__nav, &__contacts
             display: none
+        &__logo
+            position: relative
+            max-width: 40%
+            z-index: 1
+            img
+                width: 100%
+                height: auto
+                object-fit: contain
+            &.active
+                position: relative
+                transform: translateX(110%)
+        &__burger
+            position: relative
+            display: inline-block
+            height: 12px
+            width: 18px
+            z-index: 1
+            transform: translateY(-40%)
+            span
+                display: inline-block
+                width: 18px
+                height: 2px
+                background-color: $dark_black
+                position: absolute
+                top: 5px
+                &::after
+                    content: ''
+                    display: inline-block
+                    position: absolute
+                    width: 10px
+                    height: 2px
+                    background-color: $dark_black
+                    bottom: -6px
+                    right: 0
+                    transition: all .2s ease-out 0s
+            &.active
+                transform: translateY(-20%)
+                span
+                    width: 20px
+                    transform: rotate(-45deg)
+                    &::after
+                        transition: all .2s ease-out 0s
+                        width: 14px
+                        top: -2px
+                        left: 3px
+                        transform: rotate(90deg)
+    
     .banner
         padding-top: 0
         &__title
@@ -62,14 +165,33 @@
             flex-direction: column
         &__swiper
             margin-top: 0
+            width: 100%
+            height: auto
+        &__controll
+            margin-top: 30px
+            flex-direction: row
+            justify-content: space-between
+        &__next, &__prev
+            transform: rotate(90deg)
+        &__next
+            order: 3
+        &__prev
+            order: 0
+        &__pagination
+            margin: 0
+            display: flex
+            align-items: center
+            order: 1
     .service
+        &__divide
+            width: 35px
+            height: 1px
+            transform: rotate(-80deg)
         &__wrap
-            padding: 0px 10px
+            padding: 0px
             display: flex
             flex-direction: column
-        &__bg
-            order: -1
-            position: relative
+        
         &__title
             margin-top: 10px
             font-size: 20px
@@ -81,6 +203,8 @@
         &__item
             font-size: 14px
         &__list
+            max-width: none
+            max-height: none
             order: 2
         &__price
             margin-left: 0
@@ -88,6 +212,31 @@
             order: 3
         &__button
             order: 4
+        &__bg
+            display: none
+        &__mobile
+            order: -1
+            display: block
+            position: relative
+            overflow: hidden
+            min-height: 300px
+        &__sneaker
+            top: 40%
+            left: 50%
+            position: absolute
+            transform: translate(-50%, -50%) rotate(-20deg)
+            width: 80%
+            max-width: 300px
+            object-fit: contain
+            z-index: 10
+        &__figure
+            z-index: 5
+            top: 0
+            right: 0
+            transform: translate(70%, -30%)
+            position: absolute
+            max-width: 550px
+
         
     .about
         display: flex
@@ -107,6 +256,10 @@
             flex-wrap: wrap
 
 @media screen and ( max-width: 500px )
+    .header
+        &__logo
+            &.active
+                transform: translateX(115%)
     .footer
         &__content
             padding-top: 70px

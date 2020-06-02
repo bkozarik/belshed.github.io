@@ -15,7 +15,7 @@ $light_grey: #D8D9E6
 body
     width: 100%
     min-height: 100vh
-    // overflow-x: hidden
+    overflow-x: hidden
 
 .button
     background-color: $blue
@@ -30,6 +30,7 @@ body
     padding: 15px 45px
     background: rgb(7,7,20)
     background: linear-gradient(90deg, rgba(7,7,20,1) 0%, rgba(7,7,20,1) 0%, rgba(74,74,225,1) 0%, rgba(74,74,225,1) 100%)
+    border-radius: 0
     &::before
         content: 'Заказать курьера'
         display: block
@@ -64,6 +65,7 @@ body
     &__content
         display: flex
         justify-content: space-between
+        align-items: center
     &__nav
     &__list
         display: flex
@@ -118,6 +120,8 @@ body
     padding-top: 80px
     padding-bottom: 40px
     background-color: #EFF2F4
+    &__button
+        margin-top: 10px
     &__content
         flex: 0 0 100%
     &__title
@@ -173,35 +177,39 @@ body
     &__pagination
         margin-top: 50px
         text-align: center
+        order: 1
     &__wrapper
         display: flex
     &__swiper
         margin-top: 50px
         width: 1023px
-        height: 452px
+        height: 442px
         overflow: hidden
     &__controll
         display: flex
         flex-direction: column
-        justify-content: space-between
-    &__buttons
-        display: flex
-        flex-direction: column
-        a
-            margin-top: 5px
-            margin-left: 5px
-            display: inline-block
-            height: 43px
-            width: 43px
-            border: 1px solid $dark_black
-            color: $dark_black
-            text-align: center
-            line-height: 40px
-            &:hover
-                background-color: $dark_black
-                color: #fff
-            &:focus
-                outline: none
+        align-items: center
+    &__next, &__prev
+        margin-top: 5px
+        margin-left: 5px
+        display: inline-block
+        height: 43px
+        width: 43px
+        border: 1px solid $dark_black
+        color: $dark_black
+        text-align: center
+        line-height: 40px
+        &:hover
+            background-color: $dark_black
+            color: #fff
+        &:focus
+            outline: none
+    &__next
+        order: 2
+    &__prev
+        order: 3
+        justify-self: flex-end
+            
 
 .service
     &__current
@@ -232,9 +240,9 @@ body
     &__features
         margin-top: 10px
         margin-bottom: 30px
-    &__feature + &__feature
-        margin-left: 10px
     &__feature
+        margin-left: 5px
+        margin-top: 10px
         padding: 5px 15px
         border: 1px solid $dark_grey
         color: $dark_grey
@@ -330,6 +338,10 @@ body
         justify-content: space-between
     &__logo
         padding-top: 60px
+        img
+            width: 100%
+            height: auto
+            object-fit: contain
         p
             margin-top: 50px
             font-size: 14px
