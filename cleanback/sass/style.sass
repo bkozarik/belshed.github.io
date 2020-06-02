@@ -28,6 +28,23 @@ body
     text-align: center
     color: #fff
     padding: 15px 45px
+    background: rgb(7,7,20)
+    background: linear-gradient(90deg, rgba(7,7,20,1) 0%, rgba(7,7,20,1) 0%, rgba(74,74,225,1) 0%, rgba(74,74,225,1) 100%)
+    &::before
+        content: 'Заказать курьера'
+        display: block
+        position: absolute
+        top: 0
+        left: 0
+        height: 100%
+        width: 100%
+        transform: scaleX(0)
+        background-color: $dark_black
+        transition: all .2s ease-out 0s
+        transform-origin: left
+    &:hover
+        background: rgb(7,7,20)
+        background: linear-gradient(90deg, rgba(7,7,20,1) 0%, rgba(7,7,20,1) 100%, rgba(74,74,225,1) 100%, rgba(74,74,225,1) 100%)
 
 .container
     margin: 0px auto
