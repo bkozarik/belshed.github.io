@@ -180,11 +180,14 @@ body
         order: 1
     &__wrapper
         display: flex
+
     &__swiper
         margin-top: 50px
         width: 1023px
         height: 442px
         overflow: hidden
+        .swiper-slide
+            overflow: hidden
     &__controll
         display: flex
         flex-direction: column
@@ -199,7 +202,6 @@ body
         color: $dark_black
         text-align: center
         line-height: 40px
-        transform: rotate(180deg)
         &:hover
             background-color: $dark_black
             color: #fff
