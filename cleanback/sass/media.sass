@@ -185,6 +185,7 @@ $light_grey: #D8D9E6
             margin-top: 30px
     .section__title
         margin-bottom: 40px
+    
     .services
         &__wrapper
             flex-direction: column
@@ -234,6 +235,7 @@ $light_grey: #D8D9E6
             margin-top: 10px
             font-size: 20px
             order: 0
+            z-index: 8
         &__features
             display: flex
             flex-wrap: wrap
@@ -257,26 +259,12 @@ $light_grey: #D8D9E6
             display: block
             position: relative
             overflow: hidden
-            min-height: 300px
-            &.nosneaker
-                min-height: 200px
-                max-height: 200px
-                .service__sneaker
-                    transform: none
-                    max-width: none
-                    width: 100%
-                    height: 200px
-                    bottom: 0
-                    right: 0
-                    top: auto
-                    left: auto
-                    position: absolute
-                    object-fit: cover
+            min-height: 250px
         &__sneaker
             top: 40%
             left: 50%
             position: absolute
-            transform: translate(-50%, -50%) rotate(-20deg)
+            transform: translate(-50%, -40%) rotate(-20deg)
             width: 80%
             max-width: 300px
             object-fit: contain
@@ -285,9 +273,9 @@ $light_grey: #D8D9E6
             z-index: 5
             top: 0
             right: 0
-            transform: translate(70%, -30%)
+            transform: translate(60%, -50%)
             position: absolute
-            max-width: 550px
+            max-width: 500px
 
         
     .about

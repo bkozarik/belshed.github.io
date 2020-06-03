@@ -63,32 +63,12 @@ $(document).ready(function(){
 
     $('.service__total').html($('.services .swiper-slide').length);
 
-    $('.services__next').on('click', function(){
-        incSwiper();
-    });
-
-    $('.services__prev').on('click', function(){
-        decSwiper();
-    });
-
     $('#compare-id').twentytwenty({
         no_overlay: true,
     });
 
     function constrain(val, min, max) {
         return val > max ? max : val < min ? min : val;
-    }
-
-    function incSwiper(){
-        let nextActiveSlide = Number($('.service__current').html()) + 1;
-        nextActiveSlide = constrain(nextActiveSlide, 1, $('.services .swiper-slide').length);
-        $('.service__current').html(nextActiveSlide);
-    }
-
-    function decSwiper(){
-        let nextActiveSlide = Number($('.service__current').html()) - 1;
-        nextActiveSlide = constrain(nextActiveSlide, 1, $('.services .swiper-slide').length);
-        $('.service__current').html(nextActiveSlide);
     }
 
     let serviceSwiper = new Swiper ('.services__swiper', {
@@ -130,6 +110,9 @@ $(document).ready(function(){
         }
     })
     let service = document.querySelector('.services__swiper').swiper;
-    service.slideTo(1);
-    incSwiper();
+    service.on('slideChange', function(e){
+        let activeSlide = service.realIndex + 1;
+        activeSlide = constrain(activeSlide, 1, $('.services .swiper-slide').length);
+        $('.service__current').html(activeSlide);
+    });
 });

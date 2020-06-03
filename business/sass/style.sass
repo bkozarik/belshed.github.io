@@ -28,6 +28,13 @@ body
     background-color: #fff
 
 .header
+    .swiper-slide
+        height: 50px
+        display: flex
+        align-items: center
+        justify-content: center
+        img
+            object-fit: contain
     width: 100%
     padding-top: 30px
     margin-bottom: 15px
@@ -198,6 +205,7 @@ body
                 line-height: 18px
                 font-size: 13px
                 text-decoration: underline
+
 .blue
     background-color: #3286D7
 .red
@@ -305,6 +313,10 @@ body
             display: flex
             flex-direction: column
             justify-content: space-around
+    
+    &__pic
+        width: 100%
+        object-fit: contain
     &__link
         text-decoration: none
         color: #358DE0
@@ -563,15 +575,43 @@ body
                 margin-left: 25px
                 font-size: 16px
                 text-transform: uppercase
+    &__contacts
+        max-width: 200px
+        display: flex
+        flex-direction: column
+        align-items: center
+        span
+            text-align: center
+    &__name
+        text-transform: uppercase
+        font-weight: bold
+    &__label
+        font-size: 14px
+        font-weight: bold
+    &__contact
+        text-decoration: none
+        color: #000
+        position: relative
+        display: inline-block
+        &::after
+            content: ''
+            display: block
+            position: absolute
+            width: 100%
+            height: 2px
+            left: 0
+            transform-origin: left
+            transform: scaleX(0)
+            background-color: #000
+            transition: all .3s ease-in-out 0s
+        &:hover::after
+            transform-origin: right
+            right: 0
+            transform: scaleX(1)
+            
     &__text.hidden
         height: 1000px
-.swiper-slide
-    height: 50px
-    display: flex
-    align-items: center
-    justify-content: center
-    img
-        object-fit: contain
+
 
 .swiper-pagination, .swiper-pagination1, .swiper-pagination2
     text-align: center
@@ -624,6 +664,22 @@ body
             display: block
             content: ''
             background-color: #8C8C8C
+    &__sertificates, &__partners
+        display: flex
+        flex-direction: column
+        align-items: center
+        width: 100%
+        .button
+            margin-top: 20px
+    &__sertificate + &__sertificate, &__partner + &__partner
+        margin-top: 15px
+    &__sertificate-img, &__partner-img
+        position: relative
+        height: 100%
+        width: auto
+        object-fit: contain
+        left: 50%
+        transform: translateX(-50%)
     &__enter
         width: 100%
         padding: 10px 30px 10px 10px
@@ -741,14 +797,17 @@ body
                     padding-right: 5px
                     transform: scale(1.4) rotate(180deg)
                     
-
-
-
-
 .footer
     position: relative
     margin: 45px 0px    
     border-top: 2px solid #c9c9c9
+    .swiper-slide
+        height: 50px
+        display: flex
+        align-items: center
+        justify-content: center
+        img
+            object-fit: contain
     &__social
         display: flex
         margin-bottom: 10px
