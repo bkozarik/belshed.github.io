@@ -12,6 +12,7 @@ $light_grey: #D8D9E6
             display: block
         &__logo, &__burger
             display: none
+    
     .banner
         &__body
             width: 50%
@@ -27,7 +28,7 @@ $light_grey: #D8D9E6
                 height: 100%
                 width: 100%
                 object-fit: contain
-    
+
     .services
         &__controll
             display: flex
@@ -168,6 +169,20 @@ $light_grey: #D8D9E6
             display: none
         .button
             width: 100%
+    
+    .form
+        &__wrapper
+            overflow-y: auto
+        &__body
+            margin-top: 230px
+            max-height: none
+            padding: 35px 0px
+        &__col + &__col
+            margin-top: 20px
+        &__col
+            flex: initial
+        &__order
+            margin-top: 30px
     .section__title
         margin-bottom: 40px
     .services

@@ -1,5 +1,18 @@
 $(document).ready(function(){
     
+    $('.banner__button, .form__close').on('click', function(e){
+        e.preventDefault();
+        $('.form__wrapper').toggleClass('active');
+        if($('.form__wrapper').hasClass('active')){
+            $('html,body').stop().animate({ scrollTop: 0 }, 1000);
+
+            $("html,body").css("overflow","hidden");
+        }
+        else{
+            $("html,body").removeAttr('style');
+        }
+    });
+
     $('a.header__burger').on('click', function(event){
         event.preventDefault();
 
