@@ -49,7 +49,11 @@ $(document).ready(function(){
         $('a.header__burger').toggleClass('active', false);
         $('.header__logo').toggleClass('active', false);
         $('.mobile__menu').toggleClass('active', false);
-        $('html,body').stop().animate({ scrollTop: $($(this).attr('href')).offset().top - 100 }, 1000);
+        if($(this).attr('href') != '#header'){
+            $('html,body').stop().animate({ scrollTop: $($(this).attr('href')).offset().top - 100 }, 800);
+            return
+        }
+        $('html,body').stop().animate({ scrollTop: 0 }, 800);
     });
 
     $('.banner__link').on('click', function(e){
