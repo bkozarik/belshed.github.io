@@ -46,9 +46,9 @@ $(document).ready(function(){
     
     $('.header__link, .footer__link').on('click', function(e){
         e.preventDefault();
-        $('a.header__burger').toggleClass('active');
-        $('.header__logo').toggleClass('active');
-        $('.mobile__menu').toggleClass('active');
+        $('a.header__burger').toggleClass('active', false);
+        $('.header__logo').toggleClass('active', false);
+        $('.mobile__menu').toggleClass('active', false);
         $('html,body').stop().animate({ scrollTop: $($(this).attr('href')).offset().top - 100 }, 1000);
     });
 
