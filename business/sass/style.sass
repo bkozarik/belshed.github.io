@@ -24,7 +24,8 @@ body
     padding: 0px
 
 
-
+.bgw
+    background-color: #fff
 
 .header
     width: 100%
@@ -508,9 +509,25 @@ body
                     background-color: transparent
             &.back
                 display: none
-
-            
-                
+    &__picture-title
+        font-size: 21px
+        font-weight: 800px
+        text-transform: uppercase
+        text-align: center
+    &__zoom
+        position: relative
+        margin: 20px 0px
+        text-align: right
+        padding-right: 40px
+        a
+            text-decoration: none
+            color: #000
+            display: inline-block
+            position: relative
+            img
+                position: absolute
+                transform: translate(10%, -10%)
+            right: 0
     &__text
         width: 100%
         padding: 20px

@@ -69,9 +69,9 @@ body
     &__nav
     &__list
         display: flex
-        &__item
+    &__item
             list-style-type: none
-        &__item + &__item
+    &__item + &__item
             margin-left: 50px
     &__contacts
         .header__contact + .header__contact
@@ -120,6 +120,11 @@ body
     padding-top: 80px
     padding-bottom: 40px
     background-color: #EFF2F4
+    &__abs-bg
+        position: absolute
+        left: 0
+        top: 250px
+        z-index: -1
     &__button
         margin-top: 10px
     &__content
@@ -213,7 +218,6 @@ body
         order: 2
         justify-self: flex-end
             
-
 .service
     &__current
         font-weight: 500
@@ -287,17 +291,20 @@ body
         bottom: 0
 
 .portfolio
-    padding-top: 80px
+    padding: 70px 0px
+    background-image: url("../img/bgi-h.png")
+    background-position: bottom right
+    background-repeat: no-repeat
     .swiper-slide
         max-height: 370px
     &__swiper
-        padding-bottom: 20px
+        padding-bottom: 50px
         max-width: 1000px
         position: relative
         overflow: hidden
         .swiper-scrollbar
             position: absolute !important
-            width: 30% !important
+            width: 20% !important
             left: 50% !important
             transform: translateX(-50%) !important
             
@@ -312,9 +319,9 @@ body
             object-fit: contain
 
 .about
-    //background-color: #EFF2F4
-    margin-top: 50px
-    padding-top: 20px
+    background-color: #EFF2F4
+    margin-top: 0px
+    padding-top: 60px
     &__title
         text-align: left
         margin-bottom: 30px
