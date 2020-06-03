@@ -13,6 +13,13 @@ $(document).ready(function(){
         }
     });
 
+    $('.service__button, .form__close-card').on('click', function(e){
+        e.preventDefault();
+
+        $('.service__wrap').toggleClass('active');
+        service.update();
+    });
+
     $('a.header__burger').on('click', function(event){
         event.preventDefault();
 

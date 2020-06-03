@@ -216,7 +216,20 @@ $light_grey: #D8D9E6
             padding: 0px
             display: flex
             flex-direction: column
-        
+            &.active
+                height: 920px
+                .service__content
+                    transform: rotateX(0) rotateY(180deg)
+                .form
+                    transform: rotateX(0) rotateY(360deg)
+                .form__body
+                    margin: 0 !important
+                    padding: 25px 20px !important
+        &__content
+            padding: 0px
+            display: flex
+            flex-direction: column
+                
         &__title
             margin-top: 10px
             font-size: 20px

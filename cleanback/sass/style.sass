@@ -207,7 +207,7 @@ body
     &__title
         font-size: 20px
         font-weight: bold
-    &__close
+    &__close, &__close-card
         span
             display: inline-block
             width: 20px
@@ -302,7 +302,6 @@ body
         &::after
             display: block
             
-
 .compare
     padding: 80px 0px
     &__slider
@@ -351,6 +350,26 @@ body
         justify-self: flex-end
             
 .service
+    &__wrap
+        position: relative
+        perspective: 1000px
+        .form, .service__content
+            backface-visibility: hidden
+        .form
+            height: 100%
+            width: 100%
+            left: 0
+            top: 0
+            position: absolute
+            transform: rotateX(180deg)
+            &__body
+                max-width: none
+                padding: 35px 20px
+        &.active
+            .service__content
+                transform: rotateX(180deg)
+            .form
+                transform: rotateX(360deg)
     &__current
         font-weight: 500
         font-size: 32px
@@ -419,8 +438,8 @@ body
     &__bg
         position: absolute
         object-fit: contain
-        right: 0
-        bottom: 0
+        top: 50%
+        transform: translateY(-50%)
 
 .portfolio
     padding: 70px 0px
