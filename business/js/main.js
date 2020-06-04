@@ -2,6 +2,7 @@ $(document).ready(function(){
     let slider = document.querySelector('.swiper-container1');
     let slider2 = document.querySelector('.swiper-container2');
     let slider_gallery = document.querySelector('.main__sertificates');
+    let slider_team_gallery = document.querySelector('.main__team');
     let about_swiper1;
     let about_swiper2;
     let hiddenOffset;
@@ -111,13 +112,57 @@ $(document).ready(function(){
     }
 
     function mobileGalery(){
-        if(window.innerWidth <= 1000 && slider_gallery.dataset.mobile == 'false'){
-            gallery_swiper = new Swiper ('.main__sertificates', {
+        try{
+            if(window.innerWidth <= 1000 && slider_gallery.dataset.mobile == 'false'){
+                gallery_swiper = new Swiper ('.main__sertificates', {
+                    grabCursor:true,
+                    spaceBetween: 10,
+                    slidesPerView: 3,
+                    pagination: {
+                        el: '.swiper-gallery',
+                        type: 'bullets',
+                    },
+                    updateOnWindowResize: true,
+                    breakpoints: {
+                        780: {
+                            slidesPerView: 3,
+                        },
+                        470:{
+                            slidesPerView: 2,
+                        },
+                        300: {
+                            slidesPerView: 1,
+                            spaceBetween: 20,
+                        }
+                    },
+                })
+    
+                slider_gallery.dataset.mobile = 'true';
+            }
+        }
+        catch(e){}
+        
+
+        if(window.innerWidth > 1000){
+            try{
+                slider_gallery.dataset.mobile = 'false';
+                if(slider_gallery.classList.contains('swiper-container-initialized')){
+                    gallery_swiper.destroy();
+                    delete gallery_swiper;
+                }
+            }
+            catch(e){}
+        }
+    }
+
+    function mobileTeamGalery(){
+        if(window.innerWidth <= 1000 && slider_team_gallery.dataset.mobile == 'false'){
+            let team_swiper = new Swiper ('.main__team', {
                 grabCursor:true,
                 spaceBetween: 10,
-                slidesPerView: 3,
+                slidesPerView: 1,
                 pagination: {
-                    el: '.swiper-gallery',
+                    el: '.team-gallery',
                     type: 'bullets',
                 },
                 updateOnWindowResize: true,
@@ -135,15 +180,15 @@ $(document).ready(function(){
                 },
             })
 
-            slider_gallery.dataset.mobile = 'true';
+            slider_team_gallery.dataset.mobile = 'true';
         }
 
         if(window.innerWidth > 1000){
-            slider_gallery.dataset.mobile = 'false';
+            slider_team_gallery.dataset.mobile = 'false';
 
-            if(slider_gallery.classList.contains('swiper-container-initialized')){
-                gallery_swiper.destroy();
-                delete gallery_swiper;
+            if(slider_team_gallery.classList.contains('swiper-container-initialized')){
+                team_swiper.destroy();
+                delete team_swiper;
             }
         }
     }
@@ -190,7 +235,7 @@ $(document).ready(function(){
     }
 
 
-
+    mobileTeamGalery();
     mobileSwiper1();
     mobileSwiper2();
     windowResize();
@@ -203,11 +248,14 @@ $(document).ready(function(){
             try{
                 let swiper1 = $('.swiper-container1')[0].swiper
                 let swiper2 = $('.swiper-container2')[0].swiper
+                let swiper3 = $('.main__team')[0].swiper
                 swiper1.update();
                 swiper2.update();
+                swiper3.update();
             }
             catch(e){}
         }
+        mobileTeamGalery();
         mobileSwiper1();
         mobileSwiper2();
         mobileGalery();
@@ -249,6 +297,17 @@ $(document).ready(function(){
         $(this).fadeOut();
         $('.main__player>video')[0].play();
         $('.main__player>video').attr('controls', 'true');
+    });
+
+    $('.main__zoom-link1, .main__zoom-link2').on('click', function(e){
+        e.preventDefault();
+
+        if($(this).hasClass('main__zoom-link1')){
+            $('.popup.divisions').css('display', 'flex');
+        }
+        else if($(this).hasClass('main__zoom-link2')){
+            $('.popup.map').css('display', 'flex');
+        }
     });
 
     $('.how__text-title').on('click', function(){

@@ -175,6 +175,14 @@ $main_grey: #E8E8E8
     .nav
         margin-top: 30px
     .main
+        &__picture-title
+            padding: 0px 10px
+        &__team
+            padding: 0px 10px
+            &-wrap
+                display: flex
+                flex-direction: column
+                align-items: center
         &__tenders
             padding: 25px 0px 10px
         &__tender
@@ -190,6 +198,22 @@ $main_grey: #E8E8E8
                 img
                     overflow: hidden
                     object-fit: contain
+    .aside
+        &__sertificates, &__partners
+            padding: 10px 0px
+        &__sertificates-wrap, &__partners-wrap
+
+            display: flex
+            flex-direction: row
+            flex-wrap: wrap
+            justify-content: space-between
+            width: 100%
+        &__sertificate, &__partner
+            flex: 1 1 50%
+            &-img
+                max-height: 150px
+        &__partner
+            max-height: 100px
     .how
         .container
             padding: 0px 25px

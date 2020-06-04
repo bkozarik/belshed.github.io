@@ -588,6 +588,15 @@ body
     &__label
         font-size: 14px
         font-weight: bold
+    &__team
+        overflow: hidden
+        &-wrap
+            img
+                object-fit: cover
+                max-width: 200px
+                min-height: 225px
+    .team-gallery
+        text-align: center
     &__contact
         text-decoration: none
         color: #000
@@ -677,6 +686,7 @@ body
         position: relative
         height: 100%
         width: auto
+        max-width: 170px
         object-fit: contain
         left: 50%
         transform: translateX(-50%)
@@ -880,7 +890,7 @@ body
     top: 0
     left: 0
     overflow: hidden
-    display: none
+    display: none   
     justify-content: center
     align-items: center
     padding: 20px
