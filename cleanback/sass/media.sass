@@ -7,6 +7,7 @@ $light_grey: #D8D9E6
 @media screen and ( min-width: 830px )
     .mobile__menu
         display: none
+    
     .header
         &__nav, &__contacts
             display: block
@@ -34,11 +35,31 @@ $light_grey: #D8D9E6
             display: flex
         &__next, &__prev
             justify-self: flex-end
+    
     .service
+        &_bg
+            width: 50%
+            right: 0
         &__mobile
             display: none
         &__wrap
             min-height: 442px
+        &__sneaker
+            top: 50%
+            left: 50%
+            transform: translate(-60%, -55%) rotate(-20deg)
+            position: absolute
+            width: 80%
+            max-width: none
+            object-fit: contain
+            z-index: 10
+        &__figure
+            position: absolute
+            z-index: 5
+            top: 0
+            right: 0
+            transform: translate(50%, -50%)
+            max-width: 1110px
 
     .about
         display: flex
@@ -57,6 +78,7 @@ $light_grey: #D8D9E6
                 height: 100%
                 width: 100%
                 object-fit: contain
+    
     .footer
         &__links
             margin-left: 80px
@@ -95,6 +117,7 @@ $light_grey: #D8D9E6
                 margin-bottom: 20px
         &.active
             transform: translateX(0)
+    
     .header
         position: fixed
         width: 100%
@@ -183,6 +206,7 @@ $light_grey: #D8D9E6
             flex: initial
         &__order
             margin-top: 30px
+    
     .section__title
         margin-bottom: 40px
     
@@ -227,6 +251,12 @@ $light_grey: #D8D9E6
                 .form__body
                     margin: 0 !important
                     padding: 25px 0px !important
+            li
+                font-size: 14px
+            ul
+                max-width: none
+                max-height: none
+                order: 2
         &__content
             padding: 0px
             display: flex
@@ -238,15 +268,11 @@ $light_grey: #D8D9E6
             order: 0
             z-index: 8
         &__features
-            display: flex
-            flex-wrap: wrap
-            order: 1
-        &__item
-            font-size: 14px
-        &__list
-            max-width: none
-            max-height: none
-            order: 2
+            ul
+                display: flex
+                flex-wrap: wrap
+                order: 1
+        
         &__price
             margin-left: 0
             margin-bottom: 30px
@@ -254,17 +280,17 @@ $light_grey: #D8D9E6
         &__button
             order: 4
         &__bg
-            display: none
-        &__mobile
             order: -1
             display: block
             position: relative
             overflow: hidden
-            min-height: 170px
+            min-height: 240px
+            top: 75px
+            width: 100%
         &__sneaker
             top: 50%
             left: 50%
-            transform: translate(-60%, -55%) rotate(-30deg)
+            transform: translate(-60%, -50%) rotate(-30deg)
             position: absolute
             width: 80%
             max-width: 300px
@@ -301,6 +327,35 @@ $light_grey: #D8D9E6
         &__logo
             &.active
                 transform: translateX(115%)
+    
+    
+    .service
+        &__bg
+            order: -1
+            display: block
+            position: relative
+            overflow: hidden
+            min-height: 170px
+            top: 75px
+            width: 100%
+        &__sneaker
+            top: 50%
+            left: 50%
+            transform: translate(-60%, -50%) rotate(-30deg)
+            position: absolute
+            width: 70%
+            max-width: 300px
+            max-height: 120px
+            object-fit: contain
+            z-index: 10
+        &__figure
+            position: absolute
+            z-index: 5
+            top: 0
+            right: 0
+            transform: translate(60%, -50%)
+            max-width: 340px
+    
     .footer
         &__content
             padding-top: 70px
