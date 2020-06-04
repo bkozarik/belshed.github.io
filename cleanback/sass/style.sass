@@ -370,31 +370,6 @@ body
                 transform: rotateX(180deg)
             .form
                 transform: rotateX(360deg)
-    
-    &__ul
-        ul
-            padding-left: 16px
-            margin-bottom: 10px
-            display: flex
-            flex-direction: column
-            flex-wrap: wrap
-            max-height: 260px
-            max-width: 600px
-            align-items: flex-start
-        li
-            margin-bottom: 15px  
-            color: $light_black
-            font-size: 16px
-            line-height: 16px
-            font-family: 'Geometria'
-            list-style-type: none
-            position: relative
-            &::before
-                content: '—'
-                position: absolute
-                top: -2px
-                left: 0
-                transform: translateX(-115%)
     &__current
         font-weight: 500
         font-size: 32px
@@ -423,29 +398,47 @@ body
     &__features
         margin-top: 10px
         margin-bottom: 30px
-        li
-            display: inline-block
-            list-style-type: none
-            margin-left: 5px
-            margin-top: 10px
-            padding: 5px 15px
-            border: 1px solid $dark_grey
-            color: $dark_grey
-            text-transform: uppercase
-            border-radius: 20px
-            font-size: 12px
+    &__feature
+        margin-left: 5px
+        margin-top: 10px
+        padding: 5px 15px
+        border: 1px solid $dark_grey
+        color: $dark_grey
+        text-transform: uppercase
+        border-radius: 20px
+        font-size: 12px
     &__price
         font-size: 16px
         color: $dark_black
         font-weight: 800
         margin-left: 120px
-    
+    &__list
+        padding-left: 16px
+        margin-bottom: 10px
+        display: flex
+        flex-direction: column
+        flex-wrap: wrap
+        max-height: 260px
+        max-width: 600px
+        align-items: flex-start
+    &__item
+        margin-bottom: 15px  
+        color: $light_black
+        font-size: 16px
+        line-height: 16px
+        font-family: 'Geometria'
+        list-style-type: none
+        position: relative
+        &::before
+            content: '—'
+            position: absolute
+            top: -2px
+            left: 0
+            transform: translateX(-115%)
     &__bg
         position: absolute
         object-fit: contain
-        width: 50%
         top: 50%
-        right: 0
         transform: translateY(-50%)
 
 .portfolio
@@ -488,12 +481,9 @@ body
     &__content
         flex: 0 0 100%
     &__text
-        p + p
-            margin-top: 20px
-        p
-            font-size: 16px
-            font-family: 'Geometria'
-            line-height: 20px
+        font-size: 16px
+        font-family: 'Geometria'
+        line-height: 20px
 
 .footer
     background-color: #424250
