@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/cleanback/css/fonts.css">
+    <link rel="stylesheet" href="/cleanback/css/style.css">
+    <link rel="stylesheet" href="/cleanback/css/media.css">
+    <title>Cleanback - профессиональная химчистка обуви</title>
+</head>
+<body>
+    <header id="header" class="header">
+        <div class="container">
+            <div class="header__content">
+                <nav class="header__nav">
+                    <ul class="header__list">
+                        <li class="header__item"><a href="#compare" class="header__link">До и после</a></li>
+                        <li class="header__item"><a href="#services" class="header__link">Услуги</a></li>
+                        <li class="header__item"><a href="#portfolio" class="header__link">Наши работы</a></li>
+                        <li class="header__item"><a href="#about" class="header__link">О нас</a></li>
+                    </ul>
+                </nav>
+                <div class="header__contacts">
+                    <a href="tel:84959757763" class="header__contact">8 (495) 975-77-63</a>
+                    <a href="#" class="header__contact">Обратный звонок <img src="/cleanback/svg/phone-holding.svg" alt="svg"></a>
+                </div>
+                <div class="header__logo">
+                    <img src="/cleanback/img/logo.png" alt="Mobile Logo">
+                </div>
+                <a href="#" class="header__burger"><span></span></a>
+                <div class="mobile__menu">
+
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="banner">
+        <div class="banner__wrapper">
+            <div class="banner__content">
+                <div class="container">
+                    <div class="banner__body">
+                        <h3 class="banner__title">Профессиональная химчистка обуви</h3>
+                        <div class="banner__logo-wrap">
+                            <img src="/cleanback/img/logo.png" alt="Banner Logo" class="banner__logo">
+                        </div>
+                        <div class="banner__benefits">
+                            <div class="banner__item"><img src="/cleanback/svg/package.svg" alt="svg" class="banner__svg"><span>Бесплатно заберем и доставим</span></div>
+                            <div class="banner__item"><img src="/cleanback/svg/sale-badge.svg" alt="svg" class="banner__svg"><span>Скидка 10% при сдаче от двух пар</span></div>
+                            <div class="banner__item"><img src="/cleanback/svg/clock.svg" alt="svg" class="banner__svg"><span>Срок чистки 3-4 дня</span></div>
+                            <div class="banner__item"><img src="/cleanback/svg/money-stack.svg" alt="svg" class="banner__svg"><span>Оплата после чистки</span></div>
+                        </div>
+                        <a href="#" class="button banner__button">Заказать курьера</a>
+                    </div>
+                </div>
+            </div>
+            <div class="banner__bg">
+                <img src="/cleanback/img/huarache.png" alt="Bg img" class="banner__img">
+            </div>
+        </div>
+        <div class="container">
+            <div class="banner__links">
+                <a href="#compare" class="banner__scroll banner__link"><img src="/cleanback/svg/prioritize-down.svg" alt="svg"> scroll down</a>
+                <div class="banner__social">
+                    <a href="#" class="banner__link">facebook</a>
+                    <a href="#" class="banner__link">instagram</a>
+                </div>
+            </div>
+        </div>
+        <div class="banner__abs-bg">
+            <!-- <img src="/cleanback/img/bgi.png" alt="BG"> -->
+        </div>
+        <div class="form__wrapper">
+            <div class="form">
+                <div class="container">
+                    <div class="form__body">
+                        <div class="form__header">
+                            <h2 class="form__title">Оформление заказа</h2>
+                            <a class="form__close"><span></span></a>
+                        </div>
+                        <form class="form__form" action="#">
+                            <div class="form__content">
+                                <div class="form__col">
+                                    <div class="form__block">
+                                        <h4 class="form__subtitle">Вид чистки</h4>
+                                        <select name="cleaning_type" class="form__input">
+                                            <option value="classic">Классическая чистка</option>
+                                            <option value="classic">Классическая чистка</option>
+                                            <option value="classic">Классическая чистка</option>
+                                            <option value="classic">Классическая чистка</option>
+                                            <option value="classic">Классическая чистка</option>
+                                        </select>
+                                    </div>
+                                    <div class="form__block">
+                                        <h4 class="form__subtitle">Дополнительные опции</h4>
+                                        <div class="form__labels">
+                                            <label class="form__label"><input name="option" type="checkbox"><span class="form__check"></span> Подклейка мысов</label>
+                                            <label class="form__label"><input name="option" type="checkbox"><span class="form__check"></span> Водоотталкивающая пропитка</label>
+                                            <label class="form__label"><input name="option" type="checkbox"><span class="form__check"></span> Подклейка мысов</label>
+                                            <label class="form__label"><input name="option" type="checkbox"><span class="form__check"></span> Подклейка мысов</label>
+                                            <label class="form__label"><input name="option" type="checkbox"><span class="form__check"></span> Водоотталкивающая пропитка</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form__col">
+                                    <div class="form__block">
+                                        <h4 class="form__subtitle">Данные</h4>
+                                        <input class="form__input" name="name" placeholder="Имя" type="text">
+                                        <input class="form__input" name="telephone" placeholder="Телефон" type="tel">
+                                        <input class="form__input" name="adress" placeholder="Адресс" type="text">
+                                        <input class="form__input" name="promo" placeholder="Промокод" type="text">
+                                    </div>
+                                </div>
+                                <div class="form__col jssb">
+                                    <div class="form__block">
+                                        <h4 class="form__subtitle">Количество пар</h4>
+                                        <input class="form__input" value="1" placeholder="1" type="number">
+                                    </div>
+                                    <div class="form__order">
+                                        <div class="form__total">
+                                            <span>Итоговая цена:</span>
+                                            <span class="form__price">4520 руб.</span>
+                                        </div>
+                                        <a href="#" class="button form__button">Оформить заказ</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="compare" class="compare">
+        <div id="compare-id" class="compare__slider">
+            <!-- The before image is first -->
+            <img class="compare__before" src="/cleanback/img/dirty_snkr.png" />
+            <!-- The after image is last -->
+            <img class="compare__after" src="/cleanback/img/clear_snkr.png" />
+        </div>
+    </section>
+    <section class="services">
+        <div class="container">
+            <h3 id="services" class="section__title">Услуги</h3>
+            <div class="services__wrapper">
+                <div class="services__swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="service__wrap">
+                                <div class="service__content">
+                                    <h4 class="service__title">Стандартная химчистка</h4>
+                                    <div class="service__features">
+                                        <span class="service__feature">Сетка</span>
+                                        <span class="service__feature">Замша</span>
+                                        <span class="service__feature">Кожа</span>
+                                        <span class="service__feature">Нубук</span>
+                                    </div>
+                                    <ul class="service__list">
+                                            <li class="service__item">Химчистка обуви</li>
+                                            <li class="service__item">Дополнительная химчистка</li>
+                                            <li class="service__item">Стирка шнурков</li>
+                                            <li class="service__item">Чистка стелек</li>
+                                            <li class="service__item">Удаление катышков</li>
+                                            <li class="service__item">Восстановление формы</li>
+                                            <li class="service__item">Расчесывание и покрытие</li>
+                                            <li class="service__item">Химчистка внутреней части</li>
+                                            <li class="service__item">Дезодарация обуви</li>
+                                    </ul>
+                                    <a href="" class="button service__button">Заказать</a>
+                                    <span class="service__price">4520 руб.</span>
+                                    <img src="/cleanback/img/sneaker2.png" alt="Sneaker BG" class="service__bg">
+                                    <div class="service__mobile">
+                                        <img src="/cleanback/img/2.png" alt="sneaker" class="service__sneaker">
+                                        <img src="/cleanback/svg/circle.svg" alt="figure" class="service__figure">
+                                    </div>
+                                </div>
+                                <div class="form">
+                                    <div class="form__body">
+                                        <div class="form__header">
+                                            <h2 class="form__title">Оформление заказа</h2>
+                                            <a class="form__close-card"><span></span></a>
+                                        </div>
+                                        <form class="form__form" action="#">
+                                            <div class="form__content">
+                                                <div class="form__col">
+                                                    <div class="form__block">
+                                                        <h4 class="form__subtitle">Вид чистки</h4>
+                                                        <select name="cleaning_type" class="form__input">
+                                                            <option value="classic">Классическая чистка</option>
+                                                            <option value="classic">Классическая чистка</option>
+                                                            <option value="classic">Классическая чистка</option>
+                                                            <option value="classic">Классическая чистка</option>
+                                                            <option value="classic">Классическая чистка</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="form__block">
+                                                        <h4 class="form__subtitle">Дополнительные опции</h4>
+                                                        <div class="form__labels">
+                                                            <label class="form__label"><input name="option" type="checkbox"><span class="form__check"></span> Подклейка мысов</label>
+                                                            <label class="form__label"><input name="option" type="checkbox"><span class="form__check"></span> Водоотталкивающая пропитка</label>
+                                                            <label class="form__label"><input name="option" type="checkbox"><span class="form__check"></span> Подклейка мысов</label>
+                                                            <label class="form__label"><input name="option" type="checkbox"><span class="form__check"></span> Подклейка мысов</label>
+                                                            <label class="form__label"><input name="option" type="checkbox"><span class="form__check"></span> Водоотталкивающая пропитка</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form__col">
+                                                    <div class="form__block">
+                                                        <h4 class="form__subtitle">Данные</h4>
+                                                        <input class="form__input" name="name" placeholder="Имя" type="text">
+                                                        <input class="form__input" name="telephone" placeholder="Телефон" type="tel">
+                                                        <input class="form__input" name="adress" placeholder="Адресс" type="text">
+                                                        <input class="form__input" name="promo" placeholder="Промокод" type="text">
+                                                    </div>
+                                                </div>
+                                                <div class="form__col jssb">
+                                                    <div class="form__block">
+                                                        <h4 class="form__subtitle">Количество пар</h4>
+                                                        <input class="form__input" value="1" placeholder="1" type="number">
+                                                    </div>
+                                                    <div class="form__order">
+                                                        <div class="form__total">
+                                                            <span>Итоговая цена:</span>
+                                                            <span class="form__price">4520 руб.</span>
+                                                        </div>
+                                                        <a href="#" class="button form__button">Оформить заказ</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="service__wrap">
+                                <div class="service__content">
+                                    <h4 class="service__title">Классическая химчистка</h4>
+                                    <div class="service__features">
+                                        <span class="service__feature">Ткань</span>
+                                        <span class="service__feature">Резина</span>
+                                    </div>
+                                    <ul class="service__list">
+                                            <li class="service__item">Химчистка обуви</li>
+                                            <li class="service__item">Чистка боковой части подошвы</li>
+                                            <li class="service__item">Химчистка внутреней части</li>
+                                            <li class="service__item">Стирка шнурков</li>
+                                            <li class="service__item">Чистка стелек</li>
+                                            <li class="service__item">Дезодарация обуви</li>
+                                            <li class="service__item">Исправление формы</li>
+                                    </ul>
+                                    <a href="" class="button service__button">Заказать</a>
+                                    <span class="service__price">4520 руб.</span>
+                                    <img src="/cleanback/img/sneaker1.png" alt="Sneaker BG" class="service__bg">
+                                    <div class="service__mobile">
+                                        <img src="/cleanback/img/1.png" alt="sneaker" class="service__sneaker">
+                                        <img src="/cleanback/svg/star.svg" alt="figure" class="service__figure">
+                                    </div>
+                                </div>
+                                <div class="form">
+                                    <div class="form__body">
+                                        <div class="form__header">
+                                            <h2 class="form__title">Оформление заказа</h2>
+                                            <a class="form__close-card"><span></span></a>
+                                        </div>
+                                        <form class="form__form" action="#">
+                                            <div class="form__content">
+                                                <div class="form__col">
+                                                    <div class="form__block">
+                                                        <h4 class="form__subtitle">Вид чистки</h4>
+                                                        <select name="cleaning_type" class="form__input">
+                                                            <option value="classic">Классическая чистка</option>
+                                                            <option value="classic">Классическая чистка</option>
+                                                            <option value="classic">Классическая чистка</option>
+                                                            <option value="classic">Классическая чистка</option>
+                                                            <option value="classic">Классическая чистка</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="form__block">
+                                                        <h4 class="form__subtitle">Дополнительные опции</h4>
+                                                        <div class="form__labels">
+                                                            <label class="form__label"><input name="option" type="checkbox"><span class="form__check"></span> Подклейка мысов</label>
+                                                            <label class="form__label"><input name="option" type="checkbox"><span class="form__check"></span> Водоотталкивающая пропитка</label>
+                                                            <label class="form__label"><input name="option" type="checkbox"><span class="form__check"></span> Подклейка мысов</label>
+                                                            <label class="form__label"><input name="option" type="checkbox"><span class="form__check"></span> Подклейка мысов</label>
+                                                            <label class="form__label"><input name="option" type="checkbox"><span class="form__check"></span> Водоотталкивающая пропитка</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form__col">
+                                                    <div class="form__block">
+                                                        <h4 class="form__subtitle">Данные</h4>
+                                                        <input class="form__input" name="name" placeholder="Имя" type="text">
+                                                        <input class="form__input" name="telephone" placeholder="Телефон" type="tel">
+                                                        <input class="form__input" name="adress" placeholder="Адресс" type="text">
+                                                        <input class="form__input" name="promo" placeholder="Промокод" type="text">
+                                                    </div>
+                                                </div>
+                                                <div class="form__col jssb">
+                                                    <div class="form__block">
+                                                        <h4 class="form__subtitle">Количество пар</h4>
+                                                        <input class="form__input" value="1" placeholder="1" type="number">
+                                                    </div>
+                                                    <div class="form__order">
+                                                        <div class="form__total">
+                                                            <span>Итоговая цена:</span>
+                                                            <span class="form__price">4520 руб.</span>
+                                                        </div>
+                                                        <a href="#" class="button form__button">Оформить заказ</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="service__wrap">
+                                <div class="service__content">
+                                    <h4 class="service__title">Зимняя химчистка</h4>
+                                    <div class="service__features">
+                                        <span class="service__feature">Замша</span>
+                                        <span class="service__feature">Кожа</span>
+                                        <span class="service__feature">Нубук</span>
+                                    </div>
+                                    <ul class="service__list">
+                                            <li class="service__item">Химчистка обуви</li>
+                                            <li class="service__item">Выведение соли и реагентов</li>
+                                            <li class="service__item">Дополнительная химчистка</li>
+                                            <li class="service__item">Стирка шнурков</li>
+                                            <li class="service__item">Чистка стелек</li>
+                                            <li class="service__item">Удаление катышков</li>
+                                            <li class="service__item">Расчесывание и покрытие</li>
+                                            <li class="service__item">Химчистка внутреней части</li>
+                                            <li class="service__item">Дезодарация обуви</li>
+                                            <li class="service__item">Восстановление формы</li>
+                                            <li class="service__item">Влагозащита</li>
+                                    </ul>
+                                    <a href="" class="button service__button">Заказать</a>
+                                    <span class="service__price">4520 руб.</span>
+                                    <img src="/cleanback/img/sneaker3.png" alt="Sneaker BG" class="service__bg">
+                                    <div class="service__mobile">
+                                        <img src="/cleanback/img/3.png" alt="sneaker" class="service__sneaker">
+                                        <img src="/cleanback/svg/snake.svg" alt="figure" class="service__figure">
+                                    </div>
+                                </div>
+                                <div class="form">
+                                    <div class="form__body">
+                                        <div class="form__header">
+                                            <h2 class="form__title">Оформление заказа</h2>
+                                            <a class="form__close-card"><span></span></a>
+                                        </div>
+                                        <form class="form__form" action="#">
+                                            <div class="form__content">
+                                                <div class="form__col">
+                                                    <div class="form__block">
+                                                        <h4 class="form__subtitle">Вид чистки</h4>
+                                                        <select name="cleaning_type" class="form__input">
+                                                            <option value="classic">Классическая чистка</option>
+                                                            <option value="classic">Классическая чистка</option>
+                                                            <option value="classic">Классическая чистка</option>
+                                                            <option value="classic">Классическая чистка</option>
+                                                            <option value="classic">Классическая чистка</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="form__block">
+                                                        <h4 class="form__subtitle">Дополнительные опции</h4>
+                                                        <div class="form__labels">
+                                                            <label class="form__label"><input name="option" type="checkbox"><span class="form__check"></span> Подклейка мысов</label>
+                                                            <label class="form__label"><input name="option" type="checkbox"><span class="form__check"></span> Водоотталкивающая пропитка</label>
+                                                            <label class="form__label"><input name="option" type="checkbox"><span class="form__check"></span> Подклейка мысов</label>
+                                                            <label class="form__label"><input name="option" type="checkbox"><span class="form__check"></span> Подклейка мысов</label>
+                                                            <label class="form__label"><input name="option" type="checkbox"><span class="form__check"></span> Водоотталкивающая пропитка</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form__col">
+                                                    <div class="form__block">
+                                                        <h4 class="form__subtitle">Данные</h4>
+                                                        <input class="form__input" name="name" placeholder="Имя" type="text">
+                                                        <input class="form__input" name="telephone" placeholder="Телефон" type="tel">
+                                                        <input class="form__input" name="adress" placeholder="Адресс" type="text">
+                                                        <input class="form__input" name="promo" placeholder="Промокод" type="text">
+                                                    </div>
+                                                </div>
+                                                <div class="form__col jssb">
+                                                    <div class="form__block">
+                                                        <h4 class="form__subtitle">Количество пар</h4>
+                                                        <input class="form__input" value="1" placeholder="1" type="number">
+                                                    </div>
+                                                    <div class="form__order">
+                                                        <div class="form__total">
+                                                            <span>Итоговая цена:</span>
+                                                            <span class="form__price">4520 руб.</span>
+                                                        </div>
+                                                        <a href="#" class="button form__button">Оформить заказ</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="service__wrap">
+                                <div class="service__content">
+                                    <h4 class="service__title">Премиум химчистка</h4>
+                                    <div class="service__features">
+                                        <span class="service__feature">Замша</span>
+                                        <span class="service__feature">Кожа</span>
+                                    </div>
+                                    <ul class="service__list">
+                                            <li class="service__item">Химчистка обуви</li>
+                                            <li class="service__item">Восстановление цвета замши</li>
+                                            <li class="service__item">Дополнительная химчистка</li>
+                                            <li class="service__item">Удаление катышков</li>
+                                            <li class="service__item">Стирка шнурков</li>
+                                            <li class="service__item">Чистка стелек</li>
+                                            <li class="service__item">Расчесывание и покрытие</li>
+                                            <li class="service__item">Химчистка внутреней части</li>
+                                            <li class="service__item">Дезодарация обуви</li>
+                                            <li class="service__item">Восстановление формы</li>
+                                    </ul>
+                                    <a href="" class="button service__button">Заказать</a>
+                                    <span class="service__price">4520 руб.</span>
+                                    <img src="/cleanback/img/sneaker4.png" alt="Sneaker BG" class="service__bg">
+                                    <div class="service__mobile">
+                                        <img src="/cleanback/img/4.png" alt="sneaker" class="service__sneaker">
+                                        <img src="/cleanback/svg/red.svg" alt="figure" class="service__figure">
+                                    </div>
+                                </div>
+                                <div class="form">
+                                    <div class="form__body">
+                                        <div class="form__header">
+                                            <h2 class="form__title">Оформление заказа</h2>
+                                            <a class="form__close-card"><span></span></a>
+                                        </div>
+                                        <form class="form__form" action="#">
+                                            <div class="form__content">
+                                                <div class="form__col">
+                                                    <div class="form__block">
+                                                        <h4 class="form__subtitle">Вид чистки</h4>
+                                                        <select name="cleaning_type" class="form__input">
+                                                            <option value="classic">Классическая чистка</option>
+                                                            <option value="classic">Классическая чистка</option>
+                                                            <option value="classic">Классическая чистка</option>
+                                                            <option value="classic">Классическая чистка</option>
+                                                            <option value="classic">Классическая чистка</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="form__block">
+                                                        <h4 class="form__subtitle">Дополнительные опции</h4>
+                                                        <div class="form__labels">
+                                                            <label class="form__label"><input name="option" type="checkbox"><span class="form__check"></span> Подклейка мысов</label>
+                                                            <label class="form__label"><input name="option" type="checkbox"><span class="form__check"></span> Водоотталкивающая пропитка</label>
+                                                            <label class="form__label"><input name="option" type="checkbox"><span class="form__check"></span> Подклейка мысов</label>
+                                                            <label class="form__label"><input name="option" type="checkbox"><span class="form__check"></span> Подклейка мысов</label>
+                                                            <label class="form__label"><input name="option" type="checkbox"><span class="form__check"></span> Водоотталкивающая пропитка</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form__col">
+                                                    <div class="form__block">
+                                                        <h4 class="form__subtitle">Данные</h4>
+                                                        <input class="form__input" name="name" placeholder="Имя" type="text">
+                                                        <input class="form__input" name="telephone" placeholder="Телефон" type="tel">
+                                                        <input class="form__input" name="adress" placeholder="Адресс" type="text">
+                                                        <input class="form__input" name="promo" placeholder="Промокод" type="text">
+                                                    </div>
+                                                </div>
+                                                <div class="form__col jssb">
+                                                    <div class="form__block">
+                                                        <h4 class="form__subtitle">Количество пар</h4>
+                                                        <input class="form__input" value="1" placeholder="1" type="number">
+                                                    </div>
+                                                    <div class="form__order">
+                                                        <div class="form__total">
+                                                            <span>Итоговая цена:</span>
+                                                            <span class="form__price">4520 руб.</span>
+                                                        </div>
+                                                        <a href="#" class="button form__button">Оформить заказ</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="service__wrap">
+                                <div class="service__content">
+                                    <h4 class="service__title">Реставрация обуви</h4>
+                                    <div class="service__features">
+                                        <span class="service__feature">Сетка</span>
+                                        <span class="service__feature">Замша</span>
+                                        <span class="service__feature">Кожа</span>
+                                    </div>
+                                    <ul class="service__list">
+                                            <li class="service__item">Покраска обуви и ее отдельных частей</li>
+                                            <li class="service__item">Восстановление испортившихся элементов</li>
+                                            <li class="service__item">Прочие работы по рестоврации</li>
+                                    </ul>
+                                    <a href="" class="button service__button">Заказать</a>
+                                    <span class="service__price">4520 руб.</span>
+                                    <img src="/cleanback/img/sneaker5.png" alt="Sneaker BG" class="service__bg">
+                                    <div class="service__mobile">
+                                        <img src="/cleanback/img/5.png" alt="sneaker" class="service__sneaker">
+                                        <img src="/cleanback/svg/black.svg" alt="figure" class="service__figure">
+                                    </div>
+                                </div>
+                                <div class="form">
+                                    <div class="form__body">
+                                        <div class="form__header">
+                                            <h2 class="form__title">Оформление заказа</h2>
+                                            <a class="form__close-card"><span></span></a>
+                                        </div>
+                                        <form class="form__form" action="#">
+                                            <div class="form__content">
+                                                <div class="form__col">
+                                                    <div class="form__block">
+                                                        <h4 class="form__subtitle">Вид чистки</h4>
+                                                        <select name="cleaning_type" class="form__input">
+                                                            <option value="classic">Классическая чистка</option>
+                                                            <option value="classic">Классическая чистка</option>
+                                                            <option value="classic">Классическая чистка</option>
+                                                            <option value="classic">Классическая чистка</option>
+                                                            <option value="classic">Классическая чистка</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="form__block">
+                                                        <h4 class="form__subtitle">Дополнительные опции</h4>
+                                                        <div class="form__labels">
+                                                            <label class="form__label"><input name="option" type="checkbox"><span class="form__check"></span> Подклейка мысов</label>
+                                                            <label class="form__label"><input name="option" type="checkbox"><span class="form__check"></span> Водоотталкивающая пропитка</label>
+                                                            <label class="form__label"><input name="option" type="checkbox"><span class="form__check"></span> Подклейка мысов</label>
+                                                            <label class="form__label"><input name="option" type="checkbox"><span class="form__check"></span> Подклейка мысов</label>
+                                                            <label class="form__label"><input name="option" type="checkbox"><span class="form__check"></span> Водоотталкивающая пропитка</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form__col">
+                                                    <div class="form__block">
+                                                        <h4 class="form__subtitle">Данные</h4>
+                                                        <input class="form__input" name="name" placeholder="Имя" type="text">
+                                                        <input class="form__input" name="telephone" placeholder="Телефон" type="tel">
+                                                        <input class="form__input" name="adress" placeholder="Адресс" type="text">
+                                                        <input class="form__input" name="promo" placeholder="Промокод" type="text">
+                                                    </div>
+                                                </div>
+                                                <div class="form__col jssb">
+                                                    <div class="form__block">
+                                                        <h4 class="form__subtitle">Количество пар</h4>
+                                                        <input class="form__input" value="1" placeholder="1" type="number">
+                                                    </div>
+                                                    <div class="form__order">
+                                                        <div class="form__total">
+                                                            <span>Итоговая цена:</span>
+                                                            <span class="form__price">4520 руб.</span>
+                                                        </div>
+                                                        <a href="#" class="button form__button">Оформить заказ</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="services__controll">
+                    <div class="services__pagination">
+                        <span class="service__current">1</span>
+                        <span class="service__divide"></span>
+                        <span class="service__total"></span>
+                    </div>
+                    <a href="#" class="services__prev"><i class="fa fa-arrow-up"></i></a>
+                    <a href="#" class="services__next"><i class="fa fa-arrow-down"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="portfolio">
+        <div class="container">
+            <h3 id="portfolio" class="section__title">Наши работы</h3>
+            <div class="portfolio__swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="portfolio__item">
+                            <img src="/cleanback/img/huarache.png" alt="portfolio item">
+                            <img src="/cleanback/img/huarache.png" alt="portfolio item">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="portfolio__item">
+                            <img src="/cleanback/img/huarache.png" alt="portfolio item">
+                            <img src="/cleanback/img/huarache.png" alt="portfolio item">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="portfolio__item">
+                            <img src="/cleanback/img/huarache.png" alt="portfolio item">
+                            <img src="/cleanback/img/huarache.png" alt="portfolio item">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="portfolio__item">
+                            <img src="/cleanback/img/huarache.png" alt="portfolio item">
+                            <img src="/cleanback/img/huarache.png" alt="portfolio item">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="portfolio__item">
+                            <img src="/cleanback/img/huarache.png" alt="portfolio item">
+                            <img src="/cleanback/img/huarache.png" alt="portfolio item">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="portfolio__item">
+                            <img src="/cleanback/img/huarache.png" alt="portfolio item">
+                            <img src="/cleanback/img/huarache.png" alt="portfolio item">
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-scrollbar"></div>
+            </div>
+        </div>
+    </section>
+    <section class="about">
+        <div class="about__content">
+            <div class="container">
+                <div class="about__body">
+                    <h3 id="about" class="section__title about__title">О нас</h3>
+                    <p class="about__text">Хорошая обувь – это не тот предмет гардероба, который меняют каждый сезон. И первый шаг к тому, чтобы сэкономить и сохранить качество обуви – это именно грамотный и своевременный уход.
+                        <br><br>
+                        Неправильная чистка – хуже, чем ее отсутствие! Ничто не портит обувь так, как самостоятельные попытки избавиться от следов реагентов и прочих сложных загрязнителей.
+                        <br><br>
+                        Мы создали методику полного ухода за обувью, взяв за образец эффективные западные технологии и адаптировав их к российским реалиям. Никто в России, кроме нас, пока не использует подобную методику. Мы гарантируем, что предоставляем лучший на рынке сервис.</p>
+                </div>
+            </div>  
+        </div>
+        <div class="about__bg">
+            <img src="/cleanback/img/about_bg.png" alt="About BG" class="about__img">
+        </div>
+    </section>
+    <footer id="footer" class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__logo">
+                    <img src="/cleanback/img/logo_w.png" alt="Logo">
+                    <p>ИП Казанский Д. И. ИНН 770205752693</p>
+                </div>
+                <div class="footer__links">
+                    <div class="footer__group">
+                        <span class="footer__title">Меню</span>
+                        <ul class="footer__list">
+                            <li><a href="#header" class="footer__link">Главная</a></li>
+                            <li><a href="#compare" class="footer__link">До и после</a></li>
+                            <li><a href="#services" class="footer__link">Услуги</a></li>
+                            <li><a href="#portfolio" class="footer__link">Наши работы</a></li>
+                            <li><a href="#about" class="footer__link">О нас</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__wrap">
+                        <div class="footer__group">
+                            <span class="footer__title">Адрес</span>
+                            <a href="#" class="footer__link">г. Москва,<br>Протопоповский пер., 8</a>
+                        </div>
+                        <div class="footer__group">
+                            <span class="footer__title">Телефон</span>
+                            <a href="tel:+74959757763" class="footer__link">8 (495) 975-77-63</a>
+                        </div>
+                    </div>
+                    <div class="footer__group">
+                        <span class="footer__title">Соцсети</span>
+                        <a href="#" class="footer__link">facebook</a>
+                        <a href="#" class="footer__link">instagram</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="/cleanback/js/jquery.event.move.js" type="text/javascript"></script>
+    <script src="/cleanback/js/jquery.twentytwenty.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="css/twentytwenty.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+    <script src="/cleanback/js/main.js"></script>
+</body>
+</html>
