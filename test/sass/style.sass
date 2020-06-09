@@ -222,6 +222,7 @@ body
     &__chat
         img
             height: 100%
+            width: 100%
             object-fit: contain
     &__sendbox
         background-image: linear-gradient(45deg, #009D8C, #00508C)
@@ -335,6 +336,8 @@ body
 @media screen and ( max-width: 1350px )
     .aside
         &-right
+            max-width: none
+            margin: 0px 10px
             display: none
 
 @media screen and ( max-width: 1315px )
@@ -381,7 +384,11 @@ body
             input
                 margin: 0
     .aside
-        display: none
+        &-left
+            max-width: none
+            margin: 0px 10px
+            display: none
+        
     
 @media screen and ( max-width: 530px )
     .header
