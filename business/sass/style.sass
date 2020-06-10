@@ -622,6 +622,86 @@ body
     &__text.hidden
         height: 1000px
 
+    &__contacts-data
+        width: 100%
+    &__contact-block
+        margin-top: 45px
+    &__contact-header
+        text-transform: uppercase
+        font-weight: 800
+        font-size: 21px
+        color: #3286D7
+        margin-bottom: 20px
+    &__tel, &__email
+        text-decoration: none
+        color: #000
+        position: relative
+        display: inline-block
+        &::after
+           content: ''
+           display: block
+           position: absolute
+           bottom: -2px
+           left: 0
+           width: 100%
+           transform: scaleX(0)
+           transform-origin: left
+           height: 1px
+           background-color: #000
+           transition: all ease-in .2s 0s
+        &:hover
+            &::after
+                transform: scaleX(1)
+    &__email
+        color: #3286D7
+        max-height: 1.2em
+        margin-right: 40px
+        &::after
+            background-color: #3286D7
+    &__disc
+        font-size: 14px
+        text-transform: uppercase
+        font-weight: 500
+        display: block
+        position: relative
+        &::before
+            content: '-'
+            display: inline
+            position: absolute
+            transform: translateX(-250%)
+    &__data
+        display: flex
+    &__data + &__data
+        margin-top: 30px
+    &__contact-sub.ttu + &__contact-sub.ttu
+        margin-top: 30px
+    &__contact-sub
+        font-size: 14px
+    &__contact-sub:nth-child(1)
+        margin-bottom: 30px
+    .ttu
+        text-transform: uppercase
+    &__contact-adress
+        max-width: 200px
+        margin-bottom: 30px
+    &__data-wrap
+        min-width: 135px
+        margin-right: 15px
+    &__contact_bold
+        font-size: 16px
+        font-weight: 800
+    &__contacts-wrap
+        width: 100%
+        justify-content: space-between
+        display: flex
+    &__contact-img
+        img
+            width: 100%
+            object-fit: contain
+            transform: translateY(-50px)
+    &__contact-map
+        margin-bottom: 30px
+
 
 .swiper-pagination, .swiper-pagination1, .swiper-pagination2
     text-align: center
