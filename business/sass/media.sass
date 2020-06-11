@@ -9,6 +9,8 @@ $main_grey: #E8E8E8
         .swiper-slide
             width: auto
     .main
+        &__content_padding
+            padding: 50px 0px 10px 40px
         &__sertificates
             .swiper-gallery
                 display: none
@@ -293,7 +295,12 @@ $main_grey: #E8E8E8
                     margin-right: 15px
         .nav
             padding-top: 0px
+    
     .main
+        &__access
+            padding: 20px 10px
+        &__content
+            padding: 0
         &__search
             padding: 0px 10px
             &_wrap
@@ -306,11 +313,20 @@ $main_grey: #E8E8E8
             padding: 10px 10px
         &__text
             padding: 15px 10px 20px
+        &__text_bg
+            padding: 20px 5px
         &__tender
             .main__text
                 padding: 15px 20px 
             &-bottom-footer
                 padding: 0px 20px 15px
+
+    .tenders
+        &__title
+            padding: 15px 10px
+        &__wrapper
+            flex-direction: column
+    
     .how
         &__title
             font-size: 18px
@@ -320,6 +336,7 @@ $main_grey: #E8E8E8
             padding: 0px 15px
         .main__text
             font-size: 16px
+    
     .footer
         margin-bottom: 5px
         &__content

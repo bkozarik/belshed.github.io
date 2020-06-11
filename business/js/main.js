@@ -156,41 +156,44 @@ $(document).ready(function(){
     }
 
     function mobileTeamGalery(){
-        if(window.innerWidth <= 1000 && slider_team_gallery.dataset.mobile == 'false'){
-            let team_swiper = new Swiper ('.main__team', {
-                grabCursor:true,
-                spaceBetween: 10,
-                slidesPerView: 1,
-                pagination: {
-                    el: '.team-gallery',
-                    type: 'bullets',
-                },
-                updateOnWindowResize: true,
-                breakpoints: {
-                    780: {
-                        slidesPerView: 3,
+        try{
+            if(window.innerWidth <= 1000 && slider_team_gallery.dataset.mobile == 'false'){
+                let team_swiper = new Swiper ('.main__team', {
+                    grabCursor:true,
+                    spaceBetween: 10,
+                    slidesPerView: 1,
+                    pagination: {
+                        el: '.team-gallery',
+                        type: 'bullets',
                     },
-                    470:{
-                        slidesPerView: 2,
+                    updateOnWindowResize: true,
+                    breakpoints: {
+                        780: {
+                            slidesPerView: 3,
+                        },
+                        470:{
+                            slidesPerView: 2,
+                        },
+                        300: {
+                            slidesPerView: 1,
+                            spaceBetween: 20,
+                        }
                     },
-                    300: {
-                        slidesPerView: 1,
-                        spaceBetween: 20,
-                    }
-                },
-            })
-
-            slider_team_gallery.dataset.mobile = 'true';
-        }
-
-        if(window.innerWidth > 1000){
-            slider_team_gallery.dataset.mobile = 'false';
-
-            if(slider_team_gallery.classList.contains('swiper-container-initialized')){
-                team_swiper.destroy();
-                delete team_swiper;
+                })
+    
+                slider_team_gallery.dataset.mobile = 'true';
+            }
+    
+            if(window.innerWidth > 1000){
+                slider_team_gallery.dataset.mobile = 'false';
+    
+                if(slider_team_gallery.classList.contains('swiper-container-initialized')){
+                    team_swiper.destroy();
+                    delete team_swiper;
+                }
             }
         }
+        catch(e){}
     }
     
     function windowResize(){
