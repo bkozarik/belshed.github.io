@@ -1,0 +1,433 @@
+$salad_green: #C7D700
+$salad_green_hover: #d4dd53
+$green: #6AC359
+$green_hover: #87cc79
+
+*
+    font-family: Lato, sans-serif
+
+
+*, *::before, *::after
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    transition: all .3s ease-out 0s
+
+body
+    min-height: 100vh
+    width: 100%
+    overflow-x: hidden
+    display: flex
+    flex-direction: column
+
+.container
+    margin: 0 auto
+    max-width: 1160px
+    padding: 0px 10px
+    height: 100%
+
+.button
+    text-decoration: none
+    display: inline-block
+    border: none
+    font-weight: bold
+    color: #000
+    &:hover
+        cursor: pointer
+
+.salad_btn
+    background-color: $salad_green
+    &:hover
+        background-color: $salad_green_hover
+
+.green_btn
+    background-color: $green
+    &:hover
+        background-color: $green_hover
+
+.small_btn
+    border-radius: 20px
+    padding: 7px 22px
+    font-size: 14px
+
+.big_btn
+    border-radius: 30px
+    padding: 20px 56px
+    font-size: 14px
+
+.green
+    color: $green
+
+.h550
+    height: 550px
+
+.header
+    flex-grow: 0
+    padding: 25px 0px
+    box-shadow: 0 0 3px rgba(0,0,0,0.4)
+    &__wrap
+        display: flex
+        align-items: center
+        justify-content: space-between
+    &__logo
+        &-text
+            font-size: 14px
+            text-align: center
+    &__text
+        max-width: 500px
+        p
+            font-weight: 600
+            font-size: 18px
+            text-align: center
+    &__contacts
+        display: flex
+        flex-direction: column
+        align-items: center
+        &.fixed
+            justify-content: space-between
+            flex-grow: 2
+            flex-direction: row
+            .header__contact
+                display: flex
+                align-items: center
+                height: 100%
+            .header__tel
+                margin: 0
+                height: auto
+    &__tel
+        height: 100%
+        display: inline-block
+        text-decoration: none
+        color: #000
+        font-weight: 800
+        font-size: 16px
+        margin-bottom: 5px
+        img
+            margin-right: 5px
+            vertical-align: middle
+
+.nav
+    flex-grow: 0
+    &__burger
+        display: none
+        height: 20px
+        width: 25px
+        position: relative
+        span
+            display: inline-block
+            height: 2px
+            width: 100%
+            top: 50%
+            left: 0
+            transform: translateY(-50%)
+            position: absolute
+            background-color: #000
+        &::after, &::before
+            content: ''
+            position: absolute
+            display: inline-block
+            transform-origin: left
+            height: 2px
+            width: 100%
+            left: 0
+            background-color: #000
+        &::before
+            top: 0
+        &::after
+            bottom: 0
+        &.active
+            span
+                opacity: 0
+                transform: scaleX(0)
+            &::before
+                transform: rotate(45deg) scaleX(0.8)
+            &::after
+                transform: rotate(-45deg) 
+
+    &.fixed
+        background-color: #fff
+        width: 100%
+        z-index: 5
+        position: fixed
+        top: 0
+        left: 0
+    &__wrap
+        display: flex
+        ul
+            display: flex
+            list-style-type: none
+            li
+                a
+                    text-decoration: none
+                    color: #000
+                    padding: 12px 20px
+                    display: inline-block
+                    font-size: 18px
+                    &:hover
+                        background-color: $salad_green
+
+.main
+    flex-grow: 1
+
+.banner
+    position: relative
+    overflow: hidden
+    .white
+        color: #fff
+        text-shadow: 0 0 4px rgba(0, 0, 0, .5s)
+    .black
+        color: #000
+        &::placeholder
+            color: #000
+    &__chevrons
+        position: absolute
+        top: -2px
+        height: 102%
+        left: 50%
+        transform: translateX(-50%)
+        width: 100%
+        z-index: -1
+    &__bg
+        position: absolute
+        z-index: -1
+        object-fit: contain
+        width: 100%
+        left: 0
+        top: 0
+        transform: translateY(-6%)
+    &__bg-beach
+        transform: translateY(-54%)
+    &__bg-pazzle
+        left: 50%
+        width: 80%
+        transform: translate(-50%, -25%)
+    &__padding
+        padding: 50px 0 60px
+    &__title
+        text-align: center
+        font-size: 48px
+        font-weight: 600
+        color: #fff
+        margin-bottom: 10px
+    &__header
+        display: flex
+        flex-direction: column
+        align-items: center
+        p
+            color: #fff
+            font-size: 24px
+            font-weight: 500
+            text-align: center
+            margin-bottom: 20px
+        img
+            margin-bottom: 25px
+    &__wrap
+        height: 100%
+        display: flex
+        flex-direction: column
+        justify-content: center
+
+.form
+    display: flex
+    justify-content: center
+    &__input + &__input
+        margin: 0px 30px
+    &__input
+        max-width: 262px
+        padding: 20px 38px
+        text-align: center
+        background-color: transparent
+        border: 2px solid #fff
+        font-size: 16px
+        font-weight: bold
+        color: #fff
+        border-radius: 30px
+        &::placeholder
+            color: #fff
+
+.section
+    padding: 42px 0px 60px
+    .black
+        color: #000
+        &::placeholder
+            color: #000
+    &__title-wrap
+        display: flex
+        justify-content: center
+    &__title
+        font-size: 30px
+        font-weight: 700
+        letter-spacing: 2px
+        text-align: center
+        position: relative
+        display: inline-block
+        &::after
+            content: ''
+            display: inline-block
+            height: 3px
+            width: 30%
+            position: absolute
+            left: 0
+            bottom: -10px
+            background-color: $salad_green
+    &__benefits
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        margin-top: 35px
+    &__benefit
+        display: flex
+        flex-direction: column
+        align-items: center
+        max-width: 260px
+        &-img
+            max-width: 50px
+            height: 43px
+            object-fit: contain
+        &-title
+            font-size: 16px
+            font-weight: 700
+            text-align: center
+            margin: 15px 0 7px
+        &-text
+            font-size: 14px
+            font-weight: 500
+            text-align: center
+    &__content
+        margin-top: 30px
+        &-img_wrap
+            margin-right: 25px
+            float: left
+            position: relative
+            transform: translateY(5px)
+            width: 360px
+            height: 235px
+            box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4)
+            border-radius: 5px
+            overflow: hidden
+            img
+                height: 100%
+                width: 100%
+                object-fit: cover
+        p + p
+            margin-top: 1.1em
+    &__grid
+        margin-top: 40px
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        grid-gap: 1em
+    &__story
+        height: 100px
+        width: 100%
+        background-color: $green
+    &__swiper
+        margin-top: 30px
+        overflow: hidden
+        position: relative
+        .swiper-slide
+            max-height: 220px
+            img
+                width: 100%
+                height: auto
+                object-fit: contain
+    &__prev, &__next
+        height: 44px
+        width: 44px
+        border-radius: 50%
+        background-color: $salad_green
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        z-index: 2
+    &__prev:hover, &__next:hover
+        cursor: pointer
+    &__prev:active, &__next:active
+        height: 55px
+        width: 55px
+    &__prev::before, &__next::before
+        content: ''
+        height: 22px
+        width: 10px
+        border-radius: 50%
+        position: absolute
+        background-size: contain
+        background-repeat: no-repeat
+        background-position: center
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+    &__prev::after, &__next::after
+        content: ''
+        height: 55px
+        width: 55px
+        border-radius: 50%
+        position: absolute
+        background-size: contain
+        background-repeat: no-repeat
+        background-position: center
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        background-image: url(../img/circle.png)
+    &__prev
+        left: 10px
+        &::before   
+            background-image: url(../img/arrow-l.png)
+    &__next
+        right: 10px
+        &::before
+            background-image: url(../img/arrow-r.png)
+
+.footer
+    flex-grow: 0
+    padding: 25px 0px 40px  
+    background-color: #000
+    color: #fff
+    &__wrap
+        display: flex
+        justify-content: space-between
+    &__col
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        justify-content: center
+    &__title
+        font-size: 16px
+    &__author
+        font-size: 14px
+        margin-top: 20px
+    &__link
+        font-size: 14px
+        text-decoration: none
+        color: #fff
+        position: relative
+        display: inline-block
+        margin-top: 2px
+        &::after
+            position: absolute
+            height: 1px
+            content: ''
+            width: 100%
+            background-color: #fff
+            left: 0
+            bottom: -5px
+            transform-origin: left
+            transform: scaleX(0)
+    &__link
+        &:hover
+            &::after
+                transform: scaleX(1)
+    h5.footer__title
+        text-transform: uppercase
+        font-size: 13px
+        letter-spacing: 2px
+    &__social
+        width: 100%
+        margin-top: 10px
+        ul
+            list-style: none
+            display: flex
+            justify-content: space-around
+            a
+                text-decoration: none
+                color: #fff
