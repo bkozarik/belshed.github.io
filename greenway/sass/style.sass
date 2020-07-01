@@ -172,6 +172,8 @@ body
 .banner
     position: relative
     overflow: hidden
+    &.bg
+        background-color: rgba(0, 0, 0, 0.4)
     .white
         color: #fff
         text-shadow: 0 0 4px rgba(0, 0, 0, .5s)
@@ -199,7 +201,6 @@ body
         transform: translateY(-54%)
     &__bg-pazzle
         left: 50%
-        width: 80%
         transform: translate(-50%, -25%)
     &__padding
         padding: 50px 0 60px
@@ -319,9 +320,12 @@ body
         grid-template-columns: repeat(3, 1fr)
         grid-gap: 1em
     &__story
-        height: 100px
         width: 100%
         background-color: $green
+        height: 205px
+        iframe
+            height: 100%
+            width: 100%
     &__swiper
         margin-top: 30px
         overflow: hidden
