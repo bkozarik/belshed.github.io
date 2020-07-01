@@ -1,0 +1,556 @@
+$violet: #7731AD
+$yellow: #FFB800
+$yellow-bg: #FFCC36
+$light-yellow: #FECE02
+$acid-yellow: #FFDF19
+$brown: #955200
+$grey-brown: #674F4D
+    
+@media screen and ( min-width: 570px )
+    .header__burger, .header__mobile-tel
+        display: none
+  
+@media screen and ( min-width: 720px )
+    .section
+        &__elements
+            .swiper-wrapper
+                flex-wrap: wrap
+                justify-content: space-around
+            .swiper-slide
+                width: auto
+        &__benefit-next, &__benefit-prev
+            display: none
+
+        &__cards,
+            .swiper-wrapper
+                display: grid
+                grid-gap: 2em 1em
+                grid-template-columns: repeat(3, 1fr)
+
+        &__programs
+            .swiper-wrapper
+                display: grid
+                grid-gap: 2em 1em
+                grid-template-columns: repeat(2, 1fr)
+
+        &__actions
+            .swiper-wrapper
+                flex-wrap: wrap
+                justify-content: space-around
+            .swiper-slide
+                width: auto
+
+@media screen and ( min-width: 900px )
+    .section
+        &__programs
+            .swiper-wrapper
+                display: grid
+                grid-gap: 2em 1em
+                grid-template-columns: repeat(3, 1fr)
+
+@media screen and ( min-width: 1130px )
+    .section__benefit-next, .section__benefit-prev, 
+    .section__program-next, .section__program-prev,
+    .section__show-prev, .section__show-next
+        display: none
+    
+    .section
+        &.order
+            background-size: cover
+        &__actions
+            .swiper-wrapper
+                display: flex
+                justify-content: space-between
+                margin-top: 20px
+            .swiper-slide
+                width: auto
+        &__cards, &__programs
+            .swiper-wrapper
+                margin-top: 60px
+                display: grid
+                grid-gap: 2em 1em
+                padding: 0px 30px
+        &__cards
+            .swiper-wrapper
+                grid-template-columns: repeat(4, 1fr)
+        &__programs
+            .swiper-wrapper
+                grid-template-columns: repeat(3, 1fr)
+        &__elements
+            .swiper-wrapper
+                display: flex
+                flex-wrap: wrap
+                justify-content: space-between
+            .swiper-slide
+                width: auto
+
+@media screen and ( max-width: 1130px )
+    .header
+        padding-top: 20px
+        &__burger
+            display: inline-block
+        &__menu
+            display: none
+
+    .banner
+        margin: 45px
+
+    .section
+        &.order
+            background-size: cover
+        &__elements
+            justify-content: space-around
+            position: relative
+        &__personage
+            margin-top: 40px
+            max-width: 350px
+            &-photo
+                margin: 25px
+            &-circle-outer
+                box-shadow: 0 0 0px 15px #7F1FA09e, 0 0 0px 30px #6D14959e
+        &__cards
+            grid-template-columns: repeat(2, 1fr)
+        &__card
+            &-price
+                display: block
+        &__online
+            margin-left: 30px
+            img
+                z-index: -1
+                margin-top: 30px
+        &__actions
+            overflow: hidden
+        &__action
+            padding-left: 20px
+            p
+                max-width: 170px
+            &-circle
+                margin-right: 23px
+        &__programs
+            display: block
+            &-btn-wrap
+                margin-top: 70px
+
+    .questions
+        &__form
+            &-col
+                flex: 1 1 50%
+                p
+                    margin-left: 10px
+
+    .about
+        &__bg
+            left: -60%
+        &__content
+            margin-top: 40px
+            p
+                flex: 1 0 70%
+        &__btn
+            position: relative
+            left: 50%
+            transform: translateX(-50%)
+
+    .review
+        &__bg
+            transform: translate(-60%, -3%)
+
+    .services
+        &__wrap
+            flex-wrap: wrap
+            align-items: flex-start
+            ul
+                margin: 0px 10px
+            ul:nth-child(1)
+                order: 1
+            ul:nth-child(3)
+                order: 2
+            ul:nth-child(2)
+                order: 3
+    
+    .footer
+        &__wrap
+            justify-content: space-around
+        &__policy
+            text-align: center
+
+    .find
+        padding-top: 50px
+        &__bg
+            left: 100%
+            transform: translateX(-50%)
+        &__title
+            font-size: 30px
+        &__img
+            margin-top: 30px
+        &__wrap
+            flex-direction: column-reverse
+
+@media screen and ( max-width: 1010px )
+    .cards__anyway
+        grid-template-columns: repeat(3, 1fr) !important
+
+@media screen and ( max-width: 900px )
+    .articles
+        &__wrap
+            grid-template-columns: repeat(2, 1fr)
+
+    .article
+        &_small
+            max-width: none
+        &_big-r
+            grid-column-start: 3
+            grid-column-end: 1
+        &_big-l
+            grid-column-start: 1
+            grid-column-end: 3
+
+    .tabs
+        &__nav
+            &-link
+                font-size: 14px
+    
+    .tab
+        &__item
+            padding: 20px 20px 20px 10px
+            &-top
+                flex-direction: column
+            &-title
+                width: 100%
+                text-align: center
+     
+@media screen and ( max-width: 760px )
+    .cards__anyway
+        grid-template-columns: repeat(2, 1fr) !important
+
+@media screen and ( max-width: 720px )
+    .section
+        &__benefit
+            flex-direction: column
+            &-prev, &-next
+                position: absolute
+                top: 50%
+                transform: translateY(-50%)
+            &-prev
+                left: 0
+            &-next
+                right: 0
+        &__cards
+            position: relative
+        &__show
+            &-next, &-prev
+                position: absolute
+                top: 50%
+                transform: translateY(-50%)
+            &-prev
+                left: 0
+            &-next
+                right: 0
+
+    .packet
+        .find__bg1, .find__bg2
+            display: none
+
+    .tabs
+        margin-top: 20px
+        &__wrap
+            border-radius: 15px
+        &__nav
+            border: none
+            margin-bottom: 20px
+            ul
+                flex-direction: column
+                align-items: center
+                li
+                    width: 80%
+            &-link
+                font-size: 16px
+                padding: 20px 0px
+                border-radius: 30px
+                &.active
+                    box-shadow: 0 3px 0 0 $brown
+
+    .tab
+        &__item + &__item
+            border: none
+        &__item
+            flex-direction: column
+            padding: 0
+            &-mobile
+                width: 100%
+                display: flex
+                flex-direction: column
+                align-items: center
+                padding: 20px
+                box-sizing: border-box
+            &-top
+                display: block
+                width: 100%
+            &:last-child
+                .tab__item-title
+                    border-radius: 0 0 15px 15px
+            &:first-child
+                .tab__item-title
+                    border-radius: 15px 15px 0 0
+            &-title
+                padding: 1em 0px
+                color: #fff
+                background: rgb(215,99,231)
+                background: linear-gradient(180deg, rgba(215,99,231,1) 0%, rgba(134,56,182,1) 100%)
+                &.active
+                    background: rgb(255,225,0)
+                    background: linear-gradient(180deg, rgba(255,225,0,1) 0%, rgba(255,191,0,1) 100%)
+                    color: $grey-brown
+            &-list
+                border-top: 1px solid $acid-yellow
+                display: flex
+                padding-top: 10px
+                flex-direction: column
+                text-align: center
+                width: 100% 
+                list-style-position: inside
+        &__personage
+            float: left
+
+    .blog
+        .container
+            padding: 0
+        &__wrap
+            margin-top: 0
+        &__img
+            max-width: none
+        p
+            padding: 0px 20px
+
+@media screen and ( max-width: 570px )
+    .personages
+        &__offer
+            display: none
+    .articles
+        &__wrap
+            grid-template-columns: repeat(1, 1fr)
+
+    .article
+        &_big-r, &_big-l
+            grid-column-start: 2
+            grid-column-end: 1
+
+    .button
+        img
+            display: none
+    .big-next, .big-prev
+        display: none
+    .big-slider__gradient
+        position: absolute
+        width: 100%
+        height: 250px
+        background: rgb(255,255,255)
+        background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%)
+
+    .actions__bg
+        display: none
+
+    .main, .big-slider
+        margin-top: 200px
+
+    .article
+        &__content
+            padding: 10px 15px 15px
+
+    .show-slider
+        display: flex
+
+    .section
+        &.order
+            padding-bottom: 70px
+        padding-top: 20px
+        &_purple
+            padding-top: 70px
+        &__title
+            margin-top: 50px
+            h2
+                font-size: 28px
+                margin: 0
+            .section__arrow
+                display: none
+
+        &__animate 
+            display: none
+        
+        &__cards
+            position: relative
+            grid-template-columns: repeat(1, 1fr)
+        &__card
+            max-width: 265px
+            margin: 0 auto
+            img
+                height: 100%
+                object-fit: cover
+        &__programs
+            padding: 0px 5px
+            display: flex
+            position: relative
+        &__online
+            margin-left: 0px
+            img
+                position: relative
+                width: 200%
+                height: auto
+                left: 0%
+                margin-top: 0
+            &-header
+                margin-bottom: 0
+                h2
+                    font-size: 32px
+            &-button
+                flex-direction: column
+        &__show
+            &-next, &-prev
+                position: absolute
+                top: 50%
+                transform: translateY(-50%)
+            &-prev
+                left: 0
+            &-next
+                right: 0
+        &__program
+            padding: 20px 10px 0px
+            ul
+                padding: 0px 10px
+            img
+                width: 100%
+            &-title
+                margin: 0px 50px
+            &-next, &-prev
+                top: 5px
+            &-next
+                right: 0
+        &__personage
+            max-width: 300px
+            &-name
+                font-size: 29px
+            &-mask
+                padding-top: 40px
+                width: 300px
+                height: 260px
+            &-circle
+                width: 300px
+                height: 260px
+            &-outer
+                width: 300px
+                height: 260px
+        &__actions
+            padding: 30px 0px 20px
+        &__action
+            flex-direction: column
+
+    .header
+        &__contacts
+            display: none
+
+    .banner
+        margin: 0
+        &__wrap
+            padding: 0
+            h1
+                font-size: 28px
+
+    .review
+        &__bg
+                display: none
+        &__slide
+            grid-template-columns: repeat(1, 1fr)
+        &__photos
+            grid-template-columns: repeat(2, 1fr)
+
+    .animators
+        &-bg
+            display: none
+
+    .questions
+        &__animate
+            display: none
+        h4
+            text-align: center
+        &__tel
+            font-size: 32px
+        &__round-links
+            display: flex
+            align-items: center
+            a
+                display: inline-block
+        &__form
+            flex-direction: column
+            &-col + &-col
+                margin-left: 0
+                margin-top: 20px
+            &-col
+                .button
+                    position: relative
+                    left: 50%
+                    transform: translateX(-50%)
+        &__links
+            flex-direction: column-reverse
+        
+    .cards__anyway
+        grid-template-columns: repeat(1, 1fr) !important
+        padding: 0 !important
+
+    .dlc
+        &__animate
+            display: none
+
+    .pa
+        img
+            display: none
+
+    .about
+        padding-bottom: 0
+        &>img
+            display: none
+        &__content
+            margin: 0
+            flex-direction: column
+
+    .services
+        padding-top: 0
+        &__bg
+            height: 100%
+        .section__title
+            margin-top: 80px
+        .section__titles
+            margin-right: auto
+            & h2 
+                text-align-last: left
+        &__wrap
+            padding: 0 0 0 10px
+            ul + ul
+                margin-top: 1em
+
+    .nomt
+        margin-top: 0px
+
+    .footer
+        &__contacts
+            margin-top: 30px
+            flex-direction: column
+        &__recall
+            margin-left: 0px
+            margin-top: 20px
+            img
+                display: inline-block !important
+
+@media screen and ( max-width: 470px )
+    .questions
+        &__tel
+            font-size: 30px
+
+    .tabs
+        &__wrap
+            padding: 5px
+
+    .tab
+        &__item
+            &-list
+                padding-left: 20px
+            &-mobile
+                padding: 10px

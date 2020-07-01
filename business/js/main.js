@@ -196,6 +196,14 @@ $(document).ready(function(){
         catch(e){}
     }
     
+    function fileUpload(){
+		let fileName = $('.form__file-input')[0].files[0].name;
+		$('.form__path').html(fileName);
+		$('.form__path').attr('title', fileName);
+	}
+
+	$('.form__file-input').on('change', fileUpload);
+
     function windowResize(){
         if(window.innerWidth <= 1160){
             let aside_enter = $('.aside__enter');

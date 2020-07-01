@@ -1270,7 +1270,6 @@ button, button:hover, button:focus, button:active
 }
 .form__find {
 	display: inline-block;
-	float: right;
 	width: auto !important;
 	height: auto !important;
 	border: none !important;

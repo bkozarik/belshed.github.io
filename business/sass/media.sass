@@ -235,6 +235,7 @@ $main_grey: #E8E8E8
 @media screen and ( max-width:  860px)
     .purchise-header.nomap
         margin: 0
+    
     .main
         &__header
             font-size: 18px
@@ -266,6 +267,42 @@ $main_grey: #E8E8E8
                     &::after
                         top: 3px
 
+    .form
+        padding: 20px 0px
+        .post
+            max-width: none
+
+    .post + .post
+        margin-top: 15px
+
+    .form__title
+        margin: 0
+
+    .footer-info__we 
+        margin-right: 0
+        margin-top: 25px
+
+    .form__adress 
+        flex-direction: column
+
+    .form__adress input 
+        margin: 0 0 0 20px !important
+        max-width: 230px
+
+    .form__adress label
+        display: flex
+        justify-content: space-between
+        width: 100% !important
+
+    .offer__submit 
+        right: 15px
+
+    .form__input 
+        max-width: 315px
+
+    textarea 
+        height: 80px
+	
 @media screen and ( max-width:  630px)
     .purchise-header
         h1
@@ -370,6 +407,19 @@ $main_grey: #E8E8E8
                     font-size: 14px
                     margin-bottom: 10px
 
+    .form
+        &__field
+            flex-direction: column
+            label
+                margin-top: 10px
+        &__title
+            margin-bottom: 10px
+            text-align: left
+        &__input
+            max-width: none
+        &__submit
+            justify-content: center
+
 @media screen and ( max-width:  400px)
     .purchise-header
         h1
@@ -415,3 +465,7 @@ $main_grey: #E8E8E8
             &-wrapper
                 img
                     margin-left: 0
+    .form__adress
+        .post
+            input
+                max-width: 210px
