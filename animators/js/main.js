@@ -8,6 +8,8 @@ $(document).ready(function(event){
     let programsSwiperQ = document.querySelector('.section__programs');
     let cardSwiper;
     let cardSwiperQ = document.querySelector('.show-slider');
+    
+    $('.popup').fadeOut(0);    
 
     let dlcSwiper = new Swiper ('.dlc__swiper', {
         direction: 'horizontal',
@@ -47,13 +49,14 @@ $(document).ready(function(event){
 
     let actionsSwiper = new Swiper ('.section__slider', {
         direction: 'horizontal',
-        loop: true,
         spaceBetween: 20,
         speed:800,
         navigation: {
+            nextEl: '.section__action-next',
+            prevEl: '.section__action-prev',
         },
         breakpoints: {
-            780: {
+            1135: {
                 slidesPerView: 2,
             },
             320: {
@@ -65,11 +68,11 @@ $(document).ready(function(event){
     let bigSwiper = new Swiper ('.big-slider', {
         direction: 'horizontal',
         loop: true,
-        spaceBetween: 10,
-        speed:800,
+        spaceBetween: 0,
+        speed: 800,
         simulateTouch: false,
         autoplay: {
-            delay: 3000,
+            delay: 5000,
         },
         navigation: {
             nextEl: '.big-next',
@@ -77,6 +80,93 @@ $(document).ready(function(event){
         },
         slidesPerView: 1,
     });
+
+    function hideElems(){
+        if(window.innerWidth <= 570){
+            $('.section__personage').each(function(event){
+                if($(this).index() > 5){
+                    $(this).css('display', 'none');
+                }
+            });
+
+            $('.section__gift').each(function(event){
+                if($(this).index() > 2){
+                    $(this).css('display', 'none');
+                }
+            });
+
+            $('.section__card').each(function(event){
+                if($(this).index() > 5){
+                    $(this).css('display', 'none');
+                }
+            });
+            
+            $('.questions__form').each(function(event){
+                let agreement,
+                    submitBtn;
+                agreement = $($(this).find('.questions__form-col').get(0)).find('p');
+                submitBtn = $($(this).find('.questions__form-col').get(1)).find('input.button');
+                submitBtn.before(agreement);                
+            });
+        }
+        else{
+            $('.section__personage').each(function(event){
+                if($(this).index() > 5){
+                    $(this).removeAttr('style');
+                }
+            });
+
+            $('.section__gift').each(function(event){
+                if($(this).index() > 2){
+                    $(this).removeAttr('style');
+                }
+            });
+
+            $('.section__card').each(function(event){
+                if($(this).index() > 5){
+                    $(this).removeAttr('style');
+                }
+            });
+
+            $('.questions__form').each(function(event){
+                let agreement,
+                    lastInput;
+                agreement = $($(this).find('.questions__form-col').get(1)).find('p');
+                lastInput = $($(this).find('.questions__form-col').get(0)).find('input').last();
+                lastInput.after(agreement);                
+            });
+        }
+    }
+
+    function scrollHandler() {
+        if($(window).outerWidth() < 1130){
+            if($(document).scrollTop() >= $('.header').outerHeight()){
+                $('.header').toggleClass('fixed', true);
+                $('.head__wrap').toggleClass('fixed', true);
+                $('.header__logo-text').css('display', 'none');
+            }
+            else {
+                $('.header').toggleClass('fixed', false);
+                $('.head__wrap').toggleClass('fixed', false);
+                $('.header__logo-text').removeAttr('style');
+            }
+        }
+        else{
+            $('.header').toggleClass('fixed', false);
+            $('.head__wrap').toggleClass('fixed', false);
+            $('.header__logo-text').removeAttr('style');
+        }
+    }
+
+    function checkMenu(){
+        if(window.innerWidth <= 1130){
+            $('.header__mobile').append($('.header__nav'));
+        }
+        else{
+            $('.header__menu').prepend($('.header__nav'));
+            $('.header__mobile').toggleClass('active', false);
+        }
+    }
 
     function mobileOrderSwiper(){
         try{
@@ -194,13 +284,16 @@ $(document).ready(function(event){
             if(window.innerWidth <= 720 && cardSwiperQ.dataset.mobile == 'false'){
                 cardSwiper = new Swiper ('.show-slider', {
                     grabCursor:true,
-                    spaceBetween: 20,
+                    spaceBetween: 30,
                     updateOnWindowResize: true,
                     navigation: {
                         nextEl: '.section__show-next',
                         prevEl: '.section__show-prev',
                     },
                     breakpoints: {
+                        1100: {
+                            slidesPerView: 4,
+                        },
                         480: {
                             slidesPerView: 2,
                         },
@@ -210,7 +303,7 @@ $(document).ready(function(event){
                     },
                 })
     
-                cardSwiperQ.dataset.mobile = 'true';
+               cardSwiperQ.dataset.mobile = 'true';
             }
     
             if(window.innerWidth > 720){
@@ -276,10 +369,18 @@ $(document).ready(function(event){
         }
     }
 
-    $('.header__burger').on('click', function(event){
-        $(this).toggleClass('active');
-    });
-
+    function checkFormats(){
+        try {
+            if((window.innerWidth <= 1010) && (window.innerWidth > 570)){
+                $('.format__programs').append($('.format__item.active .format__item-head'));
+            }
+            else{
+                $('.format__item.active').prepend($('.format__programs .format__item-head'));
+            }
+        }
+        catch(e){}
+    }
+    
     function checkBurger(){
         if(window.innerWidth <= 1130 && window.innerWidth > 570){
             $('.header__logo').append($('.header__burger'));
@@ -290,6 +391,80 @@ $(document).ready(function(event){
             $('.header__burger, .header__logo').toggleClass('inLogo', false);
         }
     }
+
+    function checkInner(){
+        try {
+            if(window.innerWidth <= 1010){
+                $('.item__description').prepend($('form.item__form'));
+            }
+            else{
+                $('.item__content').append($('form.item__form'));
+            }
+
+            if(window.innerWidth <= 660){
+                $('.item__head').prepend($('.item__name'));
+            }
+            else{
+                $('.item__content').prepend($('.item__name'));
+            }
+        }
+        catch(e){}
+    }
+
+    $('.header__burger').on('click', function(event){
+        event.preventDefault();
+
+        $(this).toggleClass('active');
+        $('.header__mobile').toggleClass('active');
+    });
+
+    $('.popup__close').on('click', function(event){
+        event.preventDefault();
+
+        $('.popup__wrap, .popup__thx, .popup__violet, .popup__yellow').fadeOut('ease-in');
+    });
+
+    $('.open__thx').on('click', function(event){
+        event.preventDefault();
+
+        $('.popup__wrap').fadeIn(function(event){
+            $(this).css('display', 'flex');
+            $(this).css('opacity', '1');
+        });
+
+        $('.popup__thx').fadeIn(function(event){
+            $(this).css('display', 'flex');
+            $(this).css('opacity', '1');
+        });
+    });
+
+    $('.open__yellow').on('click', function(event){
+        event.preventDefault();
+
+        $('.popup__wrap').fadeIn(function(event){
+            $(this).css('display', 'flex');
+            $(this).css('opacity', '1');
+        });
+
+        $('.popup__yellow').fadeIn(function(event){
+            $(this).css('display', 'flex');
+            $(this).css('opacity', '1');
+        });
+    });
+
+    $('.open__violet').on('click', function(event){
+        event.preventDefault();
+
+        $('.popup__wrap').fadeIn(function(event){
+            $(this).css('display', 'flex');
+            $(this).css('opacity', '1');
+        });
+
+        $('.popup__violet').fadeIn(function(event){
+            $(this).css('display', 'flex');
+            $(this).css('opacity', '1');
+        });
+    });
 
     $('.tabs__nav-link').on('click', function(event){
         event.preventDefault();
@@ -322,13 +497,23 @@ $(document).ready(function(event){
         $(this).toggleClass('active');
         
         let tabIndex = $(this).data('tab') - 1;
+
         $('.format__item').each(function(event){
             if($(this).index() == tabIndex){
                 $(this).toggleClass('active');
             }
         });
-    });
+        
+        $($('.format__item').get($('.format__programs .format__item-head').data('tab') - 1)).prepend($('.format__programs .format__item-head'));
+        
+        if((window.innerWidth <= 1010) && (window.innerWidth > 570)){
+            $('.format__programs').append($('.format__item.active .format__item-head'));
+        }
+        else{
+            $('.format__item.active').prepend($('.format__programs .format__item-head'));
+        }
 
+    });
 
     $('.tabs__nav-link').each(function(event){
         if($(this).hasClass('active')){
@@ -352,18 +537,32 @@ $(document).ready(function(event){
         }
     });
 
+    $(document).scroll(function () {
+        scrollHandler();
+    });
+
     $(window).resize(function(event){
-        mobileOrderSwiper();
         mobileBenefitsSwiper();
         mobileProgramsSwiper();
+        mobileOrderSwiper();
+        scrollHandler();
+        checkFormats();
         cardsSwiper();
         checkBurger();
+        checkInner();
+        hideElems();
+        checkMenu();
         checkTabs();
     });
     
-    mobileOrderSwiper();
     mobileBenefitsSwiper();
     mobileProgramsSwiper();
+    mobileOrderSwiper();
+    scrollHandler();
+    checkFormats();
     cardsSwiper();
+    checkInner();
+    hideElems();
+    checkMenu();
     checkTabs();
 }); 

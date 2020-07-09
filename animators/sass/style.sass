@@ -41,40 +41,71 @@ body
     text-align: center
     text-transform: uppercase
     appearance: none
+    background-size: contain
+    background-position: center
+    background-repeat: no-repeat
+    background-color: transparent
     img
         vertical-align: middle
+    &:hover
+        cursor: pointer
+    &::before
+        z-index: -1
+        display: inline-block
+        position: absolute
+        top: 0
+        left: 0
+        content: ''
+        height: 100%
+        width: 100%
 
 .small-btn
     border-radius: 30px
     padding: 13px 25px
     font-size: 15px
     font-weight: 700
+    &::before
+        border-radius: 30px
 
 .big-btn
     border-radius: 40px
     padding: 12px 34px
     font-size: 22px
     font-weight: 700
+    &::before
+        border-radius: 40px
 
 .yellow-btn
-    background: rgb(255,225,0)
-    background: linear-gradient(180deg, rgba(255,225,0,1) 0%, rgba(255,191,0,1) 100%)
+    background-image: url(../img/yellow-btn-bg.png)
     box-shadow: 0 2px 0 #EA962D, 0 0 7px rgba(0, 0, 0, .3)
     color: $brown
     text-shadow: 3px 0 0 $light-yellow
     border: 1px solid $light-yellow
+    &::before
+        background: linear-gradient(180deg, rgba(255,225,0,1) 0%, rgba(255,191,0,1) 100%)
+    &:hover
+        
 
 .violet-btn
-    background: rgb(215,99,231)
-    background: linear-gradient(180deg, rgba(215,99,231,1) 0%, rgba(134,56,182,1) 100%)
+    background-image: url(../img/violet-btn-bg.png)
     color: #fff
     text-shadow: 0 3px 0 $violet
     border: 1px solid $violet
+    &::before
+        background: linear-gradient(180deg, rgba(215,99,231,1) 0%, rgba(134,56,182,1) 100%)
+    &:hover
+        
 
 .transp-btn
     background-color: transparent
     color: #fff
-    border: 2px dashed #BEBEBE
+    border: 1px dashed #BEBEBE
+    padding: 10px 34px
+    &:hover
+        border: 1px solid #BEBEBE
+        
+.noscroll
+    overflow: hidden
 
 .white
     color: #fff
@@ -96,6 +127,130 @@ body
 
 //
 // 
+// Попапы
+// 
+//
+
+.popup
+    display: flex
+    opacity: 0
+    &__garland, &__hat, &__crown, &__confeti, &__like, &__baloons
+        position: absolute
+        z-index: 0
+    &__garland
+        left: 0
+        top: 0
+    &__crown
+        left: 60px
+        top: 20px
+    &__confeti
+        left: 0
+        top: 50%
+    &__hat
+        right: 40px
+        bottom: 40px
+    &__like
+        top: 0
+        left: 50%
+        transform: translate(-50%, -20%)
+        width: 100%
+        max-width: 120px
+    &__thx, &__violet, &__yellow
+        overflow: hidden
+        position: relative
+        flex-direction: column
+        align-items: center
+        background-color: #4B1568
+        padding: 120px 10px 80px 10px
+        border-radius: 20px
+        width: 100%
+        max-width: 750px
+        box-shadow: 0px 5px 0 0 $yellow
+        background-image: url(../img/popup__violet-bg.png)
+        background-repeat: no-repeat
+        background-size: cover
+    &__yellow
+        background-image: url(../img/popup__yellow-bg.png)
+        background-repeat: no-repeat
+        background-size: cover
+        box-shadow: 0px 5px 0 0 $violet
+        .popup__baloons
+            bottom: 0
+            left: 110px
+        .popup__close
+            background-color: $violet
+            color: #fff
+        .popup__crown
+            top: -30px
+            left: 60px
+            
+    &__disclaimer
+        margin-bottom: 20px
+    &__violet, &__yellow
+        overflow: visible
+        .popup__hat
+            right: auto
+            left: -50px
+            bottom: 120px
+        .popup__confeti
+            right: 0
+            left: auto
+    &__form
+        display: flex
+        flex-direction: column
+        align-items: center
+    &__input:first-child
+        margin-top: 25px
+    &__disclaimer
+        text-align: center
+        max-width: 390px
+    &__input
+        padding: 10px 20px
+        margin-bottom: 22px
+        width: 100%
+        max-width: 390px
+        border-radius: 30px
+        font-size: 18px
+    &__textarea
+        border-radius: 10px
+    &__close, &__regrats, .section__title, .button, &__form
+        z-index: 2
+    &__close
+        position: absolute
+        right: 4px
+        top: 4px
+        display: inline-block
+        text-decoration: none
+        width: 30px
+        height: 30px
+        border-radius: 50%
+        background-color: $yellow
+        color: $violet
+        .fa
+            position: relative
+            left: 50%
+            top: 50%
+            transform: translate(-43%, -60%)
+
+    &__regrats
+        color: #fff
+        font-size: 20px
+        margin: 60px 0px
+        text-align: center
+    &__wrap
+        padding: 10px
+        align-items: center
+        justify-content: center
+        position: fixed
+        width: 100%
+        height: 100vh
+        left: 0
+        top: 0
+        background-color: rgba(0, 0, 0, 0.7)
+        z-index: 200
+
+//
+// 
 // Главная страница
 // 
 //
@@ -103,6 +258,22 @@ body
 .header
     flex-grow: 0
     padding-top: 50px
+    padding-bottom: 20px
+    &.fixed
+        position: fixed
+        top: 0
+        left: 0
+        width: 100%
+        z-index: 5
+        background-color: #fff !important
+    &.header_index
+        background-color: transparent
+    &_index
+        position: absolute
+        z-index: 2
+        left: 0
+        top: 0
+        width: 100%
     &__burger
         display: none
         height: 40px
@@ -145,7 +316,33 @@ body
                 top: -5px
             &::after
                 top: 5px
-                
+    &__mobile.active
+        transform: translateX(0)
+    &__mobile
+        transform: translateX(-100%)
+        position: fixed
+        height: 100vh
+        width: 200px
+        z-index: 100
+        top: 150px
+        left: 0
+        background-color: #732F82
+        overflow-y: auto
+        .header__nav
+            ul
+                display: flex
+                flex-direction: column
+                padding: 20px 0px
+            li
+                display: inline-block
+                padding: 15px 35px
+            li.active
+                background: rgb(255,225,0)
+                background: linear-gradient(180deg, rgba(255,225,0,1) 0%, rgba(255,191,0,1) 100%)
+                .header__link
+                    color: $brown
+            .header__link
+                color: #fff
     &__wrap
         display: flex
         justify-content: space-between
@@ -280,41 +477,49 @@ body
     margin-top: 0 !important
 
 .head__wrap
+    &.fixed
+        padding-top: 70px
     position: relative
 
 .big-slider
-    position: absolute
-    top: 0
-    left: 0
-    height: 100%
-    width: 100%
     z-index: 0
     overflow: hidden
+    position: relative
+    min-height: 200px
     .swiper-wrapper
         z-index: -2
         position: relative
     .slide
         overflow: hidden
+        position: relative
         height: 100%
         width: 100%
-        img
+        &>img
             object-fit: cover
             width: 100%
             height: 100%
+            position: absolute
+        &__wrap
+            position: relative
+            width: 100%
+            padding-top: 20%
+            left: 50%
+            transform: translate(-50%)
 
 .big-prev, .big-next
+    position: absolute
     top: 50%
     transform: translateY(-50%)
     z-index: 4
 
 .big-prev
-    transform: translateX(-110%)
+    transform: translateX(110%)
     &:focus
         outline: none
         box-shadow: 0 0 3px 3px rgba(255, 255, 255, .6)
 
 .big-next
-    transform: translateX(110%)
+    transform: translateX(-110%)
     right: 0
     &:focus
         outline: none
@@ -328,6 +533,15 @@ body
         transform: translateX(-50%)
 
 .section
+    &__action
+        &-prev, &-next
+            top: 50%
+        &-prev
+            left: 0
+            transform: translate(-10%, -50%)
+        &-next
+            right: 0
+            transform: translate(10%, -50%)
     background-size: cover
     background-repeat: no-repeat
     &__wrap
@@ -368,13 +582,55 @@ body
         top: 18%
     &__slider
         overflow: hidden
+        margin-top: 30px
+        position: relative
+        padding: 0px 20px
+        .swiper-slide
+            height: 100%
+        &-prev, &-next
+            top: 50% 
+            box-shadow: 0 0 0 9px #fff !important
+        &-prev
+            left: 0
+            transform: translate(-10%, -50%)
+        &-next
+            right: 0
+            transform: translate(10%, -50%)
     &__slide
-        max-width: 555px
-        padding: 30px 70px 20px
+        padding: 30px 50px 20px
         border-radius: 10px
+        min-height: 380px
         overflow: hidden
         background-repeat: no-repeat
         background-size: cover
+        .questions__form-col
+            flex: 1 1 50%
+            p
+                margin-left: 0
+        &-counter
+            margin-bottom: 15px
+        &-count + &-count
+            margin-left: 5px
+        &-count
+            display: inline-block
+            position: relative
+            font-weight: 700
+            padding: 0px 12px
+            background-color: #FFD100
+            border-radius: 15px
+            font-size: 49px
+            color: $brown
+            box-shadow: 0 0 0px 5px #5E1E8F, inset 0 -1px 0px 1px #EA962D
+            margin: 5px
+        &-count:nth-child(2), &-count:nth-child(4)
+            margin-right: 30px
+            &::after
+                content: ':'
+                color: #fff
+                position: absolute
+                right: -25px
+                transform: translateY(-5px)
+                
         &-title
             font-size: 42px
             text-transform: uppercase
@@ -384,19 +640,31 @@ body
             font-weight: 700
             display: inline-block
         &-offer
+            display: flex
+            align-items: center
             p
                 font-size: 32px
                 display: inline-block
                 max-width: 290px
+                margin-left: 10px
         &-sub
             text-align: center
+        &-form
+            margin-top: 15px
+            display: flex
+            flex-direction: column
+            align-items: center
+        &_gold
+            background-color: $yellow-bg
+            background-image: url(../img/action_gold.png)
     &_yellow
         background-color: $yellow-bg
+        z-index: 2
         &::before
             width: 100%
             position: absolute
             top: 0
-            transform: translateY(-50%)
+            transform: translateY(-60%)
             content: ''
             display: block
             height: 40px
@@ -412,13 +680,13 @@ body
                 top: 0
                 transform: translateY(-120%)
                 background-image: url('../img/crown.png')
-
+    &__titles
+        position: relative
     &__title
         display: flex
         justify-content: center
         position: relative
         h2
-            margin: 0px 35px
             font-size: 32px
             font-weight: 700
             text-align: center
@@ -427,9 +695,25 @@ body
             font-size: 19px 
             text-align: center
         &-bg
-            position: relative
-            bottom: 30px
-        
+            position: absolute
+    &__arrow
+        &-l
+            right: 0
+            top: 50%
+            transform: translate(20%, -50%)
+        &-r
+            left: 0
+            top: 50%
+            transform: translate(-20%, -50%)
+    &__drop
+        top: 50%
+        &-r
+            right: 0
+            transform: translate(150%, -50%)
+        &-l
+            left: 0
+            transform: translate(-150%, -50%)
+    
     &__elements
         display: flex
         flex-wrap: wrap
@@ -441,18 +725,34 @@ body
         display: flex
         align-items: center
         &-wrap
-            height: 120px
-            width: 120px
             border-radius: 50%
             background-color: $acid-yellow
             position: relative
-            z-index: 3
-            border: 15px solid #FFD725
             margin-right: 20px
+        &-photo
+            margin: 20px
+        &-circle
+            width: 110px
+            height: 110px
+            background-color: $acid-yellow
+            border-radius: 50%
+            position: relative
+            &-outer
+                width: 110px
+                height: 110px
+                background-color: $acid-yellow
+                border-radius: 50%
+                box-shadow: 0 0 0px 10px #FFDB1E9e, 0 0 0px 20px #FFD22Bff
             img
-                position: relative
-                top: -17px
-                left: 3px
+                position: absolute
+                top: 50%
+                left: 50%
+                transform: translate(-50%, -40%)
+        &-mask
+            width: 110px
+            height: 110px
+            border-radius: 0 0 50% 50%
+            overflow: hidden
         a
             text-decoration: none
             position: relative
@@ -474,6 +774,7 @@ body
         background-image: url('../img/purple-bg.png')
         background-size: cover
         background-position-x: -5px
+        padding-top: 100px
     &__personage
         display: flex
         flex-direction: column
@@ -665,10 +966,7 @@ body
                 color: #fff
                 margin-bottom: 20px
     &__programs
-        display: grid
-        grid-template-columns: repeat(3, 1fr)
-        grid-gap: 2em 1.2em
-        margin-top: 80px
+        margin: 80px 0px
         &-btn-wrap
             margin: 60px 0px
             display: flex
@@ -855,11 +1153,24 @@ body
             font-size: 28px
             font-weight: 700
             color: $yellow-bg
+    .show-slider
+        overflow: hidden
+        padding: 0px 20px 40px 20px
+        margin-top: 30px
+        position: relative
+    &__show-prev, &__show-next
+        top: 50%
+        position: absolute
+        transform: translateY(-100%)
+    &__show-prev
+        left: 0
+    &__show-next
+        right: 0
     .show__bg
         position: absolute
         left: 50%
-        bottom: 0
-        transform: translate(-50%, -80%)
+        bottom: 20%
+        transform: translateX(-50%)
         z-index: -1
     .dlc
         &__animate
@@ -900,6 +1211,8 @@ body
             width: 90%
             &-wrap
                 position: relative
+                display: flex
+                justify-content: center
         &__item
             &-wrap
                 display: flex
@@ -920,6 +1233,8 @@ body
             position: absolute
             top: 30%
             transform: translateY(-30%)
+        &__prev
+            left: 0
         &__next
             right: 0
 
@@ -1254,8 +1569,7 @@ body
 
 .breadcrumbs
     background-color: #4E1569
-    margin-top: 20px
-    z-index: 2
+    z-index: 4
     &__nav
         display: flex
         justify-content: center
@@ -1301,6 +1615,20 @@ body
     position: relative
     background-color: #4B1568
     padding-bottom: 20px
+    padding-top: 30px
+    &__bg
+        &-t
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            z-index: 0
+        &-b
+            position: absolute
+            bottom: 0
+            left: 0
+            width: 100%
+            z-index: 0
     &__bg
         position: absolute
         bottom: 40px
@@ -1316,6 +1644,7 @@ body
         margin-top: -60px
         z-index: 2
     &__wrap
+        margin-top: 50px
         z-index: 2
         display: grid
         grid-auto-flow: dense
@@ -1392,6 +1721,13 @@ body
         z-index: 2
     &__tel
         color: white
+    .questions__contacts
+        margin-top: 30px
+    .questions__item1
+        left: 85%
+        top: 100px
+    .questions__item3
+        left: 65%
 
 //
 // 
@@ -1401,8 +1737,10 @@ body
 
 .personages
     background-color: #4B1568
-    padding-bottom: 50px
+    padding: 80px 0px
     position: relative
+    &_nobgc
+        background-color: transparent
     &__bg-t
         position: absolute
         top: 0
@@ -1501,6 +1839,10 @@ body
         display: flex
         flex-direction: column
         align-items: center
+
+.animators
+    &__personages
+        padding-top: 100px
 
 //
 // 
@@ -1633,6 +1975,31 @@ body
 
 .blog
     position: relative
+    padding-top: 40px
+    &__bg
+        position: absolute
+        width: 100%
+        object-fit: cover
+    &__item1, &__item2, &__item3, &__item4
+        position: absolute
+        max-width: 80px
+    &__item1
+        left: -40px
+        top: 300px
+    &__item2
+        right: -40px
+        top: 800px
+    &__item4
+        bottom: -30px
+        right: 65px
+    &__item5
+        left: 130px
+        bottom: 1900px
+        position: absolute
+    &__item6
+        right: 130px
+        bottom: 400px
+        position: absolute
     &__img
         width: 100%
         max-width: 70%
@@ -1652,11 +2019,12 @@ body
         box-shadow: 0 4px 0 0 $yellow
     &__body
         padding: 40px 0px
-        &>img
-            object-fit: contain
-            width: 100%
-            max-width: 450px
-            height: auto
+        position: relative
+    &__photo
+        object-fit: contain
+        width: 100%
+        max-width: 450px
+        height: auto
     p
         font-size: 18px
         line-height: 23px
@@ -1675,15 +2043,17 @@ body
 //
 
 .online
-    padding: 80px 0px
+    padding: 100px 0px 180px 0px
     &__wrap
         position: relative
         img
             position: absolute
             left: 40%
             top: -20%
+            z-index: -3
 
 .examples
+    padding-bottom: 60px
     &__videos
         display: grid
         grid-template-columns: repeat(2, 1fr)
@@ -1713,16 +2083,41 @@ body
     margin: -30px 0px
     z-index: 2
     padding-top: 60px
+    .section__title
+        margin: 50px 0px
     &__bg
         position: absolute
         top: 0
         left: 0
         object-fit: cover
         height: 100%
+    &__item_1
+        top: 210px
+        left: 270px
+    &__item_2
+        left: 1430px
+        top: 575px
+    &__item_3
+        left: 675px
+        top: 440px
+    &__item_4
+        left: 420px
+        top: 500px
+    &__item_5
+        left: 1500px
+        top: 160px
+    &__item_6
+        left: 1460px
+        top: 300px
+    &__item_7
+        left: 1580px
+        top: 400px
     &__wrap
         display: flex
         align-items: start
+        justify-content: space-between
         padding-bottom: 50px
+        flex-wrap: wrap
     &__programs
         background-color: #AE33DF
         padding: 15px 50px 35px
@@ -1747,6 +2142,7 @@ body
             color: #ffffff
             font-size: 18px
             font-weight: 700
+            text-transform: uppercase
             img
                 vertical-align: middle
                 margin-right: 5px
@@ -1754,10 +2150,12 @@ body
                 color: $yellow
     &__items
         flex-grow: 2
+        margin-left: 50px
     &__item
         display: none
         flex-direction: column
         align-items: center
+        max-width: 625px
         z-index: -2
         opacity: 0
         &.active
@@ -1769,7 +2167,6 @@ body
             padding: 12px 50px 12px 25px
             background-color: #fff
             border-radius: 10px
-            max-width: 625px
             display: flex
             justify-content: space-between
         &-keys
@@ -1808,15 +2205,16 @@ body
             display: flex
             flex-direction: column
             flex-wrap: wrap
+            align-items: center
             max-height: 200px
             width: 100%
             li
                 list-style-image: url(../img/white-tip.png)
                 margin-bottom: 1em
                 color: $grey-brown
+                margin-left: 10px
                 font-size: 18px
                 font-weight: 700
-                margin-left: 60px
         &-form
             display: flex
             flex-direction: column
@@ -1837,3 +2235,264 @@ body
             padding: 10px 22px
             border-radius: 30px
 
+//
+// 
+// Страница галереи
+// 
+//
+
+.gallery
+    padding-top: 40px
+    position: relative
+    background-color: #4B1568
+    &__bg
+        position: absolute
+        left: 0
+        top: 0
+        height: 100%
+        object-fit: cover
+    &__container
+        margin: 0 auto
+        padding: 0px 10px
+        max-width: 1550px
+        position: relative
+        z-index: 2
+        .section
+            &__title
+                margin-bottom: 40px
+            &__arrow
+                &-r
+                    transform: translate(-120%, -50%)
+                &-l
+                    transform: translate(120%, -50%)
+        .review__photos
+            transform: translateY(30px)
+
+.lookatus
+    background-image: url(../img/videos-bg.png)
+    background-repeat: no-repeat
+    background-position: 250px -70px 
+    margin-top: 40px
+    padding-bottom: 80px
+
+//
+//
+// Страница праздника
+//
+//
+
+.op5
+    opacity: .7
+
+.celebration
+    position: relative
+    overflow: hidden
+    padding-top: 20%
+    padding-bottom: 0px
+    &__bg-item-like
+        position: absolute
+        z-index: 1
+    &__bg-item
+        position: absolute
+        max-width: 50px
+        z-index: 1
+    &__item_1
+        bottom: -30px
+        left: 300px
+    &__item_2
+        left: 1380px
+        top: 575px
+    &__item_3
+        left: 1275px
+        top: 640px
+    &__item_4
+        left: 440px
+        top: 630px
+    &__item_5
+        left: 1330px
+        top: 270px
+    &__item_6
+        left: 480px
+        top: 360px
+    &__item_7
+        left: 1280px
+        top: 400px
+    .section__title
+        margin-top: 100px
+    &__preview
+        position: absolute
+        top: -120px
+        width: 100%
+        z-index: -1
+    &__body
+        padding: 40px 0px 90px
+        position: relative
+        // background-image: url(../img/celebration-bg.png)
+        background-repeat: no-repeat
+        background-position: 0 20px
+        background-size: cover
+        z-index: 2
+        &-bg
+            position: absolute
+            height: 103%
+            left: 0
+            top: 0  
+    &__item
+        max-width: 625px
+        margin: 0 auto
+    .animators-bg
+        z-index: 1
+        bottom: 0
+        top: auto
+        transform: translateX(-50%)
+        
+//
+//
+// Страница аниатора
+//
+//
+
+.item
+    padding: 60px 0px
+    background-color: #4B1568
+    background-image: url(../img/item-bg.png)
+    background-repeat: no-repeat
+    background-position: 0 0
+    &__head
+        display: flex
+        width: 100%
+        margin-bottom: 40px
+    &__content
+        margin-left: 65px
+    &__photo
+        background-color: #fff
+        border-radius: 15px
+        box-shadow: 0 0 0px 6px #A03FACE2, 0 0 0px 12px #6B2280E2
+        overflow: hidden
+        flex: 1 0 30%
+        max-width: 375px
+        padding: 10px 20px
+        margin: 12px
+        img
+            position: relative
+            top: 50%
+            left: 50%
+            width: 100%
+            transform: translate(-50%, -50%)
+            object-fit: contain
+    &__name
+        font-size: 46px
+        font-weight: 700
+        color: #fff
+    &__cyan
+        color: #D2FCFF
+        font-size: 24px
+        font-weight: 700
+    &__list
+        color: #fff
+        font-size: 18px
+        margin: 30px 0px 10px
+        list-style-type: none
+        margin-left: 10px
+        li
+            position: relative
+            &::before
+                content: ''
+                position: absolute
+                top: -2px
+                left: -10px
+                display: inline-block
+                height: 3px
+                width: 3px
+                border-radius: 50%
+                background-color: $acid-yellow
+    &__price
+        display: flex
+        &-item + &-item
+            margin-left: 60px
+        &-item
+            display: flex
+            align-items: center
+        &-price
+            text-transform: uppercase
+            font-weight: 700
+            color: #FFBF00
+            font-size: 46px
+            margin-left: 20px
+    &__form
+        margin-top: 25px
+        &-inputs
+            display: flex
+            margin-top: 10px
+        &-input + &-input
+            margin: 0px 10px
+        &-input
+            font-size: 18px
+            padding: 12px 22px
+            border-radius: 30px
+            box-shadow: 0 0 0 1px $yellow-bg
+        input:focus
+            outline: none
+            box-shadow: 0 0 4px 2px $yellow-bg
+    &__description
+        font-size: 18px
+        color: #fff
+        p + p
+            margin-top: 1em
+    .gallery__container
+        .section__title
+            margin-top: 80px
+    .review__photos
+        transform: none
+        margin-top: 10px
+
+.reviews
+    background-image: url(../img/reviews-bg2.png)
+    background-repeat: no-repeat
+    background-position-y: -30px
+    background-position-x: 60px
+    padding: 70px 0px
+    &__content
+        margin-top: 60px
+        display: flex
+        width: 100%
+        justify-content: space-between
+        align-items: center
+    &__review
+        img
+            width: 100%
+            height: auto
+            object-fit: cover
+    &__video
+        margin-top: 50px
+        position: relative
+        &-bg
+            position: absolute
+        &-placeholder
+            position: relative
+            left: 50%
+            transform: translateX(-50%)
+            max-width: 550px
+            width: 100%
+        
+//
+//
+// Страница 404
+//
+//
+
+.notfound
+    &__wrap
+        display: flex
+        align-items: center
+    &__item + &__item
+        transform: translateX(-30%)
+    &__item
+        img
+            width: 100%
+            height: auto
+            object-fit: contain
+        p
+            transform: translateX(20%)
+            margin-top: -10px
+            font-size: 28px

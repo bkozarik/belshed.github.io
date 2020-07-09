@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style.css">
@@ -83,6 +83,7 @@
             </div>
         </section>
         <section class="online personages">
+            <img src="img/all-top.png"class="personages__bg-t" alt="Фон">
             <div class="container">
                 <div class="online__wrap">
                     <div class="section__online-header">
@@ -90,7 +91,7 @@
                         <h2 class="yellow">Аниматор онлайн</h2>
                         <h4 class="white">и вот у вас уже есть свободное время</h4>
                     </div>
-                    <img src="img/online-bg.png" alt="Фоновое изображение">
+                    <img src="img/online2-bg.png" alt="Фоновое изображение">
                     <div class="section__online-button">
                         <span class="yellow">от 1500р</span>
                         <a href="#" class="button yellow-btn small-btn">подробее</a>
@@ -98,15 +99,22 @@
                 </div>
             </div>
         </section>
-        <section class="format">
+        <section class="format"> 
             <img src="img/format-bg.png" alt="Фон" class="format__bg">
+            <img src="img/d8.png" alt="Иконка" class="celebration__bg-item format__item_1">
+            <img src="img/hat.png" alt="Иконка" class="celebration__bg-item format__item_2">
+            <img src="img/d4.png" alt="Иконка" class="celebration__bg-item format__item_3">
+            <img src="img/d3.png" alt="Иконка" class="celebration__bg-item format__item_4">
+            <img src="img/d2.png" alt="Иконка" class="celebration__bg-item format__item_5">
+            <img src="img/d6.png" alt="Иконка" class="celebration__bg-item format__item_6">
+            <img src="img/d7.png" alt="Иконка" class="celebration__bg-item format__item_7">
             <div class="container">
                 <div class="section__title">
-                    <img class="section__title-bg section__arrow" src="img/arrow2-r.png" alt="Фон">
+                    <img class="section__title-bg section__arrow section__arrow-r" src="img/arrow2-r.png" alt="Фон">
                     <div class="section__titles dark">
                         <h2>Выберите формат поздравления</h2>
                     </div>
-                    <img class="section__title-bg section__arrow" src="img/arrow2-l.png" alt="Фон">
+                    <img class="section__title-bg section__arrow section__arrow-l" src="img/arrow2-l.png" alt="Фон">
                 </div>
                 <div class="format__wrap">
                     <div class="format__programs">
@@ -120,9 +128,9 @@
                     </div>
                     <div class="format__items">
                         <div class="format__item">
-                            <div class="format__item-head">
+                            <div class="format__item-head" data-tab="1">
                                 <ul class="format__item-keys">
-                                    <li>Количество участников: неограниченно</li>
+                                    <li>Количество участников: 1</li>
                                     <li>Количество участников: неограниченно</li>
                                     <li>Количество участников: неограниченно</li>
                                 </ul>
@@ -156,9 +164,9 @@
                             </form>
                         </div>
                         <div class="format__item">
-                            <div class="format__item-head">
+                            <div class="format__item-head" data-tab="2">
                                 <ul class="format__item-keys">
-                                    <li>Количество участников: неограниченно</li>
+                                    <li>Количество участников: 2</li>
                                     <li>Количество участников: неограниченно</li>
                                     <li>Количество участников: неограниченно</li>
                                 </ul>
@@ -192,9 +200,9 @@
                             </form>
                         </div>
                         <div class="format__item">
-                            <div class="format__item-head">
+                            <div class="format__item-head" data-tab="3">
                                 <ul class="format__item-keys">
-                                    <li>Количество участников: неограниченно</li>
+                                    <li>Количество участников: 3</li>
                                     <li>Количество участников: неограниченно</li>
                                     <li>Количество участников: неограниченно</li>
                                 </ul>
@@ -228,9 +236,9 @@
                             </form>
                         </div>
                         <div class="format__item">
-                            <div class="format__item-head">
+                            <div class="format__item-head" data-tab="4">
                                 <ul class="format__item-keys">
-                                    <li>Количество участников: неограниченно</li>
+                                    <li>Количество участников: 4</li>
                                     <li>Количество участников: неограниченно</li>
                                     <li>Количество участников: неограниченно</li>
                                 </ul>
@@ -305,11 +313,11 @@
                     <a href="#" class="button transp-btn big-btn violet">Сотреть все фото</a>
                 </div>
                 <div class="section__title">
-                    <img class="section__title-bg section__drop" src="img/drop-l.png" alt="Фон">
                     <div class="section__titles violet">
+                        <img class="section__title-bg section__drop section__drop-l" src="img/drop-l.png" alt="Фон">
                         <h2>Видеопоздравления</h2>
+                        <img class="section__title-bg section__drop section__drop-r" src="img/drop-r.png" alt="Фон">
                     </div>
-                    <img class="section__title-bg section__drop" src="img/drop-r.png" alt="Фон">
                 </div>
                 <div class="examples__wrap">
                     <img src="img/videos-bg.png" alt="Фон" class="examples__bg">
@@ -334,12 +342,17 @@
                 </div>
             </div>
         </section>
-        <section class="personages">
-            <img src="img/all-top.png"class="personages__bg-t" alt="Фон">
-            <img src="img/all-b.png"class="personages__bg-b" alt="Фон">
-            <img class="find__bg1" src="img/confeti1.png" alt="Фон">
-            <img class="find__bg2" src="img/confeti1.png" alt="Фон">
+        <section class="personages personages_nobgc">
+            <img src="img/gifts-bg.png"class="personages__bg-t" alt="Фон">
             <div class="container">
+                <div class="section__title">
+                    <img class="section__title-bg section__arrow section__arrow-r" src="img/arrow-r.png" alt="Фон">
+                    <div class="section__titles white">
+                        <h2>Выберите персонажа</h2>
+                        <p>которого любит ваш ребенок</p>
+                    </div>
+                    <img class="section__title-bg section__arrow section__arrow-l" src="img/arrow-l.png" alt="Фон">
+                </div>
                 <div class="section__elements nomt">
                     <div class="section__personage">
                         <img class="section__personage-stars" src="img/stars-bg.png" alt="звездочки">
@@ -469,6 +482,9 @@
                         <a href="#" class="button yellow-btn small-btn">подробее</a>
                     </div>
                 </div>
+                <div class="section__programs-btn-wrap mb">
+                    <a href="#" class="button transp-btn big-btn yellow"><img src="img/mask-ico.png" alt="Иконка маски"> Смотреть всех персонажей</a>
+                </div>
             </div>
         </section>
         <section class="section questions articles_overflow">
@@ -478,11 +494,11 @@
             <div class="container">
                 <div class="section__wrap">
                     <div class="section__title">
-                        <img class="section__title-bg section__arrow" src="img/arrow-r.png" alt="Фон">
+                        <img class="section__title-bg section__arrow section__arrow-r" src="img/arrow-r.png" alt="Фон">
                         <div class="section__titles dark">
                             <h2>Хочу такой же праздник!</h2>
                         </div>
-                        <img class="section__title-bg section__arrow" src="img/arrow-l.png" alt="Фон">
+                        <img class="section__title-bg section__arrow section__arrow-l" src="img/arrow-l.png" alt="Фон">
                     </div>
                     <div class="questions__contacts">
                         <h4 class="dark">Звоните, расскажем по телефону:</h4>
@@ -505,14 +521,15 @@
                         <form class="questions__form">
                             <div class="questions__form-col">
                                 <input placeholder="Имя" type="text" name="name">
+                                <input placeholder="Телефон" type="tel" name="tel">
                                 <p>
                                     Нажимая кнопку, вы соглашаетесь
                                     на передачу и хранение персональных данных
                                 </p>
                             </div>
                             <div class="questions__form-col">
-                                <input placeholder="Телефон" type="tel" name="tel">
-                                <input class="button small-btn violet-btn" type="submit" value="Заказать праздник">
+                                <textarea rows="4" placeholder="Расскажите о ваших пожеланиях" type="textarea" name="message"></textarea>
+                                <input class="button small-btn violet-btn open__thx" type="submit" value="Заказать праздник">
                             </div>
                         </form>
                     </div>
@@ -528,11 +545,11 @@
             <div class="container">
                 <div class="section__wrap">
                     <div class="section__title">
-                        <img class="section__title-bg section__drop" src="img/drop-l.png" alt="Фон">
                         <div class="section__titles violet">
+                            <img class="section__title-bg section__drop section__drop-l" src="img/drop-l.png" alt="Фон">
                             <h2>Детские аниматоры в москве и московской области</h2>
+                            <img class="section__title-bg section__drop section__drop-r" src="img/drop-r.png" alt="Фон">
                         </div>
-                        <img class="section__title-bg section__drop" src="img/drop-r.png" alt="Фон">
                     </div>
                     <div class="about__content">
                         <p>Рады приветствовать на нашем сайте агентства детских праздников WОW Party. Мы организуем проведение детских праздников в Москве и Московской области. Многолетний опыт сфере развлекательных услуг за плечами, арсенал готовых авторских программ, красивые костюмы и команда профессионалов, которые любят свою работу. Закажите у нас праздник, и с полной уверенностью можете не волноваться о качественной организации праздника. Мы все сделаем за вас, а если вам не понравится праздник, мы вернем вам деньги! Более 200 персонажей с уникальными сценариями и качественный реквизит на ваш выбор! Также у нас есть готовые пакеты с наиболее популярными услугами среди клиентов, по привлекательной цене. Выберите тот, который вам больше подходит или мы вас проконсультируем и поможем определиться. </p>
@@ -618,7 +635,7 @@
             </div>
         </div>
     </footer>
-    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="js/main.js"></script>
 </body>

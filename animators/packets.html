@@ -87,12 +87,12 @@
             <img class="find__bg1" src="img/confeti1.png" alt="Фон">
             <img class="find__bg2" src="img/confeti1.png" alt="Фон">
             <div class="container">
-                <div class="section__title packet__title">
-                    <img class="section__title-bg section__drop" src="img/drop-l.png" alt="Фон">
+                <div class="section__title">
                     <div class="section__titles white">
+                        <img class="section__title-bg section__drop section__drop-l" src="img/drop-l.png" alt="Фон">
                         <h2>Пакеты услуг</h2>
+                        <img class="section__title-bg section__drop section__drop-r" src="img/drop-r.png" alt="Фон">
                     </div>
-                    <img class="section__title-bg section__drop" src="img/drop-r.png" alt="Фон">
                 </div>
                 <div class="tabs">
                     <nav class="tabs__nav">
@@ -392,11 +392,11 @@
             <div class="container">
                 <div class="section__wrap">
                     <div class="section__title">
-                        <img class="section__title-bg section__arrow" src="img/arrow-r.png" alt="Фон">
+                        <img class="section__title-bg section__arrow section__arrow-r" src="img/arrow-r.png" alt="Фон">
                         <div class="section__titles dark">
                             <h2>Хочу такой же праздник!</h2>
                         </div>
-                        <img class="section__title-bg section__arrow" src="img/arrow-l.png" alt="Фон">
+                        <img class="section__title-bg section__arrow section__arrow-l" src="img/arrow-l.png" alt="Фон">
                     </div>
                     <div class="questions__contacts">
                         <h4 class="dark">Звоните, расскажем по телефону:</h4>
@@ -419,14 +419,15 @@
                         <form class="questions__form">
                             <div class="questions__form-col">
                                 <input placeholder="Имя" type="text" name="name">
+                                <input placeholder="Телефон" type="tel" name="tel">
                                 <p>
                                     Нажимая кнопку, вы соглашаетесь
                                     на передачу и хранение персональных данных
                                 </p>
                             </div>
                             <div class="questions__form-col">
-                                <input placeholder="Телефон" type="tel" name="tel">
-                                <input class="button small-btn violet-btn" type="submit" value="Заказать праздник">
+                                <textarea rows="4" placeholder="Расскажите о ваших пожеланиях" type="textarea" name="message"></textarea>
+                                <input class="button small-btn violet-btn open__thx" type="submit" value="Заказать праздник">
                             </div>
                         </form>
                     </div>
@@ -440,13 +441,12 @@
             <img src="img/star.png" alt="Иконка" class="about__animate about__item3">
             <img src="img/dna.png" alt="Иконка" class="about__animate about__item4">
             <div class="container">
-                <div class="section__wrap">
                     <div class="section__title">
-                        <img class="section__title-bg section__drop" src="img/drop-l.png" alt="Фон">
                         <div class="section__titles violet">
+                            <img class="section__title-bg section__drop section__drop-l" src="img/drop-l.png" alt="Фон">
                             <h2>Детские аниматоры в москве и московской области</h2>
+                            <img class="section__title-bg section__drop section__drop-r" src="img/drop-r.png" alt="Фон">
                         </div>
-                        <img class="section__title-bg section__drop" src="img/drop-r.png" alt="Фон">
                     </div>
                     <div class="about__content">
                         <p>Рады приветствовать на нашем сайте агентства детских праздников WОW Party. Мы организуем проведение детских праздников в Москве и Московской области. Многолетний опыт сфере развлекательных услуг за плечами, арсенал готовых авторских программ, красивые костюмы и команда профессионалов, которые любят свою работу. Закажите у нас праздник, и с полной уверенностью можете не волноваться о качественной организации праздника. Мы все сделаем за вас, а если вам не понравится праздник, мы вернем вам деньги! Более 200 персонажей с уникальными сценариями и качественный реквизит на ваш выбор! Также у нас есть готовые пакеты с наиболее популярными услугами среди клиентов, по привлекательной цене. Выберите тот, который вам больше подходит или мы вас проконсультируем и поможем определиться. </p>
@@ -532,7 +532,7 @@
             </div>
         </div>
     </footer>
-    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="js/main.js"></script>
 </body>

@@ -51,7 +51,8 @@ $grey-brown: #674F4D
 @media screen and ( min-width: 1130px )
     .section__benefit-next, .section__benefit-prev, 
     .section__program-next, .section__program-prev,
-    .section__show-prev, .section__show-next
+    .section__show-next, .section__show-prev,
+    .section__action-next, .section__action-prev,
         display: none
     
     .section
@@ -70,9 +71,14 @@ $grey-brown: #674F4D
                 display: grid
                 grid-gap: 2em 1em
                 padding: 0px 30px
-        &__cards
+        &__cards, &.gifts
             .swiper-wrapper
+                display: grid
                 grid-template-columns: repeat(4, 1fr)
+        &.gifts
+            .swiper-wrapper
+                grid-column-gap: 1em
+                grid-row-gap: 2em
         &__programs
             .swiper-wrapper
                 grid-template-columns: repeat(3, 1fr)
@@ -86,7 +92,11 @@ $grey-brown: #674F4D
 
 @media screen and ( max-width: 1130px )
     .header
-        padding-top: 20px
+        padding: 5px 0px
+        position: static
+        &.fixed
+            .header__social
+                display: none
         &__burger
             display: inline-block
         &__menu
@@ -94,6 +104,21 @@ $grey-brown: #674F4D
 
     .banner
         margin: 45px
+
+    .big-slider
+        .slide
+            &__wrap
+                z-index: 10
+                padding-top: 0
+                padding-left: 60px
+        &__gradient
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 250px
+            background: rgb(255,255,255)
+            background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%)
 
     .section
         &.order
@@ -189,6 +214,63 @@ $grey-brown: #674F4D
     .cards__anyway
         grid-template-columns: repeat(3, 1fr) !important
 
+    .format
+        &__wrap
+            flex-direction: column
+            align-items: center
+        &__programs
+            width: 100%
+            max-width: 625px
+            padding: 15px 0px 0px
+            &-item + &-item
+                margin-top: 0
+            &-item
+                margin-bottom: 1em
+                text-align: center
+                height: auto
+            &-link
+                max-width: 170px
+            &-list
+                column-count: 2
+                height: 120px
+                margin-bottom: 30px
+        &__item
+            &-head
+                margin-bottom: -5px
+        &__items
+            width: 100%
+            max-width: 625px
+            margin-left: 0px
+
+    .item
+        &__head
+            align-items: flex-start
+        &__price
+            flex-wrap: wrap
+            &-item + &-item
+                margin: 0
+        &__photo
+            padding: 30px 20px
+            img
+                transform: translateX(-50%)
+        &__content
+            margin-left: 20px
+        &__form
+            margin-bottom: 20px
+            display: flex
+            justify-content: center
+
+    .reviews
+        &__content
+            display: flex
+            align-items: center
+            flex-direction: column
+        &__review
+        &__video
+            &-placeholder
+                max-width: 550px
+                width: 100%
+
 @media screen and ( max-width: 900px )
     .articles
         &__wrap
@@ -223,6 +305,14 @@ $grey-brown: #674F4D
         grid-template-columns: repeat(2, 1fr) !important
 
 @media screen and ( max-width: 720px )
+    .header
+        padding-top: 20px
+        &.fixed
+            padding: 2px 0px
+            .header__recall
+                margin: 0
+            .header__tel
+                display: none
     .section
         &__benefit
             flex-direction: column
@@ -321,10 +411,75 @@ $grey-brown: #674F4D
         p
             padding: 0px 20px
 
+@media screen and ( max-width: 660px )
+    .online
+        &__wrap
+            img
+                position: static
+                width: 150%
+                height: auto
+                object-fit: contain
+ 
+    .item
+        &__head
+            flex-direction: column
+            margin-bottom: 20px
+        &__name
+            font-size: 26px
+            margin-bottom: 25px
+        &__content
+            margin: 0
+        &__form
+            &-inputs
+                flex-direction: column
+            &-input + &-input
+                margin: 20px 0px
+            
+    .notfound
+        padding: 60px 0px
+        &__wrap
+            min-height: 300px
+        &__item:first-child
+            display: none
+        &__item + &__item
+            transform: none
+            img
+                transform: translateX(10%)
+            p
+                margin-top: 20px
+                text-align: center
+                transform: none
+
 @media screen and ( max-width: 570px )
+
+    .big-btn
+        font-size: 19px
+
+    .big-slider
+        .slide
+            &__wrap
+                padding-left: 10px
+
+    .packet
+        padding-top: 0px
+
+    .popup
+        &__thx, &__violet, &__yellow
+            padding: 80px 10px
+            padding: 60px 10px
+        &__regrats
+            margin: 20px 0px
+    
     .personages
+        padding: 0px
         &__offer
             display: none
+        &.bghide
+            .find__bg1, .find__bg2
+                display: none
+        &__bg
+            &-b
+                bottom: -100px
     .articles
         &__wrap
             grid-template-columns: repeat(1, 1fr)
@@ -337,20 +492,14 @@ $grey-brown: #674F4D
     .button
         img
             display: none
+    
+    .find
+        padding-top: 140px
+
     .big-next, .big-prev
         display: none
-    .big-slider__gradient
-        position: absolute
-        width: 100%
-        height: 250px
-        background: rgb(255,255,255)
-        background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%)
-
     .actions__bg
         display: none
-
-    .main, .big-slider
-        margin-top: 200px
 
     .article
         &__content
@@ -365,14 +514,51 @@ $grey-brown: #674F4D
         padding-top: 20px
         &_purple
             padding-top: 70px
+        &__action
+            &-prev, &-next
+                top: 10%
         &__title
             margin-top: 50px
             h2
-                font-size: 28px
+                font-size: 24px
                 margin: 0
             .section__arrow
                 display: none
-
+        &__slider
+            padding: 0
+        &__slide
+            padding: 10px 20px
+            &-title
+                text-align: center
+                font-size: 28px
+                padding: 0px 15px
+            &-per
+                font-size: 64px
+            &-sub
+                margin-top: 10px
+            &-offer
+                p
+                    font-size: 16px
+                    font-weight: 700
+            &-count
+                padding: 0px 6px
+                line-height: 40px
+                border-radius: 10px
+                margin: 3px
+                font-size: 32px
+            &-count:nth-child(2), &-count:nth-child(4)
+                margin-right: 15px
+                &::after
+                    right: -15px
+        &__show
+            &-next, &-prev
+                top: 10%
+                position: absolute
+                transform: translateY(-50%)
+            &-prev
+                left: 0
+            &-next
+                right: 0
         &__animate 
             display: none
         
@@ -403,15 +589,7 @@ $grey-brown: #674F4D
                     font-size: 32px
             &-button
                 flex-direction: column
-        &__show
-            &-next, &-prev
-                position: absolute
-                top: 50%
-                transform: translateY(-50%)
-            &-prev
-                left: 0
-            &-next
-                right: 0
+            
         &__program
             padding: 20px 10px 0px
             ul
@@ -425,25 +603,31 @@ $grey-brown: #674F4D
             &-next
                 right: 0
         &__personage
-            max-width: 300px
+            max-width: 270px
+            &-stars
+                width: 110%
             &-name
                 font-size: 29px
             &-mask
-                padding-top: 40px
-                width: 300px
-                height: 260px
+                position: relative
+                width: 270px
+                top: 50%
+                transform: translateY(-50%)
+                height: 270px
             &-circle
-                width: 300px
+                width: 270px
                 height: 260px
-            &-outer
-                width: 300px
-                height: 260px
+                &-outer
+                    width: 270px
+                    height: 260px
         &__actions
             padding: 30px 0px 20px
         &__action
             flex-direction: column
 
     .header
+        &__mobile
+            width: 100%
         &__contacts
             display: none
 
@@ -460,7 +644,7 @@ $grey-brown: #674F4D
         &__slide
             grid-template-columns: repeat(1, 1fr)
         &__photos
-            grid-template-columns: repeat(2, 1fr)
+            grid-template-columns: repeat(1, 1fr)
 
     .animators
         &-bg
@@ -488,9 +672,20 @@ $grey-brown: #674F4D
                     position: relative
                     left: 50%
                     transform: translateX(-50%)
+                p
+                    text-align: center
+                    max-width: none
+                    width: 100%
+                    margin-bottom: 10px
         &__links
             flex-direction: column-reverse
-        
+
+    .celebration
+        &__preview
+            top: -30px
+        padding-top: 40%
+        .section__title
+            margin-top: 0
     .cards__anyway
         grid-template-columns: repeat(1, 1fr) !important
         padding: 0 !important
@@ -523,8 +718,6 @@ $grey-brown: #674F4D
                 text-align-last: left
         &__wrap
             padding: 0 0 0 10px
-            ul + ul
-                margin-top: 1em
 
     .nomt
         margin-top: 0px
@@ -539,7 +732,85 @@ $grey-brown: #674F4D
             img
                 display: inline-block !important
 
+    .blog
+        &__right, &__left
+            width: 100%
+        &__body
+            padding-bottom: 0px
+
+    .online
+        padding: 0 0 40px 0
+
+    .examples + .personages
+        padding-top: 50px
+
+    .examples
+        padding-bottom: 0
+        &__videos
+            grid-template-columns: repeat(1, 1fr)
+
+    .format
+        padding-top: 20px
+        &__item
+            &-head
+                flex-direction: column
+                padding: 20px
+                margin-top: 20px
+            &-price
+                margin-top: 20px
+            &-inputs
+                flex-direction: column
+                align-items: center
+            &-input + &-input
+                margin-top: 20px
+                margin-left: 0
+            &-list
+                columns: 1
+                max-height: none
+            &-input
+                width: 100%
+                max-width: none
+        &__programs
+            margin-top: 20px
+            &-list
+                height: auto
+                column-count: 1
+            &-link
+                font-size: 16px
+
+    .tab
+        &__item
+            &-top
+                display: flex
+                flex-direction: row
+                justify-content: space-between
+
 @media screen and ( max-width: 470px )
+
+    .big-slider
+        margin-top: 0
+
+    .banner
+        &__wrap
+            margin-bottom: 0
+            padding-bottom: 30%
+
+    .section__show-next, .section__show-prev
+        top: 45%
+
+    .notfound
+        padding-top: 30px
+
+    .header
+        &__logo
+            &-img
+                width: 80%
+
+    .section
+        &__title
+            h2
+                    max-width: 250px
+
     .questions
         &__tel
             font-size: 30px
@@ -547,6 +818,11 @@ $grey-brown: #674F4D
     .tabs
         &__wrap
             padding: 5px
+
+    .services
+        &__wrap
+            ul + ul
+                margin-top: 1em
 
     .tab
         &__item
