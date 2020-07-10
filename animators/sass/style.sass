@@ -328,7 +328,7 @@ body
                 background: rgb(255,225,0)
                 background: linear-gradient(180deg, rgba(255,225,0,1) 0%, rgba(255,191,0,1) 100%)
                 .header__link
-                    color: $brown
+                    color: $brown 
             .header__link
                 color: #fff
     &__wrap
@@ -350,12 +350,18 @@ body
             height: auto
             width: 100%
             object-fit: contain
+            position: relative
+            left: 50%
+            transform: translateX(-50%)
         &-text
             margin-top: 10px
             margin-left: 15px
             font-size: 15px
             text-align: center
             max-width: 200px
+        &-index
+            img
+
     &__nav
         ul
             display: flex
