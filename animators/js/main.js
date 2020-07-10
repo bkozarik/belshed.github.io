@@ -168,7 +168,8 @@ $(document).ready(function(event){
                 let agreement,
                     lastInput;
                 agreement = $($(this).find('.questions__form-col').get(1)).find('p');
-                lastInput = $($(this).find('.questions__form-col').get(0)).find('.button').last();
+                lastInput = $($(this).find('.questions__form-col').get(0)).find('input').last();
+                console.log(lastInput);
                 lastInput.after(agreement);                
             });
         }
@@ -176,6 +177,9 @@ $(document).ready(function(event){
 
     function scrollHandler() {
         if($(window).outerWidth() < 1130){
+
+            $('.header__mobile').css('padding-top', $('.header').outerHeight() + 10);
+
             if($(document).scrollTop() >= $('.header').outerHeight()){
                 $('.header').toggleClass('fixed', true);
                 $('.head__wrap').toggleClass('fixed', true);

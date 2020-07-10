@@ -220,6 +220,9 @@ $grey-brown: #674F4D
 @media screen and ( max-width: 1010px )
 
     .replies
+        &__slider
+            &-img
+                display: none
         &__grid
             grid-template-columns: repeat(1, 1fr)
             justify-items: center
@@ -560,8 +563,10 @@ $grey-brown: #674F4D
     .section
         padding-top: 10px
         padding-bottom: 20px
+        &__elements
+            margin-top: 10px
         &.order
-            padding-bottom: 70px
+            padding: 50px 0px 30px
         &.gifts
             padding: 60px 0px
         &_purple
@@ -879,6 +884,15 @@ $grey-brown: #674F4D
             h2
                 max-width: none
 
+    .section_yellow
+        .section
+            &__title
+                &::before
+                    height: 100px
+                    width: 100px
+                    background-size: contain
+                    background-repeat: no-repeat
+                    transform: translateY(-100%)
     .questions
         &__tel
             font-size: 30px
