@@ -28,7 +28,7 @@ $(document).ready(function(event){
             480: {
                 slidesPerView: 3,
             },
-            320: {
+            300: {
                 slidesPerView: 1,
             }
         },
@@ -47,6 +47,42 @@ $(document).ready(function(event){
         slidesPerView: 1,
     });
 
+    let repliesSwiper = new Swiper ('.replies__slider', {
+        direction: 'horizontal',
+        loop: true,
+        spaceBetween: 50,
+        speed:800,
+        autoHeight: true,
+        pagination: {
+            el: '.replies__pagination',
+          },
+        navigation: {
+            nextEl: '.replies__next',
+            prevEl: '.replies__prev',
+        },
+        slidesPerView: 1,
+    });
+
+    let repliesVideoSwiper = new Swiper ('.replies__videos', {
+        direction: 'horizontal',
+        loop: true,
+        spaceBetween: 30,
+        speed:800,
+        slidesPerView: 2,
+        navigation: {
+            nextEl: '.replies-video__next',
+            prevEl: '.replies-video__prev',
+        },
+        breakpoints: {
+            570: {
+                slidesPerView: 2,
+            },
+            300: {
+                slidesPerView: 1,
+            }
+        },
+    });
+
     let actionsSwiper = new Swiper ('.section__slider', {
         direction: 'horizontal',
         spaceBetween: 20,
@@ -59,7 +95,7 @@ $(document).ready(function(event){
             1135: {
                 slidesPerView: 2,
             },
-            320: {
+            300: {
                 slidesPerView: 1,
             }
         },
@@ -105,7 +141,7 @@ $(document).ready(function(event){
                 let agreement,
                     submitBtn;
                 agreement = $($(this).find('.questions__form-col').get(0)).find('p');
-                submitBtn = $($(this).find('.questions__form-col').get(1)).find('input.button');
+                submitBtn = $($(this).find('.questions__form-col').get(1)).find('.button');
                 submitBtn.before(agreement);                
             });
         }
@@ -132,7 +168,7 @@ $(document).ready(function(event){
                 let agreement,
                     lastInput;
                 agreement = $($(this).find('.questions__form-col').get(1)).find('p');
-                lastInput = $($(this).find('.questions__form-col').get(0)).find('input').last();
+                lastInput = $($(this).find('.questions__form-col').get(0)).find('.button').last();
                 lastInput.after(agreement);                
             });
         }

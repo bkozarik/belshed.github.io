@@ -41,58 +41,43 @@ body
     text-align: center
     text-transform: uppercase
     appearance: none
-    background-size: contain
+    background-size: cover
     background-position: center
     background-repeat: no-repeat
-    background-color: transparent
     img
         vertical-align: middle
     &:hover
         cursor: pointer
-    &::before
-        z-index: -1
-        display: inline-block
-        position: absolute
-        top: 0
-        left: 0
-        content: ''
-        height: 100%
-        width: 100%
 
 .small-btn
     border-radius: 30px
-    padding: 13px 25px
+    padding: 11px 24px
     font-size: 15px
     font-weight: 700
-    &::before
-        border-radius: 30px
+    box-shadow: 
 
 .big-btn
     border-radius: 40px
-    padding: 12px 34px
+    padding: 11px 34px
     font-size: 22px
     font-weight: 700
-    &::before
-        border-radius: 40px
 
 .yellow-btn
     background-image: url(../img/yellow-btn-bg.png)
-    box-shadow: 0 2px 0 #EA962D, 0 0 7px rgba(0, 0, 0, .3)
+    box-shadow: 0 2px 0 #EA962D, 0 0 7px rgba(0, 0, 0, .3), inset 0 0 2px 0 #EA962D
+    background-color: #EA962D
     color: $brown
     text-shadow: 3px 0 0 $light-yellow
     border: 1px solid $light-yellow
-    &::before
-        background: linear-gradient(180deg, rgba(255,225,0,1) 0%, rgba(255,191,0,1) 100%)
     &:hover
         
 
 .violet-btn
     background-image: url(../img/violet-btn-bg.png)
+    box-shadow: inset 0 0 2px 0 $violet
     color: #fff
     text-shadow: 0 3px 0 $violet
     border: 1px solid $violet
-    &::before
-        background: linear-gradient(180deg, rgba(215,99,231,1) 0%, rgba(134,56,182,1) 100%)
     &:hover
         
 
@@ -259,6 +244,8 @@ body
     flex-grow: 0
     padding-top: 50px
     padding-bottom: 20px
+    position: relative
+    z-index: 100
     &.fixed
         position: fixed
         top: 0
@@ -323,8 +310,9 @@ body
         position: fixed
         height: 100vh
         width: 200px
-        z-index: 100
-        top: 150px
+        z-index: 4
+        padding-top: 80px
+        top: 0
         left: 0
         background-color: #732F82
         overflow-y: auto
@@ -659,7 +647,7 @@ body
             background-image: url(../img/action_gold.png)
     &_yellow
         background-color: $yellow-bg
-        z-index: 2
+        z-index: 1
         &::before
             width: 100%
             position: absolute
@@ -1423,7 +1411,7 @@ body
             margin-left: 30px
         &-col
             flex: 1 0 50%
-            input + input, textarea + input
+            input + input, textarea + .button, input + .button
                 margin-top: 20px
             input[type="text"], textarea, input[type="tel"]
                 border-radius: 20px
@@ -2318,7 +2306,7 @@ body
         left: 1280px
         top: 400px
     .section__title
-        margin-top: 100px
+        margin: 60px 0px
     &__preview
         position: absolute
         top: -120px
@@ -2474,7 +2462,136 @@ body
             transform: translateX(-50%)
             max-width: 550px
             width: 100%
-        
+
+//
+//
+// Страница отзывов
+//
+//
+
+.replies
+    background-color: #4B1568
+    position: relative
+    &__bg
+        &-t
+            position: absolute
+            top: 0
+        &-b
+            position: absolute
+            bottom: -40px
+    .section__title
+        padding-top: 20px
+    &__pagination
+        position: absolute
+        z-index: 3
+        display: flex
+        justify-content: center
+        align-items: center
+        bottom: 30px !important
+        .swiper-pagination-bullet
+            background: linear-gradient(180deg, #D560E5 0%, #8A3AB8 100%)
+            height: 8px
+            width: 8px
+            opacity: 1 !important
+        .swiper-pagination-bullet-active
+            height: 14px
+            width: 14px
+            background: $yellow !important
+    &__next, &__prev
+        top: 50%
+    &__prev
+        left: 0
+        transform: translate(-10%, -50%)
+    &__next
+        right: 0
+        transform: translate(10%, -50%)
+    &__slider
+        overflow: hidden
+        position: relative
+        margin-top: 20px
+        padding: 10px 30px
+        max-width: 960px
+        left: 50%
+        transform: translateX(-50%)
+    &__review
+        max-width: 900px
+        background-color: #fff
+        padding: 35px 80px 60px
+        border-radius: 15px
+        box-shadow: 0 3px 0 0 $yellow
+        display: flex
+        align-items: center
+        justify-content: center
+        &-img
+            width: 100%
+            height: auto
+            object-fit: contain
+    &-video
+        &__prev
+            position: absolute
+            z-index: 3
+            top: 35%
+            left: 0
+            transform: translate(-15%, -50%)
+        &__next
+            position: absolute
+            z-index: 3
+            top: 35%
+            right: 0
+            transform: translate(15%, -50%)
+    &__grid
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        grid-column-gap: 2em
+        grid-row-gap: 1em
+        margin-top: 55px
+    &__videos
+        overflow: hidden
+        position: relative
+        margin: 30px 0px
+        padding-bottom: 60px
+    &__video
+        padding: 5px
+        background-color: #fff
+        max-width: 555px
+        img
+            width: 100%
+            height: 100%
+            object-fit: contain
+    &__item
+        padding: 15px 45px
+        background-color: #fff
+        border-radius: 15px
+        box-shadow: 0 3px 0 0 $yellow
+        max-width: 555px
+        &-head
+            display: flex
+            align-items: center
+        &-img
+            img
+                max-width: 80px
+                width: 100%
+                height: 100%
+                object-fit: contain
+                border-radius: 50%
+                overflow: hidden
+        &-title
+            margin-left: 10px
+            h3
+                font-size: 28px
+                font-weight: 700
+                color: $brown
+            p
+                font-size: 18px
+        &-body
+            p
+                font-size: 18px
+                margin-top: 35px
+            img
+                width: 100%
+                height: auto
+                object-fit: contain
+
 //
 //
 // Страница 404

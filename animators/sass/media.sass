@@ -10,7 +10,13 @@ $grey-brown: #674F4D
     .header__burger, .header__mobile-tel
         display: none
   
+@media screen and ( min-width: 660px )
+    .replies
+        &-video__prev, &-video__next
+            display: none
+
 @media screen and ( min-width: 720px )
+
     .section
         &__elements
             .swiper-wrapper
@@ -94,6 +100,7 @@ $grey-brown: #674F4D
     .header
         padding: 5px 0px
         position: static
+        background-color: #fff !important
         &.fixed
             .header__social
                 display: none
@@ -211,6 +218,12 @@ $grey-brown: #674F4D
             flex-direction: column-reverse
 
 @media screen and ( max-width: 1010px )
+
+    .replies
+        &__grid
+            grid-template-columns: repeat(1, 1fr)
+            justify-items: center
+
     .cards__anyway
         grid-template-columns: repeat(3, 1fr) !important
 
@@ -419,7 +432,13 @@ $grey-brown: #674F4D
                 width: 150%
                 height: auto
                 object-fit: contain
- 
+    
+    .replies
+        &__videos
+            padding: 0px 20px 60px
+        &__review
+            padding: 20px
+        
     .item
         &__head
             flex-direction: column
@@ -452,6 +471,33 @@ $grey-brown: #674F4D
 
 @media screen and ( max-width: 570px )
 
+    .item
+        padding: 30px 0px
+
+    .reviews
+        padding-top: 30px
+
+    .celebration
+        &__body
+            padding: 40px 0px
+
+    .replies
+        &__videos
+            padding: 0px 10px 60px
+        &-video
+            &__prev
+                top: 40%
+                transform: translate(-15%, -50%)
+            &__next
+                top: 40%
+                transform: translate(15%, -50%)
+        &__slider
+            display: none
+
+
+    .gallery
+        padding-top: 1px
+
     .big-btn
         font-size: 19px
 
@@ -471,7 +517,7 @@ $grey-brown: #674F4D
             margin: 20px 0px
     
     .personages
-        padding: 0px
+        padding: 20px 0px
         &__offer
             display: none
         &.bghide
@@ -481,6 +527,9 @@ $grey-brown: #674F4D
             &-b
                 bottom: -100px
     .articles
+        &_overflow
+            margin-top: -50px
+            padding-bottom: 40px !important
         &__wrap
             grid-template-columns: repeat(1, 1fr)
 
@@ -509,18 +558,21 @@ $grey-brown: #674F4D
         display: flex
 
     .section
+        padding-top: 10px
+        padding-bottom: 20px
         &.order
             padding-bottom: 70px
-        padding-top: 20px
+        &.gifts
+            padding: 60px 0px
         &_purple
             padding-top: 70px
         &__action
             &-prev, &-next
                 top: 10%
         &__title
-            margin-top: 50px
+            margin-top: 20px
             h2
-                font-size: 24px
+                font-size: 22px
                 margin: 0
             .section__arrow
                 display: none
@@ -575,6 +627,8 @@ $grey-brown: #674F4D
             padding: 0px 5px
             display: flex
             position: relative
+            &-btn-wrap 
+                margin: 40px 0px
         &__online
             margin-left: 0px
             img
@@ -745,7 +799,7 @@ $grey-brown: #674F4D
         padding-top: 50px
 
     .examples
-        padding-bottom: 0
+        padding-bottom: 30px
         &__videos
             grid-template-columns: repeat(1, 1fr)
 
@@ -787,6 +841,16 @@ $grey-brown: #674F4D
 
 @media screen and ( max-width: 470px )
 
+    .replies
+        &__item
+            padding: 15px 25px
+            &-img
+                img
+                    max-width: 60px
+            &-title
+                h3
+                    font-size: 18px
+
     .big-slider
         margin-top: 0
 
@@ -807,9 +871,13 @@ $grey-brown: #674F4D
                 width: 80%
 
     .section
+        &.dlc
+            overflow: hidden
+            padding-top: 50px
+            margin-top: -50px
         &__title
             h2
-                    max-width: 250px
+                max-width: none
 
     .questions
         &__tel
