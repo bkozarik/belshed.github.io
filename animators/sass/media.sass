@@ -61,6 +61,10 @@ $grey-brown: #674F4D
     .section__action-next, .section__action-prev,
         display: none
     
+    .examples
+        &__wrap
+            padding: 0px 60px
+
     .section
         &.order
             background-size: cover
@@ -204,6 +208,15 @@ $grey-brown: #674F4D
             justify-content: space-around
         &__policy
             text-align: center
+
+    .examples
+        &__wrap
+            padding: 0px 60px
+            .swiper-slide
+                display: flex
+                justify-content: center
+        &__video
+            max-width: 600px
 
     .find
         padding-top: 50px
@@ -804,6 +817,10 @@ $grey-brown: #674F4D
         padding-top: 50px
 
     .examples
+        &__wrap
+            padding: 5px
+            .swiper-btn
+                display: none
         padding-bottom: 30px
         &__videos
             grid-template-columns: repeat(1, 1fr)
@@ -838,13 +855,36 @@ $grey-brown: #674F4D
                 font-size: 16px
 
     .tab
+        &__personage
+            height: 100px
+            width: 100px
+            margin-top: 20px
+            &-circle
+                height: 100px
+                width: 100px
+                position: relative
+                img
+                    width: 100%
+                    height: auto
+                    object-fit: contain
+                    top: 55%
+                &-outer
+                    height: 100px
+                    width: 100px
+            &-mask
+                height: 100px
+                width: 100px
+
+
         &__item
+            &-price + &-price
+                margin-top: 10px
             &-top
                 display: flex
                 flex-direction: row
                 justify-content: space-between
 
-@media screen and ( max-width: 470px )
+@media screen and ( max-width: 470px )  
 
     .replies
         &__item

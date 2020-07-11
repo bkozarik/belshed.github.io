@@ -117,6 +117,25 @@ $(document).ready(function(event){
         slidesPerView: 1,
     });
 
+    let examplesSwiper = new Swiper ('.examples__slider', {
+        direction: 'horizontal',
+        loop: true,
+        spaceBetween: 20,
+        slidesPerView: 1,
+        breakpoints: {
+            570: {
+                slidesPerView: 2,
+            },
+            300: {
+                slidesPerView: 1,
+            }
+        },
+        navigation: {
+            nextEl: '.examples-next',
+            prevEl: '.examples-prev',
+        },
+    });
+
     function hideElems(){
         if(window.innerWidth <= 570){
             $('.section__personage').each(function(event){

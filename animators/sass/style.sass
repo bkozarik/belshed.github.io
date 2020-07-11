@@ -14,7 +14,7 @@ $grey-brown: #674F4D
     margin: 0
     padding: 0
     border-radius: 0px
-    box-sizing: border-box
+    box-sizing: border-box 
     transition: all .3s ease-in 0s
 
 html
@@ -862,7 +862,7 @@ body
             padding-bottom: 30px
             text-align: center
             background-image: url('../img/card-bg.png')
-            background-position: -5px 2px
+            background-position: -1px 2px
             background-repeat: no-repeat
             background-size: cover
             span + span
@@ -2049,6 +2049,17 @@ body
 
 .examples
     padding-bottom: 60px
+    &__slider
+        overflow: hidden
+    &-next, &-prev
+        position: absolute
+        top: 47%
+    &-next
+        right: 0
+        transform: translate(20%, -50%)
+    &-prev
+        left: 0
+        transform: translate(-20%, -50%)
     &__videos
         display: grid
         grid-template-columns: repeat(2, 1fr)
