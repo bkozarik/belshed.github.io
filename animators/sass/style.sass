@@ -475,49 +475,50 @@ body
         padding-top: 70px
     position: relative
 
-.big-slider
-    z-index: 0
-    overflow: hidden
-    position: relative
-    min-height: 200px
-    .swiper-wrapper
-        z-index: -2
-        position: relative
-    .slide
+.big
+    &-slider
+        z-index: 0
         overflow: hidden
         position: relative
-        height: 100%
-        width: 100%
-        &>img
-            object-fit: cover
-            width: 100%
-            height: 100%
-            position: absolute
-        &__wrap
+        min-height: 200px
+        .swiper-wrapper
+            z-index: -2
             position: relative
+        .slide
+            overflow: hidden
+            position: relative
+            height: 100%
             width: 100%
-            padding-top: 20%
-            left: 50%
-            transform: translate(-50%)
+            &>img
+                object-fit: cover
+                width: 100%
+                height: 100%
+                position: absolute
+            &__wrap
+                position: relative
+                width: 100%
+                padding-top: 20%
+                left: 50%
+                transform: translate(-50%)
 
-.big-prev, .big-next
-    position: absolute
-    top: 50%
-    transform: translateY(-50%)
-    z-index: 4
+    &-prev, &-next
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        z-index: 4
 
-.big-prev
-    transform: translateX(110%)
-    &:focus
-        outline: none
-        box-shadow: 0 0 3px 3px rgba(255, 255, 255, .6)
+    &-prev
+        transform: translateX(610%)
+        &:focus
+            outline: none
+            box-shadow: 0 0 3px 3px rgba(255, 255, 255, .6)
 
-.big-next
-    transform: translateX(-110%)
-    right: 0
-    &:focus
-        outline: none
-        box-shadow: 0 0 3px 3px rgba(255, 255, 255, .6)
+    &-next
+        transform: translateX(-610%)
+        right: 0
+        &:focus
+            outline: none
+            box-shadow: 0 0 3px 3px rgba(255, 255, 255, .6)
 
 .actions
     &__bg
