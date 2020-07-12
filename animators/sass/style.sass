@@ -63,7 +63,7 @@ body
     font-weight: 700
 
 .yellow-btn
-    background-image: url(../img/yellow-btn-bg.png)
+    background-image: url(../img/yellow-btn-bg-min.png)
     box-shadow: 0 2px 0 #EA962D, 0 0 7px rgba(0, 0, 0, .3), inset 0 0 2px 0 #EA962D
     background-color: #EA962D
     color: $brown
@@ -73,7 +73,7 @@ body
         
 
 .violet-btn
-    background-image: url(../img/violet-btn-bg.png)
+    background-image: url(../img/violet-btn-bg-min.png)
     box-shadow: inset 0 0 2px 0 $violet
     color: #fff
     text-shadow: 0 3px 0 $violet
@@ -151,11 +151,11 @@ body
         width: 100%
         max-width: 750px
         box-shadow: 0px 5px 0 0 $yellow
-        background-image: url(../img/popup__violet-bg.png)
+        background-image: url(../img/popup__violet-bg-min.png)
         background-repeat: no-repeat
         background-size: cover
     &__yellow
-        background-image: url(../img/popup__yellow-bg.png)
+        background-image: url(../img/popup__yellow-bg-min.png)
         background-repeat: no-repeat
         background-size: cover
         box-shadow: 0px 5px 0 0 $violet
@@ -520,13 +520,6 @@ body
             outline: none
             box-shadow: 0 0 3px 3px rgba(255, 255, 255, .6)
 
-.actions
-    &__bg
-        position: absolute
-        left: 50%
-        top: 0
-        transform: translateX(-50%)
-
 .section
     &__action
         &-prev, &-next
@@ -575,6 +568,11 @@ body
     &__item7
         left: 83%
         top: 18%
+    &__item8
+        bottom: -50px
+        max-width: 110px
+        left: 1200px
+        z-index: 2
     &__slider
         overflow: hidden
         margin-top: 30px
@@ -651,7 +649,7 @@ body
             align-items: center
         &_gold
             background-color: $yellow-bg
-            background-image: url(../img/action_gold.png)
+            background-image: url(../img/action_gold-min.png)
     &_yellow
         background-color: $yellow-bg
         z-index: 1
@@ -663,9 +661,19 @@ body
             content: ''
             display: block
             height: 40px
-            background-image: url('../img/yellow-line.png')
+            background-image: url('../img/yellow-line-min.png')
             background-repeat: no-repeat
             background-size: cover
+        &::after
+            width: 70%
+            position: absolute
+            bottom: 0
+            left: 50%
+            transform: translateX(-50%)
+            background-color: #FFDB72
+            content: ''
+            display: block
+            height: 10px
         .section__title
             &::before
                 content: ''
@@ -674,7 +682,7 @@ body
                 width: 120px
                 top: 0
                 transform: translateY(-120%)
-                background-image: url('../img/crown.png')
+                background-image: url('../img/crown-min.png')
     &__titles
         position: relative
     &__title
@@ -766,7 +774,7 @@ body
                 &::after
                     transform: scaleX(0.5)
     &_purple
-        background-image: url('../img/purple-bg.png')
+        background-image: url('../img/purple-bg-min.png')
         background-size: cover
         background-position-x: -5px
         padding-top: 100px
@@ -866,7 +874,7 @@ body
             padding-top: 15px
             padding-bottom: 30px
             text-align: center
-            background-image: url('../img/card-bg.png')
+            background-image: url('../img/card-bg-min.png')
             background-color: #7F1FA0
             background-position: -1px 0px
             background-repeat: no-repeat
@@ -937,7 +945,7 @@ body
             font-weight: 700
             text-align: center
     &.order
-        background-image: url('../img/action-bg.png')
+        background-image: url('../img/action-bg-min.png')
         background-size: contain
         padding-bottom: 150px
         background-repeat: no-repeat
@@ -986,7 +994,7 @@ body
         background-size: cover
     .eco
         background-color: #9028BC
-        background-image: url('../img/eco.png')
+        background-image: url('../img/eco-min.png')
         box-shadow: 0 2px 0 0 #4B1568
         color: #fff
         .section__program-old
@@ -995,7 +1003,7 @@ body
             color: $yellow-bg
     .opti
         background-color: #FFD727
-        background-image: url('../img/opti.png')
+        background-image: url('../img/opti-min.png')
         box-shadow: 0 2px 0 0 #EA962D
         color: #31363C
         .section__program-old
@@ -1004,7 +1012,7 @@ body
             color: #fff
     .fantastic
         background-color: #4B1568
-        background-image: url('../img/fantastic.png')
+        background-image: url('../img/fantastic-min.png')
         box-shadow: 0 2px 0 0 #4B1568
         color: #fff
         .section__program-old
@@ -1013,7 +1021,7 @@ body
             color: $yellow-bg
     .silver
         background-color: #F5F1ED
-        background-image: url('../img/silver.png')
+        background-image: url('../img/silver-min.png')
         box-shadow: 0 2px 0 0 #A4B4BD
         color: #31363C
         .section__program-old
@@ -1022,7 +1030,7 @@ body
             color: $violet
     .gold
         background-color: #FFD727
-        background-image: url('../img/gold.png')
+        background-image: url('../img/gold-min.png')
         box-shadow: 0 2px 0 0 #EA962D
         color: #31363C
         .section__program-old
@@ -1031,7 +1039,7 @@ body
             color: #fff
     .brilliant
         background-color: #2389B7
-        background-image: url('../img/brilliant.png')
+        background-image: url('../img/brilliant-min.png')
         box-shadow: 0 2px 0 0 #2389B7
         color: #31363C
         .section__program-old
@@ -1086,7 +1094,7 @@ body
         &-new
             margin-left: 20px
     &.gifts
-        background-image: url('../img/gifts-bg.png')
+        background-image: url('../img/gifts-bg-min.png')
         padding: 100px 0px
         background-position-x: -5px
         .section__program-old
@@ -1173,6 +1181,21 @@ body
         bottom: 20%
         transform: translateX(-50%)
         z-index: -1
+    &.dlc
+        margin-top: -60px
+        z-index: -1
+        background-color: $yellow-bg
+        padding: 130px 0px 100px
+        &::after
+            width: 70%
+            position: absolute
+            bottom: 0
+            left: 50%
+            transform: translateX(-50%)
+            background-color: #FFDB72
+            content: ''
+            display: block
+            height: 10px
     .dlc
         &__animate
             position: absolute
@@ -1181,14 +1204,14 @@ body
             left: 52%
             top: 37%
         &__item2
-            left: 18%
-            top: 20%
+            left: 15%
+            top: 30%
         &__item3
             left: 29%
             top: 83%
         &__item4
             left: 41%
-            top: 90%
+            top: 88%
         &__item5
             left: 84%
             top: 80%
@@ -1196,11 +1219,16 @@ body
             left: 13%
             top: 70%
         &__item7
-            left: 79%
-            top: 7%
+            left: 82%
+            top: 14%
         &__item8
             left: 65%
-            top: 89%
+            top: 85%
+        &__item9
+            left: 13%
+            bottom: -70px
+            max-width: 100px
+            z-index: 2
         &__bg
             position: absolute
             top: -70px
@@ -1211,6 +1239,7 @@ body
             padding: 0px 30px
             width: 90%
             &-wrap
+                margin-top: 50px
                 position: relative
                 display: flex
                 justify-content: center
@@ -1244,6 +1273,14 @@ body
         height: auto
         object-fit: contain
         bottom: 0
+
+.actions
+    padding-bottom: 70px
+    &__bg
+        position: absolute
+        left: 50%
+        top: 0
+        transform: translateX(-50%)
 
 .actions, .animators, .programs, .review, .about
     .section__title-bg
@@ -1364,7 +1401,19 @@ body
             width: 120%
 
 .questions
-    background-image: url('../img/questions-bg.png')
+    background-image: url('../img/questions-bg-min.png')
+    position: relative
+    &::after
+            width: 70%
+            position: absolute
+            bottom: 0
+            left: 50%
+            transform: translateX(-50%)
+            background-color: #FFF
+            opacity: .4
+            content: ''
+            display: block
+            height: 10px
     &__animate
         position: absolute
         z-index: 0
@@ -1504,8 +1553,8 @@ body
             top: 50%
             left: -12px
             transform: translate(0%, -50%)
-            height: 5px
-            width: 5px
+            height: 7px
+            width: 7px
             background-color: $yellow
             border-radius: 50%
         a
@@ -1519,6 +1568,17 @@ body
     padding: 50px 0px
     margin-top: -30px
     z-index: 0
+    position: relative
+    &::after
+        width: 70%
+        position: absolute
+        top: 30px
+        left: 50%
+        transform: translateX(-50%)
+        background-color: #61327B
+        content: ''
+        display: block
+        height: 10px
     p, span
         font-size: 14px
         color: #fff
@@ -1571,6 +1631,7 @@ body
 .breadcrumbs
     background-color: #4E1569
     z-index: 4
+    position: relative
     &__nav
         display: flex
         justify-content: center
@@ -1715,7 +1776,7 @@ body
 
 .contacts
     background-color: #4B1568
-    background-image: url('../img/contacts-bg.png')
+    background-image: url('../img/contacts-bg-min.png')
     background-size: cover
     &_overflow
         margin-top: -30px
@@ -1756,7 +1817,7 @@ body
         border-radius: 10px
         max-width: 555px
         background-color: #FFCC36
-        background-image: url('../img/offer-bg.png')
+        background-image: url('../img/offer-bg-min.png')
         background-size: cover
         background-repeat: no-repeat
         box-shadow: 0 3px 0 0 #EA962D
@@ -2134,7 +2195,7 @@ body
         background-color: #AE33DF
         padding: 15px 50px 35px
         border-radius: 10px
-        background-image: url(../img/format-programs.png)
+        background-image: url(../img/format-programs-min.png)
         background-repeat: no-repeat
         background-size: cover
         box-shadow: 0 3px 0 0 $violet
@@ -2221,7 +2282,7 @@ body
             max-height: 200px
             width: 100%
             li
-                list-style-image: url(../img/white-tip.png)
+                list-style-image: url(../img/white-tip-min.png)
                 margin-bottom: 1em
                 color: $grey-brown
                 margin-left: 10px
@@ -2281,7 +2342,7 @@ body
             transform: translateY(30px)
 
 .lookatus
-    background-image: url(../img/videos-bg.png)
+    background-image: url(../img/videos-bg-min.png)
     background-repeat: no-repeat
     background-position: 250px -70px 
     margin-top: 40px
@@ -2295,6 +2356,7 @@ body
 
 .op5
     opacity: .7
+    margin-bottom: -62px
 
 .celebration
     position: relative
@@ -2339,7 +2401,7 @@ body
     &__body
         padding: 40px 0px 90px
         position: relative
-        // background-image: url(../img/celebration-bg.png)
+        // background-image: url(../img/celebration-bg-min.png)
         background-repeat: no-repeat
         background-position: 0 20px
         background-size: cover
@@ -2367,7 +2429,7 @@ body
 .item
     padding: 60px 0px
     background-color: #4B1568
-    background-image: url(../img/item-bg.png)
+    background-image: url(../img/item-bg-min.png)
     background-repeat: no-repeat
     background-position: 0 0
     &__head
@@ -2459,7 +2521,7 @@ body
         margin-top: 10px
 
 .reviews
-    background-image: url(../img/reviews-bg2.png)
+    background-image: url(../img/reviews-bg2-min.png)
     background-repeat: no-repeat
     background-position-y: -30px
     background-position-x: 60px
