@@ -261,6 +261,9 @@ body
         left: 0
         top: 0
         width: 100%
+        .header__logo
+            &::before
+                opacity: .5
     &__burger
         display: none
         height: 40px
@@ -343,6 +346,7 @@ body
         flex-direction: column
         position: relative
         align-items: center
+        position: relative
         &.inLogo
             margin-left: 60px
         &-img
@@ -359,8 +363,19 @@ body
             font-size: 15px
             text-align: center
             max-width: 200px
-        &-index
-            img
+        &::before
+            content: ''
+            display: block
+            position: absolute
+            left: 50%
+            transform: translateX(-50%)
+            top: -240px
+            height: 270px
+            width: 270px
+            background-image: url(../img/header_index.bgi.png)
+            background-position: center
+            background-repeat: no-repeat
+            background-size: contain
 
     &__nav
         ul

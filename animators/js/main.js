@@ -188,7 +188,6 @@ $(document).ready(function(event){
                     lastInput;
                 agreement = $($(this).find('.questions__form-col').get(1)).find('p');
                 lastInput = $($(this).find('.questions__form-col').get(0)).find('input').last();
-                console.log(lastInput);
                 lastInput.after(agreement);                
             });
         }
@@ -422,9 +421,7 @@ $(document).ready(function(event){
                 });
             }
         }
-        catch(e){
-            console.log(e);
-            
+        catch(e){           
         }
     }
 
