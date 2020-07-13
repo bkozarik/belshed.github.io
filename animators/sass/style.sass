@@ -35,10 +35,10 @@ body
     z-index: 2
 
 .button
-    background-repeat: no-repeat
     background-position: center
     text-transform: uppercase
-    background-size: contain
+    background-size: contain !important
+    background-repeat: no-repeat !important
     text-decoration: none
     display: inline-block
     text-align: center
@@ -48,14 +48,13 @@ body
         vertical-align: middle
     &:hover
         cursor: pointer
-        background-position: 0px 17px, 0px -30px, 0 0
+        background-position: center 17px, center -30px, 0 0
 
 .small-btn
     border-radius: 30px
     padding: 11px 24px
     font-size: 15px
     font-weight: 700
-    box-shadow: 
 
 .big-btn
     border-radius: 40px
@@ -65,14 +64,15 @@ body
 
 .yellow-btn
     background: rgb(255,224,0)
-    background: url('../img/yellow-btn-bg.png'), url('../img/yellow-btn-bg.png'), linear-gradient(180deg, rgba(255,224,0,1) 0%, rgba(255,191,0,1) 100%)
+    background: url('../img/yellow-btn-bg.png') center, url('../img/yellow-btn-bg.png') center, linear-gradient(180deg, rgba(255,224,0,1) 0%, rgba(255,191,0,1) 100%)
     color: $brown
     text-shadow: 3px 0 0 $light-yellow
     border: 1px solid $light-yellow
 
 .violet-btn
     background: rgb(216,100,232)
-    background: url('../img/violet-btn-bg.png'), url('../img/violet-btn-bg.png'), linear-gradient(180deg, rgba(216,100,232,1) 0%, rgba(132,56,181,1) 100%)
+    background: url('../img/violet-btn-bg.png') center, url('../img/violet-btn-bg.png') center, linear-gradient(180deg, rgba(216,100,232,1) 0%, rgba(132,56,181,1) 100%)
+    position: relative
     color: #fff
     text-shadow: 0 3px 0 $violet
     border: 1px solid $violet
