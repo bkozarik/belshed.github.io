@@ -100,6 +100,9 @@ body
 .dark
     color: #674F4D
 
+.brown
+    color: #A26351
+
 .main
     flex-grow: 1
 
@@ -164,7 +167,126 @@ body
         .popup__crown
             top: -30px
             left: 60px
-            
+    &__bundle
+        padding: 0px 10px 0px
+        align-items: center
+        justify-content: center
+        position: fixed
+        width: 100%
+        height: 100vh
+        left: 0
+        top: 0
+        z-index: 200
+        overflow-y: auto
+        &-body
+            display: flex
+            flex-direction: column
+            align-items: center
+            z-index: 20
+            position: relative
+        &-container
+            width: 100%
+            max-width: 650px
+            padding: 50px 10px 40px
+            border-radius: 20px
+            box-shadow: 0 3px 0 0 #EA962D
+            position: relative
+            z-index: 20
+        &-item1, &-item2, &-item3, &-item4, &-item5
+            position: absolute
+            z-index: 0
+        &-item1
+            top: 120px
+            right: -20px
+        &-item2
+            top: 100px
+            left: -20px
+        &-item3
+            bottom: -30px
+            right: 30px
+            max-width: 75px
+        &-item4
+            bottom: 220px
+            right: 45px
+        &-item5
+            bottom: 30px
+            left: 60px
+        &-container
+            background-repeat: no-repeat
+            background-image: url(../img/popup_bundle-bg.png)
+            background-size: cover
+        &-price
+            display: flex
+            flex-direction: column
+            justify-content: center
+        &-old, &-new
+            color: #AE33DF
+            font-weight: 700
+            text-align: center
+        &-new
+            font-size: 46px
+        &-old
+            font-size: 26px
+            text-decoration: line-through
+        &-head
+            max-width: 444px
+            margin-top: 15px
+            width: 100%
+            padding: 12px 25px
+            background-color: #fff
+            border-radius: 10px
+            display: flex
+            justify-content: space-between
+        &-keys
+            list-style-type: none
+            font-size: 18px
+            color: $grey-brown
+            max-width: 200px
+            li + li
+                margin-top: 0.6em
+        &-includes
+            text-transform: none !important
+        &-keys
+            max-width: 200px
+            li
+                font-size: 18px
+                color: #674F4D
+                list-style-type: none
+        &-content
+            display: flex
+            flex-direction: column
+            align-items: center
+            position: relative
+            z-index: 2
+        &-list
+            max-height: 190px !important
+        &-slider
+            max-width: 700px
+            width: 100%
+            overflow: hidden
+            position: relative
+            padding: 0px 18px
+            &-wrap
+                position: relative
+                transform: translateY(50px)
+                z-index: 24
+        &-prev, &-next
+            position: absolute
+            top: 50%
+        &-prev
+            left: 0
+            transform: translate(-12%, -60%)
+        &-next
+            right: 0
+            transform: translate(12%, -60%)
+        .swiper-slide
+            height: 200px
+            img
+                width: 100%
+                height: 100%
+                object-fit: contain
+        .swiper-slide-active
+            transform: scale(1.20)
     &__disclaimer
         margin-bottom: 20px
     &__violet, &__yellow
@@ -219,7 +341,7 @@ body
         margin: 60px 0px
         text-align: center
     &__wrap
-        padding: 10px
+        padding: 70px 10px 0px
         align-items: center
         justify-content: center
         position: fixed
@@ -241,19 +363,17 @@ body
     padding-top: 30px
     padding-bottom: 20px
     position: relative
-    z-index: 100
+    z-index: 10000
     &.fixed
         position: fixed
         top: 0
         left: 0
         width: 100%
-        z-index: 5
         background-color: #fff !important
     &.header_index
         background-color: transparent
     &_index
         position: absolute
-        z-index: 5
         left: 0
         top: 0
         width: 100%
@@ -309,7 +429,7 @@ body
         position: fixed
         height: 100vh
         width: 200px
-        z-index: 4
+        z-index: 1000
         padding-top: 60px
         top: 0
         left: 0
@@ -1206,7 +1326,7 @@ body
     .show__bg
         position: absolute
         left: 50%
-        bottom: 20%
+        bottom: 10%
         transform: translateX(-50%)
         z-index: -1
     &.dlc

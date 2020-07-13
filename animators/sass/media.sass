@@ -526,10 +526,42 @@ $grey-brown: #674F4D
         padding-top: 0px
 
     .popup
+        &__bundle
+            padding-top: 70px
+            .swiper-slide-active
+                transform: none
+            .swiper-btn
+                height: 30px
+                width: 30px
+                img
+                    max-width: 10px
+            &-prev
+                transform: translate(-70%, -60%)
+            &-next
+                transform: translate(70%, -60%)
+            &-slider
+                padding: 0
+                max-width: 235px
+            .section__titles
+                h2
+                    font-size: 18px
+            &-item1, &-item2, &-item3, &-item4, &-item5
+                display: none
+            &-list
+                max-height: none !important
+                flex-direction: column
+            &-keys
+                max-width: 140px
+                li
+                    font-size: 14px
+            &-old
+                font-size: 16px
+            &-new
+                font-size: 30px
         &__thx, &__violet, &__yellow
             padding: 80px 10px
             padding: 60px 10px
-        &__garland, &__confeti, &__hat,// &__garland, &__garland, 
+        &__garland, &__confeti, &__hat
             display: none
         &__yellow
             .popup__baloons

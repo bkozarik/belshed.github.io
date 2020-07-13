@@ -8,8 +8,6 @@ $(document).ready(function(event){
     let programsSwiperQ = document.querySelector('.section__programs');
     let cardSwiper;
     let cardSwiperQ = document.querySelector('.show-slider');
-    
-    $('.popup').fadeOut(0);    
 
     let dlcSwiper = new Swiper ('.dlc__swiper', {
         direction: 'horizontal',
@@ -135,6 +133,31 @@ $(document).ready(function(event){
             prevEl: '.examples-prev',
         },
     });
+
+    let popupSwiper = new Swiper ('.popup__bundle-slider', {
+        direction: 'horizontal',
+        loop: true,
+        spaceBetween: 20,
+        centeredSlides: true,
+        init: false,
+        breakpoints: {
+            570: {
+                slidesPerView: 3,
+            },
+            300: {
+                slidesPerView: 1,
+            }
+        },
+        navigation: {
+            nextEl: '.popup__bundle-next',
+            prevEl: '.popup__bundle-prev',
+        },
+    });
+
+    let popupSwiperQ = document.querySelector('.popup__bundle-slider').swiper;
+    popupSwiperQ.init();
+
+    $('.popup').fadeOut(0);
 
     function hideElems(){
         if(window.innerWidth <= 570){
@@ -494,6 +517,25 @@ $(document).ready(function(event){
         });
     });
 
+    $('.open__popup').on('click', function(event){
+        event.preventDefault();
+
+        $('.popup__bundle').fadeIn(function(event){
+            $(this).css('display', 'flex');
+            $(this).css('opacity', '1');
+        });
+
+        $('.popup__bundle-body').fadeIn(function(event){
+            $(this).css('display', 'flex');
+            $(this).css('opacity', '1');
+        });
+    });
+
+    $('.popup__bundle').on('click', (event) => {
+        $('.popup__bundle').fadeOut();
+        $('.popup__bundle-body').fadeOut();
+    });
+
     $('.open__yellow').on('click', function(event){
         event.preventDefault();
 
@@ -609,6 +651,11 @@ $(document).ready(function(event){
         hideElems();
         checkMenu();
         checkTabs();
+
+        try{
+            popupSwiperQ.update();
+        }
+        catch(e){}
     });
     
     mobileBenefitsSwiper();
@@ -621,4 +668,9 @@ $(document).ready(function(event){
     hideElems();
     checkMenu();
     checkTabs();
+    
+    popupSwiperQ.update();
+    try{
+    }
+    catch(e){}
 }); 
