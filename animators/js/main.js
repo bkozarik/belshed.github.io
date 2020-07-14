@@ -9,6 +9,56 @@ $(document).ready(function(event){
     let cardSwiper;
     let cardSwiperQ = document.querySelector('.show-slider');
 
+    let show__bg = new Rellax('.show__bg', {
+        speed: -1,
+        center: true,
+    });
+
+    let animators_1 = new Rellax('.animators-item1', {
+        speed: -1,
+        center: true,
+    });
+
+    let animators_2 = new Rellax('.animators-item2', {
+        speed: -3,
+        center: true,
+    });
+
+    let section_8 = new Rellax('.section__item8', {
+        speed: -0.3,
+        center: true,
+    });
+
+    let section_9 = new Rellax('.section__item9', {
+        speed: -0.35,
+        center: true,
+    });
+
+    let programs__1 = new Rellax('.programs__item1', {
+        speed: -1,
+        center: true,
+    });
+
+    let programs__2 = new Rellax('.programs__item2', {
+        speed: -1.35,
+        center: true,
+    });
+
+    let review__1 = new Rellax('.review__1', {
+        speed: -1,
+        center: true,
+    });
+
+    let review__2 = new Rellax('.review__2', {
+        speed: -2.35,
+        center: true,
+    });
+
+    let about__5 = new Rellax('.about__item5', {
+        speed: -1.7,
+        center: true,
+    });
+
     let dlcSwiper = new Swiper ('.dlc__swiper', {
         direction: 'horizontal',
         loop: true,
