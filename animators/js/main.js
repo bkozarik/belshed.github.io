@@ -139,7 +139,6 @@ $(document).ready(function(event){
         loop: true,
         spaceBetween: 20,
         centeredSlides: true,
-        init: false,
         breakpoints: {
             570: {
                 slidesPerView: 3,
@@ -155,9 +154,68 @@ $(document).ready(function(event){
     });
 
     let popupSwiperQ = document.querySelector('.popup__bundle-slider').swiper;
-    popupSwiperQ.init();
 
     $('.popup').fadeOut(0);
+
+    function startCounter(hoursCountdown) {
+        function counterPlaceNum(position, value) {
+            let counterFields = document.querySelectorAll('.section__slide-count');
+    
+            let symbolPos = [position * 2, (position * 2) + 1];
+
+            if (value.length < 2) {
+                value = '0' + value[0];
+            }
+
+            counterFields[symbolPos[0]].innerHTML = value[0];
+            counterFields[symbolPos[1]].innerHTML = value[1];
+        }
+    
+        let secsInHour = 3600;
+        let minsInHour = 60;
+        let countdownSecs = localStorage.getItem('countdownSecs');
+
+        if(countdownSecs == null){
+            countdownSecs = hoursCountdown * secsInHour;
+        }
+        
+        let hoursRem,
+            minRem,
+            secRem;
+    
+        let strHoursRem,
+            strMinRem,
+            strSecRem;
+        
+        let zeroStr = '00';
+
+        console.log(countdownSecs);
+
+        let countdownTimer = setInterval(() => {
+            if(--countdownSecs > 0){
+    
+                hoursRem = Math.trunc(countdownSecs / secsInHour);
+                minRem = Math.trunc((countdownSecs - hoursRem * secsInHour) / minsInHour);
+                secRem = countdownSecs - hoursRem * secsInHour - minRem * minsInHour;
+
+                localStorage.setItem('countdownSecs', countdownSecs);
+    
+                strHoursRem = String(hoursRem);
+                strMinRem = String(minRem);
+                strSecRem = String(secRem);
+    
+                counterPlaceNum(0, strHoursRem);
+                counterPlaceNum(1, strMinRem);
+                counterPlaceNum(2, strSecRem);
+            }
+            else{
+                counterPlaceNum(0, zeroStr);
+                counterPlaceNum(1, zeroStr);
+                counterPlaceNum(2, zeroStr);
+                clearTimeout(countdownTimer);
+            }
+        }, 1000);
+    }
 
     function hideElems(){
         if(window.innerWidth <= 570){
@@ -655,7 +713,9 @@ $(document).ready(function(event){
         try{
             popupSwiperQ.update();
         }
-        catch(e){}
+        catch(e){
+            console.log(e);
+        }
     });
     
     mobileBenefitsSwiper();
@@ -669,8 +729,11 @@ $(document).ready(function(event){
     checkMenu();
     checkTabs();
     
-    popupSwiperQ.update();
     try{
+        popupSwiperQ.update();
+        startCounter(12);
     }
-    catch(e){}
+    catch(e){
+        console.log(e);
+    }
 }); 
