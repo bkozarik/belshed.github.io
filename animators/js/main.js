@@ -170,10 +170,16 @@ $(document).ready(function(event){
             counterFields[symbolPos[0]].innerHTML = value[0];
             counterFields[symbolPos[1]].innerHTML = value[1];
         }
+
+        if(sessionStorage.getItem('lastSettedHours') != hoursCountdown){
+            sessionStorage.clear();
+
+            sessionStorage.setItem('lastSettedHours', hoursCountdown);
+        }
     
         let secsInHour = 3600;
         let minsInHour = 60;
-        let countdownSecs = localStorage.getItem('countdownSecs');
+        let countdownSecs = sessionStorage.getItem('countdownSecs');
 
         if(countdownSecs == null){
             countdownSecs = hoursCountdown * secsInHour;
@@ -189,8 +195,6 @@ $(document).ready(function(event){
         
         let zeroStr = '00';
 
-        console.log(countdownSecs);
-
         let countdownTimer = setInterval(() => {
             if(--countdownSecs > 0){
     
@@ -198,7 +202,7 @@ $(document).ready(function(event){
                 minRem = Math.trunc((countdownSecs - hoursRem * secsInHour) / minsInHour);
                 secRem = countdownSecs - hoursRem * secsInHour - minRem * minsInHour;
 
-                localStorage.setItem('countdownSecs', countdownSecs);
+                sessionStorage.setItem('countdownSecs', countdownSecs);
     
                 strHoursRem = String(hoursRem);
                 strMinRem = String(minRem);
@@ -212,7 +216,11 @@ $(document).ready(function(event){
                 counterPlaceNum(0, zeroStr);
                 counterPlaceNum(1, zeroStr);
                 counterPlaceNum(2, zeroStr);
+
                 clearTimeout(countdownTimer);
+
+                let button = document.querySelector('.button__inform');
+                button.remove();
             }
         }, 1000);
     }
