@@ -64,6 +64,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         popupWrapper.classList.add('show');
         loginPopupn.classList.add('show');
+
+        loginWrapper.classList.add('isLogged');
+
+        checkAuth();
     }
 
     let faqItemClick = () => {
@@ -207,14 +211,17 @@ document.addEventListener('DOMContentLoaded', () => {
         mobileMenuContainer.classList.add('active');
     }
 
-    if(loginWrapper.classList.contains('isLogged')){
+    let checkAuth = () => {
+        if(loginWrapper.classList.contains('isLogged')){
         
-        loginBtn.forEach(item => {
-            item.style.display = 'none';
-        });
+            loginBtn.forEach(item => {
+                item.style.display = 'none';
+            });
+        }
     }
 
     tabsInit();
+    checkAuth();
     mobileCheck();
     replaceTabHeaders();
 
