@@ -86,22 +86,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let headerLinkClick = () => {
 
-        event.preventDefault();
-
         let target = event.target;
 
-        while(!target.classList.contains('header__link')){
+        event.preventDefault();
 
-            target = target.parentElement;
-        }
+        const id = target.getAttribute('href');
 
-        if(target.classList.contains('active')){
-            
-            target.classList.remove('active');
-            return;
-        }
-
-        target.classList.add('active');
+        document.querySelector(id).scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
     }
 
     let replaceTabHeaders = () => {
