@@ -1593,7 +1593,7 @@
 
     <div class="popup__wrapper">
         <div class="popup popup_login">
-            <div class="popup__body">
+            <form name="login_form" class="popup__body">
                 <a href="#" class="popup__close"><span></span></a>
                 <h3 class="popup__header">Заходи в свой личный кабинет!</h3>
                 <label class="popup__label">
@@ -1605,14 +1605,14 @@
                     <input class="popup__input" type="password" placeholder="Пароль" name="user_pswd">
                 </label>
                 <div class="button__wrapper">
-                    <button class="button button__common button__common_popup">авторизоваться</button>
+                    <button type="submit" class="button button__common button__common_popup">авторизоваться</button>
                 </div>
                 <p class="popup__subtext">Если вы еще не зарегистрированы, то используйте</p>
                 <a href="#" class="popup__link">Регистрация на сайте</a>
-            </div>
+            </form>
         </div>
         <div class="popup popup_checkin">
-            <div class="popup__body">
+            <form name="registration_form" class="popup__body">
                 <a href="#" class="popup__close"><span></span></a>
                 <h3 class="popup__header">Зарегестрируйся и играй</h3>
                 <label class="popup__label">
@@ -1632,30 +1632,30 @@
                     <input class="popup__input" type="password" placeholder="Пароль" name="user_pswd">
                 </label>
                 <div class="button__wrapper">
-                    <button class="button button__common button__common_popup">Зарегестрироваться</button>
+                    <button type="submit" class="button button__common button__common_popup">Зарегестрироваться</button>
                 </div>
                 <p class="popup__subtext">Если вы уже зарегистрированы, то используйте</p>
                 <a href="#" class="popup__link">Вход на сайт</a>
-            </div>
+            </form>
         </div>
         <div class="popup popup_battle">
-            <div class="popup__body">
+            <form name="battle_form" class="popup__body">
                 <a href="#" class="popup__close"><span></span></a>
                 <h3 class="popup__header">В бой!</h3>
                 <div class="popup__dotted-top">
                     <div class="button__wrapper">
-                        <button class="button button__common button__common_popup">Привязать аккаунт</button>
+                        <button type="submit" class="button button__common button__common_popup">Привязать аккаунт</button>
                     </div>
                 </div>
                 <div class="popup__dotted-top">
                     <div class="button__wrapper">
-                        <button class="button button__common button__common_popup">Ворваться в рейтинг!</button>
+                        <button type="submit" class="button button__common button__common_popup">Ворваться в рейтинг!</button>
                     </div>
                 </div>
                 <div class="button__wrapper">
-                    <p class="popup__subtext popup__rules"><span></span> я соглашаюсь с <a href="#" class="popup__inline-link">правилами</a> сайта и <a href="#" class="popup__inline-link">регламентом соревнования</a></p>
+                    <label class="popup__subtext popup__rules"><input class="popup__checkbox" required type="checkbox" name="agreement"><span class="popup__checkbox-replace"></span> я соглашаюсь с <a href="#" class="popup__inline-link">правилами</a> сайта и <a href="#" class="popup__inline-link">регламентом соревнования</a></label>
                 </div>
-            </div>
+            </form>
         </div>
         <div class="popup popup_battle_2">
             <div class="popup__body">

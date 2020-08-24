@@ -903,18 +903,19 @@ body
         text-align: center
     &__rules
         max-width: 300px
+        user-select: none
         span
             display: inline-block
             height: 15px
             width: 15px
-            background-color: $text_orange
+            border: 1px solid $text_orange
             margin-right: 4px
             border-radius: 3px
             transform: translateY(2px)
             position: relative
             &::before
                 content: ''
-                display: inline-block
+                display: none
                 position: absolute
                 top: 50%
                 left: 50%
@@ -925,8 +926,21 @@ body
                 background-size: contain
                 height: 8px
                 width: 8px
+            &.active
+                background-color: $text_orange
+                &::before
+                    display: inline-block
             &:hover
                 cursor: pointer
+    &__checkbox:checked + &__checkbox-replace
+        background-color: $text_orange
+        &::before
+            display: inline-block
+    &__checkbox
+        display: inline-block
+        visibility: hidden
+        height: 1px
+        width: 1px
     &__dotted-top + &__dotted-top
         margin-top: 10px
     &__dotted-top

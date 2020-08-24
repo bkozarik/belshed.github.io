@@ -1,0 +1,145 @@
+$main_red: #d31b21
+
+*, *::before, *::after
+    border: none
+    margin: 0
+    padding: 0
+    border-radius: 0px
+    box-sizing: border-box 
+    transition: all .2s ease-in-out 0s
+
+*
+    font-family: Montserrat, sans-serif
+
+html, body
+    overflow-x: hidden
+
+body
+    display: flex
+    flex-direction: column
+    min-height: 100vh
+    background-color: #fff
+
+.container
+    max-width: 1230px
+    margin: 0 auto
+    padding: 0px 15px
+
+.text
+    &__red
+        color: $main_red
+
+.button
+    display: inline-block
+    background: rgb(217,34,39)
+    background: linear-gradient(180deg, rgba(217,34,39,1) 0%, rgba(168,14,21,1) 100%)
+    border-radius: 6px
+    font-size: 18px
+    color: #fff
+    text-align: center
+    appearance: none
+    font-weight: 500
+    &:hover
+        cursor: pointer
+    &__header
+        font-size: 15px
+        padding: 10px 30px
+
+.header
+    flex-grow: 0
+    padding: 25px 0px
+    box-shadow: 0px 2px 15px 5px rgba(0, 0, 0, .2)
+    &__wrap
+        display: flex
+        align-items: center
+        justify-content: space-between
+    &__logo
+        display: flex
+        align-items: center
+        &-img
+            height: auto
+            max-width: 57px
+            object-fit: contain
+            margin-right: 10px
+        &-text
+            font-size: 18px
+            font-weight: bold
+    &__menu
+        max-width: 470px
+        flex-grow: 1
+    &__list
+        display: flex
+        justify-content: space-around
+        &-item
+            list-style-type: none
+            color: $main_red
+            position: relative
+            &::before
+                content: ''
+                display: inline-block
+                height: 7px
+                width: 7px
+                margin-right: 10px
+                background-color: $main_red
+                border-radius: 50%
+                transform: translateY(-50%)
+    &__link
+        text-decoration: none
+        color: #000
+        font-weight: 700
+        font-size: 19px
+        font-family: exo2, serif
+        &:hover
+            color: $main_red
+
+.main
+    flex-grow: 1
+
+.banner
+    &__wrap
+        display: flex
+        flex-direction: column
+        align-items: center
+    &__header
+        font-weight: 500
+        font-size: 54px
+        max-width: 680px
+        text-align: center
+    &__text
+        font-size: 19px
+        font-weight: 300
+        line-height: 28px
+        max-width: 610px
+        text-align: center
+        margin-top: 20px
+        b
+            font-size: 19px
+            font-weight: 700
+            line-height: 28px
+    &__button
+        display: inline-block
+        margin-top: 40px
+        height: 90px
+        width: 90px
+        border-radius: 50%
+        background: rgb(217,34,39)
+        background: linear-gradient(180deg, #ff0008 0%, rgba(168,14,21,1) 100%)
+        box-shadow: 0 2px 2px rgba(0, 0, 0, .3)
+        position: relative
+        img
+            position: absolute
+            top: 50%
+            left: 52%
+            transform: translate(-50%, -50%)
+            height: 22px
+            width: 22px
+            object-fit: contain
+        &:hover
+            cursor: pointer
+        &-text
+            font-size: 18px
+            font-weight: 700
+            max-width: 270px
+            text-align: center
+.footer
+    flex-grow: 0
