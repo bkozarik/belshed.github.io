@@ -37,13 +37,22 @@ body
     &__header
         font-weight: 500
         font-size: 54px
-        max-width: 680px
         text-align: center
         &-wrap
             width: 100%
             display: flex
+            flex-direction: column
             align-items: center
             justify-content: center
+    &__subheader
+        font-weight: 500
+        font-size: 22px
+        text-align: center
+        margin-top: 30px
+    &__wrapper
+        display: flex
+        flex-direction: column
+        align-items: center
 
 .button
     display: inline-block
@@ -57,9 +66,24 @@ body
     font-weight: 500
     &:hover
         cursor: pointer
+        background: rgb(255,255,255)
+        color: rgb(217,34,39)
+        box-shadow: 0 0 0 1px rgb(217,34,39)
+        background: linear-gradient(180deg, rgba(255,255,255,1) 8%, rgba(225,225,225,1) 86%)
+    &__wrap
+        width: 100%
+        display: flex
+        align-items: center
+        justify-content: center
     &__header
         font-size: 15px
         padding: 10px 30px
+    &__agit
+        padding: 10px 30px
+    &__about
+        padding: 12px 50px
+    &__in-table
+        padding: 10px 35px
 
 .header
     flex-grow: 0
@@ -163,16 +187,27 @@ body
 
 .how
     padding-top: 50px
+    padding-bottom: 90px
+    position: relative
+    &__bg
+        position: absolute
+        right: 0
+        bottom: 0
+        max-height: 650px
+        height: auto
     &__items
         display: flex
         flex-wrap: wrap
         justify-content: flex-start
+        margin-top: 40px
 
 .item
-    margin: 40px 45px 0px
+    margin: 60px 45px 0px
     display: flex
     flex-direction: column
     align-items: center
+    &_why
+        margin: 60px 15px 0px
     &__ico
         height: 124px
         width: 124px
@@ -180,19 +215,168 @@ body
         position: relative
         background-color: #fff
         box-shadow: 0 0 0 10px #e4e4e4
+        &_why
+            height: 184px
+            width: 184px
     &__img
         position: absolute
         top: 50%
         left: 50%
+        max-width: 124px
+        height: auto
         transform: translate(-50%, -50%)
+        &_why
+            max-width: 184px
     &__header
-        font-size: 22px
+        font-size: 20px
         font-weight: 700
         text-align: center
         margin: 25px 0px 20px
+        line-height: 26px
+        &_mw
+            max-width: 260px
     &__text
         max-width: 280px
         font-weight: 300
+
+.why
+    background-image: url(../img/why_bg.jpg)
+    background-repeat: no-repeat
+    background-position: center
+    background-size: cover
+    padding: 75px 0px 125px
+    &__items
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-around
+
+.agit
+    background-image: url(../img/agit_bg.jpg)
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center
+    padding: 90px 0px 150px
+    position: relative
+    &__person
+        position: absolute
+        bottom: -17px
+        right: 300px
+    &__header
+        max-width: 560px
+        font-size: 42px
+        font-weight: normal
+        margin-bottom: 40px
+        b
+            font-weight: 600
+
+.about
+    padding: 70px 0px
+    background-image: url(../img/about_bg.jpg)
+    background-repeat: no-repeat
+    background-position-y: bottom
+    background-size: contain
+    &__items
+        display: flex
+        align-items: center
+        justify-content: space-between
+        margin-bottom: 60px
+    &__text
+        text-align: center
+        font-weight: 700
+        font-size: 20px
+        max-width: 900px
+        margin-bottom: 50px
+    .item
+        margin: 60px 0px 0px
+        &__header
+            max-width: 240px
+
+.price
+    padding: 80px 0px 160px
+    &__text:first-of-type
+        margin-top: 20px
+    &__text
+        font-weight: 300
+        font-size: 22px
+        text-align: center
+        line-height: 32px
+    &__pricelist
+        margin-top: 40px
+        border: 1px solid #cccccc
+        border-radius: 10px
+        overflow: hidden
+
+.table
+    &__no, &__yes
+        position: relative
+        span
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            width: 12px
+            height: 12px
+            display: inline-block
+            background-size: contain
+            background-repeat: no-repeat
+            background-position: center
+    &__no
+        span
+            background-image: url(../img/table_no.png)
+    &__yes
+        span
+            background-image: url(../img/table_yes.png)
+    th
+        background-color: #ed0f15
+        color: #fff
+        font-size: 20px
+        font-weight: 500
+        padding: 15px
+        text-align: center
+        font-family: "Montserrat", sans-serif
+    td
+        font-size: 18px
+        padding: 15px 40px
+        border: 1px dotted #cccccc
+        img + img
+            margin-left: 5px
+    &__has-img
+        padding: 9px 40px !important
+    &__link-inline
+        font-size: 18px
+        font-weight: 500
+        padding: 20px 0px
+        text-decoration: none
+        color: #585858
+        text-align: center
+    &__prices
+        background-color: #f1f1f1
+        padding: 22px 40px
+        width: 100%
+        display: flex
+        justify-content: space-between
+        align-items: flex-start
+    &__red
+        font-size: 24px
+        font-weight: 700
+        color: #ba0106
+    &__cols
+        display: flex
+        width: 100%
+        justify-content: space-between
+        max-width: 465px
+    &__col
+        display: flex
+        flex-direction: column
+        align-items: center
+        &-header
+            color: #ba0106
+            font-size: 30px
+            font-weight: 700
+        &-span
+            font-weight: 700
+            font-size: 18px
+            margin-bottom: 10px
 
 .footer
     flex-grow: 0
