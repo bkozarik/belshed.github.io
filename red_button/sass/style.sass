@@ -5,7 +5,7 @@ $main_red: #d31b21
     margin: 0
     padding: 0
     border-radius: 0px
-    box-sizing: border-box 
+    box-sizing: border-box
     transition: all .2s ease-in-out 0s
 
 *
@@ -32,6 +32,8 @@ body
         color: $main_red
     &__italic
         font-style: italic
+    &__semibold
+        font-weight: 600
 
 .section
     &__header
@@ -58,6 +60,7 @@ body
     display: inline-block
     background: rgb(217,34,39)
     background: linear-gradient(180deg, rgba(217,34,39,1) 0%, rgba(168,14,21,1) 100%)
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .4)
     border-radius: 6px
     font-size: 18px
     color: #fff
@@ -68,7 +71,7 @@ body
         cursor: pointer
         background: rgb(255,255,255)
         color: rgb(217,34,39)
-        box-shadow: 0 0 0 1px rgb(217,34,39)
+        box-shadow: 0 0 0 1px rgb(217,34,39), 0 2px 4px rgba(0, 0, 0, .4)
         background: linear-gradient(180deg, rgba(255,255,255,1) 8%, rgba(225,225,225,1) 86%)
     &__wrap
         width: 100%
@@ -84,13 +87,31 @@ body
         padding: 12px 50px
     &__in-table
         padding: 10px 35px
+    &__individual
+        padding: 13px 45px
+    &__agit2
+        width: 100%
+        flex-basis: 50%
+        max-height: 53px
+        padding: 16px 0px
+    &__partnership
+        padding: 18px 50px
+    &__popup
+        padding: 15px 50px
 
 .header
     flex-grow: 0
     padding: 25px 0px
     box-shadow: 0px 2px 15px 5px rgba(0, 0, 0, .2)
     position: relative
-    z-index: 10
+    z-index: 100
+    background-color: #fff
+    &.fixed
+        position: fixed
+        padding: 2px 0px
+        width: 100%
+        top: 0
+        left: 0
     &__wrap
         display: flex
         align-items: center
@@ -98,6 +119,7 @@ body
     &__logo
         display: flex
         align-items: center
+        text-decoration: none
         &-img
             height: auto
             max-width: 57px
@@ -105,7 +127,9 @@ body
             margin-right: 10px
         &-text
             font-size: 18px
+            color: #000
             font-weight: bold
+            text-decoration: none
     &__menu
         max-width: 470px
         flex-grow: 1
@@ -133,9 +157,73 @@ body
         font-family: 'Exo 2', serif
         &:hover
             color: $main_red
+    &__burger
+        position: relative
+        display: none
+        border: none
+        border-radius: 0px
+        background-color: transparent
+        height: 40px
+        width: 40px
+        span
+            width: 25px
+            height: 2px
+            background-color: $main_red
+            display: inline-block
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+        &::before, &::after
+            content: ''
+            display: inline-block
+            background-color: $main_red
+            width: 25px
+            height: 2px
+            position: absolute
+            left: 50%
+            transform-origin: left
+            transform: translateX(-50%)
+        &::before
+            top: 10px
+        &::after
+            bottom: 10px
+        &.active
+            span
+                transform: scaleX(0)
+            &::before
+                left: 60%
+                transform: translateX(-50%) rotate(45deg)
+            &::after
+                left: 60%
+                transform: translateX(-50%) rotate(-45deg)
+
+.mobile
+    position: fixed
+    right: 0
+    top: 0
+    width: 40%
+    height: 100vh
+    padding: 65px 20px
+    z-index: 20
+    background-color: #fff
+    transform: translateX(100%)
+    .header
+        &__list
+            flex-direction: column
+            &-item
+                margin-top: 15px
+        &__button
+            margin-top: 20px
+    &.active
+        transform: translateX(0%)
 
 .main
     flex-grow: 1
+    transition-duration: 0s
+    &.fixed
+        margin-top: 50px
+        transition-duration: 0s
 
 .banner
     min-height: 1000px
@@ -143,11 +231,14 @@ body
     background-image: url(../img/banner_bg.jpg)
     background-size: contain
     background-repeat: no-repeat
+    background-position: center
+    z-index: 2
     &__wrap
         display: flex
         flex-direction: column
         align-items: center
-        padding-top: 200px
+        padding-top: 130px
+        padding-bottom: 70px
     &__text
         font-size: 19px
         font-weight: 300
@@ -186,9 +277,11 @@ body
             text-align: center
 
 .how
-    padding-top: 50px
+    padding-top: 60px
     padding-bottom: 90px
     position: relative
+    box-shadow: 0 2px 8px 1px rgba(0, 0, 0, .2)
+    margin-top: -7px
     &__bg
         position: absolute
         right: 0
@@ -227,17 +320,73 @@ body
         transform: translate(-50%, -50%)
         &_why
             max-width: 184px
+    &__header + &__header
+        margin-top: 10px
     &__header
         font-size: 20px
         font-weight: 700
         text-align: center
         margin: 25px 0px 20px
         line-height: 26px
+        position: relative
         &_mw
             max-width: 260px
     &__text
         max-width: 280px
+        position: relative
         font-weight: 300
+    &__more
+        text-decoration: none
+        font-size: 17px
+        font-weight: 600
+        color: $main_red
+        position: relative
+        &::after
+            display: inline-block
+            content: ''
+            height: 30px
+            width: 30px
+            border-radius: 50%
+            background-color: $main_red
+            background-image: url(../img/rules_arrow.png)
+            transform: translate(10px, 9px) rotate(-90deg)
+            background-position: center
+            background-repeat: no-repeat
+
+.question
+    position: relative
+    display: inline-block
+    height: 22px
+    width: 22px
+    border-radius: 50%
+    text-align: center
+    line-height: 22px
+    font-weight: 500
+    font-size: 15px
+    color: #fff
+    background-color: #bababa
+    margin-left: 5px
+    &__tip
+        position: absolute
+        visibility: hidden
+        display: block
+        opacity: 0
+        top: 0
+        left: 80%
+        transform: translate(-50%, -82%)
+        z-index: 10
+        width: 400px
+        background-color: $main_red
+        padding: 40px
+        font-size: 15px
+        font-weight: 500
+        color: #fff
+    &:hover + .question__tip
+        visibility: visible
+        opacity: 1
+    &:hover
+        background-color: $main_red
+        cursor: pointer
 
 .why
     background-image: url(../img/why_bg.jpg)
@@ -249,6 +398,8 @@ body
         display: flex
         flex-wrap: wrap
         justify-content: space-around
+        .question__tip
+            transform: translate(-50%, -92%)
 
 .agit
     background-image: url(../img/agit_bg.jpg)
@@ -260,7 +411,7 @@ body
     &__person
         position: absolute
         bottom: -17px
-        right: 300px
+        right: 15%
     &__header
         max-width: 560px
         font-size: 42px
@@ -268,6 +419,78 @@ body
         margin-bottom: 40px
         b
             font-weight: 600
+    &__form
+        width: 100%
+        max-width: 675px
+    &__row + &__row
+        margin-top: 20px
+    &__row
+        display: flex
+        align-items: flex-end
+    &__label
+        flex-basis: 50%
+        display: inline-block
+        &-text
+            display: block
+            font-size: 18px
+            font-weight: 800
+            margin-bottom: 15px
+    &__label:first-child
+        margin-right: 10px
+    &__input
+        display: inline-block
+        width: 100%
+        padding: 15px 20px
+        border-radius: 10px
+        font-size: 19px
+        font-weight: 500
+        line-height: 19px
+    &__check
+        &-wrap
+            margin-top: 30px
+        &-label
+            user-select: none
+            &:hover
+                cursor: pointer
+        &-placeholder
+            display: inline-block
+            height: 15px
+            width: 15px
+            border-radius: 4px
+            border: 1px solid #c30f0f
+            background-color: #eeeded
+            position: relative
+            transform: translateY(2px)
+            margin-right: 10px
+            &::before
+                content: ''
+                display: inline-block
+                height: 8px
+                width: 8px
+                position: absolute
+                top: 52%
+                left: 54%
+                transform: translate(-55%, -50%)
+                background-image: url(../img/rules_arrow.png)
+                background-position: center
+                background-size: contain
+                background-repeat: no-repeat
+                opacity: 0
+        &-checkbox:checked + &-placeholder
+            background-color: #c30f0f
+            &::before
+                opacity: 1
+        &-checkbox
+            height: 1px
+            width: 1px
+            display: inline-block
+            visibility: hidden
+        &-text
+            font-size: 15px
+            font-weight: 300
+            a
+                font-weight: 500
+                color: #000
 
 .about
     padding: 70px 0px
@@ -275,10 +498,12 @@ body
     background-repeat: no-repeat
     background-position-y: bottom
     background-size: contain
+    box-shadow: 0 2px 8px 1px rgba(0, 0, 0, .2)
     &__items
         display: flex
         align-items: center
         justify-content: space-between
+        align-items: baseline
         margin-bottom: 60px
     &__text
         text-align: center
@@ -293,6 +518,17 @@ body
 
 .price
     padding: 80px 0px 160px
+    position: relative
+    overflow: hidden
+    background-image: url(../img/price__bg2.jpg)
+    background-position: right bottom
+    background-repeat: no-repeat
+    &__bg
+        position: absolute
+        max-width: 30vw
+        transition-duration: 0s
+        left: 0
+        top: -150px
     &__text:first-of-type
         margin-top: 20px
     &__text
@@ -300,13 +536,80 @@ body
         font-size: 22px
         text-align: center
         line-height: 32px
+        &-b
+            font-size: 20px
+            text-align: center
+            font-weight: 600
+            line-height: 28px
+        &-b:last-of-type
+            margin-bottom: 35px
     &__pricelist
         margin-top: 40px
         border: 1px solid #cccccc
+        background-color: #fff
         border-radius: 10px
         overflow: hidden
+    &__card
+        margin: 0px 5px
+    &__cards
+        display: flex
+        align-items: center
+        margin: 40px 0px
+        &-list
+            display: flex
+            align-items: center
+        span
+            font-weight: 700
+            font-size: 20px
+            margin-right: 15px
+            display: inline-block
+    &__header
+        font-size: 36px
+        margin-top: 70px
+    &__addons
+        margin-top: 25px
+        &-list
+            max-width: 1000px
+            margin-top: 40px
+        &-item + &-item
+            margin-top: 20px
+        &-item
+            display: flex
+            align-items: center
+            justify-content: space-between
+            width: 100%
+        &-col
+            max-width: 740px
+            min-width: 150px
+            display: flex
+            align-items: baseline
+        &-img
+            margin-right: 15px
+            vertical-align: middle
+            transform: translateY(5px)
+            max-width: 45px
+            height: auto
+        &-main
+            font-size: 22px
+            font-weight: 500
+        &-light
+            font-size: 16px
+            font-weight: 300
+            color: #6b6b6b
+            margin-left: .3em
+        &-price
+            font-weight: 700
+            font-size: 26px
+            color: #df050c
+            margin-left: 13px
+            margin-right: 5px
 
 .table
+    width: 100%
+    min-width: 725px
+    &__wrap
+        width: 100%
+        overflow-x: auto
     &__no, &__yes
         position: relative
         span
@@ -373,10 +676,258 @@ body
             color: #ba0106
             font-size: 30px
             font-weight: 700
+            text-align: center
         &-span
             font-weight: 700
+            text-align: center
             font-size: 18px
             margin-bottom: 10px
+   
+.agit2
+    background-image: url(../img/agit2_bg.jpg)
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center
+    padding: 50px 0px 120px
+    position: relative
+    &__wrapper
+        display: flex
+        flex-direction: column
+        align-items: flex-end
+    &__person
+        position: absolute
+        bottom: 0
+        left: 200px
+        z-index: 0
+
+.partnership
+    padding: 60px 0px 220px
+    background-image: url(../img/partnership_bg.png)
+    background-position-y: bottom
+    background-position-x: -100px
+    background-repeat: no-repeat
+    position: relative
+    &__bg
+        position: absolute
+        right: 0
+        bottom: 0
+        z-index: -1
+    &__wrapper
+        width: 100%
+        display: flex
+        flex-direction: column
+        align-items: center
+    &__body
+        max-width: 1110px
+        width: 100%
+        display: flex
+        flex-direction: column
+        align-items: center
+        padding: 40px 100px 50px
+        border-radius: 10px
+        border: 1px solid #cccccc
+        margin-top: 50px
+    &__middletext
+        text-align: center
+        font-size: 18px
+        line-height: 30px
+        margin-bottom: 25px
+    &__benefits, &__examples
+        margin-bottom: 25px
+    &__benefits
+        max-width: 740px
+    &__benefit + &__benefit, &__example + &__example
+        margin-top: 10px
+    &__benefit
+        display: inline-block
+        &::before
+            content: ''
+            display: inline-block
+            height: 24px
+            width: 24px
+            margin-right: 10px
+            transform: translateY(5px)
+            background-image: url(../img/benefit_item.png)
+    &__examples
+        max-height: 160px
+        columns: 2
+    &__example
+        list-style-image: url(../img/example_item.png)
 
 .footer
     flex-grow: 0
+    padding: 50px 0px 60px
+    .header__menu
+        max-width: 870px
+    .header__wrap
+        margin-bottom: 40px
+    .header__list-item
+        &::before
+            background-color: transparent
+            background-image: url(../img/footer_item.png)
+            border-radius: 0
+            height: 10px
+            width: 10px
+            background-repeat: no-repeat
+            background-position: center
+            top: 50%
+            position: absolute
+            left: -17px
+    &__copyright
+        text-align: center
+        margin-top: 65px
+
+.popup
+    background-color: #f3f3f3
+    max-height: 98vh
+    padding: 45px 60px
+    border-radius: 10px
+    position: relative
+    border: 1px solid #fff
+    overflow-y: auto
+    box-shadow: 0 0 54px 11px rgba(0, 0, 0, .2)
+    display: none
+    &.active
+        display: block
+    &__bg
+        display: flex
+        align-items: center
+        justify-content: center
+        position: fixed
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        z-index: 1000
+        background-color: rgba(195, 195, 195, .7)
+        display: none
+        &.active
+            display: flex
+    &__body
+        display: flex
+        flex-direction: column
+        align-items: center
+        position: relative
+    &__close-link
+        display: inline-block
+        width: 40px
+        height: 40px
+        position: absolute
+        top: 10px
+        right: 10px
+    &__cross
+        position: absolute
+        display: inline-block
+        top: 50%
+        left: 50%
+        width: 14px
+        height: 14px
+        transform: translate(-50%, -50%)
+        &::after, &::before
+            content: ''
+            display: inline-block
+            position: absolute
+            width: 12px
+            height: 2px
+            top: 50%
+            left: 50%
+            background-color: #a3a3a3
+        &::before
+            transform: translate(-50%, -50%) rotate(-45deg)
+        &::after
+            transform: translate(-50%, -50%) rotate(45deg)
+    &__header
+        text-align: center
+        &_small
+            font-size: 24px
+            font-weight: 600
+        &_big
+            font-size: 30px
+            font-weight: 500
+            max-width: 470px
+    &__text
+        margin-top: 30px
+        font-weight: 300
+        font-size: 18px
+    &__flex-row
+        display: flex
+        justify-content: space-between
+        align-items: flex-start
+        width: 100%
+        max-width: 705px
+        margin-top: 40px
+    &__img
+        max-width: 195px
+        height: 290px
+        object-fit: cover
+        background-color: #d3d3d3
+        border: 6px solid #d4d4d4
+    &__label + &__label
+        margin-top: 20px
+    &__label
+        font-weight: 600
+        font-size: 16px
+        max-width: 410px
+        width: 100%
+    &__input
+        display: block
+        width: 100%
+        border-radius: 10px
+        border: 1px solid #cdcdcd
+        padding: 8px 10px
+        font-size: 19px
+        font-weight: 300
+        margin-top: 10px
+    &__form
+        display: flex
+        flex-direction: column
+        align-items: center
+        margin-top: 30px
+    &__check
+        visibility: hidden
+        height: 1px
+        width: 1px
+        opacity: 0
+        &-label
+            font-size: 16px
+            font-weight: 300
+            margin: 30px 0px
+            &:hover
+                cursor: pointer
+                .popup__check-placeholder
+                    background-color: #dfdfdf
+        &-link
+            font-weight: 500
+            color: #000
+        &-placeholder
+            display: inline-block
+            height: 15px
+            width: 15px
+            border: 1px solid $main_red
+            border-radius: 3px
+            transform: translateY(2px)
+            margin-right: 2px
+            position: relative
+            background-color: #f1f1f1
+            &::before
+                display: inline-block
+                content: ''
+                position: absolute
+                background-image: url(../img/rules_arrow.png)
+                background-size: contain
+                background-position: center
+                background-repeat: no-repeat
+                height: 7px
+                width: 7px
+                top: 50%
+                left: 50%
+                transform: translate(-48%, -50%)
+                opacity: 0
+    &__check:checked + .popup__check-placeholder
+        background-color: $main_red
+        &::before
+            opacity: 1
+    &__nofear
+        max-width: 1110px
+    &__registration
+        max-width: 805px
