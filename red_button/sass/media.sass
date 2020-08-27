@@ -17,8 +17,8 @@
 
     .agit2
         &__person
-            left: 0%
-            max-width: 80vw
+            left: 5%
+            max-width: 40vw
     
 @media screen and ( max-width: 1200px )
 
@@ -28,7 +28,7 @@
 
     .agit2
         &__person
-            max-width: 70vw
+            max-width: 35vw
 
     .agit
         &__person
@@ -50,6 +50,11 @@
         th, td
             font-size: 16px
             padding: 15px
+        &__prices
+            padding: 20px
+        &__cols
+            flex-basis: 65%
+            max-width: auto
 
 @media screen and ( max-width: 1010px )
     .banner
@@ -117,6 +122,12 @@
             margin-top: 50px
             transform: translate(0, 0%)
 
+    .agit
+        &__header
+            margin-right: 0
+            text-align: center
+            width: 100%
+
     .banner
         &__wrap 
             padding-top: 60px
@@ -171,15 +182,12 @@
 
     .table
         &__prices
-            flex-direction: column
             padding: 18px 30px
         &__cols
-            flex-direction: column
             align-items: center
             margin-top: 15px
         &__col
             margin-top: 15px
-            flex-direction: row
             align-items: center
             &-price
                 margin-right: 10px
@@ -235,7 +243,6 @@
     .agit
         &__header
             font-size: 30px
-            max-width: 400px
         &__person
             max-width: 270px
             bottom: -9px

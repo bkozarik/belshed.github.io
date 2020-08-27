@@ -331,10 +331,22 @@ body
         font-weight: 500
         transform: translate(-50%, -103%)
         color: #fff
-    &:hover + .question__tip
-        visibility: visible
-        opacity: 1
     &:hover
+        background-color: $main_red
+        cursor: pointer
+        .question__tip
+            visibility: visible
+            opacity: 1
+        &::after
+            content: ''
+            display: inline-block
+            position: absolute
+            top: 0
+            left: 50%
+            transform: translate(-50%, -50%)
+            border: 6px solid transparent
+            border-top: 6px solid $main_red
+    &.active
         background-color: $main_red
         cursor: pointer
         .question__tip
@@ -398,8 +410,6 @@ body
             border: 8px solid transparent
             border-left: 8px solid $main_red
             border-top: 8px solid $main_red
-
-
 
 .item
     margin: 60px 45px 0px
@@ -678,10 +688,11 @@ body
 
 .table
     width: 100%
-    min-width: 725px
     &__wrap
         width: 100%
         overflow-x: auto
+        & > *
+            min-width: 725px
     &__no, &__yes
         position: relative
         span
@@ -739,7 +750,7 @@ body
         display: flex
         width: 100%
         justify-content: space-between
-        max-width: 465px
+        max-width: 515px
     &__col
         display: flex
         flex-direction: column

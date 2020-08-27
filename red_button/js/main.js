@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let nofearTriggers = document.querySelectorAll('.open_nofear');
     let closeFormsTriggers = document.querySelectorAll('.popup__close');
     let scrollableLinks = document.querySelectorAll('.scroll_link');
+    let tipTriggers = document.querySelectorAll('.open_tip');
     let burgerBtn = document.querySelector('.open_menu');
 
     const toggleMenu = (btnState) => {
@@ -83,6 +84,27 @@ document.addEventListener('DOMContentLoaded', () => {
         popupBg.classList.remove('active');
     }
 
+    const tipClick = () => {
+        let target = event.target;
+
+        tipTriggers.forEach(item => {
+            if(item.classList.contains('active')){
+                item.classList.remove('active');
+            }
+        });
+
+        document.addEventListener('click', () => {
+
+            tipTriggers.forEach(item => {
+                if(item.classList.contains('active')){
+                    item.classList.remove('active');
+                }
+            });
+        });
+
+        target.classList.add('active');
+    }
+
     const resizeHandler = () => {
         let nav = document.querySelector('.header__nav');
         let headerBtn = document.querySelector('.header__button');
@@ -121,6 +143,10 @@ document.addEventListener('DOMContentLoaded', () => {
     resizeHandler();
 
     burgerBtn.addEventListener('click', toggleMenu);
+
+    tipTriggers.forEach(item => {
+        item.addEventListener('click', tipClick);
+    });
 
     scrollableLinks.forEach(item => {
         item.addEventListener('click', scrollLinkClick);
