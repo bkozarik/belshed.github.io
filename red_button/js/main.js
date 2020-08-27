@@ -5,10 +5,11 @@ document.addEventListener('DOMContentLoaded', () => {
     let scrollableLinks = document.querySelectorAll('.scroll_link');
     let burgerBtn = document.querySelector('.open_menu');
 
-    const toggleMenu = (state=undefined) => {
+    const toggleMenu = (btnState) => {
 
         const menu = document.querySelector('.menu');
-        if(state == undefined){
+
+        if(typeof(btnState) != 'boolean'){
             if(burgerBtn.classList.contains('active')){
                 burgerBtn.classList.remove('active');
                 menu.classList.remove('active');
@@ -19,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
         else{
-            if(state){
+            if(btnState){
                 burgerBtn.classList.add('active');
                 menu.classList.add('active');
                 
@@ -33,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const scrollLinkClick = () => {
         event.preventDefault();
 
-        toggleMenu();
+        toggleMenu(false);
 
         let target = event.target;
 
@@ -118,7 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     scrollHandler();
     resizeHandler();
-    
+
     burgerBtn.addEventListener('click', toggleMenu);
 
     scrollableLinks.forEach(item => {

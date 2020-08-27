@@ -1,13 +1,31 @@
 @media screen and ( max-width: 1600px )
+    .banner
+        min-height: auto
+        &__bg2
+            right: 0
+            max-width: 45vw
+
+    .how
+        &__tip
+            transform: translate(0, 50%)
+            &::after
+                display: none
+
     .partnership
         &__bg
             display: none
+
     .agit2
         &__person
             left: 0%
             max-width: 80vw
     
 @media screen and ( max-width: 1200px )
+
+    .banner
+        &__bg2
+            max-width: 30vw
+
     .agit2
         &__person
             max-width: 70vw
@@ -34,6 +52,10 @@
             padding: 15px
 
 @media screen and ( max-width: 1010px )
+    .banner
+        &__bg2
+            right: 0
+
     .header
         padding: 5px 0px
         &.fixed
@@ -90,6 +112,19 @@
             bottom: -12px
 
 @media screen and ( max-width: 970px )
+    .how
+        &__tip
+            margin-top: 50px
+            transform: translate(0, 0%)
+
+    .banner
+        &__wrap 
+            padding-top: 60px
+            padding-bottom: 150px
+        &::after
+            height: 150px
+            background-size: auto
+
     .header
         &__burger
             display: inline-block
@@ -97,9 +132,8 @@
 
 @media screen and ( max-width: 860px )
     .banner
-        min-height: auto
-        &__wrap
-            padding: 60px 0px 
+        &__bg2
+            display: none
 
     .how
         &__items
@@ -107,6 +141,10 @@
             .item
                 margin: 50px 10px 0px
                 max-width: 280px
+
+    .how
+        &__bg
+            display: none
 
     .price
         padding: 50px 0px 100px
@@ -158,6 +196,22 @@
             max-width: 300px
             right: 0%
             bottom: -9px
+
+    .popup
+        padding: 40px 30px
+        &__header
+            &_big
+                font-size: 24px
+        &__label
+            font-size: 14px
+        &__input
+            font-size: 16px
+        &__flex-row
+            margin-top: 10px
+            flex-wrap: wrap
+            justify-content: space-around
+        &__img
+            margin-top: 20px
 
 @media screen and ( max-width: 670px )
     .footer
