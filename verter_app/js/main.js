@@ -14,14 +14,21 @@ document.addEventListener('DOMContentLoaded', () => {
         let touchTarget = event.target;
         let xPos = touch.clientX;
         let diff = touchStartX - xPos;
+        let windowWidth = window.innerWidth;
+        let persentage = (diff / windowWidth) * 100;
+
         while(!touchTarget.classList.contains("table__row-link")){
             touchTarget = touchTarget.parentElement;
         }
 
         touchTarget.style.transform = "translateX(-" + diff + "px)";
 
-        if(diff > 200){
+        if(persentage > 20){
             touchTarget.classList.add('table__row_remove');
+            touchTarget.removeAttribute('style');
+        }
+        else if (persentage < -20){
+            touchTarget.classList.remove('table__row_remove');
             touchTarget.removeAttribute('style');
         }
 
@@ -33,15 +40,23 @@ document.addEventListener('DOMContentLoaded', () => {
         let touch = event.changedTouches[0];
         
         touchStartX = touch.clientX;
+
+        let touchTarget = event.target;
+        while(!touchTarget.classList.contains("table__row-link")){
+            touchTarget = touchTarget.parentElement;
+        }
+        touchTarget.classList.add('active');
     }
 
     const touchEndHandler = () => {
         event.preventDefault();
+        
         let touchTarget = event.target;
         while(!touchTarget.classList.contains("table__row-link")){
             touchTarget = touchTarget.parentElement;
         }
         touchTarget.removeAttribute('style');
+        touchTarget.classList.remove('active');
     }   
 
     const removeRow = () => {

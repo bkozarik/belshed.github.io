@@ -25,8 +25,20 @@
                     <dd class="uk-inline">
                         <div class="uk-inline">
                             <span>Без выходных <img src="./img/info.svg"></span>
-                            <div uk-dropdown>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                            <div class="uk-card uk-card-body" uk-dropdown>
+                                <h3 class="footer__card-header uk-text-bold">Время работы:</h3>
+                                <div class="footer__card-body uk-flex uk-flex-between">
+                                    <div class="footer__card-col uk-flex uk-flex-column">
+                                        <span>пн-пт:</span>
+                                        <span>сб:</span>
+                                        <span>вс:</span>
+                                    </div>
+                                    <div class="footer__card-col uk-flex uk-flex-column">
+                                        <span>09:00 — 21:00</span>
+                                        <span>09:00 — 20:00</span>
+                                        <span>09:00 — 17:00</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </dd>
@@ -43,9 +55,12 @@
                     <dt>Телефоны:</dt>
                     <dd>
                         <div class="uk-inline">
-                            <span><img src="./img/operator1.png" alt="">+375 (29) 110-12-12</span>
-                            <div uk-dropdown>
-                                <p>sdfsdf</p>
+                            <span class="header__dropdown"><img src="./img/operator1.png" alt="">+375 (29) 110-12-12</span>
+                            <div class="header__dropdown-container" uk-dropdown="mode: click">
+                                <span><a href="tel:+375291101212" class="footer__dd-link"><img src="./img/operator1.png">+375 (29) 110-12-12</a></span>
+                                <span><a href="tel:+375336601313" class="footer__dd-link"><img src="./img/operator2.png">+375 (33) 660-13-13</a></span>
+                                <span><a href="tel:+375251101212" class="footer__dd-link"><img src="./img/operator3.png">+375 (25) 110-12-12</a></span>
+                                <span><a href="tel:+375172844511" class="footer__dd-link"><img src="./img/operator4.png">+375 (17) 284-45-11</a></span>
                             </div>
                         </div>
                         <div class="uk-flex-inline uk-flex-between">
@@ -66,9 +81,14 @@
                     <a href="#">услуги</a>
                     <div class="uk-navbar-dropdown">
                         <ul class="uk-nav uk-navbar-dropdown-nav">
-                            <li><a href="#">Item</a></li>
-                            <li><a href="#">Item</a></li>
-                            <li><a href="#">Item</a></li>
+                            <li><a href="#"><img src="./img/inline-arrow-w.svg">Лечение пульпита</a></li>
+                            <li><a href="#"><img src="./img/inline-arrow-w.svg">Протезирование</a></li>
+                            <li><a href="#"><img src="./img/inline-arrow-w.svg">Хирургия</a></li>
+                            <li><a href="#"><img src="./img/inline-arrow-w.svg">Ортодонтия</a></li>
+                            <li><a href="#"><img src="./img/inline-arrow-w.svg">Отбеливание</a></li>
+                            <li><a href="#"><img src="./img/inline-arrow-w.svg">Профилактика</a></li>
+                            <li><a href="#"><img src="./img/inline-arrow-w.svg">Парадонтология</a></li>
+                            <li><a href="#"><img src="./img/inline-arrow-w.svg">Косметология</a></li>
                         </ul>
                     </div>
                 </li>
@@ -148,7 +168,7 @@
                             <img src="./img/benefit1.png" class="benefit__img">
                             <h3 class="benefit__header">Стоматологии высшей категории</h3>
                         </div>
-                        <div class="uk-card uk-card-body" uk-drop="pos: top-left">
+                        <div class="uk-card uk-card-body">
                             <div class="benefit__head uk-flex uk-flex-middle">
                                 <img src="./img/benefit1.png" class="benefit__img">
                                 <h3 class="benefit__header">Стоматологии высшей категории</h3>
@@ -161,7 +181,7 @@
                             <img src="./img/benefit2.png" class="benefit__img">
                             <h3 class="benefit__header">Новейшее оборудование</h3>
                         </div>
-                        <div class="uk-card uk-card-body" uk-drop="pos: top-left">
+                        <div class="uk-card uk-card-body">
                             <div class="benefit__head uk-flex uk-flex-middle">
                                 <img src="./img/benefit2.png" class="benefit__img">
                                 <h3 class="benefit__header">Новейшее оборудование</h3>
@@ -174,7 +194,7 @@
                             <img src="./img/benefit3.png" class="benefit__img">
                             <h3 class="benefit__header">Находимся в центре Минска</h3>
                         </div>
-                        <div class="uk-card uk-card-body" uk-drop="pos: top-left">
+                        <div class="uk-card uk-card-body">
                             <div class="benefit__head uk-flex uk-flex-middle">
                                 <img src="./img/benefit3.png" class="benefit__img">
                                 <h3 class="benefit__header">Находимся в центре Минска</h3>
@@ -187,7 +207,7 @@
                             <img src="./img/benefit4.png" class="benefit__img">
                             <h3 class="benefit__header">Индивидуальный подход</h3>
                         </div>
-                        <div class="uk-card uk-card-body" uk-drop="pos: top-left">
+                        <div class="uk-card uk-card-body">
                             <div class="benefit__head uk-flex uk-flex-middle">
                                 <img src="./img/benefit4.png" class="benefit__img">
                                 <h3 class="benefit__header">Индивидуальный подход</h3>
@@ -231,7 +251,7 @@
                             <span class="slider__pagination">1/<span class="slider__pagination-total">8</span></span>
                         </div>
                     </div>
-                    <ul class="uk-slider-items uk-child-width-1-4">
+                    <ul class="uk-slider-items uk-child-width-1-4 uk-grid">
                         <li>
                             <div class="uk-card uk-card-default">
                                 <div class="uk-card-body">
@@ -340,7 +360,7 @@
             <div class="uk-container">
                 <div class="uk-flex uk-flex-between uk-flex-middle">
                     <h2 class="uk-h2">Наши услуги</h2>
-                    <a href="#" class="uk-link">Портфолио работ</a>
+                    <a href="#" class="uk-link green-link">Портфолио работ</a>
                 </div>
                 <div class="uk-flex uk-flex-between uk-child-width-1-4">
                     <div class="uk-card uk-card-default">
@@ -448,8 +468,8 @@
         <section class="more">
             <div class="uk-container">
                 <div class="uk-flex uk-flex-between uk-flex-middle">
-                    <h2 class="uk-h2">Наши услуги</h2>
-                    <a href="#" class="uk-link">Портфолио работ</a>
+                    <h2 class="uk-h2">Это интересно"</h2>
+                    <a href="#" class="uk-link green-link">Все статьи</a>
                 </div>
                 <div class="uk-flex uk-flex-between uk-child-width-1-4">
                     <div class="uk-card uk-card-default">

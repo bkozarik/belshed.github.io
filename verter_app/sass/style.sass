@@ -1,3 +1,14 @@
+$maxWidth: 720
+
+@mixin adaptiv-font($pcSize, $mobSize)
+    $addSize: $pcSize - $mobSize
+    $maxWidth: $maxWidth - 320
+    transition-duration: 0s
+    $result: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}))
+    font-size: $result
+    line-height: calc(#{$result} + 5px)
+
+
 $black: #0e0f0e
 $main_yellow: #faf406
 
@@ -20,10 +31,8 @@ $main_yellow: #faf406
     align-items: center
     min-height: 100vh
     transition-duration: 0s
-    max-width: 720px
 
 .global__wrapper
-    max-width: 720px
     overflow-x: hidden
     flex-grow: 1
     background-color: #fff
@@ -36,6 +45,12 @@ $main_yellow: #faf406
     flex-direction: column
     min-height: 120vh
 
+.center
+    position: absolute
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%)
+
 .container
     padding: 0px 75px
     margin: 0 auto
@@ -43,6 +58,7 @@ $main_yellow: #faf406
 .button
     border-radius: 15px
     font-size: 32px
+    @include adaptiv-font(32, 18)
     font-weight: bold
     text-transform: uppercase
     color: $black
@@ -94,6 +110,7 @@ $main_yellow: #faf406
     &__link
         color: #fff
         font-size: 60px
+        @include adaptiv-font(60, 32)
         font-weight: 500
     &.active
         visibility: visible
@@ -111,12 +128,14 @@ $main_yellow: #faf406
         justify-content: space-between
         align-items: center
     &__logo
+        display: flex
+        align-items: center
         &-img
             vertical-align: middle
             margin-right: 10px
     &__back
         text-transform: lowercase
-        font-size: 18px
+        @include adaptiv-font(18, 12)
         color: $black
         text-decoration: none
         position: relative
@@ -133,6 +152,7 @@ $main_yellow: #faf406
            margin-right: 10px
     &__pagename
         font-size: 26px
+        @include adaptiv-font(26, 14)
         font-weight: 500
         max-width: 230px
         text-align: center
@@ -181,7 +201,7 @@ $main_yellow: #faf406
                 transition-delay: .2s
                 transform: translate(-5%, -50%) rotate(-90deg)
     &__version
-        font-size: 18px
+        @include adaptiv-font(18, 12)
         color: $black
     &_nopadding
         padding: 30px 0px 25px
@@ -205,7 +225,7 @@ $main_yellow: #faf406
     &__count
         z-index: 2
         position: relative
-        font-size: 24px
+        @include adaptiv-font(24, 14)
         font-weight: 500
         color: #fff
 
@@ -229,11 +249,17 @@ $main_yellow: #faf406
         position: relative
         background-color: #fff
         z-index: 2
-        padding: 30px 0px 25px
         &-link
+            padding: 30px 0px 25px
             text-decoration: none
             color: $black
             display: block
+            &:hover
+                cursor: pointer
+            &:hover, &.active
+                background-color: #eaec59 !important
+                .table__row-link
+                    background-color: #eaec59 !important
         &_nopadding
             padding: 0
         &_padding
@@ -253,40 +279,37 @@ $main_yellow: #faf406
             top: 50%
             display: block
             height: 100%
-            width: 275px
+            width: 30%
             transform: translate(0%, -50%)
             background-color: $main_yellow !important
             .table__col-span-superbig
-                line-height: 137px
                 text-align: center
         &_remove
             transform: translateX(-275px)
-        &:hover
-            cursor: pointer
-        &:hover, &.active
-            background-color: #eaec59
-            .table__row-link
-                background-color: #eaec59
+       
     &__col
         display: flex
         flex-direction: column
         &-header
             font-weight: 500
             font-size: 30px
+            @include adaptiv-font(30, 18)
             line-height: 35px
             color: #737473
         &-span
             font-size: 17px
             line-height: 30px
             &-big, &-superbig
-                font-size: 22px
+                @include adaptiv-font(22, 16)
                 line-height: 37px
                 text-transform: uppercase
             &-superbig
-                font-size: 29px
+                @include adaptiv-font(29, 15)
+                text-align: center
         &-count
             font-weight: bold
             font-size: 22px
+            @include adaptiv-font(22, 12)
             white-space: nowrap
         &_nomw
             max-width: none !important
@@ -299,7 +322,7 @@ $main_yellow: #faf406
         margin-bottom: 155px
     &__header
         text-transform: uppercase
-        font-size: 38px
+        @include adaptiv-font(38, 26)
         color: #ffffff
         font-weight: 400
     &__row:first-child
@@ -312,12 +335,13 @@ $main_yellow: #faf406
         align-items: baseline
         justify-content: space-between
     &__link
-        font-size: 30px
+        @include adaptiv-font(30, 20)
         color: #fff
         display: inline-block
         max-width: 285px
+        margin-right: 10px
     &__amount
-        font-size: 30px
+        @include adaptiv-font(30, 20)
         font-weight: 500
         color: $main_yellow
 
@@ -331,9 +355,8 @@ $main_yellow: #faf406
         align-items: center
     &__title
         text-align: center
-        font-size: 50px
+        @include adaptiv-font(50, 28)
         font-weight: bold
-        line-height: 60px
         margin-bottom: 100px
         margin-top: 135px
         position: relative
@@ -358,12 +381,13 @@ $main_yellow: #faf406
             margin-top: 40px
         &-header
             font-size: 36px
+            @include adaptiv-font(36, 20)
             font-weight: 400
             text-align: center
             & + &
                 margin-top: 25px
         &-body
-            font-size: 48px
+            @include adaptiv-font(48, 26)
             font-weight: bold
             text-align: center
     &__button
@@ -436,6 +460,6 @@ $main_yellow: #faf406
             width: 55px
             object-fit: contain
         &-span
-            font-size: 18px
+            @include adaptiv-font(18, 14)
             line-height: 36px
             color: $black

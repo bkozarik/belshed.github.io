@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="ru-Ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dentko - стоматологии</title>
+    <link rel="stylesheet" href="css/uikit.min.css"/>
+    <link rel="stylesheet" href="css/fonts.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/media.css"/>
+    <script src="js/uikit.min.js"></script>
+    <script src="js/uikit-icons.min.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="uk-container">
+            <div class="uk-flex uk-flex-between uk-flex-bottom header__wrap">
+                <img src="./img/logo.svg" alt="Логотип" class="header__logo">
+                <dl class="uk-description-list">
+                    <dt>Контакты:</dt>
+                    <dd>г. Минск, пр-кт Независимости, 58</dd>
+                </dl>
+                <dl class="uk-description-list">
+                    <dt>Время работы:</dt>
+                    <dd class="uk-inline">
+                        <div class="uk-inline">
+                            <span>Без выходных <img src="./img/info.svg"></span>
+                            <div class="uk-card uk-card-body" uk-dropdown>
+                                <h3 class="footer__card-header uk-text-bold">Время работы:</h3>
+                                <div class="footer__card-body uk-flex uk-flex-between">
+                                    <div class="footer__card-col uk-flex uk-flex-column">
+                                        <span>пн-пт:</span>
+                                        <span>сб:</span>
+                                        <span>вс:</span>
+                                    </div>
+                                    <div class="footer__card-col uk-flex uk-flex-column">
+                                        <span>09:00 — 21:00</span>
+                                        <span>09:00 — 20:00</span>
+                                        <span>09:00 — 17:00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </dd>
+                </dl>
+                <dl class="uk-description-list">
+                    <dt>Мы в соц.сетях:</dt>
+                    <dd class="uk-flex uk-flex-between">
+                        <a href="#" class="header__link"><img src="./img/facebook.png" alt="Иконка" class="header__link-img"></a>
+                        <a href="#" class="header__link"><img src="./img/vk.png" alt="Иконка" class="header__link-img"></a>
+                        <a href="#" class="header__link"><img src="./img/instagram.png" alt="Иконка" class="header__link-img"></a>
+                    </dd>
+                </dl>
+                <dl class="uk-description-list">
+                    <dt>Телефоны:</dt>
+                    <dd>
+                        <div class="uk-inline">
+                            <span class="header__dropdown"><img src="./img/operator1.png" alt="">+375 (29) 110-12-12</span>
+                            <div class="header__dropdown-container" uk-dropdown="mode: click">
+                                <span><a href="tel:+375291101212" class="footer__dd-link"><img src="./img/operator1.png">+375 (29) 110-12-12</a></span>
+                                <span><a href="tel:+375336601313" class="footer__dd-link"><img src="./img/operator2.png">+375 (33) 660-13-13</a></span>
+                                <span><a href="tel:+375251101212" class="footer__dd-link"><img src="./img/operator3.png">+375 (25) 110-12-12</a></span>
+                                <span><a href="tel:+375172844511" class="footer__dd-link"><img src="./img/operator4.png">+375 (17) 284-45-11</a></span>
+                            </div>
+                        </div>
+                        <div class="uk-flex-inline uk-flex-between">
+                            <a href="#" class="header__link"><img src="./img/telegram.png" alt="Иконка" class="header__link-img"></a>
+                            <a href="#" class="header__link"><img src="./img/viber.png" alt="Иконка" class="header__link-img"></a>
+                            <a href="#" class="header__link"><img src="./img/whatsapp.png" alt="Иконка" class="header__link-img"></a>
+                        </div>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+    </header>
+    <nav class="nav" uk-navbar>
+        <div class="uk-navbar-center">
+            <ul class="uk-navbar-nav uk-flex-between uk-flex-middle">
+                <li><a href="#">о компании</a></li>
+                <li>
+                    <a href="#">услуги</a>
+                    <div class="uk-navbar-dropdown">
+                        <ul class="uk-nav uk-navbar-dropdown-nav">
+                            <li><a href="#"><img src="./img/inline-arrow-w.svg">Лечение пульпита</a></li>
+                            <li><a href="#"><img src="./img/inline-arrow-w.svg">Протезирование</a></li>
+                            <li><a href="#"><img src="./img/inline-arrow-w.svg">Хирургия</a></li>
+                            <li><a href="#"><img src="./img/inline-arrow-w.svg">Ортодонтия</a></li>
+                            <li><a href="#"><img src="./img/inline-arrow-w.svg">Отбеливание</a></li>
+                            <li><a href="#"><img src="./img/inline-arrow-w.svg">Профилактика</a></li>
+                            <li><a href="#"><img src="./img/inline-arrow-w.svg">Парадонтология</a></li>
+                            <li><a href="#"><img src="./img/inline-arrow-w.svg">Косметология</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#">цены</a></li>
+                <li><a href="#">оплата и рассрочка</a></li>
+                <li><a href="#">отзывы</a></li>
+                <li><a href="#">специалисты</a></li>
+                <li><a href="#">вопрос-ответ</a></li>
+                <li><a href="#">контакты</a></li>
+                <li><a class="nav__order" href="#">Записаться на прием <img src="./img/inline-arrow.svg"></a></li>
+            </ul>
+        </div>
+    </nav>
+    <main class="main">
+        <section class="text text_fullscreen accordion">
+            <div class="uk-container">
+                <h2 class="uk-h1">Цены на стоматологические услуги</h2>
+                <p class="uk-text uk-text-medium">Одних людей в стоматологии пугает сам процесс лечения, а других – стоимость услуг. В медицинском центре «Дентко» вы сможете попрощаться со своими страхами навсегда: лечить и протезировать зубы у нас совсем не больно, а цены на стоматологические услуги доступны большинству минчан. Кроме того, у нас <span class="uk-text-bold">вы можете воспользоваться беспроцентной рассрочкой.</span></p>
+                <ul uk-accordion>
+                    <li>
+                        <a class="uk-accordion-title uk-text-bold" href="#">Лечение</a>
+                        <div class="uk-accordion-content">
+                            <div class="accordion__content-item uk-flex uk-flex-between">
+                                <p class="uk-text">Лечение кариеса</p>
+                                <span class="price__price uk-text-bold">от 89,42 руб</span>
+                            </div>
+                            <div class="accordion__content-item uk-flex uk-flex-between">
+                                <p class="uk-text">Лечение кариеса</p>
+                                <span class="price__price uk-text-bold">от 89,42 руб</span>
+                            </div>
+                            <div class="accordion__content-item uk-flex uk-flex-between">
+                                <p class="uk-text">Лечение кариеса</p>
+                                <span class="price__price uk-text-bold">от 89,42 руб</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="uk-accordion-title uk-text-bold" href="#">Протезирование</a>
+                        <div class="uk-accordion-content">
+                            <div class="accordion__content-item uk-flex uk-flex-between">
+                                <p class="uk-text">Лечение кариеса</p>
+                                <span class="price__price uk-text-bold">от 89,42 руб</span>
+                            </div>
+                            <div class="accordion__content-item uk-flex uk-flex-between">
+                                <p class="uk-text">Лечение кариеса</p>
+                                <span class="price__price uk-text-bold">от 89,42 руб</span>
+                            </div>
+                            <div class="accordion__content-item uk-flex uk-flex-between">
+                                <p class="uk-text">Лечение кариеса</p>
+                                <span class="price__price uk-text-bold">от 89,42 руб</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="uk-accordion-title uk-text-bold" href="#">Хирургия</a>
+                        <div class="uk-accordion-content">
+                            <div class="accordion__content-item uk-flex uk-flex-between">
+                                <p class="uk-text">Лечение кариеса</p>
+                                <span class="price__price uk-text-bold">от 89,42 руб</span>
+                            </div>
+                            <div class="accordion__content-item uk-flex uk-flex-between">
+                                <p class="uk-text">Лечение кариеса</p>
+                                <span class="price__price uk-text-bold">от 89,42 руб</span>
+                            </div>
+                            <div class="accordion__content-item uk-flex uk-flex-between">
+                                <p class="uk-text">Лечение кариеса</p>
+                                <span class="price__price uk-text-bold">от 89,42 руб</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="uk-accordion-title uk-text-bold" href="#">Ортодонтия</a>
+                        <div class="uk-accordion-content">
+                            <div class="accordion__content-item uk-flex uk-flex-between">
+                                <p class="uk-text">Лечение кариеса</p>
+                                <span class="price__price uk-text-bold">от 89,42 руб</span>
+                            </div>
+                            <div class="accordion__content-item uk-flex uk-flex-between">
+                                <p class="uk-text">Лечение кариеса</p>
+                                <span class="price__price uk-text-bold">от 89,42 руб</span>
+                            </div>
+                            <div class="accordion__content-item uk-flex uk-flex-between">
+                                <p class="uk-text">Лечение кариеса</p>
+                                <span class="price__price uk-text-bold">от 89,42 руб</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="uk-accordion-title uk-text-bold" href="#">Отбеливание</a>
+                        <div class="uk-accordion-content">
+                            <div class="accordion__content-item uk-flex uk-flex-between">
+                                <p class="uk-text">Лечение кариеса</p>
+                                <span class="price__price uk-text-bold">от 89,42 руб</span>
+                            </div>
+                            <div class="accordion__content-item uk-flex uk-flex-between">
+                                <p class="uk-text">Лечение кариеса</p>
+                                <span class="price__price uk-text-bold">от 89,42 руб</span>
+                            </div>
+                            <div class="accordion__content-item uk-flex uk-flex-between">
+                                <p class="uk-text">Лечение кариеса</p>
+                                <span class="price__price uk-text-bold">от 89,42 руб</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="uk-accordion-title uk-text-bold" href="#">Профилактика</a>
+                        <div class="uk-accordion-content">
+                            <div class="accordion__content-item uk-flex uk-flex-between">
+                                <p class="uk-text">Лечение кариеса</p>
+                                <span class="price__price uk-text-bold">от 89,42 руб</span>
+                            </div>
+                            <div class="accordion__content-item uk-flex uk-flex-between">
+                                <p class="uk-text">Лечение кариеса</p>
+                                <span class="price__price uk-text-bold">от 89,42 руб</span>
+                            </div>
+                            <div class="accordion__content-item uk-flex uk-flex-between">
+                                <p class="uk-text">Лечение кариеса</p>
+                                <span class="price__price uk-text-bold">от 89,42 руб</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="uk-accordion-title uk-text-bold" href="#">Пародонтология</a>
+                        <div class="uk-accordion-content">
+                            <div class="accordion__content-item uk-flex uk-flex-between">
+                                <p class="uk-text">Лечение кариеса</p>
+                                <span class="price__price uk-text-bold">от 89,42 руб</span>
+                            </div>
+                            <div class="accordion__content-item uk-flex uk-flex-between">
+                                <p class="uk-text">Лечение кариеса</p>
+                                <span class="price__price uk-text-bold">от 89,42 руб</span>
+                            </div>
+                            <div class="accordion__content-item uk-flex uk-flex-between">
+                                <p class="uk-text">Лечение кариеса</p>
+                                <span class="price__price uk-text-bold">от 89,42 руб</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="uk-accordion-title uk-text-bold" href="#">Косметология</a>
+                        <div class="uk-accordion-content">
+                            <div class="accordion__content-item uk-flex uk-flex-between">
+                                <p class="uk-text">Лечение кариеса</p>
+                                <span class="price__price uk-text-bold">от 89,42 руб</span>
+                            </div>
+                            <div class="accordion__content-item uk-flex uk-flex-between">
+                                <p class="uk-text">Лечение кариеса</p>
+                                <span class="price__price uk-text-bold">от 89,42 руб</span>
+                            </div>
+                            <div class="accordion__content-item uk-flex uk-flex-between">
+                                <p class="uk-text">Лечение кариеса</p>
+                                <span class="price__price uk-text-bold">от 89,42 руб</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="uk-accordion-title uk-text-bold" href="#">Дополнительно</a>
+                        <div class="uk-accordion-content">
+                            <div class="accordion__content-item uk-flex uk-flex-between">
+                                <p class="uk-text">Лечение кариеса</p>
+                                <span class="price__price uk-text-bold">от 89,42 руб</span>
+                            </div>
+                            <div class="accordion__content-item uk-flex uk-flex-between">
+                                <p class="uk-text">Лечение кариеса</p>
+                                <span class="price__price uk-text-bold">от 89,42 руб</span>
+                            </div>
+                            <div class="accordion__content-item uk-flex uk-flex-between">
+                                <p class="uk-text">Лечение кариеса</p>
+                                <span class="price__price uk-text-bold">от 89,42 руб</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="uk-accordion-title uk-text-bold" href="#">Диагностика</a>
+                        <div class="uk-accordion-content">
+                            <div class="accordion__content-item uk-flex uk-flex-between">
+                                <p class="uk-text">Лечение кариеса</p>
+                                <span class="price__price uk-text-bold">от 89,42 руб</span>
+                            </div>
+                            <div class="accordion__content-item uk-flex uk-flex-between">
+                                <p class="uk-text">Лечение кариеса</p>
+                                <span class="price__price uk-text-bold">от 89,42 руб</span>
+                            </div>
+                            <div class="accordion__content-item uk-flex uk-flex-between">
+                                <p class="uk-text">Лечение кариеса</p>
+                                <span class="price__price uk-text-bold">от 89,42 руб</span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="form">
+            <div class="uk-container">
+                <div class="form__body">
+                    <h2 class="uk-h2">Консультация стоматолога</h2>
+                    <p class="uk-text-meta">Запишитесь на прием к стоматологу в «Дентко» - и мы поможем вам обрести здоровую и счастливую улыбку.</p>
+                    <form class="uk-flex uk-flex-middle">
+                        <input class="uk-input" type="text" placeholder="Ваше имя">
+                        <input class="uk-input" type="tel" placeholder="Ваш номер телефона">
+                        <button class="uk-input" type="submit">Записаться на прием</button>
+                        <a href="#" class="form__schedule"><span>Посмотреть режим работы</span><img src="./img/info-w.svg"></a>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section class="text text_fullscreen">
+            <div class="uk-container">
+                <h2 class="uk-h1">Врачи клиники Дентко: специалисты, которым доверяют</h2>
+                <p class="uk-text uk-text-medium">Выбирая медицинский центр для лечения зубов, люди нередко советуются со знакомыми и ищут высококлассного специалиста. Ведь именно от его квалификации, опыта и аккуратности на 70% зависит срок службы пломб и протезов. В стоматологии «Дентко» работают врачи, за результат работы которых вы можете быть уверены:</p>
+                <div class="uk-column-1-2 uk-width-child-1-2">
+                    <p class="uk-text text__item">В штате нашей клиники работают стоматологи только 1 и высшей квалификационных категорий;</p>
+                    <p class="uk-text text__item">Наши врачи способны найти решение даже в сложных клинических случаях;</p>
+                    <p class="uk-text text__item">Каждый из них – эксперт в своей сфере. Ведь они не прекратили учиться, получив диплом в университете – они продолжают посещать курсы и семинары, изучать новые технологии и материалы и внедрять их в практику.</p>
+                </div>
+                <p class="uk-text uk-text-medium">А главное – это не просто стоматологи, а люди, которые вникают в ситуацию каждого пациента и всегда готовы подобрать персональные решения.</p>
+            </div>
+        </section>
+        <section class="about">
+            <div class="uk-container">
+                <div class="uk-section">
+                    <div class="uk-grid-match uk-child-width-1-2" uk-grid>
+                        <div class="about__side">
+                            <div class="about__img-wrap">
+                                <img class="about__img" src="./img/about_photo.jpg" alt="" uk-img>
+                            </div>
+                        </div>
+                        <div class="about__side">
+                            <h2 class="uk-h1">Сколько стоят услуги стоматолога в Дентко?</h2>
+                            <p class="uk-text-normal">Выбирая клинику, важно понимать, что цены на стоматологические услуги в Минске формируются не на основании амбиций медицинского центра, а на вполне объективных факторах. Значение имеют:</p>
+                            <ul class="uk-list">
+                                <li><span class="uk-text-bold">Уровень квалификации врачей.</span> Хорошие стоматологи требуют высокой оплаты труда;</li>
+                                <li><span class="uk-text-bold">Оборудование.</span> От него во многом зависит комфорт пациента и качество лечения зубов. Так, в стоматологии «Дентко» применяются инновационные технологии – терапия под микроскопом, апекслокаторы для контроля чистки каналов, ультразвуковые системы чистки и многое другое. Все это гарантирует высокое качество лечения и отсутствие потребности в повторных вмешательствах. Оправдать цены на такое оборудование можно только включением процента амортизации в стоимость услуг стоматолога;</li>
+                                <li><span class="uk-text-bold">Материалы.</span> Мы используем композиты европейского производства, которые не подвержены окрашиванию и длительно сохраняют эстетику, прочны и хорошо крепятся к природному дентину.</li>
+                            </ul>
+                            <p class="uk-text-normal">Цены платной стоматологии в Минске всегда обоснованы. Ведь в них включено то, что гарантирует вам высокое качество лечения и эстетичную реставрацию зубов.</p>
+                            <button class="uk-button uk-button-default button">Записаться на прием <img src="./img/inline-arrow-w.svg"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="text text_fullscreen">
+            <div class="uk-container">
+                <h2 class="uk-h1">5 причин лечить зубы в Дентко</h2>
+                <p class="uk-text uk-text-medium">Наш медицинский центр вполне можно назвать семейным. Ведь мы предлагаем услуги лечения и профилактики для малышей и взрослых. Наши врачи всегда подскажут вам, как сберечь здоровье зубов и не платить большие деньги за их восстановление. Кроме того, мы готовы предоставить нашим пациентам 5 неоспоримых преимуществ:</p>
+                <div class="uk-column-1-2 uk-width-child-1-2">
+                    <p class="uk-text text__item">Высокая квалификация и опыт врачей;</p>
+                    <p class="uk-text text__item">Передовые технологии, позволяющие лечить зубы без боли;</p>
+                    <p class="uk-text text__item">Материалы, гарантирующие прочность и высокую эстетику реставрации;</p>
+                    <p class="uk-text text__item">Беспроцентная рассрочка на весь спектр услуг. Не копите и не ждите разрушения зубов – запишитесь на прием прямо сейчас!</p>
+                    <p class="uk-text text__item">Комфорт во всем. Внимательность врачей, персональный подход и возможность записаться на прием в выходные – лечить зубы у нас всегда удобно;</p>
+                </div>
+            </div>
+        </section>
+        <section class="agit">
+            <div class="uk-container">
+                <div class="uk-flex uk-flex-between uk-flex-middle">
+                    <p class="uk-text-bold uk-text-large">Запишитесь на прием к врачу в «Дентко» и получите план лечения и протезирования ваших зубов!</p>
+                    <button class="uk-button uk-button-default button">Записаться на прием</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="uk-container">
+            <div class="uk-flex uk-flex-between uk-flex-middle footer__wrap">
+                <img src="./img/logo.svg" alt="Логотип" class="header__logo">
+                <nav class="footer__nav uk-flex uk-flex-middle">
+                    <ul class="uk-list uk-flex uk-flex-between uk-flex-middle">
+                        <li><a href="#" class="footer__nav-link">лечение</a></li>
+                        <li><a href="#" class="footer__nav-link">протезирование</a></li>
+                        <li><a href="#" class="footer__nav-link">хирургия</a></li>
+                        <li><a href="#" class="footer__nav-link">ортодонтия</a></li>
+                        <li><a href="#" class="footer__nav-link">отбеливание</a></li>
+                        <li><a href="#" class="footer__nav-link">профилактика</a></li>
+                        <li><a href="#" class="footer__nav-link">пародонтология</a></li>
+                        <li><a href="#" class="footer__nav-link">косметология</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer__body uk-flex uk-flex-between uk-flex-stretch">
+                <nav class="footer__nav uk-flex">
+                    <ul class="uk-list">
+                        <li><a href="#" class="footer__nav-link">о компании</a></li>
+                        <li><a href="#" class="footer__nav-link">цены</a></li>
+                        <li><a href="#" class="footer__nav-link">оплата и рассрочка</a></li>
+                        <li><a href="#" class="footer__nav-link">отзывы</a></li>
+                        <li><a href="#" class="footer__nav-link">специалисты</a></li>
+                        <li><a href="#" class="footer__nav-link">статьи</a></li>
+                        <li><a href="#" class="footer__nav-link">вопрос-ответ</a></li>
+                        <li><a href="#" class="footer__nav-link">контакты</a></li>
+                    </ul>
+                </nav>
+                <dl class="uk-description-list uk-flex uk-flex-column ">
+                    <dt>Контактные данные:</dt>
+                    <dd>ООО "Дентко-Мед", 220005</dd>
+                    <dd>г. Минск, пр. Независимости, 58, п. 142 (3 этаж). <a href="./contacts.html" class="footer__green-link">Карта проезда</a></dd>
+                    <dd>
+                        <div class="uk-flex-inline uk-flex-between">
+                            <a href="#" class="header__link"><img src="./img/facebook.png" alt="Иконка" class="header__link-img"></a>
+                            <a href="#" class="header__link"><img src="./img/vk.png" alt="Иконка" class="header__link-img"></a>
+                            <a href="#" class="header__link"><img src="./img/instagram.png" alt="Иконка" class="header__link-img"></a>
+                        </div>
+                    </dd>
+                </dl>
+                <dl class="uk-description-list uk-flex uk-flex-column ">
+                    <dt>Телефоны:</dt>
+                    <dd><a href="tel:+375291101212" class="footer__dd-link"><img src="./img/operator1.png">+375 (29) 110-12-12</a></dd>
+                    <dd><a href="tel:+375336601313" class="footer__dd-link"><img src="./img/operator2.png">+375 (33) 660-13-13</a></dd>
+                    <dd><a href="tel:+375251101212" class="footer__dd-link"><img src="./img/operator3.png">+375 (25) 110-12-12</a></dd>
+                    <dd><a href="tel:+375172844511" class="footer__dd-link"><img src="./img/operator4.png">+375 (17) 284-45-11</a></dd>
+                    <dd>
+                        <div class="uk-flex-inline uk-flex-between">
+                            <a href="#" class="header__link"><img src="./img/telegram.png" alt="Иконка" class="header__link-img"></a>
+                            <a href="#" class="header__link"><img src="./img/viber.png" alt="Иконка" class="header__link-img"></a>
+                            <a href="#" class="header__link"><img src="./img/whatsapp.png" alt="Иконка" class="header__link-img"></a>
+                        </div>
+                    </dd>
+                </dl>
+                <div class="uk-card uk-card-body">
+                    <h3 class="footer__card-header uk-text-bold">Время работы:</h3>
+                    <div class="footer__card-body uk-flex uk-flex-between">
+                        <div class="footer__card-col uk-flex uk-flex-column">
+                            <span>пн-пт:</span>
+                            <span>сб:</span>
+                            <span>вс:</span>
+                        </div>
+                        <div class="footer__card-col uk-flex uk-flex-column">
+                            <span>09:00 — 21:00</span>
+                            <span>09:00 — 20:00</span>
+                            <span>09:00 — 17:00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="uk-flex uk-flex-between uk-child-width-1-3 footer__bottom">
+                <div class="footer__bottom-col">
+                    <span class="uk-text uk-text-meta">© 1997 - 2020. Медицинский центр<br>"Дентко".</span>
+                </div>
+                <div class="uk-flex uk-flex-middle uk-flex-column footer__bottom-col">
+                    <span class="uk-text uk-text-meta">Рейтинг Медицинского центра "Дентко" - <img src="./img/rating.png"> 4,9 балла (10 голосов)</span>
+                    <a href="#" class="green-link uk-link">Продвижение сайта - hata.by</a>
+                </div>
+                <div class="footer__bottom-col">
+                    <span class="uk-text uk-text-meta"></span>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="./js/main.js"></script>
+</body>
+</html>
