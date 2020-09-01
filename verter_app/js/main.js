@@ -35,7 +35,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const touchStartHandler = () => {
-        event.preventDefault();
 
         let touch = event.changedTouches[0];
         
@@ -49,7 +48,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const touchEndHandler = () => {
-        event.preventDefault();
         
         let touchTarget = event.target;
         while(!touchTarget.classList.contains("table__row-link")){
