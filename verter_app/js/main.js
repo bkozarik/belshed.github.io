@@ -7,8 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
     let touchStartX;
 
     const touchMoveHandler = () => {
-        event.preventDefault();
-
         let touch = event.changedTouches[0];
 
         let touchTarget = event.target;
