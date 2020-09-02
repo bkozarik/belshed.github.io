@@ -23,9 +23,9 @@
                 <dl class="uk-description-list">
                     <dt>Время работы:</dt>
                     <dd class="uk-inline">
-                        <div class="uk-inline">
-                            <span>Без выходных <img src="./img/info.svg"></span>
-                            <div class="uk-card uk-card-body" uk-dropdown>
+                        <div class="uk-inline header__dropdown-trigger">
+                            <span class="header__dropdown-span">Без выходных <img src="./img/info.svg"></span>
+                            <div class="uk-card uk-card-body uk-margin-remove-top header__dropdown-card">
                                 <h3 class="footer__card-header uk-text-bold">Время работы:</h3>
                                 <div class="footer__card-body uk-flex uk-flex-between">
                                     <div class="footer__card-col uk-flex uk-flex-column">
@@ -55,12 +55,12 @@
                     <dt>Телефоны:</dt>
                     <dd>
                         <div class="uk-inline">
-                            <span class="header__dropdown"><img src="./img/operator1.png" alt="">+375 (29) 110-12-12</span>
-                            <div class="header__dropdown-container" uk-dropdown="mode: click">
-                                <span><a href="tel:+375291101212" class="footer__dd-link"><img src="./img/operator1.png">+375 (29) 110-12-12</a></span>
-                                <span><a href="tel:+375336601313" class="footer__dd-link"><img src="./img/operator2.png">+375 (33) 660-13-13</a></span>
-                                <span><a href="tel:+375251101212" class="footer__dd-link"><img src="./img/operator3.png">+375 (25) 110-12-12</a></span>
-                                <span><a href="tel:+375172844511" class="footer__dd-link"><img src="./img/operator4.png">+375 (17) 284-45-11</a></span>
+                            <span class="header__dropdown"><a href="tel:+375291101212" class="footer__dd-link"><img src="./img/operator1.png">+375 (29) 110-12-12</a></span>
+                            <div class="header__dropdown-container" uk-dropdown>
+                                <a href="tel:+375291101212" class="footer__dd-link"><img src="./img/operator1.png">+375 (29) 110-12-12</a>
+                                <a href="tel:+375336601313" class="footer__dd-link"><img src="./img/operator2.png">+375 (33) 660-13-13</a>
+                                <a href="tel:+375251101212" class="footer__dd-link"><img src="./img/operator3.png">+375 (25) 110-12-12</a>
+                                <a href="tel:+375172844511" class="footer__dd-link"><img src="./img/operator4.png">+375 (17) 284-45-11</a>
                             </div>
                         </div>
                         <div class="uk-flex-inline uk-flex-between">
@@ -76,28 +76,28 @@
     <nav class="nav" uk-navbar>
         <div class="uk-navbar-center">
             <ul class="uk-navbar-nav uk-flex-between uk-flex-middle">
-                <li><a href="#">о компании</a></li>
+                <li><a href="./about.html">о компании</a></li>
                 <li>
-                    <a href="#">услуги</a>
+                    <a href="./service.html">услуги</a>
                     <div class="uk-navbar-dropdown">
                         <ul class="uk-nav uk-navbar-dropdown-nav">
-                            <li><a href="#"><img src="./img/inline-arrow-w.svg">Лечение пульпита</a></li>
-                            <li><a href="#"><img src="./img/inline-arrow-w.svg">Протезирование</a></li>
-                            <li><a href="#"><img src="./img/inline-arrow-w.svg">Хирургия</a></li>
-                            <li><a href="#"><img src="./img/inline-arrow-w.svg">Ортодонтия</a></li>
-                            <li><a href="#"><img src="./img/inline-arrow-w.svg">Отбеливание</a></li>
-                            <li><a href="#"><img src="./img/inline-arrow-w.svg">Профилактика</a></li>
-                            <li><a href="#"><img src="./img/inline-arrow-w.svg">Парадонтология</a></li>
-                            <li><a href="#"><img src="./img/inline-arrow-w.svg">Косметология</a></li>
+                            <li><a href="./service.html"><img src="./img/inline-arrow-w.svg">Лечение пульпита</a></li>
+                            <li><a href="./service.html"><img src="./img/inline-arrow-w.svg">Протезирование</a></li>
+                            <li><a href="./service.html"><img src="./img/inline-arrow-w.svg">Хирургия</a></li>
+                            <li><a href="./service.html"><img src="./img/inline-arrow-w.svg">Ортодонтия</a></li>
+                            <li><a href="./service.html"><img src="./img/inline-arrow-w.svg">Отбеливание</a></li>
+                            <li><a href="./service.html"><img src="./img/inline-arrow-w.svg">Профилактика</a></li>
+                            <li><a href="./service.html"><img src="./img/inline-arrow-w.svg">Парадонтология</a></li>
+                            <li><a href="./service.html"><img src="./img/inline-arrow-w.svg">Косметология</a></li>
                         </ul>
                     </div>
                 </li>
-                <li><a href="#">цены</a></li>
-                <li><a href="#">оплата и рассрочка</a></li>
-                <li><a href="#">отзывы</a></li>
-                <li><a href="#">специалисты</a></li>
-                <li><a href="#">вопрос-ответ</a></li>
-                <li><a href="#">контакты</a></li>
+                <li><a href="./price.html">цены</a></li>
+                <li><a href="./payment.html">оплата и рассрочка</a></li>
+                <li><a href="./reviews.html">отзывы</a></li>
+                <li><a href="./team.html">специалисты</a></li>
+                <li><a href="./faq.html">вопрос-ответ</a></li>
+                <li><a href="./contacts.html">контакты</a></li>
                 <li><a class="nav__order" href="#">Записаться на прием <img src="./img/inline-arrow.svg"></a></li>
             </ul>
         </div>
@@ -107,7 +107,7 @@
             <div class="uk-container">
                 <div class="uk-flex uk-flex-between uk-flex-middle">
                     <h2 class="uk-h1">Отзывы наших клиентов</h2>
-                    <button class="uk-button uk-button-default button">Оставить отзыв<img src="./img/inline-arrow-w.svg"></button>
+                    <button class="uk-button uk-button-default button button_big">Оставить отзыв<img src="./img/inline-arrow-w.svg"></button>
                 </div>
                 <div class="reviews__wrap uk-child-width-1-1">
                     <div class="uk-card uk-card-body review review__page">
@@ -134,8 +134,78 @@
                             </div>
                         </div>
                     </div>
+                    <div class="uk-card uk-card-body review review__page">
+                        <div class="review__head uk-flex uk-flex-between uk-flex-top">
+                            <div class="review__info">
+                                <h4 class="review__name">Виктория</h4>
+                                <img src="./img/rating.png" alt="Рейтинг" class="review__rating">
+                            </div>
+                            <div class="review__body">
+                                <p class="uk-text">Отличная клиника! Теперь буду ходить только сюда, наконец-то я нашла "свою" стоматологию. Цены здесь средние, а качество оборудования, материалов и само отношение персонала на высоте!</p>
+                                <p class="uk-text uk-text-small review__date">12.06.2020, 07:56</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="uk-card uk-card-body review review__page">
+                        <div class="review__head uk-flex uk-flex-between uk-flex-top">
+                            <div class="review__info">
+                                <h4 class="review__name">Виктория</h4>
+                                <img src="./img/rating.png" alt="Рейтинг" class="review__rating">
+                            </div>
+                            <div class="review__body">
+                                <p class="uk-text">Отличная клиника! Теперь буду ходить только сюда, наконец-то я нашла "свою" стоматологию. Цены здесь средние, а качество оборудования, материалов и само отношение персонала на высоте!</p>
+                                <p class="uk-text uk-text-small review__date">12.06.2020, 07:56</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="uk-card uk-card-body review review__page">
+                        <div class="review__head uk-flex uk-flex-between uk-flex-top">
+                            <div class="review__info">
+                                <h4 class="review__name">Виктория</h4>
+                                <img src="./img/rating.png" alt="Рейтинг" class="review__rating">
+                            </div>
+                            <div class="review__body">
+                                <p class="uk-text">Отличная клиника! Теперь буду ходить только сюда, наконец-то я нашла "свою" стоматологию. Цены здесь средние, а качество оборудования, материалов и само отношение персонала на высоте!</p>
+                                <p class="uk-text uk-text-small review__date">12.06.2020, 07:56</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="uk-card uk-card-body review review__page">
+                        <div class="review__head uk-flex uk-flex-between uk-flex-top">
+                            <div class="review__info">
+                                <h4 class="review__name">Виктория</h4>
+                                <img src="./img/rating.png" alt="Рейтинг" class="review__rating">
+                            </div>
+                            <div class="review__body">
+                                <p class="uk-text">Отличная клиника! Теперь буду ходить только сюда, наконец-то я нашла "свою" стоматологию. Цены здесь средние, а качество оборудования, материалов и само отношение персонала на высоте!</p>
+                                <p class="uk-text uk-text-small review__date">12.06.2020, 07:56</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="uk-card uk-card-body review review__page">
+                        <div class="review__head uk-flex uk-flex-between uk-flex-top">
+                            <div class="review__info">
+                                <h4 class="review__name">Виктория</h4>
+                                <img src="./img/rating.png" alt="Рейтинг" class="review__rating">
+                            </div>
+                            <div class="review__body">
+                                <p class="uk-text">Отличная клиника! Теперь буду ходить только сюда, наконец-то я нашла "свою" стоматологию. Цены здесь средние, а качество оборудования, материалов и само отношение персонала на высоте!</p>
+                                <p class="uk-text uk-text-small review__date">12.06.2020, 07:56</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                .uk-width
+                <div class="uk-width-1-1 uk-flex uk-flex-middle uk-flex-center">
+                    <div class="reviews__pagination">
+                        <ul class="uk-pagination" uk-margin>
+                            <li><a href="#"><span class="reviews__control reviews__control_disabled reviews__control-prev"></span></a></li>
+                            <li class="uk-active"><span>1</span></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#"><span class="reviews__control reviews__control-next"></span></a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </section>
         <section class="form">
@@ -169,28 +239,28 @@
                 <img src="./img/logo.svg" alt="Логотип" class="header__logo">
                 <nav class="footer__nav uk-flex uk-flex-middle">
                     <ul class="uk-list uk-flex uk-flex-between uk-flex-middle">
-                        <li><a href="#" class="footer__nav-link">лечение</a></li>
-                        <li><a href="#" class="footer__nav-link">протезирование</a></li>
-                        <li><a href="#" class="footer__nav-link">хирургия</a></li>
-                        <li><a href="#" class="footer__nav-link">ортодонтия</a></li>
-                        <li><a href="#" class="footer__nav-link">отбеливание</a></li>
-                        <li><a href="#" class="footer__nav-link">профилактика</a></li>
-                        <li><a href="#" class="footer__nav-link">пародонтология</a></li>
-                        <li><a href="#" class="footer__nav-link">косметология</a></li>
+                        <li><a href="./service.html" class="footer__nav-link">лечение</a></li>
+                        <li><a href="./service.html" class="footer__nav-link">протезирование</a></li>
+                        <li><a href="./service.html" class="footer__nav-link">хирургия</a></li>
+                        <li><a href="./service.html" class="footer__nav-link">ортодонтия</a></li>
+                        <li><a href="./service.html" class="footer__nav-link">отбеливание</a></li>
+                        <li><a href="./service.html" class="footer__nav-link">профилактика</a></li>
+                        <li><a href="./service.html" class="footer__nav-link">пародонтология</a></li>
+                        <li><a href="./service.html" class="footer__nav-link">косметология</a></li>
                     </ul>
                 </nav>
             </div>
             <div class="footer__body uk-flex uk-flex-between uk-flex-stretch">
                 <nav class="footer__nav uk-flex">
                     <ul class="uk-list">
-                        <li><a href="#" class="footer__nav-link">о компании</a></li>
-                        <li><a href="#" class="footer__nav-link">цены</a></li>
-                        <li><a href="#" class="footer__nav-link">оплата и рассрочка</a></li>
-                        <li><a href="#" class="footer__nav-link">отзывы</a></li>
-                        <li><a href="#" class="footer__nav-link">специалисты</a></li>
-                        <li><a href="#" class="footer__nav-link">статьи</a></li>
-                        <li><a href="#" class="footer__nav-link">вопрос-ответ</a></li>
-                        <li><a href="#" class="footer__nav-link">контакты</a></li>
+                        <li><a href="./about.html" class="footer__nav-link">о компании</a></li>
+                        <li><a href="./price.html" class="footer__nav-link">цены</a></li>
+                        <li><a href="./payment.html" class="footer__nav-link">оплата и рассрочка</a></li>
+                        <li><a href="./reviews.html" class="footer__nav-link">отзывы</a></li>
+                        <li><a href="./team.html" class="footer__nav-link">специалисты</a></li>
+                        <li><a href="./" class="footer__nav-link">статьи</a></li>
+                        <li><a href="./faq.html" class="footer__nav-link">вопрос-ответ</a></li>
+                        <li><a href="./contacts.html" class="footer__nav-link">контакты</a></li>
                     </ul>
                 </nav>
                 <dl class="uk-description-list uk-flex uk-flex-column ">
@@ -199,9 +269,9 @@
                     <dd>г. Минск, пр. Независимости, 58, п. 142 (3 этаж). <a href="./contacts.html" class="footer__green-link">Карта проезда</a></dd>
                     <dd>
                         <div class="uk-flex-inline uk-flex-between">
-                            <a href="#" class="header__link"><img src="./img/facebook.png" alt="Иконка" class="header__link-img"></a>
-                            <a href="#" class="header__link"><img src="./img/vk.png" alt="Иконка" class="header__link-img"></a>
-                            <a href="#" class="header__link"><img src="./img/instagram.png" alt="Иконка" class="header__link-img"></a>
+                            <a href="#" class="header__link footer__outer"><img src="./img/facebook.png" alt="Иконка" class="header__link-img"></a>
+                            <a href="#" class="header__link footer__outer"><img src="./img/vk.png" alt="Иконка" class="header__link-img"></a>
+                            <a href="#" class="header__link footer__outer"><img src="./img/instagram.png" alt="Иконка" class="header__link-img"></a>
                         </div>
                     </dd>
                 </dl>
@@ -213,13 +283,13 @@
                     <dd><a href="tel:+375172844511" class="footer__dd-link"><img src="./img/operator4.png">+375 (17) 284-45-11</a></dd>
                     <dd>
                         <div class="uk-flex-inline uk-flex-between">
-                            <a href="#" class="header__link"><img src="./img/telegram.png" alt="Иконка" class="header__link-img"></a>
-                            <a href="#" class="header__link"><img src="./img/viber.png" alt="Иконка" class="header__link-img"></a>
-                            <a href="#" class="header__link"><img src="./img/whatsapp.png" alt="Иконка" class="header__link-img"></a>
+                            <a href="#" class="header__link footer__outer"><img src="./img/telegram.png" alt="Иконка" class="header__link-img"></a>
+                            <a href="#" class="header__link footer__outer"><img src="./img/viber.png" alt="Иконка" class="header__link-img"></a>
+                            <a href="#" class="header__link footer__outer"><img src="./img/whatsapp.png" alt="Иконка" class="header__link-img"></a>
                         </div>
                     </dd>
                 </dl>
-                <div class="uk-card uk-card-body">
+                <div class="uk-card uk-card-body footer__schedule">
                     <h3 class="footer__card-header uk-text-bold">Время работы:</h3>
                     <div class="footer__card-body uk-flex uk-flex-between">
                         <div class="footer__card-col uk-flex uk-flex-column">
