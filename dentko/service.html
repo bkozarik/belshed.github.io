@@ -108,7 +108,7 @@
                 <div class="slider__body uk-position-center-left mw_no">
                     <h1 class="uk-h1">Лечение зубов (кариеса)</h1>
                     <p class="uk-text-large mw_550">По информации Белстата, 68% людей сталкиваются с кариесом еще в детском возрасте, а 97% взрослых имеют опыт лечения зубов. Очевидно, что без помощи квалифицированного стоматолога никому не обойтись. Частная клиника «Дентко» в Минске предлагает полный комплекс услуг по лечению зубов у детей и взрослых. К нам вы можете обратиться за помощью в любой ситуации. Мы же сделаем все, чтобы сохранить зубы, восстановить их эстетику и избавить вас от боли.</p>
-                    <div class="uk-flex">
+                    <div class="uk-flex banner__buttons">
                         <button class="uk-button uk-button-default button">Записаться на прием<img src="./img/inline-arrow-w.svg"></button>
                         <button class="uk-button uk-button-default button button_transparent">Консультация стоматолога</button>
                     </div>
@@ -119,7 +119,7 @@
             <div class="uk-container">
                 <h2 class="uk-h1">Сколько стоит вылечить зуб?</h2>
                 <p class="uk-text uk-text-medium">Цена стоматологических услуг напрямую зависит от вашего терпения и способности откладывать поход к врачу. Ведь сложность оказания помощи возрастает с каждым днем:</p>
-                <div class="uk-column-1-2 uk-width-child-1-2">
+                <div class="uk-column-1-2@s uk-width-child-1-2">
                     <p class="uk-text text__item">На стадии пятна вылечить кариес можно без бормашины и страха. Достаточно выполнить профессиональную чистку и нанести фторсодержащий лак – искусственное восстановление эмали полностью останавливает развитие болезни;</p>
                     <p class="uk-text text__item">Вы бежите лечить зубы только после бессонной ночи, страдая от пульсирующей боли? Будьте готовы добавить к стоимости и лечение пульпита, пломбировку корней;</p>
                     <p class="uk-text text__item">Небольшая кариозная полость уже требует препарирования и пломбировки. И стоить это будет дороже, чем шлифовка с нанесением лака. Ведь качественные композитные материалы увеличивают стоимость лечения;</p>
@@ -152,8 +152,14 @@
                     <h2 class="uk-h2">Консультация стоматолога</h2>
                     <p class="uk-text-meta">Запишитесь на прием к стоматологу в «Дентко» - и мы поможем вам обрести здоровую и счастливую улыбку.</p>
                     <form class="uk-flex uk-flex-middle">
-                        <input class="uk-input" type="text" placeholder="Ваше имя">
-                        <input class="uk-input" type="tel" placeholder="Ваш номер телефона">
+                        <div class="uk-input form__div">
+                            <input class="uk-input" type="text" placeholder="Ваше имя">
+                            <span class="form__err">В формате А-Я,а-я и минимум 2 символа</span>
+                        </div>
+                        <div class="uk-input form__div">
+                            <input class="uk-input" type="tel" placeholder="Ваш телефон">
+                            <span class="form__err">Введите номер в международном формате</span>
+                        </div>
                         <button class="uk-input" type="submit">Записаться на прием</button>
                         <a href="#" class="form__schedule"><span>Посмотреть режим работы</span><img src="./img/info-w.svg"></a>
                     </form>
@@ -163,7 +169,7 @@
         <section class="about">
             <div class="uk-container">
                 <div class="uk-section">
-                    <div class="uk-grid-match uk-child-width-1-2" uk-grid>
+                    <div class="uk-grid-match uk-child-width-1-1@s uk-child-width-1-2@m" uk-grid>
                         <div class="about__side">
                             <h2 class="uk-h1">«Дентко»: лечить зубы – это не страшно!</h2>
                             <p class="uk-text-normal">Наша клиника оказывает услуги лечения зубов в Минске детям и взрослым. При этом мы готовы гарантировать комфортную обстановку, высокое качество и полную безболезненность каждому пациенту. Ведь мы практикуем персональный подход:</p>
@@ -195,7 +201,7 @@
             <div class="uk-container">
                 <h2 class="uk-h1">Современные технологии на страже здоровья ваших зубов</h2>
                 <p class="uk-text uk-text-medium">Около 20% людей сталкиваются с потребностью повторного лечения зубов. Так, через несколько месяцев после установки пломбы или коронки некоторые люди вновь ощущают боль. А это прямое свидетельство некачественного препарирования и повторного развития инфекции. В клинике «Дентко» применяются инновационные технологии, <span class="uk-text-bold">которые на 100% гарантируют качество оказанных услуг:</span></p>
-                <div class="uk-column-1-2 uk-width-child-1-2">
+                <div class="uk-column-1-2@s uk-width-child-1-2">
                     <p class="uk-text text__item"><span class="uk-text-bold">Лечение зубов под микроскопом. </span>Мощная оптика безупречно демонстрирует ткани, не позволяя упустить ни единой частички разложившегося кариозного дентина;</p>
                     <p class="uk-text text__item"><span class="uk-text-bold">Пломбирование каналов горячей гуттаперчей </span>под контролем апекслокатора полностью исключает вероятность образования пустот или выхода материала за пределы зубного корня;</p>
                     <p class="uk-text text__item"><span class="uk-text-bold">Рентгенологический контроль. </span>Любое лечение пульпита и периодонтита мы завершаем анализом снимка, что гарантирует вам полное отсутствие проблем с пролеченным зубом в дальнейшем.</p>
@@ -208,17 +214,23 @@
                     <h2 class="uk-h2">Записаться на прием</h2>
                     <p class="uk-text-meta">Запишитесь на прием к специалисту для первичной диагностики.</p>
                     <form class="uk-flex uk-flex-middle">
-                        <input class="uk-input" type="text" placeholder="Ваше имя">
-                        <input class="uk-input" type="tel" placeholder="Ваш номер телефона">
+                        <div class="uk-input form__div">
+                            <input class="uk-input" type="text" placeholder="Ваше имя">
+                            <span class="form__err">В формате А-Я,а-я и минимум 2 символа</span>
+                        </div>
+                        <div class="uk-input form__div">
+                            <input class="uk-input" type="tel" placeholder="Ваш телефон">
+                            <span class="form__err">Введите номер в международном формате</span>
+                        </div>
                         <button class="uk-input" type="submit">Записаться на прием</button>
                         <a href="#" class="form__schedule"><span>Посмотреть режим работы</span><img src="./img/info-w.svg"></a>
                     </form>
                 </div>
-                <div class="uk-flex uk-flex-between uk-flex-middle uk-child-width-1-2 action__wrap">
+                <div class="uk-flex uk-flex-between uk-flex-middle uk-child-width-1-2@l action__wrap">
                     <div class="uk-card action">
                         <div class="uk-card-body">
                             <span class="action__header">Акция</span>
-                            <div class="uk-flex uk-flex-between">
+                            <div class="uk-flex uk-flex-between action__body">
                                 <h3 class="action__title">На проф гигиену полости рта скидка</h3>
                                 <span class="action__percentage">30%</span>
                             </div>
@@ -227,7 +239,7 @@
                     <div class="uk-card action">
                         <div class="uk-card-body">
                             <span class="action__header">При предъявлении скриншота экрана</span>
-                            <div class="uk-flex uk-flex-between">
+                            <div class="uk-flex uk-flex-between action__body">
                                 <h3 class="action__title">акция. На все услуги косметологии скидка</h3>
                                 <span class="action__percentage">10%</span>
                             </div>
@@ -244,12 +256,14 @@
             <div class="uk-container">
                 <h2 class="uk-h2">Врачи этого направления</h2>
                 <div class="uk-slider-container" uk-slider="finite: true">
-                    <ul class="uk-slider-items uk-child-width-1-1">
+                    <ul class="uk-slider-items uk-child-width-1-1 doctors__slider">
                         <li class="uk-position-relative uk-flex uk-flex-bottom uk-child-width-1-2 doctor">
                             <div class="uk-flex uk-flex-column uk-flex-left uk-flex-between doctor__data">
                                 <h3 class="uk-text-bold uk-position-relative doctor__name">Дубина<br>Иван Владимирович</h3>
-                                <span class="uk-text doctor__specialty">врач-стоматолог-ортопед</span>
-                                <a href="#" class="green-link doctor__link">Подробнее</a>
+                                <div class="doctor__bottom">
+                                    <span class="uk-text doctor__specialty">врач-стоматолог-ортопед</span>
+                                    <a href="#" class="green-link doctor__link">Подробнее</a>
+                                </div>
                             </div>
                             <div class="uk-flex uk-flex-center doctor__img">
                                 <img src="./img/doctor1.png" alt="Доктор">
@@ -327,8 +341,10 @@
                                             <span class="uk-text uk-text-small">Лечение кариеса</span>
                                         </div>
                                         <div class="review__controls uk-flex uk-flex-middle">
-                                            <a href="#" class="slider-button slider-prev" uk-slider-item="previous"></a>
-                                            <a href="#" class="slider-button slider-next" uk-slider-item="next"></a>
+                                            <div class="review__buttons">
+                                                <a href="#" class="slider-button slider-prev" uk-slider-item="previous"></a>
+                                                <a href="#" class="slider-button slider-next" uk-slider-item="next"></a>
+                                            </div>
                                             <span class="slider__pagination">1/<span class="slider__pagination-total">8</span></span>
                                         </div>
                                     </div>
@@ -352,8 +368,10 @@
                                             <span class="uk-text uk-text-small">Лечение кариеса</span>
                                         </div>
                                         <div class="review__controls uk-flex uk-flex-middle">
-                                            <a href="#" class="slider-button slider-prev" uk-slider-item="previous"></a>
-                                            <a href="#" class="slider-button slider-next" uk-slider-item="next"></a>
+                                            <div class="review__buttons">
+                                                <a href="#" class="slider-button slider-prev" uk-slider-item="previous"></a>
+                                                <a href="#" class="slider-button slider-next" uk-slider-item="next"></a>
+                                            </div>
                                             <span class="slider__pagination">1/<span class="slider__pagination-total">8</span></span>
                                         </div>
                                     </div>
@@ -377,8 +395,10 @@
                                             <span class="uk-text uk-text-small">Лечение кариеса</span>
                                         </div>
                                         <div class="review__controls uk-flex uk-flex-middle">
-                                            <a href="#" class="slider-button slider-prev" uk-slider-item="previous"></a>
-                                            <a href="#" class="slider-button slider-next" uk-slider-item="next"></a>
+                                            <div class="review__buttons">
+                                                <a href="#" class="slider-button slider-prev" uk-slider-item="previous"></a>
+                                                <a href="#" class="slider-button slider-next" uk-slider-item="next"></a>
+                                            </div>
                                             <span class="slider__pagination">1/<span class="slider__pagination-total">8</span></span>
                                         </div>
                                     </div>
@@ -402,8 +422,10 @@
                                             <span class="uk-text uk-text-small">Лечение кариеса</span>
                                         </div>
                                         <div class="review__controls uk-flex uk-flex-middle">
-                                            <a href="#" class="slider-button slider-prev" uk-slider-item="previous"></a>
-                                            <a href="#" class="slider-button slider-next" uk-slider-item="next"></a>
+                                            <div class="review__buttons">
+                                                <a href="#" class="slider-button slider-prev" uk-slider-item="previous"></a>
+                                                <a href="#" class="slider-button slider-next" uk-slider-item="next"></a>
+                                            </div>
                                             <span class="slider__pagination">1/<span class="slider__pagination-total">8</span></span>
                                         </div>
                                     </div>
@@ -427,8 +449,10 @@
                                             <span class="uk-text uk-text-small">Лечение кариеса</span>
                                         </div>
                                         <div class="review__controls uk-flex uk-flex-middle">
-                                            <a href="#" class="slider-button slider-prev" uk-slider-item="previous"></a>
-                                            <a href="#" class="slider-button slider-next" uk-slider-item="next"></a>
+                                            <div class="review__buttons">
+                                                <a href="#" class="slider-button slider-prev" uk-slider-item="previous"></a>
+                                                <a href="#" class="slider-button slider-next" uk-slider-item="next"></a>
+                                            </div>
                                             <span class="slider__pagination">1/<span class="slider__pagination-total">8</span></span>
                                         </div>
                                     </div>
@@ -442,7 +466,7 @@
         <section class="services">
             <div class="uk-container">
                 <div class="uk-slider-container" uk-slider="finite: true">
-                    <div class="uk-flex uk-flex-between">
+                    <div class="uk-flex uk-flex-between services__head">
                         <h2 class="uk-h2">Наши услуги</h2>
                         <div class="uk-flex uk-flex-middle uk-flex-between slider__controls">
                             <div class="slider__buttons">
@@ -452,7 +476,7 @@
                             <span class="slider__pagination">1/<span class="slider__pagination-total">8</span></span>
                         </div>
                     </div>
-                    <ul class="uk-slider-items uk-child-width-1-4 uk-grid">
+                    <ul class="uk-slider-items uk-child-width-1-3@s uk-child-width-1-4@m uk-grid">
                         <li>
                             <div class="uk-card uk-card-default">
                                 <div class="uk-card-body">
@@ -576,7 +600,7 @@
                         <li><a href="./contacts.html" class="footer__nav-link">контакты</a></li>
                     </ul>
                 </nav>
-                <dl class="uk-description-list uk-flex uk-flex-column ">
+                <dl class="uk-description-list uk-flex uk-flex-column footer__contacts">
                     <dt>Контактные данные:</dt>
                     <dd>ООО "Дентко-Мед", 220005</dd>
                     <dd>г. Минск, пр. Независимости, 58, п. 142 (3 этаж). <a href="./contacts.html" class="footer__green-link">Карта проезда</a></dd>
@@ -588,7 +612,7 @@
                         </div>
                     </dd>
                 </dl>
-                <dl class="uk-description-list uk-flex uk-flex-column ">
+                <dl class="uk-description-list uk-flex uk-flex-column footer__contacts">
                     <dt>Телефоны:</dt>
                     <dd><a href="tel:+375291101212" class="footer__dd-link"><img src="./img/operator1.png">+375 (29) 110-12-12</a></dd>
                     <dd><a href="tel:+375336601313" class="footer__dd-link"><img src="./img/operator2.png">+375 (33) 660-13-13</a></dd>

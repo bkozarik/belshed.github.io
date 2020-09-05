@@ -106,7 +106,7 @@
         <section class="about about_padding">
             <div class="uk-container">
                 <div class="uk-section">
-                    <div class="uk-grid-match uk-child-width-1-2" uk-grid>
+                    <div class="uk-grid-match uk-child-width-1-1@s uk-child-width-1-2@m" uk-grid>
                         <div class="about__side">
                             <h2 class="uk-h1">Контакты ООО "Дентко-мед"</h2>
                             <div class="about__section">
@@ -189,19 +189,19 @@
                     <h2 class="uk-h2">Оставить отзыв</h2>
                     <p class="uk-text-meta">Пожалуйста, проверьте правильность введенных данных.</p>
                     <form class="uk-flex uk-flex-bottom">
-                        <div class="form__inputs">
+                        <div class="form__inputs form__spread">
                             <div class="uk-flex uk-flex-between form__row">
-                                <input class="uk-input" type="text" placeholder="Ваше имя">
-                                <input class="uk-input" type="text" placeholder="Ваше имя">
-                                <input class="uk-input" type="email" placeholder="Ваш e-mail">
+                                <div class="uk-input form__div">
+                                    <input class="uk-input" type="text" placeholder="Ваше имя">
+                                    <span class="form__err">В формате А-Я,а-я и минимум 2 символа</span>
+                                </div>
+                                <div class="uk-input form__div">
+                                    <input class="uk-input" type="tel" placeholder="Ваш телефон">
+                                    <span class="form__err">Введите номер в международном формате</span>
+                                </div>
+                                <input class="uk-input form__spread" type="text" placeholder="Ваш комментарий">
+                                <button class="uk-input" type="submit">Оставить отзыв</button>
                             </div>
-                            <div class="form__row">
-                                <textarea class="form__textarea" placeholder="Напишите ваш вопрос" rows="1"></textarea>
-                            </div>
-                        </div>
-                        <div class="form__submit">
-                            <p class="uk-text uk-text-small">Email служит для оповещения об ответе, он не будет опубликован на сайте.</p>
-                            <button class="uk-input" type="submit">Оставить отзыв</button>
                         </div>
                     </form>
                 </div>

@@ -15,12 +15,12 @@
     <header class="header">
         <div class="uk-container">
             <div class="uk-flex uk-flex-between uk-flex-bottom header__wrap">
-                <img src="./img/logo.svg" alt="Логотип" class="header__logo">
-                <dl class="uk-description-list">
+                <a href="./index.html" class="header__main-link"><img src="./img/logo.svg" alt="Логотип" class="header__logo"></a>
+                <dl class="uk-description-list header__item">
                     <dt>Контакты:</dt>
                     <dd>г. Минск, пр-кт Независимости, 58</dd>
                 </dl>
-                <dl class="uk-description-list">
+                <dl class="uk-description-list header__item">
                     <dt>Время работы:</dt>
                     <dd class="uk-inline">
                         <div class="uk-inline header__dropdown-trigger">
@@ -43,7 +43,7 @@
                         </div>
                     </dd>
                 </dl>
-                <dl class="uk-description-list">
+                <dl class="uk-description-list header__item">
                     <dt>Мы в соц.сетях:</dt>
                     <dd class="uk-flex uk-flex-between">
                         <a href="#" class="header__link"><img src="./img/facebook.png" alt="Иконка" class="header__link-img"></a>
@@ -51,7 +51,7 @@
                         <a href="#" class="header__link"><img src="./img/instagram.png" alt="Иконка" class="header__link-img"></a>
                     </dd>
                 </dl>
-                <dl class="uk-description-list">
+                <dl class="uk-description-list header__item">
                     <dt>Телефоны:</dt>
                     <dd>
                         <div class="uk-inline">
@@ -70,6 +70,7 @@
                         </div>
                     </dd>
                 </dl>
+                <button class="header__menu-btn menu-open"><span></span></button>
             </div>
         </div>
     </header>
@@ -98,10 +99,11 @@
                 <li><a href="./team.html">специалисты</a></li>
                 <li><a href="./faq.html">вопрос-ответ</a></li>
                 <li><a href="./contacts.html">контакты</a></li>
-                <li><a class="nav__order" href="#">Записаться на прием <img src="./img/inline-arrow.svg"></a></li>
+                <li><a class="nav__order popup-request-open" href="#">Записаться на прием <img src="./img/inline-arrow.svg"></a></li>
             </ul>
         </div>
     </nav>
+    <div class="mobile-menu"></div>
     <main class="main">
         <section class="slider" uk-slider="finite: true">
             <div class="uk-slider-container">
@@ -109,7 +111,7 @@
                     <li>
                         <div class="uk-background-cover uk-height-large uk-panel" style="background-image: url(./img/microscope.png);">
                             <div class="uk-container uk-height-large uk-position-relative">
-                                <div class="slider__body uk-position-center-left">
+                                <div class="uk-position-center-left slider__body">
                                     <h1 class="uk-h1">Наша цель - красота и здоровье Ваших зубов</h1>
                                     <h2 class="uk-text-large">Стоматология достигла высочайшего уровня в эстетической коррекции и протезировании</h2>
                                     <div class="slider__controls">
@@ -126,7 +128,7 @@
                     <li>
                         <div class="uk-background-cover uk-height-large uk-panel" style="background-image: url(./img/microscope.png);">
                             <div class="uk-container uk-height-large uk-position-relative">
-                                <div class="slider__body uk-position-center-left">
+                                <div class="uk-position-center-left slider__body">
                                     <h1 class="uk-h1">Наша цель - красота и здоровье Ваших зубов</h1>
                                     <h2 class="uk-text-large">Стоматология достигла высочайшего уровня в эстетической коррекции и протезировании</h2>
                                     <div class="slider__controls">
@@ -143,7 +145,7 @@
                     <li>
                         <div class="uk-background-cover uk-height-large uk-panel" style="background-image: url(./img/microscope.png);">
                             <div class="uk-container uk-height-large uk-position-relative">
-                                <div class="slider__body uk-position-center-left">
+                                <div class="uk-position-center-left slider__body">
                                     <h1 class="uk-h1">Наша цель - красота и здоровье Ваших зубов</h1>
                                     <h2 class="uk-text-large">Стоматология достигла высочайшего уровня в эстетической коррекции и протезировании</h2>
                                     <div class="slider__controls">
@@ -162,7 +164,7 @@
         </section>
         <section class="benefits">
             <div class="uk-container">
-                <div class="uk-flex uk-flex-between">
+                <div class="uk-flex uk-child-width-1-2@s uk-flex-between benefits__wrap">
                     <div class="benefit">
                         <div class="benefit__head uk-flex uk-flex-middle">
                             <img src="./img/benefit1.png" class="benefit__img">
@@ -221,7 +223,7 @@
         <section class="about">
             <div class="uk-container">
                 <div class="uk-section">
-                    <div class="uk-grid-match uk-child-width-1-2" uk-grid>
+                    <div class="uk-grid-match uk-child-width-1-1@s uk-child-width-1-2@m" uk-grid>
                         <div class="about__side">
                             <div class="about__img-wrap">
                                 <img class="about__img" src="./img/reception.jpg" alt="" uk-img>
@@ -243,7 +245,7 @@
         <section class="services">
             <div class="uk-container">
                 <div class="uk-slider-container" uk-slider="finite: true">
-                    <div class="uk-flex uk-flex-between">
+                    <div class="uk-flex uk-flex-between services__head">
                         <h2 class="uk-h2">Наши услуги</h2>
                         <div class="uk-flex uk-flex-middle uk-flex-between slider__controls">
                             <div class="slider__buttons">
@@ -253,7 +255,7 @@
                             <span class="slider__pagination">1/<span class="slider__pagination-total">8</span></span>
                         </div>
                     </div>
-                    <ul class="uk-slider-items uk-child-width-1-4 uk-grid">
+                    <ul class="uk-slider-items uk-child-width-1-3@s uk-child-width-1-4@m uk-grid">
                         <li>
                             <div class="uk-card uk-card-default">
                                 <div class="uk-card-body">
@@ -344,10 +346,33 @@
                     <h2 class="uk-h2">Не знаете с чего начать?</h2>
                     <p class="uk-text-meta">Запишитесь на прием к специалисту для первичной диагностики.</p>
                     <form class="uk-flex uk-flex-middle">
-                        <input class="uk-input" type="text" placeholder="Ваше имя">
-                        <input class="uk-input" type="tel" placeholder="Ваш номер телефона">
-                        <button class="uk-input" type="submit">Записаться на прием</button>
-                        <a href="#" class="form__schedule"><span>Посмотреть режим работы</span><img src="./img/info-w.svg"></a>
+                        <div class="uk-input form__div">
+                            <input class="uk-input" type="text" placeholder="Ваше имя">
+                            <span class="form__err">В формате А-Я,а-я и минимум 2 символа</span>
+                        </div>
+                        <div class="uk-input form__div">
+                            <input class="uk-input" type="tel" placeholder="Ваш телефон">
+                            <span class="form__err">Введите номер в международном формате</span>
+                        </div>
+                        <button class="uk-input popup-sucsess-open" type="submit">Записаться на прием</button>
+                        <div class="uk-position-relative form__dropdown-wrap">
+                            <span class="form__schedule">Посмотреть режим работы  <img src="./img/info-w.svg"></span>
+                            <div class="uk-position-absolute uk-card uk-card-body uk-margin-remove-top form__dropdown-card">
+                                <h3 class="footer__card-header uk-text-bold">Время работы:</h3>
+                                <div class="footer__card-body uk-flex uk-flex-between">
+                                    <div class="footer__card-col uk-flex uk-flex-column">
+                                        <span>пн-пт:</span>
+                                        <span>сб:</span>
+                                        <span>вс:</span>
+                                    </div>
+                                    <div class="footer__card-col uk-flex uk-flex-column">
+                                        <span>09:00 — 21:00</span>
+                                        <span>09:00 — 20:00</span>
+                                        <span>09:00 — 17:00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </form>
                 </div>
             </div>
@@ -360,12 +385,14 @@
             <div class="uk-container">
                 <h2 class="uk-h2">Наши врачи</h2>
                 <div class="uk-slider-container" uk-slider="finite: true">
-                    <ul class="uk-slider-items uk-child-width-1-1">
+                    <ul class="uk-slider-items uk-child-width-1-1 doctors__slider">
                         <li class="uk-position-relative uk-flex uk-flex-bottom uk-child-width-1-2 doctor">
                             <div class="uk-flex uk-flex-column uk-flex-left uk-flex-between doctor__data">
                                 <h3 class="uk-text-bold uk-position-relative doctor__name">Дубина<br>Иван Владимирович</h3>
-                                <span class="uk-text doctor__specialty">врач-стоматолог-ортопед</span>
-                                <a href="#" class="green-link doctor__link">Подробнее</a>
+                                <div class="doctor__bottom">
+                                    <span class="uk-text doctor__specialty">врач-стоматолог-ортопед</span>
+                                    <a href="#" class="green-link doctor__link">Подробнее</a>
+                                </div>
                             </div>
                             <div class="uk-flex uk-flex-center doctor__img">
                                 <img src="./img/doctor1.png" alt="Доктор">
@@ -422,7 +449,7 @@
                     <h2 class="uk-h2">Улыбки наших пациентов</h2>
                     <a href="#" class="uk-link green-link">Портфолио работ</a>
                 </div>
-                <div class="uk-flex uk-flex-between uk-child-width-1-4">
+                <div class="uk-flex uk-flex-between uk-child-width-1-3@s uk-child-width-1-4@m portfolio__wrap">
                     <div class="uk-card uk-card-default">
                         <div class="uk-card-media-top">
                             <div class="uk-position-relative portfolio__img-wrap">
@@ -493,7 +520,7 @@
         <section class="about">
             <div class="uk-container">
                 <div class="uk-section">
-                    <div class="uk-grid-match uk-child-width-1-2" uk-grid>
+                    <div class="uk-grid-match uk-child-width-1-1@s uk-child-width-1-2@m" uk-grid>
                         <div class="about__side">
                             <div class="about__img-wrap">
                                 <img class="about__img" src="./img/modern.png" alt="" uk-img>
@@ -509,7 +536,7 @@
                                 <li>Врачи 1 и высшей категории, обладающие опытом работы свыше 5 лет подберут оптимальный способ восстановления зубов даже в самых сложных ситуациях;</li>
                                 <li>Цены нашей стоматологии в Минске также соответствуют принципу комфорта. А при необходимости, вы всегда можете воспользоваться картой рассрочки.</li>
                             </ul>
-                            <button class="uk-button uk-button-default button">Записаться на прием <img src="./img/inline-arrow-w.svg"></button>
+                            <button class="uk-button uk-button-default button popup-request-open">Записаться на прием <img src="./img/inline-arrow-w.svg"></button>
                         </div>
                     </div>
                 </div>
@@ -531,8 +558,8 @@
                     <h2 class="uk-h2">Это интересно</h2>
                     <a href="#" class="uk-link green-link">Все статьи</a>
                 </div>
-                <div class="uk-flex uk-flex-between uk-child-width-1-4 uk-margin-medium-top">
-                    <div class="uk-card uk-card-default">
+                <div class="uk-flex uk-flex-between uk-child-width-1-4 uk-margin-medium-top more__articles">
+                    <a href="#" class="uk-card uk-card-default more__article">
                         <div class="uk-card-media-top">
                             <img class="portfolio__img" src="./img/more1.png">
                         </div>
@@ -541,8 +568,8 @@
                             <p>Пришеечный кариес: что такое, симптомы, как лечить - рекомендации медицинского центра Дентко!</p>
                             <button class="uk-button uk-button-default more__button">Читать полностью</button>
                         </div>
-                    </div>
-                    <div class="uk-card uk-card-default">
+                    </a>
+                    <a href="#" class="uk-card uk-card-default more__article">
                         <div class="uk-card-media-top">
                             <img class="portfolio__img" src="./img/more2.png">
                         </div>
@@ -551,8 +578,8 @@
                             <p>Зубные протезы: что из себя представляют, разновидности, материалы изготовления, показания к установке - рассказывает медицинский центр Дентко!</p>
                             <button class="uk-button uk-button-default more__button">Читать полностью</button>
                         </div>
-                    </div>
-                    <div class="uk-card uk-card-default">
+                    </a>
+                    <a href="#" class="uk-card uk-card-default more__article">
                         <div class="uk-card-media-top">
                             <img class="portfolio__img" src="./img/more3.png">
                         </div>
@@ -561,8 +588,8 @@
                             <p>Пародонтит: клинические симптомы, причины возникновения, рекомендации и лечение - рассказывает клиника Дентко!</p>
                             <button class="uk-button uk-button-default more__button">Читать полностью</button>
                         </div>
-                    </div>
-                    <div class="uk-card uk-card-default">
+                    </a>
+                    <a href="#" class="uk-card uk-card-default more__article">
                         <div class="uk-card-media-top">
                             <img class="portfolio__img" src="./img/more4.png">
                         </div>
@@ -571,15 +598,15 @@
                             <p>CAD/CAM система CEREC позволяет проводить лечение и протезирование зубов быстро и с высокой точностью</p>
                             <button class="uk-button uk-button-default more__button">Читать полностью</button>
                         </div>
-                    </div>
+                    </a>
                 </div>
             </div>
         </section>
         <section class="agit">
             <div class="uk-container">
-                <div class="uk-flex uk-flex-between uk-flex-middle">
+                <div class="uk-flex uk-flex-between uk-flex-middle uk-flex-column@s">
                     <p class="uk-text-bold uk-text-large">Запишитесь на прием к врачу в «Дентко» и получите план лечения и протезирования ваших зубов!</p>
-                    <button class="uk-button uk-button-default button">Записаться на прием</button>
+                    <button class="uk-button uk-button-default button popup-request-open">Записаться на прием</button>
                 </div>
             </div>
         </section>
@@ -614,7 +641,7 @@
                         <li><a href="./contacts.html" class="footer__nav-link">контакты</a></li>
                     </ul>
                 </nav>
-                <dl class="uk-description-list uk-flex uk-flex-column ">
+                <dl class="uk-description-list uk-flex uk-flex-column footer__contacts">
                     <dt>Контактные данные:</dt>
                     <dd>ООО "Дентко-Мед", 220005</dd>
                     <dd>г. Минск, пр. Независимости, 58, п. 142 (3 этаж). <a href="./contacts.html" class="footer__green-link">Карта проезда</a></dd>
@@ -626,7 +653,7 @@
                         </div>
                     </dd>
                 </dl>
-                <dl class="uk-description-list uk-flex uk-flex-column ">
+                <dl class="uk-description-list uk-flex uk-flex-column footer__contacts">
                     <dt>Телефоны:</dt>
                     <dd><a href="tel:+375291101212" class="footer__dd-link"><img src="./img/operator1.png">+375 (29) 110-12-12</a></dd>
                     <dd><a href="tel:+375336601313" class="footer__dd-link"><img src="./img/operator2.png">+375 (33) 660-13-13</a></dd>
@@ -657,9 +684,9 @@
                 </div>
             </div>
             <hr>
-            <div class="uk-flex uk-flex-between uk-child-width-1-3 footer__bottom">
+            <div class="uk-flex uk-flex-between uk-child-width-1-3@s footer__bottom">
                 <div class="footer__bottom-col">
-                    <span class="uk-text uk-text-meta">© 1997 - 2020. Медицинский центр<br>"Дентко".</span>
+                    <span class="uk-text uk-text-meta">© 1997 - 2020. Медицинский центр <br>"Дентко".</span>
                 </div>
                 <div class="uk-flex uk-flex-middle uk-flex-column footer__bottom-col">
                     <span class="uk-text uk-text-meta">Рейтинг Медицинского центра "Дентко" - <img src="./img/rating.png"> 4,9 балла (10 голосов)</span>
@@ -671,6 +698,46 @@
             </div>
         </div>
     </footer>
+
+    <div class="popup__wrapper popup-request">
+        <div class="uk-position-relative popup popup_request">
+            <span class="uk-position-absolute popup__close popup-close"></span>
+            <div class="popup__body">
+                <h2 class="uk-h1">Записаться на прием</h2>
+                <p class="uk-text uk-text-small">Наш администратор свяжется с Вами для корректировки времени.</p>
+                <div class="uk-flex uk-flex-between uk-child-width-1-3 popup__row">
+                    <div class="uk-input form__div">
+                        <input class="uk-input" type="text" placeholder="Ваше имя">
+                        <span class="form__err">В формате А-Я,а-я и минимум 2 символа</span>
+                    </div>
+                    <div class="uk-input form__div">
+                        <input class="uk-input" type="tel" placeholder="Ваш телефон">
+                        <span class="form__err">Введите номер в международном формате</span>
+                    </div>
+                    <div class="uk-input form__div">
+                        <input class="uk-input" type="email" placeholder="Ваш e-mail">
+                        <span class="form__err">Неверный формат E-mail адреса</span>
+                    </div>
+                </div>
+                <div class="popup__row">
+                    <textarea class="uk-input" rows="2" placeholder="Что вас беспокоит?"></textarea>
+                </div>
+                <div class="uk-flex uk-flex-between uk-width-1-1 popup__row">
+
+                    <button class="uk-button popup__submit popup-sucsess-open">Записаться на прием <img src="./img/inline-arrow-w.svg"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="popup__wrapper popup-sucsess">
+        <div class="uk-position-relative popup popup_sucsess">
+            <span class="uk-position-absolute popup__close popup-close"></span>
+            <div class="popup__body">
+                <h2 class="uk-h1 uk-text-center">Ваша заявка принята!</h2>
+                <p class="uk-text uk-text-center uk-text-small">Наш администратор свяжется с Вами для корректировки времени.</p>
+            </div>
+        </div>
+    </div>
     <script src="./js/main.js"></script>
 </body>
 </html>

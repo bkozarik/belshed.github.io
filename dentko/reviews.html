@@ -105,7 +105,7 @@
     <main class="main">
         <section class="reviews reviews_page">
             <div class="uk-container">
-                <div class="uk-flex uk-flex-between uk-flex-middle">
+                <div class="uk-flex uk-flex-between uk-flex-middle reviews__header">
                     <h2 class="uk-h1">Отзывы наших клиентов</h2>
                     <button class="uk-button uk-button-default button button_big">Оставить отзыв<img src="./img/inline-arrow-w.svg"></button>
                 </div>
@@ -216,9 +216,18 @@
                     <form class="uk-flex uk-flex-bottom">
                         <div class="form__inputs">
                             <div class="uk-flex uk-flex-between form__row">
-                                <input class="uk-input" type="text" placeholder="Ваше имя">
-                                <input class="uk-input" type="text" placeholder="Ваше имя">
-                                <input class="uk-input" type="email" placeholder="Ваш e-mail">
+                                <div class="uk-input">
+                                    <span class="form__rate">Ваша оценка:</span>
+                                    <span class="form__err">В формате А-Я,а-я и минимум 2 символа</span>
+                                </div>
+                                <div class="uk-input form__div">
+                                    <input class="uk-input" type="text" placeholder="Ваше имя">
+                                    <span class="form__err">В формате А-Я,а-я и минимум 2 символа</span>
+                                </div>
+                                <div class="uk-input form__div">
+                                    <input class="uk-input" type="email" placeholder="Ваш e-mail">
+                                    <span class="form__err">Неверный формат E-mail адреса</span>
+                                </div>
                             </div>
                             <div class="form__row">
                                 <textarea class="form__textarea" placeholder="Напишите ваш отзыв" rows="1"></textarea>
