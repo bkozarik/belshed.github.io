@@ -201,9 +201,9 @@
                     <div class="reviews__pagination">
                         <ul class="uk-pagination" uk-margin>
                             <li><a href="#"><span class="reviews__control reviews__control_disabled reviews__control-prev"></span></a></li>
-                            <li class="uk-active"><span>1</span></li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
+                            <li class="reviews__page uk-active"><span>1</span></li>
+                            <li class="reviews__page"><a href="#">2</a></li>
+                            <li class="reviews__page"><a href="#">3</a></li>
                             <li><a href="#"><span class="reviews__control reviews__control-next"></span></a></li>
                         </ul>
                     </div>
@@ -218,9 +218,15 @@
                     <form class="uk-flex uk-flex-bottom">
                         <div class="form__inputs">
                             <div class="uk-flex uk-flex-between form__row">
-                                <div class="uk-input">
-                                    <span class="form__rate">Ваша оценка:</span>
-                                    <span class="form__err">В формате А-Я,а-я и минимум 2 символа</span>
+                                <div class="uk-input form__rate-wrap">
+                                    <span class="form__rate-span">Ваша оценка:</span>
+                                    <div class="form__rate">
+                                        <input class="form__radio" type="radio" name="rate" checked>
+                                        <input class="form__radio" type="radio" name="rate">
+                                        <input class="form__radio" type="radio" name="rate">
+                                        <input class="form__radio" type="radio" name="rate">
+                                        <input class="form__radio" type="radio" name="rate">
+                                    </div>
                                 </div>
                                 <div class="uk-input form__div">
                                     <input class="uk-input" type="text" placeholder="Ваше имя">

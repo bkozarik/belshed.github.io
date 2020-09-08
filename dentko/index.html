@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dentko - стоматологическая клиника</title>
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="./css/uikit.min.css"/>
     <link rel="stylesheet" href="./css/fonts.css"/>
     <link rel="stylesheet" href="./css/style.css"/>
     <link rel="stylesheet" href="./css/media.css"/>
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
     <script src="./js/uikit.min.js"></script>
     <script src="./js/uikit-icons.min.js"></script>
 </head>
@@ -78,7 +80,7 @@
         <div class="uk-navbar-center">
             <ul class="uk-navbar-nav uk-flex-between uk-flex-middle">
                 <li><a href="./about.html">о компании</a></li>
-                <li>
+                <li class="nav__dropdown">
                     <a href="./service.html">услуги</a>
                     <div class="uk-navbar-dropdown">
                         <ul class="uk-nav uk-navbar-dropdown-nav">
@@ -229,14 +231,31 @@
                                 <img class="about__img" src="./img/reception.jpg" alt="" uk-img>
                             </div>
                         </div>
-                        <div class="about__side">
-                            <h2 class="uk-h1">Частная стоматология Дентко</h2>
-                            <p class="uk-text-normal">Искренняя и открытая улыбка – оружие массового поражения. Она привлекает к вам внимание противоположного пола, располагает к общению клиентов и помогает расти по карьерной лестнице. Но улыбаться открыто может лишь тот, кто уверен в безупречности своих зубов и свежести дыхания. Стоматологический центр «Дентко» в Минске оказывает полный комплекс услуг по сохранению красивой улыбки в любом возрасте:</p>
-                            <ul class="uk-list">
-                                <li>Мы лечим молочные и постоянные зубки у детей, обучаем их правильному уходу за полостью рта и корректируем прикус;</li>
-                                <li>Оказываем полный комплекс терапевтических услуг – лечение кариеса, пульпита и периодонтита;</li>
-                                <li>Оказываем полный комплекс терапевтических услуг – лечение кариеса, пульпита и периодонтита;</li>
-                            </ul>
+                        <div class="about__side spoiler-text">
+                            <div class="about__text-wrap">
+                                <h2 class="uk-h1">Частная стоматология Дентко</h2>
+                                <p class="uk-text-normal">Искренняя и открытая улыбка – оружие массового поражения. Она привлекает к вам внимание противоположного пола, располагает к общению клиентов и помогает расти по карьерной лестнице. Но улыбаться открыто может лишь тот, кто уверен в безупречности своих зубов и свежести дыхания. Стоматологический центр «Дентко» в Минске оказывает полный комплекс услуг по сохранению красивой улыбки в любом возрасте:</p>
+                                <ul class="uk-list">
+                                    <li>Мы лечим молочные и постоянные зубки у детей, обучаем их правильному уходу за полостью рта и корректируем прикус;</li>
+                                    <li>Оказываем полный комплекс терапевтических услуг – лечение кариеса, пульпита и периодонтита;</li>
+                                    <li>Оказываем полный комплекс терапевтических услуг – лечение кариеса, пульпита и периодонтита;</li>
+                                    <li>Оказываем полный комплекс терапевтических услуг – лечение кариеса, пульпита и периодонтита;</li>
+                                    <li>Оказываем полный комплекс терапевтических услуг – лечение кариеса, пульпита и периодонтита;</li>
+                                    <li>Оказываем полный комплекс терапевтических услуг – лечение кариеса, пульпита и периодонтита;</li>
+                                    <li>Оказываем полный комплекс терапевтических услуг – лечение кариеса, пульпита и периодонтита;</li>
+                                    <li>Оказываем полный комплекс терапевтических услуг – лечение кариеса, пульпита и периодонтита;</li>
+                                    <li>Оказываем полный комплекс терапевтических услуг – лечение кариеса, пульпита и периодонтита;</li>
+                                    <li>Оказываем полный комплекс терапевтических услуг – лечение кариеса, пульпита и периодонтита;</li>
+                                    <li>Оказываем полный комплекс терапевтических услуг – лечение кариеса, пульпита и периодонтита;</li>
+                                    <li>Оказываем полный комплекс терапевтических услуг – лечение кариеса, пульпита и периодонтита;</li>
+                                    <li>Оказываем полный комплекс терапевтических услуг – лечение кариеса, пульпита и периодонтита;</li>
+                                    <li>Оказываем полный комплекс терапевтических услуг – лечение кариеса, пульпита и периодонтита;</li>
+                                    <li>Оказываем полный комплекс терапевтических услуг – лечение кариеса, пульпита и периодонтита;</li>
+                                </ul>
+                            </div>
+                            <div class="about__flexbox">
+                                <a href="#" class="green-link spoiler-link">Читать полностью</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -252,12 +271,12 @@
                                 <a href="#" class="slider-button slider-prev" uk-slider-item="previous"></a>
                                 <a href="#" class="slider-button slider-next" uk-slider-item="next"></a>
                             </div>
-                            <span class="slider__pagination">1/<span class="slider__pagination-total">8</span></span>
+                            <span class="slider__pagination"><span class="slider__pagination-active">1</span>/<span class="slider__pagination-total">8</span></span>
                         </div>
                     </div>
                     <ul class="uk-slider-items uk-child-width-1-3@s uk-child-width-1-4@m uk-grid">
                         <li>
-                            <div class="uk-card uk-card-default">
+                            <div class="uk-card uk-card-default service__front">
                                 <div class="uk-card-body">
                                     <h3 class="uk-card-title">Ленчение</h3>
                                 </div>
@@ -265,9 +284,21 @@
                                     <img src="./img/service1.png" alt="">
                                 </div>
                             </div>
+                            <div class="uk-card uk-card-default service__back">
+                                <h3 class="uk-card-title">Ленчение</h3>
+                                <div class="service__links">
+                                    <a href="#" class="service__link">Лечение пульпита</a>
+                                    <a href="#" class="service__link">Детская стоматология</a>
+                                    <a href="#" class="service__link">Лечение каналов</a>
+                                    <a href="#" class="service__link">Лечение корня зуба</a>
+                                    <a href="#" class="service__link">Лечение зубов под микроскопом</a>
+                                    <a href="#" class="service__link">Лечение зубов иностранным гражданам</a>
+                                    <a href="#" class="service__link">Центр эстетической стоматологии</a>
+                                </div>
+                            </div>
                         </li>
                         <li>
-                            <div class="uk-card uk-card-default">
+                            <div class="uk-card uk-card-default service__front">
                                 <div class="uk-card-body">
                                     <h3 class="uk-card-title">Протезирование</h3>
                                 </div>
@@ -275,9 +306,27 @@
                                     <img src="./img/service2.png" alt="">
                                 </div>
                             </div>
+                            <div class="uk-card uk-card-default service__back">
+                                <h3 class="uk-card-title">Протезирование</h3>
+                                <div class="service__links">
+                                    <a href="#" class="service__link">Протезирование зубов</a>
+                                    <a href="#" class="service__link">Реставрация зубов</a>
+                                    <a href="#" class="service__link">Съемные зубные протезы</a>
+                                    <a href="#" class="service__link">Бюгельное протезирование</a>
+                                    <a href="#" class="service__link">Ремонт зубных протезов</a>
+                                    <a href="#" class="service__link">Люминиры</a>
+                                    <a href="#" class="service__link">Компониры</a>
+                                    <a href="#" class="service__link">Керамические виниры</a>
+                                    <a href="#" class="service__link">Безметалловая керамика</a>
+                                    <a href="#" class="service__link">Металлокерамические коронки</a>
+                                    <a href="#" class="service__link">Пластмассовый протез для зубов</a>
+                                    <a href="#" class="service__link">Нейлоновые протезы</a>
+                                    <a href="#" class="service__link">Зубной мост</a>
+                                </div>
+                            </div>
                         </li>
                         <li>
-                            <div class="uk-card uk-card-default">
+                            <div class="uk-card uk-card-default service__front">
                                 <div class="uk-card-body">
                                     <h3 class="uk-card-title">Хирургия</h3>
                                 </div>
@@ -285,9 +334,21 @@
                                     <img src="./img/service3.png" alt="">
                                 </div>
                             </div>
+                            <div class="uk-card uk-card-default service__back">
+                                <h3 class="uk-card-title">Хирургия</h3>
+                                <div class="service__links">
+                                    <a href="#" class="service__link">Имплантация зубов (импланты)</a>
+                                    <a href="#" class="service__link">Наращивание костной ткани</a>
+                                    <a href="#" class="service__link">Стоматологическая хирургия</a>
+                                    <a href="#" class="service__link">Удаление зуба мудрости</a>
+                                    <a href="#" class="service__link">Удаление зубов</a>
+                                    <a href="#" class="service__link">Удаление зубов у детей</a>
+                                    <a href="#" class="service__link">Пластика уздечки языка</a>
+                                </div>
+                            </div>
                         </li>
                         <li>
-                            <div class="uk-card uk-card-default">
+                            <div class="uk-card uk-card-default service__front">
                                 <div class="uk-card-body">
                                     <h3 class="uk-card-title">Ортодонтия</h3>
                                 </div>
@@ -295,44 +356,116 @@
                                     <img src="./img/service4.png" alt="">
                                 </div>
                             </div>
+                            <div class="uk-card uk-card-default service__back">
+                                <h3 class="uk-card-title">Ортодонтия</h3>
+                                <div class="service__links">
+                                    <a href="#" class="service__link">Установка брекет-систем</a>
+                                    <a href="#" class="service__link">Металлические брекеты</a>
+                                    <a href="#" class="service__link">Сапфировые брекеты</a>
+                                    <a href="#" class="service__link">Самолигирующие брекеты</a>
+                                    <a href="#" class="service__link">Керамические брекеты</a>
+                                    <a href="#" class="service__link">Брекеты Damon</a>
+                                    <a href="#" class="service__link">Услуги ортодонта в Минске</a>
+                                    <a href="#" class="service__link">Детский ортодонт</a>
+                                    <a href="#" class="service__link">Трейнеры для зубов</a>
+                                </div>
+                            </div>
                         </li>
                         <li>
-                            <div class="uk-card uk-card-default">
+                            <div class="uk-card uk-card-default service__front">
                                 <div class="uk-card-body">
-                                    <h3 class="uk-card-title">Media Bottom</h3>
+                                    <h3 class="uk-card-title">Отбеливание</h3>
                                 </div>
                                 <div class="uk-card-media-bottom">
                                     <img src="./img/service1.png" alt="">
                                 </div>
                             </div>
+                            <div class="uk-card uk-card-default service__back">
+                                <h3 class="uk-card-title">Отбеливание</h3>
+                                <div class="service__links">
+                                    <a href="#" class="service__link">Отбеливание зубов</a>
+                                    <a href="#" class="service__link">Офисное отбеливание зубов</a>
+                                    <a href="#" class="service__link">Отбеливание зубов капами</a>
+                                    <a href="#" class="service__link">Домашнее отбеливание зубов</a>
+                                </div>
+                            </div>
                         </li>
                         <li>
-                            <div class="uk-card uk-card-default">
+                            <div class="uk-card uk-card-default service__front">
                                 <div class="uk-card-body">
-                                    <h3 class="uk-card-title">Media Bottom</h3>
+                                    <h3 class="uk-card-title">Профилактика</h3>
+                                </div>
+                                <div class="uk-card-media-bottom">
+                                    <img src="./img/service1.png" alt="">
+                                </div>
+                            </div>
+                            <div class="uk-card uk-card-default service__back">
+                                <h3 class="uk-card-title">Профилактика</h3>
+                                <div class="service__links">
+                                    <a href="#" class="service__link">Профессиональная чистка зубов и профилактика</a>
+                                    <a href="#" class="service__link">Герметизация фиссур</a>
+                                    <a href="#" class="service__link">Ультразвуковая чистка</a>
+                                    <a href="#" class="service__link">Профессиональная гигиена полости рта</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="uk-card uk-card-default service__front">
+                                <div class="uk-card-body">
+                                    <h3 class="uk-card-title">Пародонтология</h3>
                                 </div>
                                 <div class="uk-card-media-bottom">
                                     <img src="./img/service2.png" alt="">
                                 </div>
                             </div>
+                            <div class="uk-card uk-card-default service__back">
+                                <h3 class="uk-card-title">Пародонтология</h3>
+                                <div class="service__links">
+                                    <a href="#" class="service__link">Пародонтология</a>
+                                    <a href="#" class="service__link">Лечение пародонтита</a>
+                                    <a href="#" class="service__link">Лечение гингивита</a>
+                                    <a href="#" class="service__link">Лечение пародонтоза</a>
+                                    <a href="#" class="service__link">Шинирование зубов в Минске</a>
+                                </div>
+                            </div>
                         </li>
                         <li>
-                            <div class="uk-card uk-card-default">
+                            <div class="uk-card uk-card-default service__front">
                                 <div class="uk-card-body">
-                                    <h3 class="uk-card-title">Media Bottom</h3>
+                                    <h3 class="uk-card-title">Косметология</h3>
                                 </div>
                                 <div class="uk-card-media-bottom">
                                     <img src="./img/service3.png" alt="">
                                 </div>
                             </div>
+                            <div class="uk-card uk-card-default service__back">
+                                <h3 class="uk-card-title">Косметология</h3>
+                                <div class="service__links">
+                                    <a href="#" class="service__link">Терапевтическая косметология</a>
+                                    <a href="#" class="service__link">Контурная пластика</a>
+                                    <a href="#" class="service__link">Пилинг</a>
+                                    <a href="#" class="service__link">Косметологическая клиника Дентко</a>
+                                    <a href="#" class="service__link">Массаж лица</a>
+                                    <a href="#" class="service__link">Чистка лица</a>
+                                    <a href="#" class="service__link">Микротоки для лица</a>
+                                    <a href="#" class="service__link">Ультразвуковая чистка лица</a>
+                                </div>
+                            </div>
                         </li>
                         <li>
-                            <div class="uk-card uk-card-default">
+                            <div class="uk-card uk-card-default service__front">
                                 <div class="uk-card-body">
-                                    <h3 class="uk-card-title">Media Bottom</h3>
+                                    <h3 class="uk-card-title">Диагностика</h3>
                                 </div>
                                 <div class="uk-card-media-bottom">
                                     <img src="./img/service4.png" alt="">
+                                </div>
+                            </div>
+                            <div class="uk-card uk-card-default service__back">
+                                <h3 class="uk-card-title">Диагностика</h3>
+                                <div class="service__links">
+                                    <a href="#" class="service__link">Панорамный снимок зубов</a>
+                                    <a href="#" class="service__link">3D компьютерная томография зубов</a>
                                 </div>
                             </div>
                         </li>
@@ -402,7 +535,7 @@
                                     <a href="#" class="slider-button slider-prev" uk-slider-item="previous"></a>
                                     <a href="#" class="slider-button slider-next" uk-slider-item="next"></a>
                                 </div>
-                                <span class="slider__pagination">1/<span class="slider__pagination-total">8</span></span>
+                                <span class="slider__pagination"><span class="slider__pagination-active">1</span>/<span class="slider__pagination-total">8</span></span>
                             </div>
                         </li>
                         <li class="uk-position-relative uk-flex uk-flex-bottom uk-child-width-1-2 doctor">
@@ -419,7 +552,7 @@
                                     <a href="#" class="slider-button slider-prev" uk-slider-item="previous"></a>
                                     <a href="#" class="slider-button slider-next" uk-slider-item="next"></a>
                                 </div>
-                                <span class="slider__pagination">1/<span class="slider__pagination-total">8</span></span>
+                                <span class="slider__pagination"><span class="slider__pagination-active">1</span>/<span class="slider__pagination-total">8</span></span>
                             </div>
                         </li>
                         <li class="uk-position-relative uk-flex uk-flex-bottom uk-child-width-1-2 doctor">
@@ -436,7 +569,7 @@
                                     <a href="#" class="slider-button slider-prev" uk-slider-item="previous"></a>
                                     <a href="#" class="slider-button slider-next" uk-slider-item="next"></a>
                                 </div>
-                                <span class="slider__pagination">1/<span class="slider__pagination-total">8</span></span>
+                                <span class="slider__pagination"><span class="slider__pagination-active">1</span>/<span class="slider__pagination-total">8</span></span>
                             </div>
                         </li>
                     </ul>
@@ -536,18 +669,78 @@
                                 <li>Врачи 1 и высшей категории, обладающие опытом работы свыше 5 лет подберут оптимальный способ восстановления зубов даже в самых сложных ситуациях;</li>
                                 <li>Цены нашей стоматологии в Минске также соответствуют принципу комфорта. А при необходимости, вы всегда можете воспользоваться картой рассрочки.</li>
                             </ul>
-                            <button class="uk-button uk-button-default button popup-request-open">Записаться на прием <img src="./img/inline-arrow-w.svg"></button>
+                            <div class="about__btn-wrap">
+                                <button class="uk-button uk-button-default button about__btn popup-request-open">Записаться на прием <img src="./img/inline-arrow-w.svg"></button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="review">
+        <section class="reviews reviews_video">
             <div class="uk-container">
                 <h2 class="uk-h2">Посмотрите отзывы наших клиентов</h2>
                 <div class="uk-card uk-card-default">
-                    <div class="uk-card-body">
-
+                    <div class="uk-card-body reviews__sliders">
+                        <div class="reviews__slider">
+                            <div class="swiper-container gallery-top reviews__slider_main">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide video">
+                                        <img src="./img/gallery1.png" alt="">
+                                        <div class="video__data">
+                                            <h4 class="uk-text uk-text-bold video__title">Восстановление зубных рядов верхней и нижней челюсти</h4>
+                                            <span class="uk-text uk-text-small">Ирина, г. Минск</span>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide video">
+                                        <img src="./img/gallery2.png" alt="">
+                                        <div class="video__data">
+                                            <h4 class="uk-text uk-text-bold video__title">Восстановление зубных рядов верхней и нижней челюсти</h4>
+                                            <span class="uk-text uk-text-small">Ирина, г. Минск</span>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide video">
+                                        <img src="./img/gallery3.png" alt="">
+                                        <div class="video__data">
+                                            <h4 class="uk-text uk-text-bold video__title">Восстановление зубных рядов верхней и нижней челюсти</h4>
+                                            <span class="uk-text uk-text-small">Ирина, г. Минск</span>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide video">
+                                        <img src="./img/gallery1.png" alt="">
+                                        <div class="video__data">
+                                            <h4 class="uk-text uk-text-bold video__title">Восстановление зубных рядов верхней и нижней челюсти</h4>
+                                            <span class="uk-text uk-text-small">Ирина, г. Минск</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reviews__slider reviews__slider_thumbs">
+                            <div class="swiper-container gallery-thumbs">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide video">
+                                      <img src="./img/gallery1.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide video">
+                                      <img src="./img/gallery2.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide video">
+                                      <img src="./img/gallery3.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide video">
+                                      <img src="./img/gallery1.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper__controls">
+                                <div class="swiper__buttons">
+                                    <a href="#" class="swiper slider-prev"></a>
+                                    <a href="#" class="swiper slider-next"></a>
+                                </div>
+                                <span class="swiper__pagination"><span class="swiper__pagination-active">1</span>/<span class="swiper__pagination-total">8</span></span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -716,6 +909,13 @@
                     </div>
                     <div class="uk-input form__div">
                         <input class="uk-input" type="email" placeholder="Ваш e-mail">
+                        <div class="popup__info">
+                            <img src="./img/popup-info.svg" alt="" class="popup__info-img">
+                            <div class="popup__info-card">
+                                <p>Email служит для оповещения об ответе, он не будет опубликован на сайте.</p>
+                                <p>Не является обязательным полем для заполнения</p>
+                            </div>
+                        </div>
                         <span class="form__err">Неверный формат E-mail адреса</span>
                     </div>
                 </div>
@@ -738,6 +938,7 @@
             </div>
         </div>
     </div>
+    <script src="./js/swiper-bundle.min.js"></script>
     <script src="./js/main.js"></script>
 </body>
 </html>

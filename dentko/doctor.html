@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dentko - стоматологии</title>
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="css/uikit.min.css"/>
     <link rel="stylesheet" href="css/fonts.css"/>
     <link rel="stylesheet" href="css/style.css"/>
@@ -105,22 +106,49 @@
     </nav>
     <div class="mobile-menu"></div>
     <main class="main">
+        <section class="doctor-banner">
+            <div class="doctor-banner__bg"></div>
+            <div class="uk-container">
+                <div class="doctor-banner__wrap uk-flex uk-child-width-1-2">
+                    <div class="doctor-banner__side">
+                        <h2 class="uk-h1 doctor-banner__title">Титок Наталья Викторовна</h2>
+                        <div class="uk-flex uk-flex-between doctor-banner__data">
+                            <dl class="uk-description-list">
+                                <dt>Специализация:</dt> 
+                                <dd class="uk-inline">врач-стоматолог-терапевт, хирург-пародонтолог</dd>
+                            </dl>
+                            <dl class="uk-description-list uk-margin-remove">
+                                <dt>Категория:</dt>
+                                <dd class="uk-inline">первая</dd>
+                            </dl>
+                        </div>
+                        <div class="doctor-banner__quote-wrap">
+                            <span class="doctor-banner__quote">Хороший стоматолог спасет если не от болезни, то хотя бы от плохого стоматолога.</span>
+                            <span class="doctor-banner__author">— Титок Наталья Викторовна</span>
+                        </div>
+                    </div>
+                    <div class="doctor-banner__side uk-flex uk-flex-center uk-flex-bottom">
+                        <img src="./img/doctor.png" alt="" class="doctor-banner__img">
+                    </div>
+                </div>
+            </div>
+        </section>
         <section class="about">
             <div class="uk-container">
                 <div class="uk-section">
-                    <div class="uk-flex uk-flex-between uk-child-width-1-2">
-                        <div class="about__side">
+                    <div class="uk-flex uk-flex-between about__container">
+                        <div class="about__sticky">
                             <div class="about__img-wrap">
                                 <div class="uk-position-relative about__img-bg">
                                     <img class="about__img about__img_pa" src="./img/doctor.png" uk-img>
                                 </div>
                             </div>
-                            <div class="uk-flex uk-flex-between uk-margin-medium-top">
+                            <div class="uk-flex uk-flex-between uk-margin-medium-top about__buttons">
                                 <button class="uk-button uk-button-default button">Записаться на прием<img src="./img/inline-arrow-w.svg"></button>
                                 <button class="uk-button uk-button-default button button_transparent">Консультация стоматолога</button>
                             </div>
                         </div>
-                        <div class="uk-flex uk-flex-between uk-flex-column about__side">
+                        <div class="about__side">
                             <h2 class="uk-h1">Профессиональные умения и навыки</h2>
                             <ul class="uk-list">
                                 <li class="uk-text uk-text-bold">Высокий профессиональный уровень в области терапевтической  стоматологии.</li>
@@ -130,20 +158,65 @@
                             </ul>
                             <p class="uk-text">Обеспечивает стоматологическую терапевтическую помощь взрослым и детям.</p>
                             <p class="uk-text">Знает, умеет и выполняет все технологии и методики диагностики, профилактики и лечения стоматологических заболеваний. Владеет реставрационной техникой с различными пломбировочными композитными материалами. Успешно работает со сложными случаями эндодонтического лечения зубов. Занимается лечением заболеваний маргинального периодонта и слизистой оболочки полости рта.</p>
-                        </div>
-                    </div>
-                    <div class="uk-flex uk-flex-between uk-margin-xlarge-top uk-child-width-1-2">
-                        <div class="about__side"></div>
-                        <div class="uk-flex uk-flex-between uk-flex-column about__side">
-                            <h2 class="uk-h1">Профессиональные умения и навыки</h2>
-                            <ul class="uk-list">
-                                <li class="uk-text uk-text-bold">Высокий профессиональный уровень в области терапевтической  стоматологии.</li>
-                                <li class="uk-text uk-text-bold">Опыт работы  в качестве врача-стоматолога – более 25 лет.</li>
-                                <li class="uk-text uk-text-bold">Автор статей по  терапевтическим стоматологическим проблемам.</li>
-                                <li class="uk-text uk-text-bold">Умение устанавливать доброжелательные отношения с пациентами.</li>
-                            </ul>
-                            <p class="uk-text">Обеспечивает стоматологическую терапевтическую помощь взрослым и детям.</p>
-                            <p class="uk-text">Знает, умеет и выполняет все технологии и методики диагностики, профилактики и лечения стоматологических заболеваний. Владеет реставрационной техникой с различными пломбировочными композитными материалами. Успешно работает со сложными случаями эндодонтического лечения зубов. Занимается лечением заболеваний маргинального периодонта и слизистой оболочки полости рта.</p>
+                            <h2 class="uk-h1">Образование и сертификаты</h2>
+                            <div class="about__row">
+                                <span class="about__row-date">1994</span>
+                                <ul class="about__row-list">
+                                    <li>Минский государственный медицинский институт, стоматологический факультет.</li>
+                                </ul>
+                            </div>
+                            <div class="about__row">
+                                <span class="about__row-date">1994-1995</span>
+                                <ul class="about__row-list">
+                                    <li>Стажировка в Территориальном медицинском объединении № 1 г. Гродно.</li>
+                                </ul>
+                            </div>
+                            <div class="about__row">
+                                <span class="about__row-date">1995-2020</span>
+                                <ul class="about__row-list">
+                                    <li>Курсы усовершенствования врачей в Белорусской Медицинской Академии Постдипломного Образования по всем стоматологическим направлениям каждые 2-3 года.</li>
+                                    <li>Врач-стоматолог первой квалификационной  категории с 2007 года.</li>
+                                    <li>Участник Международных Стоматологических Конгрессов и выставок.</li>
+                                </ul>
+                            </div>
+                            <div class="about__slider">
+                                <div class="about__slider-container">
+                                    <div class="swiper-wrapper" uk-lightbox="animation: slide">
+                                        <div class="swiper-slide">
+                                            <a class="uk-inline" href="./img/big-sert1.png" data-caption="Caption 1">
+                                                <img src="./img/sertificate1.png" alt="" class="about__slider-img">
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a class="uk-inline" href="./img/big-sert2.png" data-caption="Caption 1">
+                                                <img src="./img/sertificate2.png" alt="" class="about__slider-img">
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a class="uk-inline" href="./img/big-sert3.png" data-caption="Caption 1">
+                                                <img src="./img/sertificate3.png" alt="" class="about__slider-img">
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a class="uk-inline" href="./img/benefit1.png" data-caption="Caption 1">
+                                                <img src="./img/sertificate1.png" alt="" class="about__slider-img">
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a class="uk-inline" href="./img/big-sert2.png" data-caption="Caption 1">
+                                                <img src="./img/sertificate2.png" alt="" class="about__slider-img">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="about__slider-controls">
+                                    <div class="about__slider-buttons">
+                                        <a href="#" class="slider-button slider-prev about__slider-prev"></a>
+                                        <a href="#" class="slider-button slider-next about__slider-next"></a>
+                                    </div>
+                                    <div class="swiper-pagination"></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -176,9 +249,11 @@
                                             <span class="uk-text uk-text-small">Лечение кариеса</span>
                                         </div>
                                         <div class="review__controls uk-flex uk-flex-middle">
-                                            <a href="#" class="slider-button slider-prev" uk-slider-item="previous"></a>
-                                            <a href="#" class="slider-button slider-next" uk-slider-item="next"></a>
-                                            <span class="slider__pagination">1/<span class="slider__pagination-total">8</span></span>
+                                            <div class="review__buttons">
+                                                <a href="#" class="slider-button slider-prev" uk-slider-item="previous"></a>
+                                                <a href="#" class="slider-button slider-next" uk-slider-item="next"></a>
+                                            </div>
+                                            <span class="slider__pagination"><span class="slider__pagination-active">1</span>/<span class="slider__pagination-total">8</span></span>
                                         </div>
                                     </div>
                                 </div>
@@ -201,9 +276,11 @@
                                             <span class="uk-text uk-text-small">Лечение кариеса</span>
                                         </div>
                                         <div class="review__controls uk-flex uk-flex-middle">
-                                            <a href="#" class="slider-button slider-prev" uk-slider-item="previous"></a>
-                                            <a href="#" class="slider-button slider-next" uk-slider-item="next"></a>
-                                            <span class="slider__pagination">1/<span class="slider__pagination-total">8</span></span>
+                                            <div class="review__buttons">
+                                                <a href="#" class="slider-button slider-prev" uk-slider-item="previous"></a>
+                                                <a href="#" class="slider-button slider-next" uk-slider-item="next"></a>
+                                            </div>
+                                            <span class="slider__pagination"><span class="slider__pagination-active">1</span>/<span class="slider__pagination-total">8</span></span>
                                         </div>
                                     </div>
                                 </div>
@@ -226,9 +303,11 @@
                                             <span class="uk-text uk-text-small">Лечение кариеса</span>
                                         </div>
                                         <div class="review__controls uk-flex uk-flex-middle">
-                                            <a href="#" class="slider-button slider-prev" uk-slider-item="previous"></a>
-                                            <a href="#" class="slider-button slider-next" uk-slider-item="next"></a>
-                                            <span class="slider__pagination">1/<span class="slider__pagination-total">8</span></span>
+                                            <div class="review__buttons">
+                                                <a href="#" class="slider-button slider-prev" uk-slider-item="previous"></a>
+                                                <a href="#" class="slider-button slider-next" uk-slider-item="next"></a>
+                                            </div>
+                                            <span class="slider__pagination"><span class="slider__pagination-active">1</span>/<span class="slider__pagination-total">8</span></span>
                                         </div>
                                     </div>
                                 </div>
@@ -251,9 +330,11 @@
                                             <span class="uk-text uk-text-small">Лечение кариеса</span>
                                         </div>
                                         <div class="review__controls uk-flex uk-flex-middle">
-                                            <a href="#" class="slider-button slider-prev" uk-slider-item="previous"></a>
-                                            <a href="#" class="slider-button slider-next" uk-slider-item="next"></a>
-                                            <span class="slider__pagination">1/<span class="slider__pagination-total">8</span></span>
+                                            <div class="review__buttons">
+                                                <a href="#" class="slider-button slider-prev" uk-slider-item="previous"></a>
+                                                <a href="#" class="slider-button slider-next" uk-slider-item="next"></a>
+                                            </div>
+                                            <span class="slider__pagination"><span class="slider__pagination-active">1</span>/<span class="slider__pagination-total">8</span></span>
                                         </div>
                                     </div>
                                 </div>
@@ -276,9 +357,11 @@
                                             <span class="uk-text uk-text-small">Лечение кариеса</span>
                                         </div>
                                         <div class="review__controls uk-flex uk-flex-middle">
-                                            <a href="#" class="slider-button slider-prev" uk-slider-item="previous"></a>
-                                            <a href="#" class="slider-button slider-next" uk-slider-item="next"></a>
-                                            <span class="slider__pagination">1/<span class="slider__pagination-total">8</span></span>
+                                            <div class="review__buttons">
+                                                <a href="#" class="slider-button slider-prev" uk-slider-item="previous"></a>
+                                                <a href="#" class="slider-button slider-next" uk-slider-item="next"></a>
+                                            </div>
+                                            <span class="slider__pagination"><span class="slider__pagination-active">1</span>/<span class="slider__pagination-total">8</span></span>
                                         </div>
                                     </div>
                                 </div>
@@ -288,7 +371,7 @@
                 </div>
             </div>
         </section>
-        <section class="doctors uk-position-relative">
+        <section class="doctors uk-position-relative uk-margin-xlarge-bottom">
             <div class="uk-flex uk-flex-bottom uk-position-absolute doctors__bg">
                 <div class="doctors__bg_green"></div>
                 <div class="doctors__bg_gray"></div>
@@ -296,12 +379,14 @@
             <div class="uk-container">
                 <h2 class="uk-h2">Наши врачи</h2>
                 <div class="uk-slider-container" uk-slider="finite: true">
-                    <ul class="uk-slider-items uk-child-width-1-1">
+                    <ul class="uk-slider-items uk-child-width-1-1 doctors__slider">
                         <li class="uk-position-relative uk-flex uk-flex-bottom uk-child-width-1-2 doctor">
                             <div class="uk-flex uk-flex-column uk-flex-left uk-flex-between doctor__data">
                                 <h3 class="uk-text-bold uk-position-relative doctor__name">Дубина<br>Иван Владимирович</h3>
-                                <span class="uk-text doctor__specialty">врач-стоматолог-ортопед</span>
-                                <a href="#" class="green-link doctor__link">Подробнее</a>
+                                <div class="doctor__bottom">
+                                    <span class="uk-text doctor__specialty">врач-стоматолог-ортопед</span>
+                                    <a href="#" class="green-link doctor__link">Подробнее</a>
+                                </div>
                             </div>
                             <div class="uk-flex uk-flex-center doctor__img">
                                 <img src="./img/doctor1.png" alt="Доктор">
@@ -311,7 +396,7 @@
                                     <a href="#" class="slider-button slider-prev" uk-slider-item="previous"></a>
                                     <a href="#" class="slider-button slider-next" uk-slider-item="next"></a>
                                 </div>
-                                <span class="slider__pagination">1/<span class="slider__pagination-total">8</span></span>
+                                <span class="slider__pagination"><span class="slider__pagination-active">1</span>/<span class="slider__pagination-total">8</span></span>
                             </div>
                         </li>
                         <li class="uk-position-relative uk-flex uk-flex-bottom uk-child-width-1-2 doctor">
@@ -328,7 +413,7 @@
                                     <a href="#" class="slider-button slider-prev" uk-slider-item="previous"></a>
                                     <a href="#" class="slider-button slider-next" uk-slider-item="next"></a>
                                 </div>
-                                <span class="slider__pagination">1/<span class="slider__pagination-total">8</span></span>
+                                <span class="slider__pagination"><span class="slider__pagination-active">1</span>/<span class="slider__pagination-total">8</span></span>
                             </div>
                         </li>
                         <li class="uk-position-relative uk-flex uk-flex-bottom uk-child-width-1-2 doctor">
@@ -345,7 +430,7 @@
                                     <a href="#" class="slider-button slider-prev" uk-slider-item="previous"></a>
                                     <a href="#" class="slider-button slider-next" uk-slider-item="next"></a>
                                 </div>
-                                <span class="slider__pagination">1/<span class="slider__pagination-total">8</span></span>
+                                <span class="slider__pagination"><span class="slider__pagination-active">1</span>/<span class="slider__pagination-total">8</span></span>
                             </div>
                         </li>
                     </ul>
@@ -488,6 +573,7 @@
             </div>
         </div>
     </div>
+    <script src="./js/swiper-bundle.min.js"></script>
     <script src="./js/main.js"></script>
 </body>
 </html>

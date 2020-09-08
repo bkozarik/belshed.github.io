@@ -37,6 +37,32 @@ html
         &::after
             width: 10px
             background-image: url(../img/inline-arrow.svg)
+    &.spoiler-link
+        flex: none
+        width: auto
+        &::before
+            content: ''
+            display: inline-block
+            width: 100%
+            height: 1px
+            background-color: $green
+            bottom: 0
+            position: absolute
+            left: 0
+            transform-origin: left
+            transform: scaleX(0)
+        &::after
+            content: '>'
+            background-image: none
+            transform: rotate(90deg)
+            position: absolute
+            right: -20px
+            top: 4px
+        &:hover
+            &::before
+                transform: scaleX(1)
+            &::after
+                width: 6px
 
 .mw
     &_no
@@ -321,6 +347,9 @@ html
             opacity: .3
     &-button + &-button
         margin: 0px 10px
+    &-button
+        &:hover
+            transform: scale(1.1)
     &-next, &-prev
         display: inline-block
         border-radius: 50%
@@ -330,6 +359,10 @@ html
         text-align: center
         line-height: 50px
         position: relative
+        &:focus
+            outline: none
+        &:hover
+            transform: scale(1.1)
         &::after
             display: inline-block
             content: ''
@@ -407,6 +440,8 @@ html
             left: 0
             background-color: $green
     .button
+        padding-top: 10px
+        padding-bottom: 10px
         img
             display: none
         &:hover
@@ -430,6 +465,42 @@ html
     .uk-flex
         .about__side + .about__side
             margin-left: 60px
+    &__sticky + .about__side
+        width: 50%
+        margin-left: 60px
+    &__sticky
+        position: sticky
+        float: right
+        top: 200px
+        width: 50%
+    &__flexbox
+        width: 100%
+        display: flex
+        justify-content: center
+        align-items: center
+    &__text-wrap
+        position: relative
+        max-height: 520px
+        overflow-y: hidden
+        .uk-list
+            padding-left: 30px
+            margin-bottom: 0
+        &.open
+            // max-height: none
+        &::after
+            content: ''
+            z-index: 2
+            display: inline-block
+            height: 250px
+            background: linear-gradient(180deg, rgba(255,255,255,0) 30%, rgba(255,255,255,1) 100%)
+            width: 100%
+            position: absolute
+            bottom: 0px
+            left: 0
+        &.open
+            &::after
+                opacity: 0
+                
     &__img
         border-radius: 3px
         &_pa
@@ -457,6 +528,45 @@ html
             &_another
                 &::before
                     transform: translate(90px, -30px)
+    &__btn
+        &-wrap
+            display: flex
+    &__row
+        display: flex
+        justify-content: space-between
+        margin-top: 40px
+        & + &
+            margin-top: 20px
+        &-date
+            font-weight: bold
+            font-size: 12px
+            white-space: nowrap
+            color: $green
+        &-list
+            max-width: 440px
+            margin: 0
+            list-style-image: url(../img/swoosh.png)
+            li + li
+                margin-top: 20px
+    &__slider
+        margin-top: 40px
+        &-container
+            overflow: hidden
+        &-controls
+            margin-top: 30px
+            display: flex
+            align-items: center
+            position: relative
+        .swiper-pagination
+            flex-grow: 1
+            position: relative
+            height: 1px
+            right: 0
+            background-color: $green
+            span
+                height: 3px
+                background-color: $green
+                margin-top: -1px
 
 .uk-h2
     font-weight: bold
@@ -468,16 +578,129 @@ html
     .uk-card
         background-color: #F6F9FB
         box-shadow: none
+        transition: all .2s ease-out 0s
     .uk-card-title
         text-align: center
         font-size: 18px
         font-weight: bold
+    &__head
+        padding: 10px 0px
     .uk-slider-items
         margin-top: 40px
     li
+        position: relative
+        perspective: 1000px
+        overflow: hidden
+        &>*
+            backface-visibility: hidden
         img
             width: 100%
             height: auto
+        &:hover
+            .service__front
+                transform: rotateY(180deg)
+            .service__back
+                transform: rotateY(360deg)
+
+.service
+    &__back
+        position: absolute
+        width: 87%
+        height: 100%
+        top: 0
+        left: 0
+        transform: rotateY(180deg)
+        margin-left: 40px
+        padding: 30px 0px
+        .uk-card-title
+            margin-bottom: 10px
+    &__links
+        display: flex
+        flex-direction: column
+    &__link
+        display: inline-block
+        padding: 10px 20px
+        text-decoration: none
+        color: #737578
+        font-size: 13px
+        line-height: 14px
+        &:hover
+            color: #fff
+            text-decoration: none
+            background-color: $green
+            &::before
+                content: ''
+                display: inline-block
+                background-image: url(../img/inline-arrow-w.svg)
+                background-size: contain
+                background-repeat: no-repeat
+                margin-right: 3px
+                width: 10px
+                height: 8px
+
+.doctor-banner
+    position: relative
+    &__bg
+        position: absolute
+        width: 100vw
+        height: 225px
+        background-color: $soft_blue
+        bottom: 0
+        left: 0
+        z-index: -1
+    h2.uk-h1
+        position: relative
+        &::after
+            content: ''
+            display: inline-block
+            width: 40px
+            height: 5px
+            position: absolute
+            bottom: -20px
+            left: 0
+            background-color: $green
+    &__title
+        margin-top: 120px
+    &__data
+        margin-top: 50px
+        max-width: 400px
+        dt
+            text-transform: none
+            font-size: 16px
+            color: #737578
+        dd
+            margin-top: 5px
+            max-width: 190px
+            font-size: 14px
+    &__quote
+        font-size: 20px
+        line-height: 26px
+        font-style: italic
+        color: #737578
+        position: relative
+        display: inline-block
+        &::before, &::after
+            content: ''
+            display: inline-block
+            height: 20px
+            width: 15px
+            position: absolute
+            background-size: contain
+            background-repeat: no-repeat
+            background-position: center center
+            background-image: url(../img/quotes.png)
+        &::before
+            transform: translate(-110%, -90%)
+        &::after
+            transform: translate(110%, 90%) rotate(180deg)
+        &-wrap
+            padding: 30px
+            margin: 110px 0px 20px
+    &__author
+        font-size: 12px
+        color: #737578
+        display: block
+        margin-top: 30px
 
 .gallery
     margin: 50px 0px 120px
@@ -521,6 +744,57 @@ html
         padding: 80px 100px 100px
         background: $green_gradient
         border-radius: 3px
+    &__rate
+        display: inline-block
+        position: relative
+        width: 120px
+        height: 22px
+        background-image: url(../img/rate_off.png)
+        background-size: 24px auto
+        background-repeat: repeat-x
+        vertical-align: middle
+        &-span
+            display: inline-block
+            opacity: .5
+            vertical-align: middle
+            margin-top: 6px
+            margin-right: 10px
+        &-wrap
+            min-width: 250px
+            padding: 10px !important
+    &__radio
+        display: inline-block
+        position: absolute
+        font-size: inherit
+        top: 0
+        left: 0
+        appearance: none
+        height: 22px
+        margin: 0
+        border: none
+        transition-duration: 0s
+        &:focus
+            outline: none
+        &:hover, &:checked
+            background-image: url(../img/rate_on.png)
+        &:hover ~ &
+            background-image: url(../img/rate_off.png)
+        &:nth-child(1)
+            width: 24px
+            z-index: 5
+        &:nth-child(2)
+            width: 48px
+            z-index: 4
+        &:nth-child(3)
+            width: 72px
+            z-index: 3
+        &:nth-child(4)
+            width: 96px
+            z-index: 2
+        &:nth-child(5)
+            width: 120px
+            z-index: 1
+        
     &__dropdown
         &-card
             background-color: $green
@@ -579,11 +853,11 @@ html
         border: none
         display: inline-block
         height: auto
+        box-shadow: inset 0px 0px 50px rgba(0, 0, 0, 0.15)
         &::placeholder
             color: #ffffff7e
         &:not([type="submit"])
             color: #fff
-            box-shadow: inset 0px 0px 50px rgba(0, 0, 0, 0.15)
         &[type="submit"]
             background-color: #fff
             padding: 16px 10px
@@ -591,6 +865,7 @@ html
             line-height: 18px
             font-weight: bold
             color: #686b79
+            box-shadow: none
             &::after
                 display: none
                 content: ''
@@ -632,13 +907,13 @@ html
         box-sizing: border-box
     select.uk-input
         color: #ffffff7e !important
-        
         &:hover
             cursor: pointer
     .uk-input
         option
             color: #000
     &__div
+        position: relative
         padding: 0 !important
         box-shadow: none !important
         position: relative !important
@@ -902,9 +1177,74 @@ html
             border-bottom: 1px solid #CFD5DC
         & + &
             border-top: 1px solid #CFD5DC
+    &__video
+        // height: 135px
     .uk-text-small
         font-size: 14px
         line-height: 20px
+
+.reviews
+    &_video
+        .uk-card
+            box-shadow: 0px 4px 50px rgba(20, 43, 61, 0.15)
+        .reviews
+            &__slider
+                margin: 0
+                &:first-child
+                    flex-basis: 80%
+    &__slider + &__slider
+                margin-left: 30px
+    &__sliders
+        margin-top: 50px
+        display: flex
+        overflow: hidden
+        padding: 30px
+        .swiper-wrapper
+            max-height: 540px
+        .gallery-thumbs
+            .review
+                &__video
+                    max-height: 135px
+    &__slider
+        .uk-slider-items 
+            padding-left: 50px
+        &_thumbs
+            .swiper-container
+                height: 100%
+                max-height: 460px
+    .swiper
+        &__buttons
+            a + a
+                margin-left: 15px
+        &__controls
+            margin-top: 30px
+            display: flex
+            justify-content: space-between
+            align-items: center
+        &__pagination
+            color: $green
+            font-size: 24px
+            &-total
+                font-size: 16px
+                color: #2f324165
+            
+.video
+    overflow: hidden
+    max-height: 540px
+    &__data
+        margin-top: 25px
+        span
+            line-height: 20px
+    &__title
+        margin-bottom: 10px
+        font-size: 18px
+        line-height: 22px
+    img, video, iframe
+        max-height: 460px
+        max-width: none
+        width: 100%
+        object-fit: cover
+        height: 100%
 
 .uk-pagination
     a, .reviews__control, .uk-active>span
@@ -921,12 +1261,19 @@ html
     a, .uk-active>span
         background: $soft_blue
     .uk-active>span
-        border: 1px solid $green
+        box-shadow: 0 0 0 1px $green
+        transition: all .3s ease-out 0s
+    .reviews__page
+        &:hover a
+            box-shadow: 0 0 0 1px $green
+            transition: all .2s ease-out 0s
     .reviews__control
         background: $green_gradient
         &_disabled
             cursor: default
             opacity: .35
+        &:hover
+            transform: scale(1.1)
         &::after
             display: inline-block
             content: ''
@@ -1371,6 +1718,7 @@ html
         background-color: #2f32417e
         visibility: hidden
         opacity: 0
+        padding: 0px 40px
         &.active
             visibility: visible
             opacity: 1
@@ -1390,6 +1738,55 @@ html
         margin-top: 10px
     &__row:last-child
         margin-top: 25px
+    &__info
+        position: absolute
+        top: 14px
+        left: 95px
+        &-card
+            position: absolute
+            padding: 12px
+            background-color: #fff
+            z-index: 2
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1)
+            visibility: hidden
+            opacity: 0
+            transform: translateY(-20px)
+            width: 240px
+            border-radius: 3px
+            top: -44px
+            left: 8px
+            p
+                font-size: 10px
+                margin: 7px 0px
+                &:first-child
+                    margin-top: 0px
+                &:last-child
+                    margin-bottom: 0
+            &::before, &::after
+                content: ''
+                display: inline-block
+                position: absolute
+                top: 50%
+                left: 0
+                background-color: #fff
+                z-index: 2
+                border-radius: 50%
+                transform: translate(-50%, -50%)
+            &::before
+                height: 24px
+                width: 24px
+            &::after
+                height: 12px
+                width: 12px
+                background-image: url(../img/popup-info.svg)
+                background-repeat: no-repeat
+                background-position: center center
+                background-size: contain
+        &:hover
+            .popup__info-card
+                visibility: visible
+                opacity: 1
+                transform: translateY(0px)
     &__submit
         color: #ffffff
         font-size: 14px
