@@ -305,7 +305,7 @@
                                     </div>
                                 </label>
                                 <label class="form__label">
-                                    <span class="form__span">Ориентировочный бюджет:</span>
+                                    <span class="form__span">Ориентировочный срок:</span>
                                     <div class="form__input-wrap form__input_select">
                                         <select name="price" class="form__input">
                                             <option value="До 2-ух недель">До 2-ух недель</option>
@@ -320,10 +320,23 @@
                                 <label class="form__label form__label_textarea">
                                     <span class="form__span">Дополнительная информация:</span>
                                     <div class="form__input-wrap">
-                                        <textarea name="comment" rows="3" placeholder="Введите Ваши дополительные пожелания по Вашему проекту..." class="form__input form__input_textarea"></textarea>
+                                        <textarea name="comment" rows="5" placeholder="Введите Ваши дополительные пожелания по Вашему проекту..." class="form__input form__input_textarea"></textarea>
                                     </div>
                                 </label>
-                                <button class="button button_orange open-calculate" type="submit">Расчитать стоимость</button>
+                                <div class="form__col">
+                                    <label class="form__label">
+                                        <span class="form__span">Ориентировочный бюджет:</span>
+                                        <div class="form__input-wrap form__input_select">
+                                            <select name="price" class="form__input">
+                                                <option value="До 200 000 руб"> До 200 000 руб</option>
+                                                <option value="До 500 000 руб">До 500 000 руб</option>
+                                                <option value="До 1 млн руб">До 1 млн руб</option>
+                                                <option value="Более 1 млн руб">Более 1 млн руб</option>
+                                            </select>
+                                        </div>
+                                    </label>
+                                    <button class="button button_orange open-calculate" type="submit">Расчитать стоимость</button>
+                                </div>
                             </div>
                         </form>
                     </div>
