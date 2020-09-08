@@ -16,6 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         event.preventDefault();
 
+        toggleMenu(false);
+
         const id = target.getAttribute('href');
 
         document.querySelector(id).scrollIntoView({
