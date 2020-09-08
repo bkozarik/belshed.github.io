@@ -1,3 +1,5 @@
+"use strict";
+
 document.addEventListener('DOMContentLoaded', () => {
     let popupTriggers = document.querySelectorAll('.popup-request-open');
     let popupCloseTriggers = document.querySelectorAll('.popup-close');
@@ -188,7 +190,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 prevEl: '.swiper__controls .slider-prev',
             },
             pagination: {
-                el: '.swiper__pagination>.swiper-pagination',
+                el: '.banner__swiper .swiper__pagination>.swiper-pagination',
                 type: 'progressbar',
             }
         });
@@ -241,6 +243,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
     catch{}
+
     try{
         spoilerLink.addEventListener('click', toggleSpoiler);
     }
@@ -270,6 +273,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     try{
         document.querySelector('.uk-accordion-title').click();
+    }
+    catch{}
+
+    try{
+        document.querySelectorAll('.reviews__control_disabled').forEach(control => {
+            console.log(control);
+            control.addEventListener('click', () => {
+                event.preventDefault();
+            });
+        });
     }
     catch{}
 

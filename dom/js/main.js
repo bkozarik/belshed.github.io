@@ -292,6 +292,10 @@ document.addEventListener('DOMContentLoaded', () => {
             type: 'progressbar',
         },
         breakpoints: {
+            1000: {
+                spaceBetween: 30,
+                slidesPerView: 4,
+            },
             740: {
                 spaceBetween: 40,
                 slidesPerView: 3,

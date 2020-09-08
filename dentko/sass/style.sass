@@ -391,6 +391,17 @@ html
 .banner__swiper
     .uk-height-large
         height: 550px
+    .swiper__pagination
+        height: 3px
+        width: 250px
+        .swiper-pagination
+            height: 1px
+            width: 250px
+            background-color: $green
+            .swiper-pagination-progressbar-fill
+                height: 3px
+                margin-top: -1px
+                background-color: $green
 
 .swiper
     &__controls
@@ -399,18 +410,6 @@ html
         display: flex
         flex-wrap: wrap
         align-items: center
-
-.swiper__pagination
-    height: 3px
-    width: 250px
-    .swiper-pagination
-        height: 1px
-        width: 250px
-        background-color: $green
-        .swiper-pagination-progressbar-fill
-            height: 3px
-            margin-top: -1px
-            background-color: $green
 
 .benefits
     position: relative
@@ -1419,7 +1418,9 @@ html
         &-span
             display: inline-block
             margin-top: 5px
+            color: #666666
         &:hover, &.active
+            text-decoration: none
             border: 1px solid $green
             .faqs__theme-img
                 fill: $green

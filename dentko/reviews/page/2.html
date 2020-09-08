@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="ru-Ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dentko - стоматологии</title>
+    <link rel="stylesheet" href="/dentko/css/uikit.min.css"/>
+    <link rel="stylesheet" href="/dentko/css/fonts.css"/>
+    <link rel="stylesheet" href="/dentko/css/style.css"/>
+    <link rel="stylesheet" href="/dentko/css/media.css"/>
+    <script src="/dentko/js/uikit.min.js"></script>
+    <script src="/dentko/js/uikit-icons.min.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="uk-container">
+            <div class="uk-flex uk-flex-between uk-flex-bottom header__wrap">
+                <a href="/dentko/index.html" class="header__main-link"><img src="/dentko/img/logo.svg" alt="Логотип" class="header__logo"></a>
+                <dl class="uk-description-list header__item">
+                    <dt>Контакты:</dt>
+                    <dd>г. Минск, пр-кт Независимости, 58</dd>
+                </dl>
+                <dl class="uk-description-list header__item">
+                    <dt>Время работы:</dt>
+                    <dd class="uk-inline">
+                        <div class="uk-inline header__dropdown-trigger">
+                            <span class="header__dropdown-span">Без выходных <img src="/dentko/img/info.svg"></span>
+                            <div class="uk-card uk-card-body uk-margin-remove-top header__dropdown-card">
+                                <h3 class="footer__card-header uk-text-bold">Время работы:</h3>
+                                <div class="footer__card-body uk-flex uk-flex-between">
+                                    <div class="footer__card-col uk-flex uk-flex-column">
+                                        <span>пн-пт:</span>
+                                        <span>сб:</span>
+                                        <span>вс:</span>
+                                    </div>
+                                    <div class="footer__card-col uk-flex uk-flex-column">
+                                        <span>09:00 — 21:00</span>
+                                        <span>09:00 — 20:00</span>
+                                        <span>09:00 — 17:00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </dd>
+                </dl>
+                <dl class="uk-description-list header__item">
+                    <dt>Мы в соц.сетях:</dt>
+                    <dd class="uk-flex uk-flex-between">
+                        <a href="#" class="header__link"><img src="/dentko/img/facebook.png" alt="Иконка" class="header__link-img"></a>
+                        <a href="#" class="header__link"><img src="/dentko/img/vk.png" alt="Иконка" class="header__link-img"></a>
+                        <a href="#" class="header__link"><img src="/dentko/img/instagram.png" alt="Иконка" class="header__link-img"></a>
+                    </dd>
+                </dl>
+                <dl class="uk-description-list header__item">
+                    <dt>Телефоны:</dt>
+                    <dd>
+                        <div class="uk-inline">
+                            <span class="header__dropdown"><a href="tel:+375291101212" class="footer__dd-link"><img src="/dentko/img/operator1.png">+375 (29) 110-12-12</a></span>
+                            <div class="header__dropdown-container" uk-dropdown>
+                                <a href="tel:+375291101212" class="footer__dd-link"><img src="/dentko/img/operator1.png">+375 (29) 110-12-12</a>
+                                <a href="tel:+375336601313" class="footer__dd-link"><img src="/dentko/img/operator2.png">+375 (33) 660-13-13</a>
+                                <a href="tel:+375251101212" class="footer__dd-link"><img src="/dentko/img/operator3.png">+375 (25) 110-12-12</a>
+                                <a href="tel:+375172844511" class="footer__dd-link"><img src="/dentko/img/operator4.png">+375 (17) 284-45-11</a>
+                            </div>
+                        </div>
+                        <div class="uk-flex-inline uk-flex-between">
+                            <a href="#" class="header__link"><img src="/dentko/img/telegram.png" alt="Иконка" class="header__link-img"></a>
+                            <a href="#" class="header__link"><img src="/dentko/img/viber.png" alt="Иконка" class="header__link-img"></a>
+                            <a href="#" class="header__link"><img src="/dentko/img/whatsapp.png" alt="Иконка" class="header__link-img"></a>
+                        </div>
+                    </dd>
+                </dl>
+                <button class="header__menu-btn menu-open"><span></span></button>
+            </div>
+        </div>
+    </header>
+    <nav class="nav" uk-navbar>
+        <div class="uk-navbar-center">
+            <ul class="uk-navbar-nav uk-flex-between uk-flex-middle">
+                <li><a href="/dentko/about.html">о компании</a></li>
+                <li>
+                    <a href="/dentko/service.html">услуги</a>
+                    <div class="uk-navbar-dropdown">
+                        <ul class="uk-nav uk-navbar-dropdown-nav">
+                            <li><a href="/dentko/service.html"><img src="/dentko/img/inline-arrow-w.svg">Лечение пульпита</a></li>
+                            <li><a href="/dentko/service.html"><img src="/dentko/img/inline-arrow-w.svg">Протезирование</a></li>
+                            <li><a href="/dentko/service.html"><img src="/dentko/img/inline-arrow-w.svg">Хирургия</a></li>
+                            <li><a href="/dentko/service.html"><img src="/dentko/img/inline-arrow-w.svg">Ортодонтия</a></li>
+                            <li><a href="/dentko/service.html"><img src="/dentko/img/inline-arrow-w.svg">Отбеливание</a></li>
+                            <li><a href="/dentko/service.html"><img src="/dentko/img/inline-arrow-w.svg">Профилактика</a></li>
+                            <li><a href="/dentko/service.html"><img src="/dentko/img/inline-arrow-w.svg">Парадонтология</a></li>
+                            <li><a href="/dentko/service.html"><img src="/dentko/img/inline-arrow-w.svg">Косметология</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="/dentko/price.html">цены</a></li>
+                <li><a href="/dentko/payment.html">оплата и рассрочка</a></li>
+                <li><a href="/dentko/reviews.html">отзывы</a></li>
+                <li><a href="/dentko/team.html">специалисты</a></li>
+                <li><a href="/dentko/faq.html">вопрос-ответ</a></li>
+                <li><a href="/dentko/contacts.html">контакты</a></li>
+                <li><a class="nav__order popup-request-open" href="#">Записаться на прием <img src="/dentko/img/inline-arrow.svg"></a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="mobile-menu"></div>
+    <main class="main">
+        <section class="reviews reviews_page">
+            <div class="uk-container">
+                <div class="uk-flex uk-flex-between uk-flex-middle reviews__header">
+                    <h2 class="uk-h1">Отзывы наших клиентов</h2>
+                    <button class="uk-button uk-button-default button button_big">Оставить отзыв<img src="/dentko/img/inline-arrow-w.svg"></button>
+                </div>
+                <div class="reviews__wrap uk-child-width-1-1">
+                    <div class="uk-card uk-card-body review review__page">
+                        <div class="review__head uk-flex uk-flex-between uk-flex-top">
+                            <div class="review__info">
+                                <h4 class="review__name">Виктория</h4>
+                                <img src="/dentko/img/rating.png" alt="Рейтинг" class="review__rating">
+                            </div>
+                            <div class="review__body">
+                                <p class="uk-text">Отличная клиника! Теперь буду ходить только сюда, наконец-то я нашла "свою" стоматологию. Цены здесь средние, а качество оборудования, материалов и само отношение персонала на высоте!</p>
+                                <p class="uk-text uk-text-small review__date">12.06.2020, 07:56</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="uk-card uk-card-body review review__page">
+                        <div class="review__head uk-flex uk-flex-between uk-flex-top">
+                            <div class="review__info">
+                                <h4 class="review__name">Виктория</h4>
+                                <img src="/dentko/img/rating.png" alt="Рейтинг" class="review__rating">
+                            </div>
+                            <div class="review__body">
+                                <p class="uk-text">Отличная клиника! Теперь буду ходить только сюда, наконец-то я нашла "свою" стоматологию. Цены здесь средние, а качество оборудования, материалов и само отношение персонала на высоте!</p>
+                                <p class="uk-text uk-text-small review__date">12.06.2020, 07:56</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="uk-card uk-card-body review review__page">
+                        <div class="review__head uk-flex uk-flex-between uk-flex-top">
+                            <div class="review__info">
+                                <h4 class="review__name">Виктория</h4>
+                                <img src="/dentko/img/rating.png" alt="Рейтинг" class="review__rating">
+                            </div>
+                            <div class="review__body">
+                                <p class="uk-text">Отличная клиника! Теперь буду ходить только сюда, наконец-то я нашла "свою" стоматологию. Цены здесь средние, а качество оборудования, материалов и само отношение персонала на высоте!</p>
+                                <p class="uk-text uk-text-small review__date">12.06.2020, 07:56</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="uk-card uk-card-body review review__page">
+                        <div class="review__head uk-flex uk-flex-between uk-flex-top">
+                            <div class="review__info">
+                                <h4 class="review__name">Виктория</h4>
+                                <img src="/dentko/img/rating.png" alt="Рейтинг" class="review__rating">
+                            </div>
+                            <div class="review__body">
+                                <p class="uk-text">Отличная клиника! Теперь буду ходить только сюда, наконец-то я нашла "свою" стоматологию. Цены здесь средние, а качество оборудования, материалов и само отношение персонала на высоте!</p>
+                                <p class="uk-text uk-text-small review__date">12.06.2020, 07:56</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="uk-card uk-card-body review review__page">
+                        <div class="review__head uk-flex uk-flex-between uk-flex-top">
+                            <div class="review__info">
+                                <h4 class="review__name">Виктория</h4>
+                                <img src="/dentko/img/rating.png" alt="Рейтинг" class="review__rating">
+                            </div>
+                            <div class="review__body">
+                                <p class="uk-text">Отличная клиника! Теперь буду ходить только сюда, наконец-то я нашла "свою" стоматологию. Цены здесь средние, а качество оборудования, материалов и само отношение персонала на высоте!</p>
+                                <p class="uk-text uk-text-small review__date">12.06.2020, 07:56</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="uk-card uk-card-body review review__page">
+                        <div class="review__head uk-flex uk-flex-between uk-flex-top">
+                            <div class="review__info">
+                                <h4 class="review__name">Виктория</h4>
+                                <img src="/dentko/img/rating.png" alt="Рейтинг" class="review__rating">
+                            </div>
+                            <div class="review__body">
+                                <p class="uk-text">Отличная клиника! Теперь буду ходить только сюда, наконец-то я нашла "свою" стоматологию. Цены здесь средние, а качество оборудования, материалов и само отношение персонала на высоте!</p>
+                                <p class="uk-text uk-text-small review__date">12.06.2020, 07:56</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="uk-card uk-card-body review review__page">
+                        <div class="review__head uk-flex uk-flex-between uk-flex-top">
+                            <div class="review__info">
+                                <h4 class="review__name">Виктория</h4>
+                                <img src="/dentko/img/rating.png" alt="Рейтинг" class="review__rating">
+                            </div>
+                            <div class="review__body">
+                                <p class="uk-text">Отличная клиника! Теперь буду ходить только сюда, наконец-то я нашла "свою" стоматологию. Цены здесь средние, а качество оборудования, материалов и само отношение персонала на высоте!</p>
+                                <p class="uk-text uk-text-small review__date">12.06.2020, 07:56</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="uk-width-1-1 uk-flex uk-flex-middle uk-flex-center">
+                    <div class="reviews__pagination">
+                        <ul class="uk-pagination" uk-margin>
+                            <li><a href="../reviews.html"><span class="reviews__control reviews__control-prev"></span></a></li>
+                            <li class="reviews__page"><a href="../reviews.html">1</a></li>
+                            <li class="reviews__page uk-active"><span>2</span></li>
+                            <li class="reviews__page"><a href="./3.html">3</a></li>
+                            <li><a href="./3.html"><span class="reviews__control reviews__control-next"></span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="form">
+            <div class="uk-container">
+                <div class="form__body">
+                    <h2 class="uk-h2">Оставить отзыв</h2>
+                    <p class="uk-text-meta">Пожалуйста, проверьте правильность введенных данных.</p>
+                    <form class="uk-flex uk-flex-bottom">
+                        <div class="form__inputs">
+                            <div class="uk-flex uk-flex-between form__row">
+                                <div class="uk-input form__rate-wrap">
+                                    <span class="form__rate-span">Ваша оценка:</span>
+                                    <div class="form__rate">
+                                        <input class="form__radio" type="radio" name="rate" checked>
+                                        <input class="form__radio" type="radio" name="rate">
+                                        <input class="form__radio" type="radio" name="rate">
+                                        <input class="form__radio" type="radio" name="rate">
+                                        <input class="form__radio" type="radio" name="rate">
+                                    </div>
+                                </div>
+                                <div class="uk-input form__div">
+                                    <input class="uk-input" type="text" placeholder="Ваше имя">
+                                    <span class="form__err">В формате А-Я,а-я и минимум 2 символа</span>
+                                </div>
+                                <div class="uk-input form__div">
+                                    <input class="uk-input" type="email" placeholder="Ваш e-mail">
+                                    <span class="form__err">Неверный формат E-mail адреса</span>
+                                </div>
+                            </div>
+                            <div class="form__row">
+                                <textarea class="form__textarea" placeholder="Напишите ваш отзыв" rows="1"></textarea>
+                            </div>
+                        </div>
+                        <div class="form__submit">
+                            <p class="uk-text uk-text-small">Email служит для оповещения об ответе, он не будет опубликован на сайте.</p>
+                            <button class="uk-input" type="submit">Оставить отзыв</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="uk-container">
+            <div class="uk-flex uk-flex-between uk-flex-middle footer__wrap">
+                <img src="/dentko/img/logo.svg" alt="Логотип" class="header__logo">
+                <nav class="footer__nav uk-flex uk-flex-middle">
+                    <ul class="uk-list uk-flex uk-flex-between uk-flex-middle">
+                        <li><a href="/dentko/service.html" class="footer__nav-link">лечение</a></li>
+                        <li><a href="/dentko/service.html" class="footer__nav-link">протезирование</a></li>
+                        <li><a href="/dentko/service.html" class="footer__nav-link">хирургия</a></li>
+                        <li><a href="/dentko/service.html" class="footer__nav-link">ортодонтия</a></li>
+                        <li><a href="/dentko/service.html" class="footer__nav-link">отбеливание</a></li>
+                        <li><a href="/dentko/service.html" class="footer__nav-link">профилактика</a></li>
+                        <li><a href="/dentko/service.html" class="footer__nav-link">пародонтология</a></li>
+                        <li><a href="/dentko/service.html" class="footer__nav-link">косметология</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer__body uk-flex uk-flex-between uk-flex-stretch">
+                <nav class="footer__nav uk-flex">
+                    <ul class="uk-list">
+                        <li><a href="/dentko/about.html" class="footer__nav-link">о компании</a></li>
+                        <li><a href="/dentko/price.html" class="footer__nav-link">цены</a></li>
+                        <li><a href="/dentko/payment.html" class="footer__nav-link">оплата и рассрочка</a></li>
+                        <li><a href="/dentko/reviews.html" class="footer__nav-link">отзывы</a></li>
+                        <li><a href="/dentko/team.html" class="footer__nav-link">специалисты</a></li>
+                        <li><a href="/dentko/" class="footer__nav-link">статьи</a></li>
+                        <li><a href="/dentko/faq.html" class="footer__nav-link">вопрос-ответ</a></li>
+                        <li><a href="/dentko/contacts.html" class="footer__nav-link">контакты</a></li>
+                    </ul>
+                </nav>
+                <dl class="uk-description-list uk-flex uk-flex-column footer__contacts">
+                    <dt>Контактные данные:</dt>
+                    <dd>ООО "Дентко-Мед", 220005</dd>
+                    <dd>г. Минск, пр. Независимости, 58, п. 142 (3 этаж). <a href="/dentko/contacts.html" class="footer__green-link">Карта проезда</a></dd>
+                    <dd>
+                        <div class="uk-flex-inline uk-flex-between">
+                            <a href="#" class="header__link footer__outer"><img src="/dentko/img/facebook.png" alt="Иконка" class="header__link-img"></a>
+                            <a href="#" class="header__link footer__outer"><img src="/dentko/img/vk.png" alt="Иконка" class="header__link-img"></a>
+                            <a href="#" class="header__link footer__outer"><img src="/dentko/img/instagram.png" alt="Иконка" class="header__link-img"></a>
+                        </div>
+                    </dd>
+                </dl>
+                <dl class="uk-description-list uk-flex uk-flex-column footer__contacts">
+                    <dt>Телефоны:</dt>
+                    <dd><a href="tel:+375291101212" class="footer__dd-link"><img src="/dentko/img/operator1.png">+375 (29) 110-12-12</a></dd>
+                    <dd><a href="tel:+375336601313" class="footer__dd-link"><img src="/dentko/img/operator2.png">+375 (33) 660-13-13</a></dd>
+                    <dd><a href="tel:+375251101212" class="footer__dd-link"><img src="/dentko/img/operator3.png">+375 (25) 110-12-12</a></dd>
+                    <dd><a href="tel:+375172844511" class="footer__dd-link"><img src="/dentko/img/operator4.png">+375 (17) 284-45-11</a></dd>
+                    <dd>
+                        <div class="uk-flex-inline uk-flex-between">
+                            <a href="#" class="header__link footer__outer"><img src="/dentko/img/telegram.png" alt="Иконка" class="header__link-img"></a>
+                            <a href="#" class="header__link footer__outer"><img src="/dentko/img/viber.png" alt="Иконка" class="header__link-img"></a>
+                            <a href="#" class="header__link footer__outer"><img src="/dentko/img/whatsapp.png" alt="Иконка" class="header__link-img"></a>
+                        </div>
+                    </dd>
+                </dl>
+                <div class="uk-card uk-card-body footer__schedule">
+                    <h3 class="footer__card-header uk-text-bold">Время работы:</h3>
+                    <div class="footer__card-body uk-flex uk-flex-between">
+                        <div class="footer__card-col uk-flex uk-flex-column">
+                            <span>пн-пт:</span>
+                            <span>сб:</span>
+                            <span>вс:</span>
+                        </div>
+                        <div class="footer__card-col uk-flex uk-flex-column">
+                            <span>09:00 — 21:00</span>
+                            <span>09:00 — 20:00</span>
+                            <span>09:00 — 17:00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="uk-flex uk-flex-between uk-child-width-1-3@s footer__bottom">
+                <div class="footer__bottom-col">
+                    <span class="uk-text uk-text-meta">© 1997 - 2020. Медицинский центр <br>"Дентко".</span>
+                </div>
+                <div class="uk-flex uk-flex-middle uk-flex-column footer__bottom-col">
+                    <span class="uk-text uk-text-meta">Рейтинг Медицинского центра "Дентко" - <img src="/dentko/img/rating.png"> 4,9 балла (10 голосов)</span>
+                    <a href="#" class="green-link uk-link">Продвижение сайта - hata.by</a>
+                </div>
+                <div class="footer__bottom-col">
+                    <span class="uk-text uk-text-meta"></span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="popup__wrapper popup-request">
+        <div class="uk-position-relative popup popup_request">
+            <span class="uk-position-absolute popup__close popup-close"></span>
+            <div class="popup__body">
+                <h2 class="uk-h1">Записаться на прием</h2>
+                <p class="uk-text uk-text-small">Наш администратор свяжется с Вами для корректировки времени.</p>
+                <div class="uk-flex uk-flex-between uk-child-width-1-3 popup__row">
+                    <div class="uk-input form__div">
+                        <input class="uk-input" type="text" placeholder="Ваше имя">
+                        <span class="form__err">В формате А-Я,а-я и минимум 2 символа</span>
+                    </div>
+                    <div class="uk-input form__div">
+                        <input class="uk-input" type="tel" placeholder="Ваш телефон">
+                        <span class="form__err">Введите номер в международном формате</span>
+                    </div>
+                    <div class="uk-input form__div">
+                        <input class="uk-input" type="email" placeholder="Ваш e-mail">
+                        <span class="form__err">Неверный формат E-mail адреса</span>
+                    </div>
+                </div>
+                <div class="popup__row">
+                    <textarea class="uk-input" rows="2" placeholder="Что вас беспокоит?"></textarea>
+                </div>
+                <div class="uk-flex uk-flex-between uk-width-1-1 popup__row">
+
+                    <button class="uk-button popup__submit popup-sucsess-open">Записаться на прием <img src="/dentko/img/inline-arrow-w.svg"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="popup__wrapper popup-sucsess">
+        <div class="uk-position-relative popup popup_sucsess">
+            <span class="uk-position-absolute popup__close popup-close"></span>
+            <div class="popup__body">
+                <h2 class="uk-h1 uk-text-center">Ваша заявка принята!</h2>
+                <p class="uk-text uk-text-center uk-text-small">Наш администратор свяжется с Вами для корректировки времени.</p>
+            </div>
+        </div>
+    </div>
+    <script src="/dentko/js/main.js"></script>
+</body>
+</html>
