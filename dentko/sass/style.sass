@@ -378,11 +378,39 @@ html
             display: none
     &__controls
         width: 22%
+        display: flex
+        align-items: center
+        justify-content: space-between
     &-prev
+        margin-right: 10px
         &::after
             transform: translate(-50%, -50%) rotate(180deg)
     .uk-height-large
         height: 650px
+
+.banner__swiper
+    .uk-height-large
+        height: 550px
+
+.swiper
+    &__controls
+        width: 100%
+        justify-content: space-between
+        display: flex
+        flex-wrap: wrap
+        align-items: center
+
+.swiper__pagination
+    height: 3px
+    width: 250px
+    .swiper-pagination
+        height: 1px
+        width: 250px
+        background-color: $green
+        .swiper-pagination-progressbar-fill
+            height: 3px
+            margin-top: -1px
+            background-color: $green
 
 .benefits
     position: relative

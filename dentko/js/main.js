@@ -175,7 +175,24 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    
     try{
+        let bannerSwiper = new Swiper('.banner__swiper', {
+            spaceBetween: 0,
+            loop: true,
+            slidesPerView: 1,
+            updateOnWindowResize: true,
+            speed: 600,
+            navigation: {
+                nextEl: '.swiper__controls .slider-next',
+                prevEl: '.swiper__controls .slider-prev',
+            },
+            pagination: {
+                el: '.swiper__pagination>.swiper-pagination',
+                type: 'progressbar',
+            }
+        });
+
         let galleryThumbs = new Swiper('.gallery-thumbs', {
             spaceBetween: 30,
             slidesPerView: 3,
