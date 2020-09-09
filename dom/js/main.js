@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let subsliderItems = document.querySelectorAll('.subslider__item');
     let faqLinks = document.querySelectorAll('.faq');
     let burgerBtn = document.querySelector('.menu-toggle');
-    let navLinks = document.querySelectorAll('.nav__link');
+    let navLinks = document.querySelectorAll('.scroll-link');
     let popupClose = document.querySelectorAll('.popup__close');
     let popups = document.querySelectorAll('.popup');
     let openRecall = document.querySelectorAll('.open-recall');
@@ -116,6 +116,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 header.classList.remove('fixed');
                 main.classList.remove('fixed');
             }
+        }
+
+        let fixedLink = document.querySelector('.fixed-link');
+
+        if(window.pageYOffset > 300){
+            fixedLink.classList.add('active');
+        }
+        else{
+            fixedLink.classList.remove('active');
         }
     }
 

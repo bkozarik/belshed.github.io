@@ -9,6 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
     let sliders = document.querySelectorAll('.uk-slider-container');
     let spoilerLink = document.querySelector('.spoiler-link');
 
+    let forms = document.querySelectorAll('form');
+
     const toggleSpoiler = () => {
         event.preventDefault();
 
@@ -177,7 +179,18 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    
+    const formSubmit = () => {
+        event.preventDefault();
+
+        let targetForm = event.target;
+        let request = new XMLHttpRequest();
+        
+        let formData = new FormData(targetForm);
+        request.open('POST', '/dentko/ajax-mail.php');
+        request.send(formData);
+        
+    }
+
     try{
         let bannerSwiper = new Swiper('.banner__swiper', {
             spaceBetween: 0,
@@ -248,6 +261,10 @@ document.addEventListener('DOMContentLoaded', () => {
         spoilerLink.addEventListener('click', toggleSpoiler);
     }
     catch{}
+
+    forms.forEach(form => {
+        form.addEventListener('submit', formSubmit);
+    });
 
     menuBtn.addEventListener('click', toggleMenu);
 

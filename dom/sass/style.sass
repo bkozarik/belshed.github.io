@@ -704,10 +704,10 @@ body
         appearance: none
         font-size: 16px
         font-weight: 800
-        max-width: 280px
         display: inline-block
         box-sizing: border-box
         width: 100%
+        padding: 30px 20px
         color: $text_dark
         &_select
             position: relative
@@ -736,10 +736,45 @@ body
             background-color: #fff
             max-width: 360px
             width: 100%
-            padding: 30px 20px
             border-radius: 3px
             display: inline-block
             box-shadow: 0 -2px 0 0 $button_orange
+
+.fixed-link
+    display: inline-block
+    width: 50px
+    height: 50px
+    border-radius: 4px
+    background-color: transparent
+    box-shadow: 0 0 0 2px $soft_blue
+    position: fixed
+    opacity: 0
+    visibility: hidden
+    transform: translateY(-10px)
+    bottom: 50px
+    right: 5%
+    &::before, &::after
+        content: ''
+        display: inline-block
+        width: 25px
+        position: absolute
+        top: 50%
+        left: 27%
+        height: 2px
+        background-color: $soft_blue
+        border-radius: 2px
+    &::before
+        transform: translate(33%, -50%) rotate(45deg)
+    &::after
+        transform: translate(-33%, -50%) rotate(-45deg)
+    &:hover
+        box-shadow: 0 0 0 2px $button_orange
+        &::before, &::after
+            background-color: $button_orange
+    &.active
+        visibility: visible
+        opacity: 1
+        transform: translateY(0px)
 
 .docs
     padding: 130px 0px 90px

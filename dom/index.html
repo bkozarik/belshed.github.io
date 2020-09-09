@@ -9,13 +9,13 @@
     <link rel="stylesheet" href="./css/media.css">
     <title>Dom</title>
 </head>
-<body>
+<body id="body">
     <header class="header">
         <div class="container">
             <div class="header__wrap">
                 <div class="header__logo-wrap">
                     <img src="./img/logo.png" alt="Логотип" class="header__logo">
-                    <span class="header__slogan">Очищаем планету с 20009 года</span>
+                    <span class="header__slogan">Очищаем планету с 2009 года</span>
                 </div>
                 <a href="mailto:domoteck@mail.ru" class="header__email is_moving">domoteck@mail.ru</a>
                 <div class="header__contacts is_moving">
@@ -32,34 +32,34 @@
         <div class="container">
             <ul class="nav__list">
                 <li class="nav__item">
-                    <a href="#objects" class="nav__link">Объекты</a>
+                    <a href="#objects" class="nav__link scroll-link">Объекты</a>
                 </li>
                 <li class="nav__separator"></li>
                 <li class="nav__item">
-                    <a href="#advantages" class="nav__link">Преимущества</a>
+                    <a href="#advantages" class="nav__link scroll-link">Преимущества</a>
                 </li>
                 <li class="nav__separator"></li>
                 <li class="nav__item">
-                    <a href="#portfolio" class="nav__link">Портфолио</a>
+                    <a href="#portfolio" class="nav__link scroll-link">Портфолио</a>
                 </li>
                 <li class="nav__separator"></li>
                 <li class="nav__item">
-                    <a href="#services" class="nav__link">Услуги</a>
+                    <a href="#services" class="nav__link scroll-link">Услуги</a>
                 </li>
                 <li class="nav__separator"></li>
                 <li class="nav__item">
-                    <a href="#about" class="nav__link">О компании</a>
+                    <a href="#about" class="nav__link scroll-link">О компании</a>
                 </li>
                 <li class="nav__separator"></li>
                 <li class="nav__item">
-                    <a href="#contacts" class="nav__link">Контакты</a>
+                    <a href="#contacts" class="nav__link scroll-link">Контакты</a>
                 </li>
             </ul>
         </div>
     </nav>
     <div class="mobile-menu"><div class="mobile-menu__wrapper"></div></div>
     <main class="main">
-        <section class="banner">
+        <section id="banner" class="banner">
             <img src="./img/rings.png" alt="" class="banner__rings">
             <div class="swiper-container banner__slider">
                 <div class="swiper-wrapper">
@@ -640,6 +640,7 @@
             <!-- <img src="./img/map.jpg" alt="Карта" class="map__img"> -->
             <!-- <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A17e0a35376584c534891e4a86ad56c338e7c39cdb86ee02730978682c06889e0&amp;source=constructor" width="100%" height="400" frameborder="0"></iframe> -->
         </section>
+        <a href="#body" class="fixed-link scroll-link"><span></span></a>
     </main>
     <footer class="footer">
         <div class="container">
@@ -707,8 +708,9 @@
                             <input type="tel" name="user-tel" placeholder="Ваш телефон" class="form__input">
                             <input class="form__hidden" type="hidden" name="object">
                             <input class="form__hidden" type="hidden" name="service">
-                            <input class="form__hidden" type="hidden" name="price">
+                            <input class="form__hidden" type="hidden" name="term">
                             <input class="form__hidden" type="hidden" name="comment">
+                            <input class="form__hidden" type="hidden" name="price">
                         </div>
                     </label>
                 </div>
