@@ -2,6 +2,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     let popupTriggers = document.querySelectorAll('.popup-request-open');
+    let popupFAQTriggers = document.querySelectorAll('.popup-faq-open');
     let popupCloseTriggers = document.querySelectorAll('.popup-close');
     let popups = document.querySelectorAll('.popup');
     let popupSucsessTrigger = document.querySelectorAll('.popup-sucsess-open');
@@ -287,6 +288,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     popupTriggers.forEach(item => {
         item.addEventListener('click', openPopup('.popup-request'));
+    });
+
+    popupFAQTriggers.forEach(item => {
+        item.addEventListener('click', openPopup('.popup-faq'));
     });
 
     popupSucsessTrigger.forEach(item => {
