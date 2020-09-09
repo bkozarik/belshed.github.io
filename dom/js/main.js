@@ -187,7 +187,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         counter.innerText = bannerSwiperNode.realIndex + 1;
 
-        bannerSwiperNode2.slideTo(bannerSwiperNode.realIndex + 1)
+        bannerSwiperNode2.slideTo(bannerSwiperNode.realIndex)
     }
 
     let subSwiper = new Swiper('.subslider__container', {
