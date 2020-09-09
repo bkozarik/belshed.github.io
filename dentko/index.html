@@ -13,7 +13,7 @@
     <script src="./js/uikit.min.js"></script>
     <script src="./js/uikit-icons.min.js"></script>
 </head>
-<body>
+<body class="no-overflow">
     <header class="header">
         <div class="uk-container">
             <div class="uk-flex uk-flex-between uk-flex-bottom header__wrap">
@@ -231,7 +231,7 @@
                 <div class="uk-section">
                     <div class="uk-grid-match uk-child-width-1-1@s uk-child-width-1-2@m" uk-grid>
                         <div class="about__side">
-                            <div class="about__img-wrap">
+                            <div class="about__img-wrap about__img-wrap_sticky">
                                 <img class="about__img" src="./img/reception.jpg" alt="" uk-img>
                             </div>
                         </div>
@@ -895,15 +895,15 @@
                 <p class="uk-text uk-text-small">Наш администратор свяжется с Вами для корректировки времени.</p>
                 <div class="uk-flex uk-flex-between uk-child-width-1-3 popup__row">
                     <div class="uk-input form__div">
-                        <input class="uk-input" type="text" placeholder="Ваше имя">
+                        <input class="uk-input" type="text" name="name" placeholder="Ваше имя">
                         <span class="form__err">В формате А-Я,а-я и минимум 2 символа</span>
                     </div>
                     <div class="uk-input form__div">
-                        <input class="uk-input" type="tel" placeholder="Ваш телефон">
+                        <input class="uk-input" type="tel" name="tel" placeholder="Ваш телефон">
                         <span class="form__err">Введите номер в международном формате</span>
                     </div>
                     <div class="uk-input form__div">
-                        <input class="uk-input" type="email" placeholder="Ваш e-mail">
+                        <input class="uk-input" type="email" name="mail" placeholder="Ваш e-mail">
                         <div class="popup__info">
                             <img src="./img/popup-info.svg" alt="" class="popup__info-img">
                             <div class="popup__info-card">
@@ -915,11 +915,10 @@
                     </div>
                 </div>
                 <div class="popup__row">
-                    <textarea class="uk-input" rows="2" placeholder="Что вас беспокоит?"></textarea>
+                    <textarea class="uk-input" rows="2" name="comment" placeholder="Что вас беспокоит?"></textarea>
                 </div>
                 <div class="uk-flex uk-flex-between uk-width-1-1 popup__row">
-
-                    <button class="uk-button popup__submit popup-sucsess-open">Записаться на прием <img src="./img/inline-arrow-w.svg"></button>
+                    <button type="submit" class="uk-button popup__submit">Записаться на прием <img src="./img/inline-arrow-w.svg"></button>
                 </div>
             </div>
         </div>
@@ -930,6 +929,15 @@
             <div class="popup__body">
                 <h2 class="uk-h1 uk-text-center">Ваша заявка принята!</h2>
                 <p class="uk-text uk-text-center uk-text-small">Наш администратор свяжется с Вами для корректировки времени.</p>
+            </div>
+        </div>
+    </div>
+    <div class="popup__wrapper popup-error">
+        <div class="uk-position-relative popup popup_sucsess">
+            <span class="uk-position-absolute popup__close popup-close"></span>
+            <div class="popup__body">
+                <h2 class="uk-h1 uk-text-center">Произошла ошибка!</h2>
+                <p class="uk-text uk-text-center uk-text-small">По техническим причинам ваша заявка не была принята, попробуйте немного позже.</p>
             </div>
         </div>
     </div>

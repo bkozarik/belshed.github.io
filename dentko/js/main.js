@@ -30,8 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
             totalHeight += item.offsetHeight;
         });
 
-        console.log(totalHeight);
-
         textContainer.classList.toggle('open');
         if(textContainer.classList.contains('open')){
             textContainer.style.maxHeight = totalHeight + "px";
@@ -108,16 +106,18 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const scrollHandler = () => {
-        let header = document.querySelector('.header');
-        let mobileMenu = document.querySelector('.mobile-menu');
+        if(window.innerWidth < 1100){
+            let header = document.querySelector('.header');
+            let mobileMenu = document.querySelector('.mobile-menu');
 
-        if(window.pageYOffset > 0){
-            header.classList.add('fixed');
-            mobileMenu.style.paddingTop = "60px";
-        }
-        else{
-            header.classList.remove('fixed');
-            mobileMenu.style.paddingTop = "80px";
+            if(window.pageYOffset > 0){
+                header.classList.add('fixed');
+                mobileMenu.style.paddingTop = "60px";
+            }
+            else{
+                header.classList.remove('fixed');
+                mobileMenu.style.paddingTop = "80px";
+            }
         }
     }
 
@@ -183,12 +183,29 @@ document.addEventListener('DOMContentLoaded', () => {
         event.preventDefault();
 
         let targetForm = event.target;
+        let formInputs = targetForm.querySelectorAll('input.uk-input');
         let request = new XMLHttpRequest();
         
         let formData = new FormData(targetForm);
-        request.open('POST', '/dentko/ajax-mail.php');
+        request.open('POST', '/ajax-mail.php');
+
+        request.onreadystatechange = function () {
+            
+            if(request.readyState === XMLHttpRequest.DONE) {
+                var status = request.status;
+                if (status === 0 || (status >= 200 && status < 400)) {
+                    openPopup('.popup-sucsess')();
+                } else {
+                    openPopup('.popup-error')();
+                }
+            }
+        };
+
+        formInputs.forEach(input => {
+            input.value = '';
+        });
+
         request.send(formData);
-        
     }
 
     try{
@@ -284,6 +301,18 @@ document.addEventListener('DOMContentLoaded', () => {
         scrollHandler();
     });
 
+    try{
+        document.querySelector('.reviews__header .button_big').addEventListener('click', () => {
+            event.preventDefault();
+    
+            document.querySelector('#form').scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        });
+    }
+    catch{}
+
     window.addEventListener('resize', () => {
         mobileCheck();
     });
@@ -295,7 +324,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     try{
         document.querySelectorAll('.reviews__control_disabled').forEach(control => {
-            console.log(control);
             control.addEventListener('click', () => {
                 event.preventDefault();
             });

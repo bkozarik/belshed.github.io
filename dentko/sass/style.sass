@@ -12,6 +12,8 @@ body
     display: flex
     flex-direction: column
     overflow-x: hidden
+    &.no-overflow
+        overflow: visible
 
 html
     overflow-x: hidden
@@ -243,6 +245,7 @@ html
                 color: $green
                 padding-left: 16px
                 padding-right: 7px
+                transform: scale(1.07)
                 img
                     width: 10px
                     height: auto
@@ -472,8 +475,8 @@ html
         img
             display: none
         &:hover
-            padding-left: 30px
-            padding-right: 15px
+            padding-left: 28px
+            padding-right: 14px
             img
                 display: inline-block
     &__side
@@ -501,6 +504,8 @@ html
         width: 50%
         margin-left: 60px
     &__sticky
+        position: sticky
+        top: 100px
         &.fixed
             position: fixed
             top: 120px
@@ -556,14 +561,20 @@ html
                 transform: translate(-30px, -30px)
                 background: $green_gradient
                 z-index: -1
+            &_sticky
+                height: 90%
+                position: sticky
+                top: 150px
             &_another
                 &::before
                     transform: translate(90px, -30px)
     &__btn
+
         &-wrap
             display: flex
     &__container
         width: 100%
+        align-items: stretch
     &__row
         display: flex
         justify-content: space-between
@@ -1278,6 +1289,64 @@ html
         width: 100%
         object-fit: cover
         height: 100%
+
+.test
+    &-block
+        background-color: peachpuff
+        border-radius: 3px
+        height: 300px
+        position: sticky
+        top: 200px
+        width: 100%
+    &-sibling
+        width: 50%
+        height: 1300px
+        background-color: aqua
+
+.beradcrumbs
+    padding: 20px 0px
+    margin-bottom: -65px
+    z-index: 9
+    position: relative
+    &__list
+        list-style-type: none
+        padding: 0
+        margin-left: -.5em
+        display: flex
+    &__item
+        & + &
+            &::before
+                content: '/'
+                color: $green
+                font-size: 12px
+    &__link
+        padding: 0em .5em
+        font-size: 12px
+        text-decoration: none
+        position: relative
+        color: $green
+        &::after
+            display: inline-block
+            position: absolute
+            bottom: -2px
+            width: calc(100% - 1em)
+            height: 1px
+            background-color: $green
+            transform-origin: left
+            content: ''
+            left: .5em
+            transform: scaleX(0)
+        &:hover
+            color: $green
+            text-decoration: none
+            &::after
+                transform: scaleX(1)
+        &.reviews__control_disabled
+            color: #8F9194
+            &:hover
+                cursor: default
+            &::after
+                display: none
 
 .uk-pagination
     a, .reviews__control, .uk-active>span
