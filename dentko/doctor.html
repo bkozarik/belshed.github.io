@@ -155,7 +155,7 @@
                                 </div>
                                 <div class="uk-flex uk-flex-between uk-margin-medium-top about__buttons">
                                     <button class="uk-button uk-button-default button popup-request-open">Записаться на прием<img src="./img/inline-arrow-w.svg"></button>
-                                    <button class="uk-button uk-button-default button button_transparent popup-request-open">Консультация стоматолога</button>
+                                    <button class="uk-button uk-button-default button button_transparent popup-faq-open">Консультация стоматолога</button>
                                 </div>
                             </div>
                             
@@ -578,6 +578,31 @@
                 </div>
                 <div class="uk-flex uk-flex-between uk-width-1-1 popup__row">
                     <button type="submit" class="uk-button popup__submit">Записаться на прием <img src="./img/inline-arrow-w.svg"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="popup__wrapper popup-faq">
+        <div class="uk-position-relative popup popup_request">
+            <span class="uk-position-absolute popup__close popup-close"></span>
+            <div class="popup__body">
+                <h2 class="uk-h1">Задать вопрос врачу</h2>
+                <p class="uk-text uk-text-small">Наш администратор свяжется с Вами для корректировки времени.</p>
+                <div class="uk-flex uk-flex-between uk-child-width-1-2 popup__row">
+                    <div class="uk-input form__div">
+                        <input class="uk-input" type="text" name="name" placeholder="Ваше имя">
+                        <span class="form__err">В формате А-Я,а-я и минимум 2 символа</span>
+                    </div>
+                    <div class="uk-input form__div">
+                        <input class="uk-input" type="tel" name="tel" placeholder="Ваш телефон">
+                        <span class="form__err">Введите номер в международном формате</span>
+                    </div>
+                </div>
+                <div class="popup__row">
+                    <textarea class="uk-input" rows="2" name="comment" placeholder="Что вас беспокоит?"></textarea>
+                </div>
+                <div class="uk-flex uk-flex-between uk-width-1-1 popup__row">
+                    <button type="submit" class="uk-button popup__submit">Задать вопрос<img src="./img/inline-arrow-w.svg"></button>
                 </div>
             </div>
         </div>
