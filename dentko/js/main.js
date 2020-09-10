@@ -9,8 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
     let menuBtn = document.querySelector('.menu-open');
     let sliders = document.querySelectorAll('.uk-slider-container');
     let spoilerLink = document.querySelector('.spoiler-link');
-
     let forms = document.querySelectorAll('form');
+    let prevDoctorNames;
 
     const toggleSpoiler = () => {
         event.preventDefault();
@@ -155,6 +155,34 @@ document.addEventListener('DOMContentLoaded', () => {
 
             header.after(navBar);
         }
+
+        if(window.innerWidth <= 660) {
+            let doctorNames = document.querySelectorAll('.doctor__name');
+
+            doctorNames.forEach(name => {
+                let words = name.innerText.split(' ');
+                let newWords = [];
+                words.forEach( (word, index) => {
+                    if(index > 0){
+                        word = word[0] + ".";
+                    }
+                    newWords.push(word);
+                });
+                newWords = newWords.join(' ');
+                name.innerText = newWords;
+            });
+        }
+        else{
+            try{
+                let doctorNames = document.querySelectorAll('.doctor__name');
+
+                doctorNames.forEach((name, index) => {
+                    name.innerText = prevDoctorNames[index].innerText;
+                    console.log(prevDoctorNames[index].innerText);
+                });
+            }
+            catch{}
+        }
     }
 
     const openPopup = (popupSelector) => { // Открывается попап с переданным спец-классом
@@ -188,12 +216,15 @@ document.addEventListener('DOMContentLoaded', () => {
         let request = new XMLHttpRequest();
         
         let formData = new FormData(targetForm);
-        request.open('POST', '/ajax-mail.php');
+        request.open('POST', '/dentko/ajax-mail.php');
 
         request.onreadystatechange = function () {
             
             if(request.readyState === XMLHttpRequest.DONE) {
                 var status = request.status;
+
+                closePopup();
+
                 if (status === 0 || (status >= 200 && status < 400)) {
                     openPopup('.popup-sucsess')();
                 } else {
@@ -208,6 +239,36 @@ document.addEventListener('DOMContentLoaded', () => {
 
         request.send(formData);
     }
+
+    forms.forEach(form => {
+        form.addEventListener('submit', formSubmit);
+    });
+
+    menuBtn.addEventListener('click', toggleMenu);
+
+    popupTriggers.forEach(item => {
+        item.addEventListener('click', openPopup('.popup-request'));
+    });
+
+    popupFAQTriggers.forEach(item => {
+        item.addEventListener('click', openPopup('.popup-faq'));
+    });
+
+    popupSucsessTrigger.forEach(item => {
+        item.addEventListener('click', openPopup('.popup-sucsess'));
+    });
+
+    popupCloseTriggers.forEach(item => {
+        item.addEventListener('click', closePopup);
+    });
+
+    window.addEventListener('scroll', () => {
+        scrollHandler();
+    });
+    
+    window.addEventListener('resize', () => {
+        mobileCheck();
+    });
 
     try{
         let bannerSwiper = new Swiper('.banner__swiper', {
@@ -281,32 +342,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     catch{}
 
-    forms.forEach(form => {
-        form.addEventListener('submit', formSubmit);
-    });
-
-    menuBtn.addEventListener('click', toggleMenu);
-
-    popupTriggers.forEach(item => {
-        item.addEventListener('click', openPopup('.popup-request'));
-    });
-
-    popupFAQTriggers.forEach(item => {
-        item.addEventListener('click', openPopup('.popup-faq'));
-    });
-
-    popupSucsessTrigger.forEach(item => {
-        item.addEventListener('click', openPopup('.popup-sucsess'));
-    });
-
-    popupCloseTriggers.forEach(item => {
-        item.addEventListener('click', closePopup);
-    });
-
-    window.addEventListener('scroll', () => {
-        scrollHandler();
-    });
-
     try{
         document.querySelector('.reviews__header .button_big').addEventListener('click', () => {
             event.preventDefault();
@@ -318,10 +353,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
     catch{}
-
-    window.addEventListener('resize', () => {
-        mobileCheck();
-    });
 
     try{
         document.querySelector('.uk-accordion-title').click();

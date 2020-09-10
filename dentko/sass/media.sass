@@ -362,11 +362,11 @@
                 height: 270px
         &__img
             position: absolute
-            left: 70%
-            transform: translateX(-50%)
+            left: 50%
+            transform: translateX(0%)
             img
                 max-width: 40vw
-                max-height: 400px
+                max-height: 350px
         &__control
             width: 100%
             bottom: auto
@@ -424,6 +424,17 @@
             flex-wrap: wrap
     
     .doctor
+        &__data
+            margin-bottom: 130px
+        &__name
+            br
+                display: none
+        &__specialty
+            max-width: 45%
+        &__bottom
+            margin-top: 10px
+        &__link
+            margin-top: 15px
         &__img
             img
                 max-width: 47vw
@@ -524,7 +535,7 @@
 
     .reviews
         &__slider
-            overflow: visible
+            // overflow: visible
 
     .about
         &__row
@@ -562,9 +573,20 @@
                 margin-top: 5px
 
     .doctor
+        &__name
+            font-size: 24px
+        &__specialty
+            font-size: 12px
         &__img
             img
                 max-width: 70vw
+
+    .doctors
+        &__bg
+            &_green
+                width: 60vw
+            &_gray
+                width: 40vw
 
     .footer
         &__schedule

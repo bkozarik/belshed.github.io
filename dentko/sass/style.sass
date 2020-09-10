@@ -8,16 +8,19 @@ $soft_blue: #ECF2F9
     font-family: 'Geometria', sans-serif
     box-sizing: border-box
 
-
 body
     display: flex
     flex-direction: column
     overflow-x: hidden
+    overflow-y: auto
     &.no-overflow
         overflow: visible
 
 html
     overflow-x: hidden
+
+.uk-container
+    // overflow-x: hidden
 
 .green-link
     color: $green
@@ -79,6 +82,8 @@ html
     position: relative
     background-color: #fff
     z-index: 100
+    width: 100%
+    max-width: 100vw
     &__wrap
         dt
             font-size: 11px
@@ -387,6 +392,7 @@ html
         height: 650px
 
 .banner__swiper
+    overflow: hidden
     .uk-height-large
         height: 550px
     .swiper__pagination
@@ -1144,7 +1150,7 @@ html
 .doctor
     &__data
         padding-bottom: 50px
-    &__name, &__specialty, &__link
+    &__link
         color: #ffffff
         &:hover
             color: #fff
