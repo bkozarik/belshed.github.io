@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
-    <link rel="stylesheet" href="/business/fonts/lato.css">
-    <link rel="stylesheet" href="/business/css/style.css">
-    <link rel="stylesheet" href="/business/css/media.css">
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="./fonts/lato.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/media.css">
     <title>Ассоциация предпринимателей России</title>
 </head>
 <body>
@@ -16,7 +16,7 @@
             <div class="header__content">
                 <div class="header__logo-container">
                     <div class="header__logo-wrapper">
-                        <img src="/business/img/gerb.png" alt="gerb">
+                        <img src="./img/gerb.png" alt="gerb">
                         <span>Ассоциация<br> развития и поддержки предпринимательства</span>
                         <div class="header__skew blue"></div>
                         <div class="header__skew red"></div>
@@ -79,7 +79,14 @@
                     <li class="nav__divide"></li>
                     <li class="nav__item swiper-slide"><a href="#" class="nav__link">Ваши вопросы и ответы</a></li>
                     <li class="nav__divide"></li>
-                    <li class="nav__item swiper-slide"><a href="#" class="nav__link">помощь бизнесу</a></li>
+                    <li class="nav__item swiper-slide nav__item_container">
+                        <span class="nav__link">помощь бизнесу</span>
+                        <ul class="nav__inner">
+                            <li class="nav__item"><a href="#" class="nav__link">Внутренняя ссылка</a></li>
+                            <li class="nav__item"><a href="#" class="nav__link">Внутренняя ссылка</a></li>
+                            <li class="nav__item"><a href="#" class="nav__link">Внутренняя ссылка</a></li>
+                        </ul>
+                    </li>
                     <li class="nav__divide"></li>
                     <li class="nav__item swiper-slide"><a href="#" class="nav__link">тендеры с господдержкой и льготами</a></li> 
                     <li class="nav__divide"></li>
@@ -101,11 +108,11 @@
     <div class="container container-main">
         <aside class="aside">
             <div class="aside__enter">
-                <a href="#" class="aside__enter-link"><img src="/business/img/social.svg" alt="social">Вступить в ассоциацию</a>
+                <a href="#" class="aside__enter-link"><img src="./img/social.svg" alt="social">Вступить в ассоциацию</a>
             </div>
             <div class="aside__info">
                 <div class="aside__header">
-                    <img src="/business/img/info.svg" alt="info">
+                    <img src="./img/info.svg" alt="info">
                     <h3 class="aside__text">информация</h3>
                 </div>
                 <ul class="aside__info-list">
@@ -125,7 +132,7 @@
             </div>
             <div class="aside__stories">
                 <div class="aside__header">
-                    <img src="/business/img/medal.svg" alt="info">
+                    <img src="./img/medal.svg" alt="info">
                     <h3 class="aside__text">истории успеха</h3>
                 </div>
                 <div class="aside__stories-content">
@@ -169,7 +176,7 @@
                 </div>
                 <div class="main__player">
                     <a class="main__play-button"></a>
-                    <video src="/business/video/association.m4v" poster="/business/img/poster.png"></video>
+                    <video src="./video/association.m4v" poster="./img/poster.png"></video>
                 </div>
             </div>
             <div class="main__text">
@@ -180,18 +187,18 @@
             </div>
             <div class="main__partners">
                 <div class="main__partners-header">
-                    <img src="/business/img/hands.svg" alt="hands"><h2>наши партнеры</h2>
+                    <img src="./img/hands.svg" alt="hands"><h2>наши партнеры</h2>
                 </div>
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img src="/business/img/gas.png" alt="partnerLogo"></div>
-                        <div class="swiper-slide"><img src="/business/img/rzd.png" alt="partnerLogo"></div>
-                        <div class="swiper-slide"><img src="/business/img/sber.png" alt="partnerLogo"></div>
-                        <div class="swiper-slide"><img src="/business/img/b2b.png" alt="partnerLogo"></div>
-                        <div class="swiper-slide"><img src="/business/img/rzd.png" alt="partnerLogo"></div>
-                        <div class="swiper-slide"><img src="/business/img/gas.png" alt="partnerLogo"></div>
-                        <div class="swiper-slide"><img src="/business/img/rzd.png" alt="partnerLogo"></div>
-                        <div class="swiper-slide"><img src="/business/img/sber.png" alt="partnerLogo"></div>
+                        <div class="swiper-slide"><img src="./img/gas.png" alt="partnerLogo"></div>
+                        <div class="swiper-slide"><img src="./img/rzd.png" alt="partnerLogo"></div>
+                        <div class="swiper-slide"><img src="./img/sber.png" alt="partnerLogo"></div>
+                        <div class="swiper-slide"><img src="./img/b2b.png" alt="partnerLogo"></div>
+                        <div class="swiper-slide"><img src="./img/rzd.png" alt="partnerLogo"></div>
+                        <div class="swiper-slide"><img src="./img/gas.png" alt="partnerLogo"></div>
+                        <div class="swiper-slide"><img src="./img/rzd.png" alt="partnerLogo"></div>
+                        <div class="swiper-slide"><img src="./img/sber.png" alt="partnerLogo"></div>
                     </div>
                 </div>
                 <div class="swiper-pagination1"></div>
@@ -207,7 +214,14 @@
                     <li class="nav__divide"></li>
                     <li class="nav__item swiper-slide"><a href="#" class="nav__link">Ваши вопросы и ответы</a></li>
                     <li class="nav__divide"></li>
-                    <li class="nav__item swiper-slide"><a href="#" class="nav__link">помощь бизнесу</a></li>
+                    <li class="nav__item swiper-slide nav__item_container">
+                        <span class="nav__link">помощь бизнесу</span>
+                        <ul class="nav__inner">
+                            <li class="nav__item"><a href="#" class="nav__link">Внутренняя ссылка</a></li>
+                            <li class="nav__item"><a href="#" class="nav__link">Внутренняя ссылка</a></li>
+                            <li class="nav__item"><a href="#" class="nav__link">Внутренняя ссылка</a></li>
+                        </ul>
+                    </li>
                     <li class="nav__divide"></li>
                     <li class="nav__item swiper-slide"><a href="#" class="nav__link">тендеры с господдержкой и льготами</a></li> 
                     <li class="nav__divide"></li>
@@ -222,7 +236,7 @@
             <div class="footer__content">
                 <div class="footer__logo-container">
                     <div class="footer__logo-wrapper">
-                        <img src="/business/img/gerb.png" alt="gerb">
+                        <img src="./img/gerb.png" alt="gerb">
                         <span>Ассоциация<br> развития и поддержки предпринимательства</span>
                         <div class="footer__skew blue"></div>
                         <div class="footer__skew red"></div>
@@ -248,7 +262,7 @@
         </div>
     </footer>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
-    <script src="/business/js/main.js"></script>
+    <script src="./js/swiper-bundle.min.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 </html>

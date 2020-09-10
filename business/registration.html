@@ -102,7 +102,7 @@
     </header>
     <div class="container">
         <div class="purchise-header nomap">
-            <h1>Разместить тендер</h1>
+            <h1>Регистрация</h1>
         </div>
     </div>
     <div class="container container-main">
@@ -141,122 +141,48 @@
                     <a href="#" class="aside__stories-item">Текущий ремонт административного здания</a>
                 </div>
             </div>
-            <div class="aside__partners">
-                <div class="aside__header">
-                    <img src="./img/hands.svg" alt="info">
-                    <h3 class="aside__text">наши партнеры</h3>
-                </div>
-                <div class="aside__partners-wrap">
-                    <div class="aside__partner">
-                        <img class="aside__partner-img" src="./img/partners/pertner1.png" alt="partner">
-                    </div>
-                    <div class="aside__partner">
-                        <img class="aside__partner-img" src="./img/partners/pertner2.png" alt="partner">
-                    </div>
-                    <div class="aside__partner">
-                        <img class="aside__partner-img" src="./img/partners/pertner3.png" alt="partner">
-                    </div>
-                    <div class="aside__partner">
-                        <img class="aside__partner-img" src="./img/partners/pertner4.png" alt="partner">
-                    </div>
-                    <div class="aside__partner">
-                        <img class="aside__partner-img" src="./img/partners/pertner5.png" alt="partner">
-                    </div>
-                </div>
-                <a href="#" class="button">все партнеры</a>
-            </div>
         </aside>
         <main class="main main__form">
-            <form action="#" class="form">
+            <form class="form form_registration">
                 <div class="form__field">
-                    <p class="form__title required">Тип компании:</p>
-                    <div class="form__input d-f-sb">
-                        <label><input type="radio" name="company_type" required><span></span>Покупатель</label>
-                        <label><input type="radio" name="company_type" required><span></span>Продавец</label>
-                        <label><input type="radio" name="company_type" required><span></span>Покупатель/Продавец</label>
-                    </div>
-                </div>
-                <div class="form__field">
-                    <p class="form__title required">Официальное название:</p>
+                    <p class="form__title required">Название организации</p>
                     <div class="form__input"><input name="company_name" type="text" required></div>
                 </div>
                 <div class="form__field">
-                    <p class="form__title required">ФИО:</p>
-                    <div class="form__input"><input name="name" type="text" required></div>
+                    <p class="form__title required">ФИО ответственного лица</p>
+                    <div class="form__input"><input name="company_owner" type="text" required></div>
                 </div>
                 <div class="form__field">
-                    <p class="form__title required">ФИО директора:</p>
-                    <div class="form__input">
-                        <input name="director_name" type="text">
-                        <label class="coincides"><input type="checkbox"><span></span>Совпадает</label>
-                    </div>
+                    <p class="form__title required">Контактный телефон</p>
+                    <div class="form__input"><input name="company_tel" type="tel" required></div>
                 </div>
                 <div class="form__field">
-                    <p class="form__title required">Email:</p>
+                    <p class="form__title required">Эл. Почта</p>
                     <div class="form__input"><input name="email" type="email" required></div>
                 </div>
                 <div class="form__field">
-                    <p class="form__title required">Описание компании:</p>
-                    <div class="form__input">
-                        <textarea name="company_description" cols="60" rows="5" required></textarea>
-                    </div>
+                    <p class="form__title required">Город</p>
+                    <div class="form__input"><input name="city" type="text" required></div>
                 </div>
                 <div class="form__field">
-                    <p class="form__title required">Почтовый адрес:</p>
-                    <div class="form__input">
-                        <div class="form__field"><p class="form__title">Регион</p><input class="post" type="text" name="region" required></div>
-                        <div class="form__field"><p class="form__title">Город</p><input class="post" type="text" name="city" required></div>
-                        <div class="form__adress">
-                            <label class="post">Улица<input type="text" name="street" required></label>
-                            <label class="post">Дом<input type="text" name="house" required></label>
-                            <label class="post">Офис<input type="text" name="office" required></label>
-                        </div>
-                    </div>
-                </div>
-                <div class="form__field">
-                    <p class="form__title required">Юридический адрес:</p>
-                    <div class="form__input">
-                        <input type="text">
-                        <label class="coincides"><input name="juridical_adress" type="checkbox"><span></span>Совпадает с почтовым</label>
-                    </div>
-                </div>
-                <div class="form__field">
-                    <p class="form__title required">ИНН/КПП</p>
-                    <div class="form__input d-f-sb no-wrap"><input name="inn" class="double" type="text"><input name="kpp" type="text" required></div>
+                    <p class="form__title required">Индивидуальный налоговый номер</p>
+                    <div class="form__input"><input name="inn" type="tel" required></div>
                 </div>
                 <div class="form__field">
                     <div class="form__title">
-                        <p class="form__title required">Цена тендера</p>
-                        <p class="form__subtitle">(Закупки, продажи)*</p>
-                    </div>
-                    <div class="form__input"><input name="tender_price" type="text" required></div>
-                </div>
-                <div class="form__field">
-                    <div class="form__title">
-                        <p class="form__title">Наименование тендера</p>
+                        <p class="form__title">Дополнительная информация</p>
                     </div>
                     <div class="form__input">
                         <textarea name="tender_name" cols="60" rows="5"></textarea>
                     </div>
                 </div>
                 <div class="form__field">
-                    <div class="form__title">
-                        <p class="form__title">Прикрепить файл</p>
-                        <p class="form__subtitle">(документация тендера, договор, смета и прочие)</p>
-                    </div>
-                    <div class="form__input">
-                        <label class="file__label"><span class="form__find">Выберите файл</span><input class="form__file-input" name="file" type="file"><span title="" class="form__path">Файл не выбран</span></label>
+                    <div class="form__title required">
+                        <p class="form__title text_small text_italic text_ttn">Обязательные поля</p>
                     </div>
                 </div>
-                <div class="form__field">
-                    <p class="form__title italic required">Обязательные поля</p>
-                    <div class="form__input">
-                        <label><input name="agreement" type="checkbox" required><span></span>Даю согласие на обработку персональных данных.</label>
-                    </div>
-                </div>
-
                 <div class="form__submit">
-                    <input type="submit" value="Отправить заявку">
+                    <input type="submit" value="Регистрация">
                 </div>
             </form>
         </main>

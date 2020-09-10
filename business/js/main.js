@@ -57,6 +57,7 @@ $(document).ready(function(){
                     },
                     300: {
                         slidesPerView: 1,
+                        spaceBetween: 30,
                     }
                 },
             })

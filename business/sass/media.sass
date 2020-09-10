@@ -1,8 +1,6 @@
 $main_grey: #E8E8E8
     
 @media screen and ( min-width:  1001px)
-    .nav
-        padding: 0px 50px
     .swiper-pagination, .swiper-pagination1, .swiper-pagination2
         display: none
     .swiper-container1, .swiper-container2
@@ -38,9 +36,8 @@ $main_grey: #E8E8E8
 
 @media screen and ( max-width:  1500px)
     .nav
-        &__item
-            a
-                font-size: 12px
+        &__link
+            font-size: 12px
 
 @media screen and ( max-width:  1380px)
     body
@@ -169,23 +166,26 @@ $main_grey: #E8E8E8
         &__divide
             margin-top: 18px
             height: 13px
-        &__item
-            a
-                font-size: 10px
+        &__link
+            font-size: 10px
     .footer
         padding-top: 20px
         margin-bottom: 10px
         .nav
             margin-top: 0px
-            &__item
-                a
-                    font-size: 10px
+        &__link
+            font-size: 10px
         &__policy
             margin-top: 20px
             
 @media screen and ( max-width:  1000px)
     .nav
         margin-top: 30px
+        &__inner
+            left: 50%
+            transform: translate(-50%, -40px)
+        &__item:hover > &__inner
+            transform: translate(-50%, -10px)
     .main
         &__picture-title
             padding: 0px 10px
@@ -272,33 +272,37 @@ $main_grey: #E8E8E8
         .post
             max-width: none
 
-    .post + .post
-        margin-top: 15px
+        &__input 
+            max-width: 315px
 
-    .form__title
-        margin: 0
+        &__title
+            margin: 0
+
+        &__adress 
+            flex-direction: column
+
+        &__adress input 
+            margin: 0 0 0 20px !important
+            max-width: 230px
+
+        &__adress label
+            display: flex
+            justify-content: space-between
+            width: 100% !important
+        &_registration
+            .form
+                &__field
+                    margin-bottom: 30px
 
     .footer-info__we 
         margin-right: 0
         margin-top: 25px
 
-    .form__adress 
-        flex-direction: column
-
-    .form__adress input 
-        margin: 0 0 0 20px !important
-        max-width: 230px
-
-    .form__adress label
-        display: flex
-        justify-content: space-between
-        width: 100% !important
+    .post + .post
+        margin-top: 15px
 
     .offer__submit 
         right: 15px
-
-    .form__input 
-        max-width: 315px
 
     textarea 
         height: 80px
@@ -419,6 +423,12 @@ $main_grey: #E8E8E8
             max-width: none
         &__submit
             justify-content: center
+        &_registration
+            .form
+                &__input
+                    margin-top: 10px
+                &__title
+                    margin-bottom: 0
 
 @media screen and ( max-width:  400px)
     .purchise-header
