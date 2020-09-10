@@ -1,6 +1,17 @@
+@media screen and ( max-width: 1275px )
+    .about
+        &__buttons
+            flex-direction: column
+            justify-content: center
+            .button
+                width: 100% !important
+            .button + .button
+                margin-top: 15px
+    
 @media screen and ( max-width: 1160px )
     .slider
         &__body
+            padding-top: 50px
             padding-left: 30px
             padding-right: 30px
             top: 30%
@@ -67,11 +78,19 @@
             margin-right: 30px
 
     .header
+        position: fixed
+        top: 0
+        left: 0
+        width: 100%
+        padding: 10px 0px
         &__menu-btn
             display: inline-block
         &__dropdown
             &::after
                 background-image: url(../img/arrow-h-w.png)
+
+    .nav
+        margin-top: 60px
 
     .action
         & + &
@@ -86,14 +105,9 @@
             flex-direction: column
             .header__logo
                 align-self: flex-start
-                margin-left: 15px
+                margin-left: 0px
         &__nav
-            align-self: stretch
-            margin-top: 20px
-            ul
-                flex-wrap: wrap
-                li
-                    margin: 5px 15px !important
+            display: none
         &__bottom
             flex-direction: column-reverse
             align-items: center
@@ -106,7 +120,14 @@
                     text-align: center
                 br
                     display: none
-    
+
+@media screen and ( max-width: 990px )
+    .nav
+        margin-top: 0
+
+    .main
+        margin-top: 60px
+
 @media screen and ( max-width: 960px )
     
     h2.uk-h1, h2.uk-h2, .uk-h1, .uk-h2
@@ -167,15 +188,22 @@
             padding-top: 0px
         h2.uk-h1
             margin-bottom: 20px
+        &_doctor
+            .about
+                &__img
+                    &-bg
+                        height: 400px
+                        img
+                            max-height: 390px
         &__img
             width: auto
             object-fit: contain
             &-wrap
                 display: flex
                 justify-content: center
-                max-height: 400px
+                max-height: 600px
                 &::before
-                    width: 60%
+                    width: 40%
                 &_another
                     &::before
                         transform: translate(60px, -20px)
@@ -273,12 +301,23 @@
                 padding: 15px
 
     .about
+        &_doctor
+            margin-top: 20px
+            .uk-section
+                padding-top: 0px
+        &__side
+            &-stiky:first-child
+                display: flex
+                justify-content: center
+        &__sticky
+            width: 100%
+            max-width: 600px
         &__img-bg
             height: 350px
             position: relative
             padding: 0px 10px
             img
-                max-width: 100%
+                max-height: 340px
         &__container
             flex-direction: column
             align-items: center
@@ -428,6 +467,8 @@
             margin-bottom: 30px
 
     .about
+        .button
+            font-size: 12px
         &__buttons
             flex-direction: column
             .button_transparent
@@ -444,13 +485,22 @@
         &__theme
             width: 120px
 
+    .form
+        &__dropdown
+            &-card
+                left: 50%
+                transform: translate(-50%, -20px)
+            &-wrap
+                &:hover .form__dropdown-card
+                    left: 50%
+                    transform: translate(-50%, 0px)
+
     .colored_text
         &__body
             padding: 20px
 
-    .banner
-        .uk-container
-            height: 500px
+    .banner__swiper .uk-height-large
+        height: 600px
 
     .review
         &__page
@@ -459,8 +509,6 @@
             flex-direction: column
         &__body
             margin-top: 40px
-
-    .review
         &__info
             margin: 0 0 20px 0
             display: flex
@@ -474,9 +522,14 @@
         &__bottom
             flex-direction: column
 
+    .reviews
+        &__slider
+            overflow: visible
+
     .about
         &__row
             flex-direction: column
+            align-items: flex-start
         &__col + &__col
             margin-top: 30px
         .footer__card-body
@@ -489,15 +542,13 @@
             margin-top: 15px
             font-size: 65px
 
-    .doctor-banner
-        &__data
-            flex-direction: column
-
     .slider
         &__controls
             width: 42%
         &__body
-            padding-top: 40px
+            padding-top: 70px
+            padding-left: 15px
+            padding-right: 15px
 
     .member
         &__body
@@ -523,3 +574,6 @@
         &__body
             margin-top: 20px
             flex-direction: column
+        &__dd-link
+            &::after
+                width: calc( 100% - 30px )

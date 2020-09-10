@@ -263,6 +263,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let aboutSlider = new Swiper('.about__slider-container', {
             slidesPerView: 3,
             spaceBetween: 30,
+            loop: true,
             navigation: {
                 nextEl: '.about__slider-next',
                 prevEl: '.about__slider-prev',

@@ -8,6 +8,7 @@ $soft_blue: #ECF2F9
     font-family: 'Geometria', sans-serif
     box-sizing: border-box
 
+
 body
     display: flex
     flex-direction: column
@@ -78,12 +79,6 @@ html
     position: relative
     background-color: #fff
     z-index: 100
-    &.fixed
-        position: fixed
-        top: 0
-        left: 0
-        width: 100%
-        padding: 10px 0px
     &__wrap
         dt
             font-size: 11px
@@ -455,6 +450,9 @@ html
 .about
     .uk-list
         list-style-image: url(../img/list-img.png)
+        li
+            &::before
+                display: none
         .uk-list
             margin-left: 2em
             list-style-image: url(../img/swoosh.png)
@@ -469,7 +467,7 @@ html
             bottom: 0px
             left: 0
             background-color: $green
-    .button:not(.button_transparent)
+    .button
         padding-top: 10px
         padding-bottom: 10px
         img
@@ -569,7 +567,6 @@ html
                 &::before
                     transform: translate(90px, -30px)
     &__btn
-
         &-wrap
             display: flex
     &__container
@@ -716,6 +713,9 @@ html
             margin-top: 5px
             max-width: 190px
             font-size: 14px
+        .uk-description-list
+            &:first-child
+                margin-right: 15px
     &__quote
         font-size: 20px
         line-height: 26px
@@ -1110,6 +1110,8 @@ html
     padding-bottom: 90px
     &__slider
         margin-top: 50px
+        overflow: hidden
+        padding: 15px 0px
     &__wrap
         margin-top: 120px
     &__pagination
@@ -1117,10 +1119,12 @@ html
     .uk-slider-container
         max-width: 1140px
         flex-grow: 1
+        width: 100%
+        overflow: visible
+        // padding: 20px 0px 20px 20px
     .uk-slider-items
-        padding: 20px
-        li
-            margin: 0 20px
+        li + li
+            margin-left: 40px
 
 .doctors
     padding-top: 70px
@@ -1237,7 +1241,7 @@ html
                 &:first-child
                     flex-basis: 80%
     &__slider + &__slider
-                margin-left: 30px
+            margin-left: 30px
     &__sliders
         margin-top: 50px
         display: flex
@@ -1251,7 +1255,7 @@ html
                     max-height: 135px
     &__slider
         .uk-slider-items 
-            padding-left: 50px
+            // padding-left: 50px
         &_thumbs
             .swiper-container
                 height: 100%
@@ -1313,18 +1317,24 @@ html
         padding: 0
         margin-left: -.5em
         display: flex
+        flex-wrap: wrap
     &__item
+        display: inline-block
         & + &
             &::before
                 content: '/'
                 color: $green
                 font-size: 12px
+        &:last-child
+            &::before
+                color: #8F9194
     &__link
         padding: 0em .5em
         font-size: 12px
         text-decoration: none
         position: relative
         color: $green
+        white-space: nowrap
         &::after
             display: inline-block
             position: absolute
