@@ -127,7 +127,9 @@ $main_yellow: #faf406
     width: 100%
     background-color: $main_yellow
     padding: 60px 0px 50px
-    position: relative
+    position: fixed
+    left: 0
+    top: 0
     z-index: 10
     flex-grow: 0
     &__wrap
@@ -157,12 +159,16 @@ $main_yellow: #faf406
            background-size: contain
            vertical-align: middle
            margin-right: 10px
-    &__pagename
-        font-size: 26px
-        @include adaptiv-font(26, 14)
-        font-weight: 500
-        max-width: 230px
-        text-align: center
+    &__data
+        display: flex
+        flex-direction: column
+        align-items: center
+    &__order
+        &-name, &-number, &-date
+            @include adaptiv-font(26, 14)
+            font-weight: 500
+            max-width: 230px
+            text-align: center
     &__menu
         position: relative
         display: inline-block
@@ -216,6 +222,7 @@ $main_yellow: #faf406
 .main
     flex-grow: 1
     width: 100%
+    margin-top: 80px
 
 .progressbar
     background-color: #5b5c5b
