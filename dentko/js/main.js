@@ -10,6 +10,8 @@ document.addEventListener('DOMContentLoaded', () => {
     let sliders = document.querySelectorAll('.uk-slider-container');
     let spoilerLink = document.querySelector('.spoiler-link');
     let forms = document.querySelectorAll('form');
+    let mobileSwiper = document.querySelector('.faqs__themes');
+    let mobileSwiperSW = document.querySelector('.faqs__themes');
     let prevDoctorNames;
 
     const toggleSpoiler = () => {
@@ -96,6 +98,15 @@ document.addEventListener('DOMContentLoaded', () => {
         catch{}
     }
 
+    const accordionTitleClick = () => {
+        let target = event.target;
+
+        target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'center',
+        });
+    }
+
     const toggleMenu = () => {
         event.preventDefault();
 
@@ -104,6 +115,51 @@ document.addEventListener('DOMContentLoaded', () => {
 
         target.classList.toggle('active');
         mobileMenu.classList.toggle('active');
+    }
+
+    const mobileSwiperCheck = () => {
+        if(window.innerWidth <= 1160 && mobileSwiper.dataset.mobile == 'false'){
+            try{
+                let faqSwiper = new Swiper('.faqs__themes', {
+                    spaceBetween: 30,
+                    direction: 'horizontal',
+                    updateOnWindowResize: true,
+                    pagination: {
+                        el: '.swiper-pagination',
+                        type: 'progressbar',
+                    },
+                    breakpoints: {
+                        920: {
+                            slidesPerView: 5,
+                        },
+                        720: {
+                            slidesPerView: 4,
+                        },
+                        600: {
+                            slidesPerView: 3,
+                        },
+                        300: {
+                            slidesPerView: 2,
+                        }
+                    }
+                });
+                mobileSwiper.dataset.mobile = 'true';
+                mobileSwiperSW = mobileSwiper.swiper;
+            }
+            catch{}
+        }
+        
+        if(window.innerWidth > 1160){
+            try{
+                mobileSwiper.dataset.mobile = 'false';
+    
+                if(mobileSwiper.classList.contains('swiper-container-initialized')){
+                    mobileSwiperSW.destroy();
+                    // delete mobileSwiper;
+                }
+            }
+            catch{}
+        }
     }
 
     const scrollHandler = () => {
@@ -146,7 +202,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             mobileMenuContainer.insertBefore(navBar, headerItems[0]);
             mobileMenuContainer.insertBefore(headerItems[headerItems.length - 1], headerItems[headerItems.length - 2]);
-            document.querySelector('.mobile-menu .header__dropdown-span img').setAttribute('src', './img/info-w.svg');
+            document.querySelector('.mobile-menu .header__dropdown-span img').setAttribute('src', '/dentko/img/info-w.svg');
 
         }
         else{
@@ -183,6 +239,8 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             catch{}
         }
+
+        mobileSwiperCheck();
     }
 
     const openPopup = (popupSelector) => { // Открывается попап с переданным спец-классом
@@ -211,33 +269,57 @@ document.addEventListener('DOMContentLoaded', () => {
     const formSubmit = () => {
         event.preventDefault();
 
+        let isFormValid = true;
+
         let targetForm = event.target;
-        let formInputs = targetForm.querySelectorAll('input.uk-input');
-        let request = new XMLHttpRequest();
-        
         let formData = new FormData(targetForm);
-        request.open('POST', '/dentko/ajax-mail.php');
+        let formFields = ['name', 'tel', 'mail'];
+        let formRegExp = [/[а-яА-я]{2}/i, /\d{12}/, /\w+\@\w{1,}\.\w{1,}/i];
 
-        request.onreadystatechange = function () {
-            
-            if(request.readyState === XMLHttpRequest.DONE) {
-                var status = request.status;
-
-                closePopup();
-
-                if (status === 0 || (status >= 200 && status < 400)) {
-                    openPopup('.popup-sucsess')();
-                } else {
-                    openPopup('.popup-error')();
+        formFields.forEach((field, index) => {
+            if(formData.has(field)){
+                console.log(1);
+                let fieldData = formData.get(field).toLowerCase();
+                let fieldInput = targetForm.querySelector('input[name="' + field + '"]');
+                if(formRegExp[index].exec(fieldData) === null){
+                    isFormValid = false;
+                    
+                    fieldInput.parentNode.classList.add('valid-err');
+                    fieldInput.focus();
+                }
+                else{
+                    fieldInput.parentNode.classList.remove('valid-err');
                 }
             }
-        };
-
-        formInputs.forEach(input => {
-            input.value = '';
         });
+        
+        if(isFormValid){
+            let formInputs = targetForm.querySelectorAll('input.uk-input');
+            let request = new XMLHttpRequest();
 
-        request.send(formData);
+            request.open('POST', '/dentko/ajax-mail.php');
+
+            request.onreadystatechange = function () {
+                
+                if(request.readyState === XMLHttpRequest.DONE) {
+                    var status = request.status;
+
+                    closePopup();
+
+                    if (status === 0 || (status >= 200 && status < 400)) {
+                        openPopup('.popup-sucsess')();
+                    } else {
+                        openPopup('.popup-error')();
+                    }
+                }
+            };
+
+            formInputs.forEach(input => {
+                input.value = '';
+            });
+
+            request.send(formData);
+        }
     }
 
     forms.forEach(form => {
@@ -262,13 +344,9 @@ document.addEventListener('DOMContentLoaded', () => {
         item.addEventListener('click', closePopup);
     });
 
-    window.addEventListener('scroll', () => {
-        scrollHandler();
-    });
+    window.addEventListener('scroll', scrollHandler);
     
-    window.addEventListener('resize', () => {
-        mobileCheck();
-    });
+    window.addEventListener('resize', mobileCheck);
 
     try{
         let bannerSwiper = new Swiper('.banner__swiper', {
@@ -292,14 +370,19 @@ document.addEventListener('DOMContentLoaded', () => {
             slidesPerView: 3,
             updateOnWindowResize: true,
             freeMode: true,
-            direction: 'vertical',
+            direction: 'horizontal',
             watchSlidesVisibility: true,
             watchSlidesProgress: true,
+            breakpoints: {
+                860: {
+                    direction: 'vertical',
+                }
+            }
         });
     
         let galleryTop = new Swiper('.gallery-top', {
         spaceBetween: 30,
-        direction: 'vertical',
+        direction: 'horizontal',
         slidesPerView: 1,
         updateOnWindowResize: true,
         loop: true,
@@ -309,6 +392,11 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         thumbs: {
             swiper: galleryThumbs
+        },
+        breakpoints: {
+            860: {
+                direction: 'vertical',
+            }
         }
         });
 
@@ -348,14 +436,9 @@ document.addEventListener('DOMContentLoaded', () => {
     
             document.querySelector('#form').scrollIntoView({
                 behavior: 'smooth',
-                block: 'start'
+                block: 'center'
             });
         });
-    }
-    catch{}
-
-    try{
-        document.querySelector('.uk-accordion-title').click();
     }
     catch{}
 
@@ -365,6 +448,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 event.preventDefault();
             });
         });
+    }
+    catch{}
+
+    try{
+        document.querySelectorAll('.uk-accordion li').forEach(title => {
+            title.addEventListener('click', accordionTitleClick);
+        });
+    }
+    catch{}
+
+    try{
+        document.querySelector('.uk-accordion-title').click();
     }
     catch{}
 
