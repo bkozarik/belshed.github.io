@@ -83,14 +83,13 @@
         left: 0
         width: 100%
         padding: 10px 0px
+        & + *
+            margin-top: 60px
         &__menu-btn
             display: inline-block
         &__dropdown
             &::after
                 background-image: url(../img/arrow-h-w.png)
-
-    .nav
-        margin-top: 60px
 
     .action
         & + &
@@ -120,13 +119,6 @@
                     text-align: center
                 br
                     display: none
-
-@media screen and ( max-width: 990px )
-    .nav
-        margin-top: 0
-
-    .main
-        margin-top: 60px
 
 @media screen and ( max-width: 960px )
     
@@ -271,6 +263,9 @@
             font-size: 12px
 
 @media screen and ( max-width: 860px )
+    .appointment
+        display: block
+
     .reviews
         &__header
             flex-direction: column
@@ -387,7 +382,6 @@
                 display: none
         &__name, &__specialty, &__link
             margin: 0
-            color: #000
         &__link
             margin-top: 3px
             // margin-left: 20px

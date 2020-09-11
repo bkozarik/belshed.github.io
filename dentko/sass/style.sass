@@ -422,6 +422,20 @@ html
     padding: 32px 0px
     background-color: rgba(255, 255, 255, .8)
 
+.appointment
+    padding: 15px 0px
+    display: none
+    .header__dropdown::after
+        background-image: url(../img/arrow-h.png) !important
+    &__btn
+        padding: 10px 30px
+        img
+            display: none
+        &-wrap
+            margin-top: 15px
+    .footer__dd-link
+        font-size: 16px
+
 .benefit
     position: relative
     &__head
@@ -1156,6 +1170,7 @@ html
             color: #fff
     &__name
         font-size: 30px
+        color: #fff
         &::after
             display: inline-block
             content: ''
@@ -1167,6 +1182,7 @@ html
             position: absolute
     &__specialty
         margin-top: 45px
+        color: #fff
     &__link
         margin-top: 20px
         max-width: 150px
@@ -1597,6 +1613,7 @@ html
             font-weight: bold
             line-height: 22px
         &-body
+            flex-grow: 1
             padding: 20px
             font-size: 14px
             line-height: 20px

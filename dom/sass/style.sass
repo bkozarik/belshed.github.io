@@ -489,6 +489,10 @@ body
         &.slide
             max-height: none
             overflow: visible
+            & + .advantages__link-wrap
+                .advantages__link::after
+                    transform: rotate(270deg)
+                    top: -1px
     &__benefits
         margin-top: 75px
         display: grid
@@ -539,7 +543,7 @@ body
     &__side
         & + &
             margin-left: 30px
-        &:first-child
+        &:first-of-type
             display: flex
             justify-content: center
             flex-direction: column
@@ -680,6 +684,8 @@ body
         justify-content: space-between
         & + &
             margin-top: 25px
+        &_nomt
+            margin-top: 0 !important
     &__label
         flex-basis: 32%
         &_textarea
@@ -716,8 +722,9 @@ body
                 cursor: pointer
                 &:focus
                     outline: none
-            &::after
-                content: ''
+            a
+                // content: ''
+                pointer-events: none
                 display: inline-block
                 height: 12px
                 width: 12px
@@ -804,7 +811,7 @@ body
         line-height: 24px
     &__img
         width: 100%
-        max-height: 500px
+        max-height: 480px
     &__pagination
         margin-top: 30px
     &_prev
@@ -818,8 +825,13 @@ body
 .partners
     background-color: #fff
     padding: 30px 0px
+    &__wrap
+        display: flex
+        justify-content: space-between
+        align-items: center
+        overflow: hidden
     &__img
-        max-width: 100%
+        max-width: 110px
         height: auto
         object-fit: contain
 
