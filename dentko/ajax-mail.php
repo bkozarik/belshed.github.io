@@ -1,10 +1,21 @@
 <?php
-// Сообщение
-$message = "Line 1\r\nLine 2\r\nLine 3";
+$to = 'hkiop1@yandex.ru';
+$subject = 'Заявка с сайта Dentko.by';
+$message = htmlspecialchars('');
 
-// На случай если какая-то строка письма длиннее 70 символов мы используем wordwrap()
-$message = wordwrap($message, 70, "\r\n");
+$headers = 'From: dentko@dentko.by' . "\r\n" .
+    'Reply-To: dentko@dentko.by' . "\r\n" .
+  	'Content-type: text/html; charset=iso-8859-1' . "\r\n" .
+    'X-Mailer: PHP/' . phpversion();
 
-// Отправляем
-mail('sercom92@gmail.com', 'My Subject', $message);
+$fields = array('name', 'tel', 'mail', 'rate', 'category', 'comment');
+$fields_labels = array('Имя: ', 'Телефон: ', 'E-mail: ', 'Оценка: ', 'Категория: ', 'Комментарий: ');
+
+foreach($fields as $key => $field){
+	if(isset($_POST[$field])){
+    	$message .= "<b>" . htmlspecialchars($fields_labels[$key]) . "</b>" . htmlspecialchars($_POST[$field]) . "<br>";
+    }
+}
+
+mail($to, $subject, $message, $headers);
 ?>
