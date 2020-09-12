@@ -12,7 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
     let forms = document.querySelectorAll('form');
     let mobileSwiper = document.querySelector('.faqs__themes');
     let mobileSwiperSW = document.querySelector('.faqs__themes');
-    let prevDoctorNames;
 
     const toggleSpoiler = () => {
         event.preventDefault();
@@ -107,47 +106,63 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    const toggleMenu = () => {
-        event.preventDefault();
-
-        let target = event.target;
-        let mobileMenu = document.querySelector('.mobile-menu');
-
-        target.classList.toggle('active');
-        mobileMenu.classList.toggle('active');
+    const toggleMenu = (btnState) => {
+        const burgerBtn = document.querySelector('.menu-open');
+        const menu = document.querySelector('.mobile-menu');
+        
+        if(typeof(btnState) != 'boolean'){
+            if(burgerBtn.classList.contains('active')){
+                burgerBtn.classList.remove('active');
+                menu.classList.remove('active');
+            }
+            else{
+                burgerBtn.classList.add('active');
+                menu.classList.add('active');
+            }
+        }
+        else{
+            if(btnState){
+                burgerBtn.classList.add('active');
+                menu.classList.add('active');
+                
+                return;
+            }
+            burgerBtn.classList.remove('active');
+            menu.classList.remove('active');
+        }
     }
 
     const mobileSwiperCheck = () => {
-        if(window.innerWidth <= 1160 && mobileSwiper.dataset.mobile == 'false'){
-            try{
-                let faqSwiper = new Swiper('.faqs__themes', {
-                    spaceBetween: 30,
-                    direction: 'horizontal',
-                    updateOnWindowResize: true,
-                    pagination: {
-                        el: '.swiper-pagination',
-                        type: 'progressbar',
-                    },
-                    breakpoints: {
-                        920: {
-                            slidesPerView: 5,
+        try{
+            if(window.innerWidth <= 1160 && mobileSwiper.dataset.mobile == 'false'){
+                    let faqSwiper = new Swiper('.faqs__themes', {
+                        spaceBetween: 30,
+                        direction: 'horizontal',
+                        updateOnWindowResize: true,
+                        pagination: {
+                            el: '.swiper-pagination',
+                            type: 'progressbar',
                         },
-                        720: {
-                            slidesPerView: 4,
-                        },
-                        600: {
-                            slidesPerView: 3,
-                        },
-                        300: {
-                            slidesPerView: 2,
+                        breakpoints: {
+                            920: {
+                                slidesPerView: 5,
+                            },
+                            720: {
+                                slidesPerView: 4,
+                            },
+                            600: {
+                                slidesPerView: 3,
+                            },
+                            300: {
+                                slidesPerView: 2,
+                            }
                         }
-                    }
-                });
-                mobileSwiper.dataset.mobile = 'true';
-                mobileSwiperSW = mobileSwiper.swiper;
+                    });
+                    mobileSwiper.dataset.mobile = 'true';
+                    mobileSwiperSW = mobileSwiper.swiper;
             }
-            catch{}
         }
+        catch{}
         
         if(window.innerWidth > 1160){
             try{
@@ -195,21 +210,23 @@ document.addEventListener('DOMContentLoaded', () => {
                 menuWrap.appendChild(item);
             });
         }
-
+        
+        addServices();
+        
         if(window.innerWidth <= 990){
             let mobileMenuContainer = document.querySelector('.mobile-menu');
             let navBar = document.querySelector('.nav');
 
-            mobileMenuContainer.insertBefore(navBar, headerItems[0]);
+            mobileMenuContainer.insertBefore(navBar, document.querySelector('.mobile-menu__services'));
             mobileMenuContainer.insertBefore(headerItems[headerItems.length - 1], headerItems[headerItems.length - 2]);
             document.querySelector('.mobile-menu .header__dropdown-span img').setAttribute('src', '/dentko/img/info-w.svg');
-
         }
         else{
             let header = document.querySelector('.header');
             let navBar = document.querySelector('.nav');
 
             header.after(navBar);
+            toggleMenu(false);
         }
 
         if(window.innerWidth <= 660) {
@@ -241,6 +258,16 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         mobileSwiperCheck();
+    }
+
+    const addServices = () => {
+        let servicesLink = document.querySelector('.nav__dropdown-link');
+        if(window.innerWidth <= 990){
+            servicesLink.parentNode.style.display = "none";
+        }
+        else{
+            servicesLink.parentNode.removeAttribute('style');
+        }
     }
 
     const openPopup = (popupSelector) => { // Открывается попап с переданным спец-классом
@@ -459,10 +486,16 @@ document.addEventListener('DOMContentLoaded', () => {
     catch{}
 
     try{
-        document.querySelector('.uk-accordion-title').click();
+        document.querySelector('.accordion .uk-accordion-title').click();
     }
     catch{}
 
+    try{
+        document.querySelector('.faqs__list .uk-accordion-title').click();
+    }
+    catch{}
+
+    toggleMenu(true);
     mobileCheck();
     scrollHandler();
     updSlidersPagination();
