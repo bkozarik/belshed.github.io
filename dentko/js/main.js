@@ -494,8 +494,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelector('.faqs__list .uk-accordion-title').click();
     }
     catch{}
-
-    toggleMenu(true);
+    
     mobileCheck();
     scrollHandler();
     updSlidersPagination();
