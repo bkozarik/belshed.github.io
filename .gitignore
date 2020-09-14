@@ -2,3 +2,4 @@
 *.xd
 *.rar
 *.zip
+/node_modules/*
