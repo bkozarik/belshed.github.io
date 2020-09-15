@@ -368,8 +368,15 @@
             margin-bottom: 0
 
     .footer
+        &__schedule
+            margin-bottom: 30px
         &__contacts
-            display: none
+            order: 2
+        &__body
+            margin-bottom: 0px !important
+        dd
+            .uk-flex-between
+                margin-top: 15px
 
 @media screen and ( max-width: 720px )
     .doctors
@@ -429,6 +436,8 @@
             width: 32%
 
     .banner
+        .slider__body
+            margin-top: 0px !important
         &__buttons
             flex-direction: column
             max-width: 400px
@@ -458,6 +467,10 @@
         &__img
             img
                 max-width: 47vw
+
+    .beradcrumbs + *
+        margin-top: 0
+        padding-top: 100px
 
     .price
         margin-bottom: 60px
@@ -530,8 +543,11 @@
         &__body
             padding: 20px
 
-    .banner__swiper .uk-height-large
-        height: 600px
+    .banner
+        .uk-height-large
+            height: 550px
+        &__swiper .uk-height-large
+            height: 600px
 
     .review
         &__page
@@ -557,6 +573,9 @@
         &__sliders
             padding: 10px
 
+    .beradcrumbs + *
+        margin-top: 0
+
     .about
         &__row
             flex-direction: column
@@ -565,6 +584,8 @@
             margin-top: 30px
         .footer__card-body
             max-width: 180px
+        .uk-section
+            padding-top: 0
 
     .action
         &__body
@@ -618,4 +639,4 @@
             flex-direction: column
         &__dd-link
             &::after
-                width: calc( 100% - 30px )
+                width: calc( 100% - 20px )

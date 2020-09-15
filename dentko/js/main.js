@@ -188,7 +188,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             else{
                 header.classList.remove('fixed');
-                mobileMenu.style.paddingTop = "80px";
+                mobileMenu.style.paddingTop = "60px";
             }
         }
     }

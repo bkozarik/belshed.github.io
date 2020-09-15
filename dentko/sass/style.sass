@@ -384,6 +384,13 @@ html
                bottom: 3px 
         .uk-navbar-center
             padding: 0
+        .uk-navbar-nav
+            &>li>a
+                padding: 18px 25px
+                margin-top: 20px
+            &>li>a:not(.popup-request-open)
+                margin-top: 0
+                padding: 13px 0px
         ul
             flex-direction: column
             align-items: flex-start
@@ -400,6 +407,7 @@ html
                 color: #fff
             &-card
                 color: #000
+                transform: translateX(27px)
         &__link
             width: 30px
             height: 30px
@@ -411,7 +419,7 @@ html
 
 .main
     flex-grow: 1
-    &>*
+    &>*:not(.form)
         overflow: hidden
 
 .uk-h1
@@ -1428,25 +1436,24 @@ html
         list-style-type: none
         padding: 0
         margin-left: -.5em
-        display: flex
-        flex-wrap: wrap
     &__item
-        display: inline-block
+        display: inline
         & + &
             &::before
                 content: '/'
+                transform: translateX(-0.5em)
+                display: inline-block
                 color: $green
                 font-size: 12px
         &:last-child
             &::before
                 color: #8F9194
     &__link
-        padding: 0em .5em
+        padding: 0em .5em 0em 0em
         font-size: 12px
         text-decoration: none
         position: relative
         color: $green
-        white-space: nowrap
         &::after
             display: inline-block
             position: absolute

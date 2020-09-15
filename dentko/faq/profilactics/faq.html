@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dentko - стоматологии</title>
     <link rel="stylesheet" href="/dentko/css/uikit.min.css"/>
+    <link rel="stylesheet" href="/dentko/css/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="/dentko/css/fonts.css"/>
     <link rel="stylesheet" href="/dentko/css/style.css"/>
     <link rel="stylesheet" href="/dentko/css/media.css"/>
@@ -79,7 +80,7 @@
             <ul class="uk-navbar-nav uk-flex-between uk-flex-middle">
                 <li><a href="/dentko/about.html">о компании</a></li>
                 <li>
-                    <a href="/dentko/service.html">услуги</a>
+                    <a href="/dentko/service.html" class="nav__dropdown-link">услуги</a>
                     <div class="uk-navbar-dropdown">
                         <ul class="uk-nav uk-navbar-dropdown-nav">
                             <li><a href="/dentko/service.html"><img src="/dentko/img/inline-arrow-w.svg">Лечение пульпита</a></li>
@@ -90,14 +91,15 @@
                             <li><a href="/dentko/service.html"><img src="/dentko/img/inline-arrow-w.svg">Профилактика</a></li>
                             <li><a href="/dentko/service.html"><img src="/dentko/img/inline-arrow-w.svg">Парадонтология</a></li>
                             <li><a href="/dentko/service.html"><img src="/dentko/img/inline-arrow-w.svg">Косметология</a></li>
+                            <li><a href="/dentko/service.html"><img src="/dentko/img/inline-arrow-w.svg">Диагностика</a></li>
                         </ul>
                     </div>
                 </li>
                 <li><a href="/dentko/price.html">цены</a></li>
                 <li><a href="/dentko/payment.html">оплата и рассрочка</a></li>
-                <li><a href="/dentko/reviews.html">отзывы</a></li>
+                <li><a href="/dentko/reviews/reviews.html">отзывы</a></li>
                 <li><a href="/dentko/team.html">специалисты</a></li>
-                <li><a href="/dentko/faq.html">вопрос-ответ</a></li>
+                <li><a href="/dentko/faq/faq.html">вопрос-ответ</a></li>
                 <li><a href="/dentko/contacts.html">контакты</a></li>
                 <li><a class="nav__order popup-request-open" href="#">Записаться на прием <img src="/dentko/img/inline-arrow.svg"></a></li>
             </ul>
@@ -108,22 +110,158 @@
             <div class="uk-container">
                 <div class="uk-flex uk-flex-column uk-flex-middle">
                     <div class="uk-inline">
-                        <span class="header__dropdown"><a href="tel:+375291101212" class="footer__dd-link"><img src="./img/operator1.png">+375 (29) 110-12-12</a></span>
+                        <span class="header__dropdown"><a href="tel:+375291101212" class="footer__dd-link"><img src="/dentko/img/operator1.png">+375 (29) 110-12-12</a></span>
                         <div class="header__dropdown-container" uk-dropdown>
-                            <a href="tel:+375291101212" class="footer__dd-link"><img src="./img/operator1.png">+375 (29) 110-12-12</a>
-                            <a href="tel:+375336601313" class="footer__dd-link"><img src="./img/operator2.png">+375 (33) 660-13-13</a>
-                            <a href="tel:+375251101212" class="footer__dd-link"><img src="./img/operator3.png">+375 (25) 110-12-12</a>
-                            <a href="tel:+375172844511" class="footer__dd-link"><img src="./img/operator4.png">+375 (17) 284-45-11</a>
+                            <a href="tel:+375291101212" class="footer__dd-link"><img src="/dentko/img/operator1.png">+375 (29) 110-12-12</a>
+                            <a href="tel:+375336601313" class="footer__dd-link"><img src="/dentko/img/operator2.png">+375 (33) 660-13-13</a>
+                            <a href="tel:+375251101212" class="footer__dd-link"><img src="/dentko/img/operator3.png">+375 (25) 110-12-12</a>
+                            <a href="tel:+375172844511" class="footer__dd-link"><img src="/dentko/img/operator4.png">+375 (17) 284-45-11</a>
                         </div>
                     </div>
                     <div class="about__btn-wrap appointment__btn-wrap">
-                        <button class="uk-button uk-button-default button about__btn appointment__btn popup-request-open">Записаться на прием <img src="./img/inline-arrow-w.svg"></button>
+                        <button class="uk-button uk-button-default button about__btn appointment__btn popup-request-open">Записаться на прием <img src="/dentko/img/inline-arrow-w.svg"></button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="mobile-menu"></div>
+    <div class="mobile-menu">
+        <div class="mobile-menu__services">
+            <h3 class="mobile-menu__title">Наши услуги</h3>
+            <ul uk-accordion>
+                <li>
+                    <a class="uk-accordion-title mobile-menu__accordion" href="#">Лечение зубов</a>
+                    <div class="uk-accordion-content">
+                        <ul class="mobile-menu__inner">
+                            <li><a href="#" class="nav__link">Лечение зубов (кариеса)</a></li>
+                            <li><a href="#" class="nav__link">Лечение пульпита</a></li>
+                            <li><a href="#" class="nav__link">Детская стоматология</a></li>
+                            <li><a href="#" class="nav__link">Лечение каналов</a></li>
+                            <li><a href="#" class="nav__link">Лечение корня зуба</a></li>
+                            <li><a href="#" class="nav__link">Лечение зубов под микроскопом</a></li>
+                            <li><a href="#" class="nav__link">Лечение зубов иностранным гражданам</a></li>
+                            <li><a href="#" class="nav__link">Центр эстетической стоматологии</a></li>
+                            <li><a href="#" class="nav__link">Лечение зубов детям</a></li>
+                            <li><a href="#" class="nav__link">Пломбирование зубов</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a class="uk-accordion-title mobile-menu__accordion" href="#">Протезирование</a>
+                    <div class="uk-accordion-content">
+                        <ul class="mobile-menu__inner">
+                            <li><a href="#" class="nav__link">Протезирование зубов</a></li>
+                            <li><a href="#" class="nav__link">Реставрация зубов</a></li>
+                            <li><a href="#" class="nav__link">Съемные зубные протезы</a></li>
+                            <li><a href="#" class="nav__link">Бюгельное протезирование</a></li>
+                            <li><a href="#" class="nav__link">Ремонт зубных протезов</a></li>
+                            <li><a href="#" class="nav__link">Люминиры</a></li>
+                            <li><a href="#" class="nav__link">Компониры</a></li>
+                            <li><a href="#" class="nav__link">Керамические виниры</a></li>
+                            <li><a href="#" class="nav__link">Безметалловая керамика</a></li>
+                            <li><a href="#" class="nav__link">Металлокерамические коронки</a></li>
+                            <li><a href="#" class="nav__link">Пластмассовый протез для зубов</a></li>
+                            <li><a href="#" class="nav__link">Нейлоновые протезы</a></li>
+                            <li><a href="#" class="nav__link">Зубной мост</a></li>
+                            <li><a href="#" class="nav__link">Наращивание зубов</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a class="uk-accordion-title mobile-menu__accordion" href="#">Хирургия</a>
+                    <div class="uk-accordion-content">
+                        <ul class="mobile-menu__inner">
+                            <li><a href="#" class="nav__link">Имплантация зубов (импланты)</a></li>
+                            <li><a href="#" class="nav__link">Наращивание костной ткани</a></li>
+                            <li><a href="#" class="nav__link">Стоматологическая хирургия</a></li>
+                            <li><a href="#" class="nav__link">Удаление зуба мудрости</a></li>
+                            <li><a href="#" class="nav__link">Удаление зубов</a></li>
+                            <li><a href="#" class="nav__link">Удаление зубов у детей</a></li>
+                            <li><a href="#" class="nav__link">Пластика уздечки языка</a></li>
+                            <li><a href="#" class="nav__link">Дентальная имплантация зубов</a></li>
+                            <li><a href="#" class="nav__link">Одномоментная имплантация зубов</a></li>
+                            <li><a href="#" class="nav__link">Двухэтапная имплантация зубов</a></li>
+                            <li><a href="#" class="nav__link">Имплантация All-on-4 / All-on-6</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a class="uk-accordion-title mobile-menu__accordion" href="#">Ортодонтия</a>
+                    <div class="uk-accordion-content">
+                        <ul class="mobile-menu__inner">
+                            <li><a href="#" class="nav__link">Установка брекет-систем</a></li>
+                            <li><a href="#" class="nav__link">Металлические брекеты</a></li>
+                            <li><a href="#" class="nav__link">Сапфировые брекеты</a></li>
+                            <li><a href="#" class="nav__link">Самолигирующие брекеты</a></li>
+                            <li><a href="#" class="nav__link">Керамические брекеты</a></li>
+                            <li><a href="#" class="nav__link">Брекеты Damon</a></li>
+                            <li><a href="#" class="nav__link">Услуги ортодонта в Минске</a></li>
+                            <li><a href="#" class="nav__link">Детский ортодонт</a></li>
+                            <li><a href="#" class="nav__link">Трейнеры для зубов</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a class="uk-accordion-title mobile-menu__accordion" href="#">Отбеливание</a>
+                    <div class="uk-accordion-content">
+                        <ul class="mobile-menu__inner">
+                            <li><a href="#" class="nav__link">Отбеливание зубов</a></li>
+                            <li><a href="#" class="nav__link">Офисное отбеливание зубов</a></li>
+                            <li><a href="#" class="nav__link">Отбеливание зубов капами</a></li>
+                            <li><a href="#" class="nav__link">Домашнее отбеливание зубов</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a class="uk-accordion-title mobile-menu__accordion" href="#">Профилактика</a>
+                    <div class="uk-accordion-content">
+                        <ul class="mobile-menu__inner">
+                            <li><a href="#" class="nav__link">Профессиональная чистка зубов и профилактика</a></li>
+                            <li><a href="#" class="nav__link">Герметизация фиссур</a></li>
+                            <li><a href="#" class="nav__link">Ультразвуковая чистка</a></li>
+                            <li><a href="#" class="nav__link">Профессиональная гигиена полости рта</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a class="uk-accordion-title mobile-menu__accordion" href="#">Парадонтология</a>
+                    <div class="uk-accordion-content">
+                        <ul class="mobile-menu__inner">
+                            <li><a href="#" class="nav__link">Пародонтология</a></li>
+                            <li><a href="#" class="nav__link">Лечение пародонтита</a></li>
+                            <li><a href="#" class="nav__link">Лечение гингивита</a></li>
+                            <li><a href="#" class="nav__link">Лечение пародонтоза</a></li>
+                            <li><a href="#" class="nav__link">Шинирование зубов в Минске</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a class="uk-accordion-title mobile-menu__accordion" href="#">Косметология</a>
+                    <div class="uk-accordion-content">
+                        <ul class="mobile-menu__inner">
+                            <li><a href="#" class="nav__link">Терапевтическая косметология</a></li>
+                            <li><a href="#" class="nav__link">Контурная пластика</a></li>
+                            <li><a href="#" class="nav__link">Пилинг</a></li>
+                            <li><a href="#" class="nav__link">Косметологическая клиника Дентко</a></li>
+                            <li><a href="#" class="nav__link">Массаж лица</a></li>
+                            <li><a href="#" class="nav__link">Чистка лица</a></li>
+                            <li><a href="#" class="nav__link">Микротоки для лица</a></li>
+                            <li><a href="#" class="nav__link">Ультразвуковая чистка лица</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a class="uk-accordion-title mobile-menu__accordion" href="#">Диагностика</a>
+                    <div class="uk-accordion-content">
+                        <ul class="mobile-menu__inner">
+                            <li><a href="#" class="nav__link">Панорамный снимок зубов</a></li>
+                            <li><a href="#" class="nav__link">3D компьютерная томография зубов</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>      
+    </div>
     <main class="main">
         <section class="beradcrumbs">
             <div class="uk-container">
@@ -142,7 +280,7 @@
                 <div class="faqs__wrap">
                     <div class="uk-width-1-1 uk-flex uk-flex-between uk-flex-stretch faqs__themes" data-mobile="false">
                         <div class="swiper-wrapper">
-                            <a href="/dentko/faq/faq.html" class="uk-card uk-card-body uk-flex uk-flex-column uk-flex-between uk-flex-middle faqs__theme swiper-slide">
+                            <a href="/dentko/faq/faq.html" class="uk-card uk-card-body uk-flex uk-flex-column uk-flex-between uk-flex-middle faqs__theme swiper-slide active">
                                 <svg width="32" height="33" viewBox="0 0 32 29" class="faqs__theme-img" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M25.421 5.53613H4.26882C4.01142 5.53613 3.80273 5.76568 3.80273 6.04883C3.80273 6.33197 4.01142 6.56152 4.26882 6.56152H25.4211C25.6785 6.56152 25.8872 6.33197 25.8872 6.04883C25.8872 5.76568 25.6784 5.53613 25.421 5.53613Z"/>
                                     <path d="M25.8871 10.6343C25.8871 10.3511 25.6784 10.1216 25.421 10.1216H4.26882C4.01142 10.1216 3.80273 10.3511 3.80273 10.6343C3.80273 10.9174 4.01142 11.147 4.26882 11.147H25.4211C25.6784 11.147 25.8871 10.9174 25.8871 10.6343Z"/>
@@ -205,7 +343,7 @@
                                 </svg>
                                 <span class="uk-text uk-text-small uk-text-bold faqs__theme-span">Отбеливание</span>
                             </a>
-                            <a href="/dentko/faq/profilactics/faq.html" class="uk-card uk-card-body uk-flex uk-flex-column uk-flex-between uk-flex-middle faqs__theme swiper-slide active">
+                            <a href="/dentko/faq/profilactics/faq.html" class="uk-card uk-card-body uk-flex uk-flex-column uk-flex-between uk-flex-middle faqs__theme swiper-slide">
                                 <svg width="23" height="33" viewBox="0 0 23 35" class="faqs__theme-img" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M13.6918 6.02746H0.541064C0.257305 6.02746 0.0273438 6.25742 0.0273438 6.54118V8.73299L0.0274121 8.73422C0.0274121 8.73962 0.0280274 8.74509 0.0282325 8.75049C0.0286426 8.76307 0.0290531 8.77578 0.0304203 8.78808L0.0304886 8.78959L2.2223 28.5156C2.23515 28.6315 2.2871 28.7397 2.36954 28.8222L4.44028 30.8929L4.96398 34.559C5.00015 34.812 5.21685 35 5.47258 35H8.76025C9.01585 35 9.23262 34.8121 9.26885 34.559L9.79255 30.8929L11.8633 28.8222C11.9457 28.7397 11.9977 28.6316 12.0105 28.5156L14.2023 8.78959V8.78856C14.2037 8.77571 14.2041 8.763 14.2045 8.75042C14.2047 8.74495 14.2054 8.73955 14.2054 8.73415L14.2054 8.73292V6.54111C14.2054 6.25742 13.9755 6.02746 13.6918 6.02746ZM8.31469 33.9727H5.91814L5.51701 31.1645H8.71596L8.31469 33.9727ZM11.0093 28.2231L9.09542 30.1371H5.13741L3.22355 28.2231L1.11501 9.24664H13.1178L11.0093 28.2231ZM13.178 8.21927H1.05479V7.0549H13.178V8.21927Z"/>
                                     <path d="M22.4589 26.849C22.7426 26.849 22.9726 26.6191 22.9726 26.3353V1.60959C22.9726 0.72208 22.2505 0 21.363 0H15.8835C15.5997 0 15.3698 0.229961 15.3698 0.513721C15.3698 0.79748 15.5997 1.02744 15.8835 1.02744H16.4657V2.19181H15.8835C15.5997 2.19181 15.3698 2.42177 15.3698 2.70553C15.3698 2.98929 15.5997 3.21925 15.8835 3.21925H16.4657V4.38361H15.8835C15.5997 4.38361 15.3698 4.61357 15.3698 4.89733C15.3698 5.18109 15.5997 5.41105 15.8835 5.41105H16.4657V6.57542H15.8835C15.5997 6.57542 15.3698 6.80538 15.3698 7.08914C15.3698 7.3729 15.5997 7.60286 15.8835 7.60286H16.4657V8.76723H15.8835C15.5997 8.76723 15.3698 8.99719 15.3698 9.28095C15.3698 9.56471 15.5997 9.79467 15.8835 9.79467H19.7534V17.3289L18.2123 19.3838C18.1456 19.4727 18.1096 19.5809 18.1096 19.692V33.3905C18.1096 34.2781 18.8316 35.0001 19.7192 35.0001H21.363C22.2505 35.0001 22.9726 34.2781 22.9726 33.3905V28.7333C22.9726 28.4495 22.7426 28.2196 22.4589 28.2196C22.1751 28.2196 21.9451 28.4495 21.9451 28.7333V33.3905C21.9451 33.7116 21.684 33.9728 21.3629 33.9728H19.7191C19.3981 33.9728 19.1369 33.7116 19.1369 33.3905V19.8631L20.678 17.8082C20.7447 17.7193 20.7807 17.6112 20.7807 17.5V1.02737H21.3629C21.6839 1.02737 21.9451 1.28851 21.9451 1.60959V26.3353C21.9451 26.6191 22.1751 26.849 22.4589 26.849ZM19.7534 8.76709H17.4931V7.60272H19.7534V8.76709ZM19.7534 6.57535H17.4931V5.41099H19.7534V6.57535ZM19.7534 4.38354H17.4931V3.21918H19.7534V4.38354ZM19.7534 2.19181H17.4931V1.02737H19.7534V2.19181Z"/>
@@ -473,6 +611,7 @@
             </div>
         </div>
     </div>
+    <script src="/dentko/js/swiper-bundle.min.js"></script>
     <script src="/dentko/js/main.js"></script>
 </body>
 </html>
