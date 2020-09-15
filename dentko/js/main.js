@@ -12,6 +12,8 @@ document.addEventListener('DOMContentLoaded', () => {
     let forms = document.querySelectorAll('form');
     let mobileSwiper = document.querySelector('.faqs__themes');
     let mobileSwiperSW = document.querySelector('.faqs__themes');
+    const pagePath = window.location.pathname;
+
 
     const toggleSpoiler = () => {
         event.preventDefault();
@@ -95,6 +97,19 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
         catch{}
+    }
+
+    const faqActiveCategorySync = () => {
+        let path = pagePath;
+
+        if(path.indexOf('faq/') + 1){
+
+            document.querySelector('.faqs__wrap').querySelectorAll('.faqs__theme').forEach(theme => {
+                theme.classList.remove('active');
+            });
+
+            document.querySelector('.faqs__wrap').querySelector(`a[href="${path}"]`).classList.add('active');;
+        }
     }
 
     const accordionTitleClick = () => {
@@ -495,6 +510,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     catch{}
     
+    faqActiveCategorySync();
     mobileCheck();
     scrollHandler();
     updSlidersPagination();

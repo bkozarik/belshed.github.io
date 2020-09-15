@@ -186,6 +186,7 @@
 
     .about
         margin-top: 60px
+        overflow: visible !important
         &_padding
             margin: 0
             padding-top: 0px
@@ -201,15 +202,16 @@
         &__img
             width: auto
             object-fit: contain
+            border-radius: 3px
             &-wrap
                 display: flex
                 justify-content: center
                 max-height: 600px
                 &::before
-                    width: 40%
+                    transform: translate(-20px, -20px)
                 &_another
                     &::before
-                        transform: translate(60px, -20px)
+                        transform: translate(80px, -20px)
         &__side + &__side
             margin-top: 50px
     
@@ -407,8 +409,6 @@
             width: 100%
             margin-bottom: 30px
         &__bottom
-            // flex-direction: row
-            // align-items: center 
             margin-top: 20px
         &__name
             &::after
@@ -417,7 +417,6 @@
             margin: 0
         &__link
             margin-top: 3px
-            // margin-left: 20px
     
     .colored_text
         &__body
@@ -539,6 +538,10 @@
                     left: 50%
                     transform: translate(-50%, 0px)
 
+    .popup
+        &_request
+            padding: 30px 20px
+
     .colored_text
         &__body
             padding: 20px
@@ -631,12 +634,13 @@
 
     .footer
         &__schedule
-            // max-width: 200px
             align-self: center
             margin-top: 30px
         &__body
             margin-top: 20px
             flex-direction: column
+        &__contacts + &__contacts
+            margin-top: 20px
         &__dd-link
             &::after
                 width: calc( 100% - 20px )

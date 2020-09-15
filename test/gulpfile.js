@@ -16,7 +16,10 @@ const compileSass = () => {
 const browserSyncInit = (cb) => {
     reload.init({
         server: {
-          baseDir: "./"
+          baseDir: "./",
+          online: true,
+          tunnel: 'test',
+          notify: true
         },
         port: 8080,
         open: true,

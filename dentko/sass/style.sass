@@ -225,6 +225,19 @@ html
             color: #fff
             &::after
                 opacity: 1
+    &__inner
+        position: absolute
+        top: 0
+        background-color: #fff
+        opacity: 0
+        visibility: hidden
+        right: 0
+        transform: translateX(100%)
+    .uk-nav>li
+        position: relative
+    .uk-nav>li:hover .nav__inner
+        opacity: 1
+        visibility: visible
     .uk-navbar-nav
         width: 100%
         &>li>a
@@ -247,7 +260,7 @@ html
                bottom: 0
                left: 0
             &:focus
-                color: #fff
+                color: #fff                
             &:hover
                 color: #fff
                 &::after
@@ -315,8 +328,11 @@ html
                 background-repeat: no-repeat
                 transform: translate(100%, -50%) rotate(90deg)
                 z-index: 2
+    .uk-navbar-nav
+        &>li
+            position: relative
     .uk-navbar-dropdown
-        overflow: hidden
+        width: 240px
         padding: 0
 
 .mobile-menu
@@ -536,6 +552,7 @@ html
 
 .benefit
     position: relative
+    overflow: hidden
     &__head
         max-width: 260px
     &__header
@@ -543,8 +560,9 @@ html
         font-weight: bold
         font-size: 18px
     &__img
-        margin-right: 20px
+        margin-right: 20px 
     &:hover
+        overflow: visible
         .uk-card
             opacity: 1
             transform: translateY(0px)
@@ -637,8 +655,6 @@ html
         .uk-list
             padding-left: 30px
             margin-bottom: 0
-        &.open
-            // max-height: none
         &::after
             content: ''
             z-index: 2
@@ -674,6 +690,8 @@ html
                 height: 100%
                 width: 80%
                 border-radius: 3px
+                top: 0
+                left: 0
                 transform: translate(-30px, -30px)
                 background: $green_gradient
                 z-index: -1
@@ -887,10 +905,6 @@ html
         margin-right: 5px
         padding-bottom: 2px
         border-bottom: 2px dashed #fff
-        &::after
-            content: ''
-            display: inline-block
-            width: 100%
         &:hover
             color: #fff
             cursor: pointer
@@ -1239,7 +1253,6 @@ html
         flex-grow: 1
         width: 100%
         overflow: visible
-        // padding: 20px 0px 20px 20px
     .uk-slider-items
         li + li
             margin-left: 40px
@@ -1345,8 +1358,6 @@ html
             border-bottom: 1px solid #CFD5DC
         & + &
             border-top: 1px solid #CFD5DC
-    &__video
-        // height: 135px
     .uk-text-small
         font-size: 14px
         line-height: 20px
@@ -1374,8 +1385,6 @@ html
                 &__video
                     max-height: 135px
     &__slider
-        .uk-slider-items 
-            // padding-left: 50px
         &_thumbs
             .swiper-container
                 height: 100%
@@ -1805,6 +1814,9 @@ html
     &__body
         margin-top: 50px
         margin-bottom: 50px !important
+        flex-wrap: wrap
+        &>*
+            margin: 10px
         .footer__nav
             flex-basis: auto
         .uk-description-list
@@ -1873,6 +1885,8 @@ html
             color: #000
             &::after
                 transform: scaleX(1)
+    &__2reviews
+        
     &__schedule
         position: relative
         &::before
@@ -1921,6 +1935,8 @@ html
     opacity: 0
     transform: translateY(-50px)
     width: 100%
+    overflow-y: auto
+    max-height: 98vh
     &_request
         padding: 80px 100px 90px
         max-width: 1140px
