@@ -1,0 +1,97 @@
+$maxWidth: 1865
+    
+@mixin adaptiv-font($pcSize, $mobSize)
+    $addSize: $pcSize - $mobSize
+    $maxWidth: $maxWidth - 320
+    transition-duration: 0s
+    $result: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}))
+    font-size: $result
+    line-height: calc(#{$result} + 5px)
+    
+*, *::before, *::after
+    box-sizing: border-box  
+    margin: 0
+    padding: 0
+    transition: all .2s ease-out 0s
+    background-color: #fff
+    font-family: "HCo Gotham", sans-serif
+
+.buxom2
+    &_conatiner
+        margin: 0 auto
+        max-width: 948px
+        padding-bottom: 160px
+    &_head
+        padding: 20px 0px
+    &_title
+        @include adaptiv-font(56, 26) 
+        text-transform: uppercase
+        font-weight: normal
+        text-align: center
+    &_banner
+        &-img
+            width: 100%
+            height: auto
+            object-fit: contain
+    &_content
+        margin: 40px 0px 65px
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        grid-gap: 30px
+    &_text
+        font-size: 26px
+        @include adaptiv-font(26, 16)
+        font-weight: normal
+    &_item
+        &_full
+            grid-column-start: 1
+            grid-column-end: 3
+        &_fill
+            width: 100%
+            height: auto
+            object-fit: cover
+        &_pl
+            padding-left: 40px
+        &_pr
+            padding-right: 40px
+    &_combination
+        display: flex
+        align-items: center
+        &_reverse
+            flex-direction: row-reverse
+            .buxom2_combination-img
+                margin-right: 25px
+        &-content
+            padding: 0px 30px
+        &-img
+            margin-left: 25px
+        &-text, &-title
+            font-weight: normal
+            font-size: 22px
+            @include adaptiv-font(26, 14)
+            line-height: 24px
+        &-title
+            @include adaptiv-font(26, 16)
+            font-weight: 500
+        &-btn
+            display: inline-block
+            text-decoration: none
+            text-transform: uppercase
+            color: #fff
+            background-color: #000
+            padding: 8px 58px
+            box-shadow: 0 0 0 1px #000
+            text-align: center
+            font-size: 14px
+            font-weight: normal
+            cursor: pointer
+            margin: 30px 0px
+            &:hover
+                background-color: #fff
+                color: #000000
+        &-text + &-text
+            margin-top: 1em
+        & + &
+            margin-top: 4em
+        &:first-of-type
+            margin-top: 30px
