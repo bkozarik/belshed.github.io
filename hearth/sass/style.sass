@@ -50,7 +50,7 @@ h1, h2, h3, h4, h5
         color: #333
         text-align: center
 
-.button
+button.button, span.button, a.button
     position: relative
     display: inline-block
     appearance: none
@@ -60,6 +60,8 @@ h1, h2, h3, h4, h5
     text-align: center
     user-select: none
     background-color: transparent
+    &:focus
+        outline: none
     &_recall
         color: #000
         background-color: $text_yellow
@@ -77,7 +79,7 @@ h1, h2, h3, h4, h5
         background-color: $text_yellow
         box-shadow: 0 0 0 1px $text_yellow
         border-radius: 20px
-        padding: 6px 23px
+        padding: 10px 23px
         font-size: 14px
         font-weight: 600
         line-height: 22px
@@ -100,8 +102,8 @@ h1, h2, h3, h4, h5
         color: #000
         background-color: #fff
         box-shadow: 0 0 0 1px #939393
-        border-radius: 20px
-        padding: 10px 38px
+        border-radius: 30px
+        padding: 11px 38px
         font-size: 14px
         font-weight: 600
         line-height: 22px
@@ -122,22 +124,46 @@ h1, h2, h3, h4, h5
         font-size: 14px
         text-transform: uppercase
         font-weight: 600
-        padding: 10px 20px
+        padding: 12px 20px
         border-radius: 30px
         margin-top: 10px
+
+span.button
+    &_recall
+        cursor: default
+        &:hover
+            background-color: $text_yellow
+            color: #000
 
 .header
     flex-grow: 0
     padding: 20px 0px
     position: fixed
     left: 0
-    top: 0
+    top: -1px
     width: 100%
     z-index: 1000
     & + *
         margin-top: 117px
     &.active
         background-color: #000
+        .header__logo
+            opacity: 1
+            visibility: visible
+    &__logo
+        height: 77px
+        width: 77px
+        opacity: 0
+        visibility: hidden
+        position: relative
+        &-img
+            height: 120px
+            width: 120px
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            object-fit: cover
     &__wrap
         display: flex
         justify-content: space-between
@@ -145,7 +171,7 @@ h1, h2, h3, h4, h5
     &__side
         max-width: 365px
         width: 100%
-        &:nth-of-type(2)
+        &:last-child
             display: flex
     &__search
         display: inline-block
@@ -364,13 +390,14 @@ h1, h2, h3, h4, h5
             display: flex
             align-items: center
             margin-bottom: 10px
-    &__weight
+    &__price
         font-weight: bold
         font-size: 14px
         color: #333
-        margin-left: 20px
+        margin-left: 10px
         display: inline-block
         position: relative
+        white-space: nowrap
         &::before
             content: ''
             display: inline-block
@@ -379,7 +406,7 @@ h1, h2, h3, h4, h5
             background-color: #e8e8e8
             position: absolute
             top: 50%
-            left: -10px
+            left: -5px
             transform: translateY(-50%)
     &__total
         font-size: 16px
@@ -427,7 +454,7 @@ h1, h2, h3, h4, h5
     height: 100vh
     overflow-y: auto
     z-index: 100
-    background-color: #000
+    background-color: #000000e7
     position: fixed
     top: 0
     padding: 117px 20px 10px
@@ -450,6 +477,7 @@ h1, h2, h3, h4, h5
     position: absolute
     top: 50%
     transform: translate(0, -50%)
+    z-index: 3
     display: flex
     align-items: center
     background-color: transparent
@@ -565,6 +593,8 @@ h1, h2, h3, h4, h5
         height: 88px
         & + &
             border-top: 1px solid #FBE8C4
+        &:hover
+            background-color: #ffe15c
     &__link
         display: flex
         align-items: center
@@ -580,16 +610,19 @@ h1, h2, h3, h4, h5
         position: absolute
         top: 0
         z-index: -1
-        transform: translateX(-100px)
+        transform: translateX(-131px)
         height: 100vh
         background-color: #F7C76C
         .aside
             &__link
                 justify-content: flex-start
-                padding: 23px 30px 23px 0px
+                padding: 23px 30px 23px 90px
     &:hover, &.active
+        .aside__items
+            background-color: transparent
+            pointer-events: none
         .aside__slider
-            transform: translateX(90px)
+            transform: translateX(0px)
 
 .banner
     flex-grow: 0
@@ -697,12 +730,17 @@ h1, h2, h3, h4, h5
         background-color: #000
         padding: 45px 40px 60px
         position: relative
-        background-image: url(../img/promo_bg.png)
-        background-size: 880px 890px
-        background-repeat: no-repeat
-        background-position: 390px -200px
+        overflow: hidden
+    &__bg
+        position: absolute
+        right: 0
+        bottom: 0
+        transform: translate(40%, 28%)
+        z-index: 0
     &__content
         max-width: 360px
+        z-index: 2
+        position: relative
     &__title
         font-size: 36px
         color: #fff
@@ -721,6 +759,7 @@ h1, h2, h3, h4, h5
         vertical-align: bottom
     &__sticker
         position: absolute
+        z-index: 2
         top: 40px
         right: 20px
         height: 160px
@@ -810,7 +849,7 @@ h1, h2, h3, h4, h5
         display: flex
         align-items: center
         justify-content: space-between
-        max-width: 660px
+        max-width: 700px
         &-text
             font-size: 20px
             font-weight: 600
@@ -824,7 +863,7 @@ h1, h2, h3, h4, h5
             display: flex
             align-items: center
             justify-content: space-between
-            max-width: 450px
+            max-width: 500px
             width: 100%
         &-label
             cursor: pointer
@@ -1284,8 +1323,8 @@ h1, h2, h3, h4, h5
     &__copyright
         color: #fff
         font-size: 18px
-        span
-            display: none
+    &__socials
+        display: flex
     &__social
         position: relative
         display: inline-block

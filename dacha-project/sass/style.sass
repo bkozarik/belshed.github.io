@@ -1,0 +1,219 @@
+$text_black: #393939
+$text_yellow: #FFA200
+    
+$maxWidth: 1920
+    
+@mixin adaptiv-font($pcSize, $mobSize)
+    $addSize: $pcSize - $mobSize
+    $maxWidth: $maxWidth - 320
+    transition-duration: 0s
+    $result: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}))
+    font-size: $result
+    line-height: calc(#{$result} + 5px)
+
+*, *::before, *::after
+    box-sizing: border-box
+    margin: 0
+    padding: 0
+    border: none
+    text-decoration: none
+    border-radius: 0px
+    transition: all .2s ease-in-out 0s
+    color: $text_black
+    font-family: '', sans-serif
+
+body
+    display: flex
+    flex-direction: column
+    min-height: 100vh
+    position: relative
+
+.container
+    margin: 0 auto
+    position: relative
+    max-width: 1170px
+    padding: 0px 15px
+
+.button
+    position: relative
+    display: inline-block
+    appearance: none
+    background: transparent
+    cursor: pointer
+    white-space: nowrap
+    text-align: center
+    user-select: none
+    background: rgb(255,198,99)
+    background: linear-gradient(180deg, rgba(255,198,99,1) 0%, rgba(255,173,32,1) 100%)
+    color: #fff
+    box-shadow: 0 4px 0 0 #E49100
+    &_banner
+        text-transform: uppercase
+        font-size: 21px
+        padding: 28px 45px
+        border-radius: 40px
+
+.section
+    &__title
+        font-size: 40px
+        line-height: 55px
+        text-transform: uppercase
+        font-weight: normal
+
+.text
+    &_ttu
+        text-transform: uppercase
+    &_orange
+        color: $text_yellow
+    &_tac
+        text-align: center
+
+.header
+    flex-grow: 0
+    width: 100%
+    padding: 30px 0px
+    position: absolute
+    left: 0
+    top: 0
+    z-index: 3
+    &__wrap
+        display: flex
+        align-items: center
+        justify-content: space-between
+    &__contacts
+        display: flex
+        align-items: center
+    &__tel
+        display: flex
+        flex-direction: column
+        align-items: flex-end
+        &-link
+            font-size: 26px
+            white-space: nowrap
+    &__recall
+        text-decoration: underline
+        color: $text_yellow
+        font-size: 16px
+        font-weight: 300
+    &__socials
+        margin-right: 5px
+        display: flex
+    &__social
+        display: inline-block
+        border-radius: 50%
+        height: 37px
+        width: 37px
+        position: relative
+        transition-duration: .1s
+        svg
+            height: 17px
+            width: 17px
+            fill: #fff
+            position: absolute
+            left: 50%
+            top: 50%
+            transform: translate(-50%, -50%)
+        &:hover
+            transform: translateY(-5px)
+        & + &
+            margin-left: -7px
+        &_wa
+            background-color: #4CAF50
+            z-index: 3
+        &_vi
+            background-color: #665CAC
+            z-index: 2
+        &_tg
+            background-color: #41B4E6
+            z-index: 1
+
+.logo
+    &__img
+        max-width: 235px
+        height: auto
+    &__text
+        font-size: 14px
+        display: inline-block
+        margin-left: 50px
+        font-weight: 300
+
+.main
+    flex-grow: 1
+
+.banner
+    background-image: url(../img/banner_bg.jpg)
+    background-size: cover
+    &__body
+        padding-top: 180px
+        padding-bottom: 360px
+    &__subtitle
+        margin-top: 20px
+        font-size: 22px
+        line-height: 40px
+    &__info
+        margin: 70px 0px
+    &__img
+        width: 42px
+        height: auto
+    &__item
+        display: flex
+        align-items: center
+        max-width: 380px
+        & + &
+            margin-top: 45px
+        &-body
+            margin-left: 25px
+    &__text
+        font-size: 16px
+        line-height: 18px
+        &-title
+            font-size: 18px
+            line-height: 24px
+            display: block
+            margin-bottom: 5px
+
+.examples
+    &__container
+        margin: 90px 0px 70px
+        display: grid
+        grid-template-columns: repeat(4, 1fr)
+        grid-gap: 20px
+        width: 100%
+
+.example
+    display: flex
+    flex-direction: column
+    align-items: stretch
+    box-shadow: 0 0 20px 4px rgba(0, 0, 0, .1)
+    border-radius: 3px
+    // overflow: hidden
+    position: relative
+    &__img
+        width: 100%
+        height: 205px
+        object-fit: cover
+    &__body
+        padding: 30px 20px 48px
+        background-color: #fff
+        height: 100%
+    &__text
+        text-align: center
+        text-transform: uppercase
+        display: inline-block
+        width: 100%
+    &::before
+        position: absolute
+        content: ''
+        display: block
+        height: 90%
+        width: 95%
+        left: 50%
+        top: 50%
+        z-index: -1
+        transform: translate(-50%, -42%)
+        background-color: #f1f1f1d3
+        border-radius: 3px
+
+
+.footer
+    flex-grow: 0
