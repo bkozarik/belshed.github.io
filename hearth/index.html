@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="ru-Ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./css/fonts.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/media.css">
+    <title>Пекарня очаг</title>
+</head>
+<body>
+    <header class="header">
+        <button class="burger js-burger">
+            <div class="burger__icon">
+                <span></span>
+            </div>
+            <span class="burger__text">Меню</span>
+        </button>
+        <div class="container">
+            <div class="header__wrap">
+                <div class="header__side">
+                    <div class="header__search-wrap">
+                        <input type="search" class="header__search" placeholder="Поиск по сайту">
+                    </div>
+                    <nav class="nav">
+                        <ul class="nav__list">
+                            <li class="nav__item"><a href="./index.html" class="nav__link active">Главная</a></li>
+                            <li class="nav__item"><a href="./promo.html" class="nav__link">Акции</a></li>
+                            <li class="nav__item"><a href="./delivery.html" class="nav__link">Доставка</a></li>
+                            <li class="nav__item"><a href="./contacts.html" class="nav__link">Контакты</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="header__side">
+                    <div class="header__contacts">
+                        <span class="button button_recall">Звоните, мы работаем</span>
+                        <div class="header__dropdown">
+                            <div class="header__dropdown-title">
+                                <a href="tel:+79037654321" class="header__tel">+7(903) 765 43 21</a>
+                                <button class="header__dropdown-trigger js-open-header-dropdown"><span></span></button>
+                            </div>
+                            <div class="header__dropdown-body">
+                                <a href="tel:+79037654321" class="header__tel">+7(903) 765 43 21</a>
+                                <a href="tel:+79037654321" class="header__tel">+7(903) 765 43 21</a>
+                                <button class="button button_recall">Обратный звонок</button>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="header__cart js-open-cart">
+                        <div class="header__cart-ico">
+                            <img src="./img/icons/cart.svg" alt="Иконка корзины">
+                            <span class="header__cart-amount">12</span>
+                        </div>
+                        <span class="header__cart-total">9999 P</span>
+                    </button>
+                    <div class="cart js-cart">
+                        <span class="cart__title">Ваша корзина</span>
+                        <a href="#" class="button button_cart">Получить скидку 10%</a>
+                        <form class="cart__body">
+                            <div class="cart__list">
+                                <div class="cart__item">
+                                    <div class="cart__name">С сыром осетинским</div>
+                                    <div class="cart__content">
+                                        <img src="./img/product.png" alt="Фото товара" class="cart__img">
+                                        <div class="cart__info">
+                                            <div class="cart__info-top">
+                                                <span class="cart__parameters">1200 гр 35∅</span>
+                                                <sapn class="cart__weight">810 р</sapn>
+                                            </div>
+                                            <span class="product__count"><span class="product__dec js-product-dec">-</span><input type="text" inputmode="numeric" min="1" value="1"><span class="product__inc js-product-inc">+</span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cart__item">
+                                    <div class="cart__name">С сыром осетинским</div>
+                                    <div class="cart__content">
+                                        <img src="./img/product.png" alt="Фото товара" class="cart__img">
+                                        <div class="cart__info">
+                                            <div class="cart__info-top">
+                                                <span class="cart__parameters">1200 гр 35∅</span>
+                                                <sapn class="cart__weight">810 р</sapn>
+                                            </div>
+                                            <span class="product__count"><span class="product__dec js-product-dec">-</span><input type="text" inputmode="numeric" min="1" value="1"><span class="product__inc js-product-inc">+</span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cart__item">
+                                    <div class="cart__name">С сыром осетинским</div>
+                                    <div class="cart__content">
+                                        <img src="./img/product.png" alt="Фото товара" class="cart__img">
+                                        <div class="cart__info">
+                                            <div class="cart__info-top">
+                                                <span class="cart__parameters">1200 гр 35∅</span>
+                                                <sapn class="cart__weight">810 р</sapn>
+                                            </div>
+                                            <span class="product__count"><span class="product__dec js-product-dec">-</span><input type="text" inputmode="numeric" min="1" value="1"><span class="product__inc js-product-inc">+</span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cart__bottom">
+                                <span class="cart__total">Итого: 5100 р</span>
+                                <label class="cart__label"><input type="checkbox"><span class="cart__checkbox"></span>Предварительный заказ</label>
+                                <label class="cart__label"><input type="checkbox"><span class="cart__checkbox"></span>Заказ на День Рождения</label>
+                                <button type="submit" class="button button_order">Оформить заказ</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="banner">
+        <div class="container">
+            <div class="banner__content">
+                <div class="banner__logo-wrap">
+                    <img src="./img/logo.svg" alt="Логотип" class="banner__logo">
+                </div>
+                <h1 class="banner__title">Лучшие осетинские пироги и пицца в Москве</h1>
+            </div>
+        </div>
+    </section>
+    <aside class="aside js-aside">
+        <div class="aside__container">
+            <div class="aside__items">
+                <div class="aside__item">
+                    <a href="#" class="aside__link">
+                        <img src="./img/icons/percentage.svg" alt="Иконка скидки" class="aside__icon">
+                    </a>
+                </div>
+                <div class="aside__item">
+                    <a href="#" class="aside__link">
+                        <img src="./img/icons/bakery.svg" alt="Иконка пирога" class="aside__icon">
+                    </a>
+                </div>
+                <div class="aside__item">
+                    <a href="#" class="aside__link">
+                        <img src="./img/icons/pizza.svg" alt="Иконка пиццы" class="aside__icon">
+                    </a>
+                </div>
+                <div class="aside__item">
+                    <a href="#" class="aside__link">
+                        <img src="./img/icons/salad.svg" alt="Иконка салата" class="aside__icon">
+                    </a>
+                </div>
+                <div class="aside__item">
+                    <a href="#" class="aside__link">
+                        <img src="./img/icons/drink.svg" alt="Иконка напитков" class="aside__icon">
+                    </a>
+                </div>
+                <div class="aside__item">
+                    <a href="#" class="aside__link">
+                        <img src="./img/icons/lunch.svg" alt="Иконка наборов" class="aside__icon">
+                    </a>
+                </div>
+            </div>
+            <div class="aside__slider">
+                <div class="aside__item"><a href="#" class="aside__link">Акции</a></div>
+                <div class="aside__item"><a href="#" class="aside__link">Осетинские пироги</a></div>
+                <div class="aside__item"><a href="#" class="aside__link">Пицца</a></div>
+                <div class="aside__item"><a href="#" class="aside__link">Салаты</a></div>
+                <div class="aside__item"><a href="#" class="aside__link">Напитки</a></div>
+                <div class="aside__item"><a href="#" class="aside__link">Наборы</a></div>
+            </div>
+        </div>
+    </aside>
+    <main class="main">
+        <section class="promo">
+            <div class="container">
+                <div class="promo__wrapper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide promo__item">
+                            <div class="promo__content">
+                                <h3 class="promo__title">Акция<br><span class="text_yellow">при заказе</span> на сумму от 20 000 р.</h3>
+                                <span class="promo__discount">скидка</span>
+                                <span class="promo__persentage text_yellow">20%</span>
+                            </div>
+                            <div class="promo__sticker">
+                                <span>-20%</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide promo__item">
+                            <div class="promo__content">
+                                <h3 class="promo__title">Акция<br><span class="text_yellow">при заказе</span> на сумму от 20 000 р.</h3>
+                                <span class="promo__discount">скидка</span>
+                                <span class="promo__persentage text_yellow">20%</span>
+                            </div>
+                            <div class="promo__sticker">
+                                <span>-20%</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide promo__item">
+                            <div class="promo__content">
+                                <h3 class="promo__title">Акция<br><span class="text_yellow">при заказе</span> на сумму от 20 000 р.</h3>
+                                <span class="promo__discount">скидка</span>
+                                <span class="promo__persentage text_yellow">20%</span>
+                            </div>
+                            <div class="promo__sticker">
+                                <span>-20%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="promo__pagination"></div>
+                </div>
+            </div>
+        </section>
+        <section class="menu">
+            <div class="container">
+                <div class="menu__wrapper-top">
+                    <a href="#" class="menu__item menu__item_big">
+                        <img src="./img/menu_item-1.png" alt="Осетинские пироги" class="menu__item-img">
+                        <div class="menu__item-body">
+                            <span class="menu__item-title">Осетинские пироги</span>
+                            <span class="menu__item-amount">(111)</span>
+                        </div>
+                    </a>
+                    <a href="#" class="menu__item menu__item_big">
+                        <img src="./img/menu_item-2.png" alt="Пицца" class="menu__item-img">
+                        <div class="menu__item-body">
+                            <span class="menu__item-title">Пицца</span>
+                            <span class="menu__item-amount">(111)</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="menu__wrapper-bottom">
+                    <a href="#" class="menu__item">
+                        <img src="./img/menu_item-3.png" alt="Салаты" class="menu__item-img">
+                        <div class="menu__item-body">
+                            <span class="menu__item-title">Салаты</span>
+                            <span class="menu__item-amount">(111)</span>
+                        </div>
+                    </a>
+                    <a href="#" class="menu__item">
+                        <img src="./img/menu_item-4.png" alt="Напитки" class="menu__item-img">
+                        <div class="menu__item-body">
+                            <span class="menu__item-title">Напитки</span>
+                            <span class="menu__item-amount">(111)</span>
+                        </div>
+                    </a>
+                    <a href="#" class="menu__item">
+                        <img src="./img/menu_item-5.png" alt="Наборы" class="menu__item-img">
+                        <div class="menu__item-body">
+                            <span class="menu__item-title">Наборы</span>
+                            <span class="menu__item-amount">(111)</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="order">
+            <div class="container">
+                <h2 class="section__title">Осетинские пироги в Москве с доставкой</h2>
+                <div class="order__container">
+                    <div class="filter">
+                        <div class="filter__weight">
+                            <span class="filter__weight-text">Выберите вес:</span>
+                            <div class="filter__weight-labels">
+                                <label class="filter__weight-label">
+                                    <input type="checkbox" name="weight" value="1200">
+                                    <span class="filter__weight-checkbox"></span>
+                                    <span class="filter__weight-value">1200 г</span>
+                                </label>
+                                <label class="filter__weight-label">
+                                    <input type="checkbox" name="weight" value="1000">
+                                    <span class="filter__weight-checkbox"></span>
+                                    <span class="filter__weight-value">1000 г</span>
+                                </label>
+                                <label class="filter__weight-label">
+                                    <input type="checkbox" name="weight" value="800">
+                                    <span class="filter__weight-checkbox"></span>
+                                    <span class="filter__weight-value">800 г</span>
+                                </label>
+                                <label class="filter__weight-label">
+                                    <input type="checkbox" name="weight" value="600">
+                                    <span class="filter__weight-checkbox"></span>
+                                    <span class="filter__weight-value">600 г</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="filter__category">
+                            <label class="filter__category-label"><input type="checkbox" name="category" checked><span class="filter__category-item">Все</span></label>
+                            <label class="filter__category-label"><input type="checkbox" name="category"><span class="filter__category-item">Мясные</span></label>
+                            <label class="filter__category-label"><input type="checkbox" name="category"><span class="filter__category-item">Сладкие</span></label>
+                            <label class="filter__category-label"><input type="checkbox" name="category"><span class="filter__category-item">С рыбой</span></label>
+                            <label class="filter__category-label"><input type="checkbox" name="category"><span class="filter__category-item">постные</span></label>
+                            <label class="filter__category-label"><input type="checkbox" name="category"><span class="filter__category-item">Вегетарианские</span></label>
+                            <label class="filter__category-label"><input type="checkbox" name="category"><span class="filter__category-item">Мясные</span></label>
+                            <label class="filter__category-label"><input type="checkbox" name="category"><span class="filter__category-item">Сладкие</span></label>
+                            <label class="filter__category-label"><input type="checkbox" name="category"><span class="filter__category-item">С рыбой</span></label>
+                            <label class="filter__category-label"><input type="checkbox" name="category"><span class="filter__category-item">постные</span></label>
+                            <label class="filter__category-label"><input type="checkbox" name="category"><span class="filter__category-item">Вегетарианские</span></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="products">
+            <div class="container">
+                <div class="products__wrap">
+                    <div class="product">
+                        <div class="product__top">
+                            <img src="./img/product.png" alt="Фото товара" class="product__img">
+                            <span class="product__art">Арт 107</span>
+                            <a href="#" class="product__rev">Отзывы (63) Получить скидку 10%</a>
+                        </div>
+                        <div class="product__body">
+                            <h3 class="product__name">Пирог с сыром</h3>
+                            <fieldset class="product__weight">
+                                <legend>Вес/Диаметр</legend>
+                                <div class="product__weight-wrap">
+                                    <label class="product__weight-label">
+                                        <input type="radio" name="size1">
+                                        <span class="product__weight-size">1400<span>36∅</span></span>
+                                        <span class="product__weight-price">810 р</span>
+                                    </label>
+                                    <label class="product__weight-label">
+                                        <input type="radio" name="size1">
+                                        <span class="product__weight-size">1200<span>35∅</span></span>
+                                        <span class="product__weight-price">810 р</span>
+                                    </label>
+                                    <label class="product__weight-label">
+                                        <input type="radio" name="size1">
+                                        <span class="product__weight-size">1000<span>32∅</span></span>
+                                        <span class="product__weight-price">750 р</span>
+                                    </label>
+                                    <label class="product__weight-label">
+                                        <input type="radio" name="size1">
+                                        <span class="product__weight-size">800<span>30∅</span></span>
+                                        <span class="product__weight-price">690 р</span>
+                                    </label>
+                                    <label class="product__weight-label">
+                                        <input type="radio" name="size1">
+                                        <span class="product__weight-size">600<span>25∅</span></span>
+                                        <span class="product__weight-price">600 р</span>
+                                    </label>
+                                </div>
+                            </fieldset>
+                            <div class="product__bottom">
+                                <span class="product__count"><span class="product__dec js-product-dec">-</span><input type="text" inputmode="numeric" min="1" value="1"><span class="product__inc js-product-inc">+</span></span>
+                                <button class="button button_product">В корзину</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="product__top">
+                            <img src="./img/product.png" alt="Фото товара" class="product__img">
+                            <span class="product__art">Арт 107</span>
+                            <a href="#" class="product__rev">Отзывы (63) Получить скидку 10%</a>
+                        </div>
+                        <div class="product__body">
+                            <h3 class="product__name">Пирог с сыром</h3>
+                            <fieldset class="product__weight">
+                                <legend>Вес/Диаметр</legend>
+                                <div class="product__weight-wrap">
+                                    <label class="product__weight-label">
+                                        <input type="radio" name="size2">
+                                        <span class="product__weight-size">1400<span>36∅</span></span>
+                                        <span class="product__weight-price">810 р</span>
+                                    </label>
+                                    <label class="product__weight-label">
+                                        <input type="radio" name="size2">
+                                        <span class="product__weight-size">1200<span>35∅</span></span>
+                                        <span class="product__weight-price">810 р</span>
+                                    </label>
+                                    <label class="product__weight-label">
+                                        <input type="radio" name="size2">
+                                        <span class="product__weight-size">1000<span>32∅</span></span>
+                                        <span class="product__weight-price">750 р</span>
+                                    </label>
+                                    <label class="product__weight-label">
+                                        <input type="radio" name="size2">
+                                        <span class="product__weight-size">800<span>30∅</span></span>
+                                        <span class="product__weight-price">690 р</span>
+                                    </label>
+                                    <label class="product__weight-label">
+                                        <input type="radio" name="size2">
+                                        <span class="product__weight-size">600<span>25∅</span></span>
+                                        <span class="product__weight-price">600 р</span>
+                                    </label>
+                                </div>
+                            </fieldset>
+                            <div class="product__bottom">
+                                <span class="product__count"><span class="product__dec js-product-dec">-</span><input type="text" inputmode="numeric" min="1" value="1"><span class="product__inc js-product-inc">+</span></span>
+                                <button class="button button_product">В корзину</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="product__top">
+                            <img src="./img/product.png" alt="Фото товара" class="product__img">
+                            <span class="product__art">Арт 107</span>
+                            <a href="#" class="product__rev">Отзывы (63) Получить скидку 10%</a>
+                        </div>
+                        <div class="product__body">
+                            <h3 class="product__name">Пирог с сыром</h3>
+                            <fieldset class="product__weight">
+                                <legend>Вес/Диаметр</legend>
+                                <div class="product__weight-wrap">
+                                    <label class="product__weight-label">
+                                        <input type="radio" name="size3">
+                                        <span class="product__weight-size">1400<span>36∅</span></span>
+                                        <span class="product__weight-price">810 р</span>
+                                    </label>
+                                    <label class="product__weight-label">
+                                        <input type="radio" name="size3">
+                                        <span class="product__weight-size">1200<span>35∅</span></span>
+                                        <span class="product__weight-price">810 р</span>
+                                    </label>
+                                    <label class="product__weight-label">
+                                        <input type="radio" name="size3">
+                                        <span class="product__weight-size">1000<span>32∅</span></span>
+                                        <span class="product__weight-price">750 р</span>
+                                    </label>
+                                    <label class="product__weight-label">
+                                        <input type="radio" name="size3">
+                                        <span class="product__weight-size">800<span>30∅</span></span>
+                                        <span class="product__weight-price">690 р</span>
+                                    </label>
+                                    <label class="product__weight-label">
+                                        <input type="radio" name="size3">
+                                        <span class="product__weight-size">600<span>25∅</span></span>
+                                        <span class="product__weight-price">600 р</span>
+                                    </label>
+                                </div>
+                            </fieldset>
+                            <div class="product__bottom">
+                                <span class="product__count"><span class="product__dec js-product-dec">-</span><input type="text" inputmode="numeric" min="1" value="1"><span class="product__inc js-product-inc">+</span></span>
+                                <button class="button button_product">В корзину</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="product__top">
+                            <img src="./img/product.png" alt="Фото товара" class="product__img">
+                            <span class="product__art">Арт 107</span>
+                            <a href="#" class="product__rev">Отзывы (63) Получить скидку 10%</a>
+                        </div>
+                        <div class="product__body">
+                            <h3 class="product__name">Пирог с сыром</h3>
+                            <fieldset class="product__weight">
+                                <legend>Вес/Диаметр</legend>
+                                <div class="product__weight-wrap">
+                                    <label class="product__weight-label">
+                                        <input type="radio" name="size4">
+                                        <span class="product__weight-size">1400<span>36∅</span></span>
+                                        <span class="product__weight-price">810 р</span>
+                                    </label>
+                                    <label class="product__weight-label">
+                                        <input type="radio" name="size4">
+                                        <span class="product__weight-size">1200<span>35∅</span></span>
+                                        <span class="product__weight-price">810 р</span>
+                                    </label>
+                                    <label class="product__weight-label">
+                                        <input type="radio" name="size4">
+                                        <span class="product__weight-size">1000<span>32∅</span></span>
+                                        <span class="product__weight-price">750 р</span>
+                                    </label>
+                                    <label class="product__weight-label">
+                                        <input type="radio" name="size4">
+                                        <span class="product__weight-size">800<span>30∅</span></span>
+                                        <span class="product__weight-price">690 р</span>
+                                    </label>
+                                    <label class="product__weight-label">
+                                        <input type="radio" name="size4">
+                                        <span class="product__weight-size">600<span>25∅</span></span>
+                                        <span class="product__weight-price">600 р</span>
+                                    </label>
+                                </div>
+                            </fieldset>
+                            <div class="product__bottom">
+                                <span class="product__count"><span class="product__dec js-product-dec">-</span><input type="text" inputmode="numeric" min="1" value="1"><span class="product__inc js-product-inc">+</span></span>
+                                <button class="button button_product">В корзину</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="product__top">
+                            <img src="./img/product.png" alt="Фото товара" class="product__img">
+                            <span class="product__art">Арт 107</span>
+                            <a href="#" class="product__rev">Отзывы (63) Получить скидку 10%</a>
+                        </div>
+                        <div class="product__body">
+                            <h3 class="product__name">Пирог с сыром</h3>
+                            <fieldset class="product__weight">
+                                <legend>Вес/Диаметр</legend>
+                                <div class="product__weight-wrap">
+                                    <label class="product__weight-label">
+                                        <input type="radio" name="size5">
+                                        <span class="product__weight-size">1400<span>36∅</span></span>
+                                        <span class="product__weight-price">810 р</span>
+                                    </label>
+                                    <label class="product__weight-label">
+                                        <input type="radio" name="size5">
+                                        <span class="product__weight-size">1200<span>35∅</span></span>
+                                        <span class="product__weight-price">810 р</span>
+                                    </label>
+                                    <label class="product__weight-label">
+                                        <input type="radio" name="size5">
+                                        <span class="product__weight-size">1000<span>32∅</span></span>
+                                        <span class="product__weight-price">750 р</span>
+                                    </label>
+                                    <label class="product__weight-label">
+                                        <input type="radio" name="size5">
+                                        <span class="product__weight-size">800<span>30∅</span></span>
+                                        <span class="product__weight-price">690 р</span>
+                                    </label>
+                                    <label class="product__weight-label">
+                                        <input type="radio" name="size5">
+                                        <span class="product__weight-size">600<span>25∅</span></span>
+                                        <span class="product__weight-price">600 р</span>
+                                    </label>
+                                </div>
+                            </fieldset>
+                            <div class="product__bottom">
+                                <span class="product__count"><span class="product__dec js-product-dec">-</span><input type="text" inputmode="numeric" min="1" value="1"><span class="product__inc js-product-inc">+</span></span>
+                                <button class="button button_product">В корзину</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="product__top">
+                            <img src="./img/product.png" alt="Фото товара" class="product__img">
+                            <span class="product__art">Арт 107</span>
+                            <a href="#" class="product__rev">Отзывы (63) Получить скидку 10%</a>
+                        </div>
+                        <div class="product__body">
+                            <h3 class="product__name">Пирог с сыром</h3>
+                            <fieldset class="product__weight">
+                                <legend>Вес/Диаметр</legend>
+                                <div class="product__weight-wrap">
+                                    <label class="product__weight-label">
+                                        <input type="radio" name="size6">
+                                        <span class="product__weight-size">1400<span>36∅</span></span>
+                                        <span class="product__weight-price">810 р</span>
+                                    </label>
+                                    <label class="product__weight-label">
+                                        <input type="radio" name="size6">
+                                        <span class="product__weight-size">1200<span>35∅</span></span>
+                                        <span class="product__weight-price">810 р</span>
+                                    </label>
+                                    <label class="product__weight-label">
+                                        <input type="radio" name="size6">
+                                        <span class="product__weight-size">1000<span>32∅</span></span>
+                                        <span class="product__weight-price">750 р</span>
+                                    </label>
+                                    <label class="product__weight-label">
+                                        <input type="radio" name="size6">
+                                        <span class="product__weight-size">800<span>30∅</span></span>
+                                        <span class="product__weight-price">690 р</span>
+                                    </label>
+                                    <label class="product__weight-label">
+                                        <input type="radio" name="size6">
+                                        <span class="product__weight-size">600<span>25∅</span></span>
+                                        <span class="product__weight-price">600 р</span>
+                                    </label>
+                                </div>
+                            </fieldset>
+                            <div class="product__bottom">
+                                <span class="product__count"><span class="product__dec js-product-dec">-</span><input type="text" inputmode="numeric" min="1" value="1"><span class="product__inc js-product-inc">+</span></span>
+                                <button class="button button_product">В корзину</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="products__btn-wrap">
+                    <button class="button button_all">Все новинки</button>
+                </div>
+            </div>
+        </section>
+        <section class="advantages">
+            <div class="container">
+                <h2 class="section__title">Преимущества</h2>
+                <div class="advantages__wrap">
+                    <div class="advantage">
+                        <img src="./img/icons/delivery.svg" alt="Иконка" class="advantage__img">
+                        <span class="advantage__title">Доставка от 20 минут</span>
+                    </div>
+                    <div class="advantage">
+                        <img src="./img/icons/offer.svg" alt="Иконка" class="advantage__img">
+                        <span class="advantage__title">Накопительные скидки онлайн!</span>
+                    </div>
+                    <div class="advantage">
+                        <img src="./img/icons/quality.svg" alt="Иконка" class="advantage__img">
+                        <span class="advantage__title">Гарантируем высокое качество</span>
+                    </div>
+                    <div class="advantage">
+                        <img src="./img/icons/certificate.svg" alt="Иконка" class="advantage__img">
+                        <span class="advantage__title">Имеем все сертификаты соответствия</span>
+                    </div>
+                    <div class="advantage">
+                        <img src="./img/icons/sweet.svg" alt="Иконка" class="advantage__img">
+                        <span class="advantage__title">Пироги приезжают всегда горячими</span>
+                    </div>
+                    <div class="advantage">
+                        <img src="./img/icons/online-payment.svg" alt="Иконка" class="advantage__img">
+                        <span class="advantage__title">Оплата заказов (170 способов) 24/7</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="reviews">
+            <div class="container">
+                <h2 class="section__title">Отзывы</h2>
+                <div class="reviews__wrapper">
+                    <div class="reviews__swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide review">
+                                <div class="review__img-wrap">
+                                    <img src="./img/product.png" alt="Фото отзыва" class="review__img">
+                                </div>
+                                <div class="review__body">
+                                    <span class="review__title">Пирог с яблоком и ежевикой</span>
+                                    <span class="review__name">Елена Викторовна</span>
+                                    <p class="review__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus esse ratione rerum delectus facilis nulla molestias, adipisci nesciunt, in laboriosam eveniet asperiores odit corrupti enim reiciendis iure rem tenetur modi.</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide review">
+                                <div class="review__img-wrap">
+                                    <img src="./img/product.png" alt="Фото отзыва" class="review__img">
+                                </div>
+                                <div class="review__body">
+                                    <span class="review__title">Пирог с яблоком и ежевикой</span>
+                                    <span class="review__name">Елена Викторовна</span>
+                                    <p class="review__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus esse ratione rerum delectus facilis nulla molestias, adipisci nesciunt, in laboriosam eveniet asperiores odit corrupti enim reiciendis iure rem tenetur modi.</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide review">
+                                <div class="review__img-wrap">
+                                    <img src="./img/product.png" alt="Фото отзыва" class="review__img">
+                                </div>
+                                <div class="review__body">
+                                    <span class="review__title">Пирог с яблоком и ежевикой</span>
+                                    <span class="review__name">Елена Викторовна</span>
+                                    <p class="review__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus esse ratione rerum delectus facilis nulla molestias, adipisci nesciunt, in laboriosam eveniet asperiores odit corrupti enim reiciendis iure rem tenetur modi.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reviews__pagination"></div>
+                    <a href="#" class="reviews__control reviews__control_prev">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="15" viewBox="0 0 9.998 14.996">
+                            <path id="button_arrow" data-name="button_arrow" d="M239,3714.5l.867-.794,7.39-6.7,1.742,1.589-6.515,5.91,6.515,5.91L247.255,3722l-7.39-6.7Z" transform="translate(-238.999 -3707.003)"/>
+                        </svg>                          
+                    </a>
+                    <a href="#" class="reviews__control reviews__control_next">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="15" viewBox="0 0 9.998 14.996">
+                            <path id="button_arrow" data-name="button_arrow" d="M239,3714.5l.867-.794,7.39-6.7,1.742,1.589-6.515,5.91,6.515,5.91L247.255,3722l-7.39-6.7Z" transform="translate(-238.999 -3707.003)"/>
+                        </svg>  
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="examples">
+            <div class="container">
+                <div class="example">
+                    <div class="example__body">
+                        <h2 class="example__name">Осетинские пироги с быстрой доставкой</h2>
+                        <p class="example__text">Ни одно застолье не обходится без сладкого десерта. Заказать вкусный торт в Одессе очень просто благодаря нашему сайту. Наша кондитерская предоставляет услуги по изготовлению и доставке разнообразных сладостей: торты, пирожные, десерты, капкейки и т.п. Угощение, приготовленное командой креативных профессионалов, станет настоящим украшением любого застолья, отличным подарком к празднику и просто покорит всех сладкоежек неповторимым утонченным вкусом. Богатое разнообразие ассортимента удовлетворит желания даже самых взыскательных заказчиков. Мы предлагаем десерты на любой вкус и для любого случая.</p>
+                    </div>
+                    <img src="./img/example_1.png" alt="Осетинский пирог" class="example__img">
+                </div>
+                <div class="example example_reverse">
+                    <div class="example__body">
+                        <h2 class="example__name">Оплата пирогов</h2>
+                        <p class="example__text">Сначала закажите <a href="#">осетинские пироги</a>, потом сможете их оплатить Online или курьеру.<br>Оплата онлайн возможна при помощи двух служб, это самая популярная в России.<br>Яндекс Касса и Payeer.com которая поддерживает более 150 способов оплаты!<br>Яндекс Касса - работает БЕЗ КОМИССИИ, именно она является платежной системой по умолчанию!<br><b>Так же вы можете оплатить заказ наличными курьеру!</b></p>
+                    </div>
+                    <img src="./img/example_2.png" alt="Осетинский пирог" class="example__img">
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__wrap">
+                <div class="footer__cols">
+                    <nav class="footer__nav">
+                        <ul class="footer__list">
+                            <li class="footer__item"><a href="#" class="footer__link">Пироги</a></li>
+                            <li class="footer__item"><a href="#" class="footer__link">Пицца</a></li>
+                            <li class="footer__item"><a href="#" class="footer__link">Салаты</a></li>
+                            <li class="footer__item"><a href="#" class="footer__link">Напитки</a></li>
+                            <li class="footer__item"><a href="#" class="footer__link">Наборы</a></li>
+                        </ul>
+                    </nav>
+                    <nav class="footer__nav">
+                        <ul class="footer__list">
+                            <li class="footer__item"><a href="./index.html" class="footer__link">Главная</a></li>
+                            <li class="footer__item"><a href="./promo.html" class="footer__link">Акции</a></li>
+                            <li class="footer__item"><a href="./delivery.html" class="footer__link">Доставка</a></li>
+                            <li class="footer__item"><a href="./contacts.html" class="footer__link">Контакты</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="footer__logo-wrap">
+                    <img src="./img/logo.svg" alt="Логотип" class="footer__logo">
+                </div>
+                <div class="footer__contacts">
+                    <span class="footer__time">Время работы пекарни: С 8.00 до 22.00</span>
+                    <a href="tel:+79037654321" class="header__tel">+7(903) 765 43 21</a>
+                    <a href="tel:+79037654321" class="header__tel">+7(903) 765 43 21</a>
+                    <button class="button button_recall">Обратный звонок</button>
+                </div>
+                <div class="footer__contacts">
+                    <span class="footer__contact">1-я Бухвостова 12/11 корпус 4 Преображенская Площадь</span>
+                    <a href="mailto:info@osetinskie-pirogi.com" class="footer__contact">info@osetinskie-pirogi.com</a>
+                </div>
+            </div>
+            <div class="footer__questions">
+                <span class="footer__question">У вас есть вопросы?</span>
+                <span class="footer__text">Напишите нам в: <a href="#" class="footer__question-link">Viber</a> | <a href="#" class="footer__question-link">Telegram</a> | <a href="#" class="footer__question-link">Facebook</a> | <a href="#" class="footer__question-link">Instagram</a></span>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="container">
+                <div class="footer__bottom-wrap">
+                    <span class="footer__copyright">2020 © Пекарня Очаг<span> ОГРН 316151300074546</span></span>
+                    <div class="footer__socials">
+                        <a href="#" class="footer__social">
+                            <svg xmlns="http://www.w3.org/2000/svg" id="Bold" enable-background="new 0 0 24 24" viewBox="0 0 24 24">
+                                <path d="m15.997 3.985h2.191v-3.816c-.378-.052-1.678-.169-3.192-.169-3.159 0-5.323 1.987-5.323 5.639v3.361h-3.486v4.266h3.486v10.734h4.274v-10.733h3.345l.531-4.266h-3.877v-2.939c.001-1.233.333-2.077 2.051-2.077z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="footer__social">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 438.536 438.536" style="enable-background:new 0 0 438.536 438.536;" xml:space="preserve">
+                                <path d="M421.981,16.562C410.941,5.519,397.711,0,382.298,0H56.248C40.83,0,27.604,5.521,16.561,16.562   C5.52,27.6,0.001,40.828,0.001,56.243V382.29c0,15.413,5.518,28.644,16.56,39.683c11.043,11.04,24.272,16.563,39.687,16.563   h326.046c15.41,0,28.644-5.523,39.684-16.563c11.043-11.039,16.557-24.27,16.557-39.683V56.243   C438.534,40.825,433.021,27.604,421.981,16.562z M157.462,158.025c17.224-16.652,37.924-24.982,62.097-24.982   c24.36,0,45.153,8.33,62.381,24.982c17.228,16.655,25.837,36.785,25.837,60.386c0,23.598-8.609,43.729-25.837,60.379   c-17.228,16.659-38.014,24.988-62.381,24.988c-24.172,0-44.87-8.336-62.097-24.988c-17.228-16.652-25.841-36.781-25.841-60.379   C131.621,194.81,140.234,174.681,157.462,158.025z M388.865,370.589c0,4.945-1.718,9.083-5.141,12.416   c-3.433,3.33-7.519,4.996-12.282,4.996h-305.2c-4.948,0-9.091-1.666-12.419-4.996c-3.333-3.326-4.998-7.471-4.998-12.416V185.575   H89.08c-3.805,11.993-5.708,24.462-5.708,37.402c0,36.553,13.322,67.715,39.969,93.511c26.65,25.786,58.721,38.685,96.217,38.685   c24.744,0,47.583-5.903,68.527-17.703c20.937-11.807,37.486-27.839,49.676-48.112c12.183-20.272,18.274-42.4,18.274-66.38   c0-12.94-1.91-25.406-5.715-37.402h38.547v185.014H388.865z M388.865,115.626c0,5.52-1.903,10.184-5.716,13.99   c-3.805,3.809-8.466,5.711-13.989,5.711h-49.676c-5.517,0-10.185-1.903-13.99-5.711c-3.806-3.806-5.708-8.47-5.708-13.99V68.522   c0-5.33,1.902-9.945,5.708-13.848c3.806-3.901,8.474-5.854,13.99-5.854h49.676c5.523,0,10.185,1.952,13.989,5.854   c3.812,3.903,5.716,8.518,5.716,13.848V115.626z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="footer__social">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="-21 -117 682.66672 682">
+                                <path d="m626.8125 64.035156c-7.375-27.417968-28.992188-49.03125-56.40625-56.414062-50.082031-13.703125-250.414062-13.703125-250.414062-13.703125s-200.324219 0-250.40625 13.183593c-26.886719 7.375-49.03125 29.519532-56.40625 56.933594-13.179688 50.078125-13.179688 153.933594-13.179688 153.933594s0 104.378906 13.179688 153.933594c7.382812 27.414062 28.992187 49.027344 56.410156 56.410156 50.605468 13.707031 250.410156 13.707031 250.410156 13.707031s200.324219 0 250.40625-13.183593c27.417969-7.378907 49.03125-28.992188 56.414062-56.40625 13.175782-50.082032 13.175782-153.933594 13.175782-153.933594s.527344-104.382813-13.183594-154.460938zm-370.601562 249.878906v-191.890624l166.585937 95.945312zm0 0"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="footer__social">
+                            <svg xmlns="http://www.w3.org/2000/svg" id="Bold" enable-background="new 0 0 24 24" viewBox="0 0 24 24">
+                                <path d="m9.417 15.181-.397 5.584c.568 0 .814-.244 1.109-.537l2.663-2.545 5.518 4.041c1.012.564 1.725.267 1.998-.931l3.622-16.972.001-.001c.321-1.496-.541-2.081-1.527-1.714l-21.29 8.151c-1.453.564-1.431 1.374-.247 1.741l5.443 1.693 12.643-7.911c.595-.394 1.136-.176.691.218z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/swiper-bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
