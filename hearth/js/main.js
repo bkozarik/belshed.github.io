@@ -85,6 +85,15 @@ document.addEventListener("DOMContentLoaded", () => {
         main_ReviewsSwiperNode.update();
     }
 
+    const windowScrollHandler = () => {
+        if(window.pageYOffset > 0){
+            toggleElement('.header', true);
+        }
+        else{
+            toggleElement('.header', false);
+        }
+    }
+
     productCounters.forEach(counter => {
         counter.querySelector('.js-product-dec').addEventListener('click', () => {
             let target = event.target;
@@ -161,6 +170,8 @@ document.addEventListener("DOMContentLoaded", () => {
     headerDropdownTrigger.addEventListener('click', headerDropdownToggle());
     cart.addEventListener('click', toggleElement('.js-cart'));
     window.addEventListener('resize', windowResizeHandler);
+    window.addEventListener('scroll', windowScrollHandler);
 
     windowResizeHandler();
+    windowScrollHandler();
 });
