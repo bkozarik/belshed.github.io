@@ -23,7 +23,7 @@
             object-fit: contain
             // width: 145px
             &-wrap
-                height: auto
+                height: 280px
                 width: 30%
                 top: 50%
                 transform: translate(-50%, -50%)
@@ -41,6 +41,11 @@
 
 @media screen and ( max-width: 940px )
     .header
+        position: fixed
+        background-color: #000
+        width: 100%
+        top: 0
+        left: 0
         &__cart
             margin: 0
         &__side
@@ -49,6 +54,8 @@
                 margin: 0px 20px
             &:nth-of-type(2)
                 width: auto
+        & + *
+            margin-top: 117px
     .burger
         transform: none
         position: relative
@@ -181,9 +188,14 @@
                 font-size: 10px
             &-total
                 display: none
+        & + *
+            margin-top: 64px
 
     .cart
         top: calc(100% + 10px)
+
+    .mobile-menu
+        padding: 64px 20px 10px
 
     .burger
         &__icon

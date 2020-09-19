@@ -157,7 +157,7 @@ document.addEventListener("DOMContentLoaded", () => {
     main_PromoSwiperNode.update();
     main_ReviewsSwiperNode.update();    
 
-    menuBtn.addEventListener('click', toggleElement('.js-burger'));
+    menuBtn.addEventListener('click', toggleElement(['.js-burger', '.js-menu']));
     headerDropdownTrigger.addEventListener('click', headerDropdownToggle());
     cart.addEventListener('click', toggleElement('.js-cart'));
     window.addEventListener('resize', windowResizeHandler);
