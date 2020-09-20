@@ -81,8 +81,11 @@ document.addEventListener("DOMContentLoaded", () => {
             document.querySelector('.header').insertBefore(menuBtn, document.querySelector('.header .container'));
         }
 
-        main_PromoSwiperNode.update();
-        main_ReviewsSwiperNode.update();
+        try{
+            main_PromoSwiperNode.update();
+            main_ReviewsSwiperNode.update();
+        }
+        catch{}
     }
 
     const windowScrollHandler = () => {
@@ -161,10 +164,7 @@ document.addEventListener("DOMContentLoaded", () => {
         var main_PromoSwiperNode = document.querySelector('.promo .promo__wrapper').swiper;
         var main_ReviewsSwiperNode = document.querySelector('.reviews .reviews__swiper').swiper;
     }
-    catch{}
-
-    main_PromoSwiperNode.update();
-    main_ReviewsSwiperNode.update();    
+    catch{}   
 
     menuBtn.addEventListener('click', toggleElement(['.js-burger', '.js-menu']));
     headerDropdownTrigger.addEventListener('click', headerDropdownToggle());

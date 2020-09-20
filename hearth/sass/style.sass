@@ -41,6 +41,8 @@ h1, h2, h3, h4, h5
 .text
     &_yellow
         color: $text_yellow
+    &_brown
+        color: #c36f21
 
 .section
     &__title
@@ -74,6 +76,28 @@ button.button, span.button, a.button
         &:hover
             background-color: transparent
             color: $text_yellow
+    &_item
+        font-size: 14px
+        text-transform: uppercase
+        color: #fff
+        padding: 20px 55px
+        background-color: #c36f21
+        border-radius: 50px
+        font-weight: 600
+        margin-top: -5px
+        margin-left: 25px
+        &::after
+            content: ''
+            display: inline-block
+            height: 15px
+            width: 15px
+            background-size: contain
+            background-repeat: no-repeat
+            background-position: center
+            vertical-align: middle
+            margin-left: 8px
+            background-image: url(../img/icons/cart_tovar-w.svg)
+            margin-top: -5px
     &_product
         color: #000
         background-color: $text_yellow
@@ -1349,4 +1373,144 @@ span.button
             svg
                 fill: $text_yellow
 
-        
+//
+//
+//
+// Страница товара
+//
+//
+
+.item
+    background-color: #fff
+    padding: 50px 0px
+    .container
+        max-width: 910px
+    &__img
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+    &__title
+        font-size: 28px
+        font-weight: bold
+        color: #000000
+        white-space: nowrap
+        font-family: 'Open Sans'
+        a
+            font-family: 'Open Sans'
+            color: #C36F21
+    &__card
+        display: grid
+        max-width: 920px
+        height: 580px
+        width: 100%
+        margin: 40px auto 60px
+        grid-template-columns: 64% 36%
+        grid-template-rows: 77% 23%
+    &__order
+        background-color: #ffc122
+        padding: 25px 30px 25px 20px
+        &-wrap
+            display: flex
+            align-items: center
+        .product
+            &__weight
+                &-wrap
+                    margin-top: 10px
+                    align-items: flex-start
+                &-label
+                    input
+                        display: none
+                &-size
+                    background-color: #fff
+                legend
+                    text-transform: uppercase
+                    font-size: 14px
+                    font-weight: 600
+                    letter-spacing: 1px
+                    color: #000
+    &__more
+        background-color: #fff5c1
+        display: flex
+        align-items: center
+        justify-content: center
+        flex-direction: column
+        &-link
+            display: inline-block
+            position: relative
+            max-width: 185px
+            font-size: 14px
+            font-weight: 600
+            line-height: 22px
+            color: #000
+            text-decoration: underline
+            & + &
+                margin-top: 8px
+            &::after
+                content: ''
+                display: inline-block
+                position: absolute
+                border: 10px solid transparent
+                right: -40px
+                top: 45%
+                transform: translateY(-50%)
+                border-left: 15px solid #ffc530
+
+.compound
+    padding-left: 70px
+    padding-top: 25px
+    justify-items: start
+    border-top: 1px solid rgba(0, 0, 0, .1)
+    border-left: 1px solid rgba(0, 0, 0, .1)
+    border-right: 1px solid rgba(0, 0, 0, .1)
+    &__title
+        font-weight: bold
+        font-size: 18px
+        margin-left: -20px
+        display: block
+    &__list + &__head
+        margin-top: 20px
+    &__head 
+        text-transform: uppercase
+        letter-spacing: 1.22px
+        font-size: 14px
+        font-weight: 500
+        padding: 5px 30px
+        background-color: $text_yellow
+        border-radius: 30px
+        text-align: center
+        margin-left: -30px
+        margin-bottom: 10px
+        display: inline-block
+        margin-top: 15px
+    &__item
+        list-style-type: none
+        font-size: 13px
+        line-height: 21px
+
+.description
+    padding-bottom: 75px
+    .container
+        max-width: 910px
+    &__wrap
+        display: flex
+    &__title
+        font-size: 36px
+        font-weight: 600
+        margin-bottom: 20px
+        display: inline-block
+    &__card
+        padding: 55px
+        background-color: #fff
+        box-shadow: 0 0 20px 20px rgba(0, 0, 0, .05)
+        outline: 2px dotted rgba(0,0,0,0.3)
+        outline-offset: -25px
+        margin-left: 60px
+        min-width: 455px
+    &__text
+        font-size: 16px
+        font-weight: 300
+    &__bold
+        font-weight: bold   
+        font-size: 21px
+        margin-top: .5em
