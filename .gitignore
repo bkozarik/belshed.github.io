@@ -4,4 +4,4 @@
 *.rar
 *.zip
 */node_modules
-/dentko2
+*/sources

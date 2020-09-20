@@ -85,6 +85,8 @@ section
             align-items: center
 
 .text
+    &_red
+        color: #f62f2f
     &_ttu
         text-transform: uppercase
     &_orange
@@ -182,7 +184,7 @@ section
     &__item
         display: flex
         align-items: center
-        max-width: 380px
+        max-width: 400px
         & + &
             margin-top: 45px
         &-body
@@ -194,6 +196,7 @@ section
             font-size: 18px
             line-height: 24px
             display: block
+            font-weight: 700
             margin-bottom: 5px
 
 .examples
@@ -522,8 +525,333 @@ section
 
 .error
     margin-top: 120px
+    &__bg
+        bottom: 0
+        position: absolute
+        left: 0
+        width: 100%
+        z-index: -1
     .section__title
         max-width: 680px
+    &__subtitle
+        font-size: 16px
+        font-weight: 300
+        display: inline-block
+        max-width: 590px
+        margin-top: 80px
+    &__attention
+        font-size: 22px
+        font-weight: 500
+        display: block
+        margin-top: 50px
+        margin-bottom: 50px
+    &__item
+        background-color: #fff
+        border-radius: 4px
+        padding: 35px 40px 25px
+        box-shadow: 0 0 20px 10px rgba(0, 0, 0, .05)
+        max-width: 50%
+        margin-right: 15px
+        margin-bottom: 15px
+        &-title
+            font-weight: 700
+            font-size: 16px
+            display: inline-block
+            margin-bottom: 40px
+            position: relative
+            &::before
+                content: ''
+                display: inline-block
+                margin-right: 15px
+                height: 20px
+                width: 20px
+                background-image: url(../img/icons/close.svg)
+                vertical-align: middle
+        &-text
+            font-weight: 300
+            font-size: 16px
+            color: #303030
+            line-height: 26px
+            & + &
+                margin-top: 1em
+        &_big
+            max-width: 800px
+            margin-bottom: 15px
+        &_green
+            background-color: #85d17d
+            p
+                color: #fff
+                font-size: 20px
+                line-height: 26px
+    &__container
+        max-height: 830px
+        height: 100%
+        display: flex
+        flex-direction: column
+        flex-wrap: wrap
 
-.footer
+.compare
+    margin-top: 90px
+    &__hummer
+        position: absolute
+        left: -20px
+        top: 40px
+    &__tree
+        &_1
+            position: absolute
+            left: 0
+            top: 700px
+        &_2
+            position: absolute
+            right: 0
+    &__subtitle
+        font-weight: 300
+        font-size: 26px
+        margin-top: 40px
+    &__container
+        display: flex
+        justify-content: space-between
+        margin-top: 80px
+    &__side
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        max-width: 500px
+    &__icon
+        max-width: 65px
+    &__title
+        display: block
+        font-weight: 700
+        line-height: 24px
+        margin-top: 25px
+    &__text
+        font-size: 16px
+        font-weight: 300
+        line-height: 26px
+        margin-top: 30px
+        color: #303030
+    &__head
+        margin-bottom: 45px
+    &__footer
+        display: flex
+        justify-content: center
+        margin-top: 80px
+        &-text
+            font-size: 20px
+            max-width: 740px
+            text-align: center
+            display: inline-block
+    &__item
+        display: flex
+        margin-right: 30px
+        & + &
+            margin-top: 35px
+        &-img
+            width: 130px
+            height: 130px
+            border-radius: 50%
+            overflow: hidden
+            object-fit: cover
+        &-body
+            width: 60%
+            margin-left: 30px
+        &-text
+            font-size: 16px
+            font-weight: 300
+            line-height: 24px
+            & + &
+                margin-top: 1.5em
+
+.advantages
+    margin-top: 60px
+    &__container
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap
+        align-items: baseline
+    .section__title
+        max-width: 650px
+        margin: 0 auto
+
+.advantage
+    max-width: 545px
+    margin-top: 75px
+    &__img
+        max-width: 140px
+        max-height: 130px
+        height: auto
+    &__title
+        font-weight: 700
+        font-size: 20px
+        line-height: 30px
+        display: block
+        margin: 30px 0px
+    &__text
+        font-weight: 300
+        font-size: 16px
+        line-height: 30px
+        color: #303030
+        & + &
+            margin-top: 1.5em
+
+.benefits
+    margin-top: 75px
+    padding-bottom: 100px
+    &__bg
+        position: absolute
+        bottom: 0
+        left: 0
+        width: 100%
+        z-index: -1
+    &__container
+        margin-top: 50px
+        display: flex
+        justify-content: space-between
+        align-items: flex-start
+        flex-wrap: wrap
+
+.benefit
+    padding: 55px 40px 40px
+    background-color: #fff
+    border-radius: 4px
+    max-width: 440px
+    position: relative
+    margin-top: 75px
+    box-shadow: 0 0 20px 10px rgba(0, 0, 0, .05)
+    &:nth-child(1)
+        transform: translateX(100px)
+    &:nth-child(2)
+        transform: translateX(-100px)
+    &__title
+        font-weight: 700
+        font-size: 18px
+        line-height: 26px
+    &__text
+        margin-top: 20px
+        font-size: 16px
+        font-weight: 300
+        color: #303030
+    &::before
+        content: ''
+        display: inline-block
+        position: absolute
+        height: 60px
+        width: 60px
+        background-image: url(../img/icons/check.svg)
+        background-size: contain
+        background-repeat: no-repeat
+        top: 0
+        transform: translateY(-50%)
+
+.addons
+    padding-bottom: 100px
+    &__container
+        margin: 70px auto 0px
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        align-items: baseline
+        max-width: 850px
+        width: 100%
+
+.addon
+    max-width: 175px
+    display: flex
+    flex-direction: column
+    align-items: center
+    margin: 20px
+    &__title
+        text-align: center
+        display: inline-block
+        font-size: 16px
+        line-height: 26px
+        font-weight: 300
+        color: #303030
+
+.reports
+    padding-bottom: 100px
+    &__bg
+        position: absolute
+        right: 0
+        top: 50%
+        transform: translateY(-50%)
+    &__body
+        max-width: 550px
+    &__wrap
+        display: flex
+        justify-content: space-between
+        align-items: flex-start
+    &__tel
+        background-color: #f7f7f7
+        padding: 20px 15px
+        display: flex
+        align-items: center
+        width: 100%
+    &__link
+        white-space: nowrap
+        font-size: 26px
+        line-height: 20px
+        font-weight: 500
+        color: #393939
+    &__subtext
+        color: #777777
+        font-weight: 300
+        font-size: 12px
+        margin-left: 15px
+        display: inline-block
+    &__swiper
+        position: relative
+        margin-right: 120px
+        margin-top: 40px
+    &__control
+        position: absolute
+        display: inline-block
+        z-index: 4
+        top: 50%
+        width: 65px
+        height: 65px
+        border-radius: 50%
+        background: rgb(255,195,92)
+        background: linear-gradient(180deg, rgba(255,195,92,1) 0%, rgba(255,170,24,1) 100%)
+        &:focus
+            outline: none
+        &::before, &::after
+            content: ''
+            display: inline-block
+            position: absolute
+            left: 50%
+            transform: translate(-50%, -50%)
+            height: 1px
+            width: 20px
+            background-color: #fff
+        &::before
+            top: 40.5%
+            transform: translate(-50%, -50%) rotate(-45deg)
+        &::after
+            top: 60.5%
+            transform: translate(-50%, -50%) rotate(45deg)
+        &_prev
+            left: 0
+            transform: translate(-50%, -50%)
+        &_next
+            right: 0
+            transform: translate(50%, -50%) rotate(180deg)
+            background: linear-gradient(0deg, rgba(255,195,92,1) 0%, rgba(255,170,24,1) 100%)
+    &__iphone
+        max-width: 275px
+        width: 100%
+        position: relative
+        z-index: 3
+        overflow: hidden
+        .swiper-wrapper, .swiper-slide, .swiper-slide img
+            width: 100%
+        .swiper-slide img
+            object-fit: cover
+            max-height: 540px
+
+    .banner
+        &__item
+            max-width: none
+
+.footer 
     flex-grow: 0

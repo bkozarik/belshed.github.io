@@ -11,6 +11,16 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    const reportsSwiper = new Swiper('.reports__iphone', {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        centeredSlides: true,
+        loop: true,
+        navigation: {
+            prevEl: '.reports__control_prev',
+            nextEl: '.reports__control_next',
+        }
+    });
 
     tableCells.forEach(cell => {
         if(cell.innerText === "+"){

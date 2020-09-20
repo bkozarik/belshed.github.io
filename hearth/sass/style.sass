@@ -39,6 +39,8 @@ h1, h2, h3, h4, h5
     padding: 0px 15px
 
 .text
+    &_bold
+        font-weight: bold !important
     &_yellow
         color: $text_yellow
     &_brown
@@ -122,6 +124,15 @@ button.button, span.button, a.button
             margin-top: -5px
         &:hover
             background-color: transparent
+    &_contacts
+        color: #000
+        text-transform: uppercase
+        font-size: 14px
+        font-weight: 600
+        line-height: 22px
+        background-color: $text_yellow
+        border-radius: 40px
+        padding: 15px 20px
     &_all
         color: #000
         background-color: #fff
@@ -1514,3 +1525,176 @@ span.button
         font-weight: bold   
         font-size: 21px
         margin-top: .5em
+
+//
+//
+//
+// Страница Контактов
+//
+//
+
+.contacts
+    &__table
+        display: grid
+        grid-template-columns: 60% 40%
+        border: 1px solid #ccc
+        border-radius: 3px
+    &__qr
+        height: 40px
+        width: 40px
+        object-fit: contain
+    &__side
+        padding: 30px
+        &:nth-child(1)
+            padding: 30px 30px 30px 70px
+        &:last-child
+            display: flex
+            flex-direction: column
+        & + &
+            border-left: 1px solid #ccc
+    &__row
+        width: 100%
+        display: flex
+        justify-content: space-between
+        & + &
+            margin-top: 25px
+        &:last-child
+            margin-top: auto
+    &__social
+        color: #000000
+        font-size: 18px
+        line-height: 24px
+        text-decoration: none
+        max-width: 260px
+        img
+            vertical-align: middle
+            margin-right: 10px
+        &-link
+            text-decoration: underline
+            color: #000
+            font-weight: bold
+            font-size: 18px
+    &__tel
+        position: relative
+        &::before
+            content: ''
+            margin-right: 10px
+            height: 30px
+            width: 30px
+            position: absolute
+            left: -40px
+            display: inline-block
+            vertical-align: middle
+            background-size: contain
+            background-repeat: no-repeat
+        &:nth-child(1)
+            &::before
+                background-image: url(../img/icons/tel_1.png)
+        &:nth-child(2)
+            &::before
+                background-image: url(../img/icons/tel_2.png)
+        &:nth-child(3)
+            &::before
+                background-image: url(../img/icons/tel_3.png)
+        & + &
+            margin-top: 30px
+        a
+            font-weight: bold
+            font-size: 18px
+            color: #000
+            display: block
+    &__smalltext
+        font-size: 13px
+        color: #000
+        list-style-type: none
+    .container
+        max-width: 980px
+
+.information
+    margin-top: 20px
+    &__item
+        position: relative
+        &:nth-child(1), &:nth-child(3)
+            padding: 20px 25px
+    &__title
+        letter-spacing: 1.22px
+        text-transform: uppercase
+        font-size: 17px
+        font-weight: 600
+    &__container
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        border: 1px solid #ccc
+        border-radius: 3px
+        width: 100%
+    &__head
+        display: flex
+        align-items: center
+        justify-content: space-between
+        width: 100%
+        margin-bottom: 15px
+    &__img
+        position: absolute
+        height: 100%
+        width: 100%
+        object-fit: cover
+    &__text
+        font-size: 16px
+        & + &
+            margin-top: 10px
+    .container
+        max-width: 980px
+
+.info
+    padding-bottom: 85px
+    margin-top: 50px
+    &__sertificate
+        margin-top: 25px
+        & + &
+            margin-left: 30px
+    .description
+        &__body
+            padding-top: 50px
+        &__text
+            margin-top: 15px
+        &__card
+            .information__title
+                text-align: center
+                display: block
+    .container
+        max-width: 980px
+
+.map, .requisites
+    padding-bottom: 70px
+    &__title
+        width: 100%
+        text-align: center
+        padding: 20px 0px
+        background-color: #f7c76c
+        color: #000
+        text-transform: uppercase
+        font-weight: bold
+        letter-spacing: 1.22px
+        font-size: 18px
+    &__text
+        font-size: 16px
+        font-weight: 600
+        line-height: 24px
+        display: block
+        & + &
+            margin-top: 5px
+    &__container
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap
+        max-width: 750px
+        padding-top: 40px
+    &__col
+        max-width: 320px
+        margin-top: 20px
+    &__section
+        & + &
+            margin-top: 40px
+    .container
+        max-width: 980px
+
