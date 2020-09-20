@@ -32,6 +32,9 @@ h1, h2, h3, h4, h5
     &, &>*
         font-family: 'Raleway', 'Open Sans', sans-serif
 
+section
+    position: relative
+
 .container
     margin: 0 auto
     position: relative
@@ -661,10 +664,19 @@ span.button
 
 .banner
     flex-grow: 0
-    background-image: url(../img/banner_bg.jpg)
+    background: rgb(255,220,64)
+    background: radial-gradient(circle, rgba(255,220,64,1) 0%, rgba(227,119,30,1) 100%)
     background-size: cover
     background-repeat: no-repeat
     background-position: center
+    &__bg
+        position: absolute
+        top: 50%
+        left: 60%
+        transform: translate(-50%, -50%)
+        &-m
+            position: absolute
+            display: none
     &__content
         padding: 60px 0px 130px
         position: relative

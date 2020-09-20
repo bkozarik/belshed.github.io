@@ -17,7 +17,8 @@
 
 @media screen and ( max-width: 1030px )
     .banner
-        background-image: url(../img/banner_bg-m.jpg)
+        &__bg
+            top: 40%
         &__logo
             width: 160%
             object-fit: contain
@@ -187,6 +188,17 @@
         .description
             &__body
                 padding-top: 0
+
+    .banner
+        background: radial-gradient(circle, rgba(255,220,64,1) 60%, rgba(227,119,30,1) 100%)
+        &__bg
+            display: none
+            &-m
+                display: block
+                left: 50%
+                top: 40%
+                width: 100%
+                transform: translate(-50%, -50%)
 
     .menu
         .container
