@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./css/fonts.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/media.css">
-    <title>Доставка</title>
+    <title>Акции</title>
 </head>
 <body>
     <header class="header">
@@ -225,15 +225,17 @@
         </div>
     </div>
     <main class="main">
-        <section class="takeaway contacts">
+        <section class="promo_page contacts">
             <div class="container container_small">
-                <h2 class="section__title">Доставка осетинских пирогов</h2>
-                <h3 class="section__colored">Самовывоз</h3>
+                <h2 class="section__title">Осетинские Пироги - акции и скидки</h2>
+                <h3 class="section__colored">Акции на сегодня <sapn class="text_date">c 8.00 до 22.00</sapn></h3>
                 <div class="contacts__table">
                     <div class="contacts__side">
-                        <p class="contacts__text"><b>С адреса:</b> 1-я Бухвостовая улица, 12/11 корпус 4. Метро Преображенская площадь</p>
-                        <p class="contacts__text text_bold">Cкидка 10% по предварительному заказу.</p>
-                        <span class="information__title">Доставка на сумму от 600 руб:</span>
+                        <img src="./img/item.png" alt="Фото продукта" class="contacts__side-img">
+                    </div>
+                    <div class="contacts__side">
+                        <span class="information__title">Акция товар дня! вернем 30% от стоимости <a href="#">ЭТОГО товара (Арт:231)</a> (276 руб. при весе 1200 гр).</span>
+                        <span class="information__title">Виды возврата по акции (товар дня):</span>
                         <ul class="takeaway__list">
                             <li>Преображенский</li>
                             <li>Сокольники</li>
@@ -241,214 +243,135 @@
                             <li>Богородское</li>
                             <li>Красносельский</li>
                         </ul>
+                        <a href="./item.html" class="button button_promo">Посмотреть товар</a>
                     </div>
-                    <div class="contacts__side">
-                        <span class="information__title">Доставка по:</span>
-                        <div class="takeaway__select">
-                            <select>
-                                <option>Станция метро</option>
-                                <option>Станция метро</option>
-                                <option>Станция метро</option>
-                                <option>Станция метро</option>
-                            </select>
+                </div>
+                <div class="promos__swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide promos__slide">
+                            <div class="promos__head">
+                                <img src="./img/pizza.png" alt="Иконка" class="promos__img">
+                                <span class="promos__title">Акция!</span>
+                            </div>
+                            <span class="promos__text">При заказе на сумму от 5000 рублей +1 любая пицца на сумму до 600 р. в подарок.</span>
+                            <span class="promos__text">Скидка 0%</span>
                         </div>
-                        <div class="takeaway__select">
-                            <select>
-                                <option>район москвы</option>
-                                <option>район москвы</option>
-                                <option>район москвы</option>
-                                <option>район москвы</option>
-                            </select>
+                        <div class="swiper-slide promos__slide">
+                            <div class="promos__head">
+                                <img src="./img/cacke.png" alt="Иконка" class="promos__img">
+                                <span class="promos__title">Акция!</span>
+                            </div>
+                            <span class="promos__text">Скидка на День Рождения 5%</span>
+                            <span class="promos__text">Скидка 5%</span>
                         </div>
-                        <div class="takeaway__select">
-                            <select>
-                                <option>улицы москвы</option>
-                                <option>улицы москвы</option>
-                                <option>улицы москвы</option>
-                                <option>улицы москвы</option>
-                            </select>
+                        <div class="swiper-slide promos__slide">
+                            <div class="promos__head">
+                                <img src="./img/time.png" alt="Иконка" class="promos__img">
+                                <span class="promos__title">Акция!</span>
+                            </div>
+                            <span class="promos__text">При предварительном заказе</span>
+                            <span class="promos__text">Скидка 5%</span>
                         </div>
-                        <p class="contacts__smalltext">* Списки сортируются автоматически, по популярности осетинских пирогов в районе</p>
+                        <div class="swiper-slide promos__slide">
+                            <div class="promos__head">
+                                <img src="./img/pizza.png" alt="Иконка" class="promos__img">
+                                <span class="promos__title">Акция!</span>
+                            </div>
+                            <span class="promos__text">При заказе на сумму от 5000 рублей +1 любая пицца на сумму до 600 р. в подарок.</span>
+                            <span class="promos__text">Скидка 0%</span>
+                        </div>
+                        <div class="swiper-slide promos__slide">
+                            <div class="promos__head">
+                                <img src="./img/cacke.png" alt="Иконка" class="promos__img">
+                                <span class="promos__title">Акция!</span>
+                            </div>
+                            <span class="promos__text">Скидка на День Рождения 5%</span>
+                            <span class="promos__text">Скидка 5%</span>
+                        </div>
+                        <div class="swiper-slide promos__slide">
+                            <div class="promos__head">
+                                <img src="./img/time.png" alt="Иконка" class="promos__img">
+                                <span class="promos__title">Акция!</span>
+                            </div>
+                            <span class="promos__text">При предварительном заказе</span>
+                            <span class="promos__text">Скидка 5%</span>
+                        </div>
+                    </div>
+                    <div class="promos__controls">
+                        <a href="#" class="promos__control promos__control_prev"></a>
+                        <div class="promos__pagination"></div>
+                        <a href="#" class="promos__control promos__control_next"></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="description_delivery promo">
+            <div class="container">
+                <h3 class="section__colored">Постоянные акции</h3>
+                <div class="promo__container">
+                    <div class="promo__block">
+                        <img src="./img/discount.png" alt="Иконка" class="promo__icon">
+                        <p class="promo__text">Вы у нас впервые? С 27.05.2019 - <b>скидка на Ваш первый заказ - 5%!</b></p>
+                    </div>
+                    <div class="promo__block">
+                        <img src="./img/discount.png" alt="Иконка" class="promo__icon">
+                        <p class="promo__text"><a href="#">Пирог с сыром</a>, <a href="#">пирог с картошкой и жареным луком</a>, <a href="#">пирог с капустой</a> (весом 600 грамм) <b>за 1000 рублей!</b> (<i>акция не суммируется с другими акциями</i>)</p>
+                    </div>
+                    <div class="promo__block">
+                        <img src="./img/discount.png" alt="Иконка" class="promo__icon">
+                        <p class="promo__text">При заказе любых трех пирогов одного веса, четвертый пирог <a href="#">с картошкой и жареным луком,</a> или <a href="#">с капустой</a> или <a href="#">с картошкой и капустой</a> <b>в подарок (600 грамм)!</b> (<i>акция не суммируется с другими акциями</i>)</p>
+                    </div>
+                    <div class="promo__block">
+                        <img src="./img/discount.png" alt="Иконка" class="promo__icon">
+                        <p class="promo__text">Самовывоз по предварительному заказу - <b>со скидкой 10%</b> (с адреса: 1-я Бухвостова улица, 12/11 корпус 4. Метро Преображенская Площадь)</p>
+                    </div>
+                    <div class="promo__block">
+                        <img src="./img/discount.png" alt="Иконка" class="promo__icon">
+                        <p class="promo__text">С 30.10.2017 года, при достижении общей суммы онлайн заказов в 30 тысяч рублей, предоставляется бонус <b>– бесплатная доставка заказа на 3000 рублей!</b></p>
+                    </div>
+                    <div class="promo__block">
+                        <img src="./img/discount.png" alt="Иконка" class="promo__icon">
+                        <p class="promo__text">При заказе после 13 часов и в ночное время к скидке прибавляется <b>- 3%!</b> (может уменьшаться при достижении итоговой скидки <b>- 10%</b>)</p>
+                    </div>
+                    <div class="promo__block">
+                        <img src="./img/discount.png" alt="Иконка" class="promo__icon">
+                        <p class="promo__text">При заказе по дисконтной карте скидка <b>- 10%!</b></p>
+                    </div>
+                    <div class="promo__block">
+                        <img src="./img/discount.png" alt="Иконка" class="promo__icon">
+                        <p class="promo__text">С 26.06.2013 г. При повторном заказе через сайт, вы можете оставить отзыв о прошлой покупке, и это дает Вам <b>+3% скидки</b> на следующую покупку автоматически!</p>
                     </div>
                 </div>
             </div>
         </section>
         <section class="description description_delivery">
             <div class="container container_small">
-                <h3 class="section__colored">Осетинские пироги в Москве с быстрой бесконтактной доставкой</h3>
                 <div class="description__wrap">
-                    <div class="description__card mr">
-                        <p class="description__bold description__text">При сумме заказа от 1000 рублей, доставка в пределах МКАД бесплатно!</p>
-                        <p class="description__text">Бесконтактная доставка означает, что не нужно лично общаться с нашим курьером, он поставит заказ у дверей, отойдет на положенное по правилам расстояние и позвонит о доставке по Вашему номеру телефона.</p>
-                        <p class="description__bold description__text text_brown">Такой вид доставки возможен при оплате онлайн. </p>
-                        <p class="description__bold description__text text_brown">У нас самая быстрая и надежная доставка осетинских пирогов по адресу.</p>
-                        <p class="description__bold description__text text_brown">Все честно, если видим, что не успеем к нужному для заказчика часу, то скажем ему об этом сразу.</p>
-                    </div>
                     <div class="description__body">
-                        <p class="description__text">Кроме того важно знать о том, что каждый рабочий день в течении смены абсолютно все сотрудники пекарни и курьеры на строгом медицинском контроле.</p>
-                        <p class="description__text">В пекарне все находящиеся в помещении сотрудники с обязательным использованием индивидуальных средств защиты.</p>
-                        <p class="description__text">Все, что используется для доставки, это сохраняющие тепло сумки, обрабатывается дезинфицирующими средствами после каждого заказа.</p>
-                        <p class="description__text">У нас организована доставка осетинских пирогов по всей Москве. Доставляем осетинские пироги в будни, в выходные и праздничные дни, в том числе на Новогодние праздники.</p>
-                        <p class="description__text">Есть доставка за МКАД в пределах ста километров. Стоимость и время можно уточнить у операторов. Возможность доставки в отдаленный район, ее стоимость и сумму минимального заказа можно узнать по телефону.</p>
-                        <p class="description__text">Стоимость и время доставки за МКАД может изменяться, в зависимости от количества пирогов в заказе и дорожной ситуации в данный момент.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="colored">
-            <div class="container">
-                <div class="colored__wrap">
-                    <span class="colored__title text_ttu">Самая быстрая и надежная доставка осетинских пирогов в Москве</span>
-                    <button class="button button_item button_colored">ЗАКАЗАТЬ ОСЕТИНСКИЕ ПИРОГИ В МОСКВЕ С ДОСТАВКОЙ</button>
-                </div>
-            </div>
-        </section>
-        <section class="pair">
-            <div class="container">
-                <div class="pair__container">
-                    <div class="pair__item">
-                        <span class="section__colored">Доставка в пределах МКАД</span>
-                        <div class="pair__table-wrap">
-                            <table class="pair__table" cellspacing="0">
-                                <tr>
-                                    <th>Расстояние</th>
-                                    <th>Время доставки</th>
-                                    <th>Стоимость доставки</th>
-                                    <th>Минимальная сумма заказа</th>
-                                </tr>
-                                <tr>
-                                    <td>До 2 остановок метро</td>
-                                    <td>Менее 40 минут</td>
-                                    <td>0 рублей</td>
-                                    <td>600 рублей</td>
-                                </tr>
-                                <tr>
-                                    <td>Более2 остановокметро</td>
-                                    <td>от 40 минут до 1 часа</td>
-                                    <td>0 рублей</td>
-                                    <td>1000 рублей</td>
-                                </tr>
-                                <tr>
-                                    <td>Более2 остановокметро</td>
-                                    <td>от 40 минут до 1 часа</td>
-                                    <td class="text_bold">300 рублей</td>
-                                    <td class="text_bold">при заказе менее</td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
-                    <div class="pair__item">
-                        <span class="section__colored">Доставка за МКАД</span>
-                        <div class="pair__table-wrap">
-                            <table class="pair__table" cellspacing="0">
-                                <tr>
-                                    <th>Расстояние</th>
-                                    <th>Время доставки</th>
-                                    <th>Стоимость доставки</th>
-                                    <th>Минимальная сумма заказа</th>
-                                </tr>
-                                <tr>
-                                    <td>До 30 км. от МКАД</td>
-                                    <td>менее 2 часов</td>
-                                    <td>350 рублей	</td>
-                                    <td>2000 рублей</td>
-                                </tr>
-                                <tr>
-                                    <td>От 30 км.до 100 км. от МКАД</td>
-                                    <td>2-3 часа</td>
-                                    <td>450 рублей</td>
-                                    <td>2700 рублей</td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="map map_delivery">
-            <div class="container">
-                <h2 class="map__title">Карта доставки по Москве и Московской области</h2>
-                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ab5299d29e4c2ef588ae0fc1f42192eb712ba237284524f4fce5ced1fe1dbe66d&amp;source=constructor" width="100%" height="400" frameborder="0"></iframe>
-            </div>
-        </section>
-        <section class="pair">
-            <div class="container">
-                <div class="pair__container">
-                    <div class="pair__item">
-                        <span class="information__title">Оплата любым способом!</span>
+                        <span class="description__title">Примечания</span>
                         <ul class="takeaway__list">
-                            <li>Наличными курьеру при получении</li>
-                            <li>Любой кредитной картой</li>
-                            <li>Электронными деньгами</li>
-                            <li>В терминалах оплаты</li>
-                            <li>Безналичный расчет</li>
+                            <li>Скидки не распространяются на наборы, т.к. они уже идут со скидкой</li>
+                            <li>Максимально возможная скидка включая накопительную и все дополнительные <b>- 10%!</b></li>
+                            <li>Отзывы могут писать только зарегистрированные на сайте клиенты, которые уже сделали первый заказ пирогов!</li>
+                            <li>При заказе через сайт, каждая последующая покупка становится дешевле автоматически, достаточно зарегистрироваться или сделать первый заказ!</li>
+                            <li>Накопительные скидки постоянным оффлайн клиентам (договорное обслуживание)</li>
                         </ul>
-                        <p class="pair__card">
-                            <a href="#">170 способов оплаты</a> предоставлены двумя платежными системами Яндекс Касса и Payeer
-                        </p>
-                    </div>
-                    <div class="pair__item">
-                        <span class="section__colored">Размеры пирогов</span>
-                        <table class="pair__table" cellspacing="0">
-                            <tr>
-                                <th>Вес пирога (г.)</th>
-                                <th>Размер пирога(см.)</th>
-                                <th>Размер коробки(см.)</th>
-                            </tr>
-                            <tr>
-                                <td>600</td>
-                                <td>26</td>
-                                <td>27 на 27</td>
-                            </tr>
-                            <tr>
-                                <td>600</td>
-                                <td>26</td>
-                                <td>27 на 27</td>
-                            </tr>
-                            <tr>
-                                <td>600</td>
-                                <td>26</td>
-                                <td>27 на 27</td>
-                            </tr>
-                            <tr>
-                                <td>600</td>
-                                <td>26</td>
-                                <td>27 на 27</td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="description description_delivery">
-            <div class="container container_small">
-                <span class="colored__title">Пироги едут в специальном, утепленном контейнере и приедут к Вам ГАРАНТИРОВАННО горячими!</span>
-                <div class="description__wrap">
-                    <div class="description__body">
-                        <p class="description__text">Уважаемые клиенты, просим Вас, пожалуйста, старайтесь делать заказы заранее.</p>
-                        <p class="description__text">"Горячие закуски" мы изготавливаем только по предварительному заказу!</p>
-                        <p class="description__text">Вы можете в любое время сделать заказ онлайн, на сайте, оператор, в момент онлайн заказа, получает уведомление на почту и по СМС, о Вашем заказе Ваш заказ НЕ МОЖЕТ быть пропущен, забыт или проигнорирован. Однако, оператор для подтверждения заказа перезвонит Вам только в рабочее время, с 8 до 21 часа</p>
-                        <p class="description__text">На праздники, так же, имейте ввиду, 22 го февраля, нам поступает 1 звонок в минуту, и всем нужна доставка на 12-13 часов, разумеется мы вынуждены отказывать большинству клиентов, но те, кто позвонил 21 го, получат заказ 22 го в 12-13 часов обязательно!</p>
-                        <p class="description__bold description__text">При заказе доставки на понедельник в Субботу и Воскресенье - скидка 5%</p>
-                        <p class="description__bold description__text">Онлайн заказ пирогов в ночное время - скидка 3%</p>
-                        <p class="description__bold description__text">Ночная доставка осетинских пирогов не производится!</p>
                     </div>
                     <div class="description__card ml">
-                        <p class="description__bold description__text text_brown">Важно! Мы никогда не предлагаем своим клиентам разогретые полуфабрикаты, под ежедневный объем заказов, мы берем только самые свежие ингредиенты, пироги выпекаются непосредственно перед доставкой, настоящими Осетинскими пекарями!</p>
-                        <p class="description__text">Все, кто имеет отношение к пирогам, имеют действительные медкнижки, пироги готовят в чистом помещении и чистыми руками. Доставка пирогов осуществляется по всей Москве и Области, пироги доедут до Вас достаточно быстро и гарантированно горячими! За время нашей работы, у нас не было ни одного отрицательного отзыва о качестве пирогов, они неизменно вкусные. Любой наш клиент, даже 1 раз заказавший осетинские пироги онлайн, автоматически участвует в дисконтной программе, каждый его последующий заказ будет дешевле.</p>
+                        <p class="description__text">Специальные цены для обслуживания мероприятий - звоните <b>+7(495)724-72-92! </b></p>
+                        <p class="description__bold description__text">Мы на 100% уверены в качестве пирогов, поэтому гарантируем, если пироги Вам не понравятся, мы вернем Вам деньги!</p>
+                        <p class="description__bold description__text text_brown">Для осуществления возврата, необходимо вернуть оставшиеся пироги (в день получения), для проведения экспертизы, после получения результатов из лаборатории, в случае нарушения техпроцесса или стандартов качества, деньги будут возвращены в полном объеме. </p>
                     </div>
                 </div>
-                <p class="description__text">Нам часто пишут розничные магазины, и спрашивают у нас оптовый прайс на осетинские пироги, мы занимаемся доставкой Осетинских пирогов в розничные магазины, прайс будет зависеть от объема закупок и их периодичности, скачайте оптовый прайс пожалуйста оставляйте в письме Ваш телефон, или звоните.</p>
-                <p class="description__text">У нас есть целый ряд бонусных программ, о которых написано в разделе "Акции и Скидки", вы участвуете в них так же автоматически, при заказе на сайте. Общий смысл - чем больше заказ, тем больше бонусов, подарков и скидок Вы получаете. Так же, чем чаще вы заказываете пироги - тем дешевле они Вам обходятся.</p>
-                <p class="description__text">Быстрая <b>доставка осетинских пирогов</b> в Москве: <b>от 30 мин до 1 часа</b> в зависимости от месторасположения, условия доставки уточняйте у оператора</p>
-            </div>
-        </section>
-        <section class="colored">
-            <div class="container">
-                <div class="colored__wrap">
-                    <span class="colored__title text_ttu">Рассчитать время доставки осетинских пирогов<br>(с учетом времени приготовления)</span>
-                    <button class="button button_item button_colored">Показать карту</button>
-                </div>
+                <p class="description__text">Чаще всего 8 марта на нас обрушивается шквал заказов, все на одно и то же время, откроем секрет, так же - как у всех, поэтому 6 марта обычно 7-е полностью расписано, и Вам нужно будет искать долго и упорно кто же Вам доставит пироги вовремя!</p>
+                <p class="description__text">Такая же история происходит и к 23 февраля!</p>
+                <p class="description__text">Чтобы избежать ненужной суеты, <b>сделайте заказ осетинских пирогов на 23 февраля и 8 марта заранее! Лучше прямо сейчас, пока вы здесь!</b></p>
+                <p class="description__text">Гарантируем что мы не забудем про Ваш заказ и забронируем под него время, а так же напомним Вам про него!</p>
+                <p class="description__text">Так что, даже если сейчас сентябрь - смело делайте заказ осетинских пирогов на 8 марта и 23 февраля!</p>    
+                <p class="description__text"><b>Звоните +7(495)724-72-92!</b></p>
+                <h3 class="section__colored">Информация о условиях доставки осетинских пирогов смотрите на странице <a href="./delivery.html">доставка</a></h3>
+
+
             </div>
         </section>
     </main>

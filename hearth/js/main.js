@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const headerDropdownTrigger = document.querySelector('.js-open-header-dropdown');
+    const headerDropdownTriggers = document.querySelectorAll('.js-open-header-dropdown');
     const productCounters = document.querySelectorAll('.product__count');
     const menuBtn = document.querySelector('.js-burger');
     const cart = document.querySelector('.js-open-cart');
@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const headerDropdownToggle = (state) => {
         if(state === undefined){
             return () => {
-                const headerDropdown = document.querySelector('.header__dropdown');
+                const headerDropdown = event.target.parentNode.parentNode;
                 headerDropdown.classList.toggle('active');
             }
         }
@@ -166,8 +166,38 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     catch{}   
 
+    //Слайдер на странице с акциями
+
+    try{
+        let promoPageSwiper = new Swiper('.promos__swiper', {
+            
+            spaceBetween: 10,
+            loop: true,
+            navigation: {
+                prevEl: '.promos__control_prev',
+                nextEl: '.promos__control_next'
+            },
+            pagination: {
+                el: '.promos__pagination',
+                type: 'bullets'
+            },
+            breakpoints: {
+                750: {
+                    slidesPerView: 3,
+                },
+                500: {
+                    slidesPerView: 2,
+                },
+                300: {
+                    slidesPerView: 1,
+                }
+            }
+        });
+    }
+    catch{}
+
     menuBtn.addEventListener('click', toggleElement(['.js-burger', '.js-menu']));
-    headerDropdownTrigger.addEventListener('click', headerDropdownToggle());
+    headerDropdownTriggers.forEach(trigger => trigger.addEventListener('click', headerDropdownToggle()));
     cart.addEventListener('click', toggleElement('.js-cart'));
     window.addEventListener('resize', windowResizeHandler);
     window.addEventListener('scroll', windowScrollHandler);

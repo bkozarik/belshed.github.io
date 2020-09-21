@@ -42,6 +42,14 @@ section
     padding: 0px 15px
 
 .text
+    &_date
+        text-transform: uppercase
+        font-weight: bold
+        font-family: "Open Sans"
+        background-color: #fff
+        padding: 10px
+        border-radius: 30px
+        display: inline-block
     &_bold
         font-weight: bold !important
     &_yellow
@@ -61,9 +69,14 @@ section
         letter-spacing: 1.22px
         font-weight: bold
         display: inline-block
+        a
+            font-family: inherit
+            color: #000
+            text-decoration: underline
     &__title
         @include adaptiv-font(36, 18) 
         line-height: 60px
+        margin: 15px 0px
         color: #333
         text-align: center
 
@@ -113,6 +126,15 @@ button.button, span.button, a.button
             margin-left: 8px
             background-image: url(../img/icons/cart_tovar-w.svg)
             margin-top: -5px
+    &_promo
+        text-transform: uppercase
+        color: #000
+        background-color: $text_yellow
+        border-radius: 40px
+        padding: 22px 34px
+        font-weight: bold
+        font-size: 14px
+        margin-top: 20px
     &_colored
         &::after
             display: none
@@ -283,9 +305,10 @@ span.button
         position: relative
         margin-top: 15px
         perspective: 200px
+        z-index: 2
         &-title
             position: relative
-            z-index: 3
+            z-index: 4
         &-trigger
             position: relative
             height: 18px
@@ -319,6 +342,7 @@ span.button
             top: 120%
             background-color: #fff
             padding: 20px 25px
+            z-index: 3
             box-shadow: 0 0 20px 5px rgba(0, 0, 0, .1)
             .header__tel
                 color: #000
@@ -513,16 +537,81 @@ span.button
     transform: translateY(-110%)
     &.active
         transform: translateY(0%)
+    &__container
+        display: grid
+        grid-template-columns: 1fr 1fr
+        grid-gap: 40px 20px
     &__body
         padding: 20px 0px 0px
     &__title
         font-weight: bold
         font-size: 28px
         color: #fff
+        display: inline-block
+        margin-bottom: 30px
     &__subtitle
         font-weight: bold
         font-size: 22px
         color: #fff
+        margin-bottom: 15px
+        display: inline-block
+        & ~ *
+            padding-left: 20px
+    &__list
+        list-style-type: none
+    &__link
+        color: #fff 
+        font-size: 16px
+        padding: 5px 0px
+        display: inline-block
+        position: relative
+        &::after
+            content: ''
+            display: inline-block
+            position: absolute
+            left: 0
+            bottom: 0px
+            width: 100%
+            height: 1px
+            background-color: $text_yellow
+            transform: scaleX(0)
+            transform-origin: left
+        &.active, &:hover
+            color: $text_yellow
+            &::after
+                transform: scaleX(1)
+    .header
+        &__tel
+            color: #fff
+        &__dropdown
+            margin-top: 0
+            margin-bottom: 20px
+            &-body
+                display: flex
+                flex-direction: column
+                left: -5px
+                .header__tel + .header__tel
+                    margin-top: 10px
+                    margin-bottom: 0
+                .header__tel
+                    color: #000
+    .footer
+        &__contacts
+            max-width: 270px
+            align-items: flex-start
+        &__time
+            margin-left: 0
+            color: #fff
+            font-size: 16px
+            line-height: 22px
+            max-width: 190px
+            &::before
+                background-image: url(../img/icons/clock-m.svg)
+        &__contact
+            color: #fff
+            font-size: 16px
+            line-height: 22px
+            display: block !important
 
 .burger
     position: absolute
@@ -635,7 +724,7 @@ span.button
     padding-top: 0
     &__container
         position: sticky
-        top: 117px
+        top: 116px
     &__icon
         height: 45px
     &__items
@@ -682,6 +771,7 @@ span.button
     background-size: cover
     background-repeat: no-repeat
     background-position: center
+    overflow: hidden
     &__bg
         position: absolute
         top: 50%
@@ -749,9 +839,39 @@ span.button
 
 .promo
     padding: 20px 0px
+    &_page
+        .contacts__side:nth-child(1)
+            padding: 0
+            position: relative  
+            img
+                height: 100%
+                width: 100%
+                object-fit: cover
+                position: absolute
+        .contacts__side:nth-child(2)
+            background-color: #fff
+            align-items: flex-start
     &__wrapper
         overflow: hidden
         position: relative
+    &__block
+        display: flex
+        align-items: center
+        padding: 15px
+        border-left: 1px solid #e8e8e8
+        border-right: 1px solid #e8e8e8
+        & + &
+            border-top: 1px solid #e8e8e8
+        &:last-child
+            border-bottom: 1px solid #e8e8e8
+    &__icon
+        margin-right: 25px
+    &__text
+        font-size: 18px
+        line-height: 24px
+        a
+            color: #000
+            text-decoration: underline
     &__pagination
         position: absolute
         z-index: 5
@@ -1350,8 +1470,9 @@ span.button
         margin-right: 80px
         .header__tel
             color: #333333
-    &__contacts:last-child
-        display: none
+    .footer
+        &__contacts:last-child
+            display: none
     &__questions
         display: flex
         flex-direction: column
@@ -1548,6 +1669,9 @@ span.button
         font-weight: 300
         & + &
             margin-top: 1em
+        & + .section__colored
+            margin-top: 50px
+            padding: 25px 40px
     &__bold
         font-weight: bold   
         font-size: 21px
@@ -1576,7 +1700,17 @@ span.button
                 max-width: 450px
                 margin-right: 0px
                 margin-left: 60px
-
+    .takeaway
+        &__list
+            li + li
+                margin-top: 1em
+            li
+                position: relative
+                padding-left: 20px
+                &::before
+                    top: 6px
+                    left: 0
+                    position: absolute
 //
 //
 //
@@ -1672,6 +1806,11 @@ span.button
         text-transform: uppercase
         font-size: 17px
         font-weight: 600
+        & + &
+            margin-top: 25px
+        a
+            color: #000
+            text-decoration: underline
     &__container
         display: grid
         grid-template-columns: repeat(3, 1fr)
@@ -1755,7 +1894,7 @@ span.button
 //
 //
 //
-// Страница Досавки
+// Страница Доставки
 //
 //
 
@@ -1881,3 +2020,91 @@ span.button
     .button
         white-space: normal
         margin-left: 0
+
+//
+//
+//
+// Страница Акции
+//
+//
+
+.promos
+    &__control
+        display: inline-block
+        height: 20px
+        width: 20px
+        position: relative
+        background-color: #fff
+        &_prev
+        &_next
+            transform: rotate(180deg)
+            &::before, &::after
+                top: 50% !important
+        &:hover
+            &::before, &::after
+                background-color: $text_yellow
+        &::before, &::after
+            content: ''
+            display: inline-block
+            position: absolute
+            width: 10px
+            height: 2px
+            top: 40%
+            left: 0
+            transform: translate(0, -50%)
+            background-color: #9fa3af
+        &::before
+            transform: translate(0, 140%) rotate(45deg)
+        &::after
+            transform: translate(0, -140%) rotate(-45deg)
+    &__controls
+        display: flex
+        width: 100%
+        justify-content: center
+        align-items: center
+        margin-top: 20px
+    &__swiper
+        margin-top: 30px
+        overflow: hidden
+        margin-bottom: 50px
+    &__slide
+        padding: 25px 20px
+        background-color: #fff
+        border: 1px solid #e8e8e8
+        border-radius: 2px
+        min-height: 270px
+    &__pagination
+        display: flex
+        align-items: center
+        margin: 0px 10px
+        .swiper-pagination-bullet + .swiper-pagination-bullet
+            margin-left: 10px
+        .swiper-pagination-bullet
+            background-color: #9fa3af
+            height: 12px
+            width: 12px
+            opacity: 1
+        .swiper-pagination-bullet-active
+            background-color: $text_yellow
+            height: 12px
+            width: 12px
+    &__head
+        display: flex
+        align-items: center
+    &__img
+        width: 70px
+        height: 70px
+        object-fit: contain
+    &__text
+        font-size: 17px
+        display: inline-block
+        margin-top: 15px
+        & + &
+            display: block
+            margin-top: 5px
+            font-weight: bold
+    &__title
+        text-transform: uppercase
+        font-weight: bold
+        letter-spacing: 1.22px
+        margin-left: 15px

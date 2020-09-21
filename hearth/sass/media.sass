@@ -103,6 +103,8 @@
     .contacts
         &__table
             grid-template-columns: 1fr
+        &__side
+            min-height: 300px
         &__row
             &:last-child
                 margin-top: 40px
@@ -218,6 +220,19 @@
                 top: 40%
                 width: 100%
                 transform: translate(-50%, -50%)
+
+    .mobile-menu
+        &__container
+            grid-template-columns: 1fr
+        &__section
+            &:nth-child(1)
+                order: 0
+            &:nth-child(2)
+                order: 4
+            &:nth-child(3)
+                order: 1
+            &:nth-child(4)
+                order: 3
 
     .menu
         .container
@@ -376,6 +391,14 @@
                 font-size: 34px
                 letter-spacing: -2px
 
+    .promo
+        &__block
+            align-items: flex-start
+        &__text
+            font-size: 16px
+        &__icon
+            margin-right: 10px
+
     .footer
         padding-top: 20px
         background-color: #000
@@ -446,6 +469,10 @@
     .item
         &__order
             padding: 25px 5px
+
+    .mobile-menu
+        &__subtitle
+            font-size: 20px
 
     .colored
         &__title
