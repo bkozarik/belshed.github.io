@@ -53,6 +53,8 @@ section
     background: linear-gradient(180deg, rgba(255,198,99,1) 0%, rgba(255,173,32,1) 60%, rgba(255,198,99,1) 100%)
     color: #fff
     box-shadow: 0 4px 0 0 #E49100
+    &:focus
+        outline: none
     &_banner
         text-transform: uppercase
         font-size: 21px
@@ -70,6 +72,75 @@ section
         font-size: 16px
         border-radius: 50px
         margin-top: 10px
+    &_next
+        text-transform: uppercase
+        padding: 25px 40px
+        border-radius: 40px
+        font-size: 16px
+        font-weight: 300
+        margin-top: auto
+        opacity: 0
+        pointer-events: none
+        img
+            max-width: 20px
+            margin-left: 15px
+            vertical-align: middle
+        &.active
+            opacity: 1
+            pointer-events: all
+
+    &_project
+        font-size: 20px
+        margin-top: 20px
+        text-transform: uppercase
+        padding: 30px 50px
+        border-radius: 50px
+    &_projects
+        padding: 15px 20px
+        border-radius: 3px
+        box-shadow: none
+        color: #303030
+        sup
+            color: #303030
+        font-size: 16px
+        font-weight: bold
+        background: #eeeeee
+        & + &
+            margin-left: 5px
+        &.active
+            background: rgb(255,198,99)
+            background: linear-gradient(180deg, rgba(255,198,99,1) 0%, rgba(255,173,32,1) 60%, rgba(255,198,99,1) 100%)
+            color: #fff
+            sup
+                color: #fff
+    &_notype
+        padding: 25px 35px
+        text-transform: uppercase
+        font-size: 20px
+        border-radius: 50px
+    &_step
+        border-radius: 30px
+        font-size: 14px
+        font-weight: bold
+        text-align: center
+        padding: 12px 30px
+        background: none
+        box-shadow: none
+        &.disabled
+            box-shadow: 0 0 0 1px #e6e6e6
+            color: #e6e6e6
+            background: #fff
+            cursor: default
+            pointer-events: none
+        &.visited
+            background: #e6e6e6
+            color: #747474
+            cursor: pointer
+        &.active
+            background-color: #48ba56
+            color: #fff
+            pointer-events: all
+            cursor: pointer
 
 .section
     &__title
@@ -853,5 +924,513 @@ section
         &__item
             max-width: none
 
-.footer 
+.correct
+    padding-bottom: 110px
+    &__subtitle
+        margin: 25px auto 0px
+        display: block
+        text-align: center
+        font-size: 18px
+        font-weight: 300
+        line-height: 18px
+    .section__title
+        max-width: 520px
+        margin: 0px auto
+
+.house
+    display: flex
+    justify-content: space-between
+    position: relative
+    min-height: 675px
+    margin-top: 140px
+    &::before
+        position: absolute
+        left: 0
+        transform: translateY(-80%)
+        display: block
+        padding: 20px
+        border-radius: 4px
+        background-color: $text_yellow
+        color: #ffffff
+        font-weight: 700
+        font-size: 18px
+        line-height: 26px
+        max-width: 470px
+    &:nth-of-type(1)
+        &::before
+            content: 'Скандинавский каркас и оснащение - толщина силового каркаса 100 мм, перекрытия 150 мм'
+        .house__img
+            position: absolute
+            top: 54%
+            left: 50%
+            transform: translate(-50%, -50%) scale(1.1)
+    &:nth-of-type(2)
+        &::before
+            content: 'Канадский каркас и оснащение- толщина силового каркаса 150 мм, перекрытия 200 мм'
+        .house__side
+            margin-bottom: 45px
+        .house__img
+            position: absolute
+            top: 54%
+            left: 46%
+            transform: translate(-50%, -50%) scale(1.1)
+    &__side
+        display: flex
+        flex-direction: column
+        height: inherit
+        justify-content: space-between
+        flex-grow: 1
+        &:nth-of-type(1)
+            align-items: flex-start
+        &:nth-of-type(2)
+            align-items: flex-end
+    &__card
+        position: relative
+        background-color: #fff
+        border-radius: 4px
+        border: 1px solid #ccc
+        padding: 27px 35px
+        max-height: 165px
+        &-body
+            display: flex
+            flex-direction: column
+            flex-wrap: wrap
+            max-height: 90px
+            &.fdr
+                flex-direction: row
+                flex-wrap: nowrap
+        &-col
+            display: flex
+            flex-direction: column
+            & + &
+                margin-left: 30px
+        &.mt
+            margin-top: 50px
+        &.ml
+            margin-left: 95px
+    &__title
+        font-size: 16px
+        font-weight: 700
+        line-height: 30px
+    &__item
+        font-size: 14px
+        line-height: 18px
+        position: relative
+        display: inline-block
+        font-weight: 300
+        &::before
+            content: '•'
+            display: inline-block
+            margin-right: 3px
+
+.quiz
+    padding-bottom: 100px
+    &__subtitle
+        display: block
+        text-align: center
+        font-size: 26px
+        font-weight: 300
+        margin: 40px auto 0px
+    &__gifts
+        margin-top: 50px
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &__body
+        position: relative
+    &__leaf
+        position: absolute
+        right: 0
+        bottom: 0
+        z-index: -1
+        transform: translate(20%, 20%)
+    &__head
+        padding: 35px 0px 20px
+    &__list
+        display: flex
+        align-items: center
+        justify-content: space-between
+        list-style-type: none
+        max-width: 710px
+        width: 100%
+        margin: 0 auto
+    &__container
+        margin-top: 85px
+        display: flex
+        max-height: 630px
+        overflow: hidden
+        border-radius: 60px
+        box-shadow: 0 0 20px 10px rgba(0, 0, 0, .05)
+    &__img
+        flex-basis: 25%
+        overflow: hidden
+        img
+            object-fit: cover
+            transform: translateX(-70px)
+    &__body
+        flex-basis: 75%
+        display: flex
+        flex-direction: column
+    &__content
+        height: 100%
+        position: relative
+    &__page
+        position: absolute
+        top: 0
+        left: 0
+        height: 100%
+        width: 100%
+        opacity: 0
+        visibility: hidden
+        z-index: -2
+        height: 100%
+        display: flex
+        padding-top: 20px
+        padding-bottom: 50px
+        justify-content: center
+        flex-direction: column
+        align-items: center
+        &.active
+            opacity: 1
+            visibility: visible
+            z-index: 1
+    &__subtext
+        margin-top: 50px
+        font-size: 16px
+        font-weight: bold
+    &__free
+        display: inline-block
+        position: relative
+        font-weight: 300
+        line-height: 30px
+        &::before
+            content: ''
+            display: inline-block
+            height: 15px
+            width: 15px
+            background-color: #48ba56
+            border-radius: 50%
+            margin-right: 10px
+            vertical-align: middle
+    &__inputs
+        margin-top: 40px
+        display: flex
+        align-items: center
+        justify-content: space-between
+    &__input
+        display: inline-block
+        background-color: #f7f7f7
+        padding: 25px 30px
+        font-size: 16px
+        font-weight: 300
+        box-sizing: border-box
+        max-width: 235px
+        border-radius: 4px
+        & + &
+            margin-left: 20px
+    &__question
+        font-size: 22px
+        font-weight: 700
+        color: #303030
+    &__text
+        font-size: 16px
+        font-weight: 300
+        color: #303030
+    &__options
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        margin-top: 50px
+        input[type="text"]
+            font-size: 16px
+            padding: 15px 30px
+            display: inline-block
+            appearance: none
+            border: 1px solid #e6e6e6
+    &__checkbox
+        display: inline-block
+        height: 26px
+        width: 26px
+        border-radius: 50%
+        background-color: #fff
+        border: 1px solid #e6e6e6
+        vertical-align: middle
+        margin-right: 15px
+        position: relative
+        &::after
+            content: ''
+            display: inline-block
+            position: absolute
+            left: 50%
+            top: 50%
+            height: 15px
+            width: 15px
+            transform: translate(-50%, -50%) scale(0)
+            border-radius: 50%
+            background-color: #48ba56
+    &__label
+        cursor: pointer
+        user-select: none
+        & + &
+            margin-top: 25px
+        &>input[type="radio"]:checked + .quiz__checkbox::after
+            transform: translate(-50%, -50%) scale(1)
+        &>input[type="radio"]
+            display: none
+
+.gift
+    display: flex
+    align-items: center
+    &__text
+        max-width: 210px
+        margin-left: 20px
+        font-size: 16px
+        font-weight: 300
+
+.projects
+    &__buttons
+        display: flex
+        justify-content: center
+        align-items: center
+        margin-top: 25px
+    &__page
+        grid-column-gap: 40px
+        grid-row-gap: 50px
+        margin-top: 90px
+        display: none
+        grid-template-columns: repeat(2, 1fr)
+        opacity: 0
+        visibility: hidden
+        z-index: -1
+        &.active
+            display: grid
+            opacity: 1
+            visibility: visible
+            z-index: 1
+
+.project
+    padding-bottom: 20px
+    &__title
+        font-size: 18px
+        font-weight: 700
+    &__img
+        margin-top: 15px
+        height: 345px
+        width: 100%
+        img
+            height: 100%
+            width: 100%
+            object-fit: cover
+            border-radius: 4px
+
+.notype
+    padding: 100px 0px
+    &__bg
+        position: absolute
+        bottom: 0
+        left: 0
+        width: 100%
+        z-index: -1
+    &__body
+        max-width: 670px
+    &__bold
+        font-weight: bold
+        font-size: 20px
+        line-height: 36px
+        &:first-of-type
+            margin-top: 60px
+        & + &
+            margin-top: 40px
+    &__card
+        margin-top: 80px
+        background-color: #fff
+        border-radius: 4px
+        padding: 50px 50px 40px
+        position: relative
+        margin-bottom: 50px
+        &::before
+            content: ''
+            display: inline-block
+            position: absolute
+            left: 40px
+            top: -50px
+            height: 90px
+            width: 120px
+            background-image: url(../img/catalog.png)
+            background-size: contain
+            background-repeat: no-repeat
+    &__text
+        font-weight: 300
+        font-size: 16px
+        line-height: 28px
+        & + &
+            margin-top: 1em
+
+.how
+    padding-bottom: 100px
+    &__container
+        display: flex
+        flex-wrap: wrap
+        align-items: baseline
+        justify-content: space-between
+    &__btn-wrap
+        width: 100%
+        display: flex
+        justify-content: center
+        margin-top: 80px
+    &__item
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        max-width: 260px
+        margin: 20px
+        position: relative
+        &:not(:nth-child(3n))::after
+            position: absolute
+            height: 40px
+            width: 50px
+            display: inline-block
+            content: ''
+            right: 0
+            top: 70px
+            transform: translate(100%, -50%)
+            background-size: contain
+            background-repeat: no-repeat
+            background-image: url(../img/icons/right-arrow-g.png)
+        &:nth-last-child(2)::after
+            display: none
+            
+    &__img
+        max-width: 100%
+        object-fit: contain
+    &__title
+        font-weight: bold
+        margin-top: 5px
+        display: inline-block
+        position: relative
+        &::before
+            display: inline-block
+            position: absolute
+            height: 30px
+            width: 30px
+            background: #40ba4f
+            color: #fff
+            font-size: 16px
+            font-weight: bold
+            left: 0
+            top: 0
+            text-align: center
+            line-height: 30px
+            border-radius: 50%
+            transform: translate(0, -130%)
+    &__text
+        display: inline-block
+        margin-top: 15px
+        font-size: 14px
+        font-weight: 300
+
+@for $i from 1 through 11
+    .how__item:nth-child(#{$i})
+        .how__title::before
+            content: '#{$i}'
+
+.questions
+    padding-bottom: 270px
+    &__bg
+        position: absolute
+        bottom: 0
+        left: 0
+        width: 100%
+        z-index: -1
+    &__card
+        display: flex
+        background-color: #fff
+        box-shadow: 0 0 10px 10px rgba(0, 0, 0, .05)
+        max-width: 620px
+        justify-content: space-between
+        align-items: center
+        padding: 30px
+        margin-top: 85px
+    &__small-card
+        display: inline-block
+        background-color: #fff
+        box-shadow: 0 0 10px 10px rgba(0, 0, 0, .05)
+        padding: 20px
+    &__text
+        max-width: 200px
+    &__title
+        max-width: 185px
+        text-align: center
+        display: inline-block
+        font-size: 14px
+        color: #303030
+    &__socials
+        display: flex
+        align-items: flex-end
+        margin-top: 40px
+        margin-bottom: 50px
+    &__social
+        display: flex
+        flex-direction: column
+        align-items: center
+        &:hover
+            .questions__link
+                transform: scale(1.03)
+        &:nth-of-type(1)
+            .questions__link
+                background-color: #5b85b1
+        &:nth-of-type(2)
+            .questions__link
+                background-color: #ff1f1f
+        &:nth-of-type(3)
+            .questions__link
+                background: linear-gradient(180deg, rgba(94,88,200,1) 0%, rgba(211,49,132,1) 33%, rgba(237,91,74,1) 66%, rgba(254,206,104,1) 100%)
+    &__link
+        display: inline-block
+        border-radius: 50%
+        height: 165px
+        width: 165px
+        position: relative
+        svg
+            width: 100%
+            max-width: 70px
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+
+.footer
+    padding-bottom: 65px
     flex-grow: 0
+    &__wrap
+        margin-top: 40px
+        display: flex
+        justify-content: space-between
+        align-items: flex-start
+    &__text
+        font-size: 14px
+        font-weight: 300
+        color: #393939
+        line-height: 24px
+    &__col
+        max-width: 245px
+        .button
+            margin-top: -40px
+        &:last-child
+            display: flex
+            height: 100%
+            align-items: flex-end
+            flex-direction: column
+            .footer__text:first-of-type
+                margin-top: 50px
+    &__list
+        list-style-type: none
+    span.footer__text
+        display: block
+    a.footer__text
+        white-space: nowrap
+        &:hover
+            text-decoration: underline
+    .header
+        &__socials
+            margin-right: 40px

@@ -50,8 +50,18 @@ section
         color: #c36f21
 
 .section
+    &__colored
+        width: 100%
+        text-align: center
+        padding: 25px 0px
+        text-transform: uppercase
+        background-color: #f7c76c
+        font-size: 18px
+        font-family: "Open Sans"
+        letter-spacing: 1.22px
+        font-weight: bold
+        display: inline-block
     &__title
-        font-size: 36px
         @include adaptiv-font(36, 18) 
         line-height: 60px
         color: #333
@@ -103,6 +113,9 @@ button.button, span.button, a.button
             margin-left: 8px
             background-image: url(../img/icons/cart_tovar-w.svg)
             margin-top: -5px
+    &_colored
+        &::after
+            display: none
     &_product
         color: #000
         background-color: $text_yellow
@@ -1531,12 +1544,38 @@ span.button
         margin-left: 60px
         min-width: 455px
     &__text
-        font-size: 16px
+        font-size: 16px !important
         font-weight: 300
+        & + &
+            margin-top: 1em
     &__bold
         font-weight: bold   
         font-size: 21px
         margin-top: .5em
+        & + &
+            margin-top: 1em
+    &_delivery
+        padding-top: 45px
+        .container
+            max-width: 1010px
+            width: 100%
+        .section__colored
+            margin-bottom: 35px
+        .colored__title
+            margin-bottom: 40px
+        .description
+            &__wrap
+                align-items: flex-start
+                & + .description__text
+                    margin-top: 55px
+            &__card.mr
+                max-width: 450px
+                margin-left: 0px
+                margin-right: 60px
+            &__card.ml
+                max-width: 450px
+                margin-right: 0px
+                margin-left: 60px
 
 //
 //
@@ -1709,4 +1748,136 @@ span.button
             margin-top: 40px
     .container
         max-width: 980px
+    &_delivery
+        .container
+            max-width: 1070px
 
+//
+//
+//
+// Страница Досавки
+//
+//
+
+.takeaway
+    .section__title
+        margin: 15px 0px
+    &__list
+        list-style-type: none
+        margin-top: 15px
+        li
+            position: relative
+            &::before
+                content: ''
+                display: inline-block
+                margin-right: 10px
+                height: 9px
+                width: 9px
+                border-radius: 50%
+                background-color: #ffc122
+    &__select
+        position: relative
+        margin-top: 25px
+        select
+            background-color: #fff
+            border: 1px solid #e8e8e8
+            display: inline-block
+            width: 100%
+            appearance: none
+            padding: 20px 25px
+            font-size: 14px
+            font-weight: 600
+            text-transform: uppercase
+            border-radius: 40px
+            cursor: pointer
+            &:focus
+                outline: none
+        & + &
+            margin-top: 20px
+        &::after
+            position: absolute
+            pointer-events: none
+            content: ''
+            right: 25px
+            top: 55%
+            transform: translate(-50%, -50%)
+            border: 7px solid transparent
+            border-top: 10px solid #000
+    .contacts__text + .contacts__text
+        margin-top: 1em
+    .contacts__text + .information__title
+        margin-top: 50px
+        display: inline-block
+    .contacts
+        &__side
+            &:nth-child(1)
+                padding: 30px
+            &:nth-child(2)
+                background-color: #f9f9f9
+
+.pair
+    padding: 65px 0px
+    &__container
+        display: flex
+        justify-content: space-between
+        align-items: flex-start
+    &__item
+        max-width: 50%
+        width: 100%
+        overflow: hidden
+        & + &
+            margin-left: 20px
+        .information__title
+            margin-top: 28px
+            display: inline-block
+        li + li
+            margin-top: 8px
+    &__card
+        display: inline-block
+        font-weight: bold
+        font-size: 17px
+        padding: 15px 20px
+        background-color: #ffc122
+        max-width: 390px
+        margin-top: 40px
+        a
+            color: #000
+            text-decoration: underline
+    &__table
+        font-size: 13px
+        text-align: center
+        width: 100%
+        border: 1px solid #e8e8e8
+        &-wrap
+            .pair__table
+                min-width: 470px
+            overflow-y: auto
+        th
+            font-weight: bold
+            background-color: #f9f9f9
+            height: 70px
+        tr
+            padding: 0px 10px
+            height: 50px
+            border: 1px solid #e8e8e8
+        td, th
+            padding: 10px
+            border-top: 1px solid #e8e8e8
+
+.colored
+    background-color: #ffc122
+    padding: 40px 0px 30px
+    &__wrap
+        display: flex
+        flex-direction: column
+        align-items: center
+    &__title
+        font-size: 28px
+        font-weight: bold
+        color: #000
+        text-align: center
+        display: inline-block
+        margin-bottom: 20px
+    .button
+        white-space: normal
+        margin-left: 0
