@@ -50,6 +50,8 @@ section
         padding: 10px
         border-radius: 30px
         display: inline-block
+    &_ttu
+        text-transform: uppercase
     &_bold
         font-weight: bold !important
     &_yellow
@@ -771,7 +773,6 @@ span.button
     background-size: cover
     background-repeat: no-repeat
     background-position: center
-    overflow: hidden
     &__bg
         position: absolute
         top: 50%
@@ -1630,8 +1631,8 @@ span.button
     &__head 
         text-transform: uppercase
         letter-spacing: 1.22px
+        font-weight: bold
         font-size: 14px
-        font-weight: 500
         padding: 5px 30px
         background-color: $text_yellow
         border-radius: 30px
@@ -1904,6 +1905,8 @@ span.button
     &__list
         list-style-type: none
         margin-top: 15px
+        li + li
+            margin-top: 5px
         li
             position: relative
             &::before

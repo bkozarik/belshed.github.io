@@ -121,5 +121,5 @@ document.addEventListener('DOMContentLoaded', () => {
         btn.addEventListener('click', quizShowNextPage);
     });
 
-    quizShowPage(currPage);
+    quizShowPage(5);
 });

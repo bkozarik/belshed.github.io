@@ -9,7 +9,7 @@ $maxWidth: 1920
     transition-duration: 0s
     $result: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}))
     font-size: $result
-    line-height: calc(#{$result} + 5px)
+    line-height: calc(#{$result} + 7px)
 
 *, *::before, *::after
     box-sizing: border-box
@@ -144,8 +144,8 @@ section
 
 .section
     &__title
-        font-size: 40px
-        line-height: 55px
+        font-size: clamp(22px, 5vw, 40px)
+        line-height: clamp(32px, 6vw,55px)
         text-transform: uppercase
         font-weight: normal
     &__btn
@@ -240,6 +240,7 @@ section
 .banner
     background-image: url(../img/banner_bg.jpg)
     background-size: cover
+    background-position: center
     &__body
         padding-top: 180px
         padding-bottom: 360px
@@ -379,9 +380,8 @@ section
             height: 190px
             object-fit: contain
         &-title
-            font-size: 35px
+            @include adaptiv-font(35, 18)
             text-transform: uppercase
-            line-height: 48px
             display: block
         &-subtitle
             font-size: 22px
@@ -461,7 +461,7 @@ section
         flex-direction: column
         align-items: flex-end
     &__title
-        font-size: 32px
+        @include adaptiv-font(32, 22)
         font-weight: normal
         text-align: right
         max-width: 680px
@@ -603,6 +603,7 @@ section
         width: 100%
         z-index: -1
     .section__title
+        @include adaptiv-font(36, 25)
         max-width: 680px
     &__subtitle
         font-size: 16px
@@ -938,11 +939,7 @@ section
         margin: 0px auto
 
 .house
-    display: flex
-    justify-content: space-between
     position: relative
-    min-height: 675px
-    margin-top: 140px
     &::before
         position: absolute
         left: 0
@@ -974,6 +971,12 @@ section
             top: 54%
             left: 46%
             transform: translate(-50%, -50%) scale(1.1)
+    &__container
+        display: flex
+        justify-content: space-between
+        position: relative
+        min-height: 675px
+        margin-top: 140px
     &__side
         display: flex
         flex-direction: column
@@ -1034,10 +1037,12 @@ section
     &__gifts
         margin-top: 50px
         display: flex
-        justify-content: space-between
+        justify-content: space-around
+        flex-wrap: wrap
         align-items: center
     &__body
         position: relative
+        width: 100%
     &__leaf
         position: absolute
         right: 0
@@ -1046,18 +1051,24 @@ section
         transform: translate(20%, 20%)
     &__head
         padding: 35px 0px 20px
+        width: 100%
+        overflow-x: auto
     &__list
         display: flex
         align-items: center
         justify-content: space-between
         list-style-type: none
         max-width: 710px
+        min-width: 640px
+        margin: 1px 0px
+        height: 100%
         width: 100%
         margin: 0 auto
     &__container
         margin-top: 85px
         display: flex
-        max-height: 630px
+        min-height: 630px
+        height: 100%
         overflow: hidden
         border-radius: 60px
         box-shadow: 0 0 20px 10px rgba(0, 0, 0, .05)
@@ -1132,10 +1143,13 @@ section
         font-size: 22px
         font-weight: 700
         color: #303030
+        display: inline-block
+        text-align: center
     &__text
         font-size: 16px
         font-weight: 300
         color: #303030
+        display: block
     &__options
         display: flex
         flex-direction: column
@@ -1171,6 +1185,8 @@ section
     &__label
         cursor: pointer
         user-select: none
+        display: flex
+        align-items: center
         & + &
             margin-top: 25px
         &>input[type="radio"]:checked + .quiz__checkbox::after
@@ -1181,6 +1197,7 @@ section
 .gift
     display: flex
     align-items: center
+    margin-top: 10px
     &__text
         max-width: 210px
         margin-left: 20px

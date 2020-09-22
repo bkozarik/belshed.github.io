@@ -1,0 +1,308 @@
+@media screen and ( max-width: 1500px )
+    .compare
+        &__tree
+            &_1
+                max-width: 200px
+            &_2
+                max-width: 250px
+
+    .count
+        &__niples
+            max-width: 200px
+    
+@media screen and ( max-width: 1300px )
+    .compare
+        &__hummer
+            display: none
+        &__tree
+            &_1, &_2
+                display: none
+
+    .benefits
+        &__container
+            flex-direction: column
+            align-items: center
+
+    .benefit
+        padding: 45px 20px 20px
+        &:nth-child(1), &:nth-child(2)
+            transform: none
+
+    .why
+        &__tree
+            display: none
+
+@media screen and ( max-width: 1050px )
+    .correct
+        padding-bottom: 50px
+
+    .notype
+        &__card
+            padding:  40px 0
+            &::before
+                left: 0
+
+    .how
+        &__item::after
+            display: none !important
+
+    .house
+        &::before
+            margin-top: 30px
+            position: relative
+            transform: none
+        &__container
+            margin-top: 30px
+            min-height: auto
+            flex-direction: column
+        &__side
+            align-items: flex-start !important
+        &__side + &__side
+            margin-bottom: 0
+        &__img
+            display: none
+        &__card
+            margin-bottom: 20px
+            &.mt
+                margin-top: 0
+            &.ml
+                margin-left: 0
+
+@media screen and ( max-width: 940px )
+    .examples
+        &__container
+            grid-template-columns: repeat(3, 1fr)
+
+    .portfolio
+        margin-top: 60px
+
+    .about
+        &__container
+            margin: 90px auto 0px
+        &__garantee
+            flex-direction: column
+            align-items: center
+            &-body
+                margin-left: 0
+                margin-top: 20px
+            &-title, &-subtitle
+                display: inline-block
+                width: 100%
+                text-align: center
+
+    .quiz
+        &__img
+            flex-basis: 0%
+        &__body
+            flex-basis: 100%
+            padding: 0px 20px
+        &__container
+            min-height: 720px
+
+    .compare
+        &__container
+            flex-direction: column
+            align-items: center
+        &__side + &__side
+            margin-top: 40px
+        &__item
+            margin: 0
+            flex-direction: column
+            &-body
+                width: 100%
+                margin-left: 0
+                margin-top: 20px
+
+    .error
+        &__subtitle
+            margin-top: 30px
+
+    .count
+        &__book
+            left: 0
+        &__circle
+            display: none
+        &__wood
+            &_1, &_2
+                display: none
+
+    .reports
+        &__tel
+            flex-direction: column
+            align-items: center
+        &__subtext
+            margin-top: 20px
+            margin-left: 0
+
+    .logo
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        &__text
+            margin-left: 0
+            margin-top: 15px
+
+@media screen and ( max-width: 850px )
+    .projects
+        &__page
+            grid-template-columns: repeat(1, 1fr)
+            justify-items: center
+    .project
+        max-width: 400px
+
+    .quiz
+        &__inputs
+            flex-direction: column
+            align-items: stretch
+            width: 100%
+        &__input
+            width: 100%
+            max-width: none
+        &__input + &__input
+            margin-top: 15px
+            margin-left: 0
+        &__input:last-child
+            margin-bottom: 20px            
+
+@media screen and ( max-width: 640px )
+    .logo
+        margin-right: 10px
+        &__img
+            max-width: 150px
+
+    .why
+        &__item
+            margin: 20px 0px
+        &__container
+            flex-direction: column
+            align-items: center
+
+    .examples
+        &__container
+            grid-template-columns: repeat(2, 1fr)
+    
+    .about
+        &__team
+            grid-template-columns: repeat(2, 1fr)
+        &__body
+            padding: 30px
+
+    .error__container
+        display: none
+
+    .house
+        &__card
+            border: none
+            max-height: none
+            padding: 15px
+            &-col + &-col
+                margin-left: 0
+            &-body
+                flex-direction: column !important
+                max-height: none
+    
+    .addons
+        &__container
+            flex-direction: column
+            align-items: flex-start
+
+    .addon
+        flex-direction: row
+        max-width: none
+        &__title
+            text-align: left
+        &__img
+            width: 125px
+            margin-right: 20px
+
+    .count
+        &__book
+            width: 130%
+            top: 300px
+            left: -50px
+        &__body
+            margin: 245px auto 0px
+        &__title
+            text-align: left
+
+    .button
+        &_notype
+            font-size: 18px
+            padding: 20px 15px
+
+    .example
+        &__img
+            max-height: 130px
+        &__body
+            padding: 20px
+
+    .header
+        .header
+            padding: 10px 0px
+            &__tel
+                display: none
+
+    .quiz
+        &__subtext, &__options
+            margin-top: 15px
+        &__leaf
+            display: none
+
+
+@media screen and ( max-width: 400px )
+    .example
+        &__text
+            font-size: 12px
+
+    &__leaf
+            display: none
+
+    .house
+        &__title
+            display: inline-block
+            line-height: 24px
+            margin-bottom: 10px 
+
+    .quiz
+        &__body
+            padding: 0px 10px
+        &__checkbox
+            margin-right: 5px
+        &__text
+            font-size: 14px
+
+    .addon
+        &__img
+            width: 70px
+
+    .about
+        &__team
+            justify-items: center
+            grid-template-columns: repeat(1, 1fr)
+        &__body
+            padding: 10px
+        &__garantee
+            &-subtitle
+                font-size: 16px
+                line-height: 22px
+                margin-top: 15px
+
+    .button
+        &_notype
+            font-size: 15px
+            padding: 20px 15px
+
+    .banner
+        &__item
+            flex-direction: column
+            align-items: flex-start
+            &-body
+                margin-left: 0
+                margin-top: 15px
+        &__subtitle
+            font-size: 18px
+        .button
+            margin: 0 auto
+            display: block
+            &_banner
+                font-size: 16px
