@@ -238,10 +238,19 @@
         &__title
             text-align: left
 
+    .project
+        &__img
+            height: auto
+            img
+                width: 100%
+                height: auto
+
     .button
-        &_notype
+        &_notype, &_project
             font-size: 18px
             padding: 20px 15px
+            display: block
+            margin: 20px auto 0px
 
     .example
         &__img
@@ -260,6 +269,8 @@
             margin-top: 15px
         &__leaf
             display: none
+        &__container
+            min-height: 820px
 
 
 @media screen and ( max-width: 400px )

@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./css/swiper-bundle.min.css">
     <link rel="stylesheet" href="./css/fonts.css">
     <link rel="stylesheet" href="./css/style.css">
@@ -46,7 +47,7 @@
                             <div class="header__dropdown-body">
                                 <a href="tel:+79037654321" class="header__tel">+7(903) 765 43 21</a>
                                 <a href="tel:+79037654321" class="header__tel">+7(903) 765 43 21</a>
-                                <button class="button button_recall">Обратный звонок</button>
+                                <button class="button button_recall js-open-recall-popup">Обратный звонок</button>
                             </div>
                         </div>
                     </div>
@@ -115,8 +116,10 @@
         </div>
     </header>
     <section id="banner" class="banner">
-        <img src="./img/banner_bg.png" alt="Фон" class="banner__bg">
-        <img src="./img/banner_bg-m.png" alt="Фон" class="banner__bg-m">
+        <div class="banner__bg-container">
+            <img src="./img/banner_bg.png" alt="Фон" class="banner__bg">
+            <img src="./img/banner_bg-m.png" alt="Фон" class="banner__bg-m">
+        </div>
         <div class="container">
             <div class="banner__content">
                 <div class="banner__logo-wrap">
@@ -172,8 +175,11 @@
     </aside>
     <div class="mobile-menu js-menu">
         <div class="mobile-menu__body">
-            <span class="mobile-menu__title">Меню</span>
             <div class="mobile-menu__container">
+                <div class="mobile-menu__section">
+                    <span class="mobile-menu__title">Меню</span>
+                </div>
+                <div class="mobile-menu__section"></div>
                 <div class="mobile-menu__section">
                     <span class="mobile-menu__subtitle">Навигация</span>
                     <nav class="mobile-menu__nav">
@@ -196,7 +202,6 @@
                     <span class="mobile-menu__subtitle">Наши предложения</span>
                     <nav class="mobile-menu__nav">
                         <ul class="mobile-menu__list">
-                            <li class="mobile-menu__item"><a href="#" class="mobile-menu__link">Акции</a></li>
                             <li class="mobile-menu__item"><a href="#" class="mobile-menu__link">Осетинские пироги</a></li>
                             <li class="mobile-menu__item"><a href="#" class="mobile-menu__link">Пицца</a></li>
                             <li class="mobile-menu__item"><a href="#" class="mobile-menu__link">Салаты</a></li>
@@ -338,7 +343,7 @@
                     <span class="footer__time">Время работы пекарни: С 8.00 до 22.00</span>
                     <a href="tel:+79037654321" class="header__tel">+7(903) 765 43 21</a>
                     <a href="tel:+79037654321" class="header__tel">+7(903) 765 43 21</a>
-                    <button class="button button_recall">Обратный звонок</button>
+                    <button class="button button_recall js-open-recall-popup">Обратный звонок</button>
                 </div>
                 <div class="footer__contacts">
                     <span class="footer__contact">1-я Бухвостова 12/11 корпус 4 Преображенская Площадь</span>
@@ -386,6 +391,18 @@
             <path id="button_arrow" data-name="button_arrow" d="M239,3714.5l.867-.794,7.39-6.7,1.742,1.589-6.515,5.91,6.515,5.91L247.255,3722l-7.39-6.7Z" transform="translate(-238.999 -3707.003)"/>
         </svg> 
     </button>
+
+    <div class="popup__wrapper js-recall-popup">
+        <div class="popup__body">
+            <span class="popup__close js-close-popup"></span>
+            <h2 class="section__title text_tac">Оставьте свои данные и мы с Вами свяжемся</h2>
+            <form class="popup__container">
+                <input name="user_name" type="text" class="popup__input" placeholder="Введите ваше имя">
+                <input name="user_tel" type="tel" class="popup__input" placeholder="Введите ваш телефон">
+                <button type="submit" class="button button_promo js-form-send">Отправить</button>
+            </form>
+        </div>
+    </div>
 
     <script src="./js/swiper-bundle.min.js"></script>
     <script src="./js/main.js"></script>

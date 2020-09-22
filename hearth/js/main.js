@@ -4,6 +4,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const menuBtn = document.querySelector('.js-burger');
     const scrollTopBtn = document.querySelector('.js-scroll-to-top');
     const cart = document.querySelector('.js-open-cart');
+    const popupTrigger = document.querySelectorAll('.js-open-recall-popup');
+    const popupCloseTrigger = document.querySelectorAll('.js-close-popup');
 
     const headerDropdownToggle = (state) => {
         if(state === undefined){
@@ -139,6 +141,7 @@ document.addEventListener("DOMContentLoaded", () => {
             pagination: {
                 el: ".promo .promo__pagination",
                 type: 'bullets',
+                clickable: true,
             },
             breakpoints: {
                 720: {
@@ -157,6 +160,7 @@ document.addEventListener("DOMContentLoaded", () => {
             pagination: {
                 el: ".reviews .reviews__pagination",
                 type: 'bullets',
+                clickable: true,
             },
             navigation: {
                 nextEl: '.reviews__control.reviews__control_next',
@@ -187,7 +191,8 @@ document.addEventListener("DOMContentLoaded", () => {
             },
             pagination: {
                 el: '.promos__pagination',
-                type: 'bullets'
+                type: 'bullets',
+                clickable: true,
             },
             breakpoints: {
                 750: {
@@ -210,6 +215,14 @@ document.addEventListener("DOMContentLoaded", () => {
     cart.addEventListener('click', toggleElement('.js-cart'));
     window.addEventListener('resize', windowResizeHandler);
     window.addEventListener('scroll', windowScrollHandler);
+
+    popupTrigger.forEach(trigger => {
+        trigger.addEventListener('click', toggleElement('.js-recall-popup'));
+    });
+
+    popupCloseTrigger.forEach(trigger => {
+        trigger.addEventListener('click', toggleElement('.js-recall-popup'));
+    });
 
     windowResizeHandler();
     windowScrollHandler();

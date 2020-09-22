@@ -6,7 +6,10 @@
 
     .banner
         &__logo
+            height: 310px
             &-wrap
+                height: 270px
+                width: 270px
                 top: 10px
 
 @media screen and ( max-width: 1240px )
@@ -17,7 +20,6 @@
 
 @media screen and ( max-width: 1030px )
     .banner
-        overflow: hidden
         &__bg
             top: 40%
         &__logo
@@ -31,6 +33,7 @@
                 transform: translate(-50%, -50%)
 
     .header
+        background-color: #000
         &__logo
             display: none
 
@@ -82,6 +85,9 @@
             width: 100%
 
     .banner
+        &__bg
+            height: 80%
+            left: 70%
         &__logo
             height: 300px
             width: 400px
@@ -233,15 +239,21 @@
     .mobile-menu
         &__container
             grid-template-columns: 1fr
+            justify-items: normal
         &__section
+            min-width: auto
             &:nth-child(1)
                 order: 0
             &:nth-child(2)
-                order: 4
+                order: 10
             &:nth-child(3)
                 order: 1
             &:nth-child(4)
                 order: 3
+            &:nth-child(5)
+                order: 2
+            &:nth-child(6)
+                order: 4
 
     .menu
         .container
@@ -444,6 +456,12 @@
             order: 2
         &__copyright
             text-align: center
+        .footer__contacts:last-child
+            display: block
+            .footer__contact
+                text-align: center
+                display: inline-block
+                width: 100%
 
     .item
         &__order
@@ -482,6 +500,10 @@
         &__order
             padding: 25px 5px
 
+    .popup
+        &__body
+            padding: 40px 20px
+
     .mobile-menu
         &__subtitle
             font-size: 20px
@@ -512,6 +534,8 @@
                 width: 150px
         .header
             &__dropdown
+                &-body
+                    left: 10px
             &__contacts
                 span.button_recall
                     font-size: 18px
