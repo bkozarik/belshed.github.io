@@ -684,6 +684,34 @@ span.button
         margin-left: 10px
         line-height: 22px
 
+.scroll-to-top
+    position: fixed
+    display: inline-block
+    background-color: #fff
+    opacity: 0
+    visibility: hidden
+    z-index: 3
+    height: 44px
+    width: 44px
+    border-radius: 50%
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .13)
+    right: 15%
+    bottom: 40px
+    transform: translateY(-20px)
+    &.active
+        transform: translateY(0px)
+        opacity: 1
+        visibility: visible
+    svg
+        position: absolute
+        left: 49%
+        top: 50%
+        transform: translate(-50%, -50%) rotate(90deg)
+        fill: #383838
+    &:hover
+        svg
+            fill: #BF8200
+
 .nav
     margin-top: 17px
     &__list

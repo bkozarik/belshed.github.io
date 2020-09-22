@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const headerDropdownTriggers = document.querySelectorAll('.js-open-header-dropdown');
     const productCounters = document.querySelectorAll('.product__count');
     const menuBtn = document.querySelector('.js-burger');
+    const scrollTopBtn = document.querySelector('.js-scroll-to-top');
     const cart = document.querySelector('.js-open-cart');
 
     const headerDropdownToggle = (state) => {
@@ -60,6 +61,13 @@ document.addEventListener("DOMContentLoaded", () => {
         return val > max ? max : val < min ? min : val;
     }
 
+    const scrollTopBtnHandler = () => {
+        document.querySelector('#banner').scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+    }
+
     const windowResizeHandler = () => {
         if(window.innerWidth <= 940){
             document.querySelector('.header__wrap').insertBefore(menuBtn, document.querySelector('.header__side'));
@@ -90,10 +98,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const windowScrollHandler = () => {
         if(window.pageYOffset > 0){
-            toggleElement('.header', true);
+            toggleElement(['.header', '.js-scroll-to-top'], true);
         }
         else{
-            toggleElement('.header', false);
+            toggleElement(['.header', '.js-scroll-to-top'], false);
         }
     }
 
@@ -198,6 +206,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     menuBtn.addEventListener('click', toggleElement(['.js-burger', '.js-menu']));
     headerDropdownTriggers.forEach(trigger => trigger.addEventListener('click', headerDropdownToggle()));
+    scrollTopBtn.addEventListener('click', scrollTopBtnHandler);
     cart.addEventListener('click', toggleElement('.js-cart'));
     window.addEventListener('resize', windowResizeHandler);
     window.addEventListener('scroll', windowScrollHandler);

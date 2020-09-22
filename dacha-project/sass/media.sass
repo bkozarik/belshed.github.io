@@ -75,6 +75,9 @@
 
     .portfolio
         margin-top: 60px
+        &__container
+            .swiper-slide
+                min-height: 300px
 
     .about
         &__container
@@ -89,6 +92,10 @@
                 display: inline-block
                 width: 100%
                 text-align: center
+
+    .materials
+        &__table, &__niples
+            display: none
 
     .quiz
         &__img
@@ -206,6 +213,12 @@
             flex-direction: column
             align-items: flex-start
 
+    .materials
+        &__tip
+            display: none
+        &__wood
+            display: none
+
     .addon
         flex-direction: row
         max-width: none
@@ -291,6 +304,11 @@
         &_notype
             font-size: 15px
             padding: 20px 15px
+
+    .portfolio
+        &__container
+            .swiper-slide
+                min-height: 250px
 
     .banner
         &__item
