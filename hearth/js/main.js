@@ -5,7 +5,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const scrollTopBtn = document.querySelector('.js-scroll-to-top');
     const cart = document.querySelector('.js-open-cart');
     const popupTrigger = document.querySelectorAll('.js-open-recall-popup');
+    const headerNavLinks = document.querySelectorAll('.header .nav .nav__link');
     const popupCloseTrigger = document.querySelectorAll('.js-close-popup');
+    const pageUrl = window.location.pathname;
 
     const headerDropdownToggle = (state) => {
         if(state === undefined){
@@ -222,6 +224,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
     popupCloseTrigger.forEach(trigger => {
         trigger.addEventListener('click', toggleElement('.js-recall-popup'));
+    });
+
+    headerNavLinks.forEach(link => {
+        if(pageUrl.endsWith(link.getAttribute('href').replace('.', ''))){
+            link.classList.add('active');
+        }
+        else{
+            link.classList.remove('active');
+        }
     });
 
     windowResizeHandler();

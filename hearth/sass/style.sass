@@ -435,6 +435,7 @@ span.button
             font-weight: bold
             color: $text_grey
             white-space: nowrap
+        &:hover
 
 .cart
     position: absolute
@@ -578,6 +579,9 @@ span.button
         display: grid
         grid-template-columns: 1fr 1fr
         grid-gap: 40px 20px
+        width: 100%
+        max-width: 1490px
+        margin: 0 auto
     &__body
         padding: 20px 0px 0px
     &__title
@@ -794,6 +798,8 @@ span.button
         height: 45px
     &__items
         background-color: #F7C76C
+        .aside
+            &__link
     &__item
         height: 88px
         & + &
@@ -927,6 +933,8 @@ span.button
     &__wrapper
         overflow: hidden
         position: relative
+    &__container
+        margin-top: -35px
     &__block
         display: flex
         align-items: center
@@ -941,6 +949,9 @@ span.button
         margin-right: 25px
         width: 44px
         height: 44px
+        display: block
+        object-fit: contain
+        flex-shrink: 0
     &__text
         font-size: 18px
         line-height: 24px
@@ -1589,7 +1600,8 @@ span.button
             align-items: center
     &__copyright
         color: #fff
-        font-size: 18px
+        font-size: 16px
+        line-height: 24px
     &__socials
         display: flex
     &__social
