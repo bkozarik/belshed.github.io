@@ -31,7 +31,7 @@ body
 h1, h2, h3, h4, h5
     &, &>*
         font-weight: bold
-        font-family: 'Raleway', sans-serif !important
+        font-family: 'Open Sans', sans-serif
     a:hover
         text-decoration: underline
 
@@ -114,8 +114,7 @@ button.button, span.button, a.button
         font-weight: bold
         line-height: 24px
         &:hover
-            background-color: transparent
-            color: $text_yellow
+            box-shadow: 0 0 3px 1px $text_yellow
     &_item
         font-size: 14px
         text-transform: uppercase
@@ -127,11 +126,7 @@ button.button, span.button, a.button
         margin-top: -5px
         margin-left: 25px
         &:hover
-            color: #000
-            box-shadow: 0 0 0 1px #c36f21
-            background-color: #c36f21b0
-            &::after
-                background-image: url(../img/icons/cart_tovar.svg)
+            box-shadow: 0 0 3px 1px #c36f21
         &::after
             content: ''
             display: inline-block
@@ -154,8 +149,7 @@ button.button, span.button, a.button
         font-size: 14px
         margin-top: 20px
         &:hover
-            background-color: #fff
-            box-shadow: 0 0 0 1px $text_yellow
+            box-shadow: 0 0 3px 1px $text_yellow
     &_colored
         &:hover
             color: #000
@@ -184,7 +178,7 @@ button.button, span.button, a.button
             background-image: url(../img/icons/cart_tovar.svg)
             margin-top: -5px
         &:hover
-            background-color: transparent
+            box-shadow: 0 0 3px 1px $text_yellow
     &_contacts
         color: #000
         text-transform: uppercase
@@ -195,8 +189,7 @@ button.button, span.button, a.button
         border-radius: 40px
         padding: 15px 20px
         &:hover
-            background-color: #fff
-            box-shadow: 0 0 0 1px $text_yellow
+            box-shadow: 0 0 3px 1px $text_yellow
     &_all
         color: #000
         background-color: #fff
@@ -208,8 +201,7 @@ button.button, span.button, a.button
         line-height: 22px
         text-transform: uppercase
         &:hover
-            background-color: $text_yellow
-            box-shadow: 0 0 0 1px $text_yellow
+            box-shadow: 0 0 3px 1px $text_yellow
     &_cart
         background-color: #000000
         color: #fff
@@ -219,8 +211,7 @@ button.button, span.button, a.button
         padding: 10px 30px
         border-radius: 30px
         &:hover
-            box-shadow: 0 0 0 1px #000
-            background-color: #00000086
+            box-shadow: 0 0 3px 1px #000
     &_order
         background-color: $text_yellow
         font-size: 14px
@@ -231,8 +222,7 @@ button.button, span.button, a.button
         margin-top: 10px
         transition: all .3s ease-out 0s
         &:hover
-            box-shadow: 0 0 0 1px $text_yellow
-            background-color: #fff
+            box-shadow: 0 0 3px 1px $text_yellow
 
 span.button
     &_recall
@@ -457,6 +447,32 @@ span.button
     & *, & *::after, & *::before
         transition-delay: 0s
         transition-duration: 0s
+    &__close
+        position: absolute
+        right: 10px
+        top: 10px
+        display: inline-block
+        height: 23px
+        width: 23px
+        border-radius: 50%
+        background-color: #826418
+        cursor: pointer
+        &:hover
+            &::before, &::after
+                width: 15px
+        &::before, &::after
+            transition: .2s ease-out
+            content: ''
+            display: inline-block
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%) rotate(45deg)
+            height: 2px
+            width: 14px
+            background-color: $text_yellow
+        &::after
+            transform: translate(-50%, -50%) rotate(-45deg)
     &__title
         margin-bottom: 5px
         font-size: 16px

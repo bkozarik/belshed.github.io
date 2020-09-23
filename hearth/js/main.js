@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const productCounters = document.querySelectorAll('.product__count');
     const menuBtn = document.querySelector('.js-burger');
     const scrollTopBtn = document.querySelector('.js-scroll-to-top');
-    const cart = document.querySelector('.js-open-cart');
+    const cart = document.querySelectorAll('.js-open-cart');
     const popupTrigger = document.querySelectorAll('.js-open-recall-popup');
     const headerNavLinks = document.querySelectorAll('.header .nav .nav__link');
     const popupCloseTrigger = document.querySelectorAll('.js-close-popup');
@@ -214,12 +214,15 @@ document.addEventListener("DOMContentLoaded", () => {
     menuBtn.addEventListener('click', toggleElement(['.js-burger', '.js-menu']));
     headerDropdownTriggers.forEach(trigger => trigger.addEventListener('click', headerDropdownToggle()));
     scrollTopBtn.addEventListener('click', scrollTopBtnHandler);
-    cart.addEventListener('click', toggleElement('.js-cart'));
     window.addEventListener('resize', windowResizeHandler);
     window.addEventListener('scroll', windowScrollHandler);
 
     popupTrigger.forEach(trigger => {
         trigger.addEventListener('click', toggleElement('.js-recall-popup'));
+    });
+
+    cart.forEach(trigger => {
+        trigger.addEventListener('click', toggleElement('.js-cart'));
     });
 
     popupCloseTrigger.forEach(trigger => {
