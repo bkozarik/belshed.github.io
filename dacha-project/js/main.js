@@ -5,6 +5,9 @@ document.addEventListener('DOMContentLoaded', () => {
     let quizInputs = document.querySelectorAll('.quiz__label input');
     let nextBtns = document.querySelectorAll('.button_next');
     let projectButtons = document.querySelectorAll('.button_projects');
+    let errorItems = document.querySelectorAll('.error__item');
+    let mobileErrorsSwiper = document.querySelector('.error__container');
+    let mobileErrorsSwiperSW;
     let currPage = 0;
 
     const constrain = (val, min, max) => {
@@ -73,6 +76,51 @@ document.addEventListener('DOMContentLoaded', () => {
         projectButtons[target.dataset.index].classList.add('active');
     }
 
+    const resizeHandler = () => {
+        if(window.innerWidth <= 1000){
+            document.querySelector('.reports__body').insertBefore(document.querySelector('.reports__swiper'), document.querySelector('.reports__body .banner__info'))
+        }
+        else{
+            document.querySelector('.reports__body').after(document.querySelector('.reports__swiper'));
+        }
+
+        if(window.innerWidth <= 640){
+            if(mobileErrorsSwiper.dataset.mobile == 'false'){
+                document.querySelector('.error__container .swiper-wrapper').insertBefore(errorItems[0], errorItems[1]);
+                document.querySelector('.error .container').appendChild(document.querySelector('.error__item_green'));
+
+                let errorsSwiper = new Swiper('.error__container', {
+                    spaceBetween: 30,
+                    slidesPerView: 1,
+                    direction: 'horizontal',
+                    updateOnWindowResize: true,
+                    navigation: {
+                        prevEl: '.error__control_prev',
+                        nextEl: '.error__control_next',
+                    },
+                    pagination: {
+                        el: '.error__pagination',
+                        type: 'bullets',
+                        clickable: true,
+                    },
+                });
+                mobileErrorsSwiper.dataset.mobile = 'true';
+                mobileErrorsSwiperSW = mobileErrorsSwiper.swiper;
+                errorItems = document.querySelectorAll('.error__item');
+            }
+        }
+        else{
+            mobileErrorsSwiper.dataset.mobile = 'false';
+    
+            if(mobileErrorsSwiper.classList.contains('swiper-container-initialized')){
+                mobileErrorsSwiperSW.destroy();
+                
+                document.querySelector('.error .container').insertBefore(errorItems[0], document.querySelector('.error__container'));
+                document.querySelector('.error__container .swiper-wrapper').insertBefore(errorItems[errorItems.length - 1], errorItems[3]);
+            }
+        }
+    }
+
     const portfolioSwiper = new Swiper('.portfolio__container', {
         slidesPerView: 1,
         spaceBetween: 115,
@@ -121,5 +169,20 @@ document.addEventListener('DOMContentLoaded', () => {
         btn.addEventListener('click', quizShowNextPage);
     });
 
-    quizShowPage(5);
+    document.querySelector('.projects__open').addEventListener('click', () => {
+        document.querySelectorAll('.projects__container_hidden').forEach(container => {
+            container.classList.toggle('active');
+        });
+    });
+
+    document.querySelector('.js-table-toggle').addEventListener('click', () => {
+        document.querySelectorAll('.materials__table_hidden').forEach(table => {
+            table.classList.toggle('active');
+        });
+    });
+
+    window.addEventListener('resize', resizeHandler);
+
+    resizeHandler();
+    quizShowPage(currPage);
 });

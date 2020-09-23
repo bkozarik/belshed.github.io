@@ -79,7 +79,7 @@
         </section>
         <section class="examples">
             <div class="container">
-                <h2 class="section__title text_ttu text_tac"><span class="text_orange">Какие дома</span> мы&nbspстроим</h2>
+                <h2 class="section__title text_ttu text_tac no-adaptiv"><span class="text_orange">Какие дома</span> мы&nbspстроим</h2>
                 <div class="examples__container">
                     <div class="example">
                         <img src="./img/example_1.jpg" alt="Пример дома" class="example__img">
@@ -109,12 +109,22 @@
             </div>
         </section>
         <section class="about">
-            <img src="./img/about_bg.jpg" class="about__bg" alt="">
-            <img src="./img/saw.jpg" class="about__saw" alt="">
-            <img src="./img/glass.jpg" class="about__glass" alt="">
+            <img src="./img/about-descktop_bg.jpg" class="about__bg about__bg_1" alt="Фон">
+            <img src="./img/about_bg.jpg" class="about__bg about__bg_2" alt="Фон">
+            <img src="./img/saw.jpg" class="about__saw" alt="Изображение на фоне">
+            <img src="./img/glass.jpg" class="about__glass" alt="Изображение на фоне">
             <div class="container">
-                <h2 class="section__title text_ttu text_tac">О нас</h2>
+                <div class="about__desk">
+                    <span class="about__oleg-name"><span>Олег Самсонов</span></span>
+                    <span class="about__oleg-text"><span>руководитель проекта</span></span>
+                </div>
+                <h2 class="section__title text_ttu no-adaptiv text_tac">О нас</h2>
                 <div class="about__container">
+                    <div class="about__oleg">
+                        <img src="./img/about_oleg.png" alt="Олег">
+                        <span class="about__oleg-name"><span>Олег Самсонов</span></span>
+                        <span class="about__oleg-text"><span>руководитель проекта</span></span>
+                    </div>
                     <div class="about__body">
                         <p class="about__text">Здравствуйте! Меня зовут Самсонов Олег – я строитель, архитектор и конструктор с 23-летним опытом в каркасном строительстве, являюсь индивидуальным предпринимателем и директором компании «Проект-Дача». </p>
                         <p class="about__text">Уже длительное время занимаюсь строительством, веду свой блог по строительству на YouTube и Вконтакте, где делюсь информацией на тему малоэтажного строительства.</p>
@@ -153,7 +163,7 @@
         </section>
         <section class="portfolio">
             <div class="container">
-                <h2 class="section__title text_ttu text_tac">ФОТО НАШИХ <span class="text_orange">ПОСТРОЕННЫХ ОБЪЕКТОВ</span></h2>
+                <h2 class="section__title text_ttu text_tac no-adaptiv">ФОТО НАШИХ <span class="text_orange">ПОСТРОЕННЫХ ОБЪЕКТОВ</span></h2>
                 <div class="portfolio__container">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide"><img src="./img/portfolio/portfolio_1.jpg" alt="Фото нашего проекта" class="portfolio__img"></div>
@@ -185,7 +195,7 @@
         <section class="why">
             <img src="./img/tree.jpg" class="why__tree">
             <div class="container">
-                <div class="section__title text_ttu text_tac"><span class="text_orange">Почему</span> выбирают нас?</div>
+                <div class="section__title text_ttu text_tac no-adaptiv"><span class="text_orange">Почему</span> выбирают нас?</div>
                 <div class="why__container">
                     <div class="why__item">
                         <div class="why__img">
@@ -409,52 +419,210 @@
                         <td>+</td>
                     </tr>
                 </table>
-                <div class="materials__tip">
-                    <p class="materials__text">Стоимость строительства под ключ с учетом доставки и сборки материалов, установки утепления, окон и дверей составляет</p>
-                    <span class="materials__text">До 50кв.м - <span class="text_orange">17 тыс. руб. за. м2</span></span>
-                    <span class="materials__text">До 100кв.м - <span class="text_orange">21 тыс. руб. за м2</span></span>
+                <table class="materials__table materials__table_hidden" cellspacing="0">
+                    <tr>
+                        <th>Комплектация дом до 16 - 50 кв.м</th>
+                        <th>Каркас под крышу + отделка фасада</th>
+                        <th>Тёплый контур + отделка фасада</th>
+                        <th>Дом с отделкой под ключ</th>
+                    </tr>
+                    <tr>
+                        <td>Основание дома двойное из бруса 100 х 150мм + антисептирование</td>
+                        <td>+</td>
+                        <td>+</td>
+                        <td>+</td>
+                    </tr>
+                    <tr>
+                        <td>Половые балки доска 150 х 50мм камерной сушки</td>
+                        <td>+</td>
+                        <td>+</td>
+                        <td>+</td>
+                    </tr>
+                    <tr>
+                        <td>Черновой пол доска 100 х 20мм камерной сушки </td>
+                        <td>-</td>
+                        <td>+</td>
+                        <td>+</td>
+                    </tr>
+                    <tr>
+                        <td>Пароизоляция, ветроизоляция, гидроизоляция "Ондутис SMART" - полы / стены / перегородки / потолок / кровля</td>
+                        <td>-</td>
+                        <td>+</td>
+                        <td>+</td>
+                    </tr>
+                    <tr>
+                        <td>Утеппление: пол - 150мм, стены - 100мм, потолок - 150мм, перегородки - 100мм ROCKWOOL Лайт Баттс Скандик </td>
+                        <td>-</td>
+                        <td>+</td>
+                        <td>+</td>
+                    </tr>
+                    <tr>
+                        <td>Чистовой пол в доме и на террасе шпунт 28мм камерной сушки</td>
+                        <td>-</td>
+                        <td>+</td>
+                        <td>+</td>
+                    </tr>
+                    <tr>
+                        <td>Капитальные стены - дома доска 100 х 50мм камерной сушки</td>
+                        <td>+</td>
+                        <td>-</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>Каркас перегородок доска 100 х 50мм камерной сушки</td>
+                        <td>+</td>
+                        <td>+</td>
+                        <td>+</td>
+                    </tr>
+                    <tr>
+                        <td>Потолочные балки доска 150 х 50мм камерной сушки</td>
+                        <td>+</td>
+                        <td>+</td>
+                        <td>+</td>
+                    </tr>
+                    <tr>
+                        <td>Стропильная система + ригели на карнизы доска  150 х 50мм камерной сушки</td>
+                        <td>+</td>
+                        <td>+</td>
+                        <td>+</td>
+                    </tr>
+                    <tr>
+                        <td>Порешетник под кровлю доска 100 х 20мм + контрейка / вентзазор брусок 40 х 50мм камерной сушки</td>
+                        <td>+</td>
+                        <td>+</td>
+                        <td>+</td>
+                    </tr>
+                    <tr>
+                        <td>Внешняя отделка стен: Имитация бруса камерной сушки </td>
+                        <td>+</td>
+                        <td>+</td>
+                        <td>+</td>
+                    </tr>
+                    <tr>
+                        <td>Отделка внутри: Имитация бруса камерной сушки</td>
+                        <td>-</td>
+                        <td>+</td>
+                        <td>+</td>
+                    </tr>
+                    <tr>
+                        <td>Кровля Мет. Черепица - Grand Line 0.45мм</td>
+                        <td>+</td>
+                        <td>-</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>Оконные блоки ПВХ 2х камерные VEKA</td>
+                        <td>-</td>
+                        <td>+</td>
+                        <td>+</td>
+                    </tr>
+                    <tr>
+                        <td>Двери Филёнчатые согласно проекту</td>
+                        <td>-</td>
+                        <td>+</td>
+                        <td>+</td>
+                    </tr>
+                    <tr>
+                        <td>Оконные и дверные проёмы отделываются обналичником с заполнением пеной</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>Отделка углов, пола, потолка, стен внутри дома плинтус </td>
+                        <td>-</td>
+                        <td>+</td>
+                        <td>+</td>
+                    </tr>
+                    <tr>
+                        <td>Терраса - согласно проекту</td>
+                        <td>+</td>
+                        <td>-</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>Ограждение на террасе и ступени при входе</td>
+                        <td>-</td>
+                        <td>+</td>
+                        <td>+</td>
+                    </tr>
+                </table>
+                <button class="materials__download">
+                    <div class="materials__overlay">
+                        <img src="./img/icons/download.svg" alt="Иконка скачивания" class="materials__icon">
+                        <span class="materials__text">Скачать Таблицу канадского каркасав PDF</span>
+                    </div>
+                </button>
+                <button class="materials__download">
+                    <div class="materials__overlay">
+                        <img src="./img/icons/download.svg" alt="Иконка скачивания" class="materials__icon">
+                        <span class="materials__text">Скачать Таблицу канадского каркасав PDF</span>
+                    </div>
+                </button>
+                <div class="materials__bottom">
+                    <div class="materials__tip">
+                        <p class="materials__text">Стоимость строительства под ключ с учетом доставки и сборки материалов, установки утепления, окон и дверей составляет</p>
+                        <span class="materials__text">До 50кв.м - <span class="text_orange">17 тыс. руб. за. м2</span></span>
+                        <span class="materials__text">До 100кв.м - <span class="text_orange">21 тыс. руб. за м2</span></span>
+                    </div>
+                    <button class="projects__open js-table-toggle">Посмотреть материалы для канадского каркаса</button>
                 </div>
             </div>
         </section>
         <section class="error">
             <img src="./img/error_bg.jpg" class="error__bg">
             <div class="container">
-                <h2 class="section__title text_ttu">ХОТИТЕ ЗАКАЗАТЬ СТРОИТЕЛЬСТВО ДОМА <span class="text_orange">ЕЩЕ ДЕШЕВЛЕ?</span></h2>
+                <h2 class="section__title text_ttu no-adaptiv">ХОТИТЕ ЗАКАЗАТЬ СТРОИТЕЛЬСТВО ДОМА <span class="text_orange">ЕЩЕ ДЕШЕВЛЕ?</span></h2>
                 <p class="error__subtitle">– Хорошо, я наглядно покажу, как можно построить дом дешевле, применяя
                     низкокачественные материалы или нарушая технологию. В результате мы сохраним
                     бюджет, но получим при этом <b>ряд проблем.</b></p>
-                <span class="error__attention text_ttu"><span class="text_red">Последствия экономии</span> при строительстве каркасного дома:</span>
-                <div class="error__item error__item_big">
+                <h3 class="error__attention text_ttu"><span class="text_red">Последствия экономии</span> при строительстве каркасного дома:</h3>
+                <div class="swiper-slide error__item error__item_big">
                     <span class="error__item-title">Гниение силового каркаса дома</span>
                     <p class="error__item-text">Используя сырую древесину, каркас дома довольно быстро начнет гнить и рассыхаться. В результаты стены не получится утеплить, так как поверх утеплителя устанавливается пленка, а высокая влажность приведет к сбору влаги под ней. В процессе усушки запилы деталей рассохнутся, а между стойками образуются щели, из-за чего конструкция станет «хлипкой».</p>
                     <p class="error__item-text">Более того, на сырой доске не избежать появления синевы и грибка. Особенно актуально это для Ленинградской области с нестабильным климатом и обильными осадками. </p>
                     <p class="error__item-text">Мы же используем исключительно древесину камерной сушки, которая НЕ гниет и НЕ рассыхается даже через десятки лет.</p>
                 </div>
-                <div class="error__container">
-                    <div class="error__item">
-                        <span class="error__item-title">Возможность крена или разрушения конструкции</span>
-                        <p class="error__item-text">Любая ошибка при создании силового каркаса может закончиться плачевно. Например, отсутствие укосин в угловых опорах может привести к крену дома. </p>
-                        <p class="error__item-text">Именно поэтому так важно обращаться к опытным специалистам! За нашими плечами уже 200 построенных объектов, которые радуют своих хозяев и по сей день.</p>
+                <div class="error__container" data-mobile="false">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide error__item">
+                            <span class="error__item-title">Возможность крена или разрушения конструкции</span>
+                            <p class="error__item-text">Любая ошибка при создании силового каркаса может закончиться плачевно. Например, отсутствие укосин в угловых опорах может привести к крену дома. </p>
+                            <p class="error__item-text">Именно поэтому так важно обращаться к опытным специалистам! За нашими плечами уже 200 построенных объектов, которые радуют своих хозяев и по сей день.</p>
+                        </div>
+                        <div class="swiper-slide error__item">
+                            <span class="error__item-title">Недостаточная шумоизоляция</span>
+                            <p class="error__item-text">Экономия на шумоизолирующих материалах может привести к тому, что вы будете слышать каждый порыв ветра или проезжающий мимо автомобиль.</p>
+                            <p class="error__item-text">Особенно важно использовать качественную шумоизоляцию в районах, приближенных к железным дорогам и аэропортам.</p>
+                        </div>
+                        <div class="error__item error__item_green">
+                            <p>Именно поэтому крайне важно, чтобы ваш дом строился 
+                                из качественных материалов, и вы видели в смете и по факту, 
+                                какие материалы и в каком количестве используются.</p>
+                        </div>
+                        <div class="swiper-slide error__item">
+                            <span class="error__item-title">Продувание стен и низкая энергоэффективность</span>
+                            <p class="error__item-text">При сооружении каркасного дома следует особое внимание уделить стыкам конструкции, исключить проседание наполнителей и идеально подогнать все щитовые элементы обшивки. </p>
+                            <p class="error__item-text">Если ваш дом построят дилетанты, с высокой вероятностью будут допущены ошибки, за которые вам придется платить из своего кармана в дальнейшем – либо за исправление недочетов, либо по высоким счетам за отопление дома, который сложно прогреть.</p>
+                        </div>
+                        <div class="swiper-slide error__item">
+                            <span class="error__item-title">Появление вредителей</span>
+                            <p class="error__item-text">В отечественных постройках высок риск появления мышей и насекомых, которые доставят немало проблем в будущем, если изначально сэкономить на защите жилья от них. </p>
+                            <p class="error__item-text">Поэтому мы устанавливаем защитную сетку под полами и на вентиляционном зазоре под обшивку с улицы, а древесину обрабатываем средствами против личинок насекомых-вредителей, чтобы исключить их появление.</p>
+                        </div>
                     </div>
-                    <div class="error__item">
-                        <span class="error__item-title">Недостаточная шумоизоляция</span>
-                        <p class="error__item-text">Экономия на шумоизолирующих материалах может привести к тому, что вы будете слышать каждый порыв ветра или проезжающий мимо автомобиль.</p>
-                        <p class="error__item-text">Особенно важно использовать качественную шумоизоляцию в районах, приближенных к железным дорогам и аэропортам.</p>
-                    </div>
-                    <div class="error__item error__item_green">
-                        <p>Именно поэтому крайне важно, чтобы ваш дом строился 
-                            из качественных материалов, и вы видели в смете и по факту, 
-                            какие материалы и в каком количестве используются.</p>
-                    </div>
-                    <div class="error__item">
-                        <span class="error__item-title">Продувание стен и низкая энергоэффективность</span>
-                        <p class="error__item-text">При сооружении каркасного дома следует особое внимание уделить стыкам конструкции, исключить проседание наполнителей и идеально подогнать все щитовые элементы обшивки. </p>
-                        <p class="error__item-text">Если ваш дом построят дилетанты, с высокой вероятностью будут допущены ошибки, за которые вам придется платить из своего кармана в дальнейшем – либо за исправление недочетов, либо по высоким счетам за отопление дома, который сложно прогреть.</p>
-                    </div>
-                    <div class="error__item">
-                        <span class="error__item-title">Появление вредителей</span>
-                        <p class="error__item-text">В отечественных постройках высок риск появления мышей и насекомых, которые доставят немало проблем в будущем, если изначально сэкономить на защите жилья от них. </p>
-                        <p class="error__item-text">Поэтому мы устанавливаем защитную сетку под полами и на вентиляционном зазоре под обшивку с улицы, а древесину обрабатываем средствами против личинок насекомых-вредителей, чтобы исключить их появление.</p>
+                    <div class="error__controls">
+                        <a href="#" class="error__control error__control_prev">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                                <path d="M506.134,241.843c-0.006-0.006-0.011-0.013-0.018-0.019l-104.504-104c-7.829-7.791-20.492-7.762-28.285,0.068    c-7.792,7.829-7.762,20.492,0.067,28.284L443.558,236H20c-11.046,0-20,8.954-20,20c0,11.046,8.954,20,20,20h423.557    l-70.162,69.824c-7.829,7.792-7.859,20.455-0.067,28.284c7.793,7.831,20.457,7.858,28.285,0.068l104.504-104    c0.006-0.006,0.011-0.013,0.018-0.019C513.968,262.339,513.943,249.635,506.134,241.843z" fill="#FFA200"/>
+                            </svg>
+                        </a>
+                        <div class="error__pagination"></div>
+                        <a href="#" class="error__control error__control_next">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                                <path d="M506.134,241.843c-0.006-0.006-0.011-0.013-0.018-0.019l-104.504-104c-7.829-7.791-20.492-7.762-28.285,0.068    c-7.792,7.829-7.762,20.492,0.067,28.284L443.558,236H20c-11.046,0-20,8.954-20,20c0,11.046,8.954,20,20,20h423.557    l-70.162,69.824c-7.829,7.792-7.859,20.455-0.067,28.284c7.793,7.831,20.457,7.858,28.285,0.068l104.504-104    c0.006-0.006,0.011-0.013,0.018-0.019C513.968,262.339,513.943,249.635,506.134,241.843z" fill="#FFA200"/>
+                            </svg>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -464,8 +632,8 @@
             <img src="./img/tree_1.png" class="compare__tree_1">
             <img src="./img/tree_2.png" class="compare__tree_2">
             <div class="container">
-                <h2 class="section__title text_ttu text_tac">Почему каркасный дачный дом <span class="text_orange">лучше, чем дом из бруса?</span></h2>
-                <h3 class="compare__subtitle text_tac">Для сравнения приведем несколько доводов:</h3>
+                <h2 class="section__title text_ttu text_tac no-adaptiv">Почему каркасный дачный дом <span class="text_orange">лучше, чем дом из бруса?</span></h2>
+                <span class="compare__subtitle text_tac">Для сравнения приведем несколько доводов:</span>
                 <div class="compare__container">
                     <div class="compare__side">
                         <div class="compare__head">
@@ -550,7 +718,7 @@
         </section>
         <section class="advantages">
             <div class="container">
-                <h2 class="section__title text_tac text_ttu">Плюсы <span class="text_orange">небольших</span> дачных домиков (до 100 м2 ) в 1 этаж</h2>
+                <h2 class="section__title text_tac text_ttu no-adaptiv">Плюсы <span class="text_orange">небольших</span> дачных домиков (до 100 м2 ) в 1 этаж</h2>
                 <div class="advantages__container">
                     <div class="advantage">
                         <img class="advantage__img" src="./img/advantage_1.png" alt="">
@@ -591,7 +759,7 @@
         <section class="benefits">
             <img src="./img/benefits_bg.jpg" alt="Фон" class="benefits__bg">
             <div class="container">
-                <h2 class="section__title text_tac text_ttu">Наши <span class="text_orange">преимущества</span></h2>
+                <h2 class="section__title text_tac text_ttu no-adaptiv">Наши <span class="text_orange">преимущества</span></h2>
                 <div class="benefits__container">
                     <div class="benefit">
                         <span class="benefit__title">Используем качественные материалы</span>
@@ -622,7 +790,7 @@
         </section>
         <section class="addons">
             <div class="container">
-                <h2 class="section__title text__ttu text_tac">Наши дополнительные <span class="text_orange">преимущества</span></h2>
+                <h2 class="section__title text__ttu text_tac no-adaptiv">Наши дополнительные <span class="text_orange">преимущества</span></h2>
                 <div class="addons__container">
                     <div class="addon">
                         <img src="./img/addon_1.jpg" alt="" class="addon__img">
@@ -656,17 +824,17 @@
             <div class="container">
                 <div class="reports__wrap">
                     <div class="reports__body">
-                        <h2 class="section__title text_ttu">Предоставляем <span class="text_orange">фотоотчеты</span> и регулярно выходим на связь</h2>
+                        <h2 class="section__title text_ttu no-adaptiv">Предоставляем <span class="text_orange">фотоотчеты</span> и регулярно выходим на связь</h2>
                         <div class="banner__info">
                             <div class="banner__item">
-                                <img src="./img/calendar.png" alt="Иконка" class="banner__img">
+                                <img src="./img/icons/camera.svg" alt="Иконка" class="banner__img">
                                 <div class="banner__item-body">
                                     <span class="banner__text-title">Фотоотчеты</span>
                                     <span class="banner__text">Раз в неделю отправляем подробные фотографии о ходе строительства с отчетом о проделанной работе</span>
                                 </div>
                             </div>
                             <div class="banner__item">
-                                <img src="./img/tag.png" alt="Иконка" class="banner__img">
+                                <img src="./img/icons/phone.svg" alt="Иконка" class="banner__img">
                                 <div class="banner__item-body">
                                     <span class="banner__text-title">Связь</span>
                                     <span class="banner__text">Прораб всегда присутствует на стройке. Вы можете написать ему, позвонить или приехать на объект.</span>
@@ -697,8 +865,8 @@
         </section>
         <section class="correct">
             <div class="container">
-                <h2 class="section__title text_ttu text_tac"><span class="text_orange">Как выглядит</span> «правильный» каркасный дом в разрезе?</h2>
-                <span class="correct__subtitle">Именно такие дачные дома строит наша команда!</span>
+                <h2 class="section__title text_ttu text_tac no-adaptiv"><span class="text_orange">Как выглядит</span> «правильный» каркасный дом в разрезе?</h2>
+                <span class="correct__subtitle no-adaptiv">Именно такие дачные дома строит наша команда!</span>
                 <div class="house">
                     <img src="./img/house_1.jpg" alt="Дом" class="house__img">
                     <div class="house__container">
@@ -895,8 +1063,8 @@
         </section>
         <section class="quiz">
             <div class="container">
-                <h2 class="section__title text_tac text_ttu">Хотите заказать строительство дачного дома <span class="text_orange">под ключ?</span></h2>
-                <span class="quiz__subtitle">Пройдите простой тест из 5 вопросов и получите в подарок:</span>
+                <h2 class="section__title text_tac text_ttu no-adaptiv">Хотите заказать строительство дачного дома <span class="text_orange">под ключ?</span></h2>
+                <span class="quiz__subtitle no-adaptiv">Пройдите простой тест из 5 вопросов и получите в подарок:</span>
                 <div class="quiz__gifts">
                     <div class="gift">
                         <img src="./img/gift_1.png" alt="Подарок" class="gift__img">
@@ -1063,92 +1231,215 @@
                     <button class="button button_projects active" data-index="1">50 - 100 м<sup>2</sup></button>
                 </div>
                 <div class="projects__page">
-                    <div class="project">
-                        <span class="project__title">Проект дома 7*9м с крыльцом 1,2*2,5м</span>
-                        <div class="project__img">
-                            <img src="./img/project_16_1.jpg" alt="Фото проекта">
+                    <div class="projects__container">
+                        <div class="project">
+                            <span class="project__title">Проект дома 7*9м с крыльцом 1,2*2,5м</span>
+                            <div class="project__img">
+                                <img src="./img/project_16_1.jpg" alt="Фото проекта">
+                            </div>
+                            <button class="button button_project">скачать этот проект</button>
                         </div>
-                        <button class="button button_project">скачать этот проект</button>
+                        <div class="project">
+                            <span class="project__title">Проект дома 7*9м с крыльцом 1,2*2,5м</span>
+                            <div class="project__img">
+                                <img src="./img/project_16_2.jpg" alt="Фото проекта">
+                            </div>
+                            <button class="button button_project">скачать этот проект</button>
+                        </div>
+                        <div class="project">
+                            <span class="project__title">Проект дома 7*9м с крыльцом 1,2*2,5м</span>
+                            <div class="project__img">
+                                <img src="./img/project_16_3.jpg" alt="Фото проекта">
+                            </div>
+                            <button class="button button_project">скачать этот проект</button>
+                        </div>
+                        <div class="project">
+                            <span class="project__title">Проект дома 7*9м с крыльцом 1,2*2,5м</span>
+                            <div class="project__img">
+                                <img src="./img/project_16_4.jpg" alt="Фото проекта">
+                            </div>
+                            <button class="button button_project">скачать этот проект</button>
+                        </div>
+                        <div class="project">
+                            <span class="project__title">Проект дома 7*9м с крыльцом 1,2*2,5м</span>
+                            <div class="project__img">
+                                <img src="./img/project_16_5.jpg" alt="Фото проекта">
+                            </div>
+                            <button class="button button_project">скачать этот проект</button>
+                        </div>
+                        <div class="project">
+                            <span class="project__title">Проект дома 7*9м с крыльцом 1,2*2,5м</span>
+                            <div class="project__img">
+                                <img src="./img/project_16_6.jpg" alt="Фото проекта">
+                            </div>
+                            <button class="button button_project">скачать этот проект</button>
+                        </div>
                     </div>
-                    <div class="project">
-                        <span class="project__title">Проект дома 7*9м с крыльцом 1,2*2,5м</span>
-                        <div class="project__img">
-                            <img src="./img/project_16_2.jpg" alt="Фото проекта">
+                    <div class="projects__container projects__container_hidden">
+                        <div class="project">
+                            <span class="project__title">Проект дома 7*9м с крыльцом 1,2*2,5м</span>
+                            <div class="project__img">
+                                <img src="./img/project_50_6.jpg" alt="Фото проекта">
+                            </div>
+                            <button class="button button_project">скачать этот проект</button>
                         </div>
-                        <button class="button button_project">скачать этот проект</button>
-                    </div>
-                    <div class="project">
-                        <span class="project__title">Проект дома 7*9м с крыльцом 1,2*2,5м</span>
-                        <div class="project__img">
-                            <img src="./img/project_16_3.jpg" alt="Фото проекта">
+                        <div class="project">
+                            <span class="project__title">Проект дома 7*9м с крыльцом 1,2*2,5м</span>
+                            <div class="project__img">
+                                <img src="./img/project_50_6.jpg" alt="Фото проекта">
+                            </div>
+                            <button class="button button_project">скачать этот проект</button>
                         </div>
-                        <button class="button button_project">скачать этот проект</button>
-                    </div>
-                    <div class="project">
-                        <span class="project__title">Проект дома 7*9м с крыльцом 1,2*2,5м</span>
-                        <div class="project__img">
-                            <img src="./img/project_16_4.jpg" alt="Фото проекта">
+                        <div class="project">
+                            <span class="project__title">Проект дома 7*9м с крыльцом 1,2*2,5м</span>
+                            <div class="project__img">
+                                <img src="./img/project_50_6.jpg" alt="Фото проекта">
+                            </div>
+                            <button class="button button_project">скачать этот проект</button>
                         </div>
-                        <button class="button button_project">скачать этот проект</button>
-                    </div>
-                    <div class="project">
-                        <span class="project__title">Проект дома 7*9м с крыльцом 1,2*2,5м</span>
-                        <div class="project__img">
-                            <img src="./img/project_16_5.jpg" alt="Фото проекта">
+                        <div class="project">
+                            <span class="project__title">Проект дома 7*9м с крыльцом 1,2*2,5м</span>
+                            <div class="project__img">
+                                <img src="./img/project_50_6.jpg" alt="Фото проекта">
+                            </div>
+                            <button class="button button_project">скачать этот проект</button>
                         </div>
-                        <button class="button button_project">скачать этот проект</button>
-                    </div>
-                    <div class="project">
-                        <span class="project__title">Проект дома 7*9м с крыльцом 1,2*2,5м</span>
-                        <div class="project__img">
-                            <img src="./img/project_16_6.jpg" alt="Фото проекта">
+                        <div class="project">
+                            <span class="project__title">Проект дома 7*9м с крыльцом 1,2*2,5м</span>
+                            <div class="project__img">
+                                <img src="./img/project_50_6.jpg" alt="Фото проекта">
+                            </div>
+                            <button class="button button_project">скачать этот проект</button>
                         </div>
-                        <button class="button button_project">скачать этот проект</button>
+                        <div class="project">
+                            <span class="project__title">Проект дома 7*9м с крыльцом 1,2*2,5м</span>
+                            <div class="project__img">
+                                <img src="./img/project_50_6.jpg" alt="Фото проекта">
+                            </div>
+                            <button class="button button_project">скачать этот проект</button>
+                        </div>
+                        <div class="project">
+                            <span class="project__title">Проект дома 7*9м с крыльцом 1,2*2,5м</span>
+                            <div class="project__img">
+                                <img src="./img/project_50_6.jpg" alt="Фото проекта">
+                            </div>
+                            <button class="button button_project">скачать этот проект</button>
+                        </div>
+                        <div class="project">
+                            <span class="project__title">Проект дома 7*9м с крыльцом 1,2*2,5м</span>
+                            <div class="project__img">
+                                <img src="./img/project_50_6.jpg" alt="Фото проекта">
+                            </div>
+                            <button class="button button_project">скачать этот проект</button>
+                        </div>
                     </div>
                 </div>
                 <div class="projects__page active">
-                    <div class="project">
-                        <span class="project__title">Проект дома 7*9м с крыльцом 1,2*2,5м</span>
-                        <div class="project__img">
-                            <img src="./img/project_50_1.jpg" alt="Фото проекта">
+                    <div class="projects__container">
+                        <div class="project">
+                            <span class="project__title">Проект дома 7*9м с крыльцом 1,2*2,5м</span>
+                            <div class="project__img">
+                                <img src="./img/project_50_1.jpg" alt="Фото проекта">
+                            </div>
+                            <button class="button button_project">скачать этот проект</button>
                         </div>
-                        <button class="button button_project">скачать этот проект</button>
-                    </div>
-                    <div class="project">
-                        <span class="project__title">Проект дома 7*9м с крыльцом 1,2*2,5м</span>
-                        <div class="project__img">
-                            <img src="./img/project_50_2.jpg" alt="Фото проекта">
+                        <div class="project">
+                            <span class="project__title">Проект дома 7*9м с крыльцом 1,2*2,5м</span>
+                            <div class="project__img">
+                                <img src="./img/project_50_2.jpg" alt="Фото проекта">
+                            </div>
+                            <button class="button button_project">скачать этот проект</button>
                         </div>
-                        <button class="button button_project">скачать этот проект</button>
-                    </div>
-                    <div class="project">
-                        <span class="project__title">Проект дома 7*9м с крыльцом 1,2*2,5м</span>
-                        <div class="project__img">
-                            <img src="./img/project_50_3.jpg" alt="Фото проекта">
+                        <div class="project">
+                            <span class="project__title">Проект дома 7*9м с крыльцом 1,2*2,5м</span>
+                            <div class="project__img">
+                                <img src="./img/project_50_3.jpg" alt="Фото проекта">
+                            </div>
+                            <button class="button button_project">скачать этот проект</button>
                         </div>
-                        <button class="button button_project">скачать этот проект</button>
-                    </div>
-                    <div class="project">
-                        <span class="project__title">Проект дома 7*9м с крыльцом 1,2*2,5м</span>
-                        <div class="project__img">
-                            <img src="./img/project_50_4.jpg" alt="Фото проекта">
+                        <div class="project">
+                            <span class="project__title">Проект дома 7*9м с крыльцом 1,2*2,5м</span>
+                            <div class="project__img">
+                                <img src="./img/project_50_4.jpg" alt="Фото проекта">
+                            </div>
+                            <button class="button button_project">скачать этот проект</button>
                         </div>
-                        <button class="button button_project">скачать этот проект</button>
-                    </div>
-                    <div class="project">
-                        <span class="project__title">Проект дома 7*9м с крыльцом 1,2*2,5м</span>
-                        <div class="project__img">
-                            <img src="./img/project_50_5.jpg" alt="Фото проекта">
+                        <div class="project">
+                            <span class="project__title">Проект дома 7*9м с крыльцом 1,2*2,5м</span>
+                            <div class="project__img">
+                                <img src="./img/project_50_5.jpg" alt="Фото проекта">
+                            </div>
+                            <button class="button button_project">скачать этот проект</button>
                         </div>
-                        <button class="button button_project">скачать этот проект</button>
-                    </div>
-                    <div class="project">
-                        <span class="project__title">Проект дома 7*9м с крыльцом 1,2*2,5м</span>
-                        <div class="project__img">
-                            <img src="./img/project_50_6.jpg" alt="Фото проекта">
+                        <div class="project">
+                            <span class="project__title">Проект дома 7*9м с крыльцом 1,2*2,5м</span>
+                            <div class="project__img">
+                                <img src="./img/project_50_6.jpg" alt="Фото проекта">
+                            </div>
+                            <button class="button button_project">скачать этот проект</button>
                         </div>
-                        <button class="button button_project">скачать этот проект</button>
                     </div>
+                    <div class="projects__container projects__container_hidden">
+                        <div class="project">
+                            <span class="project__title">Проект дома 7*9м с крыльцом 1,2*2,5м</span>
+                            <div class="project__img">
+                                <img src="./img/project_50_6.jpg" alt="Фото проекта">
+                            </div>
+                            <button class="button button_project">скачать этот проект</button>
+                        </div>
+                        <div class="project">
+                            <span class="project__title">Проект дома 7*9м с крыльцом 1,2*2,5м</span>
+                            <div class="project__img">
+                                <img src="./img/project_50_6.jpg" alt="Фото проекта">
+                            </div>
+                            <button class="button button_project">скачать этот проект</button>
+                        </div>
+                        <div class="project">
+                            <span class="project__title">Проект дома 7*9м с крыльцом 1,2*2,5м</span>
+                            <div class="project__img">
+                                <img src="./img/project_50_6.jpg" alt="Фото проекта">
+                            </div>
+                            <button class="button button_project">скачать этот проект</button>
+                        </div>
+                        <div class="project">
+                            <span class="project__title">Проект дома 7*9м с крыльцом 1,2*2,5м</span>
+                            <div class="project__img">
+                                <img src="./img/project_50_6.jpg" alt="Фото проекта">
+                            </div>
+                            <button class="button button_project">скачать этот проект</button>
+                        </div>
+                        <div class="project">
+                            <span class="project__title">Проект дома 7*9м с крыльцом 1,2*2,5м</span>
+                            <div class="project__img">
+                                <img src="./img/project_50_6.jpg" alt="Фото проекта">
+                            </div>
+                            <button class="button button_project">скачать этот проект</button>
+                        </div>
+                        <div class="project">
+                            <span class="project__title">Проект дома 7*9м с крыльцом 1,2*2,5м</span>
+                            <div class="project__img">
+                                <img src="./img/project_50_6.jpg" alt="Фото проекта">
+                            </div>
+                            <button class="button button_project">скачать этот проект</button>
+                        </div>
+                        <div class="project">
+                            <span class="project__title">Проект дома 7*9м с крыльцом 1,2*2,5м</span>
+                            <div class="project__img">
+                                <img src="./img/project_50_6.jpg" alt="Фото проекта">
+                            </div>
+                            <button class="button button_project">скачать этот проект</button>
+                        </div>
+                        <div class="project">
+                            <span class="project__title">Проект дома 7*9м с крыльцом 1,2*2,5м</span>
+                            <div class="project__img">
+                                <img src="./img/project_50_6.jpg" alt="Фото проекта">
+                            </div>
+                            <button class="button button_project">скачать этот проект</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="projects__more">
+                    <button class="projects__open">показать еще проекты</button>
                 </div>
             </div>
         </section>
@@ -1156,7 +1447,8 @@
             <img src="./img/notype_bg.jpg" alt="Фон" class="notype__bg">
             <div class="container">
                 <div class="notype__body">
-                    <h2 class="section__title">Почти в 70% случаев мы <span class="text_orange">НЕ строим дома по типовым проектам.</span></h2>
+                    <img src="./img/notype_oleg.png" class="notype__oleg" alt="Олег">
+                    <h2 class="section__title no-adaptiv">Почти в 70% случаев мы <span class="text_orange">НЕ строим дома по типовым проектам.</span></h2>
                     <p class="notype__bold">Каждый проект дорабатывается как по архитектуре и габаритам, так и по оснащению в целом. </p>
                     <p class="notype__bold">Так повелось, все мы хотим <span class="text_orange">индивидуальный</span> дом, непохожий на чей–либо. Да и все предусмотреть в проекте крайне сложно, но возможно!</p>
                     <div class="notype__card">
@@ -1170,7 +1462,7 @@
         </section>
         <section class="how">
             <div class="container">
-                <h2 class="section__title text_tac">Как мы <span class="text_orange">работаем?</span></h2>
+                <h2 class="section__title text_tac no-adaptiv">Как мы <span class="text_orange">работаем?</span></h2>
                 <div class="how__container">
                     <div class="how__item">
                         <img src="./img/how_1.png" alt="Изображение" class="how__img">
@@ -1231,7 +1523,6 @@
                         <span class="how__text">Вы оплачиваете остаток при сдаче объекта, 
                             после чего ваша семья пользуется красивым, уютным и надежным дачным домом долгие годы!</span>
                     </div>
-                    <div class="how__item"></div>
                 </div>
                 <div class="how__btn-wrap">
                     <button class="button button_notype">оставить заявку на строительство</button>
@@ -1241,7 +1532,8 @@
         <section class="questions">
             <img src="./img/questions_bg.jpg" alt="Фон" class="questions__bg">
             <div class="container">
-                <h2 class="section__title text_tac">Остались <span class="text_orange">вопросы?</span></h2>
+                <h2 class="section__title text_tac no-adaptiv">Остались <span class="text_orange">вопросы?</span></h2>
+                <img src="./img/questions_oleg.png" alt="Фон" class="questions__oleg">
                 <div class="questions__card">
                     <span class="questions__text">Свяжитесь с нами любым удобным способом:</span>
                     <div class="header__tel">

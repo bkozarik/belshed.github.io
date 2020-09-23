@@ -34,6 +34,11 @@ body
 section
     position: relative
 
+h1, h2, h3, h4, h5
+    &, & *
+        font-weight: 400
+        font-family: "Oswald"
+
 .container
     margin: 0 auto
     position: relative
@@ -144,10 +149,13 @@ section
 
 .section
     &__title
-        font-size: clamp(22px, 5vw, 40px)
-        line-height: clamp(32px, 6vw,55px)
+        font-size: 36px
+        line-height: 40px
+        &:not(.no-adaptiv)
+            @include adaptiv-font(40, 22)
         text-transform: uppercase
         font-weight: normal
+        font-family: "Oswald"
     &__btn
         &-wrap
             width: 100%
@@ -315,6 +323,56 @@ section
 
 .about
     margin-top: 90px
+    .no-adaptiv
+        text-align: center
+    &__desk
+        position: absolute
+        right: 40px
+        top: 600px
+        .about__oleg
+            &-name
+                position: relative
+                display: block
+            &-text
+                position: relative
+                display: block
+    &__oleg
+        position: absolute
+        height: auto
+        display: none
+        z-index: 0
+        top: 100px
+        left: 80%
+        transform: translate(-50%, -100%)
+        &-name
+            display: inline-block
+            background-color: #fff
+            padding: 12px 20px
+            border-radius: 10px
+            position: absolute
+            transform: skewX(-10deg)
+            span
+                font-size: 32px
+                font-family: "Oswald"
+                display: inline-block
+                white-space: nowrap
+                transform: skewX(10deg)
+        &-text
+            display: inline-block
+            background-color: #fff
+            padding: 12px
+            font-size: 14px
+            border-radius: 10px
+            position: absolute
+            transform: skewX(-10deg)
+            margin-left: 50px
+            span
+                display: inline-block
+                white-space: nowrap
+                transform: skewX(10deg)
+        img
+            max-width: 250px
+            transform: translateY(10%)
     &__bg
         position: absolute
         top: 0
@@ -322,6 +380,10 @@ section
         width: 100%
         height: auto
         background-repeat: no-repeat
+        &_1
+            display: block
+        &_2
+            display: none
     &__saw
         position: absolute
         right: -60px
@@ -334,10 +396,13 @@ section
         max-width: 800px
         width: 100%
         margin-top: 90px
+        position: relative
     &__body
         padding: 50px 55px
         background-color: #fff
         border-radius: 4px
+        position: relative
+        z-index: 3
     &__text
         font-size: 16px
         line-height: 24px
@@ -531,6 +596,10 @@ section
         right: -40px
     &__table
         margin-top: 90px
+        &_hidden
+            display: none
+            &.active
+                display: table
         tr
             background-color: #F8F8F8
             border-radius: 3px
@@ -567,6 +636,61 @@ section
                 text-align: left
                 background-color: $text_yellow
                 border-radius: 3px
+    &__download
+        margin-top: 50px
+        display: none
+        background-color: #fff
+        border: none
+        border-radius: 3px
+        overflow: hidden
+        position: relative
+        cursor: pointer
+        background-image: url(../img/table.png)
+        background-size: cover
+        background-position: center
+        .materials
+            &__text
+                color: #fff
+                text-transform: uppercase
+                text-align: center
+                font-size: 24px
+                font-weight: 700
+                color: #fff
+                margin-top: 25px
+        & + &
+            margin-top: 15px
+    &__bottom
+        display: flex
+        align-items: center
+        justify-content: space-between
+        .projects__open
+            font-size: 18px
+            font-weight: 400
+            color: #333
+            &::before
+                color: #333
+                box-shadow: 0 0 0 2px #333
+            &:hover
+                color: #d4d1d1  
+                &::before
+                    color: #d4d1d1  
+                    box-shadow: 0 0 0 2px #d4d1d1
+                    font-weight: 400
+                    margin-top: -3px
+                    margin-right: 10px
+    &__overlay
+        height: 100%
+        width: 100%
+        background-color: rgba(0, 0, 0, .4)
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        min-height: 300px
+        padding: 15px
+    &__icon
+        max-width: 55px
+        height: auto
     &__tip
         padding: 50px 45px
         margin-top: 20px
@@ -596,6 +720,43 @@ section
 
 .error
     margin-top: 120px
+    &__control
+        display: inline-block
+        height: 30px
+        max-width: 60px
+        width: 100%
+        position: relative
+        svg
+            width: 100%
+            height: auto
+            object-fit: contain
+            position: absolute
+            left: 50%
+            top: 50%
+            transform: translate(-50%, -50%)
+        &_prev
+            svg
+                transform: translate(-50%, -50%) rotate(-180deg)
+    &__pagination
+        margin: 0px 25px
+        display: flex
+        align-items: center
+    &__controls
+        display: none
+        width: 100%
+        justify-content: center
+        align-items: center
+        margin-top: 15px
+        .swiper-pagination-bullet + .swiper-pagination-bullet
+            margin-left: 10px
+        .swiper-pagination-bullet
+            height: 13px
+            width: 13px
+            background-color: #a8a8a8
+            opacity: 1
+        .swiper-pagination-bullet-active
+            background-color: #ffa200
+
     &__bg
         bottom: 0
         position: absolute
@@ -603,7 +764,7 @@ section
         width: 100%
         z-index: -1
     .section__title
-        @include adaptiv-font(36, 25)
+        font-size: 36px
         max-width: 680px
     &__subtitle
         font-size: 16px
@@ -652,15 +813,17 @@ section
         &_green
             background-color: #85d17d
             p
+                font-family: "Oswald"
                 color: #fff
                 font-size: 20px
                 line-height: 26px
     &__container
-        max-height: 830px
-        height: 100%
-        display: flex
-        flex-direction: column
-        flex-wrap: wrap
+        .swiper-wrapper
+            max-height: 830px
+            height: 100%
+            display: flex
+            flex-direction: column
+            flex-wrap: wrap
 
 .compare
     margin-top: 90px
@@ -680,6 +843,7 @@ section
         font-weight: 300
         font-size: 26px
         margin-top: 40px
+        display: inline-block
     &__container
         display: flex
         justify-content: space-between
@@ -847,8 +1011,18 @@ section
         right: 0
         top: 50%
         transform: translateY(-50%)
+    &__swiper
+        margin-top: 40px
     &__body
         max-width: 550px
+        width: 100%
+        .reports__control_next
+            transform: translate(30%, -50%) rotate(180deg)
+        .reports__control_prev
+            transform: translate(-30%, -50%) rotate(0deg)
+        .reports__iphone
+            .swiper-slide img
+                object-fit: contain
     &__wrap
         display: flex
         justify-content: space-between
@@ -1205,25 +1379,65 @@ section
         font-weight: 300
 
 .projects
+    &__more
+        margin-top: 70px
+        display: flex
+        justify-content: center
+        align-items: center
+    &__open
+        font-size: 26px
+        text-transform: uppercase
+        font-family: "Oswald"
+        color: #d4d1d1
+        background-color: #fff
+        cursor: pointer
+        &::before
+            display: inline-block
+            content: '+'
+            width: 25px
+            height: 25px
+            text-align: center
+            line-height: 25px
+            font-size: 24px
+            vertical-align: middle
+            border-radius: 50%
+            color: #d4d1d1
+            font-weight: 400
+            margin-top: -3px
+            margin-right: 10px
+            box-shadow: 0 0 0 2px #d4d1d1
+        &:focus
+            outline: none
+        &:hover
+            color: #333
+            &::before
+                color: #333
+                box-shadow: 0 0 0 2px #333
     &__buttons
         display: flex
         justify-content: center
         align-items: center
         margin-top: 25px
     &__page
-        grid-column-gap: 40px
-        grid-row-gap: 50px
-        margin-top: 90px
         display: none
-        grid-template-columns: repeat(2, 1fr)
         opacity: 0
         visibility: hidden
         z-index: -1
         &.active
-            display: grid
+            display: block
             opacity: 1
             visibility: visible
             z-index: 1
+    &__container
+        display: grid
+        grid-column-gap: 40px
+        grid-row-gap: 50px
+        margin-top: 90px
+        grid-template-columns: repeat(2, 1fr)
+        &_hidden
+            display: none
+            &.active
+                display: grid
 
 .project
     padding-bottom: 20px
@@ -1242,6 +1456,11 @@ section
 
 .notype
     padding: 100px 0px
+    &__oleg
+        display: none
+        max-width: 400px
+        margin: 0 auto
+        transform: translateY(40px)
     &__bg
         position: absolute
         bottom: 0
@@ -1302,6 +1521,9 @@ section
         max-width: 260px
         margin: 20px
         position: relative
+        &:last-child
+            margin-right: auto
+            margin-left: 100px
         &:not(:nth-child(3n))::after
             position: absolute
             height: 40px
@@ -1353,6 +1575,12 @@ section
 
 .questions
     padding-bottom: 270px
+    &__oleg
+        display: none
+        max-height: 400px
+        width: auto
+        object-fit: contain
+        margin-top: 40px
     &__bg
         position: absolute
         bottom: 0
