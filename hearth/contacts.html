@@ -14,9 +14,9 @@
 <body>
     <header class="header">
         <button class="burger js-burger">
-            <div class="burger__icon">
+            <span class="burger__icon">
                 <span></span>
-            </div>
+            </span>
             <span class="burger__text">Меню</span>
         </button>
         <div class="container">
@@ -53,10 +53,10 @@
                         </div>
                     </div>
                     <button class="header__cart js-open-cart">
-                        <div class="header__cart-ico">
+                        <span class="header__cart-ico">
                             <img src="./img/icons/cart.svg" alt="Иконка корзины">
                             <span class="header__cart-amount">12</span>
-                        </div>
+                        </span>
                         <span class="header__cart-total">9999 P</span>
                     </button>
                     <div class="cart js-cart">
@@ -67,7 +67,11 @@
                                 <div class="cart__item">
                                     <div class="cart__name">С сыром осетинским</div>
                                     <div class="cart__content">
-                                        <img src="./img/product.png" alt="Фото товара" class="cart__img">
+                                        <picture class="cart__img">
+                                            <source srcset="./img/product.webp" type="image/webp">
+                                            <source srcset="./img/product.png" type="image/png">
+                                            <img src="./img/product.png" alt="Фото товара">
+                                        </picture>
                                         <div class="cart__info">
                                             <div class="cart__info-top">
                                                 <span class="cart__parameters">1200 гр 35∅</span>
@@ -80,7 +84,11 @@
                                 <div class="cart__item">
                                     <div class="cart__name">С сыром осетинским</div>
                                     <div class="cart__content">
-                                        <img src="./img/product.png" alt="Фото товара" class="cart__img">
+                                        <picture class="cart__img">
+                                            <source srcset="./img/product.webp" type="image/webp">
+                                            <source srcset="./img/product.png" type="image/png">
+                                            <img src="./img/product.png" alt="Фото товара">
+                                        </picture>
                                         <div class="cart__info">
                                             <div class="cart__info-top">
                                                 <span class="cart__parameters">1200 гр 35∅</span>
@@ -93,7 +101,11 @@
                                 <div class="cart__item">
                                     <div class="cart__name">С сыром осетинским</div>
                                     <div class="cart__content">
-                                        <img src="./img/product.png" alt="Фото товара" class="cart__img">
+                                        <picture class="cart__img">
+                                            <source srcset="./img/product.webp" type="image/webp">
+                                            <source srcset="./img/product.png" type="image/png">
+                                            <img src="./img/product.png" alt="Фото товара">
+                                        </picture>
                                         <div class="cart__info">
                                             <div class="cart__info-top">
                                                 <span class="cart__parameters">1200 гр 35∅</span>
