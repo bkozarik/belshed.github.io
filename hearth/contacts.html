@@ -130,13 +130,23 @@
     </header>
     <section id="banner" class="banner">
         <div class="banner__bg-container">
-            <img src="./img/banner_bg.png" alt="Фон" class="banner__bg">
-            <img src="./img/banner_bg-m.png" alt="Фон" class="banner__bg-m">
+            <picture class="banner__bg">
+                <source srcset="./img/banner_bg.webp" type="image/webp">
+                <source srcset="./img/banner_bg.jpg" type="image/jpg">
+                <source srcset="./img/banner_bg.png" type="image/png">
+                <img src="./img/banner_bg.png" alt="Фон">
+            </picture>
+            <picture class="banner__bg-m">
+                <source srcset="./img/banner_bg-m.webp" type="image/webp">
+                <source srcset="./img/banner_bg-m.jpg" type="image/jpg">
+                <source srcset="./img/banner_bg-m.png" type="image/png">
+                <img src="./img/banner_bg-m.png" alt="Фон">
+            </picture>
         </div>
         <div class="container">
             <div class="banner__content">
                 <div class="banner__logo-wrap">
-                    <img src="./img/logo.svg" alt="Логотип" class="banner__logo">
+                    <img loading="lazy" src="./img/logo.svg" alt="Логотип" class="banner__logo">
                 </div>
                 <h1 class="banner__title">Лучшие осетинские пироги и пицца в Москве</h1>
             </div>

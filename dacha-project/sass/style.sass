@@ -454,10 +454,42 @@ h1, h2, h3, h4, h5
 
 .portfolio
     margin-top: 120px
+    &__control
+        position: absolute
+        top: 50%
+        transform: translate(-150%, -50%)
+        z-index: 4
+        display: inline-block
+        height: 70px
+        width: 45px
+        opacity: .7
+        &:hover
+            opacity: 1
+        &::after, &::before
+            position: absolute
+            top: 50%
+            left: 0
+            transform: translate(0, -50%)
+            content: ''
+            background-color: #303030
+            transform-origin: left
+            height: 7px
+            width: 40px
+            border-radius: 3px
+        &::after
+            transform: translate(0, -25%) rotate(-45deg)
+        &::before
+            transform: translate(0, -75%) rotate(45deg)
+        &_next
+            transform: translate(150%, -50%) rotate(180deg)
+            right: 0
     &__container
         position: relative
         max-width: 800px
         margin: 80px auto 55px
+        &_hidden:not(.active)
+            overflow: hidden
+            height: 0px
         .swiper-wrapper
             max-width: 800px
         .swiper-slide

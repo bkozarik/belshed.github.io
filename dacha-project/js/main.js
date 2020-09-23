@@ -128,6 +128,24 @@ document.addEventListener('DOMContentLoaded', () => {
         loop: true,
         autoplay: {
             delay: 3000,
+        },
+        navigation: {
+            nextEl: '.portfolio__container .portfolio__control_next',
+            prevEl: '.portfolio__container .portfolio__control_prev',
+        }
+    });
+
+    const portfolioSwiperHidden = new Swiper('.portfolio__container.portfolio__container_hidden', {
+        slidesPerView: 1,
+        spaceBetween: 115,
+        centeredSlides: true,
+        loop: true,
+        autoplay: {
+            delay: 3000,
+        },
+        navigation: {
+            nextEl: '.portfolio__container.portfolio__container_hidden .portfolio__control_next',
+            prevEl: '.portfolio__container.portfolio__container_hidden .portfolio__control_prev',
         }
     });
 
@@ -178,6 +196,18 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('.js-table-toggle').addEventListener('click', () => {
         document.querySelectorAll('.materials__table_hidden').forEach(table => {
             table.classList.toggle('active');
+        });
+    });
+
+    document.querySelector('.button_portfolio').addEventListener('click', () => {
+        document.querySelector('.portfolio__container_hidden').classList.toggle('active');
+        document.querySelector('.button_portfolio').style.display = 'none';
+    });
+
+    document.querySelector('.banner .button_banner').addEventListener('click', () => {
+        document.querySelector('.examples').scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
         });
     });
 
