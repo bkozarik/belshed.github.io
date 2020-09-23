@@ -397,6 +397,8 @@ span.button
         margin-left: 50px
         background-color: transparent
         cursor: pointer
+        &:focus
+            outline: none
         &-ico
             position: relative
             img
@@ -818,6 +820,11 @@ span.button
         height: 45px
     &__items
         background-color: #F7C76C
+        position: absolute
+        top: 0
+        left: 50%
+        width: 100%
+        transform: translateX(-50%)
         .aside
             &__link
     &__item
@@ -1655,6 +1662,48 @@ span.button
                 fill: $text_yellow
 
 .popup
+    &__label
+        max-width: 400px
+        text-align: center
+        cursor: pointer
+        user-select: none
+        display: inline-block
+        margin: 10px 0px 0px
+        input 
+            display: none
+        input:checked + .popup__checkbox
+            border: none
+            background-color: $text_yellow
+            &::after
+                opacity: 1
+    &__text
+        font-size: 14px
+        line-height: 18px
+        a
+            color: $text_yellow
+    &__checkbox
+        display: inline-block
+        height: 14px
+        width: 14px
+        margin-right: 10px
+        vertical-align: middle
+        border: 1px solid #ccc
+        background-color: #fff
+        position: relative
+        &::after
+            opacity: 0
+            content: ''
+            display: inline-block
+            position: absolute
+            top: 50%
+            left: 50%
+            height: 8px
+            width: 8px
+            transform: translate(-50%, -50%)
+            background-repeat: no-repeat
+            background-position: center
+            background-size: contain
+            background-image: url(../img/icons/tip.png)
     &__wrapper
         position: fixed
         z-index: 1000

@@ -415,7 +415,7 @@
                     </nav>
                 </div>
                 <div class="footer__logo-wrap">
-                    <img src="./img/logo.svg" alt="Логотип" class="footer__logo">
+                    <img loading="lazy" src="./img/logo.svg" alt="Логотип" class="footer__logo">
                 </div>
                 <div class="footer__contacts">
                     <span class="footer__time">Время работы пекарни: С 8.00 до 22.00</span>
@@ -436,10 +436,10 @@
         <div class="footer__bottom">
             <div class="container">
                 <div class="footer__bottom-wrap">
-                    <span class="footer__copyright">2020 © Пекарня Очаг<span> ОГРН 316151300074546</span></span>
+                    <span class="footer__copyright">2020 © Пекарня Очаг<br>1-я Бухвостова 12/11 корпус 4 Преображенская Площадь<br><span> ОГРН 316151300074546</span></span>
                     <div class="footer__socials">
                         <a href="#" class="footer__social">
-                            <svg xmlns="http://www.w3.org/2000/svg" id="Bold" enable-background="new 0 0 24 24" viewBox="0 0 24 24">
+                            <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24">
                                 <path d="m15.997 3.985h2.191v-3.816c-.378-.052-1.678-.169-3.192-.169-3.159 0-5.323 1.987-5.323 5.639v3.361h-3.486v4.266h3.486v10.734h4.274v-10.733h3.345l.531-4.266h-3.877v-2.939c.001-1.233.333-2.077 2.051-2.077z"/>
                             </svg>
                         </a>
@@ -454,7 +454,7 @@
                             </svg>
                         </a>
                         <a href="#" class="footer__social">
-                            <svg xmlns="http://www.w3.org/2000/svg" id="Bold" enable-background="new 0 0 24 24" viewBox="0 0 24 24">
+                            <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24">
                                 <path d="m9.417 15.181-.397 5.584c.568 0 .814-.244 1.109-.537l2.663-2.545 5.518 4.041c1.012.564 1.725.267 1.998-.931l3.622-16.972.001-.001c.321-1.496-.541-2.081-1.527-1.714l-21.29 8.151c-1.453.564-1.431 1.374-.247 1.741l5.443 1.693 12.643-7.911c.595-.394 1.136-.176.691.218z"/>
                             </svg>
                         </a>
@@ -466,7 +466,7 @@
 
     <button class="scroll-to-top js-scroll-to-top">
         <svg xmlns="http://www.w3.org/2000/svg" width="10" height="15" viewBox="0 0 9.998 14.996">
-            <path id="button_arrow" data-name="button_arrow" d="M239,3714.5l.867-.794,7.39-6.7,1.742,1.589-6.515,5.91,6.515,5.91L247.255,3722l-7.39-6.7Z" transform="translate(-238.999 -3707.003)"/>
+            <path data-name="button_arrow" d="M239,3714.5l.867-.794,7.39-6.7,1.742,1.589-6.515,5.91,6.515,5.91L247.255,3722l-7.39-6.7Z" transform="translate(-238.999 -3707.003)"/>
         </svg> 
     </button>
 
@@ -477,6 +477,9 @@
             <form class="popup__container">
                 <input name="user_name" type="text" class="popup__input" placeholder="Введите ваше имя">
                 <input name="user_tel" type="tel" class="popup__input" placeholder="Введите ваш телефон">
+                <label class="popup__label">
+                    <input type="checkbox" required><span class="popup__checkbox"></span><sapn class="popup__text">Ознакомлен и согласен с <a href="#" target="_blank" rel="noopener noreferrer">условиями политики конфиденциальности</a></sapn>
+                </label>
                 <button type="submit" class="button button_promo js-form-send">Отправить</button>
             </form>
         </div>
