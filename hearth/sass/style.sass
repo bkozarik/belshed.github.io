@@ -871,10 +871,16 @@ span.button
     background-position: center
     &__bg
         position: absolute
-        top: 46%
-        left: 58%
-        height: 110%
-        transform: translate(-50%, -50%)
+        top: 0
+        left: 0
+        height: 100%
+        width: 100%
+        & *
+            position: absolute
+            top: 46%
+            left: 58%
+            height: 110%
+            transform: translate(-50%, -50%)
         &-container
             position: absolute
             overflow: hidden
@@ -885,7 +891,13 @@ span.button
             z-index: 0
         &-m
             position: absolute
+            top: 0
+            left: 0
+            height: 100%
+            width: 100%
             display: none
+            & *
+                object-fit: cover
     &__content
         padding: 30px 0px 90px
         position: relative

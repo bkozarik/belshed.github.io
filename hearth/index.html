@@ -132,8 +132,18 @@
     </header>
     <section id="banner" class="banner">
         <div class="banner__bg-container">
-            <img loading="lazy" src="./img/banner_bg.png" alt="Фон" class="banner__bg">
-            <img loading="lazy" src="./img/banner_bg-m.png" alt="Фон" class="banner__bg-m">
+            <picture class="banner__bg">
+                <source srcset="./img/banner_bg.webp" type="image/webp">
+                <source srcset="./img/banner_bg.jpg" type="image/jpg">
+                <source srcset="./img/banner_bg.png" type="image/png">
+                <img src="./img/banner_bg.png" alt="Фон">
+            </picture>
+            <picture class="banner__bg-m">
+                <source srcset="./img/banner_bg-m.webp" type="image/webp">
+                <source srcset="./img/banner_bg-m.jpg" type="image/jpg">
+                <source srcset="./img/banner_bg-m.png" type="image/png">
+                <img src="./img/banner_bg-m.png" alt="Фон">
+            </picture>
         </div>
         <div class="container">
             <div class="banner__content">
@@ -304,14 +314,14 @@
             <div class="container">
                 <div class="menu__wrapper-top">
                     <a href="#" class="menu__item menu__item_big">
-                        <img loading="lazy" src="./img/menu_item-1.png" alt="Осетинские пироги" class="menu__item-img">
+                        <img loading="lazy" src="./img/menu_item-1.jpg" alt="Осетинские пироги" class="menu__item-img">
                         <div class="menu__item-body">
                             <span class="menu__item-title">Осетинские пироги</span>
                             <span class="menu__item-amount">(111)</span>
                         </div>
                     </a>
                     <a href="#" class="menu__item menu__item_big">
-                        <img loading="lazy" src="./img/menu_item-2.png" alt="Пицца" class="menu__item-img">
+                        <img loading="lazy" src="./img/menu_item-2.jpg" alt="Пицца" class="menu__item-img">
                         <div class="menu__item-body">
                             <span class="menu__item-title">Пицца</span>
                             <span class="menu__item-amount">(111)</span>
@@ -320,21 +330,21 @@
                 </div>
                 <div class="menu__wrapper-bottom">
                     <a href="#" class="menu__item">
-                        <img loading="lazy" src="./img/menu_item-3.png" alt="Салаты" class="menu__item-img">
+                        <img loading="lazy" src="./img/menu_item-3.jpg" alt="Салаты" class="menu__item-img">
                         <div class="menu__item-body">
                             <span class="menu__item-title">Салаты</span>
                             <span class="menu__item-amount">(111)</span>
                         </div>
                     </a>
                     <a href="#" class="menu__item">
-                        <img loading="lazy" src="./img/menu_item-4.png" alt="Напитки" class="menu__item-img">
+                        <img loading="lazy" src="./img/menu_item-4.jpg" alt="Напитки" class="menu__item-img">
                         <div class="menu__item-body">
                             <span class="menu__item-title">Напитки</span>
                             <span class="menu__item-amount">(111)</span>
                         </div>
                     </a>
                     <a href="#" class="menu__item">
-                        <img loading="lazy" src="./img/menu_item-5.png" alt="Наборы" class="menu__item-img">
+                        <img loading="lazy" src="./img/menu_item-5.jpg" alt="Наборы" class="menu__item-img">
                         <div class="menu__item-body">
                             <span class="menu__item-title">Наборы</span>
                             <span class="menu__item-amount">(111)</span>
@@ -402,6 +412,7 @@
                         <div class="product__top">
                             <picture class="product__img">
                                 <source srcset="./img/product.webp" type="image/webp">
+                                <source srcset="./img/product.jpg" type="image/jpg">
                                 <source srcset="./img/product.png" type="image/png">
                                 <img loading="lazy" src="./img/product.png" alt="Фото товара">
                             </picture>
@@ -450,6 +461,7 @@
                         <div class="product__top">
                             <picture class="product__img">
                                 <source srcset="./img/product.webp" type="image/webp">
+                                <source srcset="./img/product.jpg" type="image/jpg">
                                 <source srcset="./img/product.png" type="image/png">
                                 <img loading="lazy" src="./img/product.png" alt="Фото товара">
                             </picture>
@@ -498,6 +510,7 @@
                         <div class="product__top">
                             <picture class="product__img">
                                 <source srcset="./img/product.webp" type="image/webp">
+                                <source srcset="./img/product.jpg" type="image/jpg">
                                 <source srcset="./img/product.png" type="image/png">
                                 <img loading="lazy" src="./img/product.png" alt="Фото товара">
                             </picture>
@@ -546,6 +559,7 @@
                         <div class="product__top">
                             <picture class="product__img">
                                 <source srcset="./img/product.webp" type="image/webp">
+                                <source srcset="./img/product.jpg" type="image/jpg">
                                 <source srcset="./img/product.png" type="image/png">
                                 <img loading="lazy" src="./img/product.png" alt="Фото товара">
                             </picture>
@@ -594,6 +608,7 @@
                         <div class="product__top">
                             <picture class="product__img">
                                 <source srcset="./img/product.webp" type="image/webp">
+                                <source srcset="./img/product.jpg" type="image/jpg">
                                 <source srcset="./img/product.png" type="image/png">
                                 <img loading="lazy" src="./img/product.png" alt="Фото товара">
                             </picture>
@@ -642,6 +657,7 @@
                         <div class="product__top">
                             <picture class="product__img">
                                 <source srcset="./img/product.webp" type="image/webp">
+                                <source srcset="./img/product.jpg" type="image/jpg">
                                 <source srcset="./img/product.png" type="image/png">
                                 <img loading="lazy" src="./img/product.png" alt="Фото товара">
                             </picture>

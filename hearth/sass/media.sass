@@ -21,7 +21,8 @@
 @media screen and ( max-width: 1030px )
     .banner
         &__bg
-            top: 40%
+            *
+                top: 40%
         &__logo
             width: 160%
             object-fit: contain
@@ -86,9 +87,10 @@
 
     .banner
         &__bg
-            width: 100%
-            height: auto
-            left: 60%
+            *
+                width: 100%
+                height: auto
+                left: 60%
         &__logo
             height: 300px
             width: 400px
@@ -232,10 +234,12 @@
             display: none
             &-m
                 display: block
-                left: 50%
-                top: 40%
-                width: 100%
-                transform: translate(-50%, -50%)
+                *   
+                    position: absolute
+                    left: 50%
+                    top: 40%
+                    width: 100%
+                    transform: translate(-50%, -50%)
 
     .mobile-menu
         &__container
