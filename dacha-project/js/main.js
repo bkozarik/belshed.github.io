@@ -325,15 +325,7 @@ document.addEventListener('DOMContentLoaded', () => {
         downloadDoc(downloadForm.querySelector('.js-hidden-input').value);
     });
 
-    document.querySelector('.js-table-toggle').addEventListener('click', () => {
-        document.querySelectorAll('.materials__table_hidden').forEach(table => {
-            table.classList.toggle('active');
-        });
-        document.querySelector('.materials__table_hidden').scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-        });
-    });
+    document.querySelector('.js-table-toggle').addEventListener('click', () => document.querySelector('.materials__table_hidden').classList.toggle('active'));
 
     forms.forEach(form => form.addEventListener('submit', submitHandler));
 
