@@ -320,7 +320,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         formFields.forEach((field, index) => {
             if(formData.has(field)){
-                console.log(1);
                 let fieldData = formData.get(field).toLowerCase();
                 let fieldInput = targetForm.querySelector('input[name="' + field + '"]');
                 if(formRegExp[index].exec(fieldData) === null){

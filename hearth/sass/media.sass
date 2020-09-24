@@ -81,7 +81,7 @@
             display: none
 
         &__swiper
-            padding: 0
+            padding: 15px 0px
             max-width: none
             width: 100%
 
@@ -349,6 +349,10 @@
             font-size: 24px
             font-weight: bold
 
+    .reviews
+        &__swiper
+            overflow: visible
+
     .review
         display: block
         &__title
@@ -421,6 +425,9 @@
                 letter-spacing: -2px
 
     .promo
+        &__bg
+            height: auto
+            width: auto
         &__block
             align-items: flex-start
         &__text
@@ -443,6 +450,8 @@
             align-items: center
         &__contacts:last-child
             display: flex
+        &__addr
+            display: none
         &__contact
             display: inline-block
         .header__tel
@@ -461,6 +470,9 @@
             order: 2
         &__copyright
             text-align: center
+            color: #ccc
+            br:last-of-type
+                display: none
         .footer__contacts:last-child
             display: block
             .footer__contact

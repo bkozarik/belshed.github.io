@@ -7,6 +7,12 @@ document.addEventListener('DOMContentLoaded', () => {
     let projectButtons = document.querySelectorAll('.button_projects');
     let errorItems = document.querySelectorAll('.error__item');
     let mobileErrorsSwiper = document.querySelector('.error__container');
+    let popupBtn = document.querySelectorAll('.js-toggle-popup');
+    let forms = document.querySelectorAll('form');
+    let burgerBtn = document.querySelector('.js-toggle-menu');
+    let docButtons = document.querySelectorAll('.js-download');
+    let downloadForm = document.querySelector('.js-download-popup form');
+    let menu = document.querySelector('.js-menu');
     let mobileErrorsSwiperSW;
     let currPage = 0;
 
@@ -121,6 +127,120 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    const downloadCanadian = async () => {
+        let filePath = '../dacha-project/pdf/canadian.pdf';
+
+        fetch(filePath, {
+            method: 'GET',
+        })
+        .then(response => response.blob())
+        .then(blob => {
+            let url = window.URL.createObjectURL(blob);
+            let a = document.createElement('a');
+            a.href = url;
+            a.download = "canadian.pdf";
+            document.body.appendChild(a);
+            a.click();    
+            a.remove();     
+        });
+    }
+
+    const downloadScandinavian = () => {
+        let filePath = '../dacha-project/pdf/scandinavian.pdf';
+
+        fetch(filePath, {
+            method: 'GET',
+        })
+        .then(response => response.blob())
+        .then(blob => {
+            let url = window.URL.createObjectURL(blob);
+            let a = document.createElement('a');
+            a.href = url;
+            a.download = "canadian.pdf";
+            document.body.appendChild(a);
+            a.click();    
+            a.remove();     
+        });
+    }
+
+    const submitHandler = () => {
+        event.preventDefault();
+
+        let targetForm = event.target;
+        let formData = new FormData(targetForm);
+
+        let formInputs = targetForm.querySelectorAll('input');
+        let request = new XMLHttpRequest();
+
+        // request.open('POST', '../ajax-mail.php');
+
+        // request.onreadystatechange = function () {
+            
+        //     if(request.readyState === XMLHttpRequest.DONE) {
+        //         var status = request.status;
+
+        //         closePopup();
+        //     }
+        // };
+
+        formInputs.forEach(input => {
+            input.value = '';
+        });
+
+        request.send(formData);
+    }
+
+    const docBtnClick = index => {
+        return () => {
+            event.preventDefault();
+            
+            openPopup('.js-download-popup');
+            document.querySelector('.js-download-popup').querySelector('.js-hidden-input').value = index;
+        }
+    }
+
+    const downloadDoc = index => {
+        let path = "./pdf/" + index + ".pdf"
+        window.open(path, "_blank");
+    }
+
+    const burgerBtnClick = () => {
+        burgerBtn.classList.toggle('active');
+        menu.classList.toggle('active');
+    }
+
+    const openPopup = (selector, place) => {
+        // event.preventDefault();
+
+        let popup = document.querySelector(selector);
+        popup.classList.add('active');
+
+        switch (place) {
+            case "header":
+                popup.querySelector('form').addEventListener('submit', () => ym(67488328,'reachGoal','callback_header'));
+                break;
+            case "project":
+                popup.querySelector('form').addEventListener('submit', () => ym(67488328,'reachGoal','download_project'));
+                break;
+            case "how":
+                popup.querySelector('form').addEventListener('submit', () => ym(67488328,'reachGoal','how_we_work'));
+                break;
+            case "question":
+                popup.querySelector('form').addEventListener('submit', () => ym(67488328,'reachGoal','question'));
+                break;
+            case "footer":
+                popup.querySelector('form').addEventListener('submit', () => ym(67488328,'reachGoal','callback_footer'));
+                break;
+        
+            default:
+                break;
+        }
+    }
+
+    const closePopup = () => {
+        document.querySelectorAll('.popup__wrapper').forEach(item => item.classList.remove('active'));
+    }
+
     const portfolioSwiper = new Swiper('.portfolio__container', {
         slidesPerView: 1,
         spaceBetween: 115,
@@ -175,29 +295,47 @@ document.addEventListener('DOMContentLoaded', () => {
         button.addEventListener('click', quizButtonHandler);
     });
 
-    quizInputs.forEach(input => {
-        input.addEventListener('input', inputChangeHandler);
-    });
+    quizInputs.forEach(input => input.addEventListener('input', inputChangeHandler));
 
-    projectButtons.forEach(btn => {
-        btn.addEventListener('click', projectsPageChange);
-    });
+    projectButtons.forEach(btn => btn.addEventListener('click', projectsPageChange));
 
-    nextBtns.forEach(btn => {
-        btn.addEventListener('click', quizShowNextPage);
-    });
+    nextBtns.forEach(btn => btn.addEventListener('click', quizShowNextPage));
 
-    document.querySelector('.projects__open').addEventListener('click', () => {
+    document.querySelector('.projects__more .projects__open').addEventListener('click', () => {
         document.querySelectorAll('.projects__container_hidden').forEach(container => {
             container.classList.toggle('active');
         });
+    });
+
+    downloadForm.addEventListener('submit', () => {
+        downloadDoc(downloadForm.querySelector('.js-hidden-input').value);
     });
 
     document.querySelector('.js-table-toggle').addEventListener('click', () => {
         document.querySelectorAll('.materials__table_hidden').forEach(table => {
             table.classList.toggle('active');
         });
+        document.querySelector('.materials__table_hidden').scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
     });
+
+    forms.forEach(form => form.addEventListener('submit', submitHandler));
+
+    popupBtn.forEach(btn => btn.addEventListener('click', () => openPopup('.js-common-popup', btn.dataset.place)));
+
+    document.querySelectorAll('.js-download-canadian').forEach(item => item.addEventListener('click', downloadCanadian));
+
+    document.querySelectorAll('.js-download-scandinavian').forEach(item => item.addEventListener('click', downloadScandinavian));
+
+    document.querySelectorAll('.js-close-popup').forEach(btn => btn.addEventListener('click', closePopup));
+
+    document.querySelectorAll('.js-toggle-q_popup').forEach(btn => btn.addEventListener('click', () => openPopup('.js-question-popup', btn.dataset.place)));
+
+    burgerBtn.addEventListener('click', burgerBtnClick);
+
+    docButtons.forEach((item, index) => item.addEventListener('click', docBtnClick(index)));
 
     document.querySelector('.button_portfolio').addEventListener('click', () => {
         document.querySelector('.portfolio__container_hidden').classList.toggle('active');
@@ -207,7 +345,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('.banner .button_banner').addEventListener('click', () => {
         document.querySelector('.examples').scrollIntoView({
             behavior: 'smooth',
-            block: 'start'
+            block: 'start',
         });
     });
 

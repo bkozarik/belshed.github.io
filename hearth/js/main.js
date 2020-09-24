@@ -154,7 +154,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         let main_ReviewsSwiper = new Swiper('.reviews .reviews__swiper', {
             slidesPerView: 1,
-            spaceBetween: 0,
+            spaceBetween: 30,
             centeredSlides: true,
             loop: true,
             grabCursor: true,
