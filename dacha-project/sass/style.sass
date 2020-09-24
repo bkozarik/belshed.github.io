@@ -20,7 +20,7 @@ $maxWidth: 1920
     border-radius: 0px
     transition: all .2s ease-in-out 0s
     color: $text_black
-    font-family: '', sans-serif
+    font-family: 'Museo Sans', sans-serif
 
 body, html
     overflow-x: hidden
@@ -37,12 +37,13 @@ section
 h1, h2, h3, h4, h5
     &, & *
         font-weight: 400
+        letter-spacing: 1.22px
         font-family: "Oswald"
 
 .container
     margin: 0 auto
     position: relative
-    max-width: 1170px
+    max-width: 1200px
     padding: 0px 15px
 
 .button
@@ -58,12 +59,15 @@ h1, h2, h3, h4, h5
     background: linear-gradient(180deg, rgba(255,198,99,1) 0%, rgba(255,173,32,1) 60%, rgba(255,198,99,1) 100%)
     color: #fff
     box-shadow: 0 4px 0 0 #E49100
+    font-weight: 400
+    font-family: "Oswald"
+    transition-duration: .1s
     &:focus
         outline: none
     &_banner
         text-transform: uppercase
         font-size: 21px
-        padding: 28px 45px
+        padding: 25px 75px
         border-radius: 40px
         &:hover
             box-shadow: none
@@ -71,7 +75,7 @@ h1, h2, h3, h4, h5
     &_portfolio
         text-transform: uppercase
         font-size: 16px
-        padding: 20px
+        padding: 20px 35px
         border-radius: 40px
         &:hover
             box-shadow: none
@@ -123,7 +127,7 @@ h1, h2, h3, h4, h5
         sup
             color: #303030
         font-size: 16px
-        font-weight: bold
+        font-weight: 700
         background: #eeeeee
         & + &
             margin-left: 5px
@@ -134,9 +138,10 @@ h1, h2, h3, h4, h5
             sup
                 color: #fff
     &_notype
-        padding: 25px 35px
+        padding: 25px 50px
         text-transform: uppercase
-        font-size: 20px
+        font-size: 21px
+        line-height: 27px
         border-radius: 50px
         &:hover
             box-shadow: none
@@ -144,9 +149,9 @@ h1, h2, h3, h4, h5
     &_step
         border-radius: 30px
         font-size: 14px
-        font-weight: bold
+        font-weight: 700
         text-align: center
-        padding: 12px 30px
+        padding: 12px 40px
         background: none
         box-shadow: none
         &.disabled
@@ -167,13 +172,14 @@ h1, h2, h3, h4, h5
 
 .section
     &__title
-        font-size: 36px
-        line-height: 40px
-        &:not(.no-adaptiv)
-            @include adaptiv-font(40, 22)
-        text-transform: uppercase
-        font-weight: normal
-        font-family: "Oswald"
+        &, & *
+            font-size: 40px
+            line-height: 44px
+            text-transform: uppercase
+            font-weight: normal
+            font-family: "Oswald"
+            sup
+                font-size: 20px !important
     &__btn
         &-wrap
             width: 100%
@@ -245,12 +251,13 @@ h1, h2, h3, h4, h5
         justify-content: space-between
     &__contacts
         display: flex
-        align-items: center
+        align-items: flex-end
     &__tel
         display: flex
         flex-direction: column
         align-items: flex-end
         &-link
+            font-family: "Oswald"
             font-size: 26px
             white-space: nowrap
     &__recall
@@ -329,11 +336,13 @@ h1, h2, h3, h4, h5
     background-position: center
     &__body
         padding-top: 180px
-        padding-bottom: 360px
+        padding-bottom: 430px
+        max-width: 950px
     &__subtitle
         margin-top: 20px
         font-size: 22px
         line-height: 40px
+        display: inline-block
     &__info
         margin: 70px 0px
     &__img
@@ -354,8 +363,12 @@ h1, h2, h3, h4, h5
             font-size: 18px
             line-height: 24px
             display: block
-            font-weight: 700
+            font-weight: 900
             margin-bottom: 5px
+    .section__title
+        line-height: 55px
+        &, & *
+            letter-spacing: normal
 
 .examples
     &__container
@@ -369,8 +382,8 @@ h1, h2, h3, h4, h5
     display: flex
     flex-direction: column
     align-items: stretch
-    box-shadow: 0 0 20px 4px rgba(0, 0, 0, .1)
-    border-radius: 3px
+    box-shadow: 0 0 20px 4px rgba(0, 0, 0, .05)
+    border-radius: 5px
     // overflow: hidden
     position: relative
     &__img
@@ -381,10 +394,15 @@ h1, h2, h3, h4, h5
         padding: 30px 20px 48px
         background-color: #fff
         height: 100%
+        display: flex
+        justify-content: center
+        align-items: center
     &__text
         text-align: center
         text-transform: uppercase
         display: inline-block
+        font-family: "Oswald"
+        font-size: 24px
         width: 100%
     &::before
         position: absolute
@@ -401,6 +419,7 @@ h1, h2, h3, h4, h5
 
 .about
     margin-top: 90px
+    padding-top: 20px
     .no-adaptiv
         text-align: center
     &__desk
@@ -426,28 +445,28 @@ h1, h2, h3, h4, h5
             display: inline-block
             background-color: #fff
             padding: 12px 20px
-            border-radius: 10px
+            border-radius: 6px
             position: absolute
-            transform: skewX(-10deg)
+            transform: skewX(-5deg)
             span
                 font-size: 32px
                 font-family: "Oswald"
                 display: inline-block
                 white-space: nowrap
-                transform: skewX(10deg)
+                transform: skewX(5deg)
         &-text
-            display: inline-block
+            display: inline-block !important
             background-color: #fff
             padding: 12px
             font-size: 14px
-            border-radius: 10px
+            border-radius: 6px
             position: absolute
-            transform: skewX(-10deg)
-            margin-left: 50px
+            transform: skewX(-5deg)
+            margin-left: 35px
             span
                 display: inline-block
                 white-space: nowrap
-                transform: skewX(10deg)
+                transform: skewX(5deg)
         img
             max-width: 250px
             transform: translateY(10%)
@@ -476,7 +495,7 @@ h1, h2, h3, h4, h5
         margin-top: 90px
         position: relative
     &__body
-        padding: 50px 55px
+        padding: 56px 76px 20px 56px
         background-color: #fff
         border-radius: 4px
         position: relative
@@ -487,7 +506,7 @@ h1, h2, h3, h4, h5
         & + &
             margin-top: 25px
     &__team
-        margin-top: 30px
+        margin-top: 60px
         width: 100%
         display: grid
         grid-gap: 35px
@@ -503,10 +522,11 @@ h1, h2, h3, h4, h5
         height: 185px
         object-fit: cover
     &__name
-        margin-top: 15px
+        margin-top: 22px
         font-size: 24px
         line-height: 28px
         text-align: center
+        font-family: "Oswald"
     &__duty
         text-align: center
         display: inline-block
@@ -514,10 +534,10 @@ h1, h2, h3, h4, h5
         margin-top: 5px
         max-width: 130px
     &__garantee
-        margin-top: 90px
+        margin-top: 80px
         display: flex
         &-body
-            margin-left: 65px
+            margin-left: 75px
         &-img
             max-width: 215px
             height: 190px
@@ -525,8 +545,15 @@ h1, h2, h3, h4, h5
         &-title
             @include adaptiv-font(35, 18)
             text-transform: uppercase
+            line-height: 45px
             display: block
+            max-width: 850px
+            &, & *
+                font-family: "Oswald"
+                letter-spacing: normal
         &-subtitle
+            display: inline-block
+            margin-top: 15px
             font-size: 22px
             line-height: 48px
 
@@ -583,21 +610,27 @@ h1, h2, h3, h4, h5
 
 .why
     margin-top: 100px
+    padding-top: 40px
     &__tree
         right: 0
         position: absolute
         top: 200px
     &__container
-        display: flex
-        justify-content: space-between
-        flex-wrap: wrap
+        // display: flex
+        // justify-content: space-between
+        // flex-wrap: wrap
+        margin-top: 7px
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
         align-items: baseline
+        grid-row-gap: 45px
+        grid-column-gap: 35px
     &__item
         display: flex
         flex-direction: column
         object-fit: contain
-        max-width: 250px
-        margin: 20px
+        &:nth-child(3n)
+            padding-left: 50px
     &__img
         margin-bottom: 20px
         img
@@ -606,10 +639,16 @@ h1, h2, h3, h4, h5
     &__title
         font-size: 18px
         line-height: 24px
+        max-width: 250px
+        display: inline-block
+        font-weight: 700
     &__text
         font-size: 15px
+        font-weight: 300
         line-height: 22px
         margin-top: 20px
+        max-width: 320px
+        display: inline-block
 
 .count
     padding: 140px 0px
@@ -641,9 +680,13 @@ h1, h2, h3, h4, h5
         align-items: flex-end
     &__title
         @include adaptiv-font(32, 22)
-        font-weight: normal
+        font-family: "Oswald"
         text-align: right
-        max-width: 680px
+        font-weight: normal
+        line-height: 45px
+        max-width: 690px
+        &, & *
+            letter-spacing: normal
     &__body
         margin-top: 75px
         width: 100%
@@ -700,6 +743,11 @@ h1, h2, h3, h4, h5
             color: $text_yellow
 
 .materials
+    padding-top: 10px
+    .section__title
+        max-width: 830px
+        &, & *
+        letter-spacing: normal
     &__niples
         position: absolute
         bottom: 0
@@ -721,7 +769,7 @@ h1, h2, h3, h4, h5
             &:nth-child(2)
                 td
                     border-top: 12px solid #fff 
-                    padding-top: 30px
+                    padding-top: 43px
                     border-radius: 5px
             &:last-child
                 td
@@ -730,28 +778,32 @@ h1, h2, h3, h4, h5
             border-left: 12px solid #fff 
         td
             overflow: hidden
-            padding: 15px 40px
+            padding: 13px 40px
             &:nth-child(1)
                 font-size: 16px
+                line-height: 20px
+                width: 500px
             &:nth-child(2), &:nth-child(3), &:nth-child(4)
                 text-align: center
+                font-weight: 900
                 font-size: 22px
         th
-            padding: 10px 20px
+            padding: 10px 15px
             text-align: center
             font-size: 16px
-            font-weight: normal
+            font-weight: 700
+            min-width: 140px
             &:first-of-type
+                padding: 10px 0px 10px 45px
                 min-width: 600px
                 white-space: nowrap
                 color: #ffffff
                 font-size: 20px
-                font-weight: normal
+                font-weight: 700
                 text-align: left
                 background-color: $text_yellow
                 border-radius: 3px
     &__download
-        margin-top: 50px
         display: none
         background-color: #fff
         border: none
@@ -762,6 +814,9 @@ h1, h2, h3, h4, h5
         background-image: url(../img/table.png)
         background-size: cover
         background-position: center
+        max-width: 300px
+        width: 100%
+        margin: 50px auto 0px
         .materials
             &__text
                 color: #fff
@@ -807,12 +862,12 @@ h1, h2, h3, h4, h5
         max-width: 55px
         height: auto
     &__tip
-        padding: 50px 45px
+        padding: 43px 45px
         margin-top: 20px
         overflow: hidden
         background-color: #fff
         position: relative
-        max-width: 600px
+        max-width: 550px
         box-shadow: 0 0 30px 10px rgba(0, 0, 0, 0.05)
         &::before
             content: ''
@@ -879,13 +934,15 @@ h1, h2, h3, h4, h5
         width: 100%
         z-index: -1
     .section__title
-        font-size: 36px
-        max-width: 680px
+        max-width: 630px
+        &, & *
+            letter-spacing: normal
+            line-height: 50px
     &__subtitle
         font-size: 16px
         font-weight: 300
         display: inline-block
-        max-width: 590px
+        max-width: 640px
         margin-top: 80px
     &__attention
         font-size: 22px
@@ -896,7 +953,7 @@ h1, h2, h3, h4, h5
     &__item
         background-color: #fff
         border-radius: 4px
-        padding: 35px 40px 25px
+        padding: 45px 40px 25px 50px
         box-shadow: 0 0 20px 10px rgba(0, 0, 0, .05)
         max-width: 50%
         margin-right: 15px
@@ -905,7 +962,7 @@ h1, h2, h3, h4, h5
             font-weight: 700
             font-size: 16px
             display: inline-block
-            margin-bottom: 40px
+            margin-bottom: 25px
             position: relative
             &::before
                 content: ''
@@ -921,7 +978,7 @@ h1, h2, h3, h4, h5
             color: #303030
             line-height: 26px
             & + &
-                margin-top: 1em
+                margin-top: 1.6em
         &_big
             max-width: 800px
             margin-bottom: 15px
@@ -942,6 +999,12 @@ h1, h2, h3, h4, h5
 
 .compare
     margin-top: 90px
+    padding-top: 50px
+    .section__title
+        max-width: 730px
+        margin: 0 auto
+        &, & *
+            letter-spacing: normal
     &__hummer
         position: absolute
         left: -20px
@@ -959,6 +1022,7 @@ h1, h2, h3, h4, h5
         font-size: 26px
         margin-top: 40px
         display: inline-block
+        width: 100%
     &__container
         display: flex
         justify-content: space-between
@@ -967,13 +1031,14 @@ h1, h2, h3, h4, h5
         display: flex
         flex-direction: column
         align-items: flex-start
-        max-width: 500px
+        max-width: 540px
     &__icon
         max-width: 65px
     &__title
         display: block
         font-weight: 700
         line-height: 24px
+        font-size: 24px
         margin-top: 25px
     &__text
         font-size: 16px
@@ -990,6 +1055,7 @@ h1, h2, h3, h4, h5
         &-text
             font-size: 20px
             max-width: 740px
+            margin-top: 30px
             text-align: center
             display: inline-block
     &__item
@@ -1017,16 +1083,21 @@ h1, h2, h3, h4, h5
     margin-top: 60px
     &__container
         display: flex
-        justify-content: space-between
+        justify-content: flex-start
         flex-wrap: wrap
         align-items: baseline
     .section__title
-        max-width: 650px
+        max-width: 680px
         margin: 0 auto
+        &, & *
+            line-height: 48px
+            letter-spacing: normal
 
 .advantage
-    max-width: 545px
-    margin-top: 75px
+    max-width: 510px
+    margin-top: 95px
+    &:nth-child(2n)
+        margin-left: 90px
     &__img
         max-width: 140px
         max-height: 130px
@@ -1036,18 +1107,21 @@ h1, h2, h3, h4, h5
         font-size: 20px
         line-height: 30px
         display: block
-        margin: 30px 0px
+        margin: 40px 0px 30px
     &__text
         font-weight: 300
         font-size: 16px
         line-height: 30px
         color: #303030
         & + &
-            margin-top: 1.5em
+            margin-top: 1.9em
 
 .benefits
-    margin-top: 75px
+    margin-top: 60px
     padding-bottom: 100px
+    .section__title
+        &, & *
+            letter-spacing: normal  
     &__bg
         position: absolute
         bottom: 0
@@ -1117,10 +1191,11 @@ h1, h2, h3, h4, h5
         font-size: 16px
         line-height: 26px
         font-weight: 300
+        margin-top: 20px
         color: #303030
 
 .reports
-    padding-bottom: 100px
+    padding-bottom: 70px
     &__bg
         position: absolute
         right: 0
@@ -1129,8 +1204,22 @@ h1, h2, h3, h4, h5
     &__swiper
         margin-top: 40px
     &__body
-        max-width: 550px
+        max-width: 650px
+        padding-left: 90px
         width: 100%
+        .banner
+            &__img
+                width: 70px
+                height: 70px
+                object-fit: contain
+            &__info
+                margin: 85px 0px 110px
+            &__item + &__item
+                margin-top: 50px
+        .section__title
+            &, & *
+                letter-spacing: normal
+                line-height: 48px
         .reports__control_next
             transform: translate(30%, -50%) rotate(180deg)
         .reports__control_prev
@@ -1148,11 +1237,13 @@ h1, h2, h3, h4, h5
         display: flex
         align-items: center
         width: 100%
+        max-width: 460px
     &__link
         white-space: nowrap
         font-size: 26px
         line-height: 20px
         font-weight: 500
+        font-family: "Oswald"
         color: #393939
     &__subtext
         color: #777777
@@ -1226,6 +1317,8 @@ h1, h2, h3, h4, h5
     .section__title
         max-width: 520px
         margin: 0px auto
+        &, & *
+            letter-spacing: normal
 
 .house
     position: relative
@@ -1282,7 +1375,7 @@ h1, h2, h3, h4, h5
         border-radius: 4px
         border: 1px solid #ccc
         padding: 27px 35px
-        max-height: 165px
+        max-height: 175px
         &-body
             display: flex
             flex-direction: column
@@ -1304,6 +1397,8 @@ h1, h2, h3, h4, h5
         font-size: 16px
         font-weight: 700
         line-height: 30px
+        margin-bottom: 5px
+        display: inline-block
     &__item
         font-size: 14px
         line-height: 18px
@@ -1317,12 +1412,17 @@ h1, h2, h3, h4, h5
 
 .quiz
     padding-bottom: 100px
+    .section__title
+        max-width: 680px
+        margin: 0 auto
+        &, & *
+            letter-spacing: normal
     &__subtitle
         display: block
         text-align: center
         font-size: 26px
         font-weight: 300
-        margin: 40px auto 0px
+        margin: 60px auto 0px
     &__gifts
         margin-top: 50px
         display: flex
@@ -1397,7 +1497,7 @@ h1, h2, h3, h4, h5
     &__subtext
         margin-top: 50px
         font-size: 16px
-        font-weight: bold
+        font-weight: 700
     &__free
         display: inline-block
         position: relative
@@ -1482,6 +1582,8 @@ h1, h2, h3, h4, h5
             transform: translate(-50%, -50%) scale(1)
         &>input[type="radio"]
             display: none
+        &>input[type="text"]
+            min-width: 330px
 
 .gift
     display: flex
@@ -1494,6 +1596,11 @@ h1, h2, h3, h4, h5
         font-weight: 300
 
 .projects
+    padding-top: 10px
+    .section__title
+        &, & *
+            letter-spacing: normal
+            line-height: 44px
     &__more
         margin-top: 70px
         display: flex
@@ -1532,7 +1639,7 @@ h1, h2, h3, h4, h5
         display: flex
         justify-content: center
         align-items: center
-        margin-top: 25px
+        margin-top: 35px
     &__page
         display: none
         opacity: 0
@@ -1571,7 +1678,7 @@ h1, h2, h3, h4, h5
             border-radius: 4px
 
 .notype
-    padding: 100px 0px
+    padding: 120px 0px
     &__oleg
         display: none
         max-width: 400px
@@ -1586,11 +1693,14 @@ h1, h2, h3, h4, h5
     &__body
         max-width: 670px
     &__bold
-        font-weight: bold
-        font-size: 20px
-        line-height: 36px
+        &, & *
+            font-weight: 700
+            font-size: 20px
+            line-height: 36px
+        display: inline-block
+        max-width: 600px
         &:first-of-type
-            margin-top: 60px
+            margin-top: 70px
         & + &
             margin-top: 40px
     &__card
@@ -1620,7 +1730,9 @@ h1, h2, h3, h4, h5
 
 .how
     padding-bottom: 100px
+    padding-top: 30px
     &__container
+        margin-top: 30px
         display: flex
         flex-wrap: wrap
         align-items: baseline
@@ -1659,8 +1771,8 @@ h1, h2, h3, h4, h5
         max-width: 100%
         object-fit: contain
     &__title
-        font-weight: bold
-        margin-top: 5px
+        font-weight: 700
+        margin-top: 35px
         display: inline-block
         position: relative
         &::before
@@ -1671,7 +1783,7 @@ h1, h2, h3, h4, h5
             background: #40ba4f
             color: #fff
             font-size: 16px
-            font-weight: bold
+            font-weight: 700
             left: 0
             top: 0
             text-align: center
@@ -1690,7 +1802,8 @@ h1, h2, h3, h4, h5
             content: '#{$i}'
 
 .questions
-    padding-bottom: 270px
+    padding-top: 65px
+    padding-bottom: 350px
     &__oleg
         display: none
         max-height: 400px
@@ -1791,7 +1904,7 @@ h1, h2, h3, h4, h5
         &::after
             transform: translate(-50%, -50%) rotate(45deg)
     &__title
-        font-weight: bold
+        font-weight: 700
         font-size: 18px
         text-align: center
         margin-top: 20px

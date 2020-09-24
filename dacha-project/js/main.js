@@ -13,11 +13,25 @@ document.addEventListener('DOMContentLoaded', () => {
     let docButtons = document.querySelectorAll('.js-download');
     let downloadForm = document.querySelector('.js-download-popup form');
     let menu = document.querySelector('.js-menu');
+    let scrollLinks = document.querySelectorAll('.js-scroll-link');
     let mobileErrorsSwiperSW;
     let currPage = 0;
 
     const constrain = (val, min, max) => {
         return val > max ? max : val < min ? min : val;
+    }
+
+    const scrollLinkClick = () => {
+        event.preventDefault();
+
+        mobieMenuToggle();
+
+        let target = event.target;
+        
+        document.querySelector(target.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
     }
 
     const quizShowPage = page => {
@@ -204,7 +218,7 @@ document.addEventListener('DOMContentLoaded', () => {
         window.open(path, "_blank");
     }
 
-    const burgerBtnClick = () => {
+    const mobieMenuToggle = () => {
         burgerBtn.classList.toggle('active');
         menu.classList.toggle('active');
     }
@@ -333,9 +347,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.querySelectorAll('.js-toggle-q_popup').forEach(btn => btn.addEventListener('click', () => openPopup('.js-question-popup', btn.dataset.place)));
 
-    burgerBtn.addEventListener('click', burgerBtnClick);
+    burgerBtn.addEventListener('click', mobieMenuToggle);
 
     docButtons.forEach((item, index) => item.addEventListener('click', docBtnClick(index)));
+
+    scrollLinks.forEach(item => item.addEventListener('click', scrollLinkClick));
 
     document.querySelector('.button_portfolio').addEventListener('click', () => {
         document.querySelector('.portfolio__container_hidden').classList.toggle('active');
