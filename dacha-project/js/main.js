@@ -127,8 +127,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    const downloadCanadian = async () => {
-        let filePath = '../dacha-project/pdf/canadian.pdf';
+    const downloadCanadian = () => {
+        let filePath = '../dacha-project/pdf/50-100m.pdf';
 
         fetch(filePath, {
             method: 'GET',
@@ -138,7 +138,7 @@ document.addEventListener('DOMContentLoaded', () => {
             let url = window.URL.createObjectURL(blob);
             let a = document.createElement('a');
             a.href = url;
-            a.download = "canadian.pdf";
+            a.download = "50-100m.pdf";
             document.body.appendChild(a);
             a.click();    
             a.remove();     
@@ -146,7 +146,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const downloadScandinavian = () => {
-        let filePath = '../dacha-project/pdf/scandinavian.pdf';
+        let filePath = '../dacha-project/pdf/16-50m.pdf';
 
         fetch(filePath, {
             method: 'GET',
@@ -156,7 +156,7 @@ document.addEventListener('DOMContentLoaded', () => {
             let url = window.URL.createObjectURL(blob);
             let a = document.createElement('a');
             a.href = url;
-            a.download = "canadian.pdf";
+            a.download = "16-50m.pdf";
             document.body.appendChild(a);
             a.click();    
             a.remove();     
@@ -200,7 +200,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const downloadDoc = index => {
-        let path = "./pdf/" + index + ".pdf"
+        let path = "./pdf/projects/" + index + ".pdf"
         window.open(path, "_blank");
     }
 
