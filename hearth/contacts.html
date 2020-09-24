@@ -5,10 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
-    <link rel="stylesheet" href="./css/fonts.css">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/media.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="./js/main.js" defer></script>
     <title>Контакты</title>
 </head>
 <body>
@@ -34,9 +32,9 @@
                         </ul>
                     </nav>
                 </div>
-                <a href="./index.html" class="header__logo">
-                    <img src="./img/logo.svg" alt="Логотип" class="header__logo-img">
-                </a>
+                <div class="header__logo">
+                    <img loading="lazy" src="./img/logo.svg" alt="Логотип" class="header__logo-img">
+                </div>
                 <div class="header__side">
                     <div class="header__contacts">
                         <span class="button button_recall">Звоните, мы работаем</span>
@@ -60,6 +58,7 @@
                         <span class="header__cart-total">9999 P</span>
                     </button>
                     <div class="cart js-cart">
+                        <span class="cart__close js-open-cart"></span>
                         <span class="cart__title">Ваша корзина</span>
                         <a href="#" class="button button_cart">Получить скидку 10%</a>
                         <form class="cart__body">
@@ -69,15 +68,14 @@
                                     <div class="cart__content">
                                         <picture class="cart__img">
                                             <source srcset="./img/product.webp" type="image/webp">
-                                            <source srcset="./img/product.png" type="image/png">
-                                            <img src="./img/product.png" alt="Фото товара">
+                                            <img src="./img/product.jpg" alt="Фото товара">
                                         </picture>
                                         <div class="cart__info">
                                             <div class="cart__info-top">
                                                 <span class="cart__parameters">1200 гр 35∅</span>
                                                 <span class="cart__price">8910 р</span>
                                             </div>
-                                            <span class="product__count"><span class="product__dec js-product-dec">-</span><input type="text" inputmode="numeric"  value="1"><span class="product__inc js-product-inc">+</span></span>
+                                            <span class="product__count"><span class="product__dec js-product-dec">-</span><input type="tel"  value="1"><span class="product__inc js-product-inc">+</span></span>
                                         </div>
                                     </div>
                                 </div>
@@ -86,15 +84,14 @@
                                     <div class="cart__content">
                                         <picture class="cart__img">
                                             <source srcset="./img/product.webp" type="image/webp">
-                                            <source srcset="./img/product.png" type="image/png">
-                                            <img src="./img/product.png" alt="Фото товара">
+                                            <img src="./img/product.jpg" alt="Фото товара">
                                         </picture>
                                         <div class="cart__info">
                                             <div class="cart__info-top">
                                                 <span class="cart__parameters">1200 гр 35∅</span>
                                                 <span class="cart__price">810 р</span>
                                             </div>
-                                            <span class="product__count"><span class="product__dec js-product-dec">-</span><input type="text" inputmode="numeric"  value="1"><span class="product__inc js-product-inc">+</span></span>
+                                            <span class="product__count"><span class="product__dec js-product-dec">-</span><input type="tel"  value="1"><span class="product__inc js-product-inc">+</span></span>
                                         </div>
                                     </div>
                                 </div>
@@ -103,15 +100,14 @@
                                     <div class="cart__content">
                                         <picture class="cart__img">
                                             <source srcset="./img/product.webp" type="image/webp">
-                                            <source srcset="./img/product.png" type="image/png">
-                                            <img src="./img/product.png" alt="Фото товара">
+                                            <img loading="lazy" src="./img/product.jpg" alt="Фото товара">
                                         </picture>
                                         <div class="cart__info">
                                             <div class="cart__info-top">
                                                 <span class="cart__parameters">1200 гр 35∅</span>
                                                 <span class="cart__price">810 р</span>
                                             </div>
-                                            <span class="product__count"><span class="product__dec js-product-dec">-</span><input type="text" inputmode="numeric"  value="1"><span class="product__inc js-product-inc">+</span></span>
+                                            <span class="product__count"><span class="product__dec js-product-dec">-</span><input type="tel"  value="1"><span class="product__inc js-product-inc">+</span></span>
                                         </div>
                                     </div>
                                 </div>
@@ -132,13 +128,11 @@
         <div class="banner__bg-container">
             <picture class="banner__bg">
                 <source srcset="./img/banner_bg.webp" type="image/webp">
-                <source srcset="./img/banner_bg.jpg" type="image/jpg">
                 <source srcset="./img/banner_bg.png" type="image/png">
                 <img src="./img/banner_bg.png" alt="Фон">
             </picture>
             <picture class="banner__bg-m">
                 <source srcset="./img/banner_bg-m.webp" type="image/webp">
-                <source srcset="./img/banner_bg-m.jpg" type="image/jpg">
                 <source srcset="./img/banner_bg-m.png" type="image/png">
                 <img src="./img/banner_bg-m.png" alt="Фон">
             </picture>
@@ -338,8 +332,8 @@
                     </div>
                     <div class="description__card">
                         <span class="information__title">Продукция сертифицирована:</span>
-                        <img class="info__sertificate" src="./img/sert_1.png" alt="">
-                        <img class="info__sertificate" src="./img/sert_2.png" alt="">
+                        <img class="info__sertificate" src="./img/sert_1.jpg" alt="Сертификат">
+                        <img class="info__sertificate" src="./img/sert_2.jpg" alt="Сертификат">
                     </div>
                 </div>
             </div>
@@ -479,8 +473,6 @@
             </form>
         </div>
     </div>
-
-    <script src="./js/swiper-bundle.min.js"></script>
-    <script src="./js/main.js"></script>
+    
 </body>
 </html>
