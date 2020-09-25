@@ -186,16 +186,16 @@ document.addEventListener('DOMContentLoaded', () => {
         let formInputs = targetForm.querySelectorAll('input');
         let request = new XMLHttpRequest();
 
-        // request.open('POST', '../ajax-mail.php');
+        request.open('POST', 'ajax-mail.php');
 
-        // request.onreadystatechange = function () {
+        request.onreadystatechange = function () {
             
-        //     if(request.readyState === XMLHttpRequest.DONE) {
-        //         var status = request.status;
+            if(request.readyState === XMLHttpRequest.DONE) {
+                var status = request.status;
 
-        //         closePopup();
-        //     }
-        // };
+                closePopup();
+            }
+        };
 
         formInputs.forEach(input => {
             input.value = '';
