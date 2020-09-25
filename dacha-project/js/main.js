@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let downloadForm = document.querySelector('.js-download-popup form');
     let menu = document.querySelector('.js-menu');
     let scrollLinks = document.querySelectorAll('.js-scroll-link');
+    let popupsWrappers = document.querySelectorAll('.popup__wrapper');
     let mobileErrorsSwiperSW;
     let currPage = 0;
 
@@ -194,6 +195,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 var status = request.status;
 
                 closePopup();
+
+                openPopup('.js-thx-popup', 2);
             }
         };
 
@@ -338,6 +341,12 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.js-close-popup').forEach(btn => btn.addEventListener('click', closePopup));
 
     document.querySelectorAll('.js-toggle-q_popup').forEach(btn => btn.addEventListener('click', () => openPopup('.js-question-popup', btn.dataset.place)));
+
+    popupsWrappers.forEach(wrapper => wrapper.addEventListener('click', () => {
+        if(event.target.classList.contains('popup__wrapper')){
+            closePopup();
+        }
+    }));
 
     burgerBtn.addEventListener('click', mobieMenuToggle);
 

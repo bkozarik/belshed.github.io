@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./css/swiper-bundle.min.css">
     <link rel="stylesheet" href="./css/fonts.css">
     <link rel="stylesheet" href="./css/style.css">
@@ -55,11 +56,15 @@
     <div class="menu js-menu">
         <nav class="menu__nav">
             <ul class="menu_list">
-                <li class="menu__item"><a href="#banner" class="menu__link js-scroll-link">Топ</a></li>
-                <li class="menu__item"><a href="#" class="menu__link js-scroll-link">Link</a></li>
-                <li class="menu__item"><a href="#" class="menu__link js-scroll-link">Link</a></li>
-                <li class="menu__item"><a href="#" class="menu__link js-scroll-link">Link</a></li>
-                <li class="menu__item"><a href="#footer" class="menu__link js-scroll-link">Боттом</a></li>
+                <li class="menu__item"><a href="#banner" class="menu__link js-scroll-link">Главная</a></li>
+                <li class="menu__item"><a href="#about" class="menu__link js-scroll-link">О нас</a></li>
+                <li class="menu__item"><a href="#portfolio" class="menu__link js-scroll-link">Фотогалерея</a></li>
+                <li class="menu__item"><a href="#why" class="menu__link js-scroll-link">Почему выбирают нас</a></li>
+                <li class="menu__item"><a href="#materials" class="menu__link js-scroll-link">Материалы</a></li>
+                <li class="menu__item"><a href="#count" class="menu__link js-scroll-link">Рассчитать стоимость</a></li>
+                <li class="menu__item"><a href="#projects" class="menu__link js-scroll-link">Проекты</a></li>
+                <li class="menu__item"><a href="#how" class="menu__link js-scroll-link">Как мы работаем</a></li>
+                <li class="menu__item"><a href="#questions" class="menu__link js-scroll-link">Контакты</a></li>
             </ul>
         </nav>
     </div>
@@ -120,7 +125,7 @@
                 </div>
             </div>
         </section>
-        <section class="about">
+        <section id="about" class="about">
             <img src="./img/about-descktop_bg.jpg" class="about__bg about__bg_1" alt="Фон">
             <img src="./img/about_bg.jpg" class="about__bg about__bg_2" alt="Фон">
             <img src="./img/saw.jpg" class="about__saw" alt="Изображение на фоне">
@@ -173,7 +178,7 @@
                 </div>
             </div>
         </section>
-        <section class="portfolio">
+        <section id="portfolio" class="portfolio">
             <div class="container">
                 <h2 class="section__title text_ttu text_tac no-adaptiv">ФОТО НАШИХ <span class="text_orange">ПОСТРОЕННЫХ ОБЪЕКТОВ</span></h2>
                 <div class="portfolio__container">
@@ -230,7 +235,7 @@
                 </div>
             </div>
         </section>
-        <section class="why">
+        <section id="why" class="why">
             <img src="./img/tree.jpg" class="why__tree">
             <div class="container">
                 <div class="section__title text_ttu text_tac no-adaptiv"><span class="text_orange">Почему</span> выбирают&nbsp;нас?</div>
@@ -1249,7 +1254,7 @@
                             </div>
                             <div class="quiz__page">
                                 <span class="quiz__question">Спасибо, вы успешно прошли тест!</span>
-                                <sapn class="quiz__subtext">Оставьте ваши контактные данные, и вы получите бесплатно:</sapn>
+                                <span class="quiz__subtext">Оставьте ваши контактные данные, и вы получите бесплатно:</span>
                                 <div class="quiz__options">
                                     <span class="quiz__free">индивидуальный проект, созданный для вас</span>
                                     <span class="quiz__free">расчет стоимости реализации вашего проекта</span>
@@ -1269,7 +1274,7 @@
         </section>
         <section id="projects" class="projects">
             <div class="container">
-                <h2 class="section__title text_tac no-adaptiv">НАШИ типовые <sapn class="text_orange">проекты</sapn><br>дачных домов</h2>
+                <h2 class="section__title text_tac no-adaptiv">НАШИ типовые <span class="text_orange">проекты</span><br>дачных домов</h2>
                 <div class="projects__buttons">
                     <button class="button button_projects" data-index="0">16 - 50 м<sup>2</sup></button>
                     <button class="button button_projects active" data-index="1">50 - 100 м<sup>2</sup></button>
@@ -1446,7 +1451,7 @@
                             <button class="button button_project js-download" data-place="project">скачать этот проект</button>
                         </div>
                         <div class="project">
-                            <span class="project__title">Проект дачного дома 8х9м с террасой 1ю2х2ю1м</span>
+                            <span class="project__title">Проект дачного дома 8х9м с террасой 1.2х2.1м</span>
                             <div class="project__img">
                                 <img src="./img/project_50_10.jpg" alt="Фото проекта">
                             </div>
@@ -1476,7 +1481,7 @@
                 </div>
             </div>
         </section>
-        <section class="how">
+        <section id="how" class="how">
             <div class="container">
                 <h2 class="section__title text_tac no-adaptiv">Как мы <span class="text_orange">работаем?</span></h2>
                 <div class="how__container">
@@ -1551,7 +1556,7 @@
                 </div>
             </div>
         </section>
-        <section class="questions">
+        <section id="questions" class="questions">
             <img src="./img/questions_bg.jpg" alt="Фон" class="questions__bg">
             <div class="container">
                 <h2 class="section__title text_tac no-adaptiv">Остались <span class="text_orange">вопросы?</span></h2>
@@ -1702,11 +1707,11 @@
     <div class="popup__wrapper js-download-popup">
         <div class="popup">
             <span class="popup__close js-close-popup"></span>
-            <span class="popup__title">Заполните форму и мы перезвоним в течении 15 минут!</span>
+            <span class="popup__title">Введите номер телефона и проект появится в следующем окне.</span>
             <form class="count__form">
                 <input type="tel" class="count__input" name="user_tel" placeholder="Введите номер телефона" required>
                 <input type="hidden" class="count__vidden js-hidden-input" value="">
-                <button type="submit" class="button button_count">Заказать звонок</button>
+                <button type="submit" class="button button_count">Скачать проект</button>
                 <span class="count__agreement">Нажимая на кнопку, вы соглашаетесь с <a href="./policy.pdf" target="_blank">политикой конфиденциальности</a></span>
             </form>
         </div>
@@ -1722,6 +1727,13 @@
                 <button type="submit" class="button button_count">Задать вопрос</button>
                 <span class="count__agreement">Нажимая на кнопку, вы соглашаетесь с <a href="./policy.pdf" target="_blank">политикой конфиденциальности</a></span>
             </form>
+        </div>
+    </div>
+
+    <div class="popup__wrapper js-thx-popup">
+        <div class="popup">
+            <span class="popup__close js-close-popup"></span>
+            <span class="popup__title">Спасибо! Мы свяжемся с вами в ближайшее время</span>
         </div>
     </div>
 
