@@ -1477,7 +1477,7 @@
                         <p class="notype__text">Так зачем выбирать типовой проект дома, если в 70% случаев он все равно подвергается изменениям и доработкам в процессе?</p>
                         <p class="notype__text"><b>Я спроектирую для вас дачный дом индивидуально,</b> с учетом всех ваших требований и пожеланий, а после – реализую уникальный проект в жизнь.</p>
                     </div>
-                    <button class="button button_notype js-toggle-popup">обсудить проект дачного дома</button>
+                    <button class="button button_notype js-toggle-discuss-popup">обсудить проект дачного дома</button>
                 </div>
             </div>
         </section>
@@ -1552,7 +1552,7 @@
                     </div>
                 </div>
                 <div class="how__btn-wrap">
-                    <button class="button button_notype js-toggle-popup" data-place="how">оставить заявку на строительство</button>
+                    <button class="button button_notype js-toggle-request-popup" data-place="how">оставить заявку на строительство</button>
                 </div>
             </div>
         </section>
@@ -1710,7 +1710,7 @@
             <span class="popup__title">Введите номер телефона и проект появится в следующем окне.</span>
             <form class="count__form">
                 <input type="tel" class="count__input" name="user_tel" placeholder="Введите номер телефона" required>
-                <input type="hidden" class="count__vidden js-hidden-input" value="">
+                <input type="hidden" name="hidden_val" class="count__vidden js-hidden-input" value="">
                 <button type="submit" class="button button_count">Скачать проект</button>
                 <span class="count__agreement">Нажимая на кнопку, вы соглашаетесь с <a href="./policy.pdf" target="_blank">политикой конфиденциальности</a></span>
             </form>
@@ -1734,6 +1734,39 @@
         <div class="popup">
             <span class="popup__close js-close-popup"></span>
             <span class="popup__title">Спасибо! Мы свяжемся с вами в ближайшее время</span>
+        </div>
+    </div>
+
+    <div class="popup__wrapper js-redirect-popup">
+        <div class="popup">
+            <span class="popup__close js-close-popup"></span>
+            <span class="popup__title">Сейчас вы будете перенаправлены на страницу проекта</span>
+        </div>
+    </div>
+
+    <div class="popup__wrapper js-discuss-popup">
+        <div class="popup">
+            <span class="popup__close js-close-popup"></span>
+            <span class="popup__title">Чтобы обсудить проект дома, введите номер телефона</span>
+            <form class="count__form">
+                <input type="tel" name="user_tel" class="count__input" placeholder="Введите номер телефона" required>
+                <input type="hidden" class="count__vidden js-hidden-input" value="">
+                <button type="submit" class="button button_count">Обсудить проект</button>
+                <span class="count__agreement">Нажимая на кнопку, вы соглашаетесь с <a href="./policy.pdf" target="_blank">политикой конфиденциальности</a></span>
+            </form>
+        </div>
+    </div>
+
+    <div class="popup__wrapper js-request-popup">
+        <div class="popup">
+            <span class="popup__close js-close-popup"></span>
+            <span class="popup__title">Чтобы оставить заявку на строительство, введите номер телефона</span>
+            <form class="count__form">
+                <input type="tel" name="user_tel" class="count__input" placeholder="Введите номер телефона" required>
+                <input type="hidden" class="count__vidden js-hidden-input" value="">
+                <button type="submit" class="button button_count">Оставить заявку</button>
+                <span class="count__agreement">Нажимая на кнопку, вы соглашаетесь с <a href="./policy.pdf" target="_blank">политикой конфиденциальности</a></span>
+            </form>
         </div>
     </div>
 

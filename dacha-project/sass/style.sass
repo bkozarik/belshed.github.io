@@ -92,9 +92,9 @@ h1, h2, h3, h4, h5
             transform: translateY(4px)
     &_next
         text-transform: uppercase
-        padding: 25px 40px
+        padding: 20px 40px
         border-radius: 40px
-        font-size: 16px
+        font-size: 21px
         font-weight: 400
         margin-top: auto
         opacity: 0
@@ -151,9 +151,10 @@ h1, h2, h3, h4, h5
         font-size: 14px
         font-weight: 700
         text-align: center
-        padding: 12px 40px
+        padding: 12px 30px
         background: none
         box-shadow: none
+        font-family: "Museo Sans" !important
         &.disabled
             box-shadow: 0 0 0 1px #e6e6e6
             color: #e6e6e6
@@ -200,7 +201,7 @@ h1, h2, h3, h4, h5
 .header
     flex-grow: 0
     width: 100%
-    padding: 30px 0px
+    padding: 35px 0px
     position: absolute
     left: 0
     top: 0
@@ -503,6 +504,7 @@ h1, h2, h3, h4, h5
     &__text
         font-size: 16px
         line-height: 24px
+        font-weight: 400
         & + &
             margin-top: 25px
     &__team
@@ -656,6 +658,7 @@ h1, h2, h3, h4, h5
         position: absolute
         z-index: -1
         left: 200px
+        top: 240px
     &__niples
         position: absolute
         top: 0
@@ -838,6 +841,7 @@ h1, h2, h3, h4, h5
         display: flex
         align-items: center
         justify-content: space-between
+        max-width: 94%
         .projects__open
             font-size: 18px
             font-weight: 400
@@ -945,6 +949,7 @@ h1, h2, h3, h4, h5
             line-height: 50px
     &__subtitle
         font-size: 16px
+        line-height: 24px
         font-weight: 400
         display: inline-block
         max-width: 640px
@@ -1162,6 +1167,7 @@ h1, h2, h3, h4, h5
     &__text
         margin-top: 20px
         font-size: 16px
+        line-height: 24px
         font-weight: 400
         color: #303030
     &::before
@@ -1204,27 +1210,32 @@ h1, h2, h3, h4, h5
         color: #303030
 
 .reports
-    padding-bottom: 70px
+    padding-bottom: 105px
     &__bg
         position: absolute
         right: 0
         top: 50%
         transform: translateY(-50%)
-    &__swiper
-        margin-top: 40px
     &__body
         max-width: 650px
         padding-left: 90px
         width: 100%
         .banner
+            &__text
+                line-height: 24px
+                &-title
+                    margin-bottom: 7px
             &__img
                 width: 70px
                 height: 70px
                 object-fit: contain
             &__info
-                margin: 85px 0px 110px
-            &__item + &__item
-                margin-top: 50px
+                margin: 80px 0px 85px
+            &__item
+                &-body
+                    margin-left: 35px
+        .banner__item + .banner__item
+            margin-top: 50px
         .section__title
             &, & *
                 letter-spacing: normal
@@ -1263,7 +1274,6 @@ h1, h2, h3, h4, h5
     &__swiper
         position: relative
         margin-right: 120px
-        margin-top: 40px
     &__control
         position: absolute
         display: inline-block
@@ -1331,6 +1341,8 @@ h1, h2, h3, h4, h5
 
 .house
     position: relative
+    & + &
+        margin-top: 190px
     &::before
         position: absolute
         left: 0
@@ -1357,6 +1369,10 @@ h1, h2, h3, h4, h5
             content: 'Канадский каркас и оснащение- толщина силового каркаса 150 мм, перекрытия 200 мм'
         .house__side
             margin-bottom: 45px
+            &:last-child
+                margin-right: 30px
+                .house__card:last-child
+                    padding: 30px 20px
         .house__img
             position: absolute
             top: 54%
@@ -1383,7 +1399,7 @@ h1, h2, h3, h4, h5
         background-color: #fff
         border-radius: 4px
         border: 1px solid #ccc
-        padding: 30px
+        padding: 20px
         max-height: 190px
         &-body
             display: flex
@@ -1630,13 +1646,13 @@ h1, h2, h3, h4, h5
             height: 25px
             text-align: center
             line-height: 23px
-            font-size: 24px
+            font-size: 20px
             vertical-align: middle
             border-radius: 50%
             color: #d4d1d1
             font-weight: 400
             margin-top: -3px
-            margin-right: 10px
+            margin-right: 20px
             box-shadow: 0 0 0 2px #d4d1d1
         &:focus
             outline: none
@@ -1950,7 +1966,7 @@ h1, h2, h3, h4, h5
     padding-bottom: 65px
     flex-grow: 0
     &__wrap
-        margin-top: 40px
+        margin-top: 50px
         display: flex
         justify-content: space-between
         align-items: flex-start
@@ -1972,6 +1988,10 @@ h1, h2, h3, h4, h5
                 margin-top: 50px
     &__list
         list-style-type: none
+    .header
+        &__tel
+            &-link
+                font-size: 30px
     span.footer__text
         display: block
     a.footer__text

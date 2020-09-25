@@ -15,6 +15,8 @@ document.addEventListener('DOMContentLoaded', () => {
     let menu = document.querySelector('.js-menu');
     let scrollLinks = document.querySelectorAll('.js-scroll-link');
     let popupsWrappers = document.querySelectorAll('.popup__wrapper');
+    let discussPopupTrigger = document.querySelector('.js-toggle-discuss-popup');
+    let requestPopupTrigger = document.querySelector('.js-toggle-request-popup');
     let mobileErrorsSwiperSW;
     let currPage = 0;
 
@@ -114,6 +116,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     spaceBetween: 30,
                     slidesPerView: 1,
                     direction: 'horizontal',
+                    autoHeight: true,
+                    loop: true,
                     updateOnWindowResize: true,
                     navigation: {
                         prevEl: '.error__control_prev',
@@ -196,7 +200,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 closePopup();
 
-                openPopup('.js-thx-popup', 2);
+
+                formData.has('hidden_val') ? openPopup('.js-redirect-popup', null) : openPopup('.js-thx-popup', null);
             }
         };
 
@@ -319,14 +324,11 @@ document.addEventListener('DOMContentLoaded', () => {
     nextBtns.forEach(btn => btn.addEventListener('click', quizShowNextPage));
 
     document.querySelector('.projects__more .projects__open').addEventListener('click', () => {
-        document.querySelectorAll('.projects__container_hidden').forEach(container => {
-            container.classList.toggle('active');
-        });
+        document.querySelectorAll('.projects__container_hidden').forEach(container => container.classList.toggle('active'));
+        event.target.style.display = 'none';
     });
 
-    downloadForm.addEventListener('submit', () => {
-        downloadDoc(downloadForm.querySelector('.js-hidden-input').value);
-    });
+    downloadForm.addEventListener('submit', () => downloadDoc(downloadForm.querySelector('.js-hidden-input').value));
 
     document.querySelector('.js-table-toggle').addEventListener('click', () => document.querySelector('.materials__table_hidden').classList.toggle('active'));
 
@@ -342,11 +344,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.querySelectorAll('.js-toggle-q_popup').forEach(btn => btn.addEventListener('click', () => openPopup('.js-question-popup', btn.dataset.place)));
 
-    popupsWrappers.forEach(wrapper => wrapper.addEventListener('click', () => {
-        if(event.target.classList.contains('popup__wrapper')){
-            closePopup();
-        }
-    }));
+    popupsWrappers.forEach(wrapper => wrapper.addEventListener('click', () => event.target.classList.contains('popup__wrapper') ? closePopup() : null));
+
+    discussPopupTrigger.addEventListener('click', () => openPopup('.js-discuss-popup', null));
+
+    requestPopupTrigger.addEventListener('click', () => openPopup('.js-request-popup', null));
 
     burgerBtn.addEventListener('click', mobieMenuToggle);
 
