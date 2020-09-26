@@ -55,21 +55,39 @@ h1, h2, h3, h4, h5
     white-space: nowrap
     text-align: center
     user-select: none
+    overflow: hidden
     background: rgb(255,198,99)
     background: linear-gradient(180deg, rgba(255,198,99,1) 0%, rgba(255,173,32,1) 60%, rgba(255,198,99,1) 100%)
     color: #fff
     box-shadow: 0 4px 0 0 #E49100
     font-weight: 400
     font-family: "Oswald"
-    transition-duration: .1s
+    &::after
+        display: inline-block
+        background-color: rgba(255, 255, 255, .7)
+        content: ''
+        height: 130px
+        width: 140px
+        transform: skew(-15deg) translate(0, -50%)
+        position: absolute
+        transition: all 0s ease-in 0s
+        z-index: 3
+        top: 50%
+        left: -170px
     &:focus
         outline: none
+    &:hover
+        &::after
+            transform: skew(-15deg) translate(500px, -50%)
+            transition-duration: .3s
     &_banner
         text-transform: uppercase
         font-size: 21px
         padding: 25px 75px
         border-radius: 40px
         &:hover
+            
+        &:active
             box-shadow: none
             transform: translateY(4px)
     &_portfolio
@@ -78,6 +96,8 @@ h1, h2, h3, h4, h5
         padding: 20px 35px
         border-radius: 40px
         &:hover
+            
+        &:active
             box-shadow: none
             transform: translateY(4px)
     &_count
@@ -88,10 +108,16 @@ h1, h2, h3, h4, h5
         border-radius: 50px
         margin-top: 10px
         &:hover
+            
+        &:active
             box-shadow: none
             transform: translateY(4px)
     &_next
         text-transform: uppercase
+        position: absolute
+        left: 50%
+        transform: translate(-50%, 0)
+        bottom: 55px
         padding: 20px 40px
         border-radius: 40px
         font-size: 21px
@@ -100,8 +126,10 @@ h1, h2, h3, h4, h5
         opacity: 0
         pointer-events: none
         &:hover
+            
+        &:active
             box-shadow: none
-            transform: translateY(4px)
+            transform: translate(-50%, 4px)
         img
             max-width: 20px
             margin-left: 15px
@@ -117,6 +145,8 @@ h1, h2, h3, h4, h5
         padding: 25px 45px
         border-radius: 50px
         &:hover
+            
+        &:active
             box-shadow: none
             transform: translateY(4px)
     &_projects
@@ -144,6 +174,8 @@ h1, h2, h3, h4, h5
         line-height: 27px
         border-radius: 50px
         &:hover
+            
+        &:active
             box-shadow: none
             transform: translateY(4px)
     &_step
@@ -267,7 +299,7 @@ h1, h2, h3, h4, h5
         font-size: 16px
         font-weight: 400
     &__socials
-        margin-right: 5px
+        margin-right: 35px
         display: flex
     &__social
         display: inline-block
@@ -383,17 +415,19 @@ h1, h2, h3, h4, h5
     display: flex
     flex-direction: column
     align-items: stretch
-    box-shadow: 0 0 20px 4px rgba(0, 0, 0, .05)
+    box-shadow: 0 0 20px 4px rgba(0, 0, 0, .03)
     border-radius: 5px
-    // overflow: hidden
     position: relative
     &__img
         width: 100%
+        border-radius: 5px
         height: 205px
         object-fit: cover
     &__body
         padding: 30px 20px 48px
         background-color: #fff
+        border-radius: 5px
+        overflow: hidden
         height: 100%
         display: flex
         justify-content: center
@@ -498,6 +532,7 @@ h1, h2, h3, h4, h5
     &__body
         padding: 55px 55px 20px
         background-color: #fff
+        box-shadow: 0 0 25px 3px rgba(0, 0, 0, .08)
         border-radius: 4px
         position: relative
         z-index: 3
@@ -536,7 +571,7 @@ h1, h2, h3, h4, h5
         margin-top: 5px
         max-width: 130px
     &__garantee
-        margin-top: 80px
+        margin-top: 60px
         display: flex
         &-body
             margin-left: 75px
@@ -1063,7 +1098,7 @@ h1, h2, h3, h4, h5
     &__footer
         display: flex
         justify-content: center
-        margin-top: 80px
+        margin-top: 50px
         &-text
             font-size: 20px
             max-width: 740px
@@ -1253,7 +1288,7 @@ h1, h2, h3, h4, h5
         align-items: flex-start
     &__tel
         background-color: #f7f7f7
-        padding: 20px 15px
+        padding: 20px 29px
         display: flex
         align-items: center
         width: 100%
@@ -1512,7 +1547,7 @@ h1, h2, h3, h4, h5
         height: 100%
         display: flex
         padding-top: 20px
-        padding-bottom: 50px
+        padding-bottom: 100px
         justify-content: center
         flex-direction: column
         align-items: center
@@ -1524,6 +1559,8 @@ h1, h2, h3, h4, h5
         margin-top: 50px
         font-size: 16px
         font-weight: 700
+        display: inline-block
+        text-align: center
     &__free
         display: inline-block
         position: relative
@@ -1602,6 +1639,9 @@ h1, h2, h3, h4, h5
         user-select: none
         display: flex
         align-items: center
+        &_text
+            max-width: 350px
+            width: 100%
         & + &
             margin-top: 25px
         &>input[type="radio"]:checked + .quiz__checkbox::after
@@ -1609,7 +1649,8 @@ h1, h2, h3, h4, h5
         &>input[type="radio"]
             display: none
         &>input[type="text"]
-            min-width: 330px
+            width: 100%
+            display: inline-block
 
 .gift
     display: flex

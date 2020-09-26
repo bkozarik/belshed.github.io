@@ -107,14 +107,13 @@ document.addEventListener('DOMContentLoaded', () => {
             document.querySelector('.reports__body').after(document.querySelector('.reports__swiper'));
         }
 
-        if(window.innerWidth <= 640){
+        if(window.innerWidth <= 780){
             if(mobileErrorsSwiper.dataset.mobile == 'false'){
                 document.querySelector('.error__container .swiper-wrapper').insertBefore(errorItems[0], errorItems[1]);
                 document.querySelector('.error .container').appendChild(document.querySelector('.error__item_green'));
 
                 let errorsSwiper = new Swiper('.error__container', {
                     spaceBetween: 30,
-                    slidesPerView: 1,
                     direction: 'horizontal',
                     autoHeight: true,
                     loop: true,
@@ -128,6 +127,14 @@ document.addEventListener('DOMContentLoaded', () => {
                         type: 'bullets',
                         clickable: true,
                     },
+                    breakpoints: {
+                        640: {
+                            slidesPerView: 2,
+                        },
+                        200: {
+                            slidesPerView: 1,
+                        }
+                    }
                 });
                 mobileErrorsSwiper.dataset.mobile = 'true';
                 mobileErrorsSwiperSW = mobileErrorsSwiper.swiper;
@@ -330,7 +337,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     downloadForm.addEventListener('submit', () => downloadDoc(downloadForm.querySelector('.js-hidden-input').value));
 
-    document.querySelector('.js-table-toggle').addEventListener('click', () => document.querySelector('.materials__table_hidden').classList.toggle('active'));
+    document.querySelector('.js-table-toggle').addEventListener('click', () => {
+        document.querySelector('.materials__table_hidden').classList.toggle('active');
+        event.target.style.display = "none";
+    });
 
     forms.forEach(form => form.addEventListener('submit', submitHandler));
 
@@ -372,4 +382,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
     resizeHandler();
     quizShowPage(currPage);
+    quizShowPage(5);
 });

@@ -1,4 +1,8 @@
 @media screen and ( max-width: 1700px )
+    .error
+        &__bg
+            display: none
+
     .about
         &__desk
             top: 500px
@@ -12,6 +16,9 @@
                 max-width: 250px
 
     .count
+        &__book
+            left: 20px
+            width: 70%
         &__niples
             max-width: 200px
     
@@ -44,6 +51,17 @@
         &__tree
             &_1, &_2
                 display: none
+
+    .count
+        &__circle, &__niples
+            display: none
+        &__wood
+            &_1, &_2
+                display: none
+
+    .reports
+        &__bg
+            right: -320px
 
     .about
         &__saw, &__glass
@@ -81,10 +99,18 @@
             margin-left: 0
 
     .reports
+        &__swiper
+            max-width: 275px
         .section__title 
             text-align: left !important
         &__body
             padding-left: 0
+
+    .quiz
+        &__img
+            flex-basis: 20%
+        &__body
+            flex-basis: 95%
 
     .notype
         &__bg
@@ -96,6 +122,12 @@
             &::before
                 left: 0
 
+    .error
+        .swiper-wrapper
+            .error
+                &__item
+                    max-width: 49%
+
     .how
         &__item:last-child
             margin: 20px
@@ -103,22 +135,37 @@
             display: none !important
 
     .house
+        & + &
+            margin-top: 70px
         &::before
             margin-top: 30px
             position: relative
             transform: none
         &__container
-            margin-top: 30px
             min-height: auto
-            flex-direction: column
+            flex-direction: row
+            justify-content: space-between
+            flex-wrap: wrap
+            margin-top: 40px
         &__side
-            align-items: flex-start !important
-        &__side + &__side
-            margin-bottom: 0
+            align-items: flex-start
+            justify-content: flex-start
+            max-width: 300px
+            & + &
+                margin-bottom: 0
+                margin-left: 40px
         &__img
             display: none
         &__card
             margin-bottom: 20px
+            max-height: none
+            width: 100%
+            &-body
+                max-height: none
+                flex-direction: column !important
+            &-col
+                & + &
+                    margin-left: 0
             &.mt
                 margin-top: 0
             &.ml
@@ -126,6 +173,12 @@
 
 @media screen and ( max-width: 1000px )
     .reports
+        &__body
+            max-width: 600px
+            margin: 0 auto
+            display: flex
+            flex-direction: column
+            align-items: center
         &__swiper
             margin: 40px auto 0px
             max-width: 275px
@@ -143,10 +196,10 @@
 
     .examples
         &__container
-            grid-template-columns: repeat(3, 1fr)
+            grid-template-columns: repeat(2, 1fr)
 
     .portfolio
-        margin-top: 60px
+        margin-top: 90px
         &__container
             margin-bottom: 10px
             .swiper-slide
@@ -160,6 +213,7 @@
         &__info
             margin: 40px 0px
         &__body
+            max-width: 680px
             padding: 130px 0px 160px
 
     .about
@@ -185,11 +239,11 @@
 
     .materials
         .projects__open
-            display: none
+            display: none !important
         &__download
             display: block
         &__table, &__niples
-            display: none
+            display: none !important
 
     .benefits
         &__bg
@@ -244,11 +298,12 @@
         &__title
             text-align: left
         &__link
+            margin-top: 0
             height: 75px
             width: 75px
             margin-right: 20px
             svg
-                max-width: 30px
+                max-width: 25px
         &__small-card
             padding: 0
             box-shadow: none
@@ -279,7 +334,9 @@
             flex-direction: column
             align-items: center
         &__side + &__side
-            margin-top: 40px
+            margin-top: 75px
+        &__footer
+            margin-top: 20px
         &__item
             margin: 0
             flex-direction: column
@@ -296,7 +353,7 @@
         padding: 60px 0px
         &__book
             left: 0
-        &__circle
+        &__circle, &__niples
             display: none
         &__wood
             &_1, &_2
@@ -376,21 +433,42 @@
             &__contacts
                 display: none
 
+@media screen and ( min-width: 781px )
+    .error
+        &__container
+            
+@media screen and ( max-width: 780px )
+    .error
+        &__container
+            margin-bottom: 20px
+            .swiper-wrapper
+                max-height: none
+                margin: 0
+                flex-direction: row
+                flex-wrap: nowrap
+                .error
+                    &__item
+                        max-width: none
+        &__controls
+            display: flex
+        &__item
+            padding: 20px
+            max-width: none
+            margin: 0
+            &-title
+                margin-bottom: 20px
+
 @media screen and ( max-width: 640px )
 
     .correct
+        &__subtitle
+            text-align: left
         .section__title
             text-align: left
 
-    .section
-        &__title
-            &, & *
-                font-size: 24px
-                line-height: 30px
-
     .banner
         margin-bottom: 60px
-        background-position: 20% 180px
+        background-position: 20% 20px
         background-size: auto 90%
         .section
             &__title
@@ -419,6 +497,9 @@
     
     .about
         &__garantee
+            &-subtitle
+                font-size: 18px
+                line-height: 24px
             &-title
                 line-height: 35px
         &__oleg
@@ -453,10 +534,21 @@
             &-title
                 margin-bottom: 20px
 
+    .compare
+        margin-top: 50px
+        &__item
+            & + &
+                margin-top: 40px
+            &-img
+                height: 90px
+                width: 90px
+
     .house
         &__item
             font-size: 16px
             line-height: 24px
+        &__container
+            justify-content: center
         &__card
             border: none
             max-height: none
@@ -468,6 +560,8 @@
                 max-height: none
     
     .addons
+        .section__title, .section__title *
+            text-align: left
         &__container
             margin-top: 30px
             flex-direction: column
@@ -490,13 +584,15 @@
 
     .count
         &__book
-            width: 130%
-            top: 300px
-            left: -50px
+            width: 100%
+            top: 170px
+            left: 20px
         &__body
             margin: 245px auto 0px
         &__title
             text-align: left
+        &__niples
+            display: none
 
     .projects
         .section__title
@@ -541,6 +637,8 @@
 
     .how
         padding-bottom: 40px
+        &__container
+            justify-content: center
         &__item
             &:last-child
                 display: none
@@ -550,7 +648,18 @@
         .section__title 
             text-align: left
 
+    .questions
+        &__social
+            & + &
+                margin-top: 20px
+
     .quiz
+        .quiz
+            &__input
+                padding: 20px 25px
+        &__options
+            width: 100%
+            max-width: 310px
         .section__title
             text-align: left
         &__subtext, &__options
@@ -560,10 +669,14 @@
         &__container
             min-height: 820px
 
-
 @media screen and ( max-width: 400px )
     .container
         padding: 0px 10px
+
+    .materials
+        .section__title, .section__title *
+            font-size: 22px
+            line-height: 30px
 
     .example
         &__text
@@ -576,13 +689,39 @@
         .section__title, .section__title *
             font-size: 34px
 
+    .count
+        &__book
+            top: 280px
+            width: 110%
+            left: -10px
+
     .house
         &__title
             display: inline-block
             line-height: 24px
             margin-bottom: 10px 
 
+    .why
+        &__container
+            grid-row-gap: 10px
+        &__img
+            img
+                max-width: 60%
+                max-height: 150px
+
+    .reports
+        &__body
+            .banner__item-body
+                margin-left: 0
+
+    .questions
+        &__social
+            & + &
+                margin-top: 20px
+
     .quiz
+        &__inputs
+            margin: 20px
         &__body
             padding: 0px 10px
         &__checkbox
@@ -604,12 +743,18 @@
             grid-template-columns: repeat(1, 1fr)
         &__body
             padding: 10px
+        &__img
+            max-width: 185px
+            border-radius: 4px
+            overflow: hidden
         &__garantee
             &-title
                 line-height: 28px
                 font-size: 22px
             &-img
                 max-width: 125px
+            &-body
+                margin-top: 0
             &-subtitle
                 font-size: 16px
                 line-height: 22px
@@ -621,17 +766,28 @@
             padding: 20px 25px
 
     .portfolio
+        margin-top: 90px
         &__container
             .swiper-slide
                 min-height: 250px
 
+    .benefits
+        &__bg
+            width: 340%
+
     .banner
+        &__body
+            padding-bottom: 70px
         &__item
             flex-direction: column
             align-items: flex-start
             &-body
                 margin-left: 0
                 margin-top: 15px
+        &__text
+            font-size: 14px
+            &-title
+                font-size: 16px
         &__subtitle
             font-size: 18px
         .button
