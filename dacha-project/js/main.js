@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const scrollLinkClick = () => {
         event.preventDefault();
 
-        mobieMenuToggle();
+        mobieMenuToggle(false);
 
         let target = event.target;
         
@@ -140,6 +140,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 mobileErrorsSwiperSW = mobileErrorsSwiper.swiper;
                 errorItems = document.querySelectorAll('.error__item');
             }
+            else{
+                mobileErrorsSwiperSW.update();
+            }
         }
         else{
             mobileErrorsSwiper.dataset.mobile = 'false';
@@ -233,9 +236,24 @@ document.addEventListener('DOMContentLoaded', () => {
         window.open(path, "_blank");
     }
 
-    const mobieMenuToggle = () => {
-        burgerBtn.classList.toggle('active');
-        menu.classList.toggle('active');
+    const mobieMenuToggle = (state=null) => {
+        switch (state) {
+            case true:
+                burgerBtn.classList.add('active');
+                menu.classList.add('active');
+                break;
+
+            case false:
+                burgerBtn.classList.remove('active');
+                menu.classList.remove('active');
+                break;
+        
+            default:
+                burgerBtn.classList.toggle('active');
+                menu.classList.toggle('active');
+                break;
+        }
+        
     }
 
     const openPopup = (selector, place) => {
@@ -344,11 +362,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
     forms.forEach(form => form.addEventListener('submit', submitHandler));
 
-    popupBtn.forEach(btn => btn.addEventListener('click', () => openPopup('.js-common-popup', btn.dataset.place)));
-
     document.querySelectorAll('.js-download-canadian').forEach(item => item.addEventListener('click', downloadCanadian));
 
     document.querySelectorAll('.js-download-scandinavian').forEach(item => item.addEventListener('click', downloadScandinavian));
+
+    burgerBtn.addEventListener('click', mobieMenuToggle);
+
+    docButtons.forEach((item, index) => item.addEventListener('click', docBtnClick(index)));
+
+    scrollLinks.forEach(item => item.addEventListener('click', scrollLinkClick));
+
+    //
+    // Попапы
+    //
+
+    popupBtn.forEach(btn => btn.addEventListener('click', () => openPopup('.js-common-popup', btn.dataset.place)));
 
     document.querySelectorAll('.js-close-popup').forEach(btn => btn.addEventListener('click', closePopup));
 
@@ -360,11 +388,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     requestPopupTrigger.addEventListener('click', () => openPopup('.js-request-popup', null));
 
-    burgerBtn.addEventListener('click', mobieMenuToggle);
-
-    docButtons.forEach((item, index) => item.addEventListener('click', docBtnClick(index)));
-
-    scrollLinks.forEach(item => item.addEventListener('click', scrollLinkClick));
+    //
+    //
+    //
 
     document.querySelector('.button_portfolio').addEventListener('click', () => {
         document.querySelector('.portfolio__container_hidden').classList.toggle('active');
@@ -382,5 +408,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
     resizeHandler();
     quizShowPage(currPage);
-    quizShowPage(5);
 });

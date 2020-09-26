@@ -3,6 +3,10 @@
         &__bg
             display: none
 
+    .why
+        &__tree
+            display: none
+
     .about
         &__desk
             top: 500px
@@ -14,6 +18,10 @@
                 max-width: 200px
             &_2
                 max-width: 250px
+
+    .banner
+        &__tree
+            display: none
 
     .count
         &__book
@@ -71,11 +79,24 @@
         &__container
             flex-direction: column
             align-items: center
+            margin-top: 20px
 
     .benefit
         padding: 45px 20px 20px
         &:nth-child(1), &:nth-child(2)
             transform: none
+
+    .materials
+        &__niples
+            display: none !important
+        &__table
+            th
+                &:first-of-type
+                    min-width: auto
+                    width: auto
+
+    .addons
+        padding-top: 60px
 
     .why
         &__item:nth-child(3n)
@@ -99,6 +120,8 @@
             margin-left: 0
 
     .reports
+        &__iphone
+            max-width: 225px
         &__swiper
             max-width: 275px
         .section__title 
@@ -151,6 +174,7 @@
             align-items: flex-start
             justify-content: flex-start
             max-width: 300px
+            width: 100%
             & + &
                 margin-bottom: 0
                 margin-left: 40px
@@ -180,8 +204,18 @@
             flex-direction: column
             align-items: center
         &__swiper
-            margin: 40px auto 0px
+            margin: 70px auto 0px
             max-width: 275px
+
+    .materials
+        &__table
+            th
+                font-size: 13px
+                padding: 10px 5px
+                &:first-of-type
+                    font-size: 17px
+            tr:nth-child(2) td
+                padding-top: 25px
 
 @media screen and ( max-width: 940px )
     .section
@@ -189,6 +223,9 @@
             &, & *
                 font-size: 30px
                 line-height: 42px
+                .sup
+                    &::after
+                        font-size: 20px
             &.no-adaptiv, &.no-adaptiv *
                 text-align: center
                 font-size: 36px
@@ -197,6 +234,12 @@
     .examples
         &__container
             grid-template-columns: repeat(2, 1fr)
+            margin-top: 55px
+
+    .notype
+        &__card
+            margin-bottom: 0px
+            padding-bottom: 15px
 
     .portfolio
         margin-top: 90px
@@ -209,6 +252,7 @@
         background-position: 30% -10px
         background-size: auto 110%
         background-repeat: no-repeat 
+        padding-bottom: 50px
         margin-bottom: 20px
         &__info
             margin: 40px 0px
@@ -246,6 +290,7 @@
             display: none !important
 
     .benefits
+        padding-bottom: 70px
         &__bg
             left: 50%
             transform: translateX(-50%)
@@ -276,8 +321,13 @@
             min-height: 800px
 
     .advantages
+        margin-top: 90px
         .section__title
-            text-align: left
+            text-align: center
+
+    .advantage
+        &:first-child
+            margin-top: 50px
 
     .questions
         padding-bottom: 50px
@@ -320,21 +370,24 @@
     .how
         &__btn
             &-wrap
-                margin-top: 20px
+                margin-top: 10px
 
     .compare
         .section__title, &__subtitle
             text-align: left
         &__subtitle
-            font-weight: 300
+            font-size: 20px
+            margin-top: 25px
         &__icon
             height: 40px
             width: 40px
         &__container
+            margin-top: 50px
             flex-direction: column
             align-items: center
         &__side + &__side
             margin-top: 75px
+            margin-left: 0
         &__footer
             margin-top: 20px
         &__item
@@ -350,7 +403,7 @@
             margin-top: 30px
 
     .count
-        padding: 60px 0px
+        padding: 100px 0px
         &__book
             left: 0
         &__circle, &__niples
@@ -377,6 +430,9 @@
             margin-top: 30px
         &__img
             width: 80px
+
+    .addons
+        padding-top: 30px
 
     .logo
         display: flex
@@ -466,8 +522,34 @@
         .section__title
             text-align: left
 
+    .advantages
+        .section__title
+            text-align: left
+
+    .house
+        &__container
+            flex-direction: column
+            justify-content: center
+            align-items: center
+        &__side
+            & + &
+                margin-right: 0 !important
+                margin-left: 0 !important
+
+    .compare
+        margin-top: 70px
+        &__item
+            & + &
+                margin-top: 40px
+            &-img
+                height: 90px
+                width: 90px
+        &__footer
+            &-text
+                font-size: 18px
+
     .banner
-        margin-bottom: 60px
+        margin-bottom: 20px
         background-position: 20% 20px
         background-size: auto 90%
         .section
@@ -533,15 +615,6 @@
             margin: 0
             &-title
                 margin-bottom: 20px
-
-    .compare
-        margin-top: 50px
-        &__item
-            & + &
-                margin-top: 40px
-            &-img
-                height: 90px
-                width: 90px
 
     .house
         &__item
@@ -675,15 +748,15 @@
 
     .materials
         .section__title, .section__title *
-            font-size: 22px
-            line-height: 30px
+            font-size: 21px
+            line-height: 28px
 
     .example
         &__text
             font-size: 12px
 
     .menu
-        width: 70vw
+        width: 80vw
 
     .advantages
         .section__title, .section__title *
@@ -691,7 +764,7 @@
 
     .count
         &__book
-            top: 280px
+            top: 240px
             width: 110%
             left: -10px
 
@@ -776,8 +849,10 @@
             width: 340%
 
     .banner
+        &__mobile-cloud
+            bottom: -240px
         &__body
-            padding-bottom: 70px
+            padding-bottom: 170px
         &__item
             flex-direction: column
             align-items: flex-start
