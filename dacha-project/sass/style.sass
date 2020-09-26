@@ -444,7 +444,7 @@ h1, h2, h3, h4, h5
             letter-spacing: normal
 
 .examples
-    padding-top: 50px
+    padding-top: 90px
     &__container
         margin: 60px 0px 70px
         display: grid
@@ -1175,7 +1175,7 @@ h1, h2, h3, h4, h5
                 margin-top: 1.5em
 
 .advantages
-    margin-top: 60px
+    margin-top: 110px
     &__container
         display: flex
         justify-content: flex-start
@@ -1191,8 +1191,8 @@ h1, h2, h3, h4, h5
 .advantage
     max-width: 520px
     margin-top: 95px
-    &:nth-child(2n)
-        margin-left: 90px
+    &:nth-child(2n - 1)
+        margin-right: 90px
     &__img
         max-width: 140px
         max-height: 130px
@@ -1866,20 +1866,26 @@ h1, h2, h3, h4, h5
         &:last-child
             opacity: 0
             visibility: hidden
-        &:not(:nth-child(3n))::after
-            position: absolute
-            height: 40px
-            width: 50px
-            display: inline-block
-            content: ''
-            right: 0
-            top: 70px
-            transform: translate(100%, -50%)
-            background-size: contain
-            background-repeat: no-repeat
-            background-image: url(../img/icons/right-arrow-g.png)
-        &:nth-last-child(2)::after
-            display: none
+        &:not(:nth-child(3n))
+            .how__title
+                display: inline-block
+                position: relative
+                &::after
+                    position: absolute
+                    height: 40px
+                    width: 50px
+                    display: inline-block
+                    content: ''
+                    left: 240px
+                    top: -80px
+                    transform: translate(100%, -50%)
+                    background-size: contain
+                    background-repeat: no-repeat
+                    background-image: url(../img/icons/right-arrow-g.png)
+        &:nth-last-child(2)
+            .how__title
+                &::after
+                    display: none
             
     &__img
         max-width: 100%

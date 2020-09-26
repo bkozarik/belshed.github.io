@@ -100,6 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const resizeHandler = () => {
+
         if(window.innerWidth <= 1000){
             document.querySelector('.reports__body').insertBefore(document.querySelector('.reports__swiper'), document.querySelector('.reports__body .banner__info'))
         }
@@ -109,8 +110,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if(window.innerWidth <= 780){
             if(mobileErrorsSwiper.dataset.mobile == 'false'){
-                document.querySelector('.error__container .swiper-wrapper').insertBefore(errorItems[0], errorItems[1]);
-                document.querySelector('.error .container').appendChild(document.querySelector('.error__item_green'));
+                // try{
+                    document.querySelector('.error__container .swiper-wrapper').insertBefore(errorItems[0], errorItems[1]);
+                    document.querySelector('.error .container').appendChild(document.querySelector('.error__item_green'));
+                // }
+                // catch{}
 
                 let errorsSwiper = new Swiper('.error__container', {
                     spaceBetween: 30,
@@ -138,7 +142,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
                 mobileErrorsSwiper.dataset.mobile = 'true';
                 mobileErrorsSwiperSW = mobileErrorsSwiper.swiper;
-                errorItems = document.querySelectorAll('.error__item');
+                // errorItems = document.querySelectorAll('.error__item');
             }
             else{
                 mobileErrorsSwiperSW.update();
@@ -151,7 +155,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 mobileErrorsSwiperSW.destroy();
                 
                 document.querySelector('.error .container').insertBefore(errorItems[0], document.querySelector('.error__container'));
-                document.querySelector('.error__container .swiper-wrapper').insertBefore(errorItems[errorItems.length - 1], errorItems[3]);
+                document.querySelector('.error__container .swiper-wrapper').insertBefore(errorItems[errorItems.length - 1], errorItems[2]);
             }
         }
     }
@@ -226,7 +230,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return () => {
             event.preventDefault();
             
-            openPopup('.js-download-popup');
+            openPopup('.js-download-popup', event.target.dataset.place);
             document.querySelector('.js-download-popup').querySelector('.js-hidden-input').value = index;
         }
     }
@@ -257,7 +261,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const openPopup = (selector, place) => {
-        // event.preventDefault();
 
         let popup = document.querySelector(selector);
         popup.classList.add('active');
@@ -384,9 +387,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     popupsWrappers.forEach(wrapper => wrapper.addEventListener('click', () => event.target.classList.contains('popup__wrapper') ? closePopup() : null));
 
-    discussPopupTrigger.addEventListener('click', () => openPopup('.js-discuss-popup', null));
+    discussPopupTrigger.addEventListener('click', () => openPopup('.js-discuss-popup', event.target.dataset.place));
 
-    requestPopupTrigger.addEventListener('click', () => openPopup('.js-request-popup', null));
+    requestPopupTrigger.addEventListener('click', () => openPopup('.js-request-popup', event.target.dataset.place));
 
     //
     //

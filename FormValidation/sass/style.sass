@@ -1,0 +1,64 @@
+*, *::before, *::after
+    font-family: 'Montserrat', sans-serif
+    margin: 0
+    padding: 0
+    transition: all .5s ease-out 0s
+
+body
+    min-height: 100vh
+    display: flex
+    align-items: center
+    justify-content: center
+
+.form
+    display: flex
+    flex-direction: column
+    align-items: center
+    &__body
+        margin-top: 10px
+        display: flex
+        flex-direction: column
+        align-items: stretch
+        width: 100%
+    &__submit
+        appearance: none
+        border: 0
+        padding: 15px 25px
+        font-size: 16px
+        border-radius: 40px
+        background: rgb(0,191,255)
+        background: linear-gradient(180deg, rgba(0,191,255,1) 0%, rgba(90,214,255,1) 50%, rgba(0,191,255,1) 100%)
+        display: inline-block
+        font-weight: bold
+        color: #333
+        position: relative
+        overflow: hidden
+        cursor: pointer
+        &:focus
+            outline: none
+        &::before
+            content: ''
+            display: inline-block
+            top: 50%
+            left: 0
+            height: 100px
+            width: 60px
+            transform: translate(-100px, -50%) skew(-15deg)
+            background-color: rgba(255, 255, 255, .6)
+            position: absolute
+            transition: all 0s ease-out 0s
+        &:hover
+            &::before
+                transition: all .5s ease-out 0s
+                transform: translate(500px, -50%) skew(-15deg)
+    &__input
+        appearance: none
+        border: 0
+        padding: 15px 25px
+        font-size: 16px
+        border-radius: 40px
+        box-shadow: 0 0 10px 3px rgba(0, 0, 0, .05), 0 0 0px 1px rgba(0, 0, 0, .4)
+        & + &
+            margin: 10px 0px
+        &:focus
+            outline: none

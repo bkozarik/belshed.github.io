@@ -50,7 +50,7 @@
                 right: 0
             &-text
                 bottom: 121px
-                right: 0
+                right: 10px
 
 @media screen and ( max-width: 1300px )
     .compare
@@ -116,8 +116,8 @@
             justify-content: center
 
     .advantage
-        &:nth-child(2n)
-            margin-left: 0
+        &:nth-child(2n - 1)
+            margin-right: 0px
 
     .reports
         &__iphone
@@ -154,7 +154,7 @@
     .how
         &__item:last-child
             margin: 20px
-        &__item::after
+        &__title::after
             display: none !important
 
     .house
@@ -196,6 +196,9 @@
                 margin-left: 0
 
 @media screen and ( max-width: 1000px )
+    .error__container .swiper-wrapper
+        max-height: 980px
+
     .reports
         &__body
             max-width: 600px
@@ -231,7 +234,12 @@
                 font-size: 36px
                 line-height: 40px
 
+    .example
+        &__img
+            height: 255px
+
     .examples
+        padding-top: 40px
         &__container
             grid-template-columns: repeat(2, 1fr)
             margin-top: 55px
@@ -331,6 +339,7 @@
 
     .questions
         padding-bottom: 50px
+        padding-top: 0
         &__bg
             display: none
         &__oleg
@@ -373,8 +382,6 @@
                 margin-top: 10px
 
     .compare
-        .section__title, &__subtitle
-            text-align: left
         &__subtitle
             font-size: 20px
             margin-top: 25px
@@ -446,6 +453,8 @@
             justify-items: center
     .project
         max-width: 400px
+        &__img
+            height: 235px
 
     .count
         &__title
@@ -494,6 +503,14 @@
         &__container
             
 @media screen and ( max-width: 780px )
+
+    .example
+        &__img
+            height: 215px
+    
+    .questions
+        padding-top: 40px
+
     .error
         &__container
             margin-bottom: 20px
@@ -513,6 +530,15 @@
             margin: 0
             &-title
                 margin-bottom: 20px
+
+    .compare
+        .section__title, &__subtitle
+            text-align: left
+
+    .about
+        &__garantee
+            &-img
+                max-width: 185px
 
 @media screen and ( max-width: 640px )
 
