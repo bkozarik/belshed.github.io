@@ -7,7 +7,7 @@ $maxWidth: 1920
     $addSize: $pcSize - $mobSize
     $maxWidth: $maxWidth - 320
     transition-duration: 0s
-    $result: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}))
+    $result: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth})) 
     font-size: $result
     line-height: calc(#{$result} + 7px)
 
@@ -38,7 +38,7 @@ h1, h2, h3, h4, h5
     &, & *
         font-weight: 400
         letter-spacing: 1.22px
-        font-family: "Oswald"
+        font-family: "Oswald", sans-serif
 
 .container
     margin: 0 auto

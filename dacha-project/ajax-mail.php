@@ -1,10 +1,10 @@
 <?php
 $to = 'hkiop1@yandex.ru';
-$subject = 'Заявка с сайта';
+$subject = 'Заявка с сайта Проект-Дача.рф';
 $message = htmlspecialchars('');
 
-$headers = 'From: project-dacha@project-dacha.ru' . "\r\n" .
-    'Reply-To: project-dacha@project-dacha.ru' . "\r\n" .
+$headers = 'From: project-dacha@проект-дача.рф' . "\r\n" .
+    'Reply-To: project-dacha@проект-дача.рф' . "\r\n" .
   	'Content-type: text/html; charset=iso-8859-1' . "\r\n" .
     'X-Mailer: PHP/' . phpversion();
 
