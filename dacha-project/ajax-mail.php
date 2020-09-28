@@ -1,11 +1,13 @@
 <?php
-$to = 'hkiop1@yandex.ru';
+
+$to = 'sercom92@gmail.com';
+$from = 'проект-дача.рф <проект-дача@проект-дача.рф>';
 $subject = 'Заявка с сайта Проект-Дача.рф';
 $message = htmlspecialchars('');
 
-$headers = 'From: project-dacha@проект-дача.рф' . "\r\n" .
-    'Reply-To: project-dacha@проект-дача.рф' . "\r\n" .
-  	'Content-type: text/html; charset=iso-8859-1' . "\r\n" .
+$headers = 'From: ' . $from . "\r\n" .
+    'Reply-To: ' . $from . "\r\n" .
+  	'Content-type: text/html; charset=utf-8' . "\r\n" .
     'X-Mailer: PHP/' . phpversion();
 
 $fields = array('user_name', 'user_email', 'user_tel', 'user_question', 'complectation', 'materials', 'city', 'budget', 'square');

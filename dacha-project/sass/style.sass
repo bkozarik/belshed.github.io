@@ -349,21 +349,24 @@ h1, h2, h3, h4, h5
     top: 0
     transform: translateX(100%)
     padding: 105px 20px 20px
+    display: flex
+    flex-direction: column
+    align-items: flex-start
     &__item
         list-style-type: none
     &__link
         padding: 7px
         display: inline-block
         font-size: 16px
-        font-weight: 600
+        font-weight: 500
     &.active
         transform: translateX(0%)
     .header__tel-link
         display: inline-block
-        margin-top: 15px
+        margin-top: auto
         margin-left: 10px
     .button
-        margin-top: 25px
+        margin-top: 10px
         margin-left: 10px
 
 .logo
@@ -382,7 +385,8 @@ h1, h2, h3, h4, h5
 .banner
     background-image: url(../img/banner_bg.jpg)
     background-size: cover
-    background-position: center
+    background-position: center 90px
+    background-repeat: no-repeat
     .button_banner
         position: relative
         z-index: 2
@@ -446,7 +450,7 @@ h1, h2, h3, h4, h5
 .examples
     padding-top: 90px
     &__container
-        margin: 60px 0px 70px
+        margin: 90px 0px 70px
         display: grid
         grid-template-columns: repeat(4, 1fr)
         grid-gap: 20px
@@ -465,7 +469,7 @@ h1, h2, h3, h4, h5
         height: 205px
         object-fit: cover
     &__body
-        padding: 30px 20px 48px
+        padding: 45px 20px
         background-color: #fff
         border-radius: 5px
         overflow: hidden
@@ -694,10 +698,7 @@ h1, h2, h3, h4, h5
         position: absolute
         top: 200px
     &__container
-        // display: flex
-        // justify-content: space-between
-        // flex-wrap: wrap
-        margin-top: 7px
+        margin-top: 70px
         display: grid
         grid-template-columns: repeat(3, 1fr)
         align-items: baseline
@@ -710,7 +711,6 @@ h1, h2, h3, h4, h5
         &:nth-child(3n)
             padding-left: 50px
     &__img
-        margin-bottom: 20px
         img
             max-width: 100%
             width: auto
@@ -842,7 +842,7 @@ h1, h2, h3, h4, h5
         bottom: -100px
         right: -40px
     &__table
-        margin-top: 90px
+        padding-top: 90px
         // min-width: 1200px
         &-wrap
             // overflow-x: auto
@@ -1194,7 +1194,7 @@ h1, h2, h3, h4, h5
     &:nth-child(2n - 1)
         margin-right: 90px
     &__img
-        max-width: 140px
+        max-width: 230px
         max-height: 130px
         height: auto
     &__title
@@ -1202,7 +1202,7 @@ h1, h2, h3, h4, h5
         font-size: 20px
         line-height: 30px
         display: block
-        margin: 40px 0px 30px
+        margin: 30px 0px
     &__text
         font-weight: 400
         font-size: 16px
@@ -1573,6 +1573,8 @@ h1, h2, h3, h4, h5
         flex-basis: 25%
         overflow: hidden
         img
+            height: 100%
+            width: 120%
             object-fit: cover
             transform: translateX(-70px)
     &__body
@@ -1649,6 +1651,8 @@ h1, h2, h3, h4, h5
         font-weight: 400
         color: #303030
         display: block
+    &__subtext + &__options
+        margin-top: 30px
     &__options
         display: flex
         flex-direction: column
@@ -1661,6 +1665,7 @@ h1, h2, h3, h4, h5
             appearance: none
             border: 1px solid #e6e6e6
     &__checkbox
+        flex-shrink: 0
         display: inline-block
         height: 26px
         width: 26px
@@ -1892,20 +1897,20 @@ h1, h2, h3, h4, h5
         object-fit: contain
     &__title
         font-weight: 700
-        margin-top: 35px
+        margin-top: 25px
         display: inline-block
         position: relative
         &::before
             display: inline-block
             position: absolute
-            height: 30px
-            width: 30px
+            height: 35px
+            width: 35px
             background: #40ba4f
             color: #fff
             font-size: 16px
             font-weight: 700
             left: 0
-            top: 0
+            top: 15px
             text-align: center
             line-height: 30px
             border-radius: 50%

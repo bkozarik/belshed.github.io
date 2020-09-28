@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let popupsWrappers = document.querySelectorAll('.popup__wrapper');
     let discussPopupTrigger = document.querySelector('.js-toggle-discuss-popup');
     let requestPopupTrigger = document.querySelector('.js-toggle-request-popup');
+    let telInputs = document.querySelectorAll('input[type="tel"]');
     let mobileErrorsSwiperSW;
     let currPage = 0;
 
@@ -161,7 +162,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const downloadCanadian = () => {
-        let filePath = '../dacha-project/pdf/50-100m.pdf';
+        let filePath = './pdf/50-100m.pdf';
 
         fetch(filePath, {
             method: 'GET',
@@ -179,7 +180,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const downloadScandinavian = () => {
-        let filePath = '../dacha-project/pdf/16-50m.pdf';
+        let filePath = './pdf/16-50m.pdf';
 
         fetch(filePath, {
             method: 'GET',
@@ -360,6 +361,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.querySelector('.js-table-toggle').addEventListener('click', () => {
         document.querySelector('.materials__table_hidden').classList.toggle('active');
+        document.querySelector('.materials__table_hidden').scrollIntoView({
+            // behavior: 'smooth',
+            block: 'start',
+        });
         event.target.style.display = "none";
     });
 
@@ -395,9 +400,10 @@ document.addEventListener('DOMContentLoaded', () => {
     //
     //
 
-    document.querySelector('.button_portfolio').addEventListener('click', () => {
-        document.querySelector('.portfolio__container_hidden').classList.toggle('active');
-        document.querySelector('.button_portfolio').style.display = 'none';
+    document.querySelector('.portfolio .button_portfolio').addEventListener('click', () => {
+        console.log(22);
+        document.querySelector('.portfolio .portfolio__container_hidden').classList.toggle('active');
+        document.querySelector('.portfolio .button_portfolio').style.display = 'none';
     });
 
     document.querySelector('.banner .button_banner').addEventListener('click', () => {
@@ -409,6 +415,38 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.addEventListener('resize', resizeHandler);
 
+    telInputs.forEach(input => {
+        input.addEventListener('focus', _ => {
+            if(!/^\+\d*$/.test(input.value))
+              input.value = '+7 (';
+        });
+          
+        input.addEventListener('keypress', event => {
+        let currPos = input.value.length;
+        if((!/\d/.test(event.key) || (input.value.length == 18))){
+            event.preventDefault();
+        }
+        else if ((input.value.length <= 3)){
+            input.value = '+7 (';
+        }
+        switch (currPos) {
+            case 7:
+                input.value += ") ";
+                break;
+            case 12:
+                input.value += "-";
+                break;
+            case 15:
+                input.value += "-";
+                break;
+        
+            default:
+                break;
+        }
+        });
+    });
+
     resizeHandler();
     quizShowPage(currPage);
+    quizShowPage(5);
 });

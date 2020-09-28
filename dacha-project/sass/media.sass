@@ -107,6 +107,14 @@
         &__tree
             display: none
 
+@media screen and ( max-width: 1160px )
+    .advantage
+        margin-right: 0 !important
+    .advantages
+        &__container
+            align-items: center
+            flex-direction: column
+
 @media screen and ( max-width: 1050px )
     .correct
         padding-bottom: 50px
@@ -134,6 +142,7 @@
             flex-basis: 95%
 
     .notype
+        padding-top: 70px
         &__bg
             display: none
         &__oleg
@@ -159,19 +168,19 @@
         & + &
             margin-top: 70px
         &::before
-            margin-top: 30px
+            margin: 30px auto 0
             position: relative
             transform: none
         &__container
             min-height: auto
             flex-direction: row
-            justify-content: space-between
+            justify-content: space-around
             flex-wrap: wrap
             margin-top: 40px
         &__side
             align-items: flex-start
             justify-content: flex-start
-            max-width: 300px
+            max-width: 350px
             width: 100%
             & + &
                 margin-bottom: 0
@@ -198,6 +207,8 @@
         max-height: 980px
 
     .reports
+        .section__title
+            text-align: center
         &__body
             max-width: 600px
             margin: 0 auto
@@ -240,12 +251,18 @@
         padding-top: 40px
         &__container
             grid-template-columns: repeat(2, 1fr)
-            margin-top: 55px
+            margin-top: 75px
 
     .notype
+        padding-top: 50px
+        &__body
+            margin: 0 auto
         &__card
             margin-bottom: 0px
             padding-bottom: 15px
+        .button_notype
+            margin: 0 auto
+            display: block
 
     .portfolio
         margin-top: 90px
@@ -292,7 +309,7 @@
             display: none !important
         &__download
             display: block
-        &__table, &__niples
+        &__table, &__niples, &__tip, &__wood
             display: none !important
 
     .benefits
@@ -321,8 +338,8 @@
         &__body
             flex-basis: 100%
             padding: 0px 20px
-        &__page:last-child
-            
+        &__subtitle
+            text-align: center !important
         &__container
             min-height: 800px
 
@@ -338,6 +355,17 @@
     .questions
         padding-bottom: 50px
         padding-top: 0
+        &__container
+            display: flex
+            flex-direction: column
+            align-items: center
+        &__text
+            text-align: center
+        .header
+            &__tel
+                align-items: center
+            &__socials
+                margin-right: 0
         &__bg
             display: none
         &__oleg
@@ -369,12 +397,14 @@
             margin-top: 50px
             box-shadow: none
             flex-direction: column
-            align-items: flex-start
+            align-items: center
             padding: 0
             .header__tel
                 margin: 20px 0px
 
     .how
+        &__container
+            justify-content: space-around
         &__btn
             &-wrap
                 margin-top: 10px
@@ -449,6 +479,7 @@
         &__page
             grid-template-columns: repeat(1, 1fr)
             justify-items: center
+    
     .project
         max-width: 400px
         &__img
@@ -456,7 +487,8 @@
 
     .count
         &__title
-            line-height: 35px
+            &, & *
+                line-height: 35px
 
     .quiz
         &__inputs
@@ -475,8 +507,10 @@
     .footer
         &__wrap
             flex-direction: column
+            align-items: center
         &__col
             order: 0
+            min-width: 250px
             a.footer__text
                 text-decoration: underline
             & + &
@@ -492,7 +526,13 @@
                 align-items: flex-start
                 .footer__text:first-of-type
                     margin: 0
+
+        .logo
+            min-width: 250px
+
         .header
+            &__wrap
+                justify-content: center
             &__contacts
                 display: none
 
@@ -529,6 +569,15 @@
             &-title
                 margin-bottom: 20px
 
+    .why
+        &__img
+            img
+                max-height: 120px
+                height: auto
+
+    .notype 
+        padding-bottom: 70px
+
     .compare
         .section__title, &__subtitle
             text-align: left
@@ -539,12 +588,6 @@
                 max-width: 185px
 
 @media screen and ( max-width: 640px )
-
-    .correct
-        &__subtitle
-            text-align: left
-        .section__title
-            text-align: left
 
     .advantages
         .section__title
@@ -573,7 +616,7 @@
                 font-size: 18px
 
     .banner
-        margin-bottom: 20px
+        margin-bottom: 0px
         background-position: 20% 20px
         background-size: auto 90%
         .section
@@ -602,9 +645,15 @@
             margin: 20px 0px
 
     .examples
+        padding-top: 0
         &__container
+            margin-top: 70px
             grid-template-columns: repeat(2, 1fr)
     
+    .example
+        &__text
+            font-size: 16px
+
     .about
         &__garantee
             &-subtitle
@@ -685,9 +734,10 @@
 
     .count
         &__book
-            width: 100%
-            top: 170px
-            left: 20px
+            width: 70%
+            top: 220px
+            left: 50%
+            transform: translateX(-50%)
         &__body
             margin: 245px auto 0px
         &__title
@@ -758,17 +808,47 @@
         .quiz
             &__input
                 padding: 20px 25px
+        &__inputs
+            margin-top: 20px
         &__options
             width: 100%
             max-width: 310px
         .section__title
             text-align: left
-        &__subtext, &__options
-            margin-top: 15px
+        &__options
+            margin-top: 55px
+        &__subtext
+            margin-top: 30px
+        &__subtitle
+            text-align: left !important
         &__leaf
             display: none
         &__container
             min-height: 820px
+
+@media screen and ( max-width: 550px )
+    .correct
+        &__subtitle
+            text-align: left
+        .section__title
+            text-align: left
+
+@media screen and ( max-width: 500px )
+    .quiz
+        &__subtext
+            margin-top: 10px
+        &__options
+            margin-top: 35px
+    .count
+        &__book
+            width: 90%
+            top: 220px
+
+@media screen and ( max-width: 440px )
+    .count
+        &__book
+            width: 100%
+            top: 250px
 
 @media screen and ( max-width: 400px )
     .container
@@ -791,10 +871,12 @@
             font-size: 34px
 
     .count
+        &__title
+            &, & *
+                font-size: 22px
         &__book
-            top: 240px
+            top: 230px
             width: 110%
-            left: -10px
 
     .house
         &__title
@@ -806,9 +888,9 @@
         &__container
             grid-row-gap: 10px
         &__img
+            margin-bottom: 10px
             img
-                max-width: 60%
-                max-height: 150px
+                max-width: 160px
 
     .reports
         &__body
@@ -898,3 +980,8 @@
             display: block
             &_banner
                 font-size: 16px
+
+@media screen and ( max-width: 360px )
+    .count
+        &__book
+            top: 260px
