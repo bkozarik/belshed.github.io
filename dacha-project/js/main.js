@@ -206,9 +206,9 @@ document.addEventListener('DOMContentLoaded', () => {
         let formInputs = targetForm.querySelectorAll('input');
         let request = new XMLHttpRequest();
 
-        request.open('POST', 'ajax-mail.php');
+        request.open('POST', './php/ajax-mail.php');
 
-        request.onreadystatechange = function () {
+        request.onreadystatechange = () => {
             
             if(request.readyState === XMLHttpRequest.DONE) {
                 var status = request.status;
@@ -355,6 +355,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('.projects__more .projects__open').addEventListener('click', () => {
         document.querySelectorAll('.projects__container_hidden').forEach(container => container.classList.toggle('active'));
         event.target.style.display = 'none';
+        document.querySelector('.projects__page.active .projects__container_hidden').scrollIntoView({block: 'start',});
     });
 
     downloadForm.addEventListener('submit', () => downloadDoc(downloadForm.querySelector('.js-hidden-input').value));
@@ -401,17 +402,11 @@ document.addEventListener('DOMContentLoaded', () => {
     //
 
     document.querySelector('.portfolio .button_portfolio').addEventListener('click', () => {
-        console.log(22);
         document.querySelector('.portfolio .portfolio__container_hidden').classList.toggle('active');
         document.querySelector('.portfolio .button_portfolio').style.display = 'none';
     });
 
-    document.querySelector('.banner .button_banner').addEventListener('click', () => {
-        document.querySelector('.examples').scrollIntoView({
-            behavior: 'smooth',
-            block: 'start',
-        });
-    });
+    document.querySelector('.banner .button_banner').addEventListener('click', () => document.querySelector('.examples').scrollIntoView({ behavior: 'smooth', block: 'start', }));
 
     window.addEventListener('resize', resizeHandler);
 
@@ -448,5 +443,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
     resizeHandler();
     quizShowPage(currPage);
-    quizShowPage(5);
 });

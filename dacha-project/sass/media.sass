@@ -2,6 +2,9 @@
     .error
         &__bg
             display: none
+            &-m
+                display: block
+                width: 110%
 
     .why
         &__tree
@@ -51,6 +54,11 @@
             &-text
                 bottom: 121px
                 right: 10px
+
+    .error
+        &__bg
+            &-m
+                width: 130%
 
 @media screen and ( max-width: 1300px )
     .compare
@@ -108,8 +116,18 @@
             display: none
 
 @media screen and ( max-width: 1160px )
+    .notype
+        &__bg
+            width: 120%
+        &__body
+            margin: 0 auto
+        .button_notype
+            margin: 0 auto
+            display: block
+    
     .advantage
         margin-right: 0 !important
+
     .advantages
         &__container
             align-items: center
@@ -142,7 +160,7 @@
             flex-basis: 95%
 
     .notype
-        padding-top: 70px
+        padding-top: 50px
         &__bg
             display: none
         &__oleg
@@ -264,6 +282,11 @@
             margin: 0 auto
             display: block
 
+    .error
+        .section__title, .section__title *
+            font-size: 34.8px
+            line-height: 48px
+
     .portfolio
         margin-top: 90px
         &__container
@@ -286,7 +309,7 @@
     .about
         margin-top: 40px
         &__bg
-            width: 320%
+            width: 290%
         &__container
             margin: 360px auto 0px
         &__garantee
@@ -413,9 +436,6 @@
         &__subtitle
             font-size: 20px
             margin-top: 25px
-        &__icon
-            height: 40px
-            width: 40px
         &__container
             margin-top: 50px
             flex-direction: column
@@ -489,6 +509,13 @@
         &__title
             &, & *
                 line-height: 35px
+
+    .reports
+        &__bg
+            right: -370px
+            height: 100%
+            width: auto
+            max-height: 50%
 
     .quiz
         &__inputs
@@ -638,6 +665,7 @@
         width: 50vw
 
     .why
+        margin-top: 70px
         &__container
             grid-template-columns: repeat(1, 1fr)
             justify-items: center
@@ -675,8 +703,7 @@
             padding: 30px
 
     .error
-        .section__title, .section__title *
-            line-height: 35px
+        margin-top: 85px
         &__container
             margin-bottom: 20px
             .swiper-wrapper
@@ -733,6 +760,7 @@
             margin-right: 20px
 
     .count
+        padding: 90px 0px 80px
         &__book
             width: 70%
             top: 220px
@@ -765,12 +793,19 @@
             padding: 20px 15px
             display: block
             margin: 20px auto 0px
+        &_project
+            padding: 23px 60px
 
     .example
         &__img
             max-height: 130px
         &__body
             padding: 20px
+
+    .benefits
+        margin-top: 70px
+        .section__title, .section__title *
+            text-align: left
 
     .header
         &__burger
@@ -795,7 +830,7 @@
                 display: none
 
     .notype
-        padding: 100px 0px 80px
+        padding: 60px 0px 80px
         .section__title 
             text-align: left
 
@@ -830,6 +865,7 @@
     .correct
         &__subtitle
             text-align: left
+            margin-bottom: 25px
         .section__title
             text-align: left
 
@@ -839,10 +875,11 @@
             margin-top: 10px
         &__options
             margin-top: 35px
+    
     .count
         &__book
             width: 90%
-            top: 220px
+            top: 240px
 
 @media screen and ( max-width: 440px )
     .count
@@ -869,6 +906,14 @@
     .advantages
         .section__title, .section__title *
             font-size: 34px
+
+    .advantage
+        margin-top: 60px
+        &__img
+            max-width: 180px
+            max-height: 110px
+        &__title
+            margin: 20px 0px
 
     .count
         &__title
@@ -898,9 +943,17 @@
                 margin-left: 0
 
     .questions
+        &__socials
+            margin: 40px auto
+        &__container, &__card
+            align-items: flex-start
+        &__text, .section__title, .section__title *
+            text-align: left
         &__social
             & + &
                 margin-top: 20px
+        .header__tel
+            align-items: flex-end
 
     .quiz
         &__inputs
@@ -914,7 +967,8 @@
 
     .addon
         &__img
-            width: 70px
+            margin-right: 15px
+            width: 85px
 
     .about
         &__saw
@@ -980,6 +1034,13 @@
             display: block
             &_banner
                 font-size: 16px
+
+    .footer
+        &__wrap
+            align-items: flex-start
+        .header
+            &__wrap
+                justify-content: flex-start
 
 @media screen and ( max-width: 360px )
     .count
