@@ -230,9 +230,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const docBtnClick = index => {
         return () => {
             event.preventDefault();
-            
+            let btnContainer = event.target.parentNode;
+            let containerHeaderText = btnContainer.querySelector('.project__title').innerText;
+
+            let projectName = document.createElement('input');
+            projectName.setAttribute('type', 'hidden');
+            projectName.setAttribute('name', 'project_name');
+            projectName.setAttribute('value', containerHeaderText);
+
             openPopup('.js-download-popup', event.target.dataset.place);
             document.querySelector('.js-download-popup').querySelector('.js-hidden-input').value = index;
+
+            document.querySelector('.js-download-popup form').appendChild(projectName);
         }
     }
 

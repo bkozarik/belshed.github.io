@@ -27,8 +27,8 @@ $smtp->setFrom($from, 'Проект-Дача.рф');
 $smtp->addReplyTo($from);
 $smtp->addAddress($to);
 
-$fields = array('user_name', 'user_email', 'user_tel', 'user_question', 'complectation', 'materials', 'city', 'budget', 'square');
-$fields_labels = array('Имя: ', 'E-mail: ', 'Телефон: ', 'Вопрос: ', 'Комплектация: ', 'Материалы: ', 'Город: ', 'Бюджет: ', 'Площадь: ');
+$fields = array('project_name', 'user_name', 'user_email', 'user_tel', 'user_question', 'complectation', 'materials', 'city', 'budget', 'square');
+$fields_labels = array('Скачанный проект: ', 'Имя: ', 'E-mail: ', 'Телефон: ', 'Вопрос: ', 'Комплектация: ', 'Материалы: ', 'Город: ', 'Бюджет: ', 'Площадь: ');
 
 foreach($fields as $key => $field){
 	if(isset($_POST[$field])){
