@@ -818,9 +818,13 @@ h1, h2, h3, h4, h5
         position: absolute
         bottom: 0
         left: -40px
+        max-width: 245px
+        width: 100%
     &__wood
         position: absolute
         bottom: -100px
+        max-width: 490px
+        width: 100%
         right: -40px
     &__table
         padding-top: 90px
@@ -1401,6 +1405,11 @@ h1, h2, h3, h4, h5
 
 .correct
     padding-bottom: 110px
+    position: relative
+    &__leaf
+        position: absolute
+        width: 100%
+        max-width: 450px
     &__subtitle
         margin: 25px auto 0px
         display: block
@@ -1503,6 +1512,7 @@ h1, h2, h3, h4, h5
             margin-right: 3px
     &__img
         width: 100%
+        cursor: pointer
         img
             margin-top: 30px
             width: 100%
@@ -2058,6 +2068,36 @@ h1, h2, h3, h4, h5
             opacity: 0
             visibility: hidden
 
+.lightbox
+    position: fixed
+    left: 0
+    top: 0
+    width: 100%
+    height: 100vh
+    background-color: rgba(0, 0, 0, .8)
+    z-index: 6000
+    display: flex
+    align-items: center
+    justify-content: center
+    opacity: 0
+    visibility: hidden
+    pointer-events: none
+    cursor: pointer
+    &.active
+        opacity: 1
+        visibility: visible
+        pointer-events: all
+    &__img
+        max-width: 85%
+        max-height: 98vh
+        height: auto
+        z-index: 3
+        position: relative
+        cursor: default
+        user-select: none
+        img
+            width: 100%
+            user-select: none
 .footer
     padding-bottom: 65px
     flex-grow: 0

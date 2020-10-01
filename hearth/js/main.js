@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
             document.querySelectorAll('.example').forEach(example => {
                 example.appendChild(example.querySelector('.example__img'));
             });
-            document.querySelectorAll('.header__side')[1].insertBefore(document.querySelector('.header__contacts'), document.querySelector('.header__cart'));
+            document.querySelectorAll('.header__side')[1].insertBefore(document.querySelector('.header__contacts'), document.querySelector('#cart_button'));
 
             document.querySelector('.header').insertBefore(menuBtn, document.querySelector('.header .container'));
         }
@@ -223,9 +223,9 @@ document.addEventListener("DOMContentLoaded", () => {
         trigger.addEventListener('click', toggleElement('.js-recall-popup'));
     });
 
-    cart.forEach(trigger => {
-        trigger.addEventListener('click', () => document.querySelector('#card-dialog').classList.toggle('active'));
-    });
+    // cart.forEach(trigger => {
+    //     trigger.addEventListener('click', () => document.querySelector('#card-dialog').classList.toggle('active'));
+    // });
 
     popupCloseTrigger.forEach(trigger => {
         trigger.addEventListener('click', toggleElement('.js-recall-popup'));

@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let requestPopupTrigger = document.querySelector('.js-toggle-request-popup');
     let telInputs = document.querySelectorAll('input[type="tel"]');
     let portfolioBtn = document.querySelector('.js-portfolio-btn');
+    let lightboxTriggers = document.querySelectorAll('.js-lightbox');
     let mobileErrorsSwiperSW;
     let currPage = 0;
 
@@ -100,6 +101,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
         pages[target.dataset.index].classList.add('active');
         projectButtons[target.dataset.index].classList.add('active');
+    }
+
+    const lightboxTriggerClick = () => {
+        let target = event.target;
+        let container = document.querySelector('.js-lightbox-container');
+
+        while(!target.classList.contains('js-lightbox')){
+            target = target.parentNode;
+        }
+        
+        let webpPath = target.querySelector('source').getAttribute('srcset');
+        let picPath = target.querySelector('img').getAttribute('src');
+        
+        container.querySelector('source').setAttribute('srcset', webpPath);
+        container.querySelector('img').setAttribute('src', picPath);
+        container.classList.toggle('active');
     }
 
     const resizeHandler = () => {
@@ -385,6 +402,10 @@ document.addEventListener('DOMContentLoaded', () => {
     //
     //
     //
+
+    lightboxTriggers.forEach(trigger => trigger.addEventListener('click', lightboxTriggerClick));
+
+    document.querySelector('.js-lightbox-container').addEventListener('click', () => event.target.classList.toggle('active'));
 
     portfolioBtn.addEventListener('click', () => {
         let container = document.querySelector('.portfolio .portfolio__container');
