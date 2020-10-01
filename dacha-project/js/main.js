@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let quizPages = document.querySelectorAll('.quiz__page');
     let quizInputs = document.querySelectorAll('.quiz__label input');
     let nextBtns = document.querySelectorAll('.button_next');
+    let quizWatchingInputs = document.querySelectorAll('.js-watch-change');
     let projectButtons = document.querySelectorAll('.button_projects');
     let errorItems = document.querySelectorAll('.error__item');
     let mobileErrorsSwiper = document.querySelector('.error__container');
@@ -18,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let discussPopupTrigger = document.querySelector('.js-toggle-discuss-popup');
     let requestPopupTrigger = document.querySelector('.js-toggle-request-popup');
     let telInputs = document.querySelectorAll('input[type="tel"]');
+    let portfolioBtn = document.querySelector('.js-portfolio-btn');
     let mobileErrorsSwiperSW;
     let currPage = 0;
 
@@ -301,34 +303,6 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelectorAll('.popup__wrapper').forEach(item => item.classList.remove('active'));
     }
 
-    const portfolioSwiper = new Swiper('.portfolio__container', {
-        slidesPerView: 1,
-        spaceBetween: 115,
-        centeredSlides: true,
-        loop: true,
-        autoplay: {
-            delay: 3000,
-        },
-        navigation: {
-            nextEl: '.portfolio__container .portfolio__control_next',
-            prevEl: '.portfolio__container .portfolio__control_prev',
-        }
-    });
-
-    const portfolioSwiperHidden = new Swiper('.portfolio__container.portfolio__container_hidden', {
-        slidesPerView: 1,
-        spaceBetween: 115,
-        centeredSlides: true,
-        loop: true,
-        autoplay: {
-            delay: 3000,
-        },
-        navigation: {
-            nextEl: '.portfolio__container.portfolio__container_hidden .portfolio__control_next',
-            prevEl: '.portfolio__container.portfolio__container_hidden .portfolio__control_prev',
-        }
-    });
-
     const reportsSwiper = new Swiper('.reports__iphone', {
         slidesPerView: 1,
         spaceBetween: 10,
@@ -360,6 +334,8 @@ document.addEventListener('DOMContentLoaded', () => {
     projectButtons.forEach(btn => btn.addEventListener('click', projectsPageChange));
 
     nextBtns.forEach(btn => btn.addEventListener('click', quizShowNextPage));
+
+    quizWatchingInputs.forEach(btn => btn.addEventListener('change', quizShowNextPage));
 
     document.querySelector('.projects__more .projects__open').addEventListener('click', () => {
         document.querySelectorAll('.projects__container_hidden').forEach(container => container.classList.toggle('active'));
@@ -410,9 +386,10 @@ document.addEventListener('DOMContentLoaded', () => {
     //
     //
 
-    document.querySelector('.portfolio .button_portfolio').addEventListener('click', () => {
-        document.querySelector('.portfolio .portfolio__container_hidden').classList.toggle('active');
-        document.querySelector('.portfolio .button_portfolio').style.display = 'none';
+    portfolioBtn.addEventListener('click', () => {
+        let container = document.querySelector('.portfolio .portfolio__container');
+        container.classList.toggle('active');
+        container.classList.contains('active') ? event.target.innerText = 'Скрыть' : event.target.innerText = 'Показать еще';
     });
 
     document.querySelector('.banner .button_banner').addEventListener('click', () => document.querySelector('.examples').scrollIntoView({ behavior: 'smooth', block: 'start', }));

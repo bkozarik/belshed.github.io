@@ -448,10 +448,11 @@ span.button
         background-color: #826418
         cursor: pointer
         &:hover
-            &::before, &::after
+            &::before, &::after 
                 width: 15px
         &::before, &::after
-            transition: .2s ease-out
+            transition-delay: 0s
+            transition-duration: 0s
             content: ''
             display: inline-block
             position: absolute

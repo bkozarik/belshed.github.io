@@ -224,7 +224,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     cart.forEach(trigger => {
-        trigger.addEventListener('click', toggleElement('.js-cart'));
+        trigger.addEventListener('click', () => document.querySelector('#card-dialog').classList.toggle('active'));
     });
 
     popupCloseTrigger.forEach(trigger => {

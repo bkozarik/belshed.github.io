@@ -384,9 +384,9 @@ h1, h2, h3, h4, h5
     flex-grow: 1
 
 .banner
-    background-image: url(../img/banner_bg.jpg)
-    background-size: cover
-    background-position: center 90px
+    background-image: url(../img/banner_bg_2.jpg)
+    background-size: cover cover
+    background-position: center 0px
     background-repeat: no-repeat
     .button_banner
         position: relative
@@ -412,7 +412,7 @@ h1, h2, h3, h4, h5
         opacity: 0.9
     &__body
         padding-top: 180px
-        padding-bottom: 350px
+        padding-bottom: 300px
         max-width: 950px
         position: relative
         z-index: 3
@@ -566,11 +566,15 @@ h1, h2, h3, h4, h5
     &__saw
         position: absolute
         right: -60px
-        bottom: 350px
+        bottom: 300px
+        width: 100%
+        max-width: 570px
     &__glass
         position: absolute
         left: -30px
         bottom: 100px
+        width: 100%
+        max-width: 350px
     &__container
         max-width: 800px
         width: 100%
@@ -643,54 +647,22 @@ h1, h2, h3, h4, h5
 
 .portfolio
     margin-top: 120px
-    &__control
-        position: absolute
-        top: 50%
-        transform: translate(-150%, -50%)
-        z-index: 4
-        display: inline-block
-        height: 70px
-        width: 45px
-        opacity: .7
-        &:hover
-            opacity: 1
-        &::after, &::before
-            position: absolute
-            top: 50%
-            left: 0
-            transform: translate(0, -50%)
-            content: ''
-            background-color: #303030
-            transform-origin: left
-            height: 7px
-            width: 40px
-            border-radius: 3px
-        &::after
-            transform: translate(0, -25%) rotate(-45deg)
-        &::before
-            transform: translate(0, -75%) rotate(45deg)
-        &_next
-            transform: translate(150%, -50%) rotate(180deg)
-            right: 0
     &__container
-        position: relative
-        max-width: 800px
+        margin: 80px 0 55px
+        width: 100%
+        display: grid
+        grid-gap: 25px
+        grid-template-columns: repeat(3, 1fr)
         margin: 80px auto 55px
-        &_hidden:not(.active)
-            overflow: hidden
-            height: 0px
-            margin: 0
-        .swiper-wrapper
-            max-width: 800px
-        .swiper-slide
-            max-width: 800px
-            min-height: 600px
-            &:not(.swiper-slide-active)
-                opacity: .7
-                
+        &:not(.active)
+            & .portfolio__item:nth-child(n+10)
+                display: none
+    &__item
+        width: 100%
     &__img
         width: 100%
         height: 100%
+        object-fit: cover
 
 .why
     margin-top: 100px
@@ -746,6 +718,8 @@ h1, h2, h3, h4, h5
         position: absolute
         top: 0
         right: -100px
+        width: 100%
+        max-width: 370px
     &__circle
         position: absolute
         z-index: -2
@@ -1113,8 +1087,10 @@ h1, h2, h3, h4, h5
             letter-spacing: normal
     &__hummer
         position: absolute
-        left: -20px
+        left: -60px
         top: 40px
+        max-width: 340px
+        width: 100%
     &__tree
         &_1
             position: absolute
@@ -1460,11 +1436,6 @@ h1, h2, h3, h4, h5
     &:nth-of-type(1)
         &::before
             content: 'Скандинавский каркас и оснащение - толщина силового каркаса 100 мм, перекрытия 150 мм'
-        .house__img
-            position: absolute
-            top: 54%
-            left: 50%
-            transform: translate(-50%, -50%) scale(1.1)
     &:nth-of-type(2)
         &::before
             content: 'Канадский каркас и оснащение- толщина силового каркаса 150 мм, перекрытия 200 мм'
@@ -1474,11 +1445,6 @@ h1, h2, h3, h4, h5
                 margin-right: 30px
                 .house__card:last-child
                     padding: 30px 20px
-        .house__img
-            position: absolute
-            top: 54%
-            left: 46%
-            transform: translate(-50%, -50%) scale(1.1)
     &__container
         display: flex
         justify-content: space-between
@@ -1535,6 +1501,12 @@ h1, h2, h3, h4, h5
             content: '•'
             display: inline-block
             margin-right: 3px
+    &__img
+        width: 100%
+        img
+            margin-top: 30px
+            width: 100%
+            height: auto
 
 .quiz
     padding-bottom: 100px
