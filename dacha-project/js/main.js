@@ -41,6 +41,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    const fixBody = () => {
+        document.querySelector('body').classList.toggle('fixed');
+        document.querySelector('html').classList.toggle('fixed');
+    }
+
     const quizShowPage = page => {
         page = Number(constrain(page, 0, quizPages.length - 1));
 
@@ -104,6 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const lightboxTriggerClick = () => {
+        fixBody();
         let target = event.target;
         let container = document.querySelector('.js-lightbox-container');
 
@@ -405,7 +411,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     lightboxTriggers.forEach(trigger => trigger.addEventListener('click', lightboxTriggerClick));
 
-    document.querySelector('.js-lightbox-container').addEventListener('click', () => event.target.classList.toggle('active'));
+    document.querySelector('.js-lightbox-container').addEventListener('click', () => {
+        event.target.classList.toggle('active');
+        fixBody();
+    });
 
     portfolioBtn.addEventListener('click', () => {
         let container = document.querySelector('.portfolio .portfolio__container');
