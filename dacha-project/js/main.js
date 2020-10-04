@@ -21,8 +21,25 @@ document.addEventListener('DOMContentLoaded', () => {
     let telInputs = document.querySelectorAll('input[type="tel"]');
     let portfolioBtn = document.querySelector('.js-portfolio-btn');
     let lightboxTriggers = document.querySelectorAll('.js-lightbox');
+    let pupupSliderItems = document.querySelectorAll('.js-popup-slider img');
     let mobileErrorsSwiperSW;
     let currPage = 0;
+
+    const pupupSliderItemClick = () => {
+        
+        let target = event.target;
+        let slideIndex = 0;
+
+        pupupSliderItems.forEach((item, index) => target == item ? slideIndex = index : null);
+
+        let container = document.querySelector('.js-slider-container');
+
+        container.classList.toggle('active');
+
+        reportsSwiperNode.slideTo(slideIndex + 1, 0, true);
+
+        fixBody();
+    }
 
     const constrain = (val, min, max) => {
         return val > max ? max : val < min ? min : val;
@@ -109,20 +126,22 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const lightboxTriggerClick = () => {
-        fixBody();
         let target = event.target;
         let container = document.querySelector('.js-lightbox-container');
+        container.querySelector('source').setAttribute('srcset', '');
+        container.querySelector('img').setAttribute('src', '');
 
         while(!target.classList.contains('js-lightbox')){
             target = target.parentNode;
         }
         
-        let webpPath = target.querySelector('source').getAttribute('srcset');
         let picPath = target.querySelector('img').getAttribute('src');
-        
+        let webpPath = picPath.replace('jpg', 'webp');
+
         container.querySelector('source').setAttribute('srcset', webpPath);
         container.querySelector('img').setAttribute('src', picPath);
         container.classList.toggle('active');
+        fixBody();
     }
 
     const resizeHandler = () => {
@@ -326,6 +345,13 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelectorAll('.popup__wrapper').forEach(item => item.classList.remove('active'));
     }
 
+    const popupSwiperInit = () => {
+        let swiperWrapper = document.querySelector('.js-slider-container .swiper-wrapper');
+        pupupSliderItems.forEach(item => {
+            reportsSwiperNode.appendSlide(`<div class="swiper-slide">${item.outerHTML}</div>`);
+        });
+    }
+
     const reportsSwiper = new Swiper('.reports__iphone', {
         slidesPerView: 1,
         spaceBetween: 10,
@@ -336,6 +362,18 @@ document.addEventListener('DOMContentLoaded', () => {
             nextEl: '.reports__control_next',
         }
     });
+
+    const popupSwiper = new Swiper('.js-slider-container .lightbox__swiper', {
+        slidesPerView: 1,
+        centeredSlides: true,
+        loop: true,
+        navigation: {
+            prevEl: '.lightbox__control_prev',
+            nextEl: '.lightbox__control_next',
+        }
+    });
+
+    let reportsSwiperNode = document.querySelector('.js-slider-container .lightbox__swiper').swiper;
 
     tableCells.forEach(cell => {
         if(cell.innerText === "+"){
@@ -393,7 +431,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // Попапы
     //
 
-    popupBtn.forEach(btn => btn.addEventListener('click', () => openPopup('.js-common-popup', btn.dataset.place)));
+    popupBtn.forEach(btn => btn.addEventListener('click', () => {
+        event.preventDefault();
+        
+        openPopup('.js-common-popup', btn.dataset.place);
+    }));
 
     document.querySelectorAll('.js-close-popup').forEach(btn => btn.addEventListener('click', closePopup));
 
@@ -405,6 +447,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     requestPopupTrigger.addEventListener('click', () => openPopup('.js-request-popup', event.target.dataset.place));
 
+    pupupSliderItems.forEach(item => item.addEventListener('click', pupupSliderItemClick));
+
     //
     //
     //
@@ -412,7 +456,14 @@ document.addEventListener('DOMContentLoaded', () => {
     lightboxTriggers.forEach(trigger => trigger.addEventListener('click', lightboxTriggerClick));
 
     document.querySelector('.js-lightbox-container').addEventListener('click', () => {
-        event.target.classList.toggle('active');
+        if(event.target.classList.contains('js-lightbox-container')){
+            event.target.classList.toggle('active');
+            fixBody();
+        }
+    });
+
+    document.querySelector('.js-slider-container .swiper-wrapper').addEventListener('click', () => {
+        document.querySelector('.js-slider-container').classList.toggle('active');
         fixBody();
     });
 
@@ -420,6 +471,8 @@ document.addEventListener('DOMContentLoaded', () => {
         let container = document.querySelector('.portfolio .portfolio__container');
         container.classList.toggle('active');
         container.classList.contains('active') ? event.target.innerText = 'Скрыть' : event.target.innerText = 'Показать еще';
+        let fifthItem = container.querySelectorAll('.portfolio__item')[4];
+        fifthItem.scrollIntoView({block: 'start',})
     });
 
     document.querySelector('.banner .button_banner').addEventListener('click', () => document.querySelector('.examples').scrollIntoView({ behavior: 'smooth', block: 'start', }));
@@ -458,5 +511,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     resizeHandler();
+    popupSwiperInit();
     quizShowPage(currPage);
 });

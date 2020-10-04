@@ -402,7 +402,7 @@ h1, h2, h3, h4, h5
         position: absolute
         left: 0
         bottom: 50px
-        max-width: 15vw
+        max-width: 16vw
     &__cloud
         position: absolute
         top: 0
@@ -416,7 +416,7 @@ h1, h2, h3, h4, h5
         left: 50%
         transform: translateX(-50%)
         z-index: -1
-        opacity: 0.9
+        opacity: 0
     &__body
         padding-top: 180px
         padding-bottom: 300px
@@ -666,6 +666,7 @@ h1, h2, h3, h4, h5
                 display: none
     &__item
         width: 100%
+        cursor: zoom-in
     &__img
         width: 100%
         height: 100%
@@ -969,6 +970,8 @@ h1, h2, h3, h4, h5
 
 .error
     margin-top: 120px
+    .container
+        position: relative
     &__control
         display: inline-block
         height: 30px
@@ -1005,7 +1008,10 @@ h1, h2, h3, h4, h5
             opacity: 1
         .swiper-pagination-bullet-active
             background-color: #ffa200
-
+    &__oleg
+        position: absolute
+        right: 0
+        top: 60px
     &__bg
         bottom: 0
         position: absolute
@@ -1944,15 +1950,24 @@ h1, h2, h3, h4, h5
     padding-top: 65px
     padding-bottom: 350px
     &__oleg
-        display: none
-        max-height: 400px
+        position: absolute
+        bottom: -310px
+        right: 0px
         width: auto
         object-fit: contain
-        margin-top: 40px
+        z-index: -1
+        &_m
+            display: none
+    &__clouds
+        bottom: 0
+        position: absolute
+        z-index: -1
     &__bg
         position: absolute
-        bottom: 0
+        top: 0
+        height: 100%
         left: 0
+        object-fit: cover
         width: 100%
         z-index: -1
     &__card
@@ -2052,6 +2067,7 @@ h1, h2, h3, h4, h5
     .count__input
         padding: 20px 15px
         background-color: #f0f0f0
+        color: #303030
     .count__form
         max-width: 350px
         width: 100%
@@ -2105,6 +2121,54 @@ h1, h2, h3, h4, h5
         img
             width: 100%
             user-select: none
+    &__swiper
+        max-width: 85%
+        max-height: 98vh
+        height: 100%
+        width: 100%
+        display: flex
+        position: relative
+        img
+            object-fit: contain
+            cursor: grab
+    &__control
+        position: absolute
+        display: inline-block
+        top: 50%
+        width: 30px
+        height: 50px
+        z-index: 4
+        opacity: .6
+        &::before, &::after
+            content: ''
+            display: inline-block
+            width: 2px
+            height: 20px
+            background-color: #fff
+            border-radius: 7px
+            position: absolute
+            left: 50%
+            transform: translate(0, -50%)
+        &::before
+            top: calc(50% + 8px)
+            transform: translate(0, -50%) rotate(-30deg)
+        &::after
+            top: calc(50% - 8px)
+            transform: translate(0, -50%) rotate(30deg)
+        &:hover
+            opacity: 1
+        &_prev
+            left: 0
+            transform: translate(0, -50%) rotate(0deg)
+        &_next
+            right: 0
+            transform: translate(0, -50%) rotate(180deg)
+    .swiper-slide
+        transition: opacity .2s ease-out 0s
+    .swiper-slide:not(.swiper-slide-active)
+        transition: opacity .2s ease-out 0s
+        opacity: 0
+        cursor: default
             
 .footer
     padding-bottom: 65px
