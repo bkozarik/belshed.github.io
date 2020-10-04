@@ -100,15 +100,58 @@ section
     grid-column-gap: 60px
     width: 100%
 
+.deco
+    display: flex
+    position: absolute
+    flex-direction: column
+    height: 150px
+    width: 150px
+    z-index: 1
+    & > *:nth-child(1)
+        align-self: flex-start
+    & > *:nth-child(2)
+        align-self: flex-end
+    &_white
+        background-color: #fff
+    &_light
+        background-color: $light_blue
+    &_dark
+        background-color: $text_blue
+    &_grey
+        background-color: #f0f0f0
+    &_reverse
+        flex-direction: column-reverse
+    &__small
+        width: 60px
+        height: 60px
+        flex-shrink: 0
+    &__big
+        height: 90px
+        width: 90px
+        flex-shrink: 0
+
 .header
     flex-grow: 0
-    background-color: #fff
+    background-color: #ffffff
+    position: relative
+    &__intel
+        background-color: $text_blue
+        padding: 10px
+        display: flex
+        justify-self: start
+        align-items: center
+        margin-left: auto
+        position: absolute
+        height: 100%
+        transform: translateX(-100%)
     &__wrap
         width: 100%
         display: flex
         align-items: center
         justify-content: space-between
         padding: 30px 0px
+        .logo
+            padding-left: 35px
 
 .nav
     max-width: 745px
@@ -129,6 +172,13 @@ section
 
 .banner
     padding: 55px 0px 180px
+    .deco
+        &:nth-child(1)
+            top: 0
+            left: 0
+        &:nth-child(2)
+            bottom: 0
+            right: 0
     &__bg
         position: absolute
         width: 100%
@@ -148,6 +198,17 @@ section
         padding: 50px 60px
         width: 100%
         max-width: 840px
+        position: relative
+        &::after
+            content: ''
+            display: block
+            position: absolute
+            bottom: 0
+            right: 0
+            width: 60px
+            height: 60px
+            background-color: $light_blue
+            transform: translate(100%, 100%)
     &__text
         margin: 30px 0px 40px
         font-size: 18px
@@ -202,6 +263,10 @@ section
     background-image: url(../img/tests_bg.jpg)
     background-size: cover
     background-position: center
+    .deco
+        top: 0
+        left: 1500px
+        transform: translateY(-45px)
     &__title
         font-weight: 500
         position: relative
@@ -264,8 +329,11 @@ section
         margin-top: 40px
 
 .horizons
-    overflow: hidden
     padding: 115px 0px 175px
+    .deco
+        top: 0
+        right: 1600px
+        transform: translateY(-45px)
     &__bg
         position: absolute
         width: 100%
@@ -290,6 +358,9 @@ section
         
 .articles
     padding-bottom: 90px
+    .deco
+        bottom: -105px
+        left: 1400px
     .three-col__container
         margin-bottom: 15px
 
@@ -355,6 +426,9 @@ section
 .products
     background-color: #fff
     padding-bottom: 90px
+    .deco
+        bottom: -105px
+        right: 1550px
     &__wrap
         display: grid
         grid-template-columns: 1fr
@@ -385,6 +459,16 @@ section
 .about
     padding: 60px 0px
     background-color: #fff
+    .deco
+        &:nth-child(1)
+            top: 610px
+            left: 183px
+        &:nth-child(2)
+            top: 778px
+            right: 183px
+        &:nth-child(3)
+            bottom: 0
+            left: 183px
     &_grey
         background-color: #f0f0f0
     &__wrap
@@ -446,6 +530,14 @@ section
     flex-grow: 0
     background-color: #f0f0f0
     padding: 70px 0px 60px
+    position: relative
+    .deco
+        &:nth-child(1)
+            bottom: 0px
+            left: 220px
+        &:nth-child(2)
+            top: 0px
+            right: 220px
     &__wrap
         display: flex
         width: 100%
@@ -454,7 +546,7 @@ section
         flex-direction: column
     &__logo
         fill: #000
-    &__copyright
+    &__copyright, &__copyright *
         display: inline-block
         text-align: center
         font-size: 18px
@@ -462,3 +554,4 @@ section
         line-height: 34px
         letter-spacing: 1.2px
         margin-top: 40px
+        color: #000
