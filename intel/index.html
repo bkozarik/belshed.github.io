@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Процессоры Intel</title>
     <link rel="stylesheet" href="./css/fonts.css">
-    <link rel="stylesheet" href="./css/media.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/media.css">
     <link rel="stylesheet" href="./css/main.css">
+    <script src="./js/main.js" defer></script>
 </head>
 <body>
     <header class="header">
@@ -28,9 +29,13 @@
                         <li class="nav__item"><a href="#about" class="nav__link js-scroll-link">О компании</a></li>
                     </ul>
                 </nav>
+                <button class="burger js-menu-trigger">
+                    <span></span>
+                </button>
             </div>
         </div>
     </header>
+    <div class="mobile js-menu"></div>
     <main class="main">
         <section class="banner">
             <div class="deco">
@@ -48,12 +53,12 @@
             <div class="container">
                 <div class="banner__body">
                     <h1 class="section__title text_white">Представляем новый уровень удобства работы на ноутбуке</h1>
-                    <p class="banner__text">Платформа Intel® Evo™ обеспечивает высокую производительность и превосходную реалистичность графики для исключительных возможностей ноутбука в любых условиях.</p>
-                    <a href="#" class="button button_light">Читать анонс</a>
+                    <p id="announces" class="banner__text">Платформа Intel® Evo™ обеспечивает высокую производительность и превосходную реалистичность графики для исключительных возможностей ноутбука в любых условиях.</p>
+                    <a href="#" class="button button_light" target="_blank">Читать анонс</a>
                 </div>
             </div>
         </section>
-        <section id="announces" class="announces">
+        <section class="announces">
             <div class="container">
                 <div class="three-col__container">
                     <article class="announce">
@@ -62,7 +67,7 @@
                             <img src="./img/announce_1.jpg" alt="Анонс">
                         </picture>
                         <div class="announce__body">
-                            <a href="#" class="announce__link">Процессоры Intel® Core™ 11-го поколения  — революция</a>
+                            <a href="#" class="announce__link" target="_blank">Процессоры Intel® Core™ 11-го поколения  — революция</a>
                         </div>
                     </article>
                     <article class="announce">
@@ -71,7 +76,7 @@
                             <img src="./img/announce_2.jpg" alt="Анонс">
                         </picture>
                         <div class="announce__body">
-                            <a href="#" class="announce__link">Project Athena: новый подход к инновациям</a>
+                            <a href="#" class="announce__link" target="_blank">Project Athena: новый подход к инновациям</a>
                         </div>
                     </article>
                     <article class="announce">
@@ -80,7 +85,7 @@
                             <img src="./img/announce_3.jpg" alt="Анонс">
                         </picture>
                         <div class="announce__body">
-                            <a href="#" class="announce__link">Подробнее о графике Intel® Iris® Xe</a>
+                            <a href="#" class="announce__link" target="_blank">Подробнее о графике Intel® Iris® Xe</a>
                         </div>
                     </article>
                 </div>
@@ -96,7 +101,11 @@
             </div>
             <div class="container">
                 <div class="section__center">
-                    <h2 class="section__title"><a href="#" class="tests__title ">Тестирование продукции Intel®</a></h2>
+                    <h2 class="section__title"><a href="#" class="tests__title ">Тестирование продукции Intel®
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 38" fill="none">
+                            <path d="M1.5 1.5L20 20C20 20 11 28 1.5 37" stroke-width="6"/>
+                        </svg>
+                    </a></h2>
                 </div>
                 <div class="tests__wrap">
                     <div class="test">
@@ -106,12 +115,12 @@
                         </picture>
                         <h3 class="test__title">Тестируем процессоры Intel Core i5-9600K, i7-9700K, i9-9900K, i9-9900KF и i9-9900KS по новой методике 2020 года</h3>
                         <ul class="test__list">
-                            <li class="test__list-item">Участники тестирования</li>
-                            <li class="test__list-item">Методика тестирования</li>
-                            <li class="test__list-item">iXBT Application Benchmark 2020</li>
-                            <li class="test__list-item">Энергопотребление и энергоэффективность</li>
-                            <li class="test__list-item">Игры</li>
-                            <li class="test__list-item">Итого</li>
+                            <li class="test__list-item"><a href="#" target="_blank">Участники тестирования</a></li>
+                            <li class="test__list-item"><a href="#" target="_blank">Методика тестирования</a></li>
+                            <li class="test__list-item"><a href="#" target="_blank">iXBT Application Benchmark 2020</a></li>
+                            <li class="test__list-item"><a href="#" target="_blank">Энергопотребление и энергоэффективность</a></li>
+                            <li class="test__list-item"><a href="#" target="_blank">Игры</a></li>
+                            <li class="test__list-item"><a href="#" target="_blank">Итого</a></li>
                         </ul>
                         <div class="test__line"></div>
                         <a href="#" class="button button_navy">К тестированию</a>
@@ -123,14 +132,14 @@
                         </picture>
                         <h3 class="test__title">Тестирование процессоров Intel Core i5-10600K и Core i9-10900K для новой платформы LGA1200</h3>
                         <ul class="test__list">
-                            <li class="test__list-item">История трех поколений за три года</li>
-                            <li class="test__list-item">Comet Lake — временная надежда</li>
-                            <li class="test__list-item">Участники тестирования</li>
-                            <li class="test__list-item">Методика тестирования</li>
-                            <li class="test__list-item">iXBT Application Benchmark 2020</li>
-                            <li class="test__list-item">Энергопотребление и энергоэффективность</li>
-                            <li class="test__list-item">Игры</li>
-                            <li class="test__list-item">Итого</li>
+                            <li class="test__list-item"><a href="#" target="_blank">История трех поколений за три года</a></li>
+                            <li class="test__list-item"><a href="#" target="_blank">Comet Lake — временная надежда</a></li>
+                            <li class="test__list-item"><a href="#" target="_blank">Участники тестирования</a></li>
+                            <li class="test__list-item"><a href="#" target="_blank">Методика тестирования</a></li>
+                            <li class="test__list-item"><a href="#" target="_blank">iXBT Application Benchmark 2020</a></li>
+                            <li class="test__list-item"><a href="#" target="_blank">Энергопотребление и энергоэффективность</a></li>
+                            <li class="test__list-item"><a href="#" target="_blank">Игры</a></li>
+                            <li class="test__list-item"><a href="#" target="_blank">Итого</a></li>
                         </ul>
                         <div class="test__line"></div>
                         <a href="#" class="button button_navy">К тестированию</a>
@@ -150,65 +159,72 @@
             <div class="container">
                 <div class="horizons__body">
                     <h2 class="section__title text_white">Откройте новые горизонты в играх</h2>
-                    <p class="horizons__text">Читайте актуальные новости и советы от игровых<br>профессионалов и экспертов Intel, чтобы повысить уровень своей игры.</p>
+                    <p id="articles" class="horizons__text">Читайте актуальные новости и советы от игровых <br>профессионалов и экспертов Intel, чтобы повысить уровень своей игры.</p>
                 </div>
             </div>
         </section>
-        <section id="articles" class="articles">
+        <section class="articles">
             <div class="deco">
                 <div class="deco__big deco_light"></div>
                 <div class="deco__small deco_white"></div>
             </div>
             <div class="container">
                 <div class="three-col__container">
-                    <article class="article">
+                    <a href="#" class="article" target="_blank">
                         <picture loading="lazy" class="article__img">
                             <source srcset="./img/article_1.webp" type="image/webp">
                             <img src="./img/article_1.jpg" alt="Фото статьи">
                         </picture>
                         <div class="article__body">
-                            <a href="#" class="article__link">Разгон процессора через BIOS</a>
+                            <span href="#" class="article__title">Разгон процессора через BIOS</span>
                             <p class="article__text">Это пошаговое руководство покажет вам, как разогнать процессор с помощью BIOS.</p>
                         </div>
-                    </article>
-                    <article class="article">
+                    </a>
+                    <a href="#" class="article" target="_blank">
                         <picture loading="lazy" class="article__img">
                             <source srcset="./img/article_2.webp" type="image/webp">
                             <img src="./img/article_2.jpg" alt="Фото статьи">
                         </picture>
                         <div class="article__body">
-                            <a href="#" class="article__link">Как выполнить оверклокинг оперативной памяти</a>
+                            <span href="#" class="article__title">Как выполнить оверклокинг оперативной памяти</span>
                             <p class="article__text">Оверклокинг оперативной памяти помогает увеличить частоту памяти и повысить производительность вашего ПК.</p>
                         </div>
-                    </article>
-                    <article class="article">
+                    </a>
+                    <a href="#" class="article" target="_blank">
                         <picture loading="lazy" class="article__img">
                             <source srcset="./img/article_3.webp" type="image/webp">
                             <img src="./img/article_3.jpg" alt="Фото статьи">
                         </picture>
                         <div class="article__body">
-                            <a href="#" class="article__link">Охлаждение ПК: важность эффективного охлаждения ПК</a>
+                            <span href="#" class="article__title">Охлаждение ПК: важность эффективного охлаждения ПК</span>
                             <p class="article__text">Узнайте, как высокая температура ухудшает работу вашего ПК и какие системы охлаждения помогут с этим справиться.</p>
                         </div>
-                    </article>
+                    </a>
                 </div>
                 <div class="section__center">
                     <a href="#" class="button button_light">Другие статьи</a>
                 </div>
             </div>
         </section>
-        <section class="small">
+        <section id="products" class="small">
             <picture loading="lazy" class="small__bg">
                 <source srcset="./img/small_1.webp" type="image/webp">
                 <img src="./img/small_1.jpg" alt="Фон">
             </picture>
             <div class="container">
                 <div class="section__center">
-                    <h2 class="section__title"><a href="#" class="small__link text_white">Все процессоры Intel® Core™</a></h2>
+                    <h2 class="section__title">
+                        <a href="#" class="small__link text_white" target="_blank">
+                            Все процессоры Intel® Core™
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 38" fill="none">
+                                <path d="M1.5 1.5L20 20C20 20 11 28 1.5 37" stroke-width="6"/>
+                            </svg>
+                        </a>
+                    </h2>
                 </div>
             </div>
         </section>
-        <section id="products" class="products">
+        <section class="products">
             <div class="deco">
                 <div class="deco__big deco_light"></div>
                 <div class="deco__small deco_white"></div>
@@ -230,7 +246,7 @@
                                 <li>G - Includes discrete graphics on package</li>
                                 <li>11th Generation</li>
                             </ul>
-                            <a href="#" class="button button_product">Купить</a>
+                            <a href="#" target="_blank" class="button button_product">Купить</a>
                         </div>
                     </article>
                     <article class="product">
@@ -248,7 +264,7 @@
                                 <li>G - Includes discrete graphics on package</li>
                                 <li>11th Generation</li>
                             </ul>
-                            <a href="#" class="button button_product">Купить</a>
+                            <a href="#" target="_blank" class="button button_product">Купить</a>
                         </div>
                     </article>
                     <article class="product">
@@ -266,7 +282,7 @@
                                 <li>G - Includes discrete graphics on package</li>
                                 <li>11th Generation</li>
                             </ul>
-                            <a href="#" class="button button_product">Купить</a>
+                            <a href="#" target="_blank" class="button button_product">Купить</a>
                         </div>
                     </article>
                 </div>
@@ -275,7 +291,7 @@
                 </div>
             </div>
         </section>
-        <section class="small">
+        <section id="about" class="small">
             <picture loading="lazy" class="small__bg">
                 <source srcset="./img/small_2.webp" type="image/webp">
                 <img src="./img/small_2.jpg" alt="Фон">
@@ -286,7 +302,7 @@
                 </div>
             </div>
         </section>
-        <section id="about" class="about">
+        <section class="about">
             <div class="deco">
                 <div class="deco__big deco_grey"></div>
                 <div class="deco__small deco_light"></div>
@@ -358,6 +374,5 @@
             </div>
         </div>
     </footer>
-    <script src="./js/main.js"></script>
 </body>
 </html>

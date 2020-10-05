@@ -1,0 +1,280 @@
+@media screen and ( max-width: 1500px )
+    .header
+        &__intel
+            // position: relative
+            transform: none
+    
+    .logo
+        margin-left: 115px
+    
+    .nav
+        margin-left: 50px
+
+@media screen and ( max-width: 1400px )
+    .banner
+        .deco
+            display: none
+
+    .about
+        .deco
+            display: none
+
+@media screen and ( max-width: 1150px )
+    .tests
+        &__wrap
+            width: 100%
+            grid-template-columns: repeat(1, 1fr)
+            justify-items: center
+            grid-row-gap: 70px
+
+    .test
+        max-width: 700px
+        width: 100%
+        min-height: auto
+        &__list
+            padding-left: 20px
+            &-item
+                list-style-position: outside
+        &__img
+            max-height: 270px
+            img
+                position: relative
+                top: auto
+                transform: none
+                height: 100%
+                width: 100%
+                object-fit: contain
+        &__line
+            margin-top: 30px
+
+@media screen and ( max-width: 1100px )
+    .header
+        &__intel
+            img
+                max-width: 95px
+        &__wrap
+            .logo
+                padding-left: 15px
+                &__img
+                    max-width: 95px
+
+    .article
+        &__body
+            padding: 30px
+
+    .about
+        &__wrap
+            grid-column-gap: 40px
+            grid-row-gap: 40px
+        &__body
+            padding: 30px
+            .about__text
+                margin-top: 0
+        &__item
+            &:not(.about__item_nophoto)
+                .about
+                    &__title
+                        padding: 0px 30px
+            &_nophoto
+                padding: 30px 20px
+
+    .footer
+        padding: 40px 0px
+        .deco
+            height: 75px
+            width: 75px
+            &__small
+                height: 30px
+                width: 30px
+            &__big
+                height: 45px
+                width: 45px
+            &:nth-child(1)
+                left: 60px
+            &:nth-child(2)
+                right: 40px
+
+@media screen and ( max-width: 940px )
+    .header
+        position: fixed
+        top: 0
+        left: 0
+        width: 100%
+        &__wrap
+            padding: 5px 0px
+
+    .main
+        margin-top: 63px
+
+    .section
+        &__title
+            &, & *
+                font-size: 36px
+                line-height: 45px
+
+    .burger
+        display: inline-block
+
+    .three-col__container
+        grid-template-columns: repeat(2, 1fr)
+        grid-row-gap: 40px
+
+    .nav
+        margin-left: 0
+        &__list
+            align-items: flex-start
+
+    .small
+        &__bg
+            top: -170px
+
+    .banner
+        &__body
+            margin: 0 auto
+            padding: 30px 40px
+            &::after
+                display: none
+
+    .announce, .article
+        max-width: 450px
+        &__link
+            &::before, &::after
+                right: -15px
+        &__body
+            padding: 30px 20px
+
+    .product
+        padding: 30px 35px
+        &__body
+            margin-left: 25px
+
+@media screen and ( max-width: 870px )
+    .products
+        &__wrap
+            justify-items: center
+
+    .product
+        flex-direction: column
+        align-items: flex-start
+        &__body
+            margin-top: 20px
+            margin-left: 0
+
+@media screen and ( max-width: 740px )
+    .about
+        &__text
+            font-size: 16px
+        &__title
+            font-size: 32px
+        &__wrap
+            grid-template-columns: repeat(1, 1fr)
+            justify-items: center
+        &__item
+            max-width: 550px
+            width: 100%
+
+@media screen and ( max-width: 640px )
+    .section
+        &__title
+            &, & *
+                font-size: 26px
+                line-height: 35px
+
+    .horizons
+        padding: 85px 0px 135px
+        &__body
+            padding-left: 0
+        &__text
+            font-size: 16px
+            line-height: 24px
+            br
+                display: none
+
+    .banner
+        &__body
+            padding: 25px 20px
+        &__text
+            font-size: 16px
+            line-height: 26px
+            margin: 20px 0px 30px
+
+    .tests
+        &__title
+            svg
+                height: 16px
+
+    .small
+        padding: 40px 0px
+        &__link
+            svg
+                height: 16px
+        &__bg
+            top: -80px
+
+    .three-col__container
+        grid-template-columns: repeat(1, 1fr)
+        justify-items: center
+        grid-row-gap: 60px
+
+@media screen and ( max-width: 400px )
+    .button
+        &::before, &::after
+            right: 15px
+        &_light
+            padding: 5px 20px
+            display: block
+            width: 100%
+
+    .small
+        &__bg
+            top: -30px
+
+    .about
+        &__item
+            &:first-child
+                display: none
+        &__img
+            img
+                min-height: 200px
+
+    .header            
+        &__intel
+            img
+                max-width: 75px
+        &__wrap
+            .logo
+                margin-left: 95px
+                &__img
+                    max-width: 75px
+
+    .main
+        margin-top: 53px
+
+    .mobile
+        width: 70vw
+
+    .footer
+        .deco
+            &:nth-child(1)
+                display: none
+            &:nth-child(2)
+                right: 10px
+
+    .test
+        .button
+            display: block
+            width: 100%
+
+    .product
+        padding: 25px 20px
+        align-items: center
+        &__title
+            line-height: 31px
+        &__list
+            margin-top: 30px 
+            li
+                font-size: 16px
+        &__body
+            .button
+                margin: 40px auto 0px
+                display: block
