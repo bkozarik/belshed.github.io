@@ -4,9 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Процессоры Intel</title>
-    <link rel="stylesheet" href="./css/fonts.css">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/media.css">
     <link rel="stylesheet" href="./css/main.css">
     <script src="./js/main.js" defer></script>
 </head>
@@ -53,8 +50,8 @@
             <div class="container">
                 <div class="banner__body">
                     <h1 class="section__title text_white">Представляем новый уровень удобства работы на ноутбуке</h1>
-                    <p id="announces" class="banner__text">Платформа Intel® Evo™ обеспечивает высокую производительность и превосходную реалистичность графики для исключительных возможностей ноутбука в любых условиях.</p>
-                    <a href="#" class="button button_light" target="_blank">Читать анонс</a>
+                    <p class="banner__text">Платформа Intel® Evo™ обеспечивает высокую производительность и превосходную реалистичность графики для исключительных возможностей ноутбука в любых условиях.</p>
+                    <a id="announces"  href="#" class="button button_light" target="_blank">Читать анонс</a>
                 </div>
             </div>
         </section>
@@ -96,11 +93,11 @@
             </div>
         </section>
         <section id="tests" class="tests">
-            <div class="deco">
-                <div class="deco__big deco_light"></div>
-                <div class="deco__small deco_white"></div>
-            </div>
             <div class="container">
+                <div class="deco">
+                    <div class="deco__big deco_light"></div>
+                    <div class="deco__small deco_white"></div>
+                </div>
                 <div class="section__center">
                     <h2 class="section__title"><a href="#" class="tests__title ">Тестирование продукции Intel®
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 38" fill="none">
@@ -149,15 +146,15 @@
             </div>
         </section>
         <section class="horizons">
-            <div class="deco">
-                <div class="deco__big deco_grey"></div>
-                <div class="deco__small deco_light"></div>
-            </div>
             <picture class="horizons__bg">
                 <source srcset="./img/horizons_bg.webp" type="image/webp">
                 <img loading="lazy" src="./img/horizons_bg.jpg" alt="Фон">
             </picture>
             <div class="container">
+                <div class="deco">
+                    <div class="deco__big deco_grey"></div>
+                    <div class="deco__small deco_light"></div>
+                </div>
                 <div class="horizons__body">
                     <h2 class="section__title text_white">Откройте новые горизонты в играх</h2>
                     <p id="articles" class="horizons__text">Читайте актуальные новости и советы от игровых <br>профессионалов и экспертов Intel, чтобы повысить уровень своей игры.</p>
@@ -165,11 +162,11 @@
             </div>
         </section>
         <section class="articles">
-            <div class="deco">
-                <div class="deco__big deco_light"></div>
-                <div class="deco__small deco_white"></div>
-            </div>
             <div class="container">
+                <div class="deco">
+                    <div class="deco__big deco_light"></div>
+                    <div class="deco__small deco_white"></div>
+                </div>
                 <div class="three-col__container">
                     <a href="#" class="article" target="_blank">
                         <picture class="article__img">
@@ -188,7 +185,7 @@
                         </picture>
                         <div class="article__body">
                             <h3 class="article__title">Как выполнить оверклокинг оперативной памяти</h3>
-                            <p class="article__text">Оверклокинг оперативной памяти помогает увеличить частоту памяти и повысить производительность вашего ПК.</p>
+                            <p class="article__text">Оверклокинг оперативной памяти помогает увеличить частоту памяти и повысить производительность вашего&nbsp;ПК.</p>
                         </div>
                     </a>
                     <a href="#" class="article" target="_blank">
@@ -207,7 +204,7 @@
                 </div>
             </div>
         </section>
-        <section id="products" class="small">
+        <section class="small">
             <picture class="small__bg">
                 <source srcset="./img/small_1.webp" type="image/webp">
                 <img loading="lazy" src="./img/small_1.jpg" alt="Фон">
@@ -215,7 +212,7 @@
             <div class="container">
                 <div class="section__center">
                     <h2 class="section__title">
-                        <a href="#" class="small__link text_white" target="_blank">
+                        <a id="products" href="#" class="small__link text_white" target="_blank">
                             Все процессоры Intel® Core™
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 38" fill="none">
                                 <path d="M1.5 1.5L20 20C20 20 11 28 1.5 37" stroke-width="6"/>
@@ -226,11 +223,11 @@
             </div>
         </section>
         <section class="products">
-            <div class="deco">
-                <div class="deco__big deco_grey"></div>
-                <div class="deco__small deco_light"></div>
-            </div>
             <div class="container">
+                <div class="deco">
+                    <div class="deco__big deco_grey"></div>
+                    <div class="deco__small deco_light"></div>
+                </div>
                 <h5 class="section__hidden">Спрятанный заголовок</h5>
                 <div class="products__wrap">
                     <article class="product">
@@ -293,14 +290,14 @@
                 </div>
             </div>
         </section>
-        <section id="about" class="small">
+        <section class="small">
             <picture class="small__bg">
                 <source srcset="./img/small_2.webp" type="image/webp">
                 <img loading="lazy" src="./img/small_2.jpg" alt="Фон">
             </picture>
             <div class="container">
                 <div class="section__center">
-                    <h2 class="section__title text_white">Intel определяет будущее технологий</h2>
+                    <h2 id="about" class="section__title text_white">Intel определяет будущее технологий</h2>
                 </div>
             </div>
         </section>
@@ -362,15 +359,15 @@
         </section>
     </main>
     <footer class="footer">
-        <div class="deco">
-            <div class="deco__small deco_white"></div>
-            <div class="deco__big deco_light"></div>
-        </div>
-        <div class="deco">
-            <div class="deco__big deco_white"></div>
-            <div class="deco__small deco_light"></div>
-        </div>
         <div class="container">
+            <div class="deco">
+                <div class="deco__small deco_white"></div>
+                <div class="deco__big deco_light"></div>
+            </div>
+            <div class="deco">
+                <div class="deco__big deco_white"></div>
+                <div class="deco__small deco_light"></div>
+            </div>
             <div class="footer__wrap">
                 <img loading="lazy" class="footer__logo" src="./img/intel_dark.png" alt="Лого Intel">
                 <span class="footer__copyright">©Корпорация Intel  |  iXbt.com</span>

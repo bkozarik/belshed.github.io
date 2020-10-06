@@ -21,6 +21,7 @@ body, html
 body
     display: flex
     flex-direction: column
+    overflow: hidden
     min-height: 100vh
     position: relative
 
@@ -151,10 +152,13 @@ section
 .header
     flex-grow: 0
     background-color: #ffffff
-    position: relative
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
     z-index: 10
     &__intel
-        background-color: $text_blue
+        background-color: #0071c5
         padding: 10px
         display: flex
         justify-self: start
@@ -169,8 +173,14 @@ section
         align-items: center
         justify-content: space-between
         padding: 30px 0px
+        transition-duration: .2s
         .logo
             padding-left: 35px
+    &.scrolled
+        .header 
+            &__wrap
+                transition-duration: .3s
+                padding: 5px 0px
 
 .nav
     max-width: 745px
@@ -325,7 +335,7 @@ section
             height: 100%
             object-fit: cover
     &__body
-        padding: 30px 60px
+        padding: 33px 60px 40px
         flex-grow: 1
     &__link
         font-size: 21px
@@ -352,13 +362,14 @@ section
             transform: rotate(-45deg) translate(-35%, -50%)
 
 .tests
-    padding: 80px 0px 
+    padding: 85px 0px 80px
     background-image: url(../img/tests_bg.jpg)
+    background-size: 100% auto
     background-position: center top
     background-repeat: no-repeat
     .deco
-        top: 0
-        left: 1443px
+        top: -85px
+        right: -45px
         transform: translateY(-45px)
     &__title
         font-weight: 500
@@ -386,11 +397,11 @@ section
     flex-direction: column
     align-items: flex-start
     height: 100%
-    min-height: 860px
+    min-height: 850px
     width: 100%
     &__img
         width: 100%
-        max-height: 400px
+        max-height: 385px
         height: 100%
         position: relative
         img
@@ -404,9 +415,9 @@ section
         line-height: 31px
         
     &__list
-        margin-top: 30px
+        margin-top: 25px
         &-item, &-item a
-            color: $text_blue
+            color: #3a66b1
             font-size: 18px
             line-height: 33px
             list-style-position: inside
@@ -423,10 +434,10 @@ section
         margin-top: 40px
 
 .horizons
-    padding: 115px 0px 175px
+    padding: 110px 0px 175px
     .deco
-        top: 0
-        right: 1540px
+        top: -110px
+        left: -150px
         transform: translateY(-45px)
     &__bg
         position: absolute
@@ -453,12 +464,12 @@ section
 .articles
     padding-bottom: 90px
     .deco
-        bottom: -105px
-        left: 1383px
-    .three-col__container
-        margin-bottom: 15px
+        bottom: -195px
+        right: 15px
     .button
         padding: 5px 65px 5px 45px
+    .three-col__container
+        margin-bottom: 2px
 
 .article
     display: flex
@@ -475,7 +486,7 @@ section
             height: 100%
             object-fit: cover
     &__body
-        padding: 37px 60px
+        padding: 35px 59px 52px
         flex-grow: 1
     &__title
         font-weight: 500
@@ -487,14 +498,14 @@ section
         font-weight: 400
         font-size: 18px
         line-height: 30px
-        color: $text_blue
+        color: #131212
     &:hover
         .article
             &__title, &__text
                 color: $hover_red
         
 .small
-    padding: 62px 0px
+    padding: 63px 0px
     overflow: hidden
     .section__title
         &, & *
@@ -528,17 +539,21 @@ section
     background-color: #fff
     padding-bottom: 90px
     .deco
-        bottom: -105px
-        right: 1525px
+        bottom: -195px
+        left: -135px
     &__wrap
         display: grid
         grid-template-columns: 1fr
         grid-row-gap: 60px
         padding: 60px 0px
+    .button
+        &_light
+            letter-spacing: 0.8px
+            padding: 5px 60px 5px 40px
 
 .product
     background-color: #f0f0f0
-    padding: 60px
+    padding: 57px 60px
     display: flex
     align-items: flex-start
     &__body
@@ -548,7 +563,7 @@ section
         font-weight: 500
         color: $text_blue
     &__list
-        margin-top: 20px
+        margin-top: 25px
         li
             padding-left: 2px
             font-size: 18px
@@ -582,7 +597,7 @@ section
             .about
                 &__title
                     padding: 0px 60px
-                    margin-bottom: 20px
+                    margin-bottom: 25px
         &:nth-child(1)
             .deco
                 left: 0
@@ -634,13 +649,14 @@ section
         .about__text
             margin-top: 10px
     &__body
-        padding: 30px 60px 40px
+        padding: 20px 60px 50px
         height: 100%
     span.about__text
         display: inline-block
 
 .main
     flex-grow: 1
+    margin-top: 124px
 
 .footer
     flex-grow: 0
@@ -649,11 +665,11 @@ section
     position: relative
     .deco
         &:nth-child(1)
-            bottom: 0px
-            left: 220px
+            bottom: -60px
+            left: -90px
         &:nth-child(2)
-            top: 0px
-            right: 220px
+            top: -70px
+            right: -90px
     &__wrap
         display: flex
         width: 100%

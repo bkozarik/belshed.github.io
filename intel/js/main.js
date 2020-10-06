@@ -46,10 +46,17 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    const scrollHandler = () => {
+        window.pageYOffset > 100 ? document.querySelector('.header').classList.add('scrolled') : document.querySelector('.header').classList.remove('scrolled');
+    }
+
     scrollLinks.forEach(link => link.addEventListener('click', scrollLinkClick));
 
     menuTriggers.forEach(trgger => trgger.addEventListener('click', toggleMenu));
 
     window.addEventListener('resize', resizeHandler);
+
+    window.addEventListener('scroll', scrollHandler);
+
     resizeHandler();
 });
