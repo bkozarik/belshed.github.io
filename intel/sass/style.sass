@@ -293,12 +293,15 @@ section
         margin: 30px 0px 40px
         font-size: 18px
         line-height: 30px
-        
         color: $text_light
+    .button
+        padding: 5px 48px 5px 28px
 
 .announces
     background-color: #fff
-    padding-bottom: 80px        
+    padding-bottom: 80px
+    .button
+        padding: 5px 60px 5px 40px     
 
 .announce
     display: flex
@@ -343,11 +346,11 @@ section
 .tests
     padding: 80px 0px 
     background-image: url(../img/tests_bg.jpg)
-    background-size: cover
-    background-position: center
+    background-position: center top
+    background-repeat: no-repeat
     .deco
         top: 0
-        left: 1500px
+        left: 1435px
         transform: translateY(-45px)
     &__title
         font-weight: 500
@@ -408,13 +411,14 @@ section
         background-color: #d7d7d7
         margin-top: auto
     .button
+        padding: 5px 52px 5px 35px
         margin-top: 40px
 
 .horizons
     padding: 115px 0px 175px
     .deco
         top: 0
-        right: 1600px
+        right: 1540px
         transform: translateY(-45px)
     &__bg
         position: absolute
@@ -442,9 +446,11 @@ section
     padding-bottom: 90px
     .deco
         bottom: -105px
-        left: 1400px
+        left: 1375px
     .three-col__container
         margin-bottom: 15px
+    .button
+        padding: 5px 65px 5px 45px
 
 .article
     display: flex
@@ -514,7 +520,7 @@ section
     padding-bottom: 90px
     .deco
         bottom: -105px
-        right: 1550px
+        right: 1525px
     &__wrap
         display: grid
         grid-template-columns: 1fr
@@ -535,39 +541,32 @@ section
     &__list
         margin-top: 20px
         li
+            padding-left: 2px
             font-size: 18px
             font-weight: 400
             line-height: 30px
             list-style-position: inside
+        span
+            margin-left: 5px            
     .button
         margin-top: 30px
 
 .about
     padding: 60px 0px
     background-color: #fff
-    .deco
-        &:nth-child(1)
-            top: 610px
-            left: 183px
-        &:nth-child(2)
-            top: 778px
-            right: 183px
-        &:nth-child(3)
-            bottom: 0
-            left: 183px
     &_grey
         background-color: #f0f0f0
     &__wrap
         display: grid
         grid-template-columns: repeat(2, 1fr)
         grid-column-gap: 120px
-        grid-row-gap: 60px
+        grid-row-gap: 70px
         position: relative
         z-index: 3
     &__item
-        overflow: hidden
         display: flex
         flex-direction: column
+        position: relative
         &_nophoto
             padding: 30px 60px
         &:not(.about__item_nophoto)
@@ -575,13 +574,33 @@ section
                 &__title
                     padding: 0px 60px
                     margin-bottom: 20px
+        &:nth-child(1)
+            .deco
+                left: 0
+                bottom: 0
+                transform: translate(-100%, 60px)
+        &:nth-child(2)
+            .deco
+                display: none
+        &:nth-child(3)
+            .deco
+                left: 0
+                bottom: 0
+                transform: translate(-100%, 60px)
+        &:nth-child(4)
+            .deco
+                right: 0
+                top: 0
+                transform: translate(100%, 15px)
     &__big-img
         height: 100%
         width: 100%
+        position: relative
         img
             width: 100%
             height: 100%
             object-fit: cover
+            position: absolute
     &__img
         width: 100%
         flex-grow: 1

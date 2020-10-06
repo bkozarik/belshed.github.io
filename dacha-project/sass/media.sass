@@ -110,6 +110,10 @@
                 right: -100px
                 max-width: 230px
 
+    .notype
+        &__bg
+            width: 115%
+
     .error
         &__bg
             &-m
@@ -196,20 +200,21 @@
             &_2
                 display: block
 
-@media screen and ( max-width: 1160px )
     .notype
         &__bg
             width: 120%
+
+@media screen and ( max-width: 1160px )
+    .notype
+        &__bg
+            width: 125% 
+            bottom: 70px
         &__body
             margin: 0 auto
         .button_notype
             margin: 0 auto
             display: block
     
-    .error
-        &__oleg
-            display: none
-
     .house
         &__card.ml
             padding: 20px 40px
@@ -272,6 +277,8 @@
                 left: 0
 
     .error
+        &__oleg
+            max-width: 500px
         .swiper-wrapper
             .error
                 &__item
@@ -330,6 +337,10 @@
     .questions
         &__oleg
             max-width: 430px
+
+    .error
+        &__oleg
+            display: none
 
     .reports
         .section__title
@@ -968,6 +979,9 @@
 
     .notype
         padding: 60px 0px 80px
+        &__oleg
+            max-height: 400px
+            width: auto
         .section__title 
             text-align: left
 
