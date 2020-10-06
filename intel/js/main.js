@@ -59,4 +59,5 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', scrollHandler);
 
     resizeHandler();
+    scrollHandler();
 });
