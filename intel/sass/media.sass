@@ -64,7 +64,7 @@
             img
                 position: relative
                 top: auto
-                transform: none
+                transform: none !important
                 height: 100%
                 width: 100%
                 object-fit: contain
@@ -78,9 +78,11 @@
                 max-width: 95px
         &__wrap
             .logo
-                padding-left: 15px
                 &__img
                     max-width: 95px
+
+    .main
+        margin-top: 113px
 
     .article
         &__body
@@ -118,12 +120,15 @@
 
 @media screen and ( max-width: 940px )
     .header
-        position: fixed
-        top: 0
-        left: 0
-        width: 100%
-        &__wrap
-            padding: 5px 0px
+        &, &.scrolled
+            .header
+                &__wrap
+                    padding: 17px 0px
+                &__intel
+                    padding: 20px 20px 20px 25px
+
+    .logo
+        margin-left: 120px
 
     .main
         margin-top: 63px
@@ -264,15 +269,20 @@
             img
                 min-height: 200px
 
-    .header            
-        &__intel
-            img
-                max-width: 75px
-        &__wrap
-            .logo
-                margin-left: 95px
-                &__img
-                    max-width: 75px
+    .header
+        &, &.scrolled
+            .header
+                &__intel
+                    padding: 20px 13px 22px 19px
+                    img
+                        max-width: 75px
+                &__wrap
+                    padding: 11px 0px 11px 0px
+                    .logo
+                        margin-left: 107px
+                        padding-left: 15px
+                        &__img
+                            max-width: 75px
 
     .main
         margin-top: 53px
