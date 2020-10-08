@@ -1,0 +1,1 @@
+selection.json этот файл загрузить на эту страницу ==> https://icomoon.io/app/#/projects 
