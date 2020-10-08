@@ -410,9 +410,7 @@ section
         height: 100%
         position: relative
         img
-            position: absolute
             width: auto
-            top: 50%
     &__title
         font-weight: 500
         font-size: 21px
@@ -436,13 +434,13 @@ section
     &:nth-child(1)
         .test
             &__img img
-                transform: translate(-22px, -49.5%)
-                max-width: 600px
+                max-width: 603px
     &:nth-child(2)
         .test
             &__img img
-                transform: translate(7px, -47.4%)
                 max-width: 550px
+                position: absolute
+                bottom: 35px
     .button
         padding: 5px 52px 5px 35px
         margin-top: 40px
