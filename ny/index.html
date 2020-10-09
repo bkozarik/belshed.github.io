@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ru-Ru" class="html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сеть ресторанов Нью-Йорк</title>
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="./js/swiper-bundle.min.js" defer></script>
+    <script src="./js/main.js" defer></script>
+</head>
+<body class="body">
+    <header class="header">
+        <div class="container">
+            <div class="header__wrap">
+                <div class="header__side">
+                    <img loading="lazy" src="./img/logo.png" alt="Логотип" class="header__logo">
+                    <div class="header__address">
+                        <span class="header__address-text text_light">м. Преображенская пл., ул. Суворовская 12</span>
+                        <span class="header__address-text text_light">м. Курская, Серебряническая наб. 29 </span>
+                    </div>
+                </div>
+                <div class="header__side">
+                    <div class="header__contacts">
+                        <a href="tel:+74956490127" class="header__tel">+7 (495) 649 01 27</a>
+                        <button class="header__recall text_light js-recall">заказать звонок</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <div class="main__pagination">
+            <div class="swiper-pagination"></div>
+        </div>
+        <div class="swiper-wrapper">
+            <section class="hero swiper-slide">
+                <picture class="section__bg">
+                    <source srcset="./img/hero_bg.webp" type="image/webp">
+                    <img loading="lazy" src="./img/hero_bg.png" alt="Фоновая картинка">
+                </picture>
+                <div class="container">
+                    <div class="hero__content">
+                        <span class="text_light">Два уютных ресторана: один в центре Москвы, второй в р-не Преображеское</span>
+                        <h1 class="section__title">Новогодний корпоратив в сети ресторанов “Нью-Йорк”<br>Меню от 2 900 рублей на человека</h1>
+                        <div class="buttons-row">
+                            <button class="text_light button button_white js-order">Заказать банкет</button>
+                            <button class="text_light button button_transparent js-degustation">Бесплатная дегустация</button>
+                        </div>
+                    </div>
+                    <ul class="hero__list">
+                        <li class="hero__item"><span class="text_light">Уютные залы вместимостью до 120 человек</span></li>
+                        <li class="hero__item"><span class="text_light">Пожалуй, идеальное соотошение цена/качество</span></li>
+                        <li class="hero__item"><span class="text_light">Готовим на гриле под надзором педантичного Бренд Шефа</span></li>
+                    </ul>
+                </div>
+            </section>
+            <section class="degustation text-page swiper-slide">
+                <picture class="section__bg">
+                    <source srcset="./img/degustation_bg.webp" type="image/webp">
+                    <img loading="lazy" src="./img/degustation_bg.png" alt="Фоновая картинка">
+                </picture>
+                <div class="container">
+                    <div class="text-page__content">
+                        <h2 class="section__title">Запишитесь на бесплатную дегустацию меню</h2>
+                        <p class="text_light">Мы уверены в качестве блюд, которые мы предлагаем, поэтому бесплатная дегустация – это отличная возможность для тех, кто планирует провести новогодний корпоратив на самом высоком уровне и по выгодной цене!</p>
+                        <p class="text_light">У Вас есть возможность оценить вкусовые качества, подачу блюд, уровень обслуживания и познакомиться с личным менеджером, который будет курировать Ваше мероприятие с момента бронирования и до конца банкета.</p>
+                        <p class="text_light">Дегустация бесплатна, она ни к чему не обязывает, но поможет сформировать объективное мнение о ресторане.</p>
+                        <div class="buttons-row">
+                            <button class="text_light button button_white js-degustation">Записаться на дегустацию</button>
+                            <button class="text_light button button_transparent js-download">Скачать меню в PDF</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="quiz swiper-slide">
+                <picture class="section__bg">
+                    <source srcset="./img/quiz_bg.webp" type="image/webp">
+                    <img loading="lazy" src="./img/quiz_bg.png" alt="Фоновая картинка">
+                </picture>
+                <div class="container">
+                    <div class="quiz__container">
+                        <h2 class="section__title">Расчет стоимости онлайн</h2>
+                        <span class="text_light quiz__subtitle">Рассчитайте стоимость банкета за 3 минуты, не уходя с сайта</span>
+                        <br>
+                        <span class="quiz__line"></span>
+                        <form class="quiz__body">
+                            <div class="quiz__page js-page" data-page="0">
+                                <h3 class="quiz__title">ВОПРОС 1 ИЗ 3. Выберите средний чек на гостя</h3>
+                                <label class="quiz__option">
+                                    <input class="js-required-input" type="radio" name="budget" value="2900 на человека">
+                                    <span class="quiz__checkbox"></span>
+                                    <span class="quiz__text">2900 рублей на человека</span>
+                                </label>
+                                <label class="quiz__option">
+                                    <input class="js-required-input" type="radio" name="budget" value="3500 на человека">
+                                    <span class="quiz__checkbox"></span>
+                                    <span class="quiz__text">3500 рублей на человека</span>
+                                </label>
+                                <label class="quiz__option">
+                                    <input class="js-required-input" type="radio" name="budget" value="4500 на человека">
+                                    <span class="quiz__checkbox"></span>
+                                    <span class="quiz__text">4500 рублей на человека</span>
+                                </label>
+                                <div class="quiz__buttons">
+                                    <button type="button" class="text_light button button_white js-quiz-next-page">Следующий вопрос</button>
+                                </div>
+                            </div>
+                            <div class="quiz__page js-page" data-page="1">
+                                <h3 class="quiz__title">ВОПРОС 2 ИЗ 3. Какое количество гостей планируется?</h3>
+                                <input class="quiz__text-input js-required-input" type="tel" name="guest_count" placeholder="Введите количество гостей, например 80">
+                                <div class="quiz__buttons">
+                                    <button type="button" class="text_light button button_transparent js-quiz-prev-page">Назад</button>
+                                    <button type="button" class="text_light button button_white js-quiz-next-page">Следующий вопрос</button>
+                                </div>
+                            </div>
+                            <div class="quiz__page js-page" data-page="2">
+                                <h3 class="quiz__title">ВОПРОС 3 ИЗ 3. Планируемая дата посещения</h3>
+                                <input class="quiz__text-input js-required-input" type="text" name="date" placeholder="Введите желаемую дату, например 27 декабря 2020 года">
+                                <div class="quiz__buttons">
+                                    <button type="button" class="text_light button button_transparent js-quiz-prev-page">Назад</button>
+                                    <button type="button" class="text_light button button_white js-quiz-next-page">Следующий вопрос</button>
+                                </div>
+                            </div>
+                            <div class="quiz__page js-page" data-page="3">
+                                <h3 class="quiz__title">Отлично! Последний шаг. Введите контактные данные, мы отправим Вам полный расчет</h3>
+                                <div class="quiz__inputs">
+                                    <input class="quiz__text-input" type="text" name="user_name" placeholder="Ваше имя">
+                                    <input class="quiz__text-input js-mask js-required-input" type="text" name="user_tel" placeholder="Ваш номер телефона" required>
+                                </div>
+                                <div class="quiz__buttons">
+                                    <button type="button" class="text_light button button_transparent js-quiz-prev-page">Назад</button>
+                                    <button type="submit" class="text_light button button_white js-quiz-next-page">Получить расчет</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+            <section class="menu text-page swiper-slide">
+                <picture class="section__bg">
+                    <source srcset="./img/menu_bg.webp" type="image/webp">
+                    <img loading="lazy" src="./img/menu_bg.png" alt="Фоновая картинка">
+                </picture>
+                <div class="container">
+                    <div class="text-page__content">
+                        <h2 class="section__title">Меню</h2>
+                        <p class="text_light">Мы – не привычный ресторан у дома, но и не дорогой стейк-хаус. Нью-Йорк – доступный, современный ресторан, в котором сочетаются вкус, качество и уютная атмосфера, и это не мешает нам оставаться демократичными. Мы объеденили команду людей, влюблённых в свою работу, которые любят своих гостей и рады предложить Вам лучшее.</p>
+                        <p class="text_light">Меню включает в себя премиальные и альтернативные стейки, мясные и рыбные блюда из хоспера, салаты и закуски по фирменным рецептам Бренд Шефа,  пиццу на фирменном тесте и бургеры из мраморной говядины.</p>
+                        <p class="text_light">На банкетные мероприятия мы подаем щедрые порции, после каждого мероприятия мы получаем хвалебные отзывы и слова благодарности. </p>
+                        <div class="buttons-row">
+                            <button class="text_light button button_white js-degustation">Записаться на дегустацию</button>
+                            <button class="text_light button button_transparent js-download">Скачать меню в PDF</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="contacts swiper-slide">
+                <picture class="section__bg">
+                    <source srcset="./img/contacts_bg.webp" type="image/webp">
+                    <img loading="lazy" src="./img/contacts_bg.png" alt="Фоновая картинка">
+                </picture>
+                <div class="container">
+                    <div class="contacts__wrap">
+                        <div class="contacts__col">
+                            <h2 class="section__title">Контакты</h2>
+                            <div class="contacts__items">
+                                <div class="contacts__item">
+                                    <p class="text_light">Ресторан на Серебрянической <br>м. Курская <br>ул. Серебряническая наберажная д.29 БЦ Silver City <br><a href="tel:+74956490127">+7 (495) 649 01 27</a> <br><a href="mailto:suvor@ny-pizzagrill.ru">suvor@ny-pizzagrill.ru</a></p>
+                                </div>
+                                <div class="contacts__item">
+                                    <p class="text_light">Ресторан на Суворовской <br>м. Преображенская площадь <br>ул. Суворовская д.12 <br><a href="tel:+74956490127">+7 (495) 649 01 27</a> <br><a href="mailto:suvor@ny-pizzagrill.ru">suvor@ny-pizzagrill.ru</a></p>
+                                </div>
+                            </div>
+                            <button class="text_light button button_transparent js-recall">Задать свой вопрос</button>
+                        </div>
+                        <div class="contacts__map">
+                            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A29cdc555604bda8f30af043534ae31d46619f9e1f1b3944212722290852e843c&amp;source=constructor" width="100%" height="610" frameborder="0"></iframe>
+                        </div>
+                    </div>
+                    <div class="contacts__footer">
+                        <span class="text_light">ООО “НЬЮ-ЙОРК ФУД”. Все права защищены</span>
+                        <a href="#" class="text_light js-policy">политика конфиденциальности</a>
+                        <span class="text_light text_white">Разработка сайта DigitalSolutions</span>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <div class="popup js-popup-recall">
+        <div class="popup__body">
+            <h2 class="section__title text_black">Заказать обратный звонок</h2>
+            <span class="text_light">Пожалуйста, заполните форму ниже, мы перезвоним Вам в течение 15 минут</span>
+            <form class="form">
+                <div class="form__row">
+                    <input class="form__input" name="user_name" type="text" placeholder="Ваше имя">
+                </div>
+                <div class="form__row">
+                    <input class="form__input js-mask" name="user_tel" type="tel" placeholder="Ваш номер телефона" required>
+                </div>
+                <div class="form__row">
+                    <button class="button button_black js-submit">Заказать звонок</button>
+                    <span class="text_light form__agreement">Нажимая на кнопку, вы даете согласие на обработку персональных данных</span>
+                </div>
+            </form>
+            <div class="popup__img">
+                <img src="./img/logo-b.png" alt="Логотип">
+            </div>
+        </div>
+    </div>
+
+    <div class="popup js-popup-order">
+        <div class="popup__body popup__body_big">
+            <h2 class="section__title text_black">Заказать банкет</h2>
+            <span class="text_light">Пожалуйста, заполните форму ниже, мы перезвоним Вам с подтверждением заказа в течение 15 минут</span>
+            <form class="form">
+                <div class="form__wrap">
+                    <div class="form__col">
+                        <div class="form__row form__row_select">
+                            <select class="form__input" name="restaurant">
+                                <option value="none" hidden>Выберите ресторан</option>
+                                <option value="Ресторан на Серебрянической">Ресторан на Серебрянической</option>
+                                <option value="Ресторан на Суворовской">Ресторан на Суворовской</option>
+                            </select>
+                        </div>
+                        <div class="form__row">
+                            <input class="form__input" name="guest_count" type="tel" placeholder="Количество гостей">
+                        </div>
+                        <div class="form__row">
+                            <input class="form__input" name="date" type="tel" placeholder="Дата мероприятия">
+                        </div>
+                        <div class="form__row">
+                            <input class="form__input" name="wish" type="text" placeholder="Особые пожелания">
+                        </div>
+                    </div>
+                    <div class="form__col">
+                        <div class="form__row">
+                            <input class="form__input" name="user_name" type="text" placeholder="Ваше имя" required>
+                        </div>
+                        <div class="form__row">
+                            <input class="form__input" name="company_name" type="text" placeholder="Название компании">
+                        </div>
+                        <div class="form__row">
+                            <input class="form__input js-mask" name="user_tel" type="tel" placeholder="Ваш номер телефона" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="form__row">
+                    <button class="button button_black js-submit">Заказать звонок</button>
+                    <span class="text_light form__agreement">Нажимая на кнопку, вы даете согласие на обработку персональных данных</span>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="popup js-popup-degustation">
+        <div class="popup__body">
+            <h2 class="section__title text_black">Записаться на бесплатную дегустацию меню</h2>
+            <span class="text_light">Пожалуйста, заполните форму ниже, мы перезвоним Вам в течение 15 минут</span>
+            <form class="form">
+                <div class="form__row">
+                    <input class="form__input" name="user_name" type="text" placeholder="Ваше имя">
+                </div>
+                <div class="form__row">
+                    <input class="form__input js-mask" name="user_tel" type="tel" placeholder="Ваш номер телефона" required>
+                </div>
+                <div class="form__row">
+                    <button class="button button_black js-submit">Записаться на дегустацию</button>
+                    <span class="text_light form__agreement">Нажимая на кнопку, вы даете согласие на обработку персональных данных</span>
+                </div>
+            </form>
+            <div class="popup__img">
+                <img src="./img/logo-b.png" alt="Логотип">
+            </div>
+        </div>
+    </div>
+
+    <div class="popup js-popup-download">
+        <div class="popup__body">
+            <h2 class="section__title text_black">Скачать меню в PDF</h2>
+            <span class="text_light">Пожалуйста, заполните форму ниже, мы отправим меню в PDF вам на почту</span>
+            <form class="form">
+                <div class="form__row">
+                    <input class="form__input" name="user_email" type="email" placeholder="Ваше e-mail">
+                </div>
+                <div class="form__row">
+                    <input class="form__input js-mask" name="user_tel" type="tel" placeholder="Ваш номер телефона" required>
+                    <input name="isAttached" type="hidden" value="true">
+                </div>
+                <div class="form__row">
+                    <button class="button button_black js-submit">Скачать меню</button>
+                    <span class="text_light form__agreement">Нажимая на кнопку, вы даете согласие на обработку персональных данных</span>
+                </div>
+            </form>
+            <div class="popup__img">
+                <img src="./img/logo-b.png" alt="Логотип">
+            </div>
+        </div>
+    </div>
+
+    <div class="popup js-popup-thx">
+        <div class="popup__body">
+            <h2 class="section__title text_black text_tac text_large">Благодарим за доверие!</h2>
+            <span class="text_light text_tac">До встречи в ресторанах Нью-Йорк Пицца и Гриль</span>
+            <button class="header__recall popup__close-btn text_light js-popup-close">вернуться на сайт</button>
+            <div class="popup__img">
+                <img src="./img/logo-b.png" alt="Логотип">
+            </div>
+        </div>
+    </div>
+
+    <div class="popup js-popup-error">
+        <div class="popup__body">
+            <h2 class="section__title text_black text_tac text_large">У нас произошла ошибка!</h2>
+            <span class="text_light text_tac">Попробуйте отправить данные еще раз.</span>
+            <button class="header__recall popup__close-btn text_light js-popup-close">вернуться на сайт</button>
+            <div class="popup__img">
+                <img src="./img/logo-b.png" alt="Логотип">
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
