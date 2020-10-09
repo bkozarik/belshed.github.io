@@ -164,21 +164,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    const mainSwiper = new Swiper('.main', {
-        slidesPerView: 1,
-        spaceBetween: 30,
-        loop: true,
-        updateOnWindowResize: true,
-        mousewheel: true,
-        direction: 'vertical',
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-    });
-
-    const mainSwiperNode = document.querySelector('.main').swiper;
-
     recallTriggers.forEach(trigger => trigger.addEventListener('click', openPopup('.js-popup-recall')));
 
     orderTriggers.forEach(trigger => trigger.addEventListener('click', openPopup('.js-popup-order')));
@@ -202,6 +187,32 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('resize', resizeHandler);
 
     telInputs.forEach(input => formValidate(input));
+
+    const mainSwiper = new Swiper('.main', {
+        updateOnWindowResize: true,
+        mousewheel: true,
+        direction: 'vertical',
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        breakpoints: {
+            730: {
+                spaceBetween: 30,
+                loop: true,
+                freeMode: false,
+                slidesPerView: 1,
+            },
+            300: {
+                spaceBetween: 0,
+                loop: false,
+                freeMode: true,
+                slidesPerView: 'auto',
+            }
+        }
+    });
+
+    const mainSwiperNode = document.querySelector('.main').swiper;
 
     resizeHandler();
     quizShowPage();
