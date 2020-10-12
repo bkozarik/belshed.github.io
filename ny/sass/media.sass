@@ -7,6 +7,12 @@
     .hero
         &__list
             margin-top: 70px
+    
+    .popup
+        &__body
+            margin-top: 60px
+        &__close
+            transform: translate(0%, -100%)
 
     .contacts
         &__wrap
@@ -25,6 +31,7 @@
             max-width: none
 
 @media screen and ( max-width: 1100px )
+
     .text-page
         &__content
             margin-top: 190px
@@ -48,9 +55,14 @@
         &__address
             margin-left: 30px
 
-    .popup
+    .quiz
+        &__text
+            &-input
+                padding: 20px 40px
+
+    .popup  
         &__body
-            margin-top: 20px
+            margin-top: 40px
     .form
         &__agreement
             margin-left: 20px
@@ -75,6 +87,14 @@
                 font-size: 18px
 
 @media screen and ( max-width: 730px )
+    section
+        padding-bottom: 40px
+
+    .text
+        &_large
+            line-height: 44px !important
+            font-size: 42px !important
+
     .section
         &__title
             font-size: 32px
@@ -86,14 +106,32 @@
         .swiper-wrapper
             flex-direction: column
 
+    .hero
+        &__content
+            margin-top: 150px
+
+    .text-page
+        &__content
+            margin-top: 70px
+
     .quiz
+        &__container
+            margin-top: 70px
         &__checkbox
             height: 30px
             width: 30px
         &__text
             margin-left: 20px
+            &-input
+                margin-bottom: 50px
 
     .popup
+        p.text_light
+            line-height: 26px
+            margin-top: 15px
+        &__close
+            &-btn
+                margin-top: 70px
         &__body
             &_big
                 .form
@@ -109,6 +147,20 @@
             flex-direction: column
 
     .contacts
+        &__footer
+            bottom: 0
+            position: relative
+            flex-direction: column
+            align-items: center
+            & > *
+                margin-top: 20px
+            &  *
+                text-align: center
+        &__map
+            iframe
+                height: 400px
+        &__wrap
+            margin-top: 70px
         &__items
             flex-direction: column
         &__item + &__item
@@ -153,8 +205,6 @@
                 margin-bottom: 0
 
     .contacts
-        &__wrap
-            margin-top: 140px
         .button
             max-width: none
 

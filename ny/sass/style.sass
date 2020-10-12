@@ -407,7 +407,40 @@ p.text_light
     pointer-events: none
     overflow-y: auto
     padding: 15px 0px
+    &__close
+        position: absolute
+        display: inline-block
+        width: 50px
+        height: 50px
+        background-color: transparent
+        cursor: pointer
+        top: 0
+        right: 0
+        transform: translate(100%, -100%)
+        &::after, &::before
+            display: inline-block
+            position: absolute
+            top: 50%
+            left: 50%
+            width: 30px
+            height: 1px
+            background-color: #000
+            content: ''
+        &::before
+            transform: translate(-50%, 0px) rotate(-45deg)
+        &::after
+            transform: translate(-50%, 0px) rotate(45deg)
+        &:hover
+            &::after, &::before
+                width: 35px
+            &::before 
+                transform: translate(calc( -50% - 1px ), 0px) rotate(-45deg)
+            &::after
+                transform: translate(calc( -50% - 1px ), 0px) rotate(45deg)
+        &:focus
+            outline: none
     &__body
+        position: relative
         max-width: 985px
         width: 100%
         margin: 150px auto 0
@@ -443,6 +476,7 @@ p.text_light
         margin-bottom: 70px
     &__col
         flex-basis: 44%
+        flex-shrink: 1
         & + &
             margin-left: 115px
     &__row
