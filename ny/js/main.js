@@ -223,6 +223,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
     resizeHandler();
     quizShowPage();
-
-    openPopup('.js-popup-thx', true);
 });
