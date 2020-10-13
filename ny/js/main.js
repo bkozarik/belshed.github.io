@@ -24,16 +24,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     const openPopup = (selector, state=null) => {
+        event.preventDefault();
+
+        closePopup();
+
+        let itemClasslist = document.querySelector(selector).classList;
 
         if(state == true){
-            document.querySelector(selector).classList.add('active');
+            itemClasslist.add('active');
         }
         else if(state == false){
-            document.querySelector(selector).classList.remove('active');
+            itemClasslist.remove('active');
         }
         else {
             return () => {
-                document.querySelector(selector).classList.toggle('active');
+                itemClasslist.toggle('active');
             }
         }
     }
@@ -180,6 +185,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const mainSwiperInit = () => {
         mainSwiper = new Swiper('.main', {
+            roundLengths: true,
             slidesPerView: 1,
             spaceBetween: 30,
             loop: true,
@@ -209,11 +215,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     closeTriggers.forEach(trigger => trigger.addEventListener('click', closePopup));
 
+
+
     quizNextStepBtns.forEach(btn => btn.addEventListener('click', quizShowNextPage));
 
     quizPrevStepBtns.forEach(btn => btn.addEventListener('click', quizShowPrevPage));
 
     quizRequiredInputs.forEach(input => input.addEventListener('input', () => toggleNextBtn(true)));
+
+
 
     forms.forEach(form => form.addEventListener('submit', formSubmitHandler));
     
