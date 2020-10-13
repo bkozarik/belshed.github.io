@@ -9,6 +9,10 @@
             width: 98%
 
 @media screen and ( max-height: 1000px )
+    .header
+        &__address
+            margin-left: 60px
+
     .hero
         &__content
             margin-top: 250px
@@ -16,6 +20,12 @@
             margin-top: 130px
 
     .quiz
+        &__checkbox
+            height: 35px
+            width: 35px
+        &__text
+            font-size: 24px
+            margin-left: 30px
         &__container
             margin-top: 170px
         &__body
@@ -27,15 +37,25 @@
         &__buttons
             margin-top: 40px
 
-    .text-page
-        &__content
-            margin-top: 190px
-            p.text_light:first-of-type
-                margin-top: 30px
-            p.text_light + p.text_light
-                margin-top: 25px
-        .buttons-row
-            margin-top: 40px
+    .section
+        &__title
+            font-size: 30px
+
+    .text
+        &_light
+            &, & *
+                font-size: 16px
+        &-page
+            &__content
+                margin-top: 190px
+                p.text_light
+                    font-size: 19px
+                p.text_light:first-of-type
+                    margin-top: 30px
+                p.text_light + p.text_light
+                    margin-top: 25px
+            .buttons-row
+                margin-top: 40px
 
     .contacts
         &__wrap
@@ -54,7 +74,7 @@
             margin-top: 80px
     .contacts
         &__wrap
-            margin-top: 215px
+            margin-top: 185px
             .button
                 margin-top: 20px
         &__map

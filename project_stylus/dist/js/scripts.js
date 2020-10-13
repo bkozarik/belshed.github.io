@@ -267,19 +267,19 @@ $(document).ready(function(){
 		functionBefore: function(instance, helper) {
 					
 			let floor = Number($(helper.origin).find('.floor-help span').text());
-			getFloorData(floor).then(data => console.log(data));
-			
-			// instance.content(`
-			// <div class="floor-tooltip-box">
-			// 	<div class="floor-info">Свободно 4 из ${info.totalAp} квартир</div>
-			// 	<ul class="list-floor-info">
-			// 		<li>1 к. - <span>2</span></li>
-			// 		<li>1 к. - <span>1</span></li>
-			// 		<li>1 к. - <span>1</span></li>
-			// 	</ul>
-			// 	<a href="#" class="more"><i class="icon-arrow"></i></a>
-			// </div>`
-			// );
+			getFloorData(floor).then(info => {
+				instance.content(`
+					<div class="floor-tooltip-box">
+						<div class="floor-info">Свободно ${info.freeAp} из ${info.totalAp} квартир</div>
+						<ul class="list-floor-info">
+							<li>1 к. - <span>2</span></li>
+							<li>1 к. - <span>1</span></li>
+							<li>1 к. - <span>1</span></li>
+						</ul>
+						<a href="#" class="more"><i class="icon-arrow"></i></a>
+					</div>`
+				);
+			});
 		},
 		functionReady: function(instance, helper) {
 

@@ -23,13 +23,35 @@
     }
 
     const getFloorData = async (floor) => {
-        await getData(url, login, pass).then(resp => {
-            // console.log(resp);
+        let data = await getData(url, login, pass).then(resp => {
+            console.log(resp);
+
+            let apList = resp['towers'][1].floors[floor]['apartments'];
+            let freeApCount = 0;
+
+            let roomArr = [];
+
+            apList.forEach(apartment => {
+                if(apartment.status == "Свободна"){
+                    freeApCount += 1;
+                }
+                roomArr.push({
+                    amount: apartment.rooms,
+                    apAmount: 0,
+                });
+            });
+
+            console.log(roomArr);
+
+            roomArr = Array.from(new Set(roomArr));
 
             let info = {
-                totalAp: resp['towers'][1].floors[floor]['apartments'].length,
+                totalAp: apList.length,
+                freeAp: freeApCount,
             }
             
             return info;
         });
+            
+        return data;
     }
