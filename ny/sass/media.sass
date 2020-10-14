@@ -9,6 +9,9 @@
             width: 98%
 
 @media screen and ( max-height: 1000px )
+    .container
+        max-width: 1150px
+
     .header
         &__address
             margin-left: 60px
@@ -59,12 +62,13 @@
 
     .contacts
         &__wrap
-            margin-top: 215px
+            margin-top: 185px
         &__items
-            max-height: 320px
+            max-height: 360px
         &__map
+            max-width: 680px
             iframe
-                height: 500px
+                height: 540px
 
 @media screen and ( max-height: 800px )
     .hero
@@ -72,15 +76,17 @@
             margin-top: 210px
         &__list
             margin-top: 80px
+
     .contacts
+        &__items
+            max-width: 320px
         &__wrap
-            margin-top: 185px
             .button
                 margin-top: 20px
         &__map
+            max-width: 660px
             iframe
-                height: 450px
-                width: 700px
+                height: 500px
 
 @media screen and ( max-width: 1370px )
     .contacts
