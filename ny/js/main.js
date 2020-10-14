@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const recallTriggers = document.querySelectorAll('.js-recall');
     const orderTriggers = document.querySelectorAll('.js-order');
+    const policyTriggers = document.querySelectorAll('.js-policy');
     const degustationTriggers = document.querySelectorAll('.js-degustation');
     const downloadTriggers = document.querySelectorAll('.js-download');
     const thxTriggers = document.querySelectorAll('.js-thx');
@@ -15,20 +16,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const forms = document.querySelectorAll('form');
 
-    let telInputs = document.querySelectorAll('.js-mask');
+    const telInputs = document.querySelectorAll('.js-mask');
+
+    let mainSwiper;
+    let mainSwiperNode;
+    let mainSwiperState = false;
 
 
     const openPopup = (selector, state=null) => {
+        event.preventDefault();
+
+        closePopup();
+
+        let itemClasslist = document.querySelector(selector).classList;
 
         if(state == true){
-            document.querySelector(selector).classList.add('active');
+            itemClasslist.add('active');
         }
         else if(state == false){
-            document.querySelector(selector).classList.remove('active');
+            itemClasslist.remove('active');
         }
         else {
             return () => {
-                document.querySelector(selector).classList.toggle('active');
+                itemClasslist.toggle('active');
             }
         }
     }
@@ -90,12 +100,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const resizeHandler = () => {
         if(window.innerWidth < 730){
-            // mainSwiperNode.destroy();
+            if(mainSwiperState){
+                mainSwiperNode.destroy();
+    
+                mainSwiperState = false;
+            }
         }
         else{
+            if(!mainSwiperState){
+                mainSwiperInit();
+
+                mainSwiperState = true;
+            }
+
             mainSwiperNode.update();
         }
-        mainSwiperNode.update();
     }
 
     const formValidate = input => {
@@ -164,6 +183,24 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    const mainSwiperInit = () => {
+        mainSwiper = new Swiper('.main', {
+            roundLengths: true,
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            updateOnWindowResize: true,
+            mousewheel: true,
+            direction: 'vertical',
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        });
+
+        mainSwiperNode = document.querySelector('.main').swiper;
+    }
+
     recallTriggers.forEach(trigger => trigger.addEventListener('click', openPopup('.js-popup-recall')));
 
     orderTriggers.forEach(trigger => trigger.addEventListener('click', openPopup('.js-popup-order')));
@@ -174,7 +211,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     thxTriggers.forEach(trigger => trigger.addEventListener('click', openPopup('.js-popup-thx')));
 
+    policyTriggers.forEach(trigger => trigger.addEventListener('click', openPopup('.js-popup-policy')));
+
     closeTriggers.forEach(trigger => trigger.addEventListener('click', closePopup));
+
+
 
     quizNextStepBtns.forEach(btn => btn.addEventListener('click', quizShowNextPage));
 
@@ -182,40 +223,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     quizRequiredInputs.forEach(input => input.addEventListener('input', () => toggleNextBtn(true)));
 
+
+
     forms.forEach(form => form.addEventListener('submit', formSubmitHandler));
     
     window.addEventListener('resize', resizeHandler);
 
     telInputs.forEach(input => formValidate(input));
 
-    const mainSwiper = new Swiper('.main', {
-        updateOnWindowResize: true,
-        mousewheel: true,
-        direction: 'vertical',
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-        breakpoints: {
-            730: {
-                spaceBetween: 30,
-                loop: true,
-                freeMode: false,
-                slidesPerView: 1,
-            },
-            300: {
-                spaceBetween: 0,
-                loop: false,
-                freeMode: true,
-                slidesPerView: 'auto',
-            }
-        }
-    });
-
-    const mainSwiperNode = document.querySelector('.main').swiper;
-
     resizeHandler();
     quizShowPage();
-
-    // mainSwiperNode.slideTo(1, 0, true);
 });

@@ -1,3 +1,87 @@
+@media screen and ( max-width: 1700px )
+    .main
+        &__pagination
+            left: 100%
+            transform: translate( -100%, 0)
+
+    .contacts
+        &__footer
+            width: 98%
+
+@media screen and ( max-height: 1000px )
+    .header
+        &__address
+            margin-left: 60px
+
+    .hero
+        &__content
+            margin-top: 250px
+        &__list
+            margin-top: 130px
+
+    .quiz
+        &__checkbox
+            height: 35px
+            width: 35px
+        &__text
+            font-size: 24px
+            margin-left: 30px
+        &__container
+            margin-top: 170px
+        &__body
+            margin-top: 35px
+        &__option + &__option
+            margin-top: 40px
+        &__option
+            margin-top: 40px
+        &__buttons
+            margin-top: 40px
+
+    .section
+        &__title
+            font-size: 30px
+
+    .text
+        &_light
+            &, & *
+                font-size: 16px
+        &-page
+            &__content
+                margin-top: 190px
+                p.text_light
+                    font-size: 19px
+                p.text_light:first-of-type
+                    margin-top: 30px
+                p.text_light + p.text_light
+                    margin-top: 25px
+            .buttons-row
+                margin-top: 40px
+
+    .contacts
+        &__wrap
+            margin-top: 215px
+        &__items
+            max-height: 320px
+        &__map
+            iframe
+                height: 500px
+
+@media screen and ( max-height: 800px )
+    .hero
+        &__content
+            margin-top: 210px
+        &__list
+            margin-top: 80px
+    .contacts
+        &__wrap
+            margin-top: 185px
+            .button
+                margin-top: 20px
+        &__map
+            iframe
+                height: 450px
+                width: 700px
+
 @media screen and ( max-width: 1370px )
     .contacts
         &__wrap
@@ -7,6 +91,12 @@
     .hero
         &__list
             margin-top: 70px
+    
+    .popup
+        &__body
+            margin-top: 60px
+        &__close
+            transform: translate(0%, -100%)
 
     .contacts
         &__wrap
@@ -23,8 +113,11 @@
             margin-left: 0
             margin-top: 40px
             max-width: none
+            iframe
+                width: 100%
 
 @media screen and ( max-width: 1100px )
+
     .text-page
         &__content
             margin-top: 190px
@@ -48,9 +141,14 @@
         &__address
             margin-left: 30px
 
-    .popup
+    .quiz
+        &__text
+            &-input
+                padding: 20px 40px
+
+    .popup  
         &__body
-            margin-top: 20px
+            margin-top: 40px
     .form
         &__agreement
             margin-left: 20px
@@ -75,37 +173,61 @@
                 font-size: 18px
 
 @media screen and ( max-width: 730px )
+    section
+        padding-bottom: 40px
+
+    .text
+        &_large
+            line-height: 44px !important
+            font-size: 42px !important
+
+    .header
+        background-color: rgba(0, 0, 0, .9)
+        &__wrap
+            padding: 10px 0px
+
     .section
         &__title
             font-size: 32px
             line-height: 45px
 
-    .container
-        min-height: auto
-
-    .text-page__content
-        margin-top: 40px
-
     .main
-        min-height: auto
+        min-height: 100vh
         height: auto
         .swiper-wrapper
-            height: auto
-        .swiper-slide
-            height: 100%
-            min-height: auto
-            padding: 0px 0px 80px 0px
+            flex-direction: column
+
+    .hero
+        &__content
+            margin-top: 150px
+
+    .text-page
+        &__content
+            margin-top: 70px
 
     .quiz
         &__container
-            margin-top: 40px
+            margin-top: 70px
         &__checkbox
             height: 30px
             width: 30px
+        &__buttons
+            flex-direction: column-reverse
+            .button + .button
+                margin-left: 0
+                margin-bottom: 30px
         &__text
             margin-left: 20px
+            &-input
+                margin-bottom: 50px
 
     .popup
+        p.text_light
+            line-height: 26px
+            margin-top: 15px
+        &__close
+            &-btn
+                margin-top: 70px
         &__body
             &_big
                 .form
@@ -121,21 +243,25 @@
             flex-direction: column
 
     .contacts
-        padding-bottom: 120px !important
+        &__footer
+            bottom: 0
+            position: relative
+            flex-direction: column
+            align-items: center
+            & > *
+                margin-top: 20px
+            &  *
+                text-align: center
+        &__map
+            iframe
+                height: 400px
         &__wrap
-            margin-top: 40px
+            margin-top: 70px
         &__items
             flex-direction: column
         &__item + &__item
             margin-left: 0
             margin-top: 30px
-        &__footer
-            width: 94%
-            bottom: -100px
-            flex-direction: column
-            align-items: center
-            * + *
-                margin-top: 10px
 
     .buttons-row
         flex-direction: column
