@@ -6,7 +6,6 @@
     <title>Сеть ресторанов Нью-Йорк</title>
     <link rel="stylesheet" href="./css/swiper-bundle.min.css">
     <link rel="stylesheet" href="./css/index.css">
-    <script src="./js/swiper-bundle.min.js" defer></script>
     <script src="./js/main.js" defer></script>
 </head>
 <body class="body">
@@ -175,7 +174,7 @@
                             <button class="text_light button button_transparent js-recall">Задать свой вопрос</button>
                         </div>
                         <div class="contacts__map">
-                            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A29cdc555604bda8f30af043534ae31d46619f9e1f1b3944212722290852e843c&amp;source=constructor" width="100%" height="610" frameborder="0"></iframe>
+                            <iframe loading="lazy" src="https://yandex.ru/map-widget/v1/?um=constructor%3A29cdc555604bda8f30af043534ae31d46619f9e1f1b3944212722290852e843c&amp;source=constructor" width="100%" height="610" frameborder="0"></iframe>
                         </div>
                     </div>
                     <div class="contacts__footer">
@@ -190,6 +189,7 @@
 
     <div class="popup js-popup-recall">
         <div class="popup__body">
+            <button class="popup__close js-popup-close"><span></span></button>
             <h2 class="section__title text_black">Заказать обратный звонок</h2>
             <span class="text_light">Пожалуйста, заполните форму ниже, мы перезвоним Вам в течение 15 минут</span>
             <form class="form">
@@ -201,7 +201,7 @@
                 </div>
                 <div class="form__row">
                     <button class="button button_black js-submit">Заказать звонок</button>
-                    <span class="text_light form__agreement">Нажимая на кнопку, вы даете согласие на обработку персональных данных</span>
+                    <a href="#" class="text_light form__agreement js-policy">Нажимая на кнопку, вы даете согласие на обработку персональных данных</a>
                 </div>
             </form>
             <div class="popup__img">
@@ -212,6 +212,7 @@
 
     <div class="popup js-popup-order">
         <div class="popup__body popup__body_big">
+            <button class="popup__close js-popup-close"><span></span></button>
             <h2 class="section__title text_black">Заказать банкет</h2>
             <span class="text_light">Пожалуйста, заполните форму ниже, мы перезвоним Вам с подтверждением заказа в течение 15 минут</span>
             <form class="form">
@@ -248,7 +249,7 @@
                 </div>
                 <div class="form__row">
                     <button class="button button_black js-submit">Заказать звонок</button>
-                    <span class="text_light form__agreement">Нажимая на кнопку, вы даете согласие на обработку персональных данных</span>
+                    <a href="#" class="text_light form__agreement js-policy">Нажимая на кнопку, вы даете согласие на обработку персональных данных</a>
                 </div>
             </form>
         </div>
@@ -256,6 +257,7 @@
 
     <div class="popup js-popup-degustation">
         <div class="popup__body">
+            <button class="popup__close js-popup-close"><span></span></button>
             <h2 class="section__title text_black">Записаться на бесплатную дегустацию меню</h2>
             <span class="text_light">Пожалуйста, заполните форму ниже, мы перезвоним Вам в течение 15 минут</span>
             <form class="form">
@@ -267,7 +269,7 @@
                 </div>
                 <div class="form__row">
                     <button class="button button_black js-submit">Записаться на дегустацию</button>
-                    <span class="text_light form__agreement">Нажимая на кнопку, вы даете согласие на обработку персональных данных</span>
+                    <a href="#" class="text_light form__agreement js-policy">Нажимая на кнопку, вы даете согласие на обработку персональных данных</a>
                 </div>
             </form>
             <div class="popup__img">
@@ -278,6 +280,7 @@
 
     <div class="popup js-popup-download">
         <div class="popup__body">
+            <button class="popup__close js-popup-close"><span></span></button>
             <h2 class="section__title text_black">Скачать меню в PDF</h2>
             <span class="text_light">Пожалуйста, заполните форму ниже, мы отправим меню в PDF вам на почту</span>
             <form class="form">
@@ -290,7 +293,7 @@
                 </div>
                 <div class="form__row">
                     <button class="button button_black js-submit">Скачать меню</button>
-                    <span class="text_light form__agreement">Нажимая на кнопку, вы даете согласие на обработку персональных данных</span>
+                    <a href="#" class="text_light form__agreement js-policy">Нажимая на кнопку, вы даете согласие на обработку персональных данных</a>
                 </div>
             </form>
             <div class="popup__img">
@@ -299,8 +302,21 @@
         </div>
     </div>
 
+    <div class="popup js-popup-policy">
+        <div class="popup__body">
+            <button class="popup__close js-popup-close"><span></span></button>
+            <h2 class="section__title text_black">Политика конфиденциальности</h2>
+            <p class="text_light">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum reiciendis temporibus nobis esse! Accusamus sit temporibus beatae molestias dolor totam modi eum ullam aut sapiente molestiae, rerum eaque incidunt, neque, nisi quis soluta enim. Facere beatae eius fugiat animi ratione eum odit aliquam eaque voluptatibus unde vero, sapiente cumque. Ipsa, vel dolorem placeat eius quis, eos totam unde veniam quasi dolorum saepe nihil iusto amet ratione laborum neque. Adipisci molestias provident ea explicabo quae consectetur deleniti saepe officiis. Illo temporibus, perspiciatis accusamus nihil dolor pariatur sit cupiditate in magni, aliquam quo similique voluptates itaque voluptas ea? Quos praesentium eligendi vitae!</p>
+            <button class="header__recall popup__close-btn text_light js-popup-close">вернуться на сайт</button>
+            <div class="popup__img">
+                <img src="./img/logo-b.png" alt="Логотип">
+            </div>
+        </div>
+    </div>
+
     <div class="popup js-popup-thx">
         <div class="popup__body">
+            <button class="popup__close js-popup-close"><span></span></button>
             <h2 class="section__title text_black text_tac text_large">Благодарим за доверие!</h2>
             <span class="text_light text_tac">До встречи в ресторанах Нью-Йорк Пицца и Гриль</span>
             <button class="header__recall popup__close-btn text_light js-popup-close">вернуться на сайт</button>
@@ -312,6 +328,7 @@
 
     <div class="popup js-popup-error">
         <div class="popup__body">
+            <button class="popup__close js-popup-close"><span></span></button>
             <h2 class="section__title text_black text_tac text_large">У нас произошла ошибка!</h2>
             <span class="text_light text_tac">Попробуйте отправить данные еще раз.</span>
             <button class="header__recall popup__close-btn text_light js-popup-close">вернуться на сайт</button>
@@ -321,5 +338,6 @@
         </div>
     </div>
 
+    <script src="./js/swiper-bundle.min.js"></script>
 </body>
 </html>

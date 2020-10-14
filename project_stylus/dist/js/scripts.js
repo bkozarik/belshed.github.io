@@ -253,6 +253,7 @@ $(document).ready(function(){
 		functionInit: function(instance, helper){
 			var content = $(helper.origin).find('.floor-tooltip').html();
 			instance.content(content);
+			// console.log($(this).get(0));
 			$(helper.origin).on( 'click', function() {
 				if ($(this).hasClass('active')) {
 					$('.floor-one').removeClass('active');
@@ -261,6 +262,23 @@ $(document).ready(function(){
 					$('.floor-one').removeClass('active');
 					$(this).addClass('active');
 				}
+			});
+		},
+		functionBefore: function(instance, helper) {
+					
+			let floor = Number($(helper.origin).find('.floor-help span').text());
+			getFloorData(floor).then(info => {
+				instance.content(`
+					<div class="floor-tooltip-box">
+						<div class="floor-info">Свободно ${info.freeAp} из ${info.totalAp} квартир</div>
+						<ul class="list-floor-info">
+							<li>1 к. - <span>2</span></li>
+							<li>1 к. - <span>1</span></li>
+							<li>1 к. - <span>1</span></li>
+						</ul>
+						<a href="#" class="more"><i class="icon-arrow"></i></a>
+					</div>`
+				);
 			});
 		},
 		functionReady: function(instance, helper) {
@@ -280,7 +298,6 @@ $(document).ready(function(){
 			position.coord.top += 10;
 			position.coord.left -= $(helper.origin).width()/4;
 			$('.tooltipster-base').on( 'click', function() {
-				console.log('111')
 			});
 			return position;
 		}
