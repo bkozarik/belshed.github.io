@@ -455,7 +455,7 @@ ol >li::before {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  aling-items: center;
+  align-items: center;
   border: 0.2rem solid #d29966;
   border-radius: 0.4rem;
   font-size: 1.3rem;
@@ -759,7 +759,7 @@ ol >li::before {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  aling-items: center;
+  align-items: center;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
       -ms-flex-pack: center;
@@ -2301,7 +2301,7 @@ ol >li::before {
 }
 .floor-sub {
   position: absolute;
-  bottom: 3rem;
+  bottom: 0rem;
   right: -30rem;
   width: 91.3rem;
 }

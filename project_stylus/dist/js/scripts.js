@@ -300,44 +300,6 @@ $(document).ready(function(){
 		loop : true,
 	});
 
-	$('.DragSlider').each(function(i, elem) {
-		var El = $(elem),
-			ElSlider = El[0],
-			ElValue = El.closest('.DragSliderSection').find('.DragSliderValue'),
-			ElMuch = El.closest('.DragSliderSection').find('.DragSliderMuch'),
-			DataMin = parseInt(El.attr('data-min')),
-			DataStart = parseInt(El.attr('data-start')),
-			DataEnd = parseInt(El.attr('data-end')),
-			DataMax = parseInt(El.attr('data-max'));
-			El.closest('.DragSliderSection').find('.SliderGridMin').html(DataMin);
-			El.closest('.DragSliderSection').find('.SliderGridMax').html(DataMax);
-
-			if(isNaN(DataMin)) {var DataMin = 0;}
-			if(isNaN(DataMinStart)) {var DataMinStart = DataMin;}
-			if(isNaN(DataMax)) {var DataMax = 1000;}
-			if(isNaN(DataMaxStart)) {var DataMaxStart = DataMax;}
-
-		noUiSlider.create(ElSlider , {
-			start: [DataStart, DataEnd],
-			connect: true,
-			tooltips: true,
-			step: 1,
-			range: {
-				'min': DataMin,
-				'max': DataMax,
-				
-			},
-			format: wNumb({
-				decimals: 0,
-				thousand: ' '
-			})
-		});
-
-		
-	});
-
-
-
 	$('.SliderFloor').slick('slickGoTo', currFloor - 1);
 
 });

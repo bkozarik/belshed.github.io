@@ -137,6 +137,105 @@
         });
     }
 
+    const filterInit = (minValSq, maxValSq, minValPr, maxValPr) => {
+        let dragSliderSQ = document.querySelector('.DragSlider.DragSliderPl');
+        let dragSliderPr = document.querySelector('.DragSlider.DragSliderPrice');
+
+        dragSliderSQ.dataset.min = minValSq;
+        dragSliderSQ.dataset.start = minValSq;
+
+        dragSliderSQ.dataset.max = maxValSq;
+        dragSliderSQ.dataset.end = maxValSq;
+
+        dragSliderPr.dataset.min = minValPr;
+        dragSliderPr.dataset.start = minValPr;
+
+        dragSliderPr.dataset.max = maxValPr;
+        dragSliderPr.dataset.end = maxValPr;
+
+
+        $('.DragSlider').each(function(i, elem) {
+            var El = $(elem),
+                ElSlider = El[0],
+                ElValue = El.closest('.DragSliderSection').find('.DragSliderValue'),
+                ElMuch = El.closest('.DragSliderSection').find('.DragSliderMuch'),
+                DataMin = parseInt(El.attr('data-min')),
+                DataStart = parseInt(El.attr('data-start')),
+                DataEnd = parseInt(El.attr('data-end')),
+                DataMax = parseInt(El.attr('data-max'));
+
+                El.closest('.DragSliderSection').find('.SliderGridMin').html(DataMin);
+                El.closest('.DragSliderSection').find('.SliderGridMax').html(DataMax);
+    
+                if(isNaN(DataMin)) {var DataMin = 0;}
+                if(isNaN(DataMinStart)) {var DataMinStart = DataMin;}
+                if(isNaN(DataMax)) {var DataMax = 1000;}
+                if(isNaN(DataMaxStart)) {var DataMaxStart = DataMax;}
+    
+            noUiSlider.create(ElSlider , {
+                start: [DataStart, DataEnd],
+                connect: true,
+                tooltips: true,
+                step: 1,
+                range: {
+                    'min': DataMin,
+                    'max': DataMax,
+                    
+                },
+                format: wNumb({
+                    decimals: 0,
+                    thousand: ' '
+                })
+            });
+            
+            if($(ElSlider).hasClass('DragSliderPl')){
+                ElSlider.noUiSlider.on('set', (values) => {
+                    let minVal = Number(values[0].replace(/\s+/g, ''));
+                    let maxVal = Number(values[1].replace(/\s+/g, ''));
+    
+                    table.querySelectorAll('tr').forEach(tr => {
+                        tr.querySelectorAll('td').forEach((td, index) => {
+                            if(index == 1){
+                                let content = td.innerText;
+                                
+                                if(Number(content) < minVal || Number(content) > maxVal){
+                                    td.parentNode.style.display = 'none';
+                                }
+                                else{
+                                    td.parentNode.style.display = 'table-row';
+                                }
+                            }
+                        });
+                    });
+                })
+            }
+            else if($(ElSlider).hasClass('DragSliderPrice')){
+                ElSlider.noUiSlider.on('set', (values) => {
+                    let minVal = Number(values[0].replace(/\s+/g, ''));
+                    let maxVal = Number(values[1].replace(/\s+/g, ''));
+                    console.log(minVal);
+    
+                    table.querySelectorAll('tr').forEach(tr => {
+                        tr.querySelectorAll('td').forEach((td, index) => {
+                            if(index == 6){
+                                let content = td.innerText.replace(" р.", "");
+                                console.log(Number(content));
+                                if(Number(content) < minVal || Number(content) > maxVal){
+                                    td.parentNode.style.display = 'none';
+                                }
+                                else{
+                                    td.parentNode.style.display = 'table-row';
+                                }
+                            }
+                        });
+                    });
+                })
+            }
+            
+        });
+        
+    }
+    
     const showApPage = () => {
         event.preventDefault();
 
@@ -147,7 +246,10 @@
         }
 
         let appId = Number(tr.querySelector('td .number').innerText);
+        let floor = Number(tr.querySelectorAll('td')[4].innerText);
+
         sessionStorage.setItem('appId', appId);
+        sessionStorage.setItem('floor', floor);
 
         window.location.assign('./apartments-plan.html');
     }
@@ -166,16 +268,18 @@
         window.location.assign('./apartments-plan.html');
     }
 
-    const fillTable = async (floorCount=null) => {
+    const fillTable = (floorCount=null) => {
 
         while (table.firstChild) {
             table.firstChild.remove();
         }
 
-        let data = await getData(url, login, pass).then(resp => {
+        let data = getData(url, login, pass).then(resp => {
             let floor = 0;
             var tower = 1;
             let count = 1;
+            let squareArr = new Array();
+            let priceArr = new Array();
 
             const rec = resp => {
                 if(floorCount != null){
@@ -205,6 +309,7 @@
                                         `;
                                         table.appendChild(tr);
                                     });
+
                                 }
                                 
                             }
@@ -240,6 +345,8 @@
                                         <td>${item.price} р.</td>
                                     `;
                                     table.appendChild(tr);
+                                    squareArr.push(item.square);
+                                    priceArr.push(item.price);
                                 });
                             }
                             rec(resp[key]);
@@ -252,10 +359,19 @@
             }
 
             rec(resp);
-
             
             let tr = document.querySelectorAll('.js-ap-page');
             tr.forEach(item => item.addEventListener('click', showApPage));
+            
+            if(window.location.href.indexOf('home-plan.html') > 0){
+
+                let minSquare = squareArr.reduce((a, b) => Math.min(a, b));
+                let maxSquare = squareArr.reduce((a, b) => Math.max(a, b));
+                let minPrice = priceArr.reduce((a, b) => Math.min(a, b));
+                let maxPrice = priceArr.reduce((a, b) => Math.max(a, b));
+
+                filterInit(minSquare, maxSquare, minPrice, maxPrice);
+            }
         });
     }
 
@@ -292,7 +408,6 @@
                         if(key == 'apartments'){
                             resp[key].forEach(item => {
                                 if(item.id == currAp && item.floor == currFloor){
-                                    console.log(item);
                                     let data = document.createElement("div");
                                     data.classList.add('col-md-6');
                                     data.innerHTML = `
