@@ -24,7 +24,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     const openPopup = (selector, state=null) => {
-        event.preventDefault();
+        try{
+            event.preventDefault();
+        }
+        catch{}
 
         closePopup();
 

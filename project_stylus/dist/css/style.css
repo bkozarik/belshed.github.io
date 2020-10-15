@@ -185,6 +185,31 @@ p {
   border-bottom: 0.3rem solid #d29966;
   margin: 0 0 5rem;
 }
+.table-styled__tr{
+  cursor: pointer;
+  transition: all .2s ease-in 0s;
+  -webkit-transition: all .2s ease-in 0s;
+  -moz-transition: all .2s ease-in 0s;
+  -ms-transition: all .2s ease-in 0s;
+  -o-transition: all .2s ease-in 0s;
+}
+.table-styled__tr:hover{
+  background-color: #eba05f31;
+}
+.col-sm-12 svg {
+  width: 100%;
+  max-height: 550px;
+}
+.col-sm-12 svg .st1, .col-sm-12 svg .st2, .col-sm-12 svg .st3, .col-sm-12 svg .st4, .col-sm-12 svg .st6, .col-sm-12 svg .st7, .col-sm-12 svg .st8{
+  fill: #000;
+  stroke: #000;
+}
+.svg_apartment {
+  cursor: pointer;
+}
+.svg_apartment:hover .st7, .svg_apartment:hover .st8, .svg_apartment:hover .st6{
+  fill: red;
+}
 .table-styled th {
   font-size: 1.6rem;
   font-weight: 500;
@@ -2137,9 +2162,13 @@ ol >li::before {
       -ms-transform: translateX(-50%);
        -o-transform: translateX(-50%);
           transform: translateX(-50%);
-  background: url("../img/img-house.jpg") no-repeat;
+  /* background: url("../img/img-house.jpg") no-repeat;
   -webkit-background-size: cover;
-          background-size: cover;
+          background-size: cover; */
+  
+  background: url("../img/img-house_2.jpg") no-repeat;
+  -webkit-background-size: 100% 100%;
+          background-size: 100% 100%;
   z-index: -1;
   -webkit-filter: grayscale(1);
           filter: grayscale(1);
@@ -2172,10 +2201,11 @@ ol >li::before {
   right: 100%;
   bottom: 0;
   background: rgba(210,153,102,0.7);
-  width: 21rem;
+  width: 30rem;
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  margin-right: 1.5rem;
   opacity: 0;
 }
 .floor-help::after {
@@ -2186,8 +2216,8 @@ ol >li::before {
   right: 100%;
   bottom: 0;
   background: rgba(210,153,102,0.7);
-  width: 21rem;
-  margin: 0 34.6rem 0 0;
+  width: 30rem;
+  margin: 0 43rem 0 0;
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
@@ -2218,28 +2248,28 @@ ol >li::before {
   margin-top: 0.4rem;
 }
 .floor-section-one .floor-help {
-  height: 1.7rem;
+  height: 2rem;
 }
 .floor-section-two .floor-help {
-  height: 1.8rem;
+  height: 2rem;
 }
 .floor-penthouse {
   position: absolute;
-  left: 0.5rem;
-  top: 0.3rem;
-  width: 63rem;
+  left: -20.8rem;
+  top: 5rem;
+  width: 78.2rem;
 }
 .floor-penthouse .floor-help {
   width: 7.5rem;
-  height: 4.9rem;
+  height: 7rem;
 }
 .floor-penthouse .floor-help::before {
-  width: 12.5rem;
-  margin-right: 4.5rem;
+  width: 26.5rem;
+  margin-right: 3rem;
 }
 .floor-penthouse .floor-help:after {
-  width: 12.5rem;
-  margin-right: 39.2rem;
+  width: 26.5rem;
+  margin-right: 44.5rem;
 }
 .floor-basement {
   position: absolute;
@@ -2259,27 +2289,34 @@ ol >li::before {
 }
 .floor-main {
   position: absolute;
-  left: 0.5rem;
-  bottom: 19.2rem;
-  width: 63rem;
+  left: -22.5rem;
+  bottom: 8.4rem;
+  /* width: 63rem; */
+  /* background-color: #fff; */
+  /* opacity: .7; */
+  width: 80rem;
 }
 .floor-main .floor-help {
   width: 7.5rem;
 }
 .floor-sub {
   position: absolute;
-  bottom: 8.4rem;
-  right: -1.1rem;
-  width: 57rem;
+  bottom: 3rem;
+  right: -30rem;
+  width: 91.3rem;
 }
 .floor-sub .floor-help {
   width: 6.5rem;
+  height: 2.2rem;
+}
+.floor-sub .floor-one + .floor-one {
+  margin-bottom: 3px;
 }
 .floor-sub .floor-help::after {
   display: none;
 }
 .floor-sub .floor-help::before {
-  width: 49.3rem;
+  width: 83.3rem;
 }
 .floor-tooltip {
   opacity: 0;
@@ -2319,6 +2356,13 @@ ol >li::before {
   position: absolute;
   bottom: 0;
   right: -2.5rem;
+}
+.floor-plan__ap {
+  background: #ffffff;
+}
+.floor-plan__ap:hover .st7 {
+  fill: red;
+  cursor: pointer;
 }
 .separate {
   margin-top: -5.2rem;

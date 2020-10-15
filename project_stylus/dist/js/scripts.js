@@ -1,18 +1,23 @@
 $(document).ready(function(){ 
-	
+	let currFloor = 1;
+	try{
+		currFloor = Number(sessionStorage.getItem('floor'));
+	}
+	catch{}
 
 	$('.open-menu').on( 'click', function() {
 		$('.header-content').addClass('active');
 		$('body').addClass('overlow-mobile');
 		return false;
 	});
+	
 	$('.close-menu, .header-content').on( 'click', function() {
 		$('.header-content').removeClass('active');
 		$('body').removeClass('overlow-mobile');
 		return false;
 	});
+	
 	$('.header-content-box').on( 'click', function(e){e.stopPropagation();});
-
 
 	//стилизация селекта
 	setTimeout(function() {
@@ -24,12 +29,7 @@ $(document).ready(function(){
 		dots: true,
 		speed: 500,
 		autoplay : 5000,
-		//draggable: false
 	});
-
-
-
-
 
 	$('.CaruselArchitecture').slick({
 		slidesToShow: 2,
@@ -71,8 +71,6 @@ $(document).ready(function(){
 		]
 	});
 
-
-
 	$('.CaruselArchitecture .SliderPlan').on('breakpoint', function(event, slick, breakpoint) {
 		
 		$("[data-fancybox]").fancybox({
@@ -105,16 +103,8 @@ $(document).ready(function(){
 		})();
 	}
 
-
 	//маска для телефона
 	$(".tx-phone").mask("+ 7 999 999 99 99");
-
-
-	
-
-
-	
-
 
 	// попап
 	function OpenPopup(NameId) {
@@ -128,6 +118,7 @@ $(document).ready(function(){
 			});
 		}
 	}
+
 	$('[data-id-popup]').on( 'click', function() {
 		var NameId = $(this).attr('data-id-popup');
 		OpenPopup(NameId);
@@ -145,10 +136,8 @@ $(document).ready(function(){
 	$('.popup-box').on( 'click', function(e){e.stopPropagation();});
 	// конец попап
 
-
 	$('.table-responsive').wrap("<div class='responsive'></div>");
 	
-
 	// картики в фон
 	$(".imgBox img").each(function(i, elem) {
 		var img = $(elem);
@@ -156,8 +145,6 @@ $(document).ready(function(){
 		background: "url(" + img.attr("src") + ") no-repeat 50% 0"
 		}).addClass('active');
 	});
-
-
 
 	$('.CaruselCheck').slick({
 		slidesToShow: 5,
@@ -194,18 +181,12 @@ $(document).ready(function(){
 		]
 	});
 
-
 	$('.SliderFloor').slick({
 		arrows: true,
 		dots: false,
-		//speed: 500,
-		//autoplay : 5000,
-		//draggable: false
 	});
 
-
 	$('table').wrap("<div class='table-responsive'></div>");
-
 
 	$('.plan-help').tooltipster({
 		animation: 'fade',
@@ -220,17 +201,12 @@ $(document).ready(function(){
 		triggerClose: {
 			click: true,
 			scroll: true,
-			//tap: true,
-			//originClick: true,
-			//touchleave: true,
-			//mouseleave: true,
 		},
 		functionInit: function(instance, helper){
 			var content = $(helper.origin).find('.plan-tooltip').html();
 			instance.content(content);
 		}
 	});
-
 
 	$('.floor-one').tooltipster({
 		animation: 'fade',
@@ -244,16 +220,10 @@ $(document).ready(function(){
 		},
 		triggerClose: {
 			click: true,
-			//scroll: true,
-			//tap: true,
-			//originClick: true,
-			//touchleave: true,
-			//mouseleave: true,
 		},
 		functionInit: function(instance, helper){
 			var content = $(helper.origin).find('.floor-tooltip').html();
 			instance.content(content);
-			// console.log($(this).get(0));
 			$(helper.origin).on( 'click', function() {
 				if ($(this).hasClass('active')) {
 					$('.floor-one').removeClass('active');
@@ -265,18 +235,15 @@ $(document).ready(function(){
 			});
 		},
 		functionBefore: function(instance, helper) {
-					
 			let floor = Number($(helper.origin).find('.floor-help span').text());
 			getFloorData(floor).then(info => {
 				instance.content(`
 					<div class="floor-tooltip-box">
 						<div class="floor-info">Свободно ${info.freeAp} из ${info.totalAp} квартир</div>
 						<ul class="list-floor-info">
-							<li>1 к. - <span>2</span></li>
-							<li>1 к. - <span>1</span></li>
-							<li>1 к. - <span>1</span></li>
+							${info.apInfo}
 						</ul>
-						<a href="#" class="more"><i class="icon-arrow"></i></a>
+						<a href="./etag.html" class="more"><i class="icon-arrow"></i></a>
 					</div>`
 				);
 			});
@@ -303,12 +270,6 @@ $(document).ready(function(){
 		}
 	});
 
-	
-
-	
-
-
-
 	$('.SliderPlan').slick({
 		arrows: true,
 		dots: false,
@@ -325,10 +286,6 @@ $(document).ready(function(){
 		]
 	});
 
-
-
-
-
 	$("[data-fancybox]").fancybox({
 		backFocus : false,
 		buttons: [
@@ -342,11 +299,6 @@ $(document).ready(function(){
 		transitionEffect: "slide",
 		loop : true,
 	});
-
-
-
-	
-
 
 	$('.DragSlider').each(function(i, elem) {
 		var El = $(elem),
@@ -386,18 +338,6 @@ $(document).ready(function(){
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+	$('.SliderFloor').slick('slickGoTo', currFloor - 1);
 
 });

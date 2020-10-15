@@ -12,14 +12,14 @@ $smtp = new PHPMailer(true);
 $smtp->CharSet = 'utf-8';
 
 $smtp->isSMTP();
-$smtp->Host = 'smtp.yandex.ru'; // SMTP сервер
+$smtp->Host = 'smtp.yandex.com'; // SMTP сервер
 $smtp->SMTPAuth = true;
 $smtp->SMTPSecure = 'ssl'; // Тип шифрования
 $smtp->Port = 465; // Порт SMTP сервера
-$smtp->Password = 'quaterpast6'; // Ваш пароль от почты с которой будут отправляться письма
+$smtp->Password = 'New-York-Restaurants123'; // Ваш пароль от почты с которой будут отправляться письма
 
-$to = 'belshed1@yandex.ru'; // Ваш логин от почты куда будут отправляться письма
-$from = 'belshed1@yandex.ru'; // Ваш логин от SMTP сервера, он же является адресом отправителя
+$to = 'New-York-Restaurants@yandex.ru'; // Ваш логин от почты куда будут отправляться письма
+$from = 'New-York-Restaurants@yandex.ru'; // Ваш логин от SMTP сервера, он же является адресом отправителя
 $subject = 'Заявка с сайта Нью-Йорк';
 $message = '<h3>Новая заявка на сайте</h3> <br> ';
 
@@ -37,11 +37,11 @@ if(isset($_POST['isAttached'])){
 	$mail->CharSet = 'utf-8';
 
 	$mail->isSMTP();
-	$mail->Host = 'smtp.yandex.ru'; // SMTP сервер
+	$mail->Host = 'smtp.gmail.com'; // SMTP сервер
 	$mail->SMTPAuth = true;
 	$mail->SMTPSecure = 'ssl'; // Тип шифрования
 	$mail->Port = 465; // Порт SMTP сервера
-	$mail->Password = 'quaterpast6'; // Ваш пароль от почты с которой будут отправляться письма
+	$mail->Password = 'New-York-Restaurants123'; // Ваш пароль от почты с которой будут отправляться письма
 
 	$mail->setFrom($from, 'Сайт сети ресторанов "Нью-Йорк"');
 	$mail->addReplyTo($from);

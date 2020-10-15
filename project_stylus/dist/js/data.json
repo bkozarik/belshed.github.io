@@ -1,105 +1,311 @@
 {"towers":{
-    "1":{"floors":{
-        "1":{"apartments":[
-            {"square":"3131","svg_id":"12","rooms":"1","status":"Свободна","side":"Восток","price":"12311231231","id":"123"},
-            {"square":"313","svg_id":"14","rooms":"2","status":"Резерв","side":"Восток","price":"12311231231","id":"1244"},
-            {"square":"313","svg_id":"16","rooms":"3","status":"Резерв","side":"Восток","price":"12311231231","id":"1249"}]},
-        "2":{"apartments":[
-            {"square":"3131","svg_id":"12","rooms":"1","status":"Свободна","side":"Восток","price":"12311231231","id":"123"},
-            {"square":"313","svg_id":"14","rooms":"2","status":"Резерв","side":"Восток","price":"12311231231","id":"1244"},
-            {"square":"313","svg_id":"16","rooms":"3","status":"Свободна","side":"Восток","price":"12311231231","id":"1249"}]},
-        "3":{"apartments":[
-            {"square":"3131","svg_id":"12","rooms":"1","status":"Резерв","side":"Восток","price":"12311231231","id":"123"},
-            {"square":"313","svg_id":"14","rooms":"2","status":"Резерв","side":"Восток","price":"12311231231","id":"1244"},
-            {"square":"313","svg_id":"16","rooms":"3","status":"Свободна","side":"Восток","price":"12311231231","id":"1249"}]},
-        "4":{"apartments":[
-            {"square":"3131","svg_id":"12","rooms":"1","status":"Резерв","side":"Восток","price":"12311231231","id":"123"},
-            {"square":"313","svg_id":"14","rooms":"2","status":"Резерв","side":"Восток","price":"12311231231","id":"1244"},
-            {"square":"313","svg_id":"16","rooms":"3","status":"Резерв","side":"Восток","price":"12311231231","id":"1249"}]},
-        "5":{"apartments":[
-            {"square":"3131","svg_id":"12","rooms":"1","status":"Свободна","side":"Восток","price":"12311231231","id":"123"},
-            {"square":"313","svg_id":"14","rooms":"2","status":"Резерв","side":"Восток","price":"12311231231","id":"1244"},
-            {"square":"313","svg_id":"16","rooms":"3","status":"Свободна","side":"Восток","price":"12311231231","id":"1249"}]},
-        "6":{"apartments":[
-            {"square":"3131","svg_id":"12","rooms":"1","status":"Резерв","side":"Восток","price":"12311231231","id":"123"},
-            {"square":"313","svg_id":"14","rooms":"2","status":"Резерв","side":"Восток","price":"12311231231","id":"1244"},
-            {"square":"313","svg_id":"16","rooms":"3","status":"Свободна","side":"Восток","price":"12311231231","id":"1249"}]},
-        "7":{"apartments":[
-            {"square":"3131","svg_id":"12","rooms":"1","status":"Свободна","side":"Восток","price":"12311231231","id":"123"},
-            {"square":"313","svg_id":"14","rooms":"2","status":"Резерв","side":"Восток","price":"12311231231","id":"1244"},
-            {"square":"313","svg_id":"16","rooms":"3","status":"Свободна","side":"Восток","price":"12311231231","id":"1249"}]},
-        "8":{"apartments":[
-            {"square":"3131","svg_id":"12","rooms":"1","status":"Свободна","side":"Восток","price":"12311231231","id":"123"},
-            {"square":"313","svg_id":"14","rooms":"2","status":"Резерв","side":"Восток","price":"12311231231","id":"1244"},
-            {"square":"313","svg_id":"16","rooms":"3","status":"Свободна","side":"Восток","price":"12311231231","id":"1249"}]},
-        "9":{"apartments":[
-            {"square":"3131","svg_id":"12","rooms":"1","status":"Свободна","side":"Восток","price":"12311231231","id":"123"},
-            {"square":"313","svg_id":"14","rooms":"2","status":"Резерв","side":"Восток","price":"12311231231","id":"1244"},
-            {"square":"313","svg_id":"16","rooms":"3","status":"Свободна","side":"Восток","price":"12311231231","id":"1249"}]},
-        "10":{"apartments":[
-            {"square":"3131","svg_id":"12","rooms":"1","status":"Свободна","side":"Восток","price":"12311231231","id":"123"},
-            {"square":"313","svg_id":"14","rooms":"2","status":"Резерв","side":"Восток","price":"12311231231","id":"1244"},
-            {"square":"313","svg_id":"16","rooms":"3","status":"Резерв","side":"Восток","price":"12311231231","id":"1249"}]},
-        "11":{"apartments":[
-            {"square":"3131","svg_id":"12","rooms":"1","status":"Резерв","side":"Восток","price":"12311231231","id":"123"},
-            {"square":"313","svg_id":"14","rooms":"2","status":"Резерв","side":"Восток","price":"12311231231","id":"1244"},
-            {"square":"313","svg_id":"16","rooms":"3","status":"Свободна","side":"Восток","price":"12311231231","id":"1249"}]},
-        "12":{"apartments":[
-            {"square":"3131","svg_id":"12","rooms":"2","status":"Свободна","side":"Восток","price":"12311231231","id":"123"},
-            {"square":"313","svg_id":"14","rooms":"2","status":"Резерв","side":"Восток","price":"12311231231","id":"1244"},
-            {"square":"313","svg_id":"16","rooms":"3","status":"Свободна","side":"Восток","price":"12311231231","id":"1249"}]},
-        "13":{"apartments":[
-            {"square":"3131","svg_id":"12","rooms":"1","status":"Свободна","side":"Восток","price":"12311231231","id":"123"},
-            {"square":"313","svg_id":"14","rooms":"2","status":"Резерв","side":"Восток","price":"12311231231","id":"1244"},
-            {"square":"313","svg_id":"16","rooms":"3","status":"Резерв","side":"Восток","price":"12311231231","id":"1249"}]},
-        "14":{"apartments":[
-            {"square":"3131","svg_id":"12","rooms":"1","status":"Свободна","side":"Восток","price":"12311231231","id":"123"},
-            {"square":"313","svg_id":"14","rooms":"2","status":"Резерв","side":"Восток","price":"12311231231","id":"1244"},
-            {"square":"313","svg_id":"16","rooms":"3","status":"Свободна","side":"Восток","price":"12311231231","id":"1249"}]},
-        "15":{"apartments":[
-            {"square":"3131","svg_id":"12","rooms":"1","status":"Свободна","side":"Восток","price":"12311231231","id":"123"},
-            {"square":"313","svg_id":"14","rooms":"2","status":"Резерв","side":"Восток","price":"12311231231","id":"1244"},
-            {"square":"313","svg_id":"16","rooms":"3","status":"Свободна","side":"Восток","price":"12311231231","id":"1249"}]},
-        "16":{"apartments":[
-            {"square":"3131","svg_id":"12","rooms":"1","status":"Свободна","side":"Восток","price":"12311231231","id":"123"},
-            {"square":"313","svg_id":"14","rooms":"2","status":"Резерв","side":"Восток","price":"12311231231","id":"1244"},
-            {"square":"313","svg_id":"16","rooms":"3","status":"Свободна","side":"Восток","price":"12311231231","id":"1249"}]},
-        "17":{"apartments":[
-            {"square":"3131","svg_id":"12","rooms":"1","status":"Резерв","side":"Восток","price":"12311231231","id":"123"},
-            {"square":"313","svg_id":"14","rooms":"2","status":"Резерв","side":"Восток","price":"12311231231","id":"1244"},
-            {"square":"313","svg_id":"16","rooms":"3","status":"Свободна","side":"Восток","price":"12311231231","id":"1249"}]},
-        "18":{"apartments":[
-            {"square":"3131","svg_id":"12","rooms":"1","status":"Резерв","side":"Восток","price":"12311231231","id":"123"},
-            {"square":"313","svg_id":"14","rooms":"2","status":"Резерв","side":"Восток","price":"12311231231","id":"1244"},
-            {"square":"313","svg_id":"16","rooms":"3","status":"Резерв","side":"Восток","price":"12311231231","id":"1249"}]},
-        "19":{"apartments":[
-            {"square":"3131","svg_id":"12","rooms":"1","status":"Свободна","side":"Восток","price":"12311231231","id":"123"},
-            {"square":"313","svg_id":"14","rooms":"2","status":"Резерв","side":"Восток","price":"12311231231","id":"1244"},
-            {"square":"313","svg_id":"16","rooms":"3","status":"Резерв","side":"Восток","price":"12311231231","id":"1249"}]},
-        "20":{"apartments":[
-            {"square":"3131","svg_id":"12","rooms":"1","status":"Свободна","side":"Восток","price":"12311231231","id":"123"},
-            {"square":"313","svg_id":"14","rooms":"2","status":"Резерв","side":"Восток","price":"12311231231","id":"1244"},
-            {"square":"313","svg_id":"16","rooms":"3","status":"Свободна","side":"Восток","price":"12311231231","id":"1249"}]},
-        "21":{"apartments":[
-            {"square":"3131","svg_id":"12","rooms":"1","status":"Свободна","side":"Восток","price":"12311231231","id":"123"},
-            {"square":"313","svg_id":"14","rooms":"2","status":"Резерв","side":"Восток","price":"12311231231","id":"1244"},
-            {"square":"313","svg_id":"16","rooms":"3","status":"Свободна","side":"Восток","price":"12311231231","id":"1249"}]},
-        "22":{"apartments":[
-            {"square":"3131","svg_id":"12","rooms":"1","status":"Резерв","side":"Восток","price":"12311231231","id":"123"},
-            {"square":"313","svg_id":"14","rooms":"2","status":"Резерв","side":"Восток","price":"12311231231","id":"1244"},
-            {"square":"313","svg_id":"16","rooms":"3","status":"Резерв","side":"Восток","price":"12311231231","id":"1249"}]},
-        "23":{"apartments":[
-            {"square":"3131","svg_id":"12","rooms":"1","status":"Свободна","side":"Восток","price":"12311231231","id":"123"},
-            {"square":"313","svg_id":"14","rooms":"2","status":"Резерв","side":"Восток","price":"12311231231","id":"1244"},
-            {"square":"313","svg_id":"16","rooms":"3","status":"Свободна","side":"Восток","price":"12311231231","id":"1249"}]},
-        "24":{"apartments":[
-            {"square":"3131","svg_id":"12","rooms":"1","status":"Свободна","side":"Восток","price":"12311231231","id":"123"},
-            {"square":"313","svg_id":"14","rooms":"2","status":"Резерв","side":"Восток","price":"12311231231","id":"1244"},
-            {"square":"313","svg_id":"16","rooms":"3","status":"Свободна","side":"Восток","price":"12311231231","id":"1249"}]},
-        "25":{"apartments":[
-            {"square":"3131","svg_id":"12","rooms":"1","status":"Свободна","side":"Восток","price":"12311231231","id":"123"},
-            {"square":"313","svg_id":"14","rooms":"2","status":"Резерв","side":"Восток","price":"12311231231","id":"1244"},
-            {"square":"313","svg_id":"16","rooms":"3","status":"Резерв","side":"Восток","price":"12311231231","id":"1249"}]}
-        }},
-    "2":{"floors":{
-        "6":{"apartments":[{"square":"180","svg_id":"19","rooms":"3","status":"Свободна","side":"Юг","price":"1231123","id":"1260"}]}}}}}
+    "tower_1":{
+        "floors":[
+                {"apartments":[
+                    {"floor": 1,"square":"111","description": "Это описание!" ,"svg_id":"12","rooms":"1","status":"Свободна","side":"Восток","price":"12311231231","id":"123"},
+                    {"floor": 1,"square":"11","description": "Это описание!" ,"svg_id":"14","rooms":"2","status":"Резерв","side":"Восток","price":"12311231231","id":"1244"},
+                    {"floor": 1,"square":"11","description": "Это описание!" ,"svg_id":"16","rooms":"3","status":"Резерв","side":"Восток","price":"12311231231","id":"1248"},
+                    {"floor": 1,"square":"111","description": "Это описание!" ,"svg_id":"12","rooms":"1","status":"Свободна","side":"Восток","price":"12311231231","id":"123"},
+                    {"floor": 1,"square":"11","description": "Это описание!" ,"svg_id":"14","rooms":"2","status":"Резерв","side":"Восток","price":"12311231231","id":"1244"},
+                    {"floor": 1,"square":"11","description": "Это описание!" ,"svg_id":"16","rooms":"3","status":"Резерв","side":"Восток","price":"12311231231","id":"1248"},
+                    {"floor": 1,"square":"111","description": "Это описание!" ,"svg_id":"12","rooms":"1","status":"Свободна","side":"Восток","price":"12311231231","id":"123"},
+                    {"floor": 1,"square":"11","description": "Это описание!" ,"svg_id":"14","rooms":"2","status":"Резерв","side":"Восток","price":"12311231231","id":"1244"},
+                    {"floor": 1,"square":"11","description": "Это описание!" ,"svg_id":"16","rooms":"3","status":"Резерв","side":"Восток","price":"12311231231","id":"1248"},
+                    {"floor": 1,"square":"111","description": "Это описание!" ,"svg_id":"12","rooms":"1","status":"Свободна","side":"Восток","price":"12311231231","id":"123"}
+                ]},
+                {"apartments":[
+                    {"floor": 2,"square":"3131","description": "Это описание!" ,"svg_id":"12","rooms":"1","status":"Свободна","side":"Восток","price":"12311231231","id":"1"},
+                    {"floor": 2,"square":"313","description": "Это описание!" ,"svg_id":"14","rooms":"2","status":"Резерв","side":"Восток","price":"12311231231","id":"2"},
+                    {"floor": 2,"square":"313","description": "Это описание!" ,"svg_id":"16","rooms":"3","status":"Свободна","side":"Восток","price":"12311231231","id":"3"},
+                    {"floor": 2,"square":"3131","description": "Это описание!" ,"svg_id":"12","rooms":"1","status":"Свободна","side":"Восток","price":"12311231231","id":"4"},
+                    {"floor": 2,"square":"313","description": "Это описание!" ,"svg_id":"14","rooms":"2","status":"Резерв","side":"Восток","price":"12311231231","id":"5"},
+                    {"floor": 2,"square":"313","description": "Это описание!" ,"svg_id":"16","rooms":"3","status":"Свободна","side":"Восток","price":"12311231231","id":"6"},
+                    {"floor": 2,"square":"3131","description": "Это описание!" ,"svg_id":"12","rooms":"1","status":"Свободна","side":"Восток","price":"12311231231","id":"7"},
+                    {"floor": 2,"square":"3131","description": "Это описание!" ,"svg_id":"12","rooms":"1","status":"Свободна","side":"Восток","price":"12311231231","id":"8"},
+                    {"floor": 2,"square":"313","description": "Это описание!" ,"svg_id":"14","rooms":"2","status":"Резерв","side":"Восток","price":"12311231231","id":"9"},
+                    {"floor": 2,"square":"313","description": "Это описание!" ,"svg_id":"16","rooms":"3","status":"Свободна","side":"Восток","price":"12311231231","id":"10"}
+                ]},
+                {"apartments":[
+                    {"floor": 3,"square":"3131","description": "Это описание!" ,"svg_id":"12","rooms":"1","status":"Резерв","side":"Восток","price":"12311231231","id":"123"},
+                    {"floor": 3,"square":"313","description": "Это описание!" ,"svg_id":"14","rooms":"2","status":"Резерв","side":"Восток","price":"12311231231","id":"1244"},
+                    {"floor": 3,"square":"313","description": "Это описание!" ,"svg_id":"16","rooms":"3","status":"Свободна","side":"Восток","price":"12311231231","id":"1248"},
+                    {"floor": 3,"square":"3131","description": "Это описание!" ,"svg_id":"12","rooms":"1","status":"Резерв","side":"Восток","price":"12311231231","id":"123"},
+                    {"floor": 3,"square":"313","description": "Это описание!" ,"svg_id":"14","rooms":"2","status":"Резерв","side":"Восток","price":"12311231231","id":"1244"},
+                    {"floor": 3,"square":"313","description": "Это описание!" ,"svg_id":"16","rooms":"3","status":"Свободна","side":"Восток","price":"12311231231","id":"1248"},
+                    {"floor": 3,"square":"3131","description": "Это описание!" ,"svg_id":"12","rooms":"1","status":"Резерв","side":"Восток","price":"12311231231","id":"123"},
+                    {"floor": 3,"square":"313","description": "Это описание!" ,"svg_id":"14","rooms":"2","status":"Резерв","side":"Восток","price":"12311231231","id":"1244"},
+                    {"floor": 3,"square":"313","description": "Это описание!" ,"svg_id":"16","rooms":"3","status":"Свободна","side":"Восток","price":"12311231231","id":"1248"},
+                    {"floor": 3,"square":"3131","description": "Это описание!" ,"svg_id":"12","rooms":"1","status":"Резерв","side":"Восток","price":"12311231231","id":"123"}
+                ]},
+                {"apartments":[
+                    {"floor": 4,"square":"3131","description": "Это описание!" ,"svg_id":"12","rooms":"1","status":"Резерв","side":"Восток","price":"12311231231","id":"123"},
+                    {"floor": 4,"square":"313","description": "Это описание!" ,"svg_id":"14","rooms":"2","status":"Резерв","side":"Восток","price":"12311231231","id":"1244"},
+                    {"floor": 4,"square":"313","description": "Это описание!" ,"svg_id":"16","rooms":"3","status":"Резерв","side":"Восток","price":"12311231231","id":"1248"},
+                    {"floor": 4,"square":"3131","description": "Это описание!" ,"svg_id":"12","rooms":"1","status":"Резерв","side":"Восток","price":"12311231231","id":"123"},
+                    {"floor": 4,"square":"313","description": "Это описание!" ,"svg_id":"14","rooms":"2","status":"Резерв","side":"Восток","price":"12311231231","id":"1244"},
+                    {"floor": 4,"square":"313","description": "Это описание!" ,"svg_id":"16","rooms":"3","status":"Резерв","side":"Восток","price":"12311231231","id":"1248"},
+                    {"floor": 4,"square":"3131","description": "Это описание!" ,"svg_id":"12","rooms":"1","status":"Резерв","side":"Восток","price":"12311231231","id":"123"},
+                    {"floor": 4,"square":"3131","description": "Это описание!" ,"svg_id":"12","rooms":"1","status":"Резерв","side":"Восток","price":"12311231231","id":"123"},
+                    {"floor": 4,"square":"313","description": "Это описание!" ,"svg_id":"14","rooms":"2","status":"Резерв","side":"Восток","price":"12311231231","id":"1244"},
+                    {"floor": 4,"square":"313","description": "Это описание!" ,"svg_id":"16","rooms":"3","status":"Резерв","side":"Восток","price":"12311231231","id":"1248"}
+                ]},
+                {"apartments":[
+                    {"floor": 5,"square":"3131","description": "Это описание!" ,"svg_id":"12","rooms":"1","status":"Свободна","side":"Восток","price":"12311231231","id":"123"},
+                    {"floor": 5,"square":"313","description": "Это описание!" ,"svg_id":"14","rooms":"2","status":"Резерв","side":"Восток","price":"12311231231","id":"1244"},
+                    {"floor": 5,"square":"313","description": "Это описание!" ,"svg_id":"16","rooms":"3","status":"Свободна","side":"Восток","price":"12311231231","id":"1248"},
+                    {"floor": 5,"square":"3131","description": "Это описание!" ,"svg_id":"12","rooms":"1","status":"Свободна","side":"Восток","price":"12311231231","id":"123"},
+                    {"floor": 5,"square":"313","description": "Это описание!" ,"svg_id":"14","rooms":"2","status":"Резерв","side":"Восток","price":"12311231231","id":"1244"},
+                    {"floor": 5,"square":"313","description": "Это описание!" ,"svg_id":"16","rooms":"3","status":"Свободна","side":"Восток","price":"12311231231","id":"1248"},
+                    {"floor": 5,"square":"3131","description": "Это описание!" ,"svg_id":"12","rooms":"1","status":"Свободна","side":"Восток","price":"12311231231","id":"123"},
+                    {"floor": 5,"square":"3131","description": "Это описание!" ,"svg_id":"12","rooms":"1","status":"Свободна","side":"Восток","price":"12311231231","id":"123"},
+                    {"floor": 5,"square":"313","description": "Это описание!" ,"svg_id":"14","rooms":"2","status":"Резерв","side":"Восток","price":"12311231231","id":"1244"},
+                    {"floor": 5,"square":"313","description": "Это описание!" ,"svg_id":"16","rooms":"3","status":"Свободна","side":"Восток","price":"12311231231","id":"1248"}
+                ]},
+                {"apartments":[
+                    {"floor": 6,"square":"3131","description": "Это описание!" ,"svg_id":"12","rooms":"1","status":"Резерв","side":"Восток","price":"12311231231","id":"123"},
+                    {"floor": 6,"square":"313","description": "Это описание!" ,"svg_id":"14","rooms":"2","status":"Резерв","side":"Восток","price":"12311231231","id":"1244"},
+                    {"floor": 6,"square":"313","description": "Это описание!" ,"svg_id":"16","rooms":"3","status":"Свободна","side":"Восток","price":"12311231231","id":"1248"},
+                    {"floor": 6,"square":"3131","description": "Это описание!" ,"svg_id":"12","rooms":"1","status":"Резерв","side":"Восток","price":"12311231231","id":"123"},
+                    {"floor": 6,"square":"313","description": "Это описание!" ,"svg_id":"14","rooms":"2","status":"Резерв","side":"Восток","price":"12311231231","id":"1244"},
+                    {"floor": 6,"square":"313","description": "Это описание!" ,"svg_id":"16","rooms":"3","status":"Свободна","side":"Восток","price":"12311231231","id":"1248"},
+                    {"floor": 6,"square":"3131","description": "Это описание!" ,"svg_id":"12","rooms":"1","status":"Резерв","side":"Восток","price":"12311231231","id":"123"},
+                    {"floor": 6,"square":"313","description": "Это описание!" ,"svg_id":"14","rooms":"2","status":"Резерв","side":"Восток","price":"12311231231","id":"1244"},
+                    {"floor": 6,"square":"313","description": "Это описание!" ,"svg_id":"16","rooms":"3","status":"Свободна","side":"Восток","price":"12311231231","id":"1248"},
+                    {"floor": 6,"square":"3131","description": "Это описание!" ,"svg_id":"12","rooms":"1","status":"Резерв","side":"Восток","price":"12311231231","id":"123"}
+                ]},
+                {"apartments":[
+                    {"floor": 7,"square":"3131","description": "Это описание!" ,"svg_id":"12","rooms":"1","status":"Свободна","side":"Восток","price":"12311231231","id":"123"},
+                    {"floor": 7,"square":"313","description": "Это описание!" ,"svg_id":"14","rooms":"2","status":"Резерв","side":"Восток","price":"12311231231","id":"1244"},
+                    {"floor": 7,"square":"313","description": "Это описание!" ,"svg_id":"16","rooms":"3","status":"Свободна","side":"Восток","price":"12311231231","id":"1248"},
+                    {"floor": 7,"square":"3131","description": "Это описание!" ,"svg_id":"12","rooms":"1","status":"Свободна","side":"Восток","price":"12311231231","id":"123"},
+                    {"floor": 7,"square":"313","description": "Это описание!" ,"svg_id":"14","rooms":"2","status":"Резерв","side":"Восток","price":"12311231231","id":"1244"},
+                    {"floor": 7,"square":"313","description": "Это описание!" ,"svg_id":"16","rooms":"3","status":"Свободна","side":"Восток","price":"12311231231","id":"1248"},
+                    {"floor": 7,"square":"3131","description": "Это описание!" ,"svg_id":"12","rooms":"1","status":"Свободна","side":"Восток","price":"12311231231","id":"123"},
+                    {"floor": 7,"square":"3131","description": "Это описание!" ,"svg_id":"12","rooms":"1","status":"Свободна","side":"Восток","price":"12311231231","id":"123"},
+                    {"floor": 7,"square":"313","description": "Это описание!" ,"svg_id":"14","rooms":"2","status":"Резерв","side":"Восток","price":"12311231231","id":"1244"},
+                    {"floor": 7,"square":"313","description": "Это описание!" ,"svg_id":"16","rooms":"3","status":"Свободна","side":"Восток","price":"12311231231","id":"1248"}
+                ]},
+                {"apartments":[
+                    {"floor": 8,"square":"3131","description": "Это описание!" ,"svg_id":"12","rooms":"1","status":"Свободна","side":"Восток","price":"12311231231","id":"123"},
+                    {"floor": 8,"square":"313","description": "Это описание!" ,"svg_id":"14","rooms":"2","status":"Резерв","side":"Восток","price":"12311231231","id":"1244"},
+                    {"floor": 8,"square":"313","description": "Это описание!" ,"svg_id":"16","rooms":"3","status":"Свободна","side":"Восток","price":"12311231231","id":"1248"},
+                    {"floor": 8,"square":"3131","description": "Это описание!" ,"svg_id":"12","rooms":"1","status":"Свободна","side":"Восток","price":"12311231231","id":"123"},
+                    {"floor": 8,"square":"313","description": "Это описание!" ,"svg_id":"14","rooms":"2","status":"Резерв","side":"Восток","price":"12311231231","id":"1244"},
+                    {"floor": 8,"square":"313","description": "Это описание!" ,"svg_id":"16","rooms":"3","status":"Свободна","side":"Восток","price":"12311231231","id":"1248"},
+                    {"floor": 8,"square":"3131","description": "Это описание!" ,"svg_id":"12","rooms":"1","status":"Свободна","side":"Восток","price":"12311231231","id":"123"},
+                    {"floor": 8,"square":"3131","description": "Это описание!" ,"svg_id":"12","rooms":"1","status":"Свободна","side":"Восток","price":"12311231231","id":"123"},
+                    {"floor": 8,"square":"313","description": "Это описание!" ,"svg_id":"14","rooms":"2","status":"Резерв","side":"Восток","price":"12311231231","id":"1244"},
+                    {"floor": 8,"square":"313","description": "Это описание!" ,"svg_id":"16","rooms":"3","status":"Свободна","side":"Восток","price":"12311231231","id":"1248"}
+                ]},
+                {"apartments":[
+                    {"floor": 9,"square":"3131","description": "Это описание!" ,"svg_id":"12","rooms":"1","status":"Свободна","side":"Восток","price":"12311231231","id":"123"},
+                    {"floor": 9,"square":"313","description": "Это описание!" ,"svg_id":"14","rooms":"2","status":"Резерв","side":"Восток","price":"12311231231","id":"1244"},
+                    {"floor": 9,"square":"313","description": "Это описание!" ,"svg_id":"16","rooms":"3","status":"Свободна","side":"Восток","price":"12311231231","id":"1248"},
+                    {"floor": 9,"square":"3131","description": "Это описание!" ,"svg_id":"12","rooms":"1","status":"Свободна","side":"Восток","price":"12311231231","id":"123"},
+                    {"floor": 9,"square":"313","description": "Это описание!" ,"svg_id":"14","rooms":"2","status":"Резерв","side":"Восток","price":"12311231231","id":"1244"},
+                    {"floor": 9,"square":"313","description": "Это описание!" ,"svg_id":"16","rooms":"3","status":"Свободна","side":"Восток","price":"12311231231","id":"1248"},
+                    {"floor": 9,"square":"3131","description": "Это описание!" ,"svg_id":"12","rooms":"1","status":"Свободна","side":"Восток","price":"12311231231","id":"123"},
+                    {"floor": 9,"square":"3131","description": "Это описание!" ,"svg_id":"12","rooms":"1","status":"Свободна","side":"Восток","price":"12311231231","id":"123"},
+                    {"floor": 9,"square":"313","description": "Это описание!" ,"svg_id":"14","rooms":"2","status":"Резерв","side":"Восток","price":"12311231231","id":"1244"},
+                    {"floor": 9,"square":"313","description": "Это описание!" ,"svg_id":"16","rooms":"3","status":"Свободна","side":"Восток","price":"12311231231","id":"1248"}
+                ]},
+                {"apartments":[
+                    {"floor": 10,"square":"3131","description": "Это описание!" ,"svg_id":"12","rooms":"1","status":"Свободна","side":"Восток","price":"12311231231","id":"123"},
+                    {"floor": 10,"square":"313","description": "Это описание!" ,"svg_id":"14","rooms":"2","status":"Резерв","side":"Восток","price":"12311231231","id":"1244"},
+                    {"floor": 10,"square":"313","description": "Это описание!" ,"svg_id":"16","rooms":"3","status":"Резерв","side":"Восток","price":"12311231231","id":"1248"},
+                    {"floor": 10,"square":"3131","description": "Это описание!" ,"svg_id":"12","rooms":"1","status":"Свободна","side":"Восток","price":"12311231231","id":"123"},
+                    {"floor": 10,"square":"313","description": "Это описание!" ,"svg_id":"14","rooms":"2","status":"Резерв","side":"Восток","price":"12311231231","id":"1244"},
+                    {"floor": 10,"square":"313","description": "Это описание!" ,"svg_id":"16","rooms":"3","status":"Резерв","side":"Восток","price":"12311231231","id":"1248"},
+                    {"floor": 10,"square":"3131","description": "Это описание!" ,"svg_id":"12","rooms":"1","status":"Свободна","side":"Восток","price":"12311231231","id":"123"},
+                    {"floor": 10,"square":"313","description": "Это описание!" ,"svg_id":"14","rooms":"2","status":"Резерв","side":"Восток","price":"12311231231","id":"1244"},
+                    {"floor": 10,"square":"313","description": "Это описание!" ,"svg_id":"16","rooms":"3","status":"Резерв","side":"Восток","price":"12311231231","id":"1248"},
+                    {"floor": 10,"square":"3131","description": "Это описание!" ,"svg_id":"12","rooms":"1","status":"Свободна","side":"Восток","price":"12311231231","id":"123"}
+                ]},
+                {"apartments":[
+                    {"floor": 11,"square":"3131","description": "Это описание!" ,"svg_id":"12","rooms":"1","status":"Резерв","side":"Восток","price":"12311231231","id":"123"},
+                    {"floor": 11,"square":"313","description": "Это описание!" ,"svg_id":"14","rooms":"2","status":"Резерв","side":"Восток","price":"12311231231","id":"1244"},
+                    {"floor": 11,"square":"313","description": "Это описание!" ,"svg_id":"16","rooms":"3","status":"Свободна","side":"Восток","price":"12311231231","id":"1248"},
+                    {"floor": 11,"square":"3131","description": "Это описание!" ,"svg_id":"12","rooms":"1","status":"Резерв","side":"Восток","price":"12311231231","id":"123"},
+                    {"floor": 11,"square":"313","description": "Это описание!" ,"svg_id":"14","rooms":"2","status":"Резерв","side":"Восток","price":"12311231231","id":"1244"},
+                    {"floor": 11,"square":"313","description": "Это описание!" ,"svg_id":"16","rooms":"3","status":"Свободна","side":"Восток","price":"12311231231","id":"1248"},
+                    {"floor": 11,"square":"3131","description": "Это описание!" ,"svg_id":"12","rooms":"1","status":"Резерв","side":"Восток","price":"12311231231","id":"123"},
+                    {"floor": 11,"square":"3131","description": "Это описание!" ,"svg_id":"12","rooms":"1","status":"Резерв","side":"Восток","price":"12311231231","id":"123"},
+                    {"floor": 11,"square":"313","description": "Это описание!" ,"svg_id":"14","rooms":"2","status":"Резерв","side":"Восток","price":"12311231231","id":"1244"},
+                    {"floor": 11,"square":"313","description": "Это описание!" ,"svg_id":"16","rooms":"3","status":"Свободна","side":"Восток","price":"12311231231","id":"1248"}
+                ]},
+                {"apartments":[
+                    {"floor": 12,"square":"3131","description": "Это описание!" ,"svg_id":"12","rooms":"2","status":"Свободна","side":"Восток","price":"12311231231","id":"123"},
+                    {"floor": 12,"square":"313","description": "Это описание!" ,"svg_id":"14","rooms":"2","status":"Резерв","side":"Восток","price":"12311231231","id":"1244"},
+                    {"floor": 12,"square":"313","description": "Это описание!" ,"svg_id":"16","rooms":"3","status":"Свободна","side":"Восток","price":"12311231231","id":"1248"},
+                    {"floor": 12,"square":"3131","description": "Это описание!" ,"svg_id":"12","rooms":"2","status":"Свободна","side":"Восток","price":"12311231231","id":"123"},
+                    {"floor": 12,"square":"313","description": "Это описание!" ,"svg_id":"14","rooms":"2","status":"Резерв","side":"Восток","price":"12311231231","id":"1244"},
+                    {"floor": 12,"square":"313","description": "Это описание!" ,"svg_id":"16","rooms":"3","status":"Свободна","side":"Восток","price":"12311231231","id":"1248"},
+                    {"floor": 12,"square":"3131","description": "Это описание!" ,"svg_id":"12","rooms":"2","status":"Свободна","side":"Восток","price":"12311231231","id":"123"},
+                    {"floor": 12,"square":"313","description": "Это описание!" ,"svg_id":"14","rooms":"2","status":"Резерв","side":"Восток","price":"12311231231","id":"1244"},
+                    {"floor": 12,"square":"313","description": "Это описание!" ,"svg_id":"16","rooms":"3","status":"Свободна","side":"Восток","price":"12311231231","id":"1248"},
+                    {"floor": 12,"square":"3131","description": "Это описание!" ,"svg_id":"12","rooms":"2","status":"Свободна","side":"Восток","price":"12311231231","id":"123"}
+                ]},
+                {"apartments":[
+                    {"floor": 13,"square":"3131","description": "Это описание!" ,"svg_id":"12","rooms":"1","status":"Свободна","side":"Восток","price":"12311231231","id":"123"},
+                    {"floor": 13,"square":"313","description": "Это описание!" ,"svg_id":"14","rooms":"2","status":"Резерв","side":"Восток","price":"12311231231","id":"1244"},
+                    {"floor": 13,"square":"313","description": "Это описание!" ,"svg_id":"16","rooms":"3","status":"Резерв","side":"Восток","price":"12311231231","id":"1248"},
+                    {"floor": 13,"square":"3131","description": "Это описание!" ,"svg_id":"12","rooms":"1","status":"Свободна","side":"Восток","price":"12311231231","id":"123"},
+                    {"floor": 13,"square":"313","description": "Это описание!" ,"svg_id":"14","rooms":"2","status":"Резерв","side":"Восток","price":"12311231231","id":"1244"},
+                    {"floor": 13,"square":"313","description": "Это описание!" ,"svg_id":"16","rooms":"3","status":"Резерв","side":"Восток","price":"12311231231","id":"1248"},
+                    {"floor": 13,"square":"3131","description": "Это описание!" ,"svg_id":"12","rooms":"1","status":"Свободна","side":"Восток","price":"12311231231","id":"123"},
+                    {"floor": 13,"square":"313","description": "Это описание!" ,"svg_id":"14","rooms":"2","status":"Резерв","side":"Восток","price":"12311231231","id":"1244"},
+                    {"floor": 13,"square":"313","description": "Это описание!" ,"svg_id":"16","rooms":"3","status":"Резерв","side":"Восток","price":"12311231231","id":"1248"},
+                    {"floor": 13,"square":"313","description": "Это описание!" ,"svg_id":"16","rooms":"3","status":"Резерв","side":"Восток","price":"12311231231","id":"1248"}
+                ]},
+                {"apartments":[
+                    {"floor": 14,"square":"3131","description": "Это описание!" ,"svg_id":"12","rooms":"1","status":"Свободна","side":"Восток","price":"12311231231","id":"123"},
+                    {"floor": 14,"square":"313","description": "Это описание!" ,"svg_id":"14","rooms":"2","status":"Резерв","side":"Восток","price":"12311231231","id":"1244"},
+                    {"floor": 14,"square":"313","description": "Это описание!" ,"svg_id":"16","rooms":"3","status":"Свободна","side":"Восток","price":"12311231231","id":"1248"},
+                    {"floor": 14,"square":"3131","description": "Это описание!" ,"svg_id":"12","rooms":"1","status":"Свободна","side":"Восток","price":"12311231231","id":"123"},
+                    {"floor": 14,"square":"313","description": "Это описание!" ,"svg_id":"14","rooms":"2","status":"Резерв","side":"Восток","price":"12311231231","id":"1244"},
+                    {"floor": 14,"square":"313","description": "Это описание!" ,"svg_id":"16","rooms":"3","status":"Свободна","side":"Восток","price":"12311231231","id":"1248"},
+                    {"floor": 14,"square":"3131","description": "Это описание!" ,"svg_id":"12","rooms":"1","status":"Свободна","side":"Восток","price":"12311231231","id":"123"},
+                    {"floor": 14,"square":"3131","description": "Это описание!" ,"svg_id":"12","rooms":"1","status":"Свободна","side":"Восток","price":"12311231231","id":"123"},
+                    {"floor": 14,"square":"313","description": "Это описание!" ,"svg_id":"14","rooms":"2","status":"Резерв","side":"Восток","price":"12311231231","id":"1244"},
+                    {"floor": 14,"square":"313","description": "Это описание!" ,"svg_id":"16","rooms":"3","status":"Свободна","side":"Восток","price":"12311231231","id":"1248"}
+                ]},
+                {"apartments":[
+                    {"floor": 15,"square":"3131","description": "Это описание!" ,"svg_id":"12","rooms":"1","status":"Свободна","side":"Восток","price":"12311231231","id":"123"},
+                    {"floor": 15,"square":"313","description": "Это описание!" ,"svg_id":"14","rooms":"2","status":"Резерв","side":"Восток","price":"12311231231","id":"1244"},
+                    {"floor": 15,"square":"313","description": "Это описание!" ,"svg_id":"16","rooms":"3","status":"Свободна","side":"Восток","price":"12311231231","id":"1248"},
+                    {"floor": 15,"square":"3131","description": "Это описание!" ,"svg_id":"12","rooms":"1","status":"Свободна","side":"Восток","price":"12311231231","id":"123"},
+                    {"floor": 15,"square":"313","description": "Это описание!" ,"svg_id":"14","rooms":"2","status":"Резерв","side":"Восток","price":"12311231231","id":"1244"},
+                    {"floor": 15,"square":"313","description": "Это описание!" ,"svg_id":"16","rooms":"3","status":"Свободна","side":"Восток","price":"12311231231","id":"1248"},
+                    {"floor": 15,"square":"3131","description": "Это описание!" ,"svg_id":"12","rooms":"1","status":"Свободна","side":"Восток","price":"12311231231","id":"123"},
+                    {"floor": 15,"square":"3131","description": "Это описание!" ,"svg_id":"12","rooms":"1","status":"Свободна","side":"Восток","price":"12311231231","id":"123"},
+                    {"floor": 15,"square":"313","description": "Это описание!" ,"svg_id":"14","rooms":"2","status":"Резерв","side":"Восток","price":"12311231231","id":"1244"},
+                    {"floor": 15,"square":"313","description": "Это описание!" ,"svg_id":"16","rooms":"3","status":"Свободна","side":"Восток","price":"12311231231","id":"1248"}
+                ]},
+                {"apartments":[
+                    {"floor": 16,"square":"3131","description": "Это описание!" ,"svg_id":"12","rooms":"1","status":"Свободна","side":"Восток","price":"12311231231","id":"123"},
+                    {"floor": 16,"square":"313","description": "Это описание!" ,"svg_id":"14","rooms":"2","status":"Резерв","side":"Восток","price":"12311231231","id":"1244"},
+                    {"floor": 16,"square":"313","description": "Это описание!" ,"svg_id":"16","rooms":"3","status":"Свободна","side":"Восток","price":"12311231231","id":"1248"},
+                    {"floor": 16,"square":"3131","description": "Это описание!" ,"svg_id":"12","rooms":"1","status":"Свободна","side":"Восток","price":"12311231231","id":"123"},
+                    {"floor": 16,"square":"313","description": "Это описание!" ,"svg_id":"14","rooms":"2","status":"Резерв","side":"Восток","price":"12311231231","id":"1244"},
+                    {"floor": 16,"square":"313","description": "Это описание!" ,"svg_id":"16","rooms":"3","status":"Свободна","side":"Восток","price":"12311231231","id":"1248"},
+                    {"floor": 16,"square":"3131","description": "Это описание!" ,"svg_id":"12","rooms":"1","status":"Свободна","side":"Восток","price":"12311231231","id":"123"},
+                    {"floor": 16,"square":"3131","description": "Это описание!" ,"svg_id":"12","rooms":"1","status":"Свободна","side":"Восток","price":"12311231231","id":"123"},
+                    {"floor": 16,"square":"313","description": "Это описание!" ,"svg_id":"14","rooms":"2","status":"Резерв","side":"Восток","price":"12311231231","id":"1244"},
+                    {"floor": 16,"square":"313","description": "Это описание!" ,"svg_id":"16","rooms":"3","status":"Свободна","side":"Восток","price":"12311231231","id":"1248"}
+                ]},
+                {"apartments":[
+                    {"floor": 17,"square":"3131","description": "Это описание!" ,"svg_id":"12","rooms":"1","status":"Свободна","side":"Восток","price":"12311231231","id":"222"},
+                    {"floor": 17,"square":"313","description": "Это описание!" ,"svg_id":"14","rooms":"2","status":"Резерв","side":"Восток","price":"12311231231","id":"333"},
+                    {"floor": 17,"square":"313","description": "Это описание!" ,"svg_id":"16","rooms":"3","status":"Свободна","side":"Восток","price":"12311231231","id":"1248"},
+                    {"floor": 17,"square":"3131","description": "Это описание!" ,"svg_id":"12","rooms":"1","status":"Свободна","side":"Восток","price":"12311231231","id":"123"},
+                    {"floor": 17,"square":"313","description": "Это описание!" ,"svg_id":"14","rooms":"2","status":"Резерв","side":"Восток","price":"12311231231","id":"1244"},
+                    {"floor": 17,"square":"313","description": "Это описание!" ,"svg_id":"16","rooms":"3","status":"Свободна","side":"Восток","price":"12311231231","id":"444"},
+                    {"floor": 17,"square":"3131","description": "Это описание!" ,"svg_id":"12","rooms":"1","status":"Свободна","side":"Восток","price":"12311231231","id":"123"},
+                    {"floor": 17,"square":"3131","description": "Это описание!" ,"svg_id":"12","rooms":"1","status":"Свободна","side":"Восток","price":"12311231231","id":"123"},
+                    {"floor": 17,"square":"313","description": "Это описание!" ,"svg_id":"14","rooms":"2","status":"Резерв","side":"Восток","price":"12311231231","id":"1244"},
+                    {"floor": 17,"square":"313","description": "Это описание!" ,"svg_id":"16","rooms":"3","status":"Свободна","side":"Восток","price":"12311231231","id":"1248"}
+                ]},
+                {"apartments":[
+                    {"floor": 18,"square":"3131","description": "Это описание!" ,"svg_id":"12","rooms":"1","status":"Резерв","side":"Восток","price":"12311231231","id":"123"},
+                    {"floor": 18,"square":"313","description": "Это описание!" ,"svg_id":"14","rooms":"2","status":"Резерв","side":"Восток","price":"12311231231","id":"1244"},
+                    {"floor": 18,"square":"313","description": "Это описание!" ,"svg_id":"16","rooms":"3","status":"Резерв","side":"Восток","price":"12311231231","id":"1248"}
+                ]},
+                {"apartments":[
+                    {"floor": 19,"square":"3131","description": "Это описание!" ,"svg_id":"12","rooms":"1","status":"Свободна","side":"Восток","price":"12311231231","id":"123"},
+                    {"floor": 19,"square":"313","description": "Это описание!" ,"svg_id":"14","rooms":"2","status":"Резерв","side":"Восток","price":"12311231231","id":"1244"},
+                    {"floor": 19,"square":"313","description": "Это описание!" ,"svg_id":"16","rooms":"3","status":"Резерв","side":"Восток","price":"12311231231","id":"1248"}
+                ]},
+                {"apartments":[
+                    {"floor": 20,"square":"3131","description": "Это описание!" ,"svg_id":"12","rooms":"1","status":"Свободна","side":"Восток","price":"12311231231","id":"123"},
+                    {"floor": 20,"square":"313","description": "Это описание!" ,"svg_id":"14","rooms":"2","status":"Резерв","side":"Восток","price":"12311231231","id":"1244"},
+                    {"floor": 20,"square":"313","description": "Это описание!" ,"svg_id":"16","rooms":"3","status":"Свободна","side":"Восток","price":"12311231231","id":"1248"},
+                    {"floor": 20,"square":"3131","description": "Это описание!" ,"svg_id":"12","rooms":"1","status":"Свободна","side":"Восток","price":"12311231231","id":"123"},
+                    {"floor": 20,"square":"313","description": "Это описание!" ,"svg_id":"14","rooms":"2","status":"Резерв","side":"Восток","price":"12311231231","id":"1244"},
+                    {"floor": 20,"square":"313","description": "Это описание!" ,"svg_id":"16","rooms":"3","status":"Свободна","side":"Восток","price":"12311231231","id":"1248"},
+                    {"floor": 20,"square":"3131","description": "Это описание!" ,"svg_id":"12","rooms":"1","status":"Свободна","side":"Восток","price":"12311231231","id":"123"},
+                    {"floor": 20,"square":"3131","description": "Это описание!" ,"svg_id":"12","rooms":"1","status":"Свободна","side":"Восток","price":"12311231231","id":"123"},
+                    {"floor": 20,"square":"313","description": "Это описание!" ,"svg_id":"14","rooms":"2","status":"Резерв","side":"Восток","price":"12311231231","id":"1244"},
+                    {"floor": 20,"square":"313","description": "Это описание!" ,"svg_id":"16","rooms":"3","status":"Свободна","side":"Восток","price":"12311231231","id":"1248"}
+                ]},
+                {"apartments":[
+                    {"floor": 21,"square":"3131","description": "Это описание!" ,"svg_id":"12","rooms":"1","status":"Свободна","side":"Восток","price":"12311231231","id":"123"},
+                    {"floor": 21,"square":"313","description": "Это описание!" ,"svg_id":"14","rooms":"2","status":"Резерв","side":"Восток","price":"12311231231","id":"1244"},
+                    {"floor": 21,"square":"313","description": "Это описание!" ,"svg_id":"16","rooms":"3","status":"Свободна","side":"Восток","price":"12311231231","id":"1248"},
+                    {"floor": 21,"square":"3131","description": "Это описание!" ,"svg_id":"12","rooms":"1","status":"Свободна","side":"Восток","price":"12311231231","id":"123"},
+                    {"floor": 21,"square":"313","description": "Это описание!" ,"svg_id":"14","rooms":"2","status":"Резерв","side":"Восток","price":"12311231231","id":"1244"},
+                    {"floor": 21,"square":"313","description": "Это описание!" ,"svg_id":"16","rooms":"3","status":"Свободна","side":"Восток","price":"12311231231","id":"1248"},
+                    {"floor": 21,"square":"3131","description": "Это описание!" ,"svg_id":"12","rooms":"1","status":"Свободна","side":"Восток","price":"12311231231","id":"123"},
+                    {"floor": 21,"square":"3131","description": "Это описание!" ,"svg_id":"12","rooms":"1","status":"Свободна","side":"Восток","price":"12311231231","id":"123"},
+                    {"floor": 21,"square":"313","description": "Это описание!" ,"svg_id":"14","rooms":"2","status":"Резерв","side":"Восток","price":"12311231231","id":"1244"},
+                    {"floor": 21,"square":"313","description": "Это описание!" ,"svg_id":"16","rooms":"3","status":"Свободна","side":"Восток","price":"12311231231","id":"1248"}
+                ]},
+                {"apartments":[
+                    {"floor": 22,"square":"3131","description": "Это описание!" ,"svg_id":"12","rooms":"1","status":"Резерв","side":"Восток","price":"12311231231","id":"123"},
+                    {"floor": 22,"square":"313","description": "Это описание!" ,"svg_id":"14","rooms":"2","status":"Резерв","side":"Восток","price":"12311231231","id":"1244"},
+                    {"floor": 22,"square":"313","description": "Это описание!" ,"svg_id":"16","rooms":"3","status":"Резерв","side":"Восток","price":"12311231231","id":"1248"}
+                ]},
+                {"apartments":[
+                    {"floor": 23,"square":"3131","description": "Это описание!" ,"svg_id":"12","rooms":"1","status":"Свободна","side":"Восток","price":"12311231231","id":"123"},
+                    {"floor": 23,"square":"313","description": "Это описание!" ,"svg_id":"14","rooms":"2","status":"Резерв","side":"Восток","price":"12311231231","id":"1244"},
+                    {"floor": 23,"square":"313","description": "Это описание!" ,"svg_id":"16","rooms":"3","status":"Свободна","side":"Восток","price":"12311231231","id":"1248"},
+                    {"floor": 23,"square":"3131","description": "Это описание!" ,"svg_id":"12","rooms":"1","status":"Свободна","side":"Восток","price":"12311231231","id":"123"},
+                    {"floor": 23,"square":"313","description": "Это описание!" ,"svg_id":"14","rooms":"2","status":"Резерв","side":"Восток","price":"12311231231","id":"1244"},
+                    {"floor": 23,"square":"313","description": "Это описание!" ,"svg_id":"16","rooms":"3","status":"Свободна","side":"Восток","price":"12311231231","id":"1248"},
+                    {"floor": 23,"square":"3131","description": "Это описание!" ,"svg_id":"12","rooms":"1","status":"Свободна","side":"Восток","price":"12311231231","id":"123"},
+                    {"floor": 23,"square":"3131","description": "Это описание!" ,"svg_id":"12","rooms":"1","status":"Свободна","side":"Восток","price":"12311231231","id":"123"},
+                    {"floor": 23,"square":"313","description": "Это описание!" ,"svg_id":"14","rooms":"2","status":"Резерв","side":"Восток","price":"12311231231","id":"1244"},
+                    {"floor": 23,"square":"313","description": "Это описание!" ,"svg_id":"16","rooms":"3","status":"Свободна","side":"Восток","price":"12311231231","id":"1248"}
+                ]},
+                {"apartments":[
+                    {"floor": 24,"square":"3131","description": "Это описание!" ,"svg_id":"12","rooms":"2","status":"Свободна","side":"Восток","price":"12311231231","id":"123"},
+                    {"floor": 24,"square":"313","description": "Это описание!" ,"svg_id":"14","rooms":"2","status":"Резерв","side":"Восток","price":"12311231231","id":"1244"},
+                    {"floor": 24,"square":"313","description": "Это описание!" ,"svg_id":"16","rooms":"3","status":"Свободна","side":"Восток","price":"12311231231","id":"1248"}
+                ]},
+                {"apartments":[
+                    {"floor": 25,"square":"3131","description": "Это описание!" ,"svg_id":"12","rooms":"1","status":"Свободна","side":"Восток","price":"12311231231","id":"123"},
+                    {"floor": 25,"square":"313","description": "Это описание!" ,"svg_id":"14","rooms":"2","status":"Резерв","side":"Восток","price":"12311231231","id":"1244"},
+                    {"floor": 25,"square":"313","description": "Это описание!" ,"svg_id":"16","rooms":"3","status":"Резерв","side":"Восток","price":"12311231231","id":"1248"}
+                ]},
+                {"apartments":[
+                    {"floor": 1,"square":"3131","description": "Это описание!" ,"svg_id":"12","rooms":"1","status":"Свободна","side":"Восток","price":"12311231231","id":"123"},
+                    {"floor": 1,"square":"313","description": "Это описание!" ,"svg_id":"14","rooms":"2","status":"Резерв","side":"Восток","price":"12311231231","id":"1244"},
+                    {"floor": 1,"square":"313","description": "Это описание!" ,"svg_id":"16","rooms":"1","status":"Резерв","side":"Восток","price":"12311231231","id":"1248"}
+                ]},
+                {"apartments":[
+                    {"floor": 1,"square":"3131","description": "Это описание!" ,"svg_id":"12","rooms":"1","status":"Свободна","side":"Восток","price":"12311231231","id":"123"},
+                    {"floor": 1,"square":"313","description": "Это описание!" ,"svg_id":"14","rooms":"2","status":"Резерв","side":"Восток","price":"12311231231","id":"1244"},
+                    {"floor": 1,"square":"313","description": "Это описание!" ,"svg_id":"16","rooms":"1","status":"Резерв","side":"Восток","price":"12311231231","id":"1248"}
+                ]},
+                {"apartments":[
+                    {"floor": 1,"square":"3131","description": "Это описание!" ,"svg_id":"12","rooms":"1","status":"Свободна","side":"Восток","price":"12311231231","id":"123"},
+                    {"floor": 1,"square":"313","description": "Это описание!" ,"svg_id":"14","rooms":"2","status":"Резерв","side":"Восток","price":"12311231231","id":"1244"},
+                    {"floor": 1,"square":"313","description": "Это описание!" ,"svg_id":"16","rooms":"1","status":"Резерв","side":"Восток","price":"12311231231","id":"1248"}
+                ]},
+                {"apartments":[
+                    {"floor": 1,"square":"9999","description": "Это описание!" ,"svg_id":"12","rooms":"1","status":"Свободна","side":"Восток","price":"12311231231","id":"123"},
+                    {"floor": 1,"square":"313","description": "Это описание!" ,"svg_id":"14","rooms":"2","status":"Резерв","side":"Восток","price":"12311231231","id":"1244"},
+                    {"floor": 1,"square":"313","description": "Это описание!" ,"svg_id":"16","rooms":"1","status":"Резерв","side":"Восток","price":"12311231231","id":"1248"}
+                ]},
+                {"apartments":[
+                    {"floor": 1,"square":"3131","description": "Это описание!" ,"svg_id":"12","rooms":"1","status":"Свободна","side":"Восток","price":"12311231231","id":"123"},
+                    {"floor": 1,"square":"313","description": "Это описание!" ,"svg_id":"14","rooms":"2","status":"Резерв","side":"Восток","price":"12311231231","id":"1244"},
+                    {"floor": 1,"square":"313","description": "Это описание!" ,"svg_id":"16","rooms":"1","status":"Резерв","side":"Восток","price":"12311231231","id":"1248"}
+                ]},
+                {"apartments":[
+                    {"floor": 1,"square":"31","description": "Это описание!" ,"svg_id":"12","rooms":"1","status":"Свободна","side":"Восток","price":"12311231231","id":"123"},
+                    {"floor": 1,"square":"31","description": "Это описание!" ,"svg_id":"14","rooms":"2","status":"Резерв","side":"Восток","price":"12311231231","id":"1244"},
+                    {"floor": 1,"square":"31","description": "Это описание!" ,"svg_id":"16","rooms":"1","status":"Резерв","side":"Восток","price":"12311231231","id":"1248"}
+                ]},
+                {"apartments":[
+                    {"floor": 1,"square":"3131","description": "Это описание!" ,"svg_id":"12","rooms":"1","status":"Свободна","side":"Восток","price":"12311231231","id":"123"},
+                    {"floor": 1,"square":"313","description": "Это описание!" ,"svg_id":"14","rooms":"2","status":"Резерв","side":"Восток","price":"12311231231","id":"1244"},
+                    {"floor": 1,"square":"313","description": "Это описание!" ,"svg_id":"16","rooms":"1","status":"Резерв","side":"Восток","price":"12311231231","id":"1249"}]}
+        ]
+        },
+    "tower_2":{
+        "floors":[
+            {"apartments":[
+                {"floor": 1,"square":"3131","description": "Это описание!" ,"svg_id":"12","rooms":"1","status":"Свободна","side":"Восток","price":"12311231231","id":"123"},
+                {"floor": 1,"square":"313","description": "Это описание!" ,"svg_id":"14","rooms":"2","status":"Резерв","side":"Восток","price":"12311231231","id":"1244"},
+                {"floor": 1,"square":"313","description": "Это описание!" ,"svg_id":"16","rooms":"3","status":"Резерв","side":"Восток","price":"12311231231","id":"1243"}]}
+            ]}}}
