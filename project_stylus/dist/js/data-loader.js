@@ -295,19 +295,21 @@
                                 floor++;
                                 if(count++ == floorCount){
                                     resp[key].forEach(item => {
-                                        let tr = document.createElement("tr");
-                                        tr.classList.add('table-styled__tr');
-                                        tr.classList.add('js-ap-page');
-                                        tr.innerHTML = `
-                                            <td><div class="number">${item.id}</div></td>
-                                            <td>${item.square}</td>
-                                            <td>${item.rooms}</td>
-                                            <td>${item.side}</td>
-                                            <td>${floor}</td>
-                                            <td>Башня ${tower}</td>
-                                            <td>${item.price} р.</td>
-                                        `;
-                                        table.appendChild(tr);
+                                        if(item.status == "Свободна"){
+                                            let tr = document.createElement("tr");
+                                            tr.classList.add('table-styled__tr');
+                                            tr.classList.add('js-ap-page');
+                                            tr.innerHTML = `
+                                                <td><div class="number">${item.id}</div></td>
+                                                <td>${item.square}</td>
+                                                <td>${item.rooms}</td>
+                                                <td>${item.side}</td>
+                                                <td>${floor}</td>
+                                                <td>Башня ${tower}</td>
+                                                <td>${item.price} р.</td>
+                                            `;
+                                            table.appendChild(tr);
+                                        }
                                     });
 
                                 }
@@ -332,21 +334,23 @@
                             if(key == 'apartments'){
                                 floor += 1;
                                 resp[key].forEach(item => {
-                                    let tr = document.createElement("tr");
-                                    tr.classList.add('table-styled__tr');
-                                    tr.classList.add('js-ap-page');
-                                    tr.innerHTML = `
-                                        <td><div class="number">${item.id}</div></td>
-                                        <td>${item.square}</td>
-                                        <td>${item.rooms}</td>
-                                        <td>${item.side}</td>
-                                        <td>${floor}</td>
-                                        <td>Башня ${tower}</td>
-                                        <td>${item.price} р.</td>
-                                    `;
-                                    table.appendChild(tr);
-                                    squareArr.push(item.square);
-                                    priceArr.push(item.price);
+                                    if(item.status == "Свободна"){
+                                        let tr = document.createElement("tr");
+                                        tr.classList.add('table-styled__tr');
+                                        tr.classList.add('js-ap-page');
+                                        tr.innerHTML = `
+                                            <td><div class="number">${item.id}</div></td>
+                                            <td>${item.square}</td>
+                                            <td>${item.rooms}</td>
+                                            <td>${item.side}</td>
+                                            <td>${floor}</td>
+                                            <td>Башня ${tower}</td>
+                                            <td>${item.price} р.</td>
+                                        `;
+                                        table.appendChild(tr);
+                                        squareArr.push(item.square);
+                                        priceArr.push(item.price);
+                                    }
                                 });
                             }
                             rec(resp[key]);
