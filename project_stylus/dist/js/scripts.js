@@ -212,6 +212,7 @@ $(document).ready(function(){
 
 	$('.js-apartment-img').tooltipster({
 		animation: 'fade',
+		updateAnimation: "fade",
 		delay: 10,
 		theme: ['tooltipster-color'],
 		trigger: 'custom',
@@ -244,7 +245,6 @@ $(document).ready(function(){
 			let apId = $(helper.origin).data('apid');
 			
 			getApData(floor, tower, apId).then(data => {
-				console.log(data.id);
 				if(data.status.toLowerCase() == "свободна"){
 					instance.content(`
 						<div class="plan-tooltip-box">
@@ -307,6 +307,7 @@ $(document).ready(function(){
 
 	$('.js-tower-tooltip').tooltipster({
 		animation: 'fade',
+		updateAnimation: "fade",
 		delay: 10,
 		theme: ['tooltipster-color'],
 		trigger: 'custom',
@@ -340,6 +341,7 @@ $(document).ready(function(){
 			let floor = Number($(helper.origin).siblings('.floor-help').find('span').text());
 			await getFloorData(floor, tower).then(info => {
 				if(info.freeAp != 0){
+					// instance.__options.updateAnimation = "fade";
 					instance.content(`
 						<div class="floor-tooltip-box">
 							<div class="floor-info">Свободно ${info.freeAp} из ${info.totalAp} квартир</div>
@@ -381,7 +383,7 @@ $(document).ready(function(){
 		},
 		functionPosition: function(instance, helper, position){
 			position.coord.top += 10;
-			position.coord.left -= $(helper.origin).width()/4;
+			position.coord.left -= $(helper.origin).width()/4 - 50;
 			$('.tooltipster-base').on( 'click', function() {
 			});
 			return position;

@@ -137,6 +137,7 @@
                 floorAparts.forEach((apart, index) => {
                     apartsPng[index].dataset.apid = apart.id;
                     apartsPng[index].dataset.rooms = apart.rooms;
+                    apartsPng[index].classList.add('visible');
                 });
             }
             rec(resp);

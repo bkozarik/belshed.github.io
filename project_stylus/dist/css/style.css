@@ -2085,11 +2085,17 @@ ol >li::before {
   left: 0;
   top: 0;
   opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
   transition: opacity .2s ease-out 0s;
   -webkit-transition: opacity .2s ease-out 0s;
   -moz-transition: opacity .2s ease-out 0s;
   -ms-transition: opacity .2s ease-out 0s;
   -o-transition: opacity .2s ease-out 0s;
+}
+.floor-plan-ap.visible{
+  visibility: visible;
+  pointer-events: all;
 }
 .floor-plan-ap:hover, .floor-plan-ap.active{
   opacity: 1;
