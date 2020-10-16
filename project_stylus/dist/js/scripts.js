@@ -21,7 +21,29 @@ $(document).ready(function(){
 
 	//стилизация селекта
 	setTimeout(function() {
-		$('select').styler();
+		$('select').styler({
+			onSelectClosed: function() {
+				let filterParam = $(this).find('.jq-selectbox__select-text').text();
+				let table = document.querySelector('.table-styled tbody');
+
+				table.querySelectorAll('tr').forEach(tr => {
+					tr.querySelectorAll('td').forEach((td, index) => {
+						if(index == 5){
+							let content = td.innerText;
+							if(filterParam ==  'Все корпусы' || filterParam ==  'Все объекты'){
+								td.parentNode.style.display = 'table-row';
+							}
+							else if(content !=  filterParam){
+								td.parentNode.style.display = 'none';
+							}
+							else{
+								td.parentNode.style.display = 'table-row';
+							}
+						}
+					});
+				});
+			}
+		});
 	}, 100);
 
 	$('.Slider').slick({
@@ -188,7 +210,7 @@ $(document).ready(function(){
 
 	$('table').wrap("<div class='table-responsive'></div>");
 
-	$('.plan-help').tooltipster({
+	$('.js-apartment-img').tooltipster({
 		animation: 'fade',
 		delay: 10,
 		theme: ['tooltipster-color'],
@@ -205,10 +227,85 @@ $(document).ready(function(){
 		functionInit: function(instance, helper){
 			var content = $(helper.origin).find('.plan-tooltip').html();
 			instance.content(content);
-		}
+			$(helper.origin).on( 'click', function() {
+				$('.js-apartment-img').removeClass('active');
+				if ($(this).hasClass('active')) {
+					$('.floor-one').removeClass('active');
+				}
+				else {
+					$('.floor-one').removeClass('active');
+					$(this).addClass('active');
+				}
+			});
+		},
+		functionBefore: function(instance, helper) {
+			let floor = sessionStorage.getItem('floor');
+			let tower = sessionStorage.getItem('tower');
+			let apId = $(helper.origin).data('apid');
+			
+			getApData(floor, tower, apId).then(data => {
+				console.log(data.id);
+				if(data.status.toLowerCase() == "свободна"){
+					instance.content(`
+						<div class="plan-tooltip-box">
+							<div class="table-responsive"><table>
+								<tbody><tr>
+									<td>Стоимость:</td>
+									<td><div class="price"><span class="number">${data.price}</span> руб.</div></td>
+								</tr>
+								<tr>
+									<td>Площадь:</td>
+									<td><span class="number">${data.square}</span> м<sup>2</sup></td>
+								</tr>
+								<tr>
+									<td>Комнат/спален:</td>
+									<td><span class="number">${data.rooms}</span></td>
+								</tr>
+							</tbody></table></div>
+							<a href="./apartments-plan.html" class="more"><i class="icon-arrow"></i></a>
+						</div>
+					`);
+				}
+				else{
+					instance.content(`
+						<div class="plan-tooltip-box">
+							<div class="table-responsive"><table>
+								<tbody><tr>
+									<td>Стоимость:</td>
+									<td><div class="price"><span class="number">${data.price}</span> руб.</div></td>
+								</tr>
+								<tr>
+									<td>Площадь:</td>
+									<td><span class="number">${data.square}</span> м<sup>2</sup></td>
+								</tr>
+								<tr>
+									<td>Комнат/спален:</td>
+									<td><span class="number">${data.rooms}</span></td>
+								</tr>
+							</tbody></table></div>
+						</div>
+					`);
+				}
+			});	
+		},
+		functionReady: function(instance, helper) {
+
+			$(document).mouseup(function (e){ // событие клика по веб-документу
+				var div = $(".tooltipster-base"); // тут указываем ID элемента
+				if (!div.is(e.target) // если клик был не по нашему блоку
+				    && div.has(e.target).length === 0) { // и не по его дочерним элементам
+					$('.floor-one').removeClass('active');
+					$('.js-apartment-img').removeClass('active');
+					$('.js-room-list input').prop("checked", false);
+				}
+			});
+			$(".tooltipster-base").on( 'click', function() {
+				$('.floor-one').removeClass('active');
+			});
+		},
 	});
 
-	$('.floor-one').tooltipster({
+	$('.js-tower-tooltip').tooltipster({
 		animation: 'fade',
 		delay: 10,
 		theme: ['tooltipster-color'],
@@ -234,18 +331,36 @@ $(document).ready(function(){
 				}
 			});
 		},
-		functionBefore: function(instance, helper) {
-			let floor = Number($(helper.origin).find('.floor-help span').text());
-			getFloorData(floor).then(info => {
-				instance.content(`
-					<div class="floor-tooltip-box">
-						<div class="floor-info">Свободно ${info.freeAp} из ${info.totalAp} квартир</div>
-						<ul class="list-floor-info">
-							${info.apInfo}
-						</ul>
-						<a href="./etag.html" class="more"><i class="icon-arrow"></i></a>
-					</div>`
-				);
+		functionBefore: async function(instance, helper) {
+			let tower;
+
+			helper.origin.classList.contains('floor-one-left') ? tower = 1 : helper.origin.classList.contains('floor-one-sigle') ? tower = 3 : tower = 2;
+
+
+			let floor = Number($(helper.origin).siblings('.floor-help').find('span').text());
+			await getFloorData(floor, tower).then(info => {
+				if(info.freeAp != 0){
+					instance.content(`
+						<div class="floor-tooltip-box">
+							<div class="floor-info">Свободно ${info.freeAp} из ${info.totalAp} квартир</div>
+							<ul class="list-floor-info">
+								${info.apInfo}
+							</ul>
+							<a href="./etag.html" class="more"><i class="icon-arrow"></i></a>
+						</div>`
+					);
+				}
+				else{
+					instance.content(`
+						<div class="floor-tooltip-box">
+							<div class="floor-info">Свободно ${info.freeAp} из ${info.totalAp} квартир</div>
+							<ul class="list-floor-info">
+								${info.apInfo}
+							</ul>
+						</div>`
+					);
+				}
+				
 			});
 		},
 		functionReady: function(instance, helper) {
@@ -255,6 +370,9 @@ $(document).ready(function(){
 				if (!div.is(e.target) // если клик был не по нашему блоку
 				    && div.has(e.target).length === 0) { // и не по его дочерним элементам
 					$('.floor-one').removeClass('active');
+					$('.floor-one-left').removeClass('active');
+					$('.floor-one-right').removeClass('active');
+					$('.floor-one-sigle').removeClass('active');
 				}
 			});
 			$(".tooltipster-base").on( 'click', function() {

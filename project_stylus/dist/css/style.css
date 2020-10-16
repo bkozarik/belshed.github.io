@@ -2079,13 +2079,82 @@ ol >li::before {
   padding: 3.2rem 14.6rem 2.5rem;
   margin: 0 0 12.5rem;
 }
+.floor-plan-ap{
+  position: absolute;
+  cursor: pointer;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  transition: opacity .2s ease-out 0s;
+  -webkit-transition: opacity .2s ease-out 0s;
+  -moz-transition: opacity .2s ease-out 0s;
+  -ms-transition: opacity .2s ease-out 0s;
+  -o-transition: opacity .2s ease-out 0s;
+}
+.floor-plan-ap:hover, .floor-plan-ap.active{
+  opacity: 1;
+}
+
+.floor-plan-tower .floor-plan-ap:nth-child(2){
+  top: 371px;
+  width: 264px;
+  left: 11px;
+}
+.floor-plan-tower .floor-plan-ap:nth-child(3){
+  width: 296px;
+  top: auto;
+  bottom: 0;
+  left: 22px;
+}
+.floor-plan-tower .floor-plan-ap:nth-child(4){
+  width: 265px;
+  top: 198px;
+  left: 10px;
+}
+.floor-plan-tower .floor-plan-ap:nth-child(5){
+  width: 296px;
+  left: 21px;
+}
+.floor-plan-tower .floor-plan-ap:nth-child(6){
+  width: 253px;
+  left: 259px;
+}
+.floor-plan-tower .floor-plan-ap:nth-child(7){
+  width: 250px;
+  top: auto;
+  bottom: 0;
+  left: 260px;
+}
+.floor-plan-tower .floor-plan-ap:nth-child(8){
+  width: 329px;
+  top: auto;
+  left: auto;
+  right: 20px;
+  bottom: 0;
+}
+.floor-plan-tower .floor-plan-ap:nth-child(9){
+  width: 266px;
+  left: auto;
+  right: 10px;
+  top: 371px;
+}
+.floor-plan-tower .floor-plan-ap:nth-child(10){
+  left: 497px;
+  width: 165px;
+  z-index: 2;
+}
+.floor-plan-tower .floor-plan-ap:nth-child(11){
+  width: 266px;
+  right: 10px;
+  left: auto;
+}
 .floor-plan img {
   width: 100%;
 }
 .floor-plan .floor-plan-box {
-  margin: 0;
+  margin: 30px;
 }
-.floor-plan .floor-plan-box >div {
+.floor-plan .floor-plan-box > div {
   padding: 0;
 }
 .floor-plan .floor-name {
@@ -2180,6 +2249,7 @@ ol >li::before {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
+  margin-left: auto;
   display: flex;
   -webkit-box-align: center;
   -webkit-align-items: center;
@@ -2188,7 +2258,6 @@ ol >li::before {
   position: relative;
   cursor: pointer;
   padding: 0 0 0 0.5rem;
-  margin-left: auto;
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
@@ -2236,6 +2305,38 @@ ol >li::before {
 }
 .floor-one {
   position: relative;
+  display: flex;
+}
+.floor-one:hover .floor-help{
+  color: #d29966;
+}
+.floor-one .floor-tooltip{
+  display: none;
+}
+.floor-one-left, .floor-one-right{
+  cursor: pointer;
+  flex-shrink: 0;
+  position: absolute;
+  height: 100%;
+  right: 7.5rem;
+  opacity: 0;
+  transition: opacity .2s ease-in 0s;
+  -webkit-transition: opacity .2s ease-in 0s;
+  -moz-transition: opacity .2s ease-in 0s;
+  -ms-transition: opacity .2s ease-in 0s;
+  -o-transition: opacity .2s ease-in 0s;
+}
+.floor-one-left.active, .floor-one-right.active, .floor-sub .floor-one-sigle.active{
+  opacity: 1;
+}
+.floor-one-left.active + .floor-help, .floor-one-right.active + .floor-help, .floor-sub .floor-one-sigle.active + .floor-help{
+  color: #d29966;
+}
+.floor-one-left .floor-tooltip, .floor-one-right .floor-tooltip {
+  display: none;
+}
+.floor-one-left:hover, .floor-one-right:hover{
+  opacity: 1;
 }
 .floor-one.active .floor-help {
   color: #d29966;
@@ -2263,13 +2364,18 @@ ol >li::before {
   width: 7.5rem;
   height: 7rem;
 }
-.floor-penthouse .floor-help::before {
-  width: 26.5rem;
-  margin-right: 3rem;
+.floor-penthouse .floor-help::before, .floor-penthouse .floor-help::after {
+  display: none;
 }
-.floor-penthouse .floor-help:after {
+.floor-penthouse .floor-one-left{
   width: 26.5rem;
   margin-right: 44.5rem;
+  background: rgba(210,153,102,0.7);
+}
+.floor-penthouse .floor-one-right{
+  width: 26.5rem;
+  margin-right: 3rem;
+  background: rgba(210,153,102,0.7);
 }
 .floor-basement {
   position: absolute;
@@ -2296,8 +2402,21 @@ ol >li::before {
   /* opacity: .7; */
   width: 80rem;
 }
+.floor-main .floor-one-left{
+  width: 30rem;
+  margin-right: 42.7rem;
+  background: rgba(210,153,102,0.7);
+}
+.floor-main .floor-one-right{
+  width: 30rem;
+  margin-right: 1.5rem;
+  background: rgba(210,153,102,0.7);
+}
 .floor-main .floor-help {
   width: 7.5rem;
+}
+.floor-main .floor-help::before, .floor-main .floor-help::after{
+  display: none;
 }
 .floor-sub {
   position: absolute;
@@ -2316,7 +2435,22 @@ ol >li::before {
   display: none;
 }
 .floor-sub .floor-help::before {
-  width: 83.3rem;
+  display: none;
+}
+.floor-sub .floor-one-sigle{
+  width: 85rem;
+  margin-right: 1.5rem;
+  background: rgba(210,153,102,0.7);
+  opacity: 0;
+  cursor: pointer;
+  transition: opacity .2s ease-in 0s;
+  -webkit-transition: opacity .2s ease-in 0s;
+  -moz-transition: opacity .2s ease-in 0s;
+  -ms-transition: opacity .2s ease-in 0s;
+  -o-transition: opacity .2s ease-in 0s;
+}
+.floor-sub .floor-one-sigle:hover {
+  opacity: 1;
 }
 .floor-tooltip {
   opacity: 0;
@@ -2923,6 +3057,7 @@ select {
   line-height: 1.2;
   cursor: pointer;
   margin: 0;
+  user-select: none;
 }
 .check label .number {
   font-size: 2.2rem;
@@ -3310,7 +3445,7 @@ body.hidden {
   border-bottom: 1.2rem solid transparent;
 }
 .plan-help {
-  cursor: pointer;
+  margin: 0px  10px;
 }
 .plan-tooltip {
   background: #d29966;

@@ -23,14 +23,30 @@
         }
     }
 
-    const getFloorData = async (floor) => {
+    const getApData = (floor, tower, apId) => {
+        let data = getData(url, login, pass).then(resp => {
+            
+            let apartments = resp['apartments'];
+
+            let targetApart = apartments.filter(apartment => (apartment.floor == floor && apartment.tower == tower && apartment.id == apId));
+            
+            sessionStorage.setItem('appId', targetApart[0].id);
+
+            return targetApart[0];
+        });
+
+        return data;
+    }
+
+    const getFloorData = async (floor, tower) => {
         
         let data = await getData(url, login, pass).then(resp => {
-            console.log(resp);
 
-            let apartments = resp['towers']['tower_1'].floors[floor - 1]['apartments'];
+            let apartments = new Array();
 
-            let freeApCount = apartments.filter(apartment => apartment.status == "Свободна").length;
+            resp['apartments'].forEach(apartment => (apartment.floor == floor) && (apartment.tower == tower) ? apartments.push(apartment) : null)
+
+            let freeApCount = apartments.filter(apartment => (apartment.status == "Свободна")).length;
 
             let roomAms = new Array();
 
@@ -66,6 +82,7 @@
             }
             
             sessionStorage.setItem('floor', floor);
+            sessionStorage.setItem('tower', tower);
             sessionStorage.setItem('floorData', info.toString());
 
             return info;
@@ -74,9 +91,9 @@
         return data;
     }
 
-    const getFullFloorData = (floor=null) => {
+    const getFullFloorData = (floor=null, tower=null) => {
         if(floor != null){
-            getFloorData(floor);
+            getFloorData(floor, tower);
         }
 
         try {
@@ -107,31 +124,20 @@
 
     }
 
-    const fillSvg = async (floor) => {
-        let svg = document.querySelector('.js-etag-svg');
+    const fillPng = async (floor, tower) => {
 
         let data = await getData(url, login, pass).then(resp =>{
             const rec = resp => {
-                for(let key in resp){
-                    if (typeof(resp[key]) == 'object' ){
-                        if(key == 'apartments'){
-                            let savgApartments = document.querySelectorAll('.svg_apartment');
-                            let counter = 0;
-                            resp[key].forEach((item, index)=> {
-                                if(item.floor == floor){
-                                    savgApartments[counter].dataset.apid = item.id;
-                                    
-                                    counter += 1;
-                                }
-                            });
-                            
-                        }
-                        rec(resp[key]);
-                    }
-                    else{
-                        return;
-                    }
-                }
+                let apartments = resp['apartments'];
+
+                let apartsPng = document.querySelectorAll('.js-apartment-img');
+
+                let floorAparts = apartments.filter(apartment => (apartment.floor == floor && apartment.tower == tower));
+
+                floorAparts.forEach((apart, index) => {
+                    apartsPng[index].dataset.apid = apart.id;
+                    apartsPng[index].dataset.rooms = apart.rooms;
+                });
             }
             rec(resp);
         });
@@ -213,13 +219,11 @@
                 ElSlider.noUiSlider.on('set', (values) => {
                     let minVal = Number(values[0].replace(/\s+/g, ''));
                     let maxVal = Number(values[1].replace(/\s+/g, ''));
-                    console.log(minVal);
     
                     table.querySelectorAll('tr').forEach(tr => {
                         tr.querySelectorAll('td').forEach((td, index) => {
                             if(index == 6){
                                 let content = td.innerText.replace(" р.", "");
-                                console.log(Number(content));
                                 if(Number(content) < minVal || Number(content) > maxVal){
                                     td.parentNode.style.display = 'none';
                                 }
@@ -255,65 +259,68 @@
     }
 
     const showSvgApPage = () => {
-        let svg = event.target;
-
-        while(!svg.classList.contains('svg_apartment')){
-            svg = svg.parentNode;
-        }
-
-        let appId = svg.dataset.apid;
-        
-        sessionStorage.setItem('appId', appId);
 
         window.location.assign('./apartments-plan.html');
     }
 
-    const fillTable = (floorCount=null) => {
-
+    const fillTable = (floorCount=null) => {    
         while (table.firstChild) {
             table.firstChild.remove();
         }
 
+        let tower = Number(sessionStorage.getItem('tower'));
+
+        let featuresListNode = document.querySelector('.list-check-line');
+        let necessaryFeatures = [];
+        if(window.location.href.includes('home-plan.html')){
+            featuresListNode.querySelectorAll('label').forEach(label => {
+                if(label.querySelector('input').checked){
+                    necessaryFeatures.push(label.querySelector('span').innerText);
+                }
+            });
+        }
+
+        
+
+
         let data = getData(url, login, pass).then(resp => {
-            let floor = 0;
-            var tower = 1;
-            let count = 1;
             let squareArr = new Array();
             let priceArr = new Array();
 
+
             const rec = resp => {
-                if(floorCount != null){
+                if(typeof(floorCount) == 'number' || typeof(floorCount) == 'string'){
                     for(let key in resp){
                         if (typeof(resp[key]) == 'object' ){
-                            if (key == 'tower_2') {
-                                floor = 0;
-                                tower += 1;
-                            }
-                            if (key == 'floors') {
-                            }
                             if(key == 'apartments'){
-                                floor++;
-                                if(count++ == floorCount){
-                                    resp[key].forEach(item => {
-                                        if(item.status == "Свободна"){
-                                            let tr = document.createElement("tr");
-                                            tr.classList.add('table-styled__tr');
-                                            tr.classList.add('js-ap-page');
+                                resp[key].forEach(item => {
+                                    if(item.status == "Свободна" && item.floor == floorCount && item.tower == tower){
+                                        let tr = document.createElement("tr");
+                                        tr.classList.add('table-styled__tr');
+                                        tr.classList.add('js-ap-page');
+                                        tr.innerHTML = `
+                                            <td><div class="number">${item.id}</div></td>
+                                            <td>${item.square}</td>
+                                            <td>${item.rooms}</td>
+                                            <td>${item.side}</td>
+                                            <td>${item.floor}</td>
+                                            <td>Башня ${item.tower}</td>
+                                            <td>${item.price} р.</td>
+                                        `;
+                                        if(item.tower == 3){
                                             tr.innerHTML = `
                                                 <td><div class="number">${item.id}</div></td>
                                                 <td>${item.square}</td>
                                                 <td>${item.rooms}</td>
                                                 <td>${item.side}</td>
-                                                <td>${floor}</td>
-                                                <td>Башня ${tower}</td>
+                                                <td>${item.floor}</td>
+                                                <td>Корпус 1</td>
                                                 <td>${item.price} р.</td>
                                             `;
-                                            table.appendChild(tr);
                                         }
-                                    });
-
-                                }
-                                
+                                        table.appendChild(tr);
+                                    }
+                                });
                             }
                             rec(resp[key]);
                         }
@@ -325,31 +332,65 @@
                 else{
                     for(let key in resp){
                         if (typeof(resp[key]) == 'object' ){
-                            if (key == 'tower_2') {
-                                floor = 0;
-                                tower += 1;
-                            }
-                            if (key == 'floors') {
-                            }
                             if(key == 'apartments'){
-                                floor += 1;
                                 resp[key].forEach(item => {
                                     if(item.status == "Свободна"){
-                                        let tr = document.createElement("tr");
-                                        tr.classList.add('table-styled__tr');
-                                        tr.classList.add('js-ap-page');
-                                        tr.innerHTML = `
-                                            <td><div class="number">${item.id}</div></td>
-                                            <td>${item.square}</td>
-                                            <td>${item.rooms}</td>
-                                            <td>${item.side}</td>
-                                            <td>${floor}</td>
-                                            <td>Башня ${tower}</td>
-                                            <td>${item.price} р.</td>
-                                        `;
-                                        table.appendChild(tr);
-                                        squareArr.push(item.square);
-                                        priceArr.push(item.price);
+                                        if(necessaryFeatures.filter(feature => item.features.includes(feature)).length > 0){
+                                            let tr = document.createElement("tr");
+                                            tr.classList.add('table-styled__tr');
+                                            tr.classList.add('js-ap-page');
+                                            tr.innerHTML = `
+                                                <td><div class="number">${item.id}</div></td>
+                                                <td>${item.square}</td>
+                                                <td>${item.rooms}</td>
+                                                <td>${item.side}</td>
+                                                <td>${item.floor}</td>
+                                                <td>Башня ${item.tower}</td>
+                                                <td>${item.price} р.</td>
+                                            `;
+                                            if(item.tower == 3){
+                                                tr.innerHTML = `
+                                                    <td><div class="number">${item.id}</div></td>
+                                                    <td>${item.square}</td>
+                                                    <td>${item.rooms}</td>
+                                                    <td>${item.side}</td>
+                                                    <td>${item.floor}</td>
+                                                    <td>Корпус 1</td>
+                                                    <td>${item.price} р.</td>
+                                                `;
+                                            }
+                                            table.appendChild(tr);
+                                            squareArr.push(item.square);
+                                            priceArr.push(item.price);
+                                        }
+                                        else if (necessaryFeatures.length == 0){
+                                            let tr = document.createElement("tr");
+                                            tr.classList.add('table-styled__tr');
+                                            tr.classList.add('js-ap-page');
+                                            tr.innerHTML = `
+                                                <td><div class="number">${item.id}</div></td>
+                                                <td>${item.square}</td>
+                                                <td>${item.rooms}</td>
+                                                <td>${item.side}</td>
+                                                <td>${item.floor}</td>
+                                                <td>Башня ${item.tower}</td>
+                                                <td>${item.price} р.</td>
+                                            `;
+                                            if(item.tower == 3){
+                                                tr.innerHTML = `
+                                                    <td><div class="number">${item.id}</div></td>
+                                                    <td>${item.square}</td>
+                                                    <td>${item.rooms}</td>
+                                                    <td>${item.side}</td>
+                                                    <td>${item.floor}</td>
+                                                    <td>Корпус 1</td>
+                                                    <td>${item.price} р.</td>
+                                                `;
+                                            }
+                                            table.appendChild(tr);
+                                            squareArr.push(item.square);
+                                            priceArr.push(item.price);
+                                        }
                                     }
                                 });
                             }
@@ -381,106 +422,67 @@
 
     getFullFloorData();
 
-    if(window.location.href.indexOf('home-plan.html') > 0){
+    if(window.location.href.includes('home-plan.html')){
         fillTable();
+
+        let featuresListNode = document.querySelector('.list-check-line');
+
+        featuresListNode.querySelectorAll('input').forEach(input => input.addEventListener('change', fillTable));
     }
-    else if(window.location.href.indexOf('etag.html') > 0){
+    else if(window.location.href.includes('etag.html')){
 
-        document.querySelector('.js-room-list input').checked = true;
         let currFloor = Number(sessionStorage.getItem('floor'));
+        let currTower = Number(sessionStorage.getItem('tower'));
 
-        fillSvg(currFloor);
+        fillPng(currFloor, currTower);
         fillTable(currFloor);
         
-        let svgAparts = document.querySelectorAll('.svg_apartment');
+        let pngApartsTriggers = document.querySelectorAll('.js-apartment-img');
 
-        svgAparts.forEach(apart => apart.addEventListener('click', showSvgApPage))
+        let filterInputs = document.querySelectorAll('.js-room-list input');
+        filterInputs.forEach(input => input.addEventListener('change', () => {
+            let chosenRoomAmount = Number(input.parentNode.querySelector('.number').innerText);
+
+            document.querySelectorAll('.js-apartment-img').forEach(img => {
+                img.classList.remove('active');
+
+                if(Number(img.dataset.rooms) == chosenRoomAmount){
+                    img.classList.add('active');
+                }
+            });
+        }));
+        
+
     }
-    else if(window.location.href.indexOf('apartments-plan.html') > 0){
+    else if(window.location.href.includes('apartments-plan.html')){
 
         let currFloor = Number(sessionStorage.getItem('floor'));
         let currAp = Number(sessionStorage.getItem('appId'));
+        let currTower = Number(sessionStorage.getItem('tower'));
 
-        document.querySelector('.section-title h1').innerText = "Квартира " + currAp;
+        document.querySelector('.section-title h1').innerText = "Квартира №" + currAp;
 
         document.querySelector('.room-name span').innerText = currFloor;
 
-        let data = getData(url, login, pass).then(resp => {
-            const rec = resp => {
-                for(let key in resp){
-                    if (typeof(resp[key]) == 'object' ){
-                        if(key == 'apartments'){
-                            resp[key].forEach(item => {
-                                if(item.id == currAp && item.floor == currFloor){
-                                    let data = document.createElement("div");
-                                    data.classList.add('col-md-6');
-                                    data.innerHTML = `
-                                                    <ul class="room-info">
-                                                    <li>
-                                                        <div class="row">
-                                                            <div class="col-sm-auto">
-                                                                <div class="name">Комнат:</div>
-                                                            </div>
-                                                            <div class="col-sm">
-                                                                <span class="number">${item.rooms}</span>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="row">
-                                                            <div class="col-sm-auto">
-                                                                <div class="name">Площадь:</div>
-                                                            </div>
-                                                            <div class="col-sm">
-                                                                <div class="sub"><span class="number">${item.square}</span> м<sup>2</sup></div>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="row">
-                                                            <div class="col-sm-auto">
-                                                                <div class="name">Отделка:</div>
-                                                            </div>
-                                                            <div class="col-sm">
-                                                                с отделкой
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="row">
-                                                            <div class="col-sm-auto">
-                                                                <div class="name">Исполнение:</div>
-                                                            </div>
-                                                            <div class="col-sm">
-                                                                готова к заселению
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="row">
-                                                            <div class="col-sm-auto">
-                                                                <div class="name">Стоимость:</div>
-                                                            </div>
-                                                            <div class="col-sm">
-                                                                <div class="sub"><span class="number">${item.price}</span> руб.</div>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                </ul>
-                                                <p>${item.description}</p>
-                                    `;
-                                    document.querySelector('.room-data.row').appendChild(data);
-                                    return;
-                                }
-                            });
-                        }
-                        rec(resp[key]);
-                    }
-                    else{
-                        return;
-                    }
-                }
-            }
-            rec(resp);
+        getApData(currFloor, currTower, currAp).then(apartment => {
+            
+            document.querySelector('.js-room-img').setAttribute('src', apartment.png_path);
+            document.querySelector('.js-load').setAttribute('href', apartment.doc_png_path);
+            document.querySelector('.js-rooms').innerText = apartment.rooms;
+            document.querySelector('.js-square').innerText = apartment.square;
+            document.querySelector('.js-features').innerText = apartment.features;
+            document.querySelector('.js-isReady').innerText = apartment.isReady;
+            document.querySelector('.js-price').innerText = apartment.price;
+            document.querySelector('.js-description').innerText = apartment.description;
+
         });
     }
+    
+    document.querySelectorAll('.js-scroll-link').forEach(link => {
+        link.addEventListener('click', () => {
+            event.preventDefault(); 
+            document.querySelectorAll('.js-scroll-link').forEach(item => item.classList.toggle('active'));            
+
+            document.querySelector(event.target.getAttribute('href')).scrollIntoView({block:"start",behavior:"smooth"});
+        });
+    });
