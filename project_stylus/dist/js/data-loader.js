@@ -126,11 +126,19 @@
 
     const fillPng = async (floor, tower) => {
 
+        if(tower != 3){
+            document.querySelector('.plan-help-tower').classList.add('active');
+        }
+        else{
+            document.querySelector('.plan-help-corpus').classList.add('active');
+            document.querySelector('.floor-plan').style.padding = "3.2rem 11.6rem 2.5rem";
+        }
+
         let data = await getData(url, login, pass).then(resp =>{
             const rec = resp => {
                 let apartments = resp['apartments'];
 
-                let apartsPng = document.querySelectorAll('.js-apartment-img');
+                let apartsPng = document.querySelectorAll('.plan-help.active .js-apartment-img');
 
                 let floorAparts = apartments.filter(apartment => (apartment.floor == floor && apartment.tower == tower));
 
@@ -160,9 +168,9 @@
         dragSliderPr.dataset.max = maxValPr;
         dragSliderPr.dataset.end = maxValPr;
 
-
         $('.DragSlider').each(function(i, elem) {
-            var El = $(elem),
+            if(!$(this).hasClass('noUi-horizontal')){
+                var El = $(elem),
                 ElSlider = El[0],
                 ElValue = El.closest('.DragSliderSection').find('.DragSliderValue'),
                 ElMuch = El.closest('.DragSliderSection').find('.DragSliderMuch'),
@@ -178,63 +186,64 @@
                 if(isNaN(DataMinStart)) {var DataMinStart = DataMin;}
                 if(isNaN(DataMax)) {var DataMax = 1000;}
                 if(isNaN(DataMaxStart)) {var DataMaxStart = DataMax;}
-    
-            noUiSlider.create(ElSlider , {
-                start: [DataStart, DataEnd],
-                connect: true,
-                tooltips: true,
-                step: 1,
-                range: {
-                    'min': DataMin,
-                    'max': DataMax,
-                    
-                },
-                format: wNumb({
-                    decimals: 0,
-                    thousand: ' '
-                })
-            });
-            
-            if($(ElSlider).hasClass('DragSliderPl')){
-                ElSlider.noUiSlider.on('set', (values) => {
-                    let minVal = Number(values[0].replace(/\s+/g, ''));
-                    let maxVal = Number(values[1].replace(/\s+/g, ''));
-    
-                    table.querySelectorAll('tr').forEach(tr => {
-                        tr.querySelectorAll('td').forEach((td, index) => {
-                            if(index == 1){
-                                let content = td.innerText;
-                                
-                                if(Number(content) < minVal || Number(content) > maxVal){
-                                    td.parentNode.style.display = 'none';
+        
+                noUiSlider.create(ElSlider , {
+                    start: [DataStart, DataEnd],
+                    connect: true,
+                    tooltips: true,
+                    step: 1,
+                    range: {
+                        'min': DataMin,
+                        'max': DataMax,
+                        
+                    },
+                    format: wNumb({
+                        decimals: 0,
+                        thousand: ' '
+                    })
+                });
+
+                if($(ElSlider).hasClass('DragSliderPl')){
+                    ElSlider.noUiSlider.on('set', (values) => {
+                        let minVal = Number(values[0].replace(/\s+/g, ''));
+                        let maxVal = Number(values[1].replace(/\s+/g, ''));
+        
+                        table.querySelectorAll('tr').forEach(tr => {
+                            tr.querySelectorAll('td').forEach((td, index) => {
+                                if(index == 1){
+                                    let content = td.innerText;
+                                    
+                                    if(Number(content) < minVal || Number(content) > maxVal){
+                                        td.parentNode.classList.remove('visible');
+                                    }
+                                    else{
+                                        td.parentNode.classList.add('visible');
+                                    }
                                 }
-                                else{
-                                    td.parentNode.style.display = 'table-row';
-                                }
-                            }
+                            });
                         });
-                    });
-                })
-            }
-            else if($(ElSlider).hasClass('DragSliderPrice')){
-                ElSlider.noUiSlider.on('set', (values) => {
-                    let minVal = Number(values[0].replace(/\s+/g, ''));
-                    let maxVal = Number(values[1].replace(/\s+/g, ''));
-    
-                    table.querySelectorAll('tr').forEach(tr => {
-                        tr.querySelectorAll('td').forEach((td, index) => {
-                            if(index == 6){
-                                let content = td.innerText.replace(" р.", "");
-                                if(Number(content) < minVal || Number(content) > maxVal){
-                                    td.parentNode.style.display = 'none';
+                    })
+                }
+                else if($(ElSlider).hasClass('DragSliderPrice')){
+                    ElSlider.noUiSlider.on('set', (values) => {
+                        let minVal = Number(values[0].replace(/\s+/g, ''));
+                        let maxVal = Number(values[1].replace(/\s+/g, ''));
+        
+                        table.querySelectorAll('tr').forEach(tr => {
+                            tr.querySelectorAll('td').forEach((td, index) => {
+                                if(index == 6){
+                                    let content = td.innerText.replace(" р.", "");
+                                    if(Number(content) < minVal || Number(content) > maxVal){
+                                        td.parentNode.classList.remove('visible');
+                                    }
+                                    else{
+                                        td.parentNode.classList.add('visible');
+                                    }
                                 }
-                                else{
-                                    td.parentNode.style.display = 'table-row';
-                                }
-                            }
+                            });
                         });
-                    });
-                })
+                    })
+                }
             }
             
         });
@@ -299,6 +308,7 @@
                                         let tr = document.createElement("tr");
                                         tr.classList.add('table-styled__tr');
                                         tr.classList.add('js-ap-page');
+                                        tr.classList.add('visible');
                                         tr.innerHTML = `
                                             <td><div class="number">${item.id}</div></td>
                                             <td>${item.square}</td>
@@ -336,10 +346,11 @@
                             if(key == 'apartments'){
                                 resp[key].forEach(item => {
                                     if(item.status == "Свободна"){
-                                        if(necessaryFeatures.filter(feature => item.features.includes(feature)).length > 0){
+                                        if(necessaryFeatures.filter(feature => item.features.includes(feature)).length == necessaryFeatures.length){
                                             let tr = document.createElement("tr");
                                             tr.classList.add('table-styled__tr');
                                             tr.classList.add('js-ap-page');
+                                            tr.classList.add('visible');
                                             tr.innerHTML = `
                                                 <td><div class="number">${item.id}</div></td>
                                                 <td>${item.square}</td>
@@ -368,6 +379,7 @@
                                             let tr = document.createElement("tr");
                                             tr.classList.add('table-styled__tr');
                                             tr.classList.add('js-ap-page');
+                                            tr.classList.add('visible');
                                             tr.innerHTML = `
                                                 <td><div class="number">${item.id}</div></td>
                                                 <td>${item.square}</td>
@@ -409,26 +421,168 @@
             let tr = document.querySelectorAll('.js-ap-page');
             tr.forEach(item => item.addEventListener('click', showApPage));
             
-            if(window.location.href.indexOf('home-plan.html') > 0){
+            // if(window.location.href.indexOf('home-plan.html') > 0){
 
-                let minSquare = squareArr.reduce((a, b) => Math.min(a, b));
-                let maxSquare = squareArr.reduce((a, b) => Math.max(a, b));
-                let minPrice = priceArr.reduce((a, b) => Math.min(a, b));
-                let maxPrice = priceArr.reduce((a, b) => Math.max(a, b));
+                
+            //     let minSquare = squareArr.reduce((a, b) => Math.min(a, b));
+            //     let maxSquare = squareArr.reduce((a, b) => Math.max(a, b));
+            //     let minPrice = priceArr.reduce((a, b) => Math.min(a, b));
+            //     let maxPrice = priceArr.reduce((a, b) => Math.max(a, b));
+                
+            //     // filterInit(minSquare, maxSquare, minPrice, maxPrice);
 
-                filterInit(minSquare, maxSquare, minPrice, maxPrice);
-            }
+            //     table.querySelectorAll('tr').forEach(tr => {
+            //         tr.querySelectorAll('td').forEach((td, index) => {
+            //             if(index == 1){
+            //                 let content = td.innerText;
+                            
+            //                 if(Number(content) < minSquare || Number(content) > maxSquare){
+            //                     td.parentNode.classList.remove('visible');
+            //                 }
+            //                 else{
+            //                     td.parentNode.classList.add('visible');
+            //                 }
+            //             }
+            //             else if(index == 6){
+            //                 let content = td.innerText.replace(" р.", "");
+            //                 if(Number(content) < minPrice || Number(content) > maxPrice){
+            //                     td.parentNode.classList.remove('visible');
+            //                 }
+            //                 else{
+            //                     td.parentNode.classList.add('visible');
+            //                 }
+            //             }
+            //         });
+            //     });
+            // }
         });
+    }
+
+    const filterTable = () => {
+
+        while (table.firstChild) {
+            table.firstChild.remove();
+        }
+        
+        let squareArr = new Array();
+        let priceArr = new Array();
+        let data = getData(url, login, pass).then(resp => {
+
+            resp['apartments'].forEach(item => {
+                if(item.status == "Свободна"){
+                    squareArr.push(item.square);
+                    priceArr.push(item.price);
+                }
+            });
+
+            let minSquare = squareArr.reduce((a, b) => Math.min(a, b));
+            let maxSquare = squareArr.reduce((a, b) => Math.max(a, b));
+            let minPrice = priceArr.reduce((a, b) => Math.min(a, b));
+            let maxPrice = priceArr.reduce((a, b) => Math.max(a, b));
+            
+            filterInit(minSquare, maxSquare, minPrice, maxPrice);
+
+            let necessaryFeaturesList = Array.prototype.slice.call(document.querySelectorAll('.list-check-line label')).filter(label => label.querySelector('input:checked')).map(item => item.querySelector('span').innerText);
+
+            let location = 0;
+            let type = 0;
+
+            switch (document.querySelector('div.js-location .selected').innerText) {
+                case "Все корпусы":
+                    location = 0;
+                    break;
+                case "Башня 1":
+                    location = 1;
+                    break;
+                case "Башня 2":
+                    location = 2;
+                    break;
+                case "Корпус 1":
+                    location = 3;
+                    break;
+            
+                default:
+                    location = 0;
+                    break;
+            }
+
+            switch (document.querySelector('div.js-objects .selected').innerText) {
+                case "Все объекты":
+                    type = 0;
+                    break;
+                case "1 комнатные":
+                    type = 1;
+                    break;
+                case "2-х комнатные":
+                    type = 2;
+                    break;
+                case "3-х комнатные":
+                    type = 3;
+                    break;
+                case "Пентхаусы":
+                    type = 4;
+                    break;
+            
+                default:
+                    type = 0;
+                    break;
+            }
+
+            let filterParams = {
+                minPrice: Number(minPrice),
+                maxPrice: Number(maxPrice),
+                minSquare: Number(minSquare),
+                maxSquare: Number(maxSquare),
+                type: type,
+                location: location,
+                features: necessaryFeaturesList
+            }
+
+            console.log(filterParams);
+
+            resp['apartments'].forEach(item => {
+                if(item.status == "Свободна"){
+                    if((item.price <= filterParams.maxPrice) && (item.price >= filterParams.minPrice) && (item.square <= filterParams.maxSquare) && (item.square >= filterParams.minSquare) && (necessaryFeaturesList.filter(feature => item.features.includes(feature)).length == necessaryFeaturesList.length)){
+                        let tr = document.createElement("tr");
+                        tr.classList.add('table-styled__tr');
+                        tr.classList.add('js-ap-page');
+                        tr.classList.add('visible');
+                        tr.innerHTML = `
+                            <td><div class="number">${item.id}</div></td>
+                            <td>${item.square}</td>
+                            <td>${item.rooms}</td>
+                            <td>${item.side}</td>
+                            <td>${item.floor}</td>
+                            <td>Башня ${item.tower}</td>
+                            <td>${item.price} р.</td>
+                        `;
+                        if(item.tower == 3){
+                            tr.innerHTML = `
+                                <td><div class="number">${item.id}</div></td>
+                                <td>${item.square}</td>
+                                <td>${item.rooms}</td>
+                                <td>${item.side}</td>
+                                <td>${item.floor}</td>
+                                <td>Корпус 1</td>
+                                <td>${item.price} р.</td>
+                            `;
+                        }
+                        table.appendChild(tr);
+                    }
+                }
+            });
+        });
+        
+        
+
     }
 
     getFullFloorData();
 
     if(window.location.href.includes('home-plan.html')){
-        fillTable();
+        filterTable();
 
-        let featuresListNode = document.querySelector('.list-check-line');
-
-        featuresListNode.querySelectorAll('input').forEach(input => input.addEventListener('change', fillTable));
+        document.querySelectorAll('.js-filter-trigger').forEach(input => input.addEventListener('change', filterTable));
     }
     else if(window.location.href.includes('etag.html')){
 

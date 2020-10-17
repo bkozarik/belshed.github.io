@@ -23,28 +23,73 @@ $(document).ready(function(){
 	setTimeout(function() {
 		$('select').styler({
 			onSelectClosed: function() {
-				let filterParam = $(this).find('.jq-selectbox__select-text').text();
-				let table = document.querySelector('.table-styled tbody');
-
-				table.querySelectorAll('tr').forEach(tr => {
-					tr.querySelectorAll('td').forEach((td, index) => {
-						if(index == 5){
-							let content = td.innerText;
-							if(filterParam ==  'Все корпусы' || filterParam ==  'Все объекты'){
-								td.parentNode.style.display = 'table-row';
-							}
-							else if(content !=  filterParam){
-								td.parentNode.style.display = 'none';
-							}
-							else{
-								td.parentNode.style.display = 'table-row';
-							}
-						}
-					});
-				});
+				filterTable();
+				// let filterParam = $(this).find('.jq-selectbox__select-text').text();
+				// let table = document.querySelector('.table-styled tbody');
+				// let rows = table.querySelectorAll('tr.visible');
+				// if($(this).hasClass('js-location')){
+				// 	rows.forEach(tr => {
+				// 		tr.querySelectorAll('td').forEach((td, index) => {
+				// 			if(index == 5){
+				// 				let content = td.innerText;
+				// 				if(filterParam ==  'Все корпусы'){
+				// 					td.parentNode.style.display = "table-row";
+				// 				}
+				// 				else if(content !=  filterParam){
+				// 					td.parentNode.style.display = "none";
+				// 				}
+				// 				else{
+				// 					td.parentNode.style.display = "table-row";
+				// 				}
+				// 			}
+				// 		});
+				// 	});
+				// }
+				// else if($(this).hasClass('js-objects')){
+				// 	if(filterParam != "Пентхаусы" && filterParam != "Все объекты"){
+				// 		filterParam = Number(filterParam[0]);
+				// 		rows.forEach(tr => {
+				// 			tr.querySelectorAll('td').forEach((td, index) => {
+				// 				if(index == 2){
+				// 					let content = td.innerText;
+				// 					if(filterParam ==  'Все объекты'){
+				// 						td.parentNode.style.display = "table-row";
+				// 					}
+				// 					else if(content !=  filterParam){
+				// 						td.parentNode.style.display = "none";
+				// 					}
+				// 					else{
+				// 						td.parentNode.style.display = "table-row";
+				// 					}
+				// 				}
+				// 			});
+				// 		});
+				// 	}
+				// 	else if(filterParam == "Пентхаусы"){
+				// 		filterParam = 32;
+				// 		rows.forEach(tr => {
+				// 			tr.querySelectorAll('td').forEach((td, index) => {
+				// 				if(index == 4){
+				// 					let content = td.innerText;
+				// 					if(content !=  filterParam){
+				// 						td.parentNode.style.display = "none";
+				// 					}
+				// 					else{
+				// 						td.parentNode.style.display = "table-row";
+				// 					}
+				// 				}
+				// 			});
+				// 		});
+				// 	}
+				// 	else if(filterParam == "Все объекты"){
+				// 		rows.forEach(tr => {
+				// 			tr.style.display = "table-row";
+				// 		});
+				// 	}
+				// }
 			}
 		});
-	}, 100);
+	}, 50);
 
 	$('.Slider').slick({
 		arrows: false,
@@ -232,6 +277,8 @@ $(document).ready(function(){
 				$('.js-apartment-img').removeClass('active');
 				if ($(this).hasClass('active')) {
 					$('.floor-one').removeClass('active');
+					$('.js-apartment-img').removeClass('active');
+					$('.js-room-list input').prop("checked", false);
 				}
 				else {
 					$('.floor-one').removeClass('active');
