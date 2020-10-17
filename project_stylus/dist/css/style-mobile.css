@@ -1,4 +1,8 @@
 @media only screen and (max-width: 767px) {
+  .floor-plan .compass{
+    /* width: 35%; */
+    bottom: -13rem;
+  }
   .logo {
     width: 30rem;
   }
@@ -69,6 +73,15 @@
   .floor-plan {
     padding: 0 0 4rem;
   }
+  .floor-plan .floor-plan-box {
+    margin: 0;
+  }
+  .plan-help-tower {
+    margin: 0 7px;
+  }
+  .plan-help-corpus {
+    margin: 0 11.5px;
+  }
   .floor-plan .floor-name {
     display: none;
   }
@@ -91,6 +104,12 @@
   }
 }
 @media only screen and (max-width: 575px) {
+  .plan-help-tower {
+    margin: 0 4px;
+  }
+  .plan-help-corpus {
+    margin: 0 8.5px;
+  }
   h1 {
     font-size: 3.6rem;
   }
@@ -213,5 +232,13 @@
   }
   .plan-tooltip-box table .number {
     font-size: 1.8rem;
+  }
+}
+@media only screen and (max-width: 475px){
+  .plan-help-tower {
+    margin: 0 4px;
+  }
+  .plan-help-corpus {
+    margin: 0 5px;
   }
 }

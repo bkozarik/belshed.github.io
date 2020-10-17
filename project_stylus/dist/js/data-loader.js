@@ -131,7 +131,22 @@
         }
         else{
             document.querySelector('.plan-help-corpus').classList.add('active');
-            document.querySelector('.floor-plan').style.padding = "3.2rem 11.6rem 2.5rem";
+            window.addEventListener('resize', () => {
+                if(window.innerWidth > 767){
+                    document.querySelector('.floor-plan').style.padding = "3.2rem 11.6rem 2.5rem";
+    
+                }
+                else{
+                    document.querySelector('.floor-plan').style.padding = "0";
+                }
+            });
+            if(window.innerWidth > 767){
+                document.querySelector('.floor-plan').style.padding = "3.2rem 11.6rem 2.5rem";
+
+            }
+            else{
+                document.querySelector('.floor-plan').style.padding = "0";
+            }
         }
 
         let data = await getData(url, login, pass).then(resp =>{
