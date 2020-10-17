@@ -464,116 +464,124 @@
             table.firstChild.remove();
         }
         
-        let squareArr = new Array();
-        let priceArr = new Array();
-        let data = getData(url, login, pass).then(resp => {
+        
+        setTimeout(() => {
+            let squareArr = new Array();
+            let priceArr = new Array();
+            let data = getData(url, login, pass).then(resp => {
 
-            resp['apartments'].forEach(item => {
-                if(item.status == "Свободна"){
-                    squareArr.push(item.square);
-                    priceArr.push(item.price);
+                resp['apartments'].forEach(item => {
+                    if(item.status == "Свободна"){
+                        squareArr.push(item.square);
+                        priceArr.push(item.price);
+                    }
+                });
+
+                let minSquare = squareArr.reduce((a, b) => Math.min(a, b));
+                let maxSquare = squareArr.reduce((a, b) => Math.max(a, b));
+                let minPrice = priceArr.reduce((a, b) => Math.min(a, b));
+                let maxPrice = priceArr.reduce((a, b) => Math.max(a, b));
+                
+                filterInit(minSquare, maxSquare, minPrice, maxPrice);
+
+                let necessaryFeaturesList = Array.prototype.slice.call(document.querySelectorAll('.list-check-line label')).filter(label => label.querySelector('input:checked')).map(item => item.querySelector('span').innerText);
+
+                let location = 0;
+                let type = 0;
+
+                switch (document.querySelector('div.js-location .selected').innerText) {
+                    case "Все корпусы":
+                        location = 0;
+                        break;
+                    case "Башня 1":
+                        location = 1;
+                        break;
+                    case "Башня 2":
+                        location = 2;
+                        break;
+                    case "Корпус 1":
+                        location = 3;
+                        break;
+                
+                    default:
+                        location = 0;
+                        break;
                 }
-            });
 
-            let minSquare = squareArr.reduce((a, b) => Math.min(a, b));
-            let maxSquare = squareArr.reduce((a, b) => Math.max(a, b));
-            let minPrice = priceArr.reduce((a, b) => Math.min(a, b));
-            let maxPrice = priceArr.reduce((a, b) => Math.max(a, b));
-            
-            filterInit(minSquare, maxSquare, minPrice, maxPrice);
+                switch (document.querySelector('div.js-objects .selected').innerText) {
+                    case "Все объекты":
+                        type = 0;
+                        break;
+                    case "1 комнатные":
+                        type = 1;
+                        break;
+                    case "2-х комнатные":
+                        type = 2;
+                        break;
+                    case "3-х комнатные":
+                        type = 3;
+                        break;
+                    case "4-х комнатные":
+                        type = 4;
+                        break;
+                    case "Пентхаусы":
+                        type = 5;
+                        break;
+                
+                    default:
+                        type = 0;
+                        break;
+                }
 
-            let necessaryFeaturesList = Array.prototype.slice.call(document.querySelectorAll('.list-check-line label')).filter(label => label.querySelector('input:checked')).map(item => item.querySelector('span').innerText);
+                let filterParams = {
+                    minPrice: Number(minPrice),
+                    maxPrice: Number(maxPrice),
+                    minSquare: Number(minSquare),
+                    maxSquare: Number(maxSquare),
+                    type: type,
+                    location: location,
+                    features: necessaryFeaturesList
+                }
 
-            let location = 0;
-            let type = 0;
+                console.log(filterParams);
 
-            switch (document.querySelector('div.js-location .selected').innerText) {
-                case "Все корпусы":
-                    location = 0;
-                    break;
-                case "Башня 1":
-                    location = 1;
-                    break;
-                case "Башня 2":
-                    location = 2;
-                    break;
-                case "Корпус 1":
-                    location = 3;
-                    break;
-            
-                default:
-                    location = 0;
-                    break;
-            }
-
-            switch (document.querySelector('div.js-objects .selected').innerText) {
-                case "Все объекты":
-                    type = 0;
-                    break;
-                case "1 комнатные":
-                    type = 1;
-                    break;
-                case "2-х комнатные":
-                    type = 2;
-                    break;
-                case "3-х комнатные":
-                    type = 3;
-                    break;
-                case "Пентхаусы":
-                    type = 4;
-                    break;
-            
-                default:
-                    type = 0;
-                    break;
-            }
-
-            let filterParams = {
-                minPrice: Number(minPrice),
-                maxPrice: Number(maxPrice),
-                minSquare: Number(minSquare),
-                maxSquare: Number(maxSquare),
-                type: type,
-                location: location,
-                features: necessaryFeaturesList
-            }
-
-            console.log(filterParams);
-
-            resp['apartments'].forEach(item => {
-                if(item.status == "Свободна"){
-                    if((item.price <= filterParams.maxPrice) && (item.price >= filterParams.minPrice) && (item.square <= filterParams.maxSquare) && (item.square >= filterParams.minSquare) && (necessaryFeaturesList.filter(feature => item.features.includes(feature)).length == necessaryFeaturesList.length)){
-                        let tr = document.createElement("tr");
-                        tr.classList.add('table-styled__tr');
-                        tr.classList.add('js-ap-page');
-                        tr.classList.add('visible');
-                        tr.innerHTML = `
-                            <td><div class="number">${item.id}</div></td>
-                            <td>${item.square}</td>
-                            <td>${item.rooms}</td>
-                            <td>${item.side}</td>
-                            <td>${item.floor}</td>
-                            <td>Башня ${item.tower}</td>
-                            <td>${item.price} р.</td>
-                        `;
-                        if(item.tower == 3){
+                resp['apartments'].forEach(item => {
+                    if(item.status == "Свободна"){
+                        if((item.price <= filterParams.maxPrice) && (item.price >= filterParams.minPrice) && (item.square <= filterParams.maxSquare) && (item.square >= filterParams.minSquare) && (necessaryFeaturesList.filter(feature => item.features.includes(feature)).length == necessaryFeaturesList.length)){
+                            let tr = document.createElement("tr");
+                            tr.classList.add('table-styled__tr');
+                            tr.classList.add('js-ap-page');
+                            tr.classList.add('visible');
                             tr.innerHTML = `
                                 <td><div class="number">${item.id}</div></td>
                                 <td>${item.square}</td>
                                 <td>${item.rooms}</td>
                                 <td>${item.side}</td>
                                 <td>${item.floor}</td>
-                                <td>Корпус 1</td>
+                                <td>Башня ${item.tower}</td>
                                 <td>${item.price} р.</td>
                             `;
+                            if(item.tower == 3){
+                                tr.innerHTML = `
+                                    <td><div class="number">${item.id}</div></td>
+                                    <td>${item.square}</td>
+                                    <td>${item.rooms}</td>
+                                    <td>${item.side}</td>
+                                    <td>${item.floor}</td>
+                                    <td>Корпус 1</td>
+                                    <td>${item.price} р.</td>
+                                `;
+                            }
+                            if((filterParams.type == 0) || (filterParams.type == 5 && item.floor == 32) || (filterParams.type == item.rooms)){
+                                if((filterParams.location == 0) || (filterParams.location == item.tower)){
+                                    table.appendChild(tr);
+                                }
+                            }
                         }
-                        table.appendChild(tr);
                     }
-                }
+                });
             });
-        });
-        
-        
+        }, 150)
 
     }
 
