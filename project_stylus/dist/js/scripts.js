@@ -190,6 +190,32 @@ $(document).ready(function(){
 		dots: false,
 	});
 
+	$('.SliderFloor').on('beforeChange', (event, slick, currentSlide, nextSlide) => {
+		let targetFloor = nextSlide + 1;
+		let targetTower = Number(sessionStorage.getItem('tower'));
+
+		document.querySelectorAll('.js-apartment-img').forEach(img => {
+			img.classList.remove('active');
+		});
+		
+		getFullFloorData(targetFloor, targetTower);
+		fillPng(targetFloor, targetTower);
+		fillTable(targetFloor);
+
+		let filterInputs = document.querySelectorAll('.js-room-list input');
+        filterInputs.forEach(input => input.addEventListener('change', () => {
+            let chosenRoomAmount = Number(input.parentNode.querySelector('.number').innerText);
+
+            document.querySelectorAll('.js-apartment-img').forEach(img => {
+                img.classList.remove('active');
+
+                if(Number(img.dataset.rooms) == chosenRoomAmount){
+                    img.classList.add('active');
+                }
+            });
+        }));
+	});
+
 	$('table').wrap("<div class='table-responsive'></div>");
 
 	$('.js-apartment-img').tooltipster({

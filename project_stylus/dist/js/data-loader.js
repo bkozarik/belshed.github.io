@@ -2,7 +2,7 @@
     const login = 'dt';
     const pass = '123456';
     let table = document.querySelector('.table-styled tbody');
-
+    
     const getData = async (url, login, pass) => {
 
         let h = new Headers();
@@ -98,6 +98,9 @@
 
         try {
             let roomList = document.querySelector('.js-room-list');
+            while(roomList.firstChild){
+                roomList.firstChild.remove();
+            }
 
             let floorData = JSON.parse(sessionStorage.getItem('floorData'));
 
