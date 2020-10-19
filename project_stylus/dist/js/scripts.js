@@ -358,7 +358,7 @@ $(document).ready(function(){
 							<ul class="list-floor-info">
 								${info.apInfo}
 							</ul>
-							<a href="./etag.html" class="more"><i class="icon-arrow"></i></a>
+							<a href="./floor.html" class="more"><i class="icon-arrow"></i></a>
 						</div>`
 					);
 				}

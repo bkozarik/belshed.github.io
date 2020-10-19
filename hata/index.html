@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="ru-Ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hata.by</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="./js/main.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <div class="header__top">
+            <div class="container">
+                <div class="header__wrap">
+                    <a href="./index.html" class="logo">
+                        <img src="./img/logo.png" alt="Логотип" class="logo__img">
+                    </a>
+                    <div class="header__content">
+                        <div class="dropdown js-dropdown">
+                            <div class="tab__select-wrap">
+                                <select class="tab__select">
+                                    <option value="Минск">USD</option>
+                                    <option value="Гомель">EUR</option>
+                                    <option value="Брест">RUB</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="dropdown js-dropdown">
+                            <div class="tab__select-wrap">
+                                <select class="tab__select">
+                                    <option value="Минск">Минск</option>
+                                    <option value="Гомель">Гомель</option>
+                                    <option value="Брест">Брест</option>
+                                    <option value="Гомель">Гомель</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button class="button button_green button_add">Добавить объявление</button>
+                        <button class="button button_white button_login">Войти</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__bottom">
+            <div class="container">
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="./apartments.html" class="nav__link text_ttu">Продажа</a></li>
+                        <li class="nav__item"><a href="./apartments.html" class="nav__link text_ttu">Новостройки</a></li>
+                        <li class="nav__item"><a href="./apartments.html" class="nav__link text_ttu">Аренда</a></li>
+                        <li class="nav__item"><a href="./apartments.html" class="nav__link text_ttu">Земля</a></li>
+                        <li class="nav__item"><a href="./apartments.html" class="nav__link text_ttu">Офисы</a></li>
+                    </ul>
+                </nav>
+                <button class="types js-types">
+                    <span class="types__dot"></span>
+                    <span class="types__dot"></span>
+                    <span class="types__dot"></span>
+                </button>
+                <div class="types__dropdown js-types-dropdown">
+                    <ul class="types__list">
+                        <li class="types__item"><a href="#" class="types__link js-scroll-link">Дома</a></li>
+                        <li class="types__item"><a href="#" class="types__link js-scroll-link">За рубежом</a></li>
+                        <li class="types__item"><a href="#" class="types__link js-scroll-link">Цеха</a></li>
+                        <li class="types__item"><a href="#" class="types__link js-scroll-link">Склады</a></li>
+                        <li class="types__item"><a href="#" class="types__link js-scroll-link">Грузоперевозки</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <section class="hero">
+            <picture class="hero__bg js-hero-bg active">
+                <source srcset="./img/hero1_bg.webp" type="image/webp">
+                <img src="./img/hero1_bg.jpg" alt="Фон" loading="lazy">
+            </picture>
+            <picture class="hero__bg">
+                <source srcset="./img/hero2_bg.webp" type="image/webp">
+                <img src="./img/hero2_bg.jpg" alt="Фон" loading="lazy">
+            </picture>
+            <picture class="hero__bg">
+                <source srcset="./img/hero3_bg.webp" type="image/webp">
+                <img src="./img/hero3_bg.jpg" alt="Фон" loading="lazy">
+            </picture>
+            <div class="hero__overlay"></div>
+            <div class="container">
+                <div class="hero__body">
+                    <h1 class="section__title text_white text_tac">
+                        Недвижимость в Минске
+                    </h1>
+                    <div class="tabs">
+                        <ul class="tabs__nav">
+                            <li><button class="tabs__trigger text_ttu text_white js-tab-trigger" data-target="1">Вторичка</button></li>
+                            <li><button class="tabs__trigger text_ttu text_white js-tab-trigger" data-target="2">Новостройки</button></li>
+                            <li><button class="tabs__trigger text_ttu text_white js-tab-trigger" data-target="3">Аренда</button></li>
+                            <li class="tabs__underline js-tab-underline"></li>
+                        </ul>
+                        <ul class="tabs__items">
+                            <li class="tab js-tab">
+                                <form class="tab__form">
+                                    <div class="tab__col">
+                                        <div class="tab__row">
+                                            <label class="tab__check">
+                                                <input class="tab__hidden" name="ap_type" type="checkbox" value="Квартира" checked>
+                                                <span class="button button_grey button_tab">Квартира</span>
+                                            </label>
+                                            <label class="tab__check">
+                                                <input class="tab__hidden" name="ap_type" type="checkbox" value="Дом">
+                                                <span class="button button_grey button_tab">Дом</span>
+                                            </label>
+                                            <label class="tab__check">
+                                                <input class="tab__hidden" name="ap_type" type="checkbox" value="Комната">
+                                                <span class="button button_grey button_tab">Комната</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="tab__col">
+                                        <span class="tab__label">Комнат</span>
+                                        <div class="tab__row">
+                                            <label class="tab__check">
+                                                <input class="tab__hidden" name="room_amount" type="checkbox" value="1">
+                                                <span class="button button_grey button_room">1</span>
+                                            </label>
+                                            <label class="tab__check">
+                                                <input class="tab__hidden" name="room_amount" type="checkbox" value="2">
+                                                <span class="button button_grey button_room">2</span>
+                                            </label>
+                                            <label class="tab__check">
+                                                <input class="tab__hidden" name="room_amount" type="checkbox" value="3">
+                                                <span class="button button_grey button_room">3</span>
+                                            </label>
+                                            <label class="tab__check">
+                                                <input class="tab__hidden" name="room_amount" type="checkbox" value="4+">
+                                                <span class="button button_grey button_room">4+<spann>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="tab__col">
+                                        <span class="tab__label">Цена USD</span>
+                                        <div class="tab__row">
+                                            <input class="tab__input" type="tel" placeholder="от">
+                                            <input class="tab__input" type="tel" placeholder="до">
+                                        </div>
+                                    </div>
+                                    <div class="tab__col">
+                                        <span class="tab__label">Город</span>
+                                        <div class="tab__row">
+                                            <div class="tab__select-wrap">
+                                                <select class="tab__select">
+                                                    <option value="Минск">Минск</option>
+                                                    <option value="Гомель">Гомель</option>
+                                                    <option value="Брест">Брест</option>
+                                                    <option value="Гомель">Гомель</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab__col">
+                                        <label class="tab__compare">
+                                            <input type="checkbox" name="compare">
+                                            <span class="tab__checkbox"></span>
+                                            <span class="tab__label">Сравнить с новостройками</span>
+                                        </label>
+                                    </div>
+                                    <div class="tab__col">
+                                        <button type="submit" class="button button_green button_search">Найти</button>
+                                    </div>
+                                </form>
+                            </li>
+                            <li class="tab js-tab">
+                                <form class="tab__form">
+                                    <div class="tab__col">
+                                        <div class="tab__row">
+                                            <label class="tab__check">
+                                                <input class="tab__hidden" name="ap_type" type="checkbox" value="Квартира" checked>
+                                                <span class="button button_grey button_tab">Квартира</span>
+                                            </label>
+                                            <label class="tab__check">
+                                                <input class="tab__hidden" name="ap_type" type="checkbox" value="Дом">
+                                                <span class="button button_grey button_tab">Дом</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="tab__col">
+                                        <span class="tab__label">Комнат</span>
+                                        <div class="tab__row">
+                                            <label class="tab__check">
+                                                <input class="tab__hidden" name="room_amount" type="checkbox" value="1">
+                                                <span class="button button_grey button_room">1</span>
+                                            </label>
+                                            <label class="tab__check">
+                                                <input class="tab__hidden" name="room_amount" type="checkbox" value="2">
+                                                <span class="button button_grey button_room">2</span>
+                                            </label>
+                                            <label class="tab__check">
+                                                <input class="tab__hidden" name="room_amount" type="checkbox" value="3">
+                                                <span class="button button_grey button_room">3</span>
+                                            </label>
+                                            <label class="tab__check">
+                                                <input class="tab__hidden" name="room_amount" type="checkbox" value="4+">
+                                                <span class="button button_grey button_room">4+<spann>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="tab__col">
+                                        <span class="tab__label">Цена USD</span>
+                                        <div class="tab__row">
+                                            <input class="tab__input" type="tel" placeholder="от">
+                                            <input class="tab__input" type="tel" placeholder="до">
+                                        </div>
+                                    </div>
+                                    <div class="tab__col">
+                                        <span class="tab__label">Город</span>
+                                        <div class="tab__row">
+                                            <div class="tab__select-wrap">
+                                                <select class="tab__select">
+                                                    <option value="Минск">Минск</option>
+                                                    <option value="Гомель">Гомель</option>
+                                                    <option value="Брест">Брест</option>
+                                                    <option value="Гомель">Гомель</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab__col">
+                                        <label class="tab__compare">
+                                            <input type="checkbox" name="compare">
+                                            <span class="tab__checkbox"></span>
+                                            <span class="tab__label">Сравнить с новостройками</span>
+                                        </label>
+                                    </div>
+                                    <div class="tab__col">
+                                        <button type="submit" class="button button_green button_search">Найти</button>
+                                    </div>
+                                </form>
+                            </li>
+                            <li class="tab js-tab">
+                                <form class="tab__form tab__form_col">
+                                    <div class="tab__main">
+                                        <div class="tab__col">
+                                            <div class="tab__row">
+                                                <label class="tab__check">
+                                                    <input class="tab__hidden" name="ap_type" type="checkbox" value="Квартира" checked>
+                                                    <span class="button button_grey button_tab">Квартира</span>
+                                                </label>
+                                                <label class="tab__check">
+                                                    <input class="tab__hidden" name="ap_type" type="checkbox" value="Дом">
+                                                    <span class="button button_grey button_tab">Дом</span>
+                                                </label>
+                                                <label class="tab__check">
+                                                    <input class="tab__hidden" name="ap_type" type="checkbox" value="Комната">
+                                                    <span class="button button_grey button_tab">Комната</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="tab__col">
+                                            <span class="tab__label">Комнат</span>
+                                            <div class="tab__row">
+                                                <label class="tab__check">
+                                                    <input class="tab__hidden" name="room_amount" type="checkbox" value="1">
+                                                    <span class="button button_grey button_room">1</span>
+                                                </label>
+                                                <label class="tab__check">
+                                                    <input class="tab__hidden" name="room_amount" type="checkbox" value="2">
+                                                    <span class="button button_grey button_room">2</span>
+                                                </label>
+                                                <label class="tab__check">
+                                                    <input class="tab__hidden" name="room_amount" type="checkbox" value="3">
+                                                    <span class="button button_grey button_room">3</span>
+                                                </label>
+                                                <label class="tab__check">
+                                                    <input class="tab__hidden" name="room_amount" type="checkbox" value="4+">
+                                                    <span class="button button_grey button_room">4+<spann>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="tab__col">
+                                            <span class="tab__label">Цена USD</span>
+                                            <div class="tab__row">
+                                                <input class="tab__input" type="tel" placeholder="от">
+                                                <input class="tab__input" type="tel" placeholder="до">
+                                            </div>
+                                        </div>
+                                        <div class="tab__col">
+                                            <span class="tab__label">Город</span>
+                                            <div class="tab__row">
+                                                <div class="tab__select-wrap">
+                                                    <select class="tab__select">
+                                                        <option value="Минск">Минск</option>
+                                                        <option value="Гомель">Гомель</option>
+                                                        <option value="Брест">Брест</option>
+                                                        <option value="Гомель">Гомель</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab__col">
+                                            <div class="tab__row">
+                                                <label class="tab__check">
+                                                    <input class="tab__hidden" name="ap_term" type="checkbox" value="Надолго" checked>
+                                                    <span class="button button_grey button_tab">Надолго</span>
+                                                </label>
+                                                <label class="tab__check">
+                                                    <input class="tab__hidden" name="ap_term" type="checkbox" value="На сутки">
+                                                    <span class="button button_grey button_tab">На сутки</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="tab__col">
+                                            <button type="submit" class="button button_green button_search">Найти</button>
+                                        </div>
+                                    </div>
+                                    <div class="tab__bottom">
+                                        <div class="tab__bottom-content">
+                                            <label class="tab__compare">
+                                                <input type="checkbox" name="feture" value="У метро">
+                                                <span class="tab__checkbox"></span>
+                                                <span class="tab__label">У метро</span>
+                                            </label>
+                                            <label class="tab__compare">
+                                                <input type="checkbox" name="feture" value="С детьми">
+                                                <span class="tab__checkbox"></span>
+                                                <span class="tab__label">С детьми</span>
+                                            </label>
+                                            <label class="tab__compare">
+                                                <input type="checkbox" name="feture" value="С животными">
+                                                <span class="tab__checkbox"></span>
+                                                <span class="tab__label">С животными</span>
+                                            </label>
+                                            <label class="tab__compare">
+                                                <input type="checkbox" name="feture" value="С техникой">
+                                                <span class="tab__checkbox"></span>
+                                                <span class="tab__label">С техникой</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </form>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section__white top">
+            <div class="container">
+                <h2 class="section__title text_tac">Лучшие варианты вторичек</h2>
+                <div class="col-container col-container_three">
+                    <article class="picset">
+                        <div class="picset__tile">
+                            <picture class="picset__img">
+                                <source srcset="./img/picset_1_1.webp" type="image/webp">
+                                <img src="./img/picset_1_1.jpg" alt="Картинка в карточке" loading="lazy">
+                            </picture>
+                            <picture class="picset__img">
+                                <source srcset="./img/picset_1_2.webp" type="image/webp">
+                                <img src="./img/picset_1_2.jpg" alt="Картинка в карточке" loading="lazy">
+                            </picture>
+                            <picture class="picset__img">
+                                <source srcset="./img/picset_1_3.webp" type="image/webp">
+                                <img src="./img/picset_1_3.jpg" alt="Картинка в карточке" loading="lazy">
+                            </picture>
+                        </div>
+                        <h3 class="picset__title">Самые дешевые</h3>
+                        <a href="#" class="button button_white button_picset">подробнее</a>
+                    </article>
+                    <article class="picset">
+                        <div class="picset__tile">
+                            <picture class="picset__img">
+                                <source srcset="./img/picset_2_1.webp" type="image/webp">
+                                <img src="./img/picset_2_1.jpg" alt="Картинка в карточке" loading="lazy">
+                            </picture>
+                            <picture class="picset__img">
+                                <source srcset="./img/picset_2_2.webp" type="image/webp">
+                                <img src="./img/picset_2_2.jpg" alt="Картинка в карточке" loading="lazy">
+                            </picture>
+                            <picture class="picset__img">
+                                <source srcset="./img/picset_2_3.webp" type="image/webp">
+                                <img src="./img/picset_2_3.jpg" alt="Картинка в карточке" loading="lazy">
+                            </picture>
+                        </div>
+                        <h3 class="picset__title">До 50 тысяч</h3>
+                        <a href="#" class="button button_white button_picset">подробнее</a>
+                    </article>
+                    <article class="picset">
+                        <div class="picset__tile">
+                            <picture class="picset__img">
+                                <source srcset="./img/picset_3_1.webp" type="image/webp">
+                                <img src="./img/picset_3_1.jpg" alt="Картинка в карточке" loading="lazy">
+                            </picture>
+                            <picture class="picset__img">
+                                <source srcset="./img/picset_3_2.webp" type="image/webp">
+                                <img src="./img/picset_3_2.jpg" alt="Картинка в карточке" loading="lazy">
+                            </picture>
+                            <picture class="picset__img">
+                                <source srcset="./img/picset_3_3.webp" type="image/webp">
+                                <img src="./img/picset_3_3.jpg" alt="Картинка в карточке" loading="lazy">
+                            </picture>
+                        </div>
+                        <h3 class="picset__title">В благополучных районах</h3>
+                        <a href="#" class="button button_white button_picset">подробнее</a>
+                    </article>
+                </div>
+                <div class="section__button-holder">
+                    <a href="#" class="button button_green button_big">Все подборки</a>
+                </div>
+            </div>
+        </section>
+        <section class="section__light objects">
+            <div class="container">
+                <ul class="objects__nav">
+                    <li><button class="objects__trigger text_ttu js-objects-trigger" data-target="1">Дома</button></li>
+                    <li><button class="objects__trigger text_ttu js-objects-trigger" data-target="2">За рубежом</button></li>
+                    <li><button class="objects__trigger text_ttu js-objects-trigger" data-target="3">Цеха</button></li>
+                    <li><button class="objects__trigger text_ttu js-objects-trigger" data-target="4">Склады</button></li>
+                    <li><button class="objects__trigger text_ttu js-objects-trigger" data-target="5">Грузоперевозки</button></li>
+                    <li class="tabs__underline js-objects-underline"></li>
+                </ul>
+                <div class="object js-object">
+                    <div class="card-block">
+                        <h2 class="section__title text_tac">За городом</h2>
+                        <div class="col-container col-container_four">
+                            <a href="#" class="card">
+                                <picture class="card__img">
+                                    <source srcset="./img/objects_1.webp" type="image/webp">
+                                    <img src="./img/objects_1.jpg" alt="Изображение в карточке">
+                                </picture>
+                                <div class="card__body">
+                                    <h3 class="card__title">Сдается 2-комнатный дом по адресу Кнорина 4.</h3>
+                                    <p class="card__text js-excerpt" data-length="70">Уютная 2 - х комнатная люкс квартира с современным интерьером европейскогоУютная 2 - х комнатная люкс квартира с современным интерьером европейскогоУютная 2 - х комнатная люкс квартира с современным интерьером европейскогоУютная 2 - х комнатная люкс квартира с современным интерьером европейского</p>
+                                </div>
+                            </a>
+                            <a href="#" class="card">
+                                <picture class="card__img">
+                                    <source srcset="./img/objects_2.webp" type="image/webp">
+                                    <img src="./img/objects_2.jpg" alt="Изображение в карточке">
+                                </picture>
+                                <div class="card__body">
+                                    <h3 class="card__title">Сдается 2-комнатный дом по адресу Кнорина 4.</h3>
+                                    <p class="card__text js-excerpt" data-length="70">Уютная 2 - х комнатная люкс квартира с современным интерьером европейскогоУютная 2 - х комнатная люкс квартира с современным интерьером европейскогоУютная 2 - х комнатная люкс квартира с современным интерьером европейскогоУютная 2 - х комнатная люкс квартира с современным интерьером европейского</p>
+                                </div>
+                            </a>
+                            <a href="#" class="card">
+                                <picture class="card__img">
+                                    <source srcset="./img/objects_3.webp" type="image/webp">
+                                    <img src="./img/objects_3.jpg" alt="Изображение в карточке">
+                                </picture>
+                                <div class="card__body">
+                                    <h3 class="card__title">Сдается 2-комнатный дом по адресу Кнорина 4.</h3>
+                                    <p class="card__text js-excerpt" data-length="70">Уютная 2 - х комнатная люкс квартира с современным интерьером европейскогоУютная 2 - х комнатная люкс квартира с современным интерьером европейскогоУютная 2 - х комнатная люкс квартира с современным интерьером европейскогоУютная 2 - х комнатная люкс квартира с современным интерьером европейского</p>
+                                </div>
+                            </a>
+                            <a href="#" class="card">
+                                <picture class="card__img">
+                                    <source srcset="./img/objects_4.webp" type="image/webp">
+                                    <img src="./img/objects_4.jpg" alt="Изображение в карточке">
+                                </picture>
+                                <div class="card__body">
+                                    <h3 class="card__title">Сдается 2-комнатный дом по адресу Кнорина 4.</h3>
+                                    <p class="card__text js-excerpt" data-length="70">Уютная 2 - х комнатная люкс квартира с современным интерьером европейскогоУютная 2 - х комнатная люкс квартира с современным интерьером европейскогоУютная 2 - х комнатная люкс квартира с современным интерьером европейскогоУютная 2 - х комнатная люкс квартира с современным интерьером европейского</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="section__button-holder">
+                            <a href="#" class="button button_green button_big">Все предложения</a>
+                        </div>
+                    </div>
+                    <div class="card-block">
+                        <h2 class="section__title text_tac">В черте города</h2>
+                        <div class="col-container col-container_four">
+                            <a href="#" class="card">
+                                <picture class="card__img">
+                                    <source srcset="./img/objects_5.webp" type="image/webp">
+                                    <img src="./img/objects_5.jpg" alt="Изображение в карточке">
+                                </picture>
+                                <div class="card__body">
+                                    <h3 class="card__title">Сдается 2-комнатный дом по адресу Кнорина 4.</h3>
+                                    <p class="card__text js-excerpt" data-length="70">Уютная 2 - х комнатная люкс квартира с современным интерьером европейскогоУютная 2 - х комнатная люкс квартира с современным интерьером европейскогоУютная 2 - х комнатная люкс квартира с современным интерьером европейскогоУютная 2 - х комнатная люкс квартира с современным интерьером европейского</p>
+                                </div>
+                            </a>
+                            <a href="#" class="card">
+                                <picture class="card__img">
+                                    <source srcset="./img/objects_6.webp" type="image/webp">
+                                    <img src="./img/objects_6.jpg" alt="Изображение в карточке">
+                                </picture>
+                                <div class="card__body">
+                                    <h3 class="card__title">Сдается 2-комнатный дом по адресу Кнорина 4.</h3>
+                                    <p class="card__text js-excerpt" data-length="70">Уютная 2 - х комнатная люкс квартира с современным интерьером европейскогоУютная 2 - х комнатная люкс квартира с современным интерьером европейскогоУютная 2 - х комнатная люкс квартира с современным интерьером европейскогоУютная 2 - х комнатная люкс квартира с современным интерьером европейского</p>
+                                </div>
+                            </a>
+                            <a href="#" class="card">
+                                <picture class="card__img">
+                                    <source srcset="./img/objects_7.webp" type="image/webp">
+                                    <img src="./img/objects_7.jpg" alt="Изображение в карточке">
+                                </picture>
+                                <div class="card__body">
+                                    <h3 class="card__title">Сдается 2-комнатный дом по адресу Кнорина 4.</h3>
+                                    <p class="card__text js-excerpt" data-length="70">Уютная 2 - х комнатная люкс квартира с современным интерьером европейскогоУютная 2 - х комнатная люкс квартира с современным интерьером европейскогоУютная 2 - х комнатная люкс квартира с современным интерьером европейскогоУютная 2 - х комнатная люкс квартира с современным интерьером европейского</p>
+                                </div>
+                            </a>
+                            <a href="#" class="card">
+                                <picture class="card__img">
+                                    <source srcset="./img/objects_8.webp" type="image/webp">
+                                    <img src="./img/objects_8.jpg" alt="Изображение в карточке">
+                                </picture>
+                                <div class="card__body">
+                                    <h3 class="card__title">Сдается 2-комнатный дом по адресу Кнорина 4.</h3>
+                                    <p class="card__text js-excerpt" data-length="70">Уютная 2 - х комнатная люкс квартира с современным интерьером европейскогоУютная 2 - х комнатная люкс квартира с современным интерьером европейскогоУютная 2 - х комнатная люкс квартира с современным интерьером европейскогоУютная 2 - х комнатная люкс квартира с современным интерьером европейского</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="section__button-holder">
+                            <a href="#" class="button button_green button_big">Все предложения</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="object js-object">
+                    <div class="card-block">
+                        <h2 class="section__title text_tac">Дешевле, чем в Минске</h2>
+                        <div class="col-container col-container_four">
+                            <a href="#" class="card">
+                                <picture class="card__img">
+                                    <source srcset="./img/objects_1.webp" type="image/webp">
+                                    <img src="./img/objects_1.jpg" alt="Изображение в карточке">
+                                </picture>
+                                <div class="card__body">
+                                    <h3 class="card__title">Сдается 2-комнатный дом по адресу Кнорина 4.</h3>
+                                    <p class="card__text js-excerpt" data-length="70">Уютная 2 - х комнатная люкс квартира с современным интерьером европейскогоУютная 2 - х комнатная люкс квартира с современным интерьером европейскогоУютная 2 - х комнатная люкс квартира с современным интерьером европейскогоУютная 2 - х комнатная люкс квартира с современным интерьером европейского</p>
+                                </div>
+                            </a>
+                            <a href="#" class="card">
+                                <picture class="card__img">
+                                    <source srcset="./img/objects_2.webp" type="image/webp">
+                                    <img src="./img/objects_2.jpg" alt="Изображение в карточке">
+                                </picture>
+                                <div class="card__body">
+                                    <h3 class="card__title">Сдается 2-комнатный дом по адресу Кнорина 4.</h3>
+                                    <p class="card__text js-excerpt" data-length="70">Уютная 2 - х комнатная люкс квартира с современным интерьером европейскогоУютная 2 - х комнатная люкс квартира с современным интерьером европейскогоУютная 2 - х комнатная люкс квартира с современным интерьером европейскогоУютная 2 - х комнатная люкс квартира с современным интерьером европейского</p>
+                                </div>
+                            </a>
+                            <a href="#" class="card">
+                                <picture class="card__img">
+                                    <source srcset="./img/objects_3.webp" type="image/webp">
+                                    <img src="./img/objects_3.jpg" alt="Изображение в карточке">
+                                </picture>
+                                <div class="card__body">
+                                    <h3 class="card__title">Сдается 2-комнатный дом по адресу Кнорина 4.</h3>
+                                    <p class="card__text js-excerpt" data-length="70">Уютная 2 - х комнатная люкс квартира с современным интерьером европейскогоУютная 2 - х комнатная люкс квартира с современным интерьером европейскогоУютная 2 - х комнатная люкс квартира с современным интерьером европейскогоУютная 2 - х комнатная люкс квартира с современным интерьером европейского</p>
+                                </div>
+                            </a>
+                            <a href="#" class="card">
+                                <picture class="card__img">
+                                    <source srcset="./img/objects_4.webp" type="image/webp">
+                                    <img src="./img/objects_4.jpg" alt="Изображение в карточке">
+                                </picture>
+                                <div class="card__body">
+                                    <h3 class="card__title">Сдается 2-комнатный дом по адресу Кнорина 4.</h3>
+                                    <p class="card__text js-excerpt" data-length="70">Уютная 2 - х комнатная люкс квартира с современным интерьером европейскогоУютная 2 - х комнатная люкс квартира с современным интерьером европейскогоУютная 2 - х комнатная люкс квартира с современным интерьером европейскогоУютная 2 - х комнатная люкс квартира с современным интерьером европейского</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="section__button-holder">
+                            <a href="#" class="button button_green button_big">Все предложения</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="object js-object">
+                    <div class="card-block">
+                        <h2 class="section__title text_tac">Без подвоза рабочих</h2>
+                        <div class="col-container col-container_four">
+                            <a href="#" class="card">
+                                <picture class="card__img">
+                                    <source srcset="./img/objects_1.webp" type="image/webp">
+                                    <img src="./img/objects_1.jpg" alt="Изображение в карточке">
+                                </picture>
+                                <div class="card__body">
+                                    <h3 class="card__title">Сдается 2-комнатный дом по адресу Кнорина 4.</h3>
+                                    <p class="card__text js-excerpt" data-length="70">Уютная 2 - х комнатная люкс квартира с современным интерьером европейскогоУютная 2 - х комнатная люкс квартира с современным интерьером европейскогоУютная 2 - х комнатная люкс квартира с современным интерьером европейскогоУютная 2 - х комнатная люкс квартира с современным интерьером европейского</p>
+                                </div>
+                            </a>
+                            <a href="#" class="card">
+                                <picture class="card__img">
+                                    <source srcset="./img/objects_2.webp" type="image/webp">
+                                    <img src="./img/objects_2.jpg" alt="Изображение в карточке">
+                                </picture>
+                                <div class="card__body">
+                                    <h3 class="card__title">Сдается 2-комнатный дом по адресу Кнорина 4.</h3>
+                                    <p class="card__text js-excerpt" data-length="70">Уютная 2 - х комнатная люкс квартира с современным интерьером европейскогоУютная 2 - х комнатная люкс квартира с современным интерьером европейскогоУютная 2 - х комнатная люкс квартира с современным интерьером европейскогоУютная 2 - х комнатная люкс квартира с современным интерьером европейского</p>
+                                </div>
+                            </a>
+                            <a href="#" class="card">
+                                <picture class="card__img">
+                                    <source srcset="./img/objects_3.webp" type="image/webp">
+                                    <img src="./img/objects_3.jpg" alt="Изображение в карточке">
+                                </picture>
+                                <div class="card__body">
+                                    <h3 class="card__title">Сдается 2-комнатный дом по адресу Кнорина 4.</h3>
+                                    <p class="card__text js-excerpt" data-length="70">Уютная 2 - х комнатная люкс квартира с современным интерьером европейскогоУютная 2 - х комнатная люкс квартира с современным интерьером европейскогоУютная 2 - х комнатная люкс квартира с современным интерьером европейскогоУютная 2 - х комнатная люкс квартира с современным интерьером европейского</p>
+                                </div>
+                            </a>
+                            <a href="#" class="card">
+                                <picture class="card__img">
+                                    <source srcset="./img/objects_4.webp" type="image/webp">
+                                    <img src="./img/objects_4.jpg" alt="Изображение в карточке">
+                                </picture>
+                                <div class="card__body">
+                                    <h3 class="card__title">Сдается 2-комнатный дом по адресу Кнорина 4.</h3>
+                                    <p class="card__text js-excerpt" data-length="70">Уютная 2 - х комнатная люкс квартира с современным интерьером европейскогоУютная 2 - х комнатная люкс квартира с современным интерьером европейскогоУютная 2 - х комнатная люкс квартира с современным интерьером европейскогоУютная 2 - х комнатная люкс квартира с современным интерьером европейского</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="section__button-holder">
+                            <a href="#" class="button button_green button_big">Все предложения</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="object js-object">
+                    <div class="card-block">
+                        <h2 class="section__title text_tac">С отоплением</h2>
+                        <div class="col-container col-container_four">
+                            <a href="#" class="card">
+                                <picture class="card__img">
+                                    <source srcset="./img/objects_1.webp" type="image/webp">
+                                    <img src="./img/objects_1.jpg" alt="Изображение в карточке">
+                                </picture>
+                                <div class="card__body">
+                                    <h3 class="card__title">Сдается 2-комнатный дом по адресу Кнорина 4.</h3>
+                                    <p class="card__text js-excerpt" data-length="70">Уютная 2 - х комнатная люкс квартира с современным интерьером европейскогоУютная 2 - х комнатная люкс квартира с современным интерьером европейскогоУютная 2 - х комнатная люкс квартира с современным интерьером европейскогоУютная 2 - х комнатная люкс квартира с современным интерьером европейского</p>
+                                </div>
+                            </a>
+                            <a href="#" class="card">
+                                <picture class="card__img">
+                                    <source srcset="./img/objects_2.webp" type="image/webp">
+                                    <img src="./img/objects_2.jpg" alt="Изображение в карточке">
+                                </picture>
+                                <div class="card__body">
+                                    <h3 class="card__title">Сдается 2-комнатный дом по адресу Кнорина 4.</h3>
+                                    <p class="card__text js-excerpt" data-length="70">Уютная 2 - х комнатная люкс квартира с современным интерьером европейскогоУютная 2 - х комнатная люкс квартира с современным интерьером европейскогоУютная 2 - х комнатная люкс квартира с современным интерьером европейскогоУютная 2 - х комнатная люкс квартира с современным интерьером европейского</p>
+                                </div>
+                            </a>
+                            <a href="#" class="card">
+                                <picture class="card__img">
+                                    <source srcset="./img/objects_3.webp" type="image/webp">
+                                    <img src="./img/objects_3.jpg" alt="Изображение в карточке">
+                                </picture>
+                                <div class="card__body">
+                                    <h3 class="card__title">Сдается 2-комнатный дом по адресу Кнорина 4.</h3>
+                                    <p class="card__text js-excerpt" data-length="70">Уютная 2 - х комнатная люкс квартира с современным интерьером европейскогоУютная 2 - х комнатная люкс квартира с современным интерьером европейскогоУютная 2 - х комнатная люкс квартира с современным интерьером европейскогоУютная 2 - х комнатная люкс квартира с современным интерьером европейского</p>
+                                </div>
+                            </a>
+                            <a href="#" class="card">
+                                <picture class="card__img">
+                                    <source srcset="./img/objects_4.webp" type="image/webp">
+                                    <img src="./img/objects_4.jpg" alt="Изображение в карточке">
+                                </picture>
+                                <div class="card__body">
+                                    <h3 class="card__title">Сдается 2-комнатный дом по адресу Кнорина 4.</h3>
+                                    <p class="card__text js-excerpt" data-length="70">Уютная 2 - х комнатная люкс квартира с современным интерьером европейскогоУютная 2 - х комнатная люкс квартира с современным интерьером европейскогоУютная 2 - х комнатная люкс квартира с современным интерьером европейскогоУютная 2 - х комнатная люкс квартира с современным интерьером европейского</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="section__button-holder">
+                            <a href="#" class="button button_green button_big">Все предложения</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="object js-object">
+                    <div class="card-block">
+                        <h2 class="section__title text_tac">Самые дешевые</h2>
+                        <div class="col-container col-container_four">
+                            <a href="#" class="card">
+                                <picture class="card__img">
+                                    <source srcset="./img/objects_1.webp" type="image/webp">
+                                    <img src="./img/objects_1.jpg" alt="Изображение в карточке">
+                                </picture>
+                                <div class="card__body">
+                                    <h3 class="card__title">Сдается 2-комнатный дом по адресу Кнорина 4.</h3>
+                                    <p class="card__text js-excerpt" data-length="70">Уютная 2 - х комнатная люкс квартира с современным интерьером европейскогоУютная 2 - х комнатная люкс квартира с современным интерьером европейскогоУютная 2 - х комнатная люкс квартира с современным интерьером европейскогоУютная 2 - х комнатная люкс квартира с современным интерьером европейского</p>
+                                </div>
+                            </a>
+                            <a href="#" class="card">
+                                <picture class="card__img">
+                                    <source srcset="./img/objects_2.webp" type="image/webp">
+                                    <img src="./img/objects_2.jpg" alt="Изображение в карточке">
+                                </picture>
+                                <div class="card__body">
+                                    <h3 class="card__title">Сдается 2-комнатный дом по адресу Кнорина 4.</h3>
+                                    <p class="card__text js-excerpt" data-length="70">Уютная 2 - х комнатная люкс квартира с современным интерьером европейскогоУютная 2 - х комнатная люкс квартира с современным интерьером европейскогоУютная 2 - х комнатная люкс квартира с современным интерьером европейскогоУютная 2 - х комнатная люкс квартира с современным интерьером европейского</p>
+                                </div>
+                            </a>
+                            <a href="#" class="card">
+                                <picture class="card__img">
+                                    <source srcset="./img/objects_3.webp" type="image/webp">
+                                    <img src="./img/objects_3.jpg" alt="Изображение в карточке">
+                                </picture>
+                                <div class="card__body">
+                                    <h3 class="card__title">Сдается 2-комнатный дом по адресу Кнорина 4.</h3>
+                                    <p class="card__text js-excerpt" data-length="70">Уютная 2 - х комнатная люкс квартира с современным интерьером европейскогоУютная 2 - х комнатная люкс квартира с современным интерьером европейскогоУютная 2 - х комнатная люкс квартира с современным интерьером европейскогоУютная 2 - х комнатная люкс квартира с современным интерьером европейского</p>
+                                </div>
+                            </a>
+                            <a href="#" class="card">
+                                <picture class="card__img">
+                                    <source srcset="./img/objects_4.webp" type="image/webp">
+                                    <img src="./img/objects_4.jpg" alt="Изображение в карточке">
+                                </picture>
+                                <div class="card__body">
+                                    <h3 class="card__title">Сдается 2-комнатный дом по адресу Кнорина 4.</h3>
+                                    <p class="card__text js-excerpt" data-length="70">Уютная 2 - х комнатная люкс квартира с современным интерьером европейскогоУютная 2 - х комнатная люкс квартира с современным интерьером европейскогоУютная 2 - х комнатная люкс квартира с современным интерьером европейскогоУютная 2 - х комнатная люкс квартира с современным интерьером европейского</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="section__button-holder">
+                            <a href="#" class="button button_green button_big">Все предложения</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section__white catalog">
+            <div class="container">
+                <h2 class="section__title text_tac">Каталог</h2>
+                <div class="col-container col-container_three">
+                    <article class="picset">
+                        <div class="picset__tile">
+                            <picture class="picset__img">
+                                <source srcset="./img/picset_4_1.webp" type="image/webp">
+                                <img src="./img/picset_4_1.jpg" alt="Картинка в карточке" loading="lazy">
+                            </picture>
+                            <picture class="picset__img">
+                                <source srcset="./img/picset_4_2.webp" type="image/webp">
+                                <img src="./img/picset_4_2.jpg" alt="Картинка в карточке" loading="lazy">
+                            </picture>
+                            <picture class="picset__img">
+                                <source srcset="./img/picset_4_3.webp" type="image/webp">
+                                <img src="./img/picset_4_3.jpg" alt="Картинка в карточке" loading="lazy">
+                            </picture>
+                        </div>
+                        <h3 class="picset__title">Обзоры бизнес-центров</h3>
+                        <span class="picset__description js-excerpt" data-length="60">Омега-Тауэр, Роял плаза, Время и др.</span>
+                        <a href="#" class="button button_white button_picset">читать</a>
+                    </article>
+                    <article class="picset">
+                        <div class="picset__tile">
+                            <picture class="picset__img">
+                                <source srcset="./img/picset_5_1.webp" type="image/webp">
+                                <img src="./img/picset_5_1.jpg" alt="Картинка в карточке" loading="lazy">
+                            </picture>
+                            <picture class="picset__img">
+                                <source srcset="./img/picset_5_2.webp" type="image/webp">
+                                <img src="./img/picset_5_2.jpg" alt="Картинка в карточке" loading="lazy">
+                            </picture>
+                            <picture class="picset__img">
+                                <source srcset="./img/picset_5_3.webp" type="image/webp">
+                                <img src="./img/picset_5_3.jpg" alt="Картинка в карточке" loading="lazy">
+                            </picture>
+                        </div>
+                        <h3 class="picset__title">Обзоры жилых комплексов</h3>
+                        <span class="picset__description js-excerpt" data-length="60">ЖК Маяк, Липень, Vogue и др.</span>
+                        <a href="#" class="button button_white button_picset">читать</a>
+                    </article>
+                    <article class="picset">
+                        <div class="picset__tile">
+                            <picture class="picset__img">
+                                <source srcset="./img/picset_6_1.webp" type="image/webp">
+                                <img src="./img/picset_6_1.jpg" alt="Картинка в карточке" loading="lazy">
+                            </picture>
+                            <picture class="picset__img">
+                                <source srcset="./img/picset_6_2.webp" type="image/webp">
+                                <img src="./img/picset_6_2.jpg" alt="Картинка в карточке" loading="lazy">
+                            </picture>
+                            <picture class="picset__img">
+                                <source srcset="./img/picset_6_3.webp" type="image/webp">
+                                <img src="./img/picset_6_3.jpg" alt="Картинка в карточке" loading="lazy">
+                            </picture>
+                        </div>
+                        <h3 class="picset__title">Описание районов</h3>
+                        <span class="picset__description js-excerpt" data-length="60">Советский, московский и др.</span>
+                        <a href="#" class="button button_white button_picset">читать</a>
+                    </article>
+                </div>
+                <div class="section__button-holder section__button-holder_mt-big">
+                    <a href="#" class="button button_green button_big">Все каталоги</a>
+                </div>
+            </div>
+        </section>
+        <section class="section__light articles">
+            <div class="container">
+                <h2 class="section__title text_tac">Статьи</h2>
+                <div class="articles__container">
+                    <a href="#" class="article article_big">
+                        <picture class="article__img">
+                            <source srcset="./img/article_1.webp" type="image/webp">
+                            <img src="./img/article_1.jpg" alt="Изображение в статье">
+                        </picture>
+                        <div class="article__body">
+                            <h3 class="article__title">Бизнес-центры</h3>
+                            <p class="article__text js-excerpt" data-length="370">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, minus et? Quisquam modi, quo durem ipsum dolor sit amet consectetur rem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, minus et? Quisquam modi, quo duadipisicing elit. Dolorem, minus et? Quisquam modi, quo ducimus velit architecto cupiditate dolores facilis?
+                                                     Amet aperiam officiis libero pariatur numquam animi eos ab, mollitia id ducimus? Nobis illum perspiciatis odio officiis soluta voluptates magnam.</p>
+                        </div>
+                        <span class="article__views">120</span>
+                    </a>
+                    <a href="#" class="article article_big">
+                        <picture class="article__img">
+                            <source srcset="./img/article_2.webp" type="image/webp">
+                            <img src="./img/article_2.jpg" alt="Изображение в статье">
+                        </picture>
+                        <div class="article__body">
+                            <h3 class="article__title">Бизнес-центры</h3>
+                            <p class="article__text js-excerpt" data-length="370">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, rem ipsum dolor sit amet consectetur adipisicing elit. Dolorrem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, minus et? Quisquam modi, quo duem, minus et? Quisquam modi, quo durem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, minus et? Quisquam modi, quo duminus et? Quisquam modi, quo ducimus velit architecto cupiditate dolores facilis?
+                                                     Amet aperiam officiis libero pariatur numquam animi eos ab, mollitia id ducimus? Nobis illum perspiciatis odio officiis soluta voluptates magnam.</p>
+                        </div>
+                        <span class="article__views">120</span>
+                    </a>
+                    <a href="#" class="article">
+                        <div class="article__body">
+                            <h3 class="article__title">Бизнес-центры</h3>
+                            <p class="article__text js-excerpt" data-length="280">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, minus et? Quisquam modi, quo ducimus velit architecto cupiditate dolores facilis?
+                                                     Amet aperiam officiis libero pariatur numquam animi eos ab, mollitia id ducimus? Nobis illum perspiciatis odio officiis soluta voluptates magnam.</p>
+                        </div>
+                        <span class="article__views">120</span>
+                    </a>
+                    <a href="#" class="article">
+                        <div class="article__body">
+                            <h3 class="article__title">Бизнес-центры</h3>
+                            <p class="article__text js-excerpt" data-length="280">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, minus et? Quisquam modi, quo ducimus velit architecto cupiditate dolores facilis?
+                                                     Amet aperiam officiis libero pariatur numquam animi eos ab, mollitia id ducimus? Nobis illum perspiciatis odio officiis soluta voluptates magnam.</p>
+                        </div>
+                        <span class="article__views">120</span>
+                    </a>
+                    <a href="#" class="article">
+                        <div class="article__body">
+                            <h3 class="article__title">Бизнес-центры</h3>
+                            <p class="article__text js-excerpt" data-length="280">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, minus et? Quisquam modi, quo ducimus velit architecto cupiditate dolores facilis?
+                                                     Amet aperiam officiis libero pariatur numquam animi eos ab, mollitia id ducimus? Nobis illum perspiciatis odio officiis soluta voluptates magnam.</p>
+                        </div>
+                        <span class="article__views">120</span>
+                    </a>
+                    <a href="#" class="article">
+                        <div class="article__body">
+                            <h3 class="article__title">Бизнес-центры</h3>
+                            <p class="article__text js-excerpt" data-length="280">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, minus et? Quisquam modi, quo ducimus velit architecto cupiditate dolores facilis?
+                                                     Amet aperiam officiis libero pariatur numquam animi eos ab, mollitia id ducimus? Nobis illum perspiciatis odio officiis soluta voluptates magnam.</p>
+                        </div>
+                        <span class="article__views">120</span>
+                    </a>
+                </div>
+                <div class="section__button-holder">
+                    <a href="#" class="button button_green button_big">Все статьи</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__wrap">
+                <div class="footer__col">
+                    <div class="logo">
+                        <img src="./img/logo.png" alt="Логотип" class="logo__img">
+                    </div>
+                    <div class="footer__rates">
+                        <div class="footer__socials">
+                            <a href="#" class="footer__social">
+                                <img src="" alt="" class="footer__social-img">
+                            </a>
+                            <a href="#" class="footer__social">
+                                <img src="" alt="" class="footer__social-img">
+                            </a>
+                            <a href="#" class="footer__social">
+                                <img src="" alt="" class="footer__social-img">
+                            </a>
+                            <a href="#" class="footer__social">
+                                <img src="" alt="" class="footer__social-img">
+                            </a>
+                        </div>
+                        <img src="./img/ratings.png" alt="Рейтинг" class="footer__rate">
+                        <span class="footer__rates-text">Наш рейтинг: 4.9</span>
+                        <span class="footer__rates-text">Всего голосов: 947</span>
+                    </div>
+                </div>
+                <div class="footer__col">
+                    <ul class="footer__links">
+                        <li><a href="#" class="footer__link">Помощь</a></li>
+                        <li><a href="#" class="footer__link">О проекте</a></li>
+                        <li><a href="#" class="footer__link">Реклама</a></li>
+                        <li><a href="#" class="footer__link">Агенства недвижимости</a></li>
+                    </ul>
+                    <span class="footer__text">(C) 2006-2020 Hata.by</span>
+                    <p class="footer__text">Частное предприятие «Хата бай» 220004, г. Минск, ул. Интернациональная 25а-514 УНП: 191612768 от 26 апреля 2011 р/с: BY64 BPSB 3012 3126 4801 7933 0000 БПС-Сбербанк Минск бульвар Мулявина, 6 BIC банка BPSBBY2X</p>
+                    <div class="footer__data">
+                        <a href="#" class="footer__text">Договор оферты</a>
+                        <a href="#" class="footer__text">Карта сайта</a>
+                    </div>
+                </div>
+                <div class="footer__col">
+                    <span class="footer__big-text">
+                        Реклама на сайте: <a href="tel:+375445504545">+375 (44) 550 4545</a><a href="mailto:555@hata.by">555@hata.by</a>
+                    </span>
+                    <div class="footer__services">
+                        <a href="#" class="footer__text">Цены на услуги</a>
+                        <a href="#" class="footer__text">Способы оплаты</a>
+                        <a href="#" class="footer__text">Условия оплаты через Webpay</a>
+                        <a href="#" class="footer__text">Возврат средств через Webpay</a>
+                    </div>
+                    <div class="footer__pay-systems">
+                        <img src="https://www.hata.by/img/pay/Visa.png" alt="Партнер">
+                        <img src="https://www.hata.by/img/pay/visa-2.png" alt="Партнер" style="height: 27px; margin: 0 20px;">
+                        <img src="https://www.hata.by/img/pay/mastercard.png" alt="Партнер">
+                        <img src="https://www.hata.by/img/pay/MasterCard.png" alt="Партнер" style="margin: 0 20px;">
+                        <img src="https://www.hata.by/img/pay/webpay.png" alt="Партнер">
+                        <img src="https://www.hata.by/img/pay/belkart.png" alt="Партнер" style="width: 50px;">
+                        <img src="https://www.hata.by/img/pay/belcard_passw.png" alt="Партнер" style="margin: 0 20px;">
+                        <img src="https://www.hata.by/img/pay/image003.png" alt="Партнер">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

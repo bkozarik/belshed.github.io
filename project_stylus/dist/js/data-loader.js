@@ -1,3 +1,4 @@
+    // const url = 'http://dream-towers.ru/SAPI/objects/';
     const url = './js/data.json';
     const login = 'dt';
     const pass = '123456';
@@ -10,7 +11,6 @@
         h.append('Authorization', auth);
 
         const options = {
-            mode: 'no-cors',
             credentials: 'include',
             headers: h,
         }
@@ -449,7 +449,7 @@
 
     getFullFloorData();
 
-    if(window.location.href.includes('home-plan.html')){
+    if(window.location.href.includes('plan')){
         let data = getData(url, login, pass).then(resp => {
             let squareArr = new Array();
             let priceArr = new Array();
@@ -473,7 +473,7 @@
             document.querySelectorAll('.js-filter-trigger').forEach(input => input.addEventListener('change', filterTable));
         });
     }
-    else if(window.location.href.includes('etag.html')){
+    else if(window.location.href.includes('floor')){
 
         let currFloor = Number(sessionStorage.getItem('floor'));
         let currTower = Number(sessionStorage.getItem('tower'));

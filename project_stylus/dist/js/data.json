@@ -1,5 +1,18 @@
 {"apartments":[
-    {"id":"123", "tower": 1, "isReady": "Готова к заселению","features": "отделка, окно в ванной", "floor": 1,"png_path": "./img/a8.jpg","doc_png_path": "путь к pdf-документу квартиры","square":"111","description": "Это описание","rooms":"4","status":"Свободна","side":"Восток","price":"12311231231"},
+    {
+        "id":"123",
+        "tower": 1,
+        "isReady": "Готова к заселению",
+        "features": "отделка, окно в ванной",
+        "floor": 1,"png_path": "./img/a8.jpg",
+        "doc_png_path": "путь к pdf-документу квартиры",
+        "square":"111",
+        "description": "Это описание",
+        "rooms":"4",
+        "status":"Свободна",
+        "side":"Восток",
+        "price":"12311231231"
+    },
     {"id":"1244", "tower": 1,"isReady": "Готова к заселению","features": "отделка, гардеробная", "floor": 1,"png_path": "./img/a8.jpg","square":"11", "description": "Это описание" ,"svg_id":"14","rooms":"2","status":"Резерв","side":"Восток","price":"123231"},
     {"id":"1248", "tower": 1,"isReady": "Готова к заселению","features": "отделка", "floor": 1,"png_path": "./img/a8.jpg","square":"11", "description": "Это описание" ,"svg_id":"16","rooms":"3","status":"Резерв","side":"Восток","price":"12311231231"},
     {"id":"123", "tower": 1,"isReady": "Готова к заселению","features": "отделка, окно в ванной", "floor": 1,"png_path": "./img/a8.jpg","square":"111", "description": "Это описание" ,"svg_id":"12","rooms":"1","status":"Свободна","side":"Восток","price":"12211231231"},
