@@ -70,11 +70,561 @@
         </div>
     </header>
     <main class="main">
-        <div class="filter">
-            <div class="filter__body">
-
+        <div class="filter js-filter">
+            <div class="filter__body js-filter-body">
+                <div class="container">
+                    <form class="tab__form">
+                        <div class="tab__col">
+                            <div class="tab__row">
+                                <label class="tab__check">
+                                    <input class="tab__hidden" name="ap_type" type="checkbox" value="Квартира" checked>
+                                    <span class="button button_grey button_tab">Квартира</span>
+                                </label>
+                                <label class="tab__check">
+                                    <input class="tab__hidden" name="ap_type" type="checkbox" value="Дом">
+                                    <span class="button button_grey button_tab">Дом</span>
+                                </label>
+                                <label class="tab__check">
+                                    <input class="tab__hidden" name="ap_type" type="checkbox" value="Комната">
+                                    <span class="button button_grey button_tab">Комната</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="tab__col">
+                            <span class="tab__label">Комнат</span>
+                            <div class="tab__row">
+                                <label class="tab__check">
+                                    <input class="tab__hidden" name="room_amount" type="checkbox" value="1">
+                                    <span class="button button_grey button_room">1</span>
+                                </label>
+                                <label class="tab__check">
+                                    <input class="tab__hidden" name="room_amount" type="checkbox" value="2">
+                                    <span class="button button_grey button_room">2</span>
+                                </label>
+                                <label class="tab__check">
+                                    <input class="tab__hidden" name="room_amount" type="checkbox" value="3">
+                                    <span class="button button_grey button_room">3</span>
+                                </label>
+                                <label class="tab__check">
+                                    <input class="tab__hidden" name="room_amount" type="checkbox" value="4+">
+                                    <span class="button button_grey button_room">4+</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="tab__col tab__liftup">
+                            <span class="tab__label">Цена USD</span>
+                            <div class="tab__row">
+                                <input class="tab__input" type="tel" placeholder="от">
+                                <input class="tab__input" type="tel" placeholder="до">
+                            </div>
+                        </div>
+                        <div class="tab__col tab__liftup">
+                            <span class="tab__label">Город</span>
+                            <div class="tab__row">
+                                <div class="tab__select-wrap">
+                                    <select class="tab__select">
+                                        <option value="Минск">Минск</option>
+                                        <option value="Гомель">Гомель</option>
+                                        <option value="Брест">Брест</option>
+                                        <option value="Гомель">Гомель</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab__col">
+                            <label class="tab__compare">
+                                <input type="checkbox" name="compare">
+                                <span class="tab__checkbox"></span>
+                                <span class="tab__label">Сравнить с новостройками</span>
+                            </label>
+                        </div>
+                        <div class="tab__col">
+                            <button type="button" class="button button_white button_aslink tab__liftup js-filter-trigger">Еще фильтры</button>
+                            <button type="submit" class="button button_green button_search tab__liftup">Найти</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="filter__hidden js-filter-hidden">
+                <div class="container">
+                    <div class="filter__row">
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="filter__overlay js-filter-overlay"></div>
+        </div>
+        <div class="breadcrumbs">
+            <div class="container">
+                <nav class="breadcrumbs__nav">
+                    <ul class="breadcrumbs__list">
+                        <li class="breadcrumbs__item"><a href="./index.html" class="breadcrumbs__link">Недвижимость</a></li>
+                        <li class="breadcrumbs__item"><a class="breadcrumbs__link breadcrumbs__link_disabled">Продажа вторичек в Минске</a></li>
+                    </ul>
+                </nav>
             </div>
         </div>
+        <section class="selling">
+            <div class="container">
+                <div class="selling__top">
+                    <h1 class="section__title">Продажа вторичек в Минске</h1>
+                    <div class="selling__head">
+                        <span>Показано: 1-30 из 124 объявлений</span>
+                        <div class="selling__filter">
+                            <div class="selling__filter-item">
+                                <select class="selling__select">
+                                    <option value="USD">USD</option>
+                                    <option value="RUB">RUB</option>
+                                    <option value="EUR">EUR</option>
+                                </select>
+                            </div>
+                            <div class="selling__filter-item">
+                                <select class="selling__select">
+                                    <option value="Сначала без сортировки">Сначала без сортировки</option>
+                                    <option value="Сначала без сортировки">Сначала без сортировки</option>
+                                    <option value="Сначала без сортировки">Сначала без сортировки</option>
+                                </select>
+                            </div>
+                        </div>
+                        <ul class="selling__view">
+                            <li>
+                                <label class="selling__view-item">
+                                    <input type="radio" name="view">
+                                    <span class="selling__view-text">
+                                        <svg width="14" height="20" viewBox="0 0 14 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M13.5 7.83029C13.5 4.05189 10.5887 0.986694 7 0.986694C3.4113 0.986694 0.5 4.05189 0.5 7.83029C0.5 9.04116 1.07983 10.5579 2.1123 12.3641C2.51865 13.075 2.9892 13.8178 3.5115 14.5826C4.14992 15.5173 4.83253 16.4374 5.51508 17.3045C5.92515 17.8254 6.24525 18.2143 6.43081 18.4321L7 19.1L7.56919 18.4321C7.75475 18.2143 8.07485 17.8254 8.48492 17.3045C9.16747 16.4374 9.85007 15.5173 10.4885 14.5826C11.0108 13.8178 11.4813 13.075 11.8877 12.3641C12.9202 10.5579 13.5 9.04116 13.5 7.83029ZM7.30712 16.2766C7.19753 16.4158 7.09476 16.5451 6.99977 16.6635C6.90477 16.5451 6.802 16.4158 6.69241 16.2766C6.03075 15.4361 5.36914 14.5443 4.75297 13.6421C4.25357 12.9109 3.80569 12.2039 3.42245 11.5335C2.52334 9.96056 2.02918 8.66788 2.02918 7.82997C2.02918 4.94089 4.25574 2.59663 6.99977 2.59663C9.74379 2.59663 11.9704 4.94089 11.9704 7.82997C11.9704 8.66788 11.4762 9.96056 10.5771 11.5335C10.1938 12.2039 9.74596 12.9109 9.24656 13.6421C8.63039 14.5443 7.96878 15.4361 7.30712 16.2766ZM6.99993 9.03773C7.63504 9.03773 8.14699 8.49871 8.14699 7.83003C8.14699 7.16135 7.63504 6.62234 6.99993 6.62234C6.36482 6.62234 5.85287 7.16135 5.85287 7.83003C5.85287 8.49871 6.36482 9.03773 6.99993 9.03773ZM4.3237 7.83021C4.3237 9.38821 5.52039 10.6482 7.00017 10.6482C8.47995 10.6482 9.67664 9.38821 9.67664 7.83021C9.67664 6.2722 8.47995 5.01226 7.00017 5.01226C5.52039 5.01226 4.3237 6.2722 4.3237 7.83021Z"/>
+                                        </svg>
+                                        На карте
+                                    </span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="selling__view-item">
+                                    <input type="radio" name="view">
+                                    <span class="selling__view-text">
+                                        <svg width="15" height="11" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M15 1.25C15 1.66421 14.6642 2 14.25 2H0.75C0.335786 2 0 1.66421 0 1.25C0 0.835786 0.335787 0.5 0.75 0.5H14.25C14.6642 0.5 15 0.835786 15 1.25Z"/>
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M15 5.75C15 6.16421 14.6642 6.5 14.25 6.5H0.75C0.335786 6.5 0 6.16421 0 5.75C0 5.33579 0.335787 5 0.75 5H14.25C14.6642 5 15 5.33579 15 5.75Z"/>
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M15 10.25C15 10.6642 14.6642 11 14.25 11H0.75C0.335786 11 0 10.6642 0 10.25C0 9.83579 0.335787 9.5 0.75 9.5H14.25C14.6642 9.5 15 9.83579 15 10.25Z"/>
+                                        </svg>
+                                        Список
+                                    </span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="selling__view-item">
+                                    <input type="radio" name="view" checked>
+                                    <span class="selling__view-text">
+                                        <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect x="1" y="0.5" width="5" height="5"/>
+                                            <rect x="1" y="8.5" width="5" height="5"/>
+                                            <rect x="9" y="0.5" width="5" height="5"/>
+                                            <rect x="9" y="8.5" width="5" height="5"/>
+                                        </svg>
+                                        Витрина
+                                    </span>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-container col-container_four">
+                        <a href="#" class="top__item">
+                            <div class="top__head">
+                                <span class="top__head-price">883 USD/м<sup>2</sup></span>
+                                <span class="top__head-year">2014 г. п.</span>
+                                <span class="top__head-action">АКЦИЯ</span>
+                                <picture class="top__img">
+                                    <source srcset="./img/apart_1.jpg" type="image/jpg">
+                                    <img src="./img/apart_1.jpg" alt="Квартира">
+                                </picture>
+                            </div>
+                            <div class="top__body">
+                                <h3 class="top__title">Квартира 10км от Минска</h3>
+                                <span class="top__description js-excerpt" data-length="80">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis eligendi ab qui eum ipsam? Enim qui totam iure, assumenda nihil molestiae eos quas possimus rerum, repellat eveniet facere. Delectus, veritatis esse ea debitis nihil ratione ab non possimus illum molestiae? Est, numquam qui accusamus commodi adipisci quia! Repellat magni reiciendis, officia, quisquam, sit amet aliquam corrupti nam veniam harum placeat!</span>
+                                <label class="top__like">
+                                    <input type="checkbox">
+                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                        viewBox="0 0 512 512" xml:space="preserve">
+                                            <path d="M376,30c-27.783,0-53.255,8.804-75.707,26.168c-21.525,16.647-35.856,37.85-44.293,53.268
+                                                c-8.437-15.419-22.768-36.621-44.293-53.268C189.255,38.804,163.783,30,136,30C58.468,30,0,93.417,0,177.514
+                                                c0,90.854,72.943,153.015,183.369,247.118c18.752,15.981,40.007,34.095,62.099,53.414C248.38,480.596,252.12,482,256,482
+                                                s7.62-1.404,10.532-3.953c22.094-19.322,43.348-37.435,62.111-53.425C439.057,330.529,512,268.368,512,177.514
+                                                C512,93.417,453.532,30,376,30z"/>
+                                    </svg>
+                                </label>
+                            </div>
+                        </a>
+                        <a href="#" class="top__item">
+                            <div class="top__head">
+                                <span class="top__head-price">883 USD/м<sup>2</sup></span>
+                                <span class="top__head-year">2014 г. п.</span>
+                                <span class="top__head-action">АКЦИЯ</span>
+                                <picture class="top__img">
+                                    <source srcset="./img/apart_1.jpg" type="image/jpg">
+                                    <img src="./img/apart_1.jpg" alt="Квартира">
+                                </picture>
+                            </div>
+                            <div class="top__body">
+                                <h3 class="top__title">Квартира 10км от Минска</h3>
+                                <span class="top__description js-excerpt" data-length="80">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis eligendi ab qui eum ipsam? Enim qui totam iure, assumenda nihil molestiae eos quas possimus rerum, repellat eveniet facere. Delectus, veritatis esse ea debitis nihil ratione ab non possimus illum molestiae? Est, numquam qui accusamus commodi adipisci quia! Repellat magni reiciendis, officia, quisquam, sit amet aliquam corrupti nam veniam harum placeat!</span>
+                                <label class="top__like">
+                                    <input type="checkbox">
+                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                        viewBox="0 0 512 512" xml:space="preserve">
+                                            <path d="M376,30c-27.783,0-53.255,8.804-75.707,26.168c-21.525,16.647-35.856,37.85-44.293,53.268
+                                                c-8.437-15.419-22.768-36.621-44.293-53.268C189.255,38.804,163.783,30,136,30C58.468,30,0,93.417,0,177.514
+                                                c0,90.854,72.943,153.015,183.369,247.118c18.752,15.981,40.007,34.095,62.099,53.414C248.38,480.596,252.12,482,256,482
+                                                s7.62-1.404,10.532-3.953c22.094-19.322,43.348-37.435,62.111-53.425C439.057,330.529,512,268.368,512,177.514
+                                                C512,93.417,453.532,30,376,30z"/>
+                                    </svg>
+                                </label>
+                            </div>
+                        </a>
+                        <a href="#" class="top__item">
+                            <div class="top__head">
+                                <span class="top__head-price">883 USD/м<sup>2</sup></span>
+                                <span class="top__head-year">2014 г. п.</span>
+                                <span class="top__head-action">АКЦИЯ</span>
+                                <picture class="top__img">
+                                    <source srcset="./img/apart_1.jpg" type="image/jpg">
+                                    <img src="./img/apart_1.jpg" alt="Квартира">
+                                </picture>
+                            </div>
+                            <div class="top__body">
+                                <h3 class="top__title">Квартира 10км от Минска</h3>
+                                <span class="top__description js-excerpt" data-length="80">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis eligendi ab qui eum ipsam? Enim qui totam iure, assumenda nihil molestiae eos quas possimus rerum, repellat eveniet facere. Delectus, veritatis esse ea debitis nihil ratione ab non possimus illum molestiae? Est, numquam qui accusamus commodi adipisci quia! Repellat magni reiciendis, officia, quisquam, sit amet aliquam corrupti nam veniam harum placeat!</span>
+                                <label class="top__like">
+                                    <input type="checkbox">
+                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                        viewBox="0 0 512 512" xml:space="preserve">
+                                            <path d="M376,30c-27.783,0-53.255,8.804-75.707,26.168c-21.525,16.647-35.856,37.85-44.293,53.268
+                                                c-8.437-15.419-22.768-36.621-44.293-53.268C189.255,38.804,163.783,30,136,30C58.468,30,0,93.417,0,177.514
+                                                c0,90.854,72.943,153.015,183.369,247.118c18.752,15.981,40.007,34.095,62.099,53.414C248.38,480.596,252.12,482,256,482
+                                                s7.62-1.404,10.532-3.953c22.094-19.322,43.348-37.435,62.111-53.425C439.057,330.529,512,268.368,512,177.514
+                                                C512,93.417,453.532,30,376,30z"/>
+                                    </svg>
+                                </label>
+                            </div>
+                        </a>
+                        <a href="#" class="top__item">
+                            <div class="top__head">
+                                <span class="top__head-price">883 USD/м<sup>2</sup></span>
+                                <span class="top__head-year">2014 г. п.</span>
+                                <span class="top__head-action">АКЦИЯ</span>
+                                <picture class="top__img">
+                                    <source srcset="./img/apart_1.jpg" type="image/jpg">
+                                    <img src="./img/apart_1.jpg" alt="Квартира">
+                                </picture>
+                            </div>
+                            <div class="top__body">
+                                <h3 class="top__title">Квартира 10км от Минска</h3>
+                                <span class="top__description js-excerpt" data-length="80">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis eligendi ab qui eum ipsam? Enim qui totam iure, assumenda nihil molestiae eos quas possimus rerum, repellat eveniet facere. Delectus, veritatis esse ea debitis nihil ratione ab non possimus illum molestiae? Est, numquam qui accusamus commodi adipisci quia! Repellat magni reiciendis, officia, quisquam, sit amet aliquam corrupti nam veniam harum placeat!</span>
+                                <label class="top__like">
+                                    <input type="checkbox">
+                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                        viewBox="0 0 512 512" xml:space="preserve">
+                                            <path d="M376,30c-27.783,0-53.255,8.804-75.707,26.168c-21.525,16.647-35.856,37.85-44.293,53.268
+                                                c-8.437-15.419-22.768-36.621-44.293-53.268C189.255,38.804,163.783,30,136,30C58.468,30,0,93.417,0,177.514
+                                                c0,90.854,72.943,153.015,183.369,247.118c18.752,15.981,40.007,34.095,62.099,53.414C248.38,480.596,252.12,482,256,482
+                                                s7.62-1.404,10.532-3.953c22.094-19.322,43.348-37.435,62.111-53.425C439.057,330.529,512,268.368,512,177.514
+                                                C512,93.417,453.532,30,376,30z"/>
+                                    </svg>
+                                </label>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="selling__body">
+                <div class="container">
+                    <div class="selling__wrap">
+                        <div class="selling__main">
+                            <a href="#" class="apartment apartment_green">
+                                <div class="apartment__slider">
+                                    <img src="./img/apart_1.jpg" alt="Квартира" class="apartment__img">
+                                </div>
+                                <div class="apartment__main">
+                                    <div class="apartment__body">
+                                        <div class="apartment__head">
+                                            <h3 class="apartment__title">2-комнатная квартира на ул. Ленина 15 , Минск</h3>
+                                            <label class="apartment__like">
+                                                <input type="checkbox">
+                                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                                    viewBox="0 0 512 512" xml:space="preserve">
+                                                        <path d="M376,30c-27.783,0-53.255,8.804-75.707,26.168c-21.525,16.647-35.856,37.85-44.293,53.268
+                                                            c-8.437-15.419-22.768-36.621-44.293-53.268C189.255,38.804,163.783,30,136,30C58.468,30,0,93.417,0,177.514
+                                                            c0,90.854,72.943,153.015,183.369,247.118c18.752,15.981,40.007,34.095,62.099,53.414C248.38,480.596,252.12,482,256,482
+                                                            s7.62-1.404,10.532-3.953c22.094-19.322,43.348-37.435,62.111-53.425C439.057,330.529,512,268.368,512,177.514
+                                                            C512,93.417,453.532,30,376,30z"/>
+                                                </svg>
+                                            </label>
+                                        </div>
+                                        <div class="apartment__row">
+                                            <span class="apartment__text">
+                                                <svg viewBox="0 0 10 16">
+                                                    <path fill-rule="evenodd" d="M.606 7.752A5.426 5.426 0 0 1 0 5.246C0 2.349 2.239 0 5 0s5 2.349 5 5.246c0 .908-.22 1.761-.606 2.506L5 16 .605 7.753h.001zM5 6.995c.92 0 1.667-.783 1.667-1.75 0-.965-.747-1.748-1.667-1.748s-1.667.783-1.667 1.749c0 .966.747 1.749 1.667 1.749z"></path>
+                                                </svg>
+                                                Заводской район
+                                            </span>
+                                            <span class="apartment__text">
+                                                <svg height="12px" viewBox="0 0 13 10">
+                                                    <path class="st0" d="M5.5 8.5C1.7 8.5-.4 4.4-.4 4.2c-.1-.1-.1-.3 0-.4.1-.2 2.2-4.3 5.9-4.3s5.9 4.1 5.9 4.3c.1.1.1.3 0 .4 0 .2-2.1 4.3-5.9 4.3zM.6 4c.4.8 2.2 3.5 4.9 3.5S10 4.8 10.4 4C10 3.2 8.2.5 5.5.5S1 3.2.6 4z" transform="translate(1 1)"></path>
+                                                    <path class="st0" d="M5.5 6c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm0-3c-.6 0-1 .4-1 1s.4 1 1 1 1-.4 1-1-.4-1-1-1z" transform="translate(1 1)"></path>
+                                                </svg>
+                                                236 просмотров
+                                            </span>
+                                        </div>
+                                        <p class="apartment__text js-excerpt" data-length="200">Квартира расположена в великолепном месте, в самом центре г.Минска. Район зеленый. Дворик тихий. Всегда есть парковочные места. В наличии сухой подвал. Соседи - замечательные люди. В шаговой доступности ДК "Железнодорожников", </p>
+                                    </div>
+                                    <div class="apartment__side">
+                                        <div class="apartment__data">
+                                            <span class="apartment__price">$102 765</span>
+                                            <div class="apartment__info">
+                                                <div class="apartment__info-item">
+                                                    <span class="apartment__price-text"><span class="apartment__price-text__big">1545</span> USD/м<sup>2</sup></span>
+                                                    <span class="apartment__price-text apartment__price-text__big">62.5 /36.1/15 м<sup>2</sup></span>
+                                                </div>
+                                                <div class="apartment__info-item">
+                                                    <span class="apartment__price-text"><span class="apartment__price-text__bold">1973</span> год постройки</span>
+                                                    <span class="apartment__price-text"><span class="apartment__price-text__bold">2</span> этаж (5 этажей)</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="apartment apartment_green">
+                                <div class="apartment__slider">
+                                    <img src="./img/apart_1.jpg" alt="Квартира" class="apartment__img">
+                                </div>
+                                <div class="apartment__main">
+                                    <div class="apartment__body">
+                                        <div class="apartment__head">
+                                            <h3 class="apartment__title">2-комнатная квартира на ул. Ленина 15 , Минск</h3>
+                                            <label class="apartment__like">
+                                                <input type="checkbox">
+                                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                                    viewBox="0 0 512 512" xml:space="preserve">
+                                                        <path d="M376,30c-27.783,0-53.255,8.804-75.707,26.168c-21.525,16.647-35.856,37.85-44.293,53.268
+                                                            c-8.437-15.419-22.768-36.621-44.293-53.268C189.255,38.804,163.783,30,136,30C58.468,30,0,93.417,0,177.514
+                                                            c0,90.854,72.943,153.015,183.369,247.118c18.752,15.981,40.007,34.095,62.099,53.414C248.38,480.596,252.12,482,256,482
+                                                            s7.62-1.404,10.532-3.953c22.094-19.322,43.348-37.435,62.111-53.425C439.057,330.529,512,268.368,512,177.514
+                                                            C512,93.417,453.532,30,376,30z"/>
+                                                </svg>
+                                            </label>
+                                        </div>
+                                        <div class="apartment__row">
+                                            <span class="apartment__text">
+                                                <svg viewBox="0 0 10 16">
+                                                    <path fill-rule="evenodd" d="M.606 7.752A5.426 5.426 0 0 1 0 5.246C0 2.349 2.239 0 5 0s5 2.349 5 5.246c0 .908-.22 1.761-.606 2.506L5 16 .605 7.753h.001zM5 6.995c.92 0 1.667-.783 1.667-1.75 0-.965-.747-1.748-1.667-1.748s-1.667.783-1.667 1.749c0 .966.747 1.749 1.667 1.749z"></path>
+                                                </svg>
+                                                Заводской район
+                                            </span>
+                                            <span class="apartment__text">
+                                                <svg height="12px" viewBox="0 0 13 10">
+                                                    <path class="st0" d="M5.5 8.5C1.7 8.5-.4 4.4-.4 4.2c-.1-.1-.1-.3 0-.4.1-.2 2.2-4.3 5.9-4.3s5.9 4.1 5.9 4.3c.1.1.1.3 0 .4 0 .2-2.1 4.3-5.9 4.3zM.6 4c.4.8 2.2 3.5 4.9 3.5S10 4.8 10.4 4C10 3.2 8.2.5 5.5.5S1 3.2.6 4z" transform="translate(1 1)"></path>
+                                                    <path class="st0" d="M5.5 6c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm0-3c-.6 0-1 .4-1 1s.4 1 1 1 1-.4 1-1-.4-1-1-1z" transform="translate(1 1)"></path>
+                                                </svg>
+                                                236 просмотров
+                                            </span>
+                                        </div>
+                                        <p class="apartment__text js-excerpt" data-length="200">Квартира расположена в великолепном месте, в самом центре г.Минска. Район зеленый. Дворик тихий. Всегда есть парковочные места. В наличии сухой подвал. Соседи - замечательные люди. В шаговой доступности ДК "Железнодорожников", </p>
+                                    </div>
+                                    <div class="apartment__side">
+                                        <div class="apartment__data">
+                                            <span class="apartment__price">$102 765</span>
+                                            <div class="apartment__info">
+                                                <div class="apartment__info-item">
+                                                    <span class="apartment__price-text"><span class="apartment__price-text__big">1545</span> USD/м<sup>2</sup></span>
+                                                    <span class="apartment__price-text apartment__price-text__big">62.5 /36.1/15 м<sup>2</sup></span>
+                                                </div>
+                                                <div class="apartment__info-item">
+                                                    <span class="apartment__price-text"><span class="apartment__price-text__bold">1973</span> год постройки</span>
+                                                    <span class="apartment__price-text"><span class="apartment__price-text__bold">2</span> этаж (5 этажей)</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="apartment">
+                                <div class="apartment__slider">
+                                    <img src="./img/apart_1.jpg" alt="Квартира" class="apartment__img">
+                                </div>
+                                <div class="apartment__main">
+                                    <div class="apartment__body">
+                                        <div class="apartment__head">
+                                            <h3 class="apartment__title">2-комнатная квартира на ул. Ленина 15 , Минск</h3>
+                                            <label class="apartment__like">
+                                                <input type="checkbox">
+                                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                                    viewBox="0 0 512 512" xml:space="preserve">
+                                                        <path d="M376,30c-27.783,0-53.255,8.804-75.707,26.168c-21.525,16.647-35.856,37.85-44.293,53.268
+                                                            c-8.437-15.419-22.768-36.621-44.293-53.268C189.255,38.804,163.783,30,136,30C58.468,30,0,93.417,0,177.514
+                                                            c0,90.854,72.943,153.015,183.369,247.118c18.752,15.981,40.007,34.095,62.099,53.414C248.38,480.596,252.12,482,256,482
+                                                            s7.62-1.404,10.532-3.953c22.094-19.322,43.348-37.435,62.111-53.425C439.057,330.529,512,268.368,512,177.514
+                                                            C512,93.417,453.532,30,376,30z"/>
+                                                </svg>
+                                            </label>
+                                        </div>
+                                        <div class="apartment__row">
+                                            <span class="apartment__text">
+                                                <svg viewBox="0 0 10 16">
+                                                    <path fill-rule="evenodd" d="M.606 7.752A5.426 5.426 0 0 1 0 5.246C0 2.349 2.239 0 5 0s5 2.349 5 5.246c0 .908-.22 1.761-.606 2.506L5 16 .605 7.753h.001zM5 6.995c.92 0 1.667-.783 1.667-1.75 0-.965-.747-1.748-1.667-1.748s-1.667.783-1.667 1.749c0 .966.747 1.749 1.667 1.749z"></path>
+                                                </svg>
+                                                Заводской район
+                                            </span>
+                                            <span class="apartment__text">
+                                                <svg height="12px" viewBox="0 0 13 10">
+                                                    <path class="st0" d="M5.5 8.5C1.7 8.5-.4 4.4-.4 4.2c-.1-.1-.1-.3 0-.4.1-.2 2.2-4.3 5.9-4.3s5.9 4.1 5.9 4.3c.1.1.1.3 0 .4 0 .2-2.1 4.3-5.9 4.3zM.6 4c.4.8 2.2 3.5 4.9 3.5S10 4.8 10.4 4C10 3.2 8.2.5 5.5.5S1 3.2.6 4z" transform="translate(1 1)"></path>
+                                                    <path class="st0" d="M5.5 6c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm0-3c-.6 0-1 .4-1 1s.4 1 1 1 1-.4 1-1-.4-1-1-1z" transform="translate(1 1)"></path>
+                                                </svg>
+                                                236 просмотров
+                                            </span>
+                                        </div>
+                                        <p class="apartment__text js-excerpt" data-length="200">Квартира расположена в великолепном месте, в самом центре г.Минска. Район зеленый. Дворик тихий. Всегда есть парковочные места. В наличии сухой подвал. Соседи - замечательные люди. В шаговой доступности ДК "Железнодорожников", </p>
+                                    </div>
+                                    <div class="apartment__side">
+                                        <div class="apartment__data">
+                                            <span class="apartment__price">$102 765</span>
+                                            <div class="apartment__info">
+                                                <div class="apartment__info-item">
+                                                    <span class="apartment__price-text"><span class="apartment__price-text__big">1545</span> USD/м<sup>2</sup></span>
+                                                    <span class="apartment__price-text apartment__price-text__big">62.5 /36.1/15 м<sup>2</sup></span>
+                                                </div>
+                                                <div class="apartment__info-item">
+                                                    <span class="apartment__price-text"><span class="apartment__price-text__bold">1973</span> год постройки</span>
+                                                    <span class="apartment__price-text"><span class="apartment__price-text__bold">2</span> этаж (5 этажей)</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="apartment">
+                                <div class="apartment__slider">
+                                    <img src="./img/apart_1.jpg" alt="Квартира" class="apartment__img">
+                                </div>
+                                <div class="apartment__main">
+                                    <div class="apartment__body">
+                                        <div class="apartment__head">
+                                            <h3 class="apartment__title">2-комнатная квартира на ул. Ленина 15 , Минск</h3>
+                                            <label class="apartment__like">
+                                                <input type="checkbox">
+                                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                                    viewBox="0 0 512 512" xml:space="preserve">
+                                                        <path d="M376,30c-27.783,0-53.255,8.804-75.707,26.168c-21.525,16.647-35.856,37.85-44.293,53.268
+                                                            c-8.437-15.419-22.768-36.621-44.293-53.268C189.255,38.804,163.783,30,136,30C58.468,30,0,93.417,0,177.514
+                                                            c0,90.854,72.943,153.015,183.369,247.118c18.752,15.981,40.007,34.095,62.099,53.414C248.38,480.596,252.12,482,256,482
+                                                            s7.62-1.404,10.532-3.953c22.094-19.322,43.348-37.435,62.111-53.425C439.057,330.529,512,268.368,512,177.514
+                                                            C512,93.417,453.532,30,376,30z"/>
+                                                </svg>
+                                            </label>
+                                        </div>
+                                        <div class="apartment__row">
+                                            <span class="apartment__text">
+                                                <svg viewBox="0 0 10 16">
+                                                    <path fill-rule="evenodd" d="M.606 7.752A5.426 5.426 0 0 1 0 5.246C0 2.349 2.239 0 5 0s5 2.349 5 5.246c0 .908-.22 1.761-.606 2.506L5 16 .605 7.753h.001zM5 6.995c.92 0 1.667-.783 1.667-1.75 0-.965-.747-1.748-1.667-1.748s-1.667.783-1.667 1.749c0 .966.747 1.749 1.667 1.749z"></path>
+                                                </svg>
+                                                Заводской район
+                                            </span>
+                                            <span class="apartment__text">
+                                                <svg height="12px" viewBox="0 0 13 10">
+                                                    <path class="st0" d="M5.5 8.5C1.7 8.5-.4 4.4-.4 4.2c-.1-.1-.1-.3 0-.4.1-.2 2.2-4.3 5.9-4.3s5.9 4.1 5.9 4.3c.1.1.1.3 0 .4 0 .2-2.1 4.3-5.9 4.3zM.6 4c.4.8 2.2 3.5 4.9 3.5S10 4.8 10.4 4C10 3.2 8.2.5 5.5.5S1 3.2.6 4z" transform="translate(1 1)"></path>
+                                                    <path class="st0" d="M5.5 6c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm0-3c-.6 0-1 .4-1 1s.4 1 1 1 1-.4 1-1-.4-1-1-1z" transform="translate(1 1)"></path>
+                                                </svg>
+                                                236 просмотров
+                                            </span>
+                                        </div>
+                                        <p class="apartment__text js-excerpt" data-length="200">Квартира расположена в великолепном месте, в самом центре г.Минска. Район зеленый. Дворик тихий. Всегда есть парковочные места. В наличии сухой подвал. Соседи - замечательные люди. В шаговой доступности ДК "Железнодорожников", </p>
+                                    </div>
+                                    <div class="apartment__side">
+                                        <div class="apartment__data">
+                                            <span class="apartment__price">$102 765</span>
+                                            <div class="apartment__info">
+                                                <div class="apartment__info-item">
+                                                    <span class="apartment__price-text"><span class="apartment__price-text__big">1545</span> USD/м<sup>2</sup></span>
+                                                    <span class="apartment__price-text apartment__price-text__big">62.5 /36.1/15 м<sup>2</sup></span>
+                                                </div>
+                                                <div class="apartment__info-item">
+                                                    <span class="apartment__price-text"><span class="apartment__price-text__bold">1973</span> год постройки</span>
+                                                    <span class="apartment__price-text"><span class="apartment__price-text__bold">2</span> этаж (5 этажей)</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="apartment">
+                                <div class="apartment__slider">
+                                    <img src="./img/apart_1.jpg" alt="Квартира" class="apartment__img">
+                                </div>
+                                <div class="apartment__main">
+                                    <div class="apartment__body">
+                                        <div class="apartment__head">
+                                            <h3 class="apartment__title">2-комнатная квартира на ул. Ленина 15 , Минск</h3>
+                                            <label class="apartment__like">
+                                                <input type="checkbox">
+                                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                                    viewBox="0 0 512 512" xml:space="preserve">
+                                                        <path d="M376,30c-27.783,0-53.255,8.804-75.707,26.168c-21.525,16.647-35.856,37.85-44.293,53.268
+                                                            c-8.437-15.419-22.768-36.621-44.293-53.268C189.255,38.804,163.783,30,136,30C58.468,30,0,93.417,0,177.514
+                                                            c0,90.854,72.943,153.015,183.369,247.118c18.752,15.981,40.007,34.095,62.099,53.414C248.38,480.596,252.12,482,256,482
+                                                            s7.62-1.404,10.532-3.953c22.094-19.322,43.348-37.435,62.111-53.425C439.057,330.529,512,268.368,512,177.514
+                                                            C512,93.417,453.532,30,376,30z"/>
+                                                </svg>
+                                            </label>
+                                        </div>
+                                        <div class="apartment__row">
+                                            <span class="apartment__text">
+                                                <svg viewBox="0 0 10 16">
+                                                    <path fill-rule="evenodd" d="M.606 7.752A5.426 5.426 0 0 1 0 5.246C0 2.349 2.239 0 5 0s5 2.349 5 5.246c0 .908-.22 1.761-.606 2.506L5 16 .605 7.753h.001zM5 6.995c.92 0 1.667-.783 1.667-1.75 0-.965-.747-1.748-1.667-1.748s-1.667.783-1.667 1.749c0 .966.747 1.749 1.667 1.749z"></path>
+                                                </svg>
+                                                Заводской район
+                                            </span>
+                                            <span class="apartment__text">
+                                                <svg height="12px" viewBox="0 0 13 10">
+                                                    <path class="st0" d="M5.5 8.5C1.7 8.5-.4 4.4-.4 4.2c-.1-.1-.1-.3 0-.4.1-.2 2.2-4.3 5.9-4.3s5.9 4.1 5.9 4.3c.1.1.1.3 0 .4 0 .2-2.1 4.3-5.9 4.3zM.6 4c.4.8 2.2 3.5 4.9 3.5S10 4.8 10.4 4C10 3.2 8.2.5 5.5.5S1 3.2.6 4z" transform="translate(1 1)"></path>
+                                                    <path class="st0" d="M5.5 6c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm0-3c-.6 0-1 .4-1 1s.4 1 1 1 1-.4 1-1-.4-1-1-1z" transform="translate(1 1)"></path>
+                                                </svg>
+                                                236 просмотров
+                                            </span>
+                                        </div>
+                                        <p class="apartment__text js-excerpt" data-length="200">Квартира расположена в великолепном месте, в самом центре г.Минска. Район зеленый. Дворик тихий. Всегда есть парковочные места. В наличии сухой подвал. Соседи - замечательные люди. В шаговой доступности ДК "Железнодорожников", </p>
+                                    </div>
+                                    <div class="apartment__side">
+                                        <div class="apartment__data">
+                                            <span class="apartment__price">$102 765</span>
+                                            <div class="apartment__info">
+                                                <div class="apartment__info-item">
+                                                    <span class="apartment__price-text"><span class="apartment__price-text__big">1545</span> USD/м<sup>2</sup></span>
+                                                    <span class="apartment__price-text apartment__price-text__big">62.5 /36.1/15 м<sup>2</sup></span>
+                                                </div>
+                                                <div class="apartment__info-item">
+                                                    <span class="apartment__price-text"><span class="apartment__price-text__bold">1973</span> год постройки</span>
+                                                    <span class="apartment__price-text"><span class="apartment__price-text__bold">2</span> этаж (5 этажей)</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="selling__banner"></div>
+                    </div>
+                    <div class="pagination__wrap">
+                        <ul class="pagination">
+                            <li class="pagination__item"><a href="#" class="pagination__link active">1</a></li>
+                            <li class="pagination__item"><a href="#" class="pagination__link">2</a></li>
+                            <li class="pagination__item"><a href="#" class="pagination__link">3</a></li>
+                            <li class="pagination__item"><a href="#" class="pagination__link">4</a></li>
+                            <li class="pagination__item"><a href="#" class="pagination__link">5</a></li>
+                            <li class="pagination__item"><a href="#" class="pagination__link pagination__link_arrow"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
     <footer class="footer">
         <div class="container">

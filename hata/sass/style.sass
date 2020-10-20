@@ -13,6 +13,7 @@ $main_grey: #636363
     transition: all .2s ease-in-out 0s
     font-family: "SF Pro Display", sans-serif
     font-weight: 400
+    color: $main_black
 
 body, html
     overflow-x: hidden
@@ -48,6 +49,7 @@ section
     &__title
         font-size: 32px
         font-weight: 600
+        color: $main_black
     &__white
         background-color: #fff
         padding-top: 70px
@@ -108,12 +110,27 @@ section
         font-size: 18px
         padding: 8px 24px
         margin-bottom: 4px
+        &.hidden
+            opacity: 0
+            visibility: hidden
+            pointer-events: none
     &_add, &_login
         font-size: 16px
         padding: 10px 16px
     &_picset
         font-size: 16px
         padding: 11px 12px
+    &_aslink
+        box-shadow: none
+        padding: 8px 12px
+        font-size: 16px
+        margin-right: 15px
+        &:hover
+            background-color: transparent
+            text-decoration: underline
+            color: $main_green
+        &.active
+            background-color: rgba(47, 173, 73, 0.1)
     &_big
         width: 100%
         max-width: 380px
@@ -214,7 +231,7 @@ section
     top: 50%
     right: 0
     border-radius: 4px
-    transform: translate(0, -50%)
+    transform: translate(-40%, -50%)
     cursor: pointer
     &:hover
         background-color: #e5eaf5
@@ -264,7 +281,7 @@ section
 
 .main
     flex-grow: 1
-    margin-top: 115px
+    margin-top: 120px
 
 .hero
     &__overlay
@@ -336,6 +353,8 @@ section
     display: block
     position: absolute
     transition-duration: .3s
+    &__liftup
+        margin-bottom: 4px
     &__form, &__main
         display: flex
         align-items: flex-end
@@ -709,3 +728,432 @@ section
             flex-grow: 0
             flex-shrink: 0
             margin-top: 5px
+
+
+//
+//
+// Страница квартир
+//
+//
+
+.breadcrumbs
+    padding-top: 25px
+    margin-bottom: 50px
+    background-color: #fff
+    &__list
+        list-style-type: none
+        display: flex
+    &__item
+        display: inline-block
+        position: relative
+        & + &
+            margin-left: 25px
+        &:not(:last-child)
+            &::before, &::after
+                content: ''
+                display: inline-block
+                position: absolute
+                background-color: #828282
+                height: 1px
+                width: 6px
+                top: 50%
+            &::before
+                right: -15px
+                transform: translate(0, calc( -2px - 60% )) rotate(45deg)
+            &::after
+                right: -15px
+                transform: translate(0, calc( 2px - 60% )) rotate(-45deg)
+
+        &:last-child
+            .breadcrumbs
+                &__link
+                    color: $main_black
+    &__link
+        color: #828282
+        font-size: 16px
+        display: inline-block
+        &:not(.breadcrumbs__link_disabled):hover
+            text-decoration: underline
+            color: $main_green
+
+.filter
+    position: relative
+    z-index: 5
+    &__body
+        padding: 25px 0px
+        border-bottom: 1px solid $main_light
+        background-color: #fff
+    &__overlay
+        position: fixed
+        width: 100%
+        height: 100%
+        left: 0
+        top: 0
+        background-color: rgba(0, 0, 0, .6)
+        z-index: -2
+        opacity: 0
+        &.active
+            opacity: 1
+    &__row
+        display: flex
+        align-items: flex-end
+        justify-content: space-between
+    &__col
+        
+    &__hidden
+        position: absolute
+        left: 0
+        width: 100%
+        padding: 30px 0px 50px
+        background-color: #fff
+        transform: translateY(-100%)
+        visibility: hidden
+        pointer-events: none
+        z-index: -1
+        &.active
+            transform: translateY(0%)
+            visibility: visible
+            pointer-events: all
+    .tab__col + .tab__col
+        margin-left: 0
+
+.selling
+    &__head, &__filter
+        display: flex
+        align-items: center
+    &__top
+        padding-bottom: 40px
+    &__head
+        margin: 20px 0px 0px
+    &__filter
+        margin-left: 60px
+        &-item
+            cursor: pointer
+            position: relative
+            & + &
+                margin-left: 50px
+            &::after
+                position: absolute
+                pointer-events: none
+                content: ''
+                display: inline-block
+                border: 6px solid transparent
+                border-top: 6px solid #4A6894
+                top: 65%
+                right: -20px
+                transform: translate(0, -50%)
+    &__select
+        appearance: none
+        color: #4A6894
+        font-size: 16px
+        &:focus
+            outline: none
+    &__view
+        margin-left: auto
+        display: flex
+        list-style-type: none
+        li
+            &:nth-child(1)
+                .selling__view-text
+                    border-radius: 4px 0 0 4px
+            &:nth-child(2)
+                .selling__view-text
+                    border-left: none
+                    border-right: none
+            &:nth-child(3)
+                .selling
+                    &__view
+                        &-item
+                            .selling__view-text svg
+                                stroke: $main_green
+                                fill: none
+                            input:checked + .selling__view-text svg
+                                stroke: #ffffff
+                                fill: none
+                        &-text
+                            border-radius: 0px 4px 4px 0px
+        &-item
+            cursor: pointer
+            input:checked + .selling__view-text
+                background-color: $main_green
+                color: #fff
+                svg
+                    fill: #ffffff
+            input
+                position: absolute
+                height: 1px
+                width: 1px
+                opacity: 0
+                visibility: hidden
+        &-text
+            display: flex
+            border: 1px solid $main_green
+            color: $main_green
+            padding: 8.5px 12px
+            font-size: 16px
+            user-select: none
+            svg
+                fill: $main_green
+                height: 16px
+                transform: translateY(1px)
+                margin-right: 5px
+                transition-duration: 0s
+    &__body
+        padding: 40px 0px
+        background-color: $main_light
+    &__wrap
+        display: grid
+        grid-template-columns: 1fr 288px
+        grid-column-gap: 15px
+    &__banner
+        width: 100%
+        height: 100%
+        border-radius: 4px
+        background-color: #c4c4c4
+    &__main
+        display: grid
+        grid-template-columns: 1fr
+        grid-template-rows: repeat(5, 190px)
+        grid-row-gap: 12px
+
+.pagination
+    display: flex
+    align-items: center
+    list-style-type: none
+    border-radius: 4px
+    &__item
+        background-color: #fff
+        height: 30px
+        width: 30px
+        &:first-child, &:last-child
+            border-radius: 4px
+    &__link
+        display: inline-block
+        height: 30px
+        width: 30px
+        text-align: center
+        line-height: 30px
+        border-radius: 4px
+        position: relative
+        &_arrow
+            background-color: #4A6894
+            &::before, &::after
+                display: inline-block
+                content: ''
+                background-color: #fff
+                height: 2px
+                width: 7px
+                position: absolute
+                top: 50%
+                left: 50%
+            &::before
+                transform: translate(-50%, calc( 2px - 50% )) rotate(-45deg)
+            &::after
+                transform: translate(-50%, calc( -2px - 50% )) rotate(45deg)
+        &.active
+            box-shadow: inset 0 0 0 2px $main_green
+    &__wrap
+        margin-top: 40px
+        display: flex
+        width: 100%
+        justify-content: center
+        align-items: center
+
+.top
+    &__item
+        display: flex
+        flex-direction: column
+        border-radius: 8px
+        box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1)
+        overflow: hidden
+        &:hover
+            box-shadow: 0px 3px 18px rgba(0, 0, 0, 0.16)
+    &__head
+        max-height: 195px
+        height: 100%
+        width: 100%
+        position: relative
+        &-price, &-year, &-action
+            position: absolute
+            display: inline-block
+            font-weight: 600
+            font-size: 14px
+            color: $main_black
+            padding: 6px 10px
+        &-price
+            background-color: #FFFD5C
+            left: 0
+            bottom: 34px
+        &-year
+            background-color: #83F992
+            left: 0
+            bottom: 0
+        &-action
+            color: #fff
+            background-color: #EB376F
+            font-weight: 400
+            padding: 10px 8px
+            top: 5px
+            right: 0
+    &__img
+        width: 100%
+        height: 100%
+        img
+            height: 100%
+            width: 100%
+            object-fit: cover
+    &__body
+        background-color: #fff
+        padding: 20px 10px 60px
+        position: relative
+        overflow: hidden
+        height: 100%
+    &__title
+        font-size: 16px
+        font-weight: 700
+        color: $main_black
+        margin-bottom: 15px
+    &__description
+        font-size: 14px
+        color: #79828B
+    &__like
+        position: absolute
+        display: inline-block
+        left: 10px
+        bottom: 20px
+        height: 15px
+        width: 15px
+        background-color: #fff
+        input
+            position: absolute
+            opacity: 0
+            visibility: hidden
+        input:checked + svg
+            stroke-width: 1px
+            fill: #fa4747
+            stroke: #fa4747
+        svg
+            width: 14px
+            stroke-width: 65px
+            fill: #fff
+            stroke: #CDD3D7
+            transition-duration: 0s
+            cursor: pointer
+
+.apartment
+    background-color: #fff
+    border-radius: 8px
+    display: flex
+    align-items: stretch
+    overflow: hidden
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1)
+    &:hover
+        box-shadow: 0px 3px 18px rgba(0, 0, 0, 0.2)
+    &_green
+        .apartment
+            &__main
+                background-color: #EDF7EE
+            &__data
+                border-left: none
+            &__side
+                background-color: #8FC68E
+                & *
+                    color: #fff
+    &__slider
+        max-width: 280px
+        width: 100%
+    &__img
+        width: 100%
+        height: 100%
+        object-fit: cover
+    &__main
+        display: flex
+        align-items: stretch
+        width: 100%
+    &__body
+        padding: 20px 15px 15px 30px
+        max-width: 405px
+    &__head
+        display: flex
+        justify-content: space-between
+    &__price
+        color: $main_green
+        font-size: 28px
+        display: inline-block
+        &-text
+            font-size: 14px
+            color: $main_black
+            &__big
+                font-size: 16px
+                font-weight: 600
+            &__bold
+                font-size: 14px
+                font-weight: 600
+    &__title
+        font-size: 18px
+        line-height: 24px
+        font-weight: 700
+        color: $main_black
+        max-width: 305px
+    &__row
+        display: flex
+        align-items: center
+        justify-content: space-between
+        margin-top: 10px
+        margin-bottom: 15px
+        max-width: 305px
+    &__info, &__data
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+    &__data
+        padding: 0px 15px 0px 30px
+        margin: 25px 0px 15px
+        display: flex
+        justify-content: initial
+        border-left: 2px dashed #979797
+    &__info
+        height: auto
+        flex-grow: 1
+        &-item
+            display: flex
+            flex-direction: column
+    &__text
+        display: inline-block
+        position: relative
+        color: #79828B
+        font-size: 14px
+        vertical-align: middle
+        svg
+            vertical-align: middle
+            fill: #77828c
+            display: inline-block
+            vertical-align: middle
+            margin-right: 4px
+            margin-top: -2px
+            height: 16px
+            width: 14px
+    &__side
+        height: 100%
+        width: 100%
+        display: flex
+    &__like
+        display: inline-block
+        margin-top: 5px
+        height: 15px
+        width: 15px
+        input
+            position: absolute
+            opacity: 0
+            visibility: hidden
+        input:checked + svg
+            stroke-width: 1px
+            fill: #fa4747
+            stroke: #fa4747
+        svg
+            width: 14px
+            stroke-width: 65px
+            fill: #fff
+            stroke: #CDD3D7
+            transition-duration: 0s
+            cursor: pointer

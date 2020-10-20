@@ -8,6 +8,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const willBeCutted = document.querySelectorAll('.js-excerpt');
 
+    const filterTriggers = document.querySelectorAll('.js-filter-trigger');
+
     const setExcerpt = target => {
 
         let targetText = target.innerText;
@@ -119,8 +121,24 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     }
     
+    const filterTriggerClich = () => {
+        event.target.classList.toggle('active');
+
+        const filtersOverlay = document.querySelector('.js-filter-overlay');
+
+        const filterBody = document.querySelector('.js-filter-body');
+        const filterHidden = document.querySelector('.js-filter-hidden');
+
+        
+        filtersOverlay.classList.toggle('active');
+        filterHidden.classList.toggle('active');
+        
+        filterBody.querySelector('.button_green.button_search').classList.toggle('hidden');
+    }
+
     heroTabTriggers.forEach(trigger => trigger.addEventListener('click', heroTabTriggerClick));
     objectsTriggers.forEach(trigger => trigger.addEventListener('click', objectsTriggerClick));
+    filterTriggers.forEach(trigger => trigger.addEventListener('click', filterTriggerClich));
     typesTrigger.addEventListener('click', typesTriggerClick);
     willBeCutted.forEach(item => setExcerpt(item));
 
