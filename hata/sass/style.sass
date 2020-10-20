@@ -37,9 +37,9 @@ section
 
 .text
     &_white
-        color: #fff
+        color: #fff !important
     &_black
-        color: $main_black
+        color: $main_black !important
     &_tac
         text-align: center
     &_ttu
@@ -98,11 +98,14 @@ section
         &:hover
             background-color: #e5eaf5
     &_white
-        background-color: #fff
+        background-color: transparent
         color: $main_green
         &:hover
             background-color: $main_green
             color: #ffffff
+    &_subscribe
+        padding: 10px 5px
+        font-size: 16px
     &_tab
         padding: 8px
         font-size: 16px
@@ -142,6 +145,18 @@ section
         font-size: 16px
     &_complaint
         color: #EB5757
+    &_move
+        padding: 10.5px 37.5px
+        font-size: 16px
+        margin-left: auto
+        &:hover
+            svg
+                fill: $main_green
+        svg
+            vertical-align: middle
+            margin-right: 10px
+            transition-duration: 0s
+            fill: #fff
 
 .header
     flex-grow: 0
@@ -1220,13 +1235,12 @@ section
 //
 //
 
-    
+
 .item
     &__head
         display: flex
         justify-content: space-between
         align-items: flex-start
-        margin-bottom: 15px
         .button
             padding-top: 7px
             svg
@@ -1241,9 +1255,146 @@ section
     &__post-data
         font-size: 12px
         color: #828282
+        margin-top: 10px
+        display: inline-block
     &__body
         margin-top: 30px
         margin-bottom: 90px
         display: grid
         grid-template-columns: repeat(2, 1fr)
+        grid-template-rows: 125px 310px 1fr
         grid-column-gap: 15px
+        grid-row-gap: 15px
+    &__slider
+        grid-row: 1 / 3
+        background-color: peachpuff
+        border-radius: 8px
+    &__subtitle
+        color: $main_black
+        font-weight: 600
+        font-size: 18px
+        line-height: 22px
+    &__table
+        border-spacing: 0px
+        min-width: 320px
+        tr + tr
+            td
+                border-top: 1px solid #BDBDBD
+        tr:first-child td
+            padding: 0px 0px 8px
+        td
+            padding: 8px 0px
+            font-size: 16px
+            line-height: 19px
+            &:first-child
+                color: #828282
+            &:last-child, &:last-child *
+                color: $main_black
+        td + td
+            padding-left: 30px !important
+        &:not(.item__table_sb)
+            td:first-child
+                width: 92px
+        &_sb
+            td:last-child, td:last-child *
+                text-align-last: right
+        &-link
+            &:hover
+                color: $main_green !important
+    &__card
+        border-radius: 8px
+        background-color: $main_light
+        padding: 24px 30px
+        &-row
+            display: flex
+            align-items: flex-start
+            & + &
+                margin-top: 24px
+            .item__subtitle
+                max-width: 150px
+        &_sb
+            display: flex
+            justify-content: space-between
+        &_fe
+            align-items: flex-end
+    &__price
+        display: flex
+        flex-direction: column
+        &-price
+            font-size: 36px
+            line-height: 42px
+            color: #4A6894
+        &-text
+            font-size: 12px
+            color: $main_black
+            display: inline-block
+            max-width: 160px
+            margin-top: 4px
+    &__data
+        padding-top: 24px
+    &__text
+        font-size: 16px
+        line-height: 21px
+        color: $main_black
+        margin-top: 15px
+        margin-bottom: 40px
+    &__list
+        list-style-type: none
+        margin-top: 20px
+        padding-left: 24px
+        display: flex
+        flex-direction: column
+        li
+            display: inline-block
+            font-size: 16px
+            color: $main_black
+            position: relative
+            &::before
+                position: absolute
+                content: ''
+                display: inline-block
+                height: 12px
+                width: 16px
+                background-image: url(../img/list-tip.png)
+                background-size: contain
+                background-repeat: no-repeat
+                background-position: center
+                top: 40%
+                left: -8px
+                transform: translate(-100%, -50%)
+        li + li
+            margin-top: 10px
+
+.map
+    &__title
+        font-size: 24px
+        color: $main_black
+        font-weight: 400
+        margin-bottom: 50px
+    &__top
+        display: flex
+        align-items: center
+        justify-content: space-between
+        margin-bottom: 30px
+    &__location
+        .map__text + .map__text
+            margin-left: 50px
+    &__text, &__text-light
+        color: $main_black
+        font-size: 16px
+        font-weight: 400
+    &__text
+        img, svg
+            vertical-align: middle
+            margin-top: -2px
+            margin-right: 5px
+        .map__text-light
+            margin-right: 10px
+        &-light
+            color: #828282
+    &__body
+        display: grid
+        grid-template-columns: 1fr 205px
+    &__objects
+        background-color: $main_light
+        padding: 33px

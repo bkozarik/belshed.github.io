@@ -54,6 +54,13 @@ pointer-events: all;
 .floor-plan-ap:hover, .floor-plan-ap.active{
 opacity: 1;
 }
+.floor-main .floor-section {
+        display: flex;
+        justify-content: space-between;
+}
+.floor-section__col {
+    width: 38rem;
+}
 
 .floor-plan-tower .floor-plan-ap:nth-child(2){
 top: 49.6%;
@@ -183,7 +190,7 @@ width: 14.74%;
 margin: 30px;
 }
 .house .house-bg {
-background: url("../img/img-house_2.jpg") no-repeat;
+background: url("../img/img-house_2.png") no-repeat;
 -webkit-background-size: 100% 100%;
         background-size: 100% 100%;
 }  
@@ -222,6 +229,9 @@ transition: opacity .2s ease-in 0s;
 -ms-transition: opacity .2s ease-in 0s;
 -o-transition: opacity .2s ease-in 0s;
 }
+.floor-one:hover .floor-one-left, .floor-one:hover .floor-one-right {
+    opacity: 1;
+}
 .floor-one-left.active, .floor-one-right.active, .floor-sub .floor-one-sigle.active{
 opacity: 1;
 }
@@ -241,11 +251,19 @@ height: 2rem;
 .floor-section-two .floor-help {
 height: 2rem;
 }
+.floor-penthouse .floor-one-left, .floor-penthouse .floor-one-right {
+        width: 20.1rem;
+}
+.floor-penthouse .floor-one {
+        width: 36rem;
+}
 .floor-penthouse {
 position: absolute;
 left: -20.8rem;
 top: 5rem;
 width: 78.2rem;
+display: flex;
+justify-content: space-between;
 }
 .floor-penthouse .floor-help {
 width: 7.5rem;
@@ -255,13 +273,13 @@ height: 7rem;
 display: none;
 }
 .floor-penthouse .floor-one-left{
-width: 26.5rem;
-margin-right: 44.5rem;
+        width: 25.8rem;
+        margin-right: 2.5rem;
 background: rgba(210,153,102,0.7);
 }
 .floor-penthouse .floor-one-right{
-width: 26.5rem;
-margin-right: 3rem;
+        width: 25.8rem;
+        margin-right: 3.3rem;
 background: rgba(210,153,102,0.7);
 }
 .floor-main {
@@ -275,7 +293,7 @@ width: 80rem;
 }
 .floor-main .floor-one-left{
 width: 30rem;
-margin-right: 42.7rem;
+margin-right: 0.5rem;
 background: rgba(210,153,102,0.7);
 }
 .floor-main .floor-one-right{
@@ -289,7 +307,7 @@ display: none;
 }
 .floor-sub {
 position: absolute;
-bottom: 0rem;
+bottom: 3rem;
 right: -30rem;
 width: 91.3rem;
 }

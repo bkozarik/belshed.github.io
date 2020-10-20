@@ -232,8 +232,8 @@
     
     const showApPage = () => {
         event.preventDefault();
-
         let tr = event.target;
+        console.log(tr);
 
         while(tr.tagName != 'TR'){
             tr = tr.parentNode;
@@ -440,6 +440,9 @@
                         }
                     }
                 });
+            
+                let tr = document.querySelectorAll('.js-ap-page');
+                tr.forEach(item => item.addEventListener('click', showApPage));
             });
         }, 150)
 
@@ -447,7 +450,7 @@
 
     getFullFloorData();
 
-    if(window.location.href.includes('plan')){
+    if(window.location.href.includes('plan') && (!window.location.href.includes('apartments-plan'))){
         let data = getData(url, login, pass).then(resp => {
             let squareArr = new Array();
             let priceArr = new Array();

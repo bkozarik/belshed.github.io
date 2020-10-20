@@ -345,10 +345,10 @@ $(document).ready(function(){
 		functionBefore: async function(instance, helper) {
 			let tower;
 
-			helper.origin.classList.contains('floor-one-left') ? tower = 1 : helper.origin.classList.contains('floor-one-sigle') ? tower = 3 : tower = 2;
+			helper.origin.querySelector('.tooltipstered').classList.contains('floor-one-left') ? tower = 1 : helper.origin.querySelector('.tooltipstered').classList.contains('floor-one-sigle') ? tower = 3 : tower = 2;
 
-
-			let floor = Number($(helper.origin).siblings('.floor-help').find('span').text());
+			let floor = Number($(helper.origin).find('.floor-help').find('span').text());
+			console.log(floor);
 			await getFloorData(floor, tower).then(info => {
 				if(info.freeAp != 0){
 					// instance.__options.updateAnimation = "fade";
