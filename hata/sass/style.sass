@@ -145,6 +145,17 @@ section
         font-size: 16px
     &_complaint
         color: #EB5757
+    &_results
+        box-shadow: none
+        font-weight: 500
+        font-size: 16px
+        color: #828282
+        background-color: transparent
+        padding-bottom: 15px
+        &.active, &:hover
+            color: $main_green
+            box-shadow: none
+            background-color: transparent
     &_move
         padding: 10.5px 37.5px
         font-size: 16px
@@ -157,6 +168,29 @@ section
             margin-right: 10px
             transition-duration: 0s
             fill: #fff
+    &_result
+        height: 24px
+        width: 24px
+        border-radius: 50%
+        padding: 0
+        box-shadow: 0 0 0 1px $main_black
+        background-color: transparent
+        &::before, &::after
+            content: ''
+            display: inline-block
+            height: 1px
+            width: 12px
+            background-color: $main_black
+            position: absolute
+            left: 50%
+            top: 50%
+            transform: translate(-50%, -50%)
+        &::after
+            transform: translate(-50%, -50%) rotate(90deg)
+        &:hover
+            box-shadow: 0 0 0 1px $main_green
+            &::before, &::after   
+                background-color: $main_green  
 
 .header
     flex-grow: 0
@@ -469,8 +503,12 @@ section
         box-shadow: 0 0 0 1px #9F9F9F
         border-radius: 4px
         cursor: pointer
+        &_green
+            box-shadow: 0 0 0 1px $main_green
+            padding: 9px 35px 9px 12px
         &-wrap
             position: relative
+            display: inline-block
             &::after
                 position: absolute
                 pointer-events: none
@@ -481,6 +519,12 @@ section
                 top: 60%
                 right: 13px
                 transform: translate(0, -50%)
+            &_green
+                max-width: 80px
+                margin-right: 15px
+                &::after
+                    top: 55%
+                    border-top: 6px solid $main_green
         &:focus
             outline: none
 
@@ -836,17 +880,17 @@ section
         appearance: none
         cursor: pointer
         font-size: 16px
-        text-align: center
         padding: 8px 25px
         border-radius: 35px
-        border: 1px solid #9F9F9F
-        width: 100%
+        box-shadow: 0 0 0 1px #9F9F9F
         & + &
             margin-left: 10px
+        &:hover
+            box-shadow: 0 0 0 1px $main_green
+            background-color: $main_green
+            color: #fff
         &:focus
             outline: none
-        option
-            text-align: center
     &__hidden
         position: absolute
         left: 0
@@ -1392,9 +1436,70 @@ section
             margin-right: 10px
         &-light
             color: #828282
-    &__body
+    &__wrap
         display: grid
         grid-template-columns: 1fr 205px
     &__objects
         background-color: $main_light
         padding: 33px
+        border-radius: 0 4px 4px 0
+        .tab__label
+            margin-bottom: 0
+            color: $main_black
+        .tab__checkbox
+            height: 16px
+            width: 16px
+            background-color: #fff
+        .tab__compare + .tab__compare
+            margin-top: 10px
+
+.results
+    padding-top: 80px
+    &__top
+        width: 100%
+        justify-content: space-between
+        display: flex
+        border: 1px solid #979797
+        border-radius: 4px 4px 0 0
+        padding: 24px 48px 0px
+        position: relative
+        li
+            display: inline-block
+            list-style-type: none
+    &__underline
+        display: inline-block
+        bottom: 0
+        height: 2px
+        background-color: $main_green
+        transform: translate(-50%, 50%)
+        position: absolute
+    &__body
+        border-radius: 0 0 4px 4px
+        border: 1px solid #979797
+        border-top: none
+        padding: 24px 48px
+    &__items
+        margin: 0
+        padding: 0
+
+.result
+    display: none
+    pointer-events: none
+    visibility: hidden
+    list-style-type: none
+    &__row
+        display: grid
+        align-items: center
+        grid-template-columns: 380px repeat(2, 1fr) 50px
+        width: 100%
+        width: 100%
+        & + &
+            margin-top: 15px
+        .map__text
+            &:nth-child(2), &:nth-child(3)
+                text-align: center
+    &.active
+        display: block
+        pointer-events: all
+        visibility: visible
+

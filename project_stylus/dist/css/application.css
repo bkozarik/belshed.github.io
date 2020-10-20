@@ -229,7 +229,7 @@ transition: opacity .2s ease-in 0s;
 -ms-transition: opacity .2s ease-in 0s;
 -o-transition: opacity .2s ease-in 0s;
 }
-.floor-one:hover .floor-one-left, .floor-one:hover .floor-one-right {
+.floor-one:hover .floor-one-left, .floor-one:hover .floor-one-right, .floor-one:hover .floor-one-sigle {
     opacity: 1;
 }
 .floor-one-left.active, .floor-one-right.active, .floor-sub .floor-one-sigle.active{

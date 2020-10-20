@@ -1,7 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
     const heroTabTriggers = document.querySelectorAll('.js-tab-trigger');
-    const objectsTriggers = document.querySelectorAll('.js-objects-trigger');
     const heroTabs = document.querySelectorAll('.js-tab');
+
+    const objectsTriggers = document.querySelectorAll('.js-objects-trigger');
     const objectsTabs = document.querySelectorAll('.js-object');
 
     const typesTrigger = document.querySelector('.js-types');
@@ -9,6 +10,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const willBeCutted = document.querySelectorAll('.js-excerpt');
 
     const filterTriggers = document.querySelectorAll('.js-filter-trigger');
+
+    const resultsTriggers = document.querySelectorAll('.js-results-trigger');
+    const results = document.querySelectorAll('.js-result');
 
     const setExcerpt = target => {
 
@@ -37,10 +41,10 @@ document.addEventListener('DOMContentLoaded', () => {
             heroTabTriggers.forEach(trigger => trigger.classList.remove('active'));
             heroTabs.forEach(trigger => trigger.classList.remove('active'));
 
-            let triggerWidth = trigger.getBoundingClientRect();
+            let triggerWidth = trigger.getBoundingClientRect().width;
             trigger.classList.toggle('active');
-            triggersUnderline.style.width = triggerWidth.width * 0.7 + "px";
-            triggersUnderline.style.left = trigger.offsetLeft + (triggerWidth.width / 2) + "px";
+            triggersUnderline.style.width = triggerWidth * 0.7 + "px";
+            triggersUnderline.style.left = trigger.offsetLeft + (triggerWidth / 2) + "px";
             
             heroTabs[targetTab].classList.toggle('active');
         }
@@ -140,12 +144,50 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    const resultsTriggerClick = () => {
+        let targetTrigger = event.target;
+        let triggersUnderline = document.querySelector('.js-results-underline');
+
+        let targetResult = Number(targetTrigger.dataset.target) - 1;
+
+        resultsTriggers.forEach(trigger => trigger.classList.remove('active'));
+        results.forEach(trigger => trigger.classList.remove('active'));
+
+        targetTrigger.classList.add('active');
+        let triggerWidth = targetTrigger.getBoundingClientRect().width;
+
+        triggersUnderline.style.width = triggerWidth * 1.2 + "px";
+        triggersUnderline.style.left = targetTrigger.offsetLeft + (triggerWidth / 2) + "px";
+
+        results[targetResult].classList.add('active');
+    }
+
+    const resultsTriggerInit = () => {
+        try{
+            let firstTrigger = resultsTriggers[0];
+            let firstResult = results[0];
+            let triggersUnderline = document.querySelector('.js-results-underline');
+            
+            let triggerWidth = firstTrigger.getBoundingClientRect();
+
+            firstResult.classList.add('active');
+            firstTrigger.classList.add('active');
+            triggersUnderline.style.width = triggerWidth.width * 1.2 + "px";
+            triggersUnderline.style.left = firstTrigger.offsetLeft + (triggerWidth.width / 2) + "px";
+
+            resultsTriggers[0].classList.add('active');
+        }
+        catch{}
+    }
+
     heroTabTriggers.forEach(trigger => trigger.addEventListener('click', heroTabTriggerClick));
     objectsTriggers.forEach(trigger => trigger.addEventListener('click', objectsTriggerClick));
     filterTriggers.forEach(trigger => trigger.addEventListener('click', filterTriggerClick));
+    resultsTriggers.forEach(trigger => trigger.addEventListener('click', resultsTriggerClick));
     typesTrigger.addEventListener('click', typesTriggerClick);
     willBeCutted.forEach(item => setExcerpt(item));
 
     heroTabTriggerInit();
     objectsTriggerInit();
+    resultsTriggerInit();
 });

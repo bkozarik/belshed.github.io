@@ -139,8 +139,17 @@
                             </label>
                         </div>
                         <div class="tab__col">
-                            <button type="button" class="button button_white tab__liftup">Еще</button>
-                            <button type="submit" class="button button_green button_search tab__liftup">Найти</button>
+                            <div class="tab__row">
+                                <div class="tab__select-wrap tab__select-wrap_green">
+                                    <select class="button button_white tab__liftup tab__select tab__select_green">
+                                        <option value="none" hidden>Еще</option>
+                                        <option value="Значение">Еще</option>
+                                        <option value="Значение">Еще</option>
+                                        <option value="Значение">Еще</option>
+                                    </select>
+                                </div>
+                                <button type="submit" class="button button_green button_search tab__liftup">Найти</button>
+                            </div>
                         </div>
                     </form>
                 </div>
@@ -338,9 +347,44 @@
                         <span class="map__text"><span class="map__text-light">Метро</span>Каменная горка (100м)</span>
                     </div>
                 </div>
-                <div class="map__body">
+                <div class="map__wrap">
+                    <div class="map__body"></div>
                     <div class="map__objects">
-
+                        <label class="tab__compare">
+                            <input type="checkbox">
+                            <span class="tab__checkbox"></span>
+                            <span class="tab__label">Детский сад</span>
+                        </label>
+                        <label class="tab__compare">
+                            <input type="checkbox">
+                            <span class="tab__checkbox"></span>
+                            <span class="tab__label">Школы</span>
+                        </label>
+                        <label class="tab__compare">
+                            <input type="checkbox">
+                            <span class="tab__checkbox"></span>
+                            <span class="tab__label">Магазины</span>
+                        </label>
+                        <label class="tab__compare">
+                            <input type="checkbox">
+                            <span class="tab__checkbox"></span>
+                            <span class="tab__label">Поликлиники</span>
+                        </label>
+                        <label class="tab__compare">
+                            <input type="checkbox">
+                            <span class="tab__checkbox"></span>
+                            <span class="tab__label">Аптеки</span>
+                        </label>
+                        <label class="tab__compare">
+                            <input type="checkbox">
+                            <span class="tab__checkbox"></span>
+                            <span class="tab__label">Кафе</span>
+                        </label>
+                        <label class="tab__compare">
+                            <input type="checkbox">
+                            <span class="tab__checkbox"></span>
+                            <span class="tab__label">Банки</span>
+                        </label>
                     </div>
                 </div>
             </div>
@@ -349,14 +393,176 @@
             <div class="container">
                 <div class="results__wrap">
                     <ul class="results__top">
-                        <li><button class="button button_results js-results-trigger active">Квартиры в этом доме (2)</button></li>
-                        <li><button class="button button_results js-results-trigger">На этой улице (10)</button></li>
-                        <li><button class="button button_results js-results-trigger">В этом микрорайоне (10)</button></li>
-                        <li><button class="button button_results js-results-trigger">Другие объекты пользователя (0)</button></li>
-                        <li><button class="button button_results js-results-trigger">Дубли объявления (3)</button></li>
+                        <li><button class="button button_results js-results-trigger" data-target="1">Квартиры в этом доме (2)</button></li>
+                        <li><button class="button button_results js-results-trigger" data-target="2">На этой улице (10)</button></li>
+                        <li><button class="button button_results js-results-trigger" data-target="3">В этом микрорайоне (10)</button></li>
+                        <li><button class="button button_results js-results-trigger" data-target="4">Другие объекты пользователя (0)</button></li>
+                        <li><button class="button button_results js-results-trigger" data-target="5">Дубли объявления (3)</button></li>
+                        <li class="results__underline js-results-underline"></li>
                     </ul>
-                    <div class="results__body js-results">
-                        
+                    <div class="results__body">
+                        <ul class="results__items js-results">
+                            <li class="result js-result">
+                                <div class="result__row">
+                                    <span class="map__text">г. Минск, ул. Притыцкои очень очень длинная улица, настолько что переносится на другую строку</span>
+                                    <span class="map__text">1 комната <span class="map__text-light">(этаж 6/9)</span></span>
+                                    <span class="map__text">450 $/мес</span>
+                                    <button class="button button_result"></button>
+                                </div>
+                                <div class="result__row">
+                                    <span class="map__text">г. Минск, ул. Притыцко</span>
+                                    <span class="map__text">1 комната <span class="map__text-light">(этаж 6/9)</span></span>
+                                    <span class="map__text">450 $/мес</span>
+                                    <button class="button button_result"></button>
+                                </div>
+                            </li>
+                            <li class="result js-result">
+                                <div class="result__row">
+                                    <span class="map__text">г. Минск, ул. Притыцкои очень очень длинная улица, настолько что переносится на другую строку</span>
+                                    <span class="map__text">1 комната <span class="map__text-light">(этаж 6/9)</span></span>
+                                    <span class="map__text">450 $/мес</span>
+                                    <button class="button button_result"></button>
+                                </div>
+                                <div class="result__row">
+                                    <span class="map__text">г. Минск, ул. Притыцко</span>
+                                    <span class="map__text">1 комната <span class="map__text-light">(этаж 6/9)</span></span>
+                                    <span class="map__text">450 $/мес</span>
+                                    <button class="button button_result"></button>
+                                </div>
+                                <div class="result__row">
+                                    <span class="map__text">г. Минск, ул. Притыцкои очень очень длинная улица, настолько что переносится на другую строку</span>
+                                    <span class="map__text">1 комната <span class="map__text-light">(этаж 6/9)</span></span>
+                                    <span class="map__text">450 $/мес</span>
+                                    <button class="button button_result"></button>
+                                </div>
+                                <div class="result__row">
+                                    <span class="map__text">г. Минск, ул. Притыцко</span>
+                                    <span class="map__text">1 комната <span class="map__text-light">(этаж 6/9)</span></span>
+                                    <span class="map__text">450 $/мес</span>
+                                    <button class="button button_result"></button>
+                                </div>
+                                <div class="result__row">
+                                    <span class="map__text">г. Минск, ул. Притыцкои очень очень длинная улица, настолько что переносится на другую строку</span>
+                                    <span class="map__text">1 комната <span class="map__text-light">(этаж 6/9)</span></span>
+                                    <span class="map__text">450 $/мес</span>
+                                    <button class="button button_result"></button>
+                                </div>
+                                <div class="result__row">
+                                    <span class="map__text">г. Минск, ул. Притыцко</span>
+                                    <span class="map__text">1 комната <span class="map__text-light">(этаж 6/9)</span></span>
+                                    <span class="map__text">450 $/мес</span>
+                                    <button class="button button_result"></button>
+                                </div>
+                                <div class="result__row">
+                                    <span class="map__text">г. Минск, ул. Притыцкои очень очень длинная улица, настолько что переносится на другую строку</span>
+                                    <span class="map__text">1 комната <span class="map__text-light">(этаж 6/9)</span></span>
+                                    <span class="map__text">450 $/мес</span>
+                                    <button class="button button_result"></button>
+                                </div>
+                                <div class="result__row">
+                                    <span class="map__text">г. Минск, ул. Притыцко</span>
+                                    <span class="map__text">1 комната <span class="map__text-light">(этаж 6/9)</span></span>
+                                    <span class="map__text">450 $/мес</span>
+                                    <button class="button button_result"></button>
+                                </div>
+                                <div class="result__row">
+                                    <span class="map__text">г. Минск, ул. Притыцкои очень очень длинная улица, настолько что переносится на другую строку</span>
+                                    <span class="map__text">1 комната <span class="map__text-light">(этаж 6/9)</span></span>
+                                    <span class="map__text">450 $/мес</span>
+                                    <button class="button button_result"></button>
+                                </div>
+                                <div class="result__row">
+                                    <span class="map__text">г. Минск, ул. Притыцко</span>
+                                    <span class="map__text">1 комната <span class="map__text-light">(этаж 6/9)</span></span>
+                                    <span class="map__text">450 $/мес</span>
+                                    <button class="button button_result"></button>
+                                </div>
+                            </li>
+                            <li class="result js-result">
+                                <div class="result__row">
+                                    <span class="map__text">г. Минск, ул. Притыцкои очень очень длинная улица, настолько что переносится на другую строку</span>
+                                    <span class="map__text">1 комната <span class="map__text-light">(этаж 6/9)</span></span>
+                                    <span class="map__text">450 $/мес</span>
+                                    <button class="button button_result"></button>
+                                </div>
+                                <div class="result__row">
+                                    <span class="map__text">г. Минск, ул. Притыцко</span>
+                                    <span class="map__text">1 комната <span class="map__text-light">(этаж 6/9)</span></span>
+                                    <span class="map__text">450 $/мес</span>
+                                    <button class="button button_result"></button>
+                                </div>
+                                <div class="result__row">
+                                    <span class="map__text">г. Минск, ул. Притыцкои очень очень длинная улица, настолько что переносится на другую строку</span>
+                                    <span class="map__text">1 комната <span class="map__text-light">(этаж 6/9)</span></span>
+                                    <span class="map__text">450 $/мес</span>
+                                    <button class="button button_result"></button>
+                                </div>
+                                <div class="result__row">
+                                    <span class="map__text">г. Минск, ул. Притыцко</span>
+                                    <span class="map__text">1 комната <span class="map__text-light">(этаж 6/9)</span></span>
+                                    <span class="map__text">450 $/мес</span>
+                                    <button class="button button_result"></button>
+                                </div>
+                                <div class="result__row">
+                                    <span class="map__text">г. Минск, ул. Притыцко</span>
+                                    <span class="map__text">1 комната <span class="map__text-light">(этаж 6/9)</span></span>
+                                    <span class="map__text">450 $/мес</span>
+                                    <button class="button button_result"></button>
+                                </div>
+                                <div class="result__row">
+                                    <span class="map__text">г. Минск, ул. Притыцко</span>
+                                    <span class="map__text">1 комната <span class="map__text-light">(этаж 6/9)</span></span>
+                                    <span class="map__text">450 $/мес</span>
+                                    <button class="button button_result"></button>
+                                </div>
+                                <div class="result__row">
+                                    <span class="map__text">г. Минск, ул. Притыцко</span>
+                                    <span class="map__text">1 комната <span class="map__text-light">(этаж 6/9)</span></span>
+                                    <span class="map__text">450 $/мес</span>
+                                    <button class="button button_result"></button>
+                                </div>
+                                <div class="result__row">
+                                    <span class="map__text">г. Минск, ул. Притыцко</span>
+                                    <span class="map__text">1 комната <span class="map__text-light">(этаж 6/9)</span></span>
+                                    <span class="map__text">450 $/мес</span>
+                                    <button class="button button_result"></button>
+                                </div>
+                                <div class="result__row">
+                                    <span class="map__text">г. Минск, ул. Притыцко</span>
+                                    <span class="map__text">1 комната <span class="map__text-light">(этаж 6/9)</span></span>
+                                    <span class="map__text">450 $/мес</span>
+                                    <button class="button button_result"></button>
+                                </div>
+                                <div class="result__row">
+                                    <span class="map__text">г. Минск, ул. Притыцко</span>
+                                    <span class="map__text">1 комната <span class="map__text-light">(этаж 6/9)</span></span>
+                                    <span class="map__text">450 $/мес</span>
+                                    <button class="button button_result"></button>
+                                </div>
+                            </li>
+                            <li class="result js-result">
+                            </li>
+                            <li class="result js-result">
+                                <div class="result__row">
+                                    <span class="map__text">г. Минск, ул. Притыцко</span>
+                                    <span class="map__text">1 комната <span class="map__text-light">(этаж 6/9)</span></span>
+                                    <span class="map__text">450 $/мес</span>
+                                    <button class="button button_result"></button>
+                                </div>
+                                <div class="result__row">
+                                    <span class="map__text">г. Минск, ул. Притыцко</span>
+                                    <span class="map__text">1 комната <span class="map__text-light">(этаж 6/9)</span></span>
+                                    <span class="map__text">450 $/мес</span>
+                                    <button class="button button_result"></button>
+                                </div>
+                                <div class="result__row">
+                                    <span class="map__text">г. Минск, ул. Притыцко</span>
+                                    <span class="map__text">1 комната <span class="map__text-light">(этаж 6/9)</span></span>
+                                    <span class="map__text">450 $/мес</span>
+                                    <button class="button button_result"></button>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -372,16 +578,16 @@
                     <div class="footer__rates">
                         <div class="footer__socials">
                             <a href="#" class="footer__social">
-                                <img loading="lazy" src="./" alt="Соц. сеть" class="footer__social-img">
+                                <img loading="lazy" src="./img/vk.svg" alt="Соц. сеть" class="footer__social-img">
                             </a>
                             <a href="#" class="footer__social">
-                                <img loading="lazy" src="./" alt="Соц. сеть" class="footer__social-img">
+                                <img loading="lazy" src="./img/twitter.svg" alt="Соц. сеть" class="footer__social-img">
                             </a>
                             <a href="#" class="footer__social">
-                                <img loading="lazy" src="./" alt="Соц. сеть" class="footer__social-img">
+                                <img loading="lazy" src="./img/vk.svg" alt="Соц. сеть" class="footer__social-img">
                             </a>
                             <a href="#" class="footer__social">
-                                <img loading="lazy" src="./" alt="Соц. сеть" class="footer__social-img">
+                                <img loading="lazy" src="./img/twitter.svg" alt="Соц. сеть" class="footer__social-img">
                             </a>
                         </div>
                         <img loading="lazy" src="./img/ratings.png" alt="Рейтинг" class="footer__rate">

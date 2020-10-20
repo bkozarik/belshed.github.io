@@ -272,7 +272,7 @@ $(document).ready(function(){
 									<td><span class="number">${data.rooms}</span></td>
 								</tr>
 							</tbody></table></div>
-							<a href="./apartments-plan.html" class="more"><i class="icon-arrow"></i></a>
+							<a href="./${apartmentsPlan}" class="more"><i class="icon-arrow"></i></a>
 						</div>
 					`);
 				}
@@ -358,7 +358,7 @@ $(document).ready(function(){
 							<ul class="list-floor-info">
 								${info.apInfo}
 							</ul>
-							<a href="./floor.html" class="more"><i class="icon-arrow"></i></a>
+							<a href="./${floorPlan}" class="more"><i class="icon-arrow"></i></a>
 						</div>`
 					);
 				}
