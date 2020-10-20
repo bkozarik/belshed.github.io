@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ru-Ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Квартиры</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="./js/main.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <div class="header__top">
+            <div class="container">
+                <div class="header__wrap">
+                    <a href="./index.html" class="logo">
+                        <img src="./img/logo.png" alt="Логотип" class="logo__img">
+                    </a>
+                    <div class="header__content">
+                        <div class="dropdown js-dropdown">
+                            <div class="tab__select-wrap">
+                                <select class="tab__select">
+                                    <option value="Минск">USD</option>
+                                    <option value="Гомель">EUR</option>
+                                    <option value="Брест">RUB</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="dropdown js-dropdown">
+                            <div class="tab__select-wrap">
+                                <select class="tab__select">
+                                    <option value="Минск">Минск</option>
+                                    <option value="Гомель">Гомель</option>
+                                    <option value="Брест">Брест</option>
+                                    <option value="Гомель">Гомель</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button class="button button_green button_add">Добавить объявление</button>
+                        <button class="button button_white button_login">Войти</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__bottom">
+            <div class="container">
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="./apartments.html" class="nav__link text_ttu">Продажа</a></li>
+                        <li class="nav__item"><a href="./apartments.html" class="nav__link text_ttu">Новостройки</a></li>
+                        <li class="nav__item"><a href="./apartments.html" class="nav__link text_ttu">Аренда</a></li>
+                        <li class="nav__item"><a href="./apartments.html" class="nav__link text_ttu">Земля</a></li>
+                        <li class="nav__item"><a href="./apartments.html" class="nav__link text_ttu">Офисы</a></li>
+                    </ul>
+                </nav>
+                <button class="types js-types">
+                    <span class="types__dot"></span>
+                    <span class="types__dot"></span>
+                    <span class="types__dot"></span>
+                </button>
+                <div class="types__dropdown js-types-dropdown">
+                    <ul class="types__list">
+                        <li class="types__item"><a href="#" class="types__link js-scroll-link">Дома</a></li>
+                        <li class="types__item"><a href="#" class="types__link js-scroll-link">За рубежом</a></li>
+                        <li class="types__item"><a href="#" class="types__link js-scroll-link">Цеха</a></li>
+                        <li class="types__item"><a href="#" class="types__link js-scroll-link">Склады</a></li>
+                        <li class="types__item"><a href="#" class="types__link js-scroll-link">Грузоперевозки</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <div class="filter">
+            <div class="filter__body">
+                <div class="container">
+                    <form class="tab__form">
+                        <div class="tab__col">
+                            <div class="tab__row">
+                                <label class="tab__check">
+                                    <input class="tab__hidden" name="ap_type" type="checkbox" value="Квартира" checked>
+                                    <span class="button button_grey button_tab">Квартира</span>
+                                </label>
+                                <label class="tab__check">
+                                    <input class="tab__hidden" name="ap_type" type="checkbox" value="Дом">
+                                    <span class="button button_grey button_tab">Дом</span>
+                                </label>
+                                <label class="tab__check">
+                                    <input class="tab__hidden" name="ap_type" type="checkbox" value="Комната">
+                                    <span class="button button_grey button_tab">Комната</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="tab__col">
+                            <span class="tab__label">Комнат</span>
+                            <div class="tab__row">
+                                <label class="tab__check">
+                                    <input class="tab__hidden" name="room_amount" type="checkbox" value="1">
+                                    <span class="button button_grey button_room">1</span>
+                                </label>
+                                <label class="tab__check">
+                                    <input class="tab__hidden" name="room_amount" type="checkbox" value="2">
+                                    <span class="button button_grey button_room">2</span>
+                                </label>
+                                <label class="tab__check">
+                                    <input class="tab__hidden" name="room_amount" type="checkbox" value="3">
+                                    <span class="button button_grey button_room">3</span>
+                                </label>
+                                <label class="tab__check">
+                                    <input class="tab__hidden" name="room_amount" type="checkbox" value="4+">
+                                    <span class="button button_grey button_room">4+</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="tab__col tab__liftup">
+                            <span class="tab__label">Цена USD</span>
+                            <div class="tab__row">
+                                <input class="tab__input" type="tel" placeholder="от">
+                                <input class="tab__input" type="tel" placeholder="до">
+                            </div>
+                        </div>
+                        <div class="tab__col tab__liftup">
+                            <span class="tab__label">Город</span>
+                            <div class="tab__row">
+                                <div class="tab__select-wrap">
+                                    <select class="tab__select">
+                                        <option value="Минск">Минск</option>
+                                        <option value="Гомель">Гомель</option>
+                                        <option value="Брест">Брест</option>
+                                        <option value="Гомель">Гомель</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab__col">
+                            <label class="tab__compare">
+                                <input type="checkbox" name="compare">
+                                <span class="tab__checkbox"></span>
+                                <span class="tab__label">Сравнить с новостройками</span>
+                            </label>
+                        </div>
+                        <div class="tab__col">
+                            <button type="button" class="button button_white tab__liftup">Еще</button>
+                            <button type="submit" class="button button_green button_search tab__liftup">Найти</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="filter__overlay js-filter-overlay"></div>
+        </div>
+        <div class="breadcrumbs">
+            <div class="container">
+                <nav class="breadcrumbs__nav">
+                    <ul class="breadcrumbs__list">
+                        <li class="breadcrumbs__item"><a href="./index.html" class="breadcrumbs__link">Недвижимость</a></li>
+                        <li class="breadcrumbs__item"><a class="breadcrumbs__link breadcrumbs__link_disabled">Продажа вторичек в Минске</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <section class="item">
+            <div class="container">
+                <div class="item__head">
+                    <h1 class="item__title">Продается однокомнатная квартира на улице Казимировская площадью  37 м²</h1>
+                    <button class="button button_print">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18.4445 5.23077H16.3232V1.37237C16.3232 1.0042 16.0248 0.705688 15.6566 0.705688H4.34344C3.97527 0.705688 3.67676 1.00417 3.67676 1.37237V5.23077H1.55555C0.697812 5.23077 0 5.92862 0 6.78635V13.4935C0 14.3512 0.697812 15.049 1.55555 15.049H3.67687V18.6277C3.67687 18.9958 3.97535 19.2944 4.34355 19.2944H15.6564C16.0246 19.2944 16.3231 18.9959 16.3231 18.6277V15.049H18.4445C19.3022 15.049 20 14.3512 20 13.4935V6.78635C20 5.92866 19.3022 5.23077 18.4445 5.23077ZM5.01008 2.03905H14.9899V5.23077H5.01008V2.03905ZM14.9898 17.961H5.01023C5.01023 17.8307 5.01023 12.6679 5.01023 12.5068H14.9898C14.9898 12.672 14.9898 17.8357 14.9898 17.961ZM18.6667 13.4935C18.6667 13.616 18.567 13.7157 18.4445 13.7157H16.3231V11.8402C16.3231 11.472 16.0246 11.1735 15.6564 11.1735H4.34355C3.97539 11.1735 3.67687 11.472 3.67687 11.8402V13.7157H1.55555C1.43301 13.7157 1.33332 13.616 1.33332 13.4935V6.78639C1.33332 6.66385 1.43301 6.56417 1.55555 6.56417C2.06703 6.56417 17.945 6.56417 18.4445 6.56417C18.567 6.56417 18.6667 6.66385 18.6667 6.78639V13.4935Z" fill="#828282"/>
+                        </svg>
+                        Распечатать объявление
+                    </button>
+                    <button class="button button_complaint">
+                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19.8258 16.3168L10.7982 0.68082C10.633 0.394635 10.3278 0.218384 9.99732 0.218384C9.667 0.218384 9.3616 0.394635 9.19644 0.68082L0.123872 16.3945C-0.0412906 16.6807 -0.0412906 17.0332 0.123872 17.3193C0.289034 17.6056 0.594429 17.7818 0.924753 17.7818H19.07H19.0752C19.5864 17.7818 20 17.3679 20 16.8569C20 16.6551 19.9353 16.4688 19.8258 16.3168ZM2.14188 16.3168L9.99732 1.993L17.8525 16.3168H2.14188ZM9.52004 6.11693H10.4798C10.5585 6.11693 10.634 6.14867 10.6893 6.20516C10.7443 6.26192 10.7739 6.33806 10.7719 6.41713L10.5791 12.4714C10.575 12.6304 10.445 12.7568 10.2865 12.7568H9.71345C9.55475 12.7568 9.42469 12.6301 9.42093 12.4714L9.22805 6.41713C9.226 6.33802 9.25582 6.26192 9.31078 6.20516C9.36575 6.14867 9.44132 6.11693 9.52004 6.11693ZM10.7597 13.5605V14.6565C10.7597 14.818 10.6289 14.9488 10.4671 14.9488H9.53305C9.37125 14.9488 9.24054 14.818 9.24054 14.6565V13.5605C9.24054 13.3989 9.37125 13.2678 9.53305 13.2678H10.4671C10.6289 13.2676 10.7597 13.3989 10.7597 13.5605Z" fill="#EB5757"/>
+                        </svg>
+                        Пожаловаться
+                    </button>
+                </div>
+                <span class="item__post-data">860 просмотров за все время, 196 с мобильных | Сегодня 24, неделя 544, месяц 860 | Добавлено 21.04.2020</span>
+                <div class="item__body">
+                    
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__wrap">
+                <div class="footer__col">
+                    <div class="logo">
+                        <img loading="lazy" src="./img/logo.png" alt="Логотип" class="logo__img">
+                    </div>
+                    <div class="footer__rates">
+                        <div class="footer__socials">
+                            <a href="#" class="footer__social">
+                                <img loading="lazy" src="./" alt="Соц. сеть" class="footer__social-img">
+                            </a>
+                            <a href="#" class="footer__social">
+                                <img loading="lazy" src="./" alt="Соц. сеть" class="footer__social-img">
+                            </a>
+                            <a href="#" class="footer__social">
+                                <img loading="lazy" src="./" alt="Соц. сеть" class="footer__social-img">
+                            </a>
+                            <a href="#" class="footer__social">
+                                <img loading="lazy" src="./" alt="Соц. сеть" class="footer__social-img">
+                            </a>
+                        </div>
+                        <img loading="lazy" src="./img/ratings.png" alt="Рейтинг" class="footer__rate">
+                        <span class="footer__rates-text">Наш рейтинг: 4.9</span>
+                        <span class="footer__rates-text">Всего голосов: 947</span>
+                    </div>
+                </div>
+                <div class="footer__col">
+                    <ul class="footer__links">
+                        <li><a href="#" class="footer__link">Помощь</a></li>
+                        <li><a href="#" class="footer__link">О проекте</a></li>
+                        <li><a href="#" class="footer__link">Реклама</a></li>
+                        <li><a href="#" class="footer__link">Агенства недвижимости</a></li>
+                    </ul>
+                    <span class="footer__text">(C) 2006-2020 Hata.by</span>
+                    <p class="footer__text">Частное предприятие «Хата бай» 220004, г. Минск, ул. Интернациональная 25а-514 УНП: 191612768 от 26 апреля 2011 р/с: BY64 BPSB 3012 3126 4801 7933 0000 БПС-Сбербанк Минск бульвар Мулявина, 6 BIC банка BPSBBY2X</p>
+                    <div class="footer__data">
+                        <a href="#" class="footer__text">Договор оферты</a>
+                        <a href="#" class="footer__text">Карта сайта</a>
+                    </div>
+                </div>
+                <div class="footer__col">
+                    <span class="footer__big-text">
+                        Реклама на сайте: <a href="tel:+375445504545">+375 (44) 550 4545</a><a href="mailto:555@hata.by">555@hata.by</a>
+                    </span>
+                    <div class="footer__services">
+                        <a href="#" class="footer__text">Цены на услуги</a>
+                        <a href="#" class="footer__text">Способы оплаты</a>
+                        <a href="#" class="footer__text">Условия оплаты через Webpay</a>
+                        <a href="#" class="footer__text">Возврат средств через Webpay</a>
+                    </div>
+                    <div class="footer__pay-systems">
+                        <img loading="lazy" src="https://www.hata.by/img/pay/Visa.png" alt="Партнер">
+                        <img loading="lazy" src="https://www.hata.by/img/pay/visa-2.png" alt="Партнер" style="height: 27px; margin: 0 20px;">
+                        <img loading="lazy" src="https://www.hata.by/img/pay/mastercard.png" alt="Партнер">
+                        <img loading="lazy" src="https://www.hata.by/img/pay/MasterCard.png" alt="Партнер" style="margin: 0 20px;">
+                        <img loading="lazy" src="https://www.hata.by/img/pay/webpay.png" alt="Партнер">
+                        <img loading="lazy" src="https://www.hata.by/img/pay/belkart.png" alt="Партнер" style="width: 50px;">
+                        <img loading="lazy" src="https://www.hata.by/img/pay/belcard_passw.png" alt="Партнер" style="margin: 0 20px;">
+                        <img loading="lazy" src="https://www.hata.by/img/pay/image003.png" alt="Партнер">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -136,6 +136,12 @@ section
         max-width: 380px
         font-size: 18px
         padding: 11px
+    &_print, &_complaint
+        box-shadow: none
+        color: #828282
+        font-size: 16px
+    &_complaint
+        color: #EB5757
 
 .header
     flex-grow: 0
@@ -736,6 +742,7 @@ section
 //
 //
 
+
 .breadcrumbs
     padding-top: 25px
     margin-bottom: 50px
@@ -792,14 +799,39 @@ section
         background-color: rgba(0, 0, 0, .6)
         z-index: -2
         opacity: 0
+        visibility: hidden
         &.active
             opacity: 1
+            visibility: visible
     &__row
         display: flex
         align-items: flex-end
         justify-content: space-between
+        &_fe
+            justify-content: flex-end
+        & + &
+            margin-top: 40px
     &__col
-        
+        display: flex
+        align-items: center
+        & + &
+            margin-left: 48px
+    &__select
+        display: inline-block
+        appearance: none
+        cursor: pointer
+        font-size: 16px
+        text-align: center
+        padding: 8px 25px
+        border-radius: 35px
+        border: 1px solid #9F9F9F
+        width: 100%
+        & + &
+            margin-left: 10px
+        &:focus
+            outline: none
+        option
+            text-align: center
     &__hidden
         position: absolute
         left: 0
@@ -816,6 +848,29 @@ section
             pointer-events: all
     .tab__col + .tab__col
         margin-left: 0
+
+.fromto
+    & + &
+        margin-left: 12px
+    &__label
+        color: #000
+        font-size: 16px
+    &__inputs
+        display: flex
+        align-items: center
+        margin-top: 8px
+    &__input
+        display: inline-block
+        font-size: 16px
+        padding: 8px
+        box-shadow: 0 0 0 1px #9F9F9F
+        max-width: 72px
+        &:first-child
+            border-radius: 4px 0 0 4px
+        &:last-child
+            border-radius: 0px 4px 4px 0px
+        &:focus
+            outline: none
 
 .selling
     &__head, &__filter
@@ -1157,3 +1212,38 @@ section
             stroke: #CDD3D7
             transition-duration: 0s
             cursor: pointer
+
+
+//
+//
+// Страница квартиры
+//
+//
+
+    
+.item
+    &__head
+        display: flex
+        justify-content: space-between
+        align-items: flex-start
+        margin-bottom: 15px
+        .button
+            padding-top: 7px
+            svg
+                vertical-align: middle
+                margin-top: -2px
+                margin-right: 5px
+    &__title
+        font-size: 24px
+        color: $main_black
+        line-height: 32px
+        max-width: 780px
+    &__post-data
+        font-size: 12px
+        color: #828282
+    &__body
+        margin-top: 30px
+        margin-bottom: 90px
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        grid-column-gap: 15px

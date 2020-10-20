@@ -145,13 +145,74 @@
                     </form>
                 </div>
             </div>
-            <div class="filter__hidden js-filter-hidden">
+            <form class="filter__hidden js-filter-hidden">
                 <div class="container">
                     <div class="filter__row">
-                        
+                        <div class="filter__col">
+                            <div class="fromto">
+                                <span class="fromto__label">Общая площадь, м²</span>
+                                <div class="fromto__inputs">
+                                    <input class="fromto__input" type="tel" placeholder="от">
+                                    <input class="fromto__input" type="tel" placeholder="до">
+                                </div>
+                            </div>
+                            <div class="fromto">
+                                <span class="fromto__label">Жилая площадь, м²</span>
+                                <div class="fromto__inputs">
+                                    <input class="fromto__input" type="tel" placeholder="от">
+                                    <input class="fromto__input" type="tel" placeholder="до">
+                                </div>
+                            </div>
+                            <div class="fromto">
+                                <span class="fromto__label">Площадь кухни, м²</span>
+                                <div class="fromto__inputs">
+                                    <input class="fromto__input" type="tel" placeholder="от">
+                                    <input class="fromto__input" type="tel" placeholder="до">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filter__col">
+                            <div class="fromto">
+                                <span class="fromto__label">Цена за метр USD</span>
+                                <div class="fromto__inputs">
+                                    <input class="fromto__input" type="tel" placeholder="от">
+                                    <input class="fromto__input" type="tel" placeholder="до">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filter__col">
+                            <select name="area" class="filter__select">
+                                <option value="none" hidden>Область</option>
+                                <option value="Область 2">Область 2</option>
+                                <option value="Область 2">Область 2</option>
+                                <option value="Область 2">Область 2</option>
+                            </select>
+                            <select name="district" class="filter__select">
+                                <option value="none" hidden>Район</option>
+                                <option value="Область 2">Область 2</option>
+                                <option value="Область 2">Область 2</option>
+                                <option value="Область 2">Область 2</option>
+                            </select>
+                            <select name="street" class="filter__select">
+                                <option value="none" hidden>Улица</option>
+                                <option value="Область 2">Область 2</option>
+                                <option value="Область 2">Область 2</option>
+                                <option value="Область 2">Область 2</option>
+                            </select>
+                            <select name="metro" class="filter__select">
+                                <option value="none" hidden>Метро</option>
+                                <option value="Область 2">Область 2</option>
+                                <option value="Область 2">Область 2</option>
+                                <option value="Область 2">Область 2</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="filter__row filter__row_fe">
+                        <button type="button" class="button button_white button_aslink tab__liftup js-filter-trigger">Еще фильтры</button>
+                        <button type="submit" class="button button_green button_search tab__liftup">Найти</button>
                     </div>
                 </div>
-            </div>
+            </form>
             <div class="filter__overlay js-filter-overlay"></div>
         </div>
         <div class="breadcrumbs">

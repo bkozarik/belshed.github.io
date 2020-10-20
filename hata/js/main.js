@@ -121,8 +121,8 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     }
     
-    const filterTriggerClich = () => {
-        event.target.classList.toggle('active');
+    const filterTriggerClick = () => {
+        filterTriggers.forEach(trigger => trigger.classList.toggle('active'));
 
         const filtersOverlay = document.querySelector('.js-filter-overlay');
 
@@ -134,11 +134,15 @@ document.addEventListener('DOMContentLoaded', () => {
         filterHidden.classList.toggle('active');
         
         filterBody.querySelector('.button_green.button_search').classList.toggle('hidden');
+        
+        filtersOverlay.addEventListener('click', () => {
+            filterTriggers[0].click();
+        });
     }
 
     heroTabTriggers.forEach(trigger => trigger.addEventListener('click', heroTabTriggerClick));
     objectsTriggers.forEach(trigger => trigger.addEventListener('click', objectsTriggerClick));
-    filterTriggers.forEach(trigger => trigger.addEventListener('click', filterTriggerClich));
+    filterTriggers.forEach(trigger => trigger.addEventListener('click', filterTriggerClick));
     typesTrigger.addEventListener('click', typesTriggerClick);
     willBeCutted.forEach(item => setExcerpt(item));
 
