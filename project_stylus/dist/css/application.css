@@ -244,12 +244,11 @@ display: none;
 .floor-one-left:hover, .floor-one-right:hover{
 opacity: 1;
 }
-
-.floor-section-one .floor-help {
-height: 2rem;
+.floor-main .floor-section {
+        margin-top: 0;
 }
-.floor-section-two .floor-help {
-height: 2rem;
+.floor-main .floor-help{
+        height: 1.78rem;
 }
 .floor-penthouse .floor-one-left, .floor-penthouse .floor-one-right {
         width: 20.1rem;
@@ -285,7 +284,7 @@ background: rgba(210,153,102,0.7);
 .floor-main {
 position: absolute;
 left: -22.5rem;
-bottom: 8.4rem;
+bottom: 3.5rem;
 /* width: 63rem; */
 /* background-color: #fff; */
 /* opacity: .7; */
