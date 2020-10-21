@@ -525,6 +525,9 @@ section
                 &::after
                     top: 55%
                     border-top: 6px solid $main_green
+                &:hover
+                    &::after
+                        border-top: 6px solid #fff
         &:focus
             outline: none
 
@@ -793,6 +796,42 @@ section
             flex-grow: 0
             flex-shrink: 0
             margin-top: 5px
+
+.scroll
+    display: inline-block
+    border-radius: 4px
+    position: fixed
+    z-index: 5
+    height: 50px
+    width: 50px
+    background-color: #272727
+    bottom: 40px
+    right: 30px
+    cursor: pointer
+    opacity: 0
+    visibility: hidden
+    pointer-events: none
+    &.active
+        opacity: 1
+        visibility: visible
+        pointer-events: all
+    &:focus
+        outline: none
+    &:hover
+        background-color: #3d3d3d
+    &::before, &::after
+        content: ''
+        display: inline-block
+        background-color: #fff
+        height: 2px
+        width: 10px
+        position: absolute
+        top: 50%
+        left: 50%
+    &::before
+        transform: translate(calc( -3px - 50% ), -50%) rotate(-30deg)
+    &::after
+        transform: translate(calc( 3px - 50% ), -50%) rotate(30deg)
 
 
 //
@@ -1083,10 +1122,11 @@ section
         &:hover
             box-shadow: 0px 3px 18px rgba(0, 0, 0, 0.16)
     &__head
-        max-height: 195px
-        height: 100%
+        height: 195px
+        flex-shrink: 0
         width: 100%
         position: relative
+        overflow: hidden
         &-price, &-year, &-action
             position: absolute
             display: inline-block
@@ -1094,6 +1134,7 @@ section
             font-size: 14px
             color: $main_black
             padding: 6px 10px
+            z-index: 5
         &-price
             background-color: #FFFD5C
             left: 0
@@ -1109,6 +1150,16 @@ section
             padding: 10px 8px
             top: 5px
             right: 0
+        .swiper
+            &-wrapper
+                width: 100%
+                height: 100%
+                box-sizing: border-box
+    &__control
+        position: absolute
+        top: 50%
+        display: inline-block
+
     &__img
         width: 100%
         height: 100%
@@ -1133,6 +1184,7 @@ section
     &__like
         position: absolute
         display: inline-block
+        overflow: hidden
         left: 10px
         bottom: 20px
         height: 15px
@@ -1176,10 +1228,14 @@ section
     &__slider
         max-width: 280px
         width: 100%
+        overflow: hidden
     &__img
         width: 100%
         height: 100%
-        object-fit: cover
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
     &__main
         display: flex
         align-items: stretch
@@ -1291,6 +1347,19 @@ section
                 vertical-align: middle
                 margin-top: -2px
                 margin-right: 5px
+    &__tip
+        display: inline-block
+        position: absolute
+        background-color: #fff
+        border-radius: 0 0 8px 8px
+        padding: 7px 16px
+        box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, .1)
+        top: 0
+        right: 0
+        &:nth-child(1)
+            right: 146px
+        &:nth-child(2)
+            right: 12px
     &__title
         font-size: 24px
         color: $main_black
@@ -1309,10 +1378,31 @@ section
         grid-template-rows: 125px 310px 1fr
         grid-column-gap: 15px
         grid-row-gap: 15px
-    &__slider
+    &__picset
         grid-row: 1 / 3
-        background-color: peachpuff
         border-radius: 8px
+        display: grid
+        grid-template-rows: 1fr 80px
+        grid-template-columns: repeat(6, 1fr)
+        grid-column-gap: 9px
+        grid-row-gap: 9px
+        position: relative
+    &__picture
+        display: block
+        border-radius: 8px
+        overflow: hidden
+        cursor: pointer
+        &_big
+            grid-column: 1 / 7
+        &:focus
+            outline: none
+    &__img
+        width: 100%
+        height: 100%
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
     &__subtitle
         color: $main_black
         font-weight: 600

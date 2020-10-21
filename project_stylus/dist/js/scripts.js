@@ -272,7 +272,7 @@ $(document).ready(function(){
 									<td><span class="number">${data.rooms}</span></td>
 								</tr>
 							</tbody></table></div>
-							<a href="./${apartmentsPlan}" class="more"><i class="icon-arrow"></i></a>
+							<a href="./${apartmentsPlan.replace(/[./]/g, '')}" class="more"><i class="icon-arrow"></i></a>
 						</div>
 					`);
 				}
@@ -348,7 +348,6 @@ $(document).ready(function(){
 			helper.origin.querySelector('.tooltipstered').classList.contains('floor-one-left') ? tower = 1 : helper.origin.querySelector('.tooltipstered').classList.contains('floor-one-sigle') ? tower = 3 : tower = 2;
 
 			let floor = Number($(helper.origin).find('.floor-help').find('span').text());
-			console.log(floor);
 			await getFloorData(floor, tower).then(info => {
 				if(info.freeAp != 0){
 					// instance.__options.updateAnimation = "fade";
@@ -358,7 +357,7 @@ $(document).ready(function(){
 							<ul class="list-floor-info">
 								${info.apInfo}
 							</ul>
-							<a href="./${floorPlan}" class="more"><i class="icon-arrow"></i></a>
+							<a href="./${floorPlan.replace(/[./]/g, '')}" class="more"><i class="icon-arrow"></i></a>
 						</div>`
 					);
 				}

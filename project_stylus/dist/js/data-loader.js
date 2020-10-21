@@ -4,8 +4,8 @@ const login = 'dt';
 const pass = '123456';
 let table = document.querySelector('.table-styled tbody');
 
-const floorPlan = "floor.html";
-const apartmentsPlan = "apartments-plan.html";
+const floorPlan = "floor";
+const apartmentsPlan = "apartments-plan";
 
 const getData = async (url, login, pass) => {
 
@@ -233,10 +233,10 @@ const filterInit = (minValSq, maxValSq, minValPr, maxValPr) => {
     
 }
 
+
 const showApPage = () => {
     event.preventDefault();
     let tr = event.target;
-    console.log(tr);
 
     while(tr.tagName != 'TR'){
         tr = tr.parentNode;
@@ -248,7 +248,7 @@ const showApPage = () => {
     sessionStorage.setItem('appId', appId);
     sessionStorage.setItem('floor', floor);
 
-    window.location.assign('./' + apartmentsPlan);
+    window.location.assign(apartmentsPlan.replace(/./, ''));
 }
 
 const fillTable = (floorCount=null) => {    
@@ -497,7 +497,7 @@ else if(window.location.href.includes(floorPlan)){
     
 
 }
-else if(window.location.href.includes(apartmentsPlan)){
+else if(window.location.href.includes(apartmentsPlan.replace(/[./]/g, ''))){
 
     let currFloor = Number(sessionStorage.getItem('floor'));
     let currAp = Number(sessionStorage.getItem('appId'));
@@ -520,6 +520,7 @@ else if(window.location.href.includes(apartmentsPlan)){
 
     });
 }
+
 
 document.querySelectorAll('.js-scroll-link').forEach(link => {
     link.addEventListener('click', () => {

@@ -59,17 +59,17 @@
                 </button>
                 <div class="types__dropdown js-types-dropdown">
                     <ul class="types__list">
-                        <li class="types__item"><a href="#" class="types__link js-scroll-link">Дома</a></li>
-                        <li class="types__item"><a href="#" class="types__link js-scroll-link">За рубежом</a></li>
-                        <li class="types__item"><a href="#" class="types__link js-scroll-link">Цеха</a></li>
-                        <li class="types__item"><a href="#" class="types__link js-scroll-link">Склады</a></li>
-                        <li class="types__item"><a href="#" class="types__link js-scroll-link">Грузоперевозки</a></li>
+                        <li class="types__item"><a href="#objects" class="types__link js-objects-trigger js-scroll-link" data-target="1">Дома</a></li>
+                        <li class="types__item"><a href="#objects" class="types__link js-objects-trigger js-scroll-link" data-target="2">За рубежом</a></li>
+                        <li class="types__item"><a href="#objects" class="types__link js-objects-trigger js-scroll-link" data-target="3">Цеха</a></li>
+                        <li class="types__item"><a href="#objects" class="types__link js-objects-trigger js-scroll-link" data-target="4">Склады</a></li>
+                        <li class="types__item"><a href="#objects" class="types__link js-objects-trigger js-scroll-link" data-target="5">Грузоперевозки</a></li>
                     </ul>
                 </div>
             </div>
         </div>
     </header>
-    <main class="main">
+    <main id="main" class="main">
         <section class="hero">
             <picture class="hero__bg js-hero-bg active">
                 <source srcset="./img/hero1_bg.webp" type="image/webp">
@@ -402,7 +402,7 @@
                     </article>
                 </div>
                 <div class="section__button-holder">
-                    <a href="#" class="button button_green button_big">Все подборки</a>
+                    <a id="objects" href="#" class="button button_green button_big">Все подборки</a>
                 </div>
             </div>
         </section>
@@ -915,5 +915,6 @@
             </div>
         </div>
     </footer>
+    <a href="#main" class="scroll js-scroll js-scroll-link"></a>
 </body>
 </html>

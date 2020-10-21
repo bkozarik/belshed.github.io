@@ -69,7 +69,7 @@
             </div>
         </div>
     </header>
-    <main class="main">
+    <main id="main" class="main">
         <div class="filter">
             <div class="filter__body">
                 <div class="container">
@@ -161,7 +161,8 @@
                 <nav class="breadcrumbs__nav">
                     <ul class="breadcrumbs__list">
                         <li class="breadcrumbs__item"><a href="./index.html" class="breadcrumbs__link">Недвижимость</a></li>
-                        <li class="breadcrumbs__item"><a class="breadcrumbs__link breadcrumbs__link_disabled">Продажа вторичек в Минске</a></li>
+                        <li class="breadcrumbs__item"><a href="./apartments.html" class="breadcrumbs__link">Продажа вторичек в Минске</a></li>
+                        <li class="breadcrumbs__item"><a class="breadcrumbs__link breadcrumbs__link_disabled">Однокомнатная квартира на улице Казимировской</a></li>
                     </ul>
                 </nav>
             </div>
@@ -185,8 +186,51 @@
                 </div>
                 <span class="item__post-data">860 просмотров за все время, 196 с мобильных | Сегодня 24, неделя 544, месяц 860 | Добавлено 21.04.2020</span>
                 <div class="item__body">
-                    <div class="item__slider">
-
+                    <div class="item__picset">
+                        <span class="item__tip">Проверено hata.by</span>
+                        <span class="item__tip">Не агентство</span>
+                        <button class="item__picture item__picture_big">
+                            <picture class="item__img">
+                                <source srcset="./img/item.webp" type="image/webp">
+                                <img src="./img/item.jpg" alt="Фото картины">
+                            </picture>
+                        </button>
+                        <button class="item__picture">
+                            <picture class="item__img">
+                                <source srcset="./img/item.webp" type="image/webp">
+                                <img src="./img/item.jpg" alt="Фото картины">
+                            </picture>
+                        </button>
+                        <button class="item__picture">
+                            <picture class="item__img">
+                                <source srcset="./img/item.webp" type="image/webp">
+                                <img src="./img/item.jpg" alt="Фото картины">
+                            </picture>
+                        </button>
+                        <button class="item__picture">
+                            <picture class="item__img">
+                                <source srcset="./img/item.webp" type="image/webp">
+                                <img src="./img/item.jpg" alt="Фото картины">
+                            </picture>
+                        </button>
+                        <button class="item__picture">
+                            <picture class="item__img">
+                                <source srcset="./img/item.webp" type="image/webp">
+                                <img src="./img/item.jpg" alt="Фото картины">
+                            </picture>
+                        </button>
+                        <button class="item__picture">
+                            <picture class="item__img">
+                                <source srcset="./img/item.webp" type="image/webp">
+                                <img src="./img/item.jpg" alt="Фото картины">
+                            </picture>
+                        </button>
+                        <button class="item__picture">
+                            <picture class="item__img">
+                                <source srcset="./img/item.webp" type="image/webp">
+                                <img src="./img/item.jpg" alt="Фото картины">
+                            </picture>
+                        </button>
                     </div>
                     <div class="item__card item__card_sb item__card_fe">
                         <div class="item__price">
@@ -348,7 +392,9 @@
                     </div>
                 </div>
                 <div class="map__wrap">
-                    <div class="map__body"></div>
+                    <div class="map__body">
+                        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ab102d05faad98cc871fbdb799218da9363b26a17261e6763caf780de82a2d060&amp;source=constructor" width="100%" height="480" frameborder="0"></iframe>
+                    </div>
                     <div class="map__objects">
                         <label class="tab__compare">
                             <input type="checkbox">
@@ -633,5 +679,7 @@
             </div>
         </div>
     </footer>
+    <a href="#main" class="scroll js-scroll js-scroll-link"></a>
+    <script src="./js/swiper-bundle.min.js"></script>
 </body>
 </html>
