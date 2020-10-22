@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const scrollLinks = document.querySelectorAll('.js-scroll-link');
 
     const heroTabTriggers = document.querySelectorAll('.js-tab-trigger');
+    const heroBgItems = document.querySelectorAll('.js-hero-bg');
     const heroTabs = document.querySelectorAll('.js-tab');
 
     const objectsTriggers = document.querySelectorAll('.js-objects-trigger');
@@ -20,6 +21,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const scrollToTop = document.querySelector('.js-scroll');
 
+    const burger = document.querySelector('.js-burger');
+
     const setExcerpt = target => {
 
         let targetText = target.innerText;
@@ -36,6 +39,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    const whichPage = () => {
+        let main = document.querySelector('main.main');
+        let pageName = main.dataset.page;
+
+        return pageName;
+    }
+
     const swipersInit = item => {
         let swiper = new Swiper(item.querySelector('.top__head') || item.querySelector('.apartment__slider'), {
             slidesPerView: 1,
@@ -44,40 +54,36 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const heroTabTriggerClick = () => {
+        let trigger = event.target;
+        let triggersUnderline = document.querySelector('.js-tab-underline');
+
+        let targetTab = Number(trigger.dataset.target) - 1;
+
+        heroTabTriggers.forEach(trigger => trigger.classList.remove('active'));
+        heroTabs.forEach(trigger => trigger.classList.remove('active'));
+        heroBgItems.forEach(item => item.classList.remove('active'));
+
+        let triggerWidth = trigger.getBoundingClientRect().width;
+        trigger.classList.toggle('active');
+        triggersUnderline.style.width = triggerWidth * 0.7 + "px";
+        triggersUnderline.style.left = trigger.offsetLeft + (triggerWidth / 2) + "px";
         
-        try{
-            let trigger = event.target;
-            let triggersUnderline = document.querySelector('.js-tab-underline');
-
-            let targetTab = Number(trigger.dataset.target) - 1;
-
-            heroTabTriggers.forEach(trigger => trigger.classList.remove('active'));
-            heroTabs.forEach(trigger => trigger.classList.remove('active'));
-
-            let triggerWidth = trigger.getBoundingClientRect().width;
-            trigger.classList.toggle('active');
-            triggersUnderline.style.width = triggerWidth * 0.7 + "px";
-            triggersUnderline.style.left = trigger.offsetLeft + (triggerWidth / 2) + "px";
-            
-            heroTabs[targetTab].classList.toggle('active');
-        }
-        catch{}
+        heroTabs[targetTab].classList.toggle('active');
+        heroBgItems[targetTab].classList.toggle('active');
     }
 
     const heroTabTriggerInit = () => {
-        try{
-            let firstTrigger = heroTabTriggers[0];
-            let triggersUnderline = document.querySelector('.js-tab-underline');
-            
-            let triggerWidth = firstTrigger.getBoundingClientRect();
+        let firstTrigger = heroTabTriggers[0];
+        let triggersUnderline = document.querySelector('.js-tab-underline');
+        
+        let triggerWidth = firstTrigger.getBoundingClientRect();
 
-            firstTrigger.classList.toggle('active');
-            triggersUnderline.style.width = triggerWidth.width * 0.7 + "px";
-            triggersUnderline.style.left = firstTrigger.offsetLeft + (triggerWidth.width / 2) + "px";
+        firstTrigger.classList.toggle('active');
+        triggersUnderline.style.width = triggerWidth.width * 0.7 + "px";
+        triggersUnderline.style.left = firstTrigger.offsetLeft + (triggerWidth.width / 2) + "px";
 
-            heroTabs[0].classList.add('active');
-        }
-        catch{}
+        heroTabs[0].classList.add('active');
+        heroBgItems[0].classList.add('active');
     }
 
     const objectsTriggerClick = () => {
@@ -137,6 +143,10 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     }
     
+    const burgerClick = () => {
+        burger.classList.toggle('active');
+    }
+
     const filterTriggerClick = () => {
         filterTriggers.forEach(trigger => trigger.classList.toggle('active'));
 
@@ -175,21 +185,18 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const resultsTriggerInit = () => {
-        try{
-            let firstTrigger = resultsTriggers[0];
-            let firstResult = results[0];
-            let triggersUnderline = document.querySelector('.js-results-underline');
-            
-            let triggerWidth = firstTrigger.getBoundingClientRect();
+        let firstTrigger = resultsTriggers[0];
+        let firstResult = results[0];
+        let triggersUnderline = document.querySelector('.js-results-underline');
+        
+        let triggerWidth = firstTrigger.getBoundingClientRect();
 
-            firstResult.classList.add('active');
-            firstTrigger.classList.add('active');
-            triggersUnderline.style.width = triggerWidth.width * 1.2 + "px";
-            triggersUnderline.style.left = firstTrigger.offsetLeft + (triggerWidth.width / 2) + "px";
+        firstResult.classList.add('active');
+        firstTrigger.classList.add('active');
+        triggersUnderline.style.width = triggerWidth.width * 1.2 + "px";
+        triggersUnderline.style.left = firstTrigger.offsetLeft + (triggerWidth.width / 2) + "px";
 
-            resultsTriggers[0].classList.add('active');
-        }
-        catch{}
+        resultsTriggers[0].classList.add('active');
     }
 
     const scrollLinkClick = () => {
@@ -208,6 +215,7 @@ document.addEventListener('DOMContentLoaded', () => {
     apartmentsSwipers.forEach(item => swipersInit(item));
     
     typesTrigger.addEventListener('click', typesTriggerClick);
+    burger.addEventListener('click', burgerClick);
 
     scrollLinks.forEach(link => link.addEventListener('click', scrollLinkClick));
     filterTriggers.forEach(trigger => trigger.addEventListener('click', filterTriggerClick));
@@ -217,8 +225,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.addEventListener('scroll', scrollHandler);
     
+    if(whichPage() == 'index'){
+        heroTabTriggerInit();
+        objectsTriggerInit();
+    }
+    else if(whichPage() == 'apartments'){
+
+    }
+    else if(whichPage() == 'item'){
+        resultsTriggerInit();
+    }
     scrollHandler();
-    heroTabTriggerInit();
-    objectsTriggerInit();
-    resultsTriggerInit();
 });

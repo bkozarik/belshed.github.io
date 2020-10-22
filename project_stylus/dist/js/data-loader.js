@@ -448,7 +448,7 @@ const filterTable = () => {
 
 getFullFloorData();
 
-if(window.location.href.endsWith('plan.html') || window.location.href.endsWith('plan') || window.location.href.endsWith('plan/') && !window.location.href.includes('apartments-plan')){
+if(window.location.href.endsWith('home-plan.html') || window.location.href.endsWith('plan') || window.location.href.endsWith('plan/') && !window.location.href.includes('apartments-plan')){
     let data = getData(url, login, pass).then(resp => {
         let squareArr = new Array();
         let priceArr = new Array();
@@ -474,13 +474,22 @@ if(window.location.href.endsWith('plan.html') || window.location.href.endsWith('
 }
 else if(window.location.href.includes(floorPlan)){
 
-    let currFloor = Number(sessionStorage.getItem('floor'));
-    let currTower = Number(sessionStorage.getItem('tower'));
+    let currFloor, currTower;
+
+    if(isNaN(Number(document.querySelector('.floor-plan').dataset.floor)) == false){
+        currFloor = Number(document.querySelector('.floor-plan').dataset.floor);
+        currTower = Number(document.querySelector('.floor-plan').dataset.tower);
+        
+        sessionStorage.setItem('floor', currFloor);
+        sessionStorage.setItem('tower', currTower);
+    }
+    else{
+        currFloor = Number(sessionStorage.getItem('floor'));
+        currTower = Number(sessionStorage.getItem('tower'));
+    }
 
     fillPng(currFloor, currTower);
     fillTable(currFloor);
-    
-    let pngApartsTriggers = document.querySelectorAll('.js-apartment-img');
 
     let filterInputs = document.querySelectorAll('.js-room-list input');
     filterInputs.forEach(input => input.addEventListener('change', () => {
@@ -499,9 +508,22 @@ else if(window.location.href.includes(floorPlan)){
 }
 else if(window.location.href.includes(apartmentsPlan.replace(/[./]/g, ''))){
 
-    let currFloor = Number(sessionStorage.getItem('floor'));
-    let currAp = Number(sessionStorage.getItem('appId'));
-    let currTower = Number(sessionStorage.getItem('tower'));
+    let currFloor, currAp, currTower;
+
+    if(isNaN(Number(document.querySelector('.room-one').dataset.ap)) == false){
+        currFloor = Number(document.querySelector('.room-one').dataset.floor);
+        currTower = Number(document.querySelector('.room-one').dataset.tower);
+        currAp = Number(document.querySelector('.room-one').dataset.ap);
+        
+        sessionStorage.setItem('floor', currFloor);
+        sessionStorage.setItem('tower', currTower);
+        sessionStorage.setItem('appId', currAp);
+    }
+    else{
+        currAp = Number(sessionStorage.getItem('appId'));
+        currFloor = Number(sessionStorage.getItem('floor'));
+        currTower = Number(sessionStorage.getItem('tower'));
+    }
 
     document.querySelector('.section-title h1').innerText = "Квартира №" + currAp;
 
@@ -520,7 +542,6 @@ else if(window.location.href.includes(apartmentsPlan.replace(/[./]/g, ''))){
 
     });
 }
-
 
 document.querySelectorAll('.js-scroll-link').forEach(link => {
     link.addEventListener('click', () => {

@@ -38,6 +38,7 @@
                         <button class="button button_green button_add">Добавить объявление</button>
                         <button class="button button_white button_login">Войти</button>
                     </div>
+                    <button class="burger js-burger"><span></span></button>
                 </div>
             </div>
         </div>
@@ -69,17 +70,17 @@
             </div>
         </div>
     </header>
-    <main id="main" class="main">
+    <main id="main" class="main" data-page="index">
         <section class="hero">
-            <picture class="hero__bg js-hero-bg active">
+            <picture class="hero__bg js-hero-bg">
                 <source srcset="./img/hero1_bg.webp" type="image/webp">
                 <img loading="lazy" src="./img/hero1_bg.jpg" alt="Фон">
             </picture>
-            <picture class="hero__bg">
+            <picture class="hero__bg js-hero-bg">
                 <source srcset="./img/hero2_bg.webp" type="image/webp">
                 <img loading="lazy" src="./img/hero2_bg.jpg" alt="Фон">
             </picture>
-            <picture class="hero__bg">
+            <picture class="hero__bg js-hero-bg">
                 <source srcset="./img/hero3_bg.webp" type="image/webp">
                 <img loading="lazy" src="./img/hero3_bg.jpg" alt="Фон">
             </picture>
