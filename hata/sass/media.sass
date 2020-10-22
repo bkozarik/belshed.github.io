@@ -1,13 +1,44 @@
+$main_green: #2FAD49
+$main_black: #202932
+$main_light: #F1F3F6
+$main_grey: #636363
+    
+@media screen and ( max-width: 1200px )
+    .footer
+        padding-top: 15px
+        &__links
+            flex-wrap: wrap
+        &__link
+            margin-top: 10px
+            margin-right: 10px
+        &__wrap
+            flex-wrap: wrap
+        &__col
+            margin-top: 35px
+
 @media screen and ( max-width: 1140px )
     .picset
         &__tile
             grid-template-rows: repeat(2, 100px)
+    
+    .articles
+        &__container
+            grid-template-columns: repeat(4, 1fr)
+            grid-template-rows: 320px 320px 300px
+
+    .article
+        &_big
+            &:first-child
+                grid-column: 1 / 5
+            &:nth-child(2)
+                grid-column: 1 / 5
+
     .tab
         &__label
             margin-bottom: 8px
         &__checkbox + &__label
             margin-bottom: 0
-        &__form
+        &__form:not(.tab__form_col), &__main
             display: grid
             grid-template-columns: repeat(3, 1fr)
             justify-content: center
@@ -25,14 +56,72 @@
                 order: 3
             &:nth-child(6)
                 order: 6
-                
-@media screen and ( max-width: 840px )
-    .top
+        &__main
+            .tab
+                &__col
+                    &:nth-child(1)
+                        order: 4
+                    &:nth-child(2)
+                        order: 0
+                    &:nth-child(3)
+                        order: 3
+                    &:nth-child(4)
+                        order: 2
+                    &:nth-child(5)
+                        order: 5
+                    &:nth-child(6)
+                        order: 6
+
+@media screen and ( max-width: 1020px )
+    .article
+        &_big
+            &:first-child
+                grid-column: 1 / 4
+            &:nth-child(2)
+                grid-column: 1 / 4
+
+    .articles
+        &__container
+            grid-template-rows: 320px 320px 1fr 1fr
+            grid-template-columns: repeat(3, 1fr)
+
+@media screen and ( max-width: 1000px )
+    .objects
         .col-container
-            &_three
-                grid-template-columns: repeat(2, minmax(200px, 340px))
-                justify-content: center
-                grid-gap: 32px
+            &_four
+                grid-template-columns: repeat(3, 1fr)
+
+@media screen and ( max-width: 870px )
+    .tab
+        &__bottom
+            margin-right: 60px
+
+@media screen and ( max-width: 840px )
+    .col-container
+        &_three
+            grid-template-columns: repeat(2, minmax(200px, 340px))
+            justify-content: center
+            grid-gap: 32px
+
+    .objects
+        .col-container
+            &_four
+                justify-items: center
+                grid-template-columns: repeat(2, 1fr)
+
+    .article
+        &_big
+            &:first-child
+                grid-column: 1 / 3
+            &:nth-child(2)
+                grid-column: 1 / 3
+
+    .articles
+        &__container
+            grid-template-columns: repeat(2, 1fr)
+
+    .card
+        max-width: 340px
 
     .scroll
         bottom: 20px
@@ -43,19 +132,28 @@
             grid-template-rows: repeat(2, 80px)
 
     .tab
-        &__form
+        &__form:not(.tab__form_col), &__main
             grid-column-gap: 30px
             grid-row-gap: 10px
             grid-template-columns: 230px repeat(2, 1fr)
 
 @media screen and ( max-width: 760px )
     .tab
+        padding: 30px
+        &__row
+            display: flex
         &__label
             white-space: normal
         &__checkbox
             flex-shrink: 0
             margin-top: 8px
 
+        &__bottom
+            .tab
+                &__label
+                    white-space: nowrap !important
+                &__checkbox
+                    margin-top: 0px
 
 @media screen and ( max-width: 720px )
     .dropdown
@@ -69,13 +167,26 @@
         margin-top: 110px
 
 @media screen and ( max-width: 680px )
+    .tabs
+        margin-top: 40px
+        &__items
+            margin-top: 15px
+
     .tab
-        &__form
+        &__form:not(.tab__form_col), &__main
             grid-template-columns: repeat(2, 1fr)
         &__checkbox
             margin-top: 0
         &__compare
             margin-bottom: 12px
+        &__bottom
+            margin: 0 auto
+            padding-top: 15px
+            &-content
+                flex-wrap: wrap
+                justify-content: space-between
+                .tab__compare, .tab__compare + .tab__compare
+                    margin: 10px 10px 10px 0px
         &__col
             &:nth-child(1)
                 order: 0
@@ -89,10 +200,27 @@
                 order: 5
             &:nth-child(6)
                 order: 6
+        &__main
+            align-items: center
+            grid-row-gap: 15px
+            .tab
+                &__col
+                    &:nth-child(1)
+                        order: 0
+                    &:nth-child(2)
+                        order: 1
+                    &:nth-child(3)
+                        order: 4
+                    &:nth-child(4)
+                        order: 2
+                    &:nth-child(5)
+                        order: 5
+                    &:nth-child(6)
+                        order: 6
 
 @media screen and ( max-width: 620px )
     .tab
-        &__form
+        &__form:not(.tab__form_col), &__main
             grid-row-gap: 20px
             grid-template-columns: 1fr
     .nav
@@ -106,17 +234,34 @@
     .hero
         &__body
             padding-top: 50px
-            padding-bottom: 520px
+            padding-bottom: 640px
     .types
         display: none
 
+@media screen and ( max-width: 570px )
+    .articles
+        &__container
+            grid-template-rows: 420px 420px 1fr 1fr
+            grid-template-columns: repeat(1, 1fr)
+
+    .article
+        &_big
+            &:first-child
+                grid-column: 1 / 2
+            &:nth-child(2)
+                grid-column: 1 / 2
+
 @media screen and ( max-width: 490px )
-    .top
+    .col-container
+        &_three
+            grid-template-columns: repeat(1, 1fr)
+            justify-content: center
+            grid-gap: 32px
+
+    .objects
         .col-container
-            &_three
+            &_four
                 grid-template-columns: repeat(1, 1fr)
-                justify-content: center
-                grid-gap: 32px
 
     .picset
         &__tile
@@ -127,8 +272,65 @@
             padding: 4px 0px
     .nav
         display: none
+
     .main
         margin-top: 60px
+
+    .article
+        &_big
+            flex-direction: column
+            .article
+                &__views
+                    bottom: auto
+                    top: 8px
+                &__img
+                    max-height: 180px
+            &:first-child
+                grid-column: 1 / 2
+            &:nth-child(2)
+                grid-column: 1 / 2
+
+    .articles
+        &__container
+            grid-template-rows: 430px 430px 1fr 1fr
+            grid-template-columns: repeat(1, 1fr)
+
+    .footer
+        &__col:first-child
+            width: 100%
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+        &__big-text 
+            & a
+                display: inline-block
+                padding: 7px 0px 0px
+            & br
+                display: inline
+
+@media screen and ( max-width: 460px )
+    .js-objects-underline
+        display: none
+
+    .js-objects-trigger
+        padding-bottom: 13px
+        margin-bottom: 10px
+        &.active::after
+            content: ''
+            display: inline-block
+            width: 80%
+            height: 4px
+            position: absolute
+            bottom: 0
+            left: 50%
+            transform: translate(-50%, -50%)
+            background-color: $main_green
+
+    .objects
+        &__nav
+            flex-direction: column
+            align-items: center
 
 @media screen and ( max-width: 390px )
     .scroll
@@ -138,7 +340,11 @@
         right: 10px
 
     .tab
-        padding: 40px 25px
+        padding: 30px 25px
+
+    .articles
+        &__container
+            grid-template-rows: 480px 480px 1fr 1fr
 
     .picset
         &__tile

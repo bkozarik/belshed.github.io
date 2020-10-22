@@ -701,6 +701,7 @@ section
     background-color: #fff
     border-radius: 8px
     position: relative
+    overflow: hidden
     display: block
     box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1)
     &_big
@@ -806,14 +807,16 @@ section
         text-decoration: underline
         &:hover
             color: $main_green
-    a.footer__text + a.footer__text
-        margin-left: 20px
+    a.footer__text
+        margin-right: 20px
     &__data
         margin-top: 40px
     &__big-text, &__big-text *
         font-size: 16px
         font-weight: 600
         color: $main_black
+    &__big-text br
+        display: none
     &__big-text a
         padding-left: 10px
     &__big-text a:hover
