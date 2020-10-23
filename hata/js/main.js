@@ -12,7 +12,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const willBeCutted = document.querySelectorAll('.js-excerpt');
 
-    const filterTriggers = document.querySelectorAll('.js-filter-trigger');
+    const filterTrigger = document.querySelector('.js-filter-trigger');
+    const filterMoreTrigger = document.querySelector('.js-filter-more-trigger');
 
     const resultsTriggers = document.querySelectorAll('.js-results-trigger');
     const results = document.querySelectorAll('.js-result');
@@ -152,7 +153,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const filterTriggerClick = () => {
-        filterTriggers.forEach(trigger => trigger.classList.toggle('active'));
+        filterTrigger.classList.toggle('active');
 
         const filtersOverlay = document.querySelector('.js-filter-overlay');
 
@@ -166,7 +167,7 @@ document.addEventListener('DOMContentLoaded', () => {
         filterBody.querySelector('.button_green.button_search').classList.toggle('hidden');
         
         filtersOverlay.addEventListener('click', () => {
-            filterTriggers[0].click();
+            filterTrigger.click();
         });
     }
 
@@ -215,14 +216,22 @@ document.addEventListener('DOMContentLoaded', () => {
         window.pageYOffset > 400 ? scrollToTop.classList.add('active') : scrollToTop.classList.remove('active');
     }
 
+    const filterMoreTriggerClick = () => {
+        let hiddenFilter = document.querySelector('.js-filter-more');
+
+        hiddenFilter.classList.toggle('active');
+        filterMoreTrigger.classList.toggle('active');
+    }
+
     willBeCutted.forEach(item => setExcerpt(item));
     apartmentsSwipers.forEach(item => swipersInit(item));
     
-    typesTrigger.addEventListener('click', typesTriggerClick);
     burger.addEventListener('click', burgerClick);
+    typesTrigger.addEventListener('click', typesTriggerClick);
+    filterTrigger.addEventListener('click', filterTriggerClick);
+    filterMoreTrigger.addEventListener('click', filterMoreTriggerClick);
 
     scrollLinks.forEach(link => link.addEventListener('click', scrollLinkClick));
-    filterTriggers.forEach(trigger => trigger.addEventListener('click', filterTriggerClick));
     heroTabTriggers.forEach(trigger => trigger.addEventListener('click', heroTabTriggerClick));
     objectsTriggers.forEach(trigger => trigger.addEventListener('click', objectsTriggerClick));
     resultsTriggers.forEach(trigger => trigger.addEventListener('click', resultsTriggerClick));
@@ -240,4 +249,7 @@ document.addEventListener('DOMContentLoaded', () => {
         resultsTriggerInit();
     }
     scrollHandler();
+
+    filterTrigger.click();
+    filterMoreTrigger.click();
 });

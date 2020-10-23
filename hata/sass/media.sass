@@ -110,6 +110,15 @@ $main_grey: #636363
                     &:nth-child(6)
                         order: 6
 
+    .filter
+        &__row:not(.filter__row_fe):not(.filter__row_hidden)
+            display: grid
+            grid-template-columns: repeat(2, 1fr)
+            grid-gap: 15px
+        &__col
+            & + &
+                margin-left: 0
+
 @media screen and ( max-width: 1020px )
     .article
         &_big
@@ -208,6 +217,57 @@ $main_grey: #636363
         bottom: 20px
         right: 20px
 
+    .selling
+        &__main
+            grid-template-rows: repeat(5, 1fr)
+            justify-items: center
+            width: 100%
+
+    .apartment
+        max-width: 600px
+        width: 100%
+        &, &__main
+            flex-direction: column
+        &__body, &__row
+            max-width: none
+        &__body
+            display: flex
+            flex-direction: column
+            padding: 20px 15px 15px
+        &__text
+            margin: 10px 0px
+        &__row
+            order: 1
+            margin-bottom: 0
+        &__slider
+            max-width: none
+            max-height: 400px
+        &__price
+            margin-right: 15px
+        &__side
+            border-top: 2px dashed #979797
+            flex-direction: column
+        &__data
+            border-left: none
+            height: 100%
+            max-width: none
+            width: 100%
+            flex-direction: row
+            align-items: center
+            justify-content: space-between
+        &__info
+            display: flex
+            align-items: flex-end
+            flex-direction: row
+            justify-content: space-between
+            flex-grow: 1
+            max-width: 300px
+            margin-bottom: 0
+        &_green
+            .apartment
+                &__side
+                    border-top: 2px solid #8FC68E
+
     .picset
         &__tile
             grid-template-rows: repeat(2, 80px)
@@ -235,6 +295,14 @@ $main_grey: #636363
                     white-space: nowrap !important
                 &__checkbox
                     margin-top: 0px
+
+    .filter
+        &__row_hidden
+            display: grid
+            grid-template-columns: repeat(2, 1fr)
+            grid-gap: 15px
+            &.active
+                height: 460px
 
 @media screen and ( max-width: 720px )
     .item
@@ -319,6 +387,10 @@ $main_grey: #636363
                         order: 5
                     &:nth-child(6)
                         order: 6
+
+    .filter
+        &__row:not(.filter__row_fe):not(.filter__row_hidden)
+            grid-template-columns: 1fr
 
 @media screen and ( max-width: 620px )
     .tab
@@ -458,6 +530,23 @@ $main_grey: #636363
             & br
                 display: inline
 
+    .filter
+        &__col:not(:last-child)
+            flex-direction: column
+            align-items: flex-start
+        &__col:last-child          
+            flex-wrap: wrap
+        &__select
+            margin-right: 10px
+            margin-top: 10px
+            & + &
+                margin-left: 0
+
+    .fromto
+        & + &
+            margin-left: 0
+            margin-top: 10px
+
 @media screen and ( max-width: 460px )
     .js-objects-underline
         display: none
@@ -476,10 +565,26 @@ $main_grey: #636363
             transform: translate(-50%, -50%)
             background-color: $main_green
 
+    .apartment
+        &__data
+            padding: 0px 10px
+        &__info
+            flex-direction: column
+            align-items: flex-start
+            flex-grow: 0
+            &-item
+                margin-bottom: 10px
+
     .objects
         &__nav
             flex-direction: column
             align-items: center
+
+    .filter
+        &__row_hidden
+            grid-template-columns: 1fr
+            &.active
+                height: 770px
 
 @media screen and ( max-width: 390px )
     .scroll

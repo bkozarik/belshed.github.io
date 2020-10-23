@@ -222,8 +222,135 @@
                             <button type="button" class="button filter__select js-filter-popup">Метро</button>
                         </div>
                     </div>
+                    <div class="filter__row filter__row_hidden js-filter-more">
+                        <div class="filter__col">
+                            <div class="tab__col tab__liftup">
+                                <span class="tab__label">Параметры объекта</span>
+                                <div class="tab__row">
+                                    <div class="tab__select-wrap">
+                                        <select class="tab__select">
+                                            <option value="none" hidden>Окна</option>
+                                            <option value="Стеклопакеты ПВХ">Стеклопакеты ПВХ</option>
+                                            <option value="Деревянные">Деревянные</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="tab__row">
+                                    <div class="tab__select-wrap">
+                                        <select class="tab__select">
+                                            <option value="none" hidden>Балкон</option>
+                                            <option value="Застеклен">Застеклен</option>
+                                            <option value="Не застеклен">Не застеклен</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="tab__row">
+                                    <div class="tab__select-wrap">
+                                        <select class="tab__select">
+                                            <option value="none" hidden>Лифты</option>
+                                            <option value="Есть">Есть</option>
+                                            <option value="Нет">Нет</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="tab__row">
+                                    <div class="tab__select-wrap">
+                                        <select class="tab__select">
+                                            <option value="none" hidden>Двери</option>
+                                            <option value="Есть">Есть</option>
+                                            <option value="Нет">Нет</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="tab__row">
+                                    <div class="tab__select-wrap">
+                                        <select class="tab__select">
+                                            <option value="none" hidden>Двери</option>
+                                            <option value="Есть">Есть</option>
+                                            <option value="Нет">Нет</option>
+                                            <option value="Подземный паркинг">Подземный паркинг</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filter__col">
+                            <div class="tab__col tab__liftup">
+                                <span class="tab__label">Параметры объекта</span>
+                                <div class="fromto__inputs">
+                                    <input class="fromto__input" type="tel" placeholder="Этажность">
+                                </div>
+                                <div class="fromto__inputs">
+                                    <input class="fromto__input" type="tel" placeholder="Высота потолков">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filter__col">
+                            <div class="tab__col tab__liftup">
+                                <span class="tab__label">Условия продажи</span>
+                                <div class="tab__row">
+                                    <div class="tab__select-wrap">
+                                        <select class="tab__select">
+                                            <option value="none" hidden>Условия работы</option>
+                                            <option value="Чистая продажа">Чистая продажа</option>
+                                            <option value="Свободная квартира">Свободная квартира</option>
+                                            <option value="Обмен">Обмен</option>
+                                            <option value="Съезд">Съезд</option>
+                                            <option value="Разъезд">Разъезд</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="tab__row">
+                                    <label class="tab__compare">
+                                        <input type="checkbox" name="isAgency">
+                                        <span class="tab__checkbox"></span>
+                                        <span class="tab__label">Агенство</span>
+                                    </label>
+                                </div>
+                                <div class="tab__row">
+                                    <label class="tab__compare">
+                                        <input type="checkbox" name="isOwner">
+                                        <span class="tab__checkbox"></span>
+                                        <span class="tab__label">Собственник</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filter__col">
+                            <div class="tab__col tab__liftup">
+                                <span class="tab__label">Параметры</span>
+                                <div class="tab__row">
+                                    <div class="tab__select-wrap">
+                                        <select class="tab__select">
+                                            <option value="none" hidden>Объявления за</option>
+                                            <option value="Все время">Все время</option>
+                                            <option value="За 12 часов">За 12 часов</option>
+                                            <option value="За сутки">За сутки</option>
+                                            <option value="За 3 дня">За 3 дня</option>
+                                            <option value="За неделю">За неделю</option>
+                                            <option value="За 2 недели">За 2 недели</option>
+                                            <option value="За месяц">За месяц</option>
+                                            <option value="За 3 месяца">За 3 месяца</option>
+                                            <option value="За 6 месяцев">За 6 месяцев</option>
+                                            <option value="За год">За год</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="tab__row">
+                                    <div class="fromto__inputs">
+                                        <input class="fromto__input" type="tel" placeholder="Поиск по коду">
+                                    </div>
+                                </div>
+                                <div class="tab__row">
+                                    <div class="fromto__inputs">
+                                        <input class="fromto__input" type="tel" placeholder="Телефон">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="filter__row filter__row_fe">
-                        <button type="button" class="button button_white button_aslink tab__liftup js-filter-more">Еще фильтры</button>
+                        <button type="button" class="button button_white button_aslink tab__liftup js-filter-more-trigger">Еще фильтры</button>
                         <button type="submit" class="button button_green button_search tab__liftup">Найти</button>
                     </div>
                 </div>
