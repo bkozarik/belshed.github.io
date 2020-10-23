@@ -278,6 +278,13 @@ $main_grey: #636363
             grid-row-gap: 10px
             grid-template-columns: 230px repeat(2, 1fr)
 
+    .popup
+        &__content
+            column-count: 4
+
+    .js-filter-trigger
+        padding-left: 0
+
 @media screen and ( max-width: 760px )
     .tab
         padding: 30px
@@ -392,6 +399,10 @@ $main_grey: #636363
         &__row:not(.filter__row_fe):not(.filter__row_hidden)
             grid-template-columns: 1fr
 
+    .popup
+        &__content
+            column-count: 3
+
 @media screen and ( max-width: 620px )
     .tab
         &__form:not(.tab__form_col), &__main
@@ -449,6 +460,10 @@ $main_grey: #636363
                 grid-column: 1 / 2
             &:nth-child(2)
                 grid-column: 1 / 2
+
+    .popup
+        &__content
+            column-count: 2
 
 @media screen and ( max-width: 495px )
     .col-container
@@ -618,6 +633,14 @@ $main_grey: #636363
     .picset
         &__tile
             grid-template-rows: repeat(2, 110px)
+
+    .popup
+        padding: 160px 10px 10px
+        &__list
+            li
+                text-align: center
+        &__content
+            column-count: 1
 
 @media screen and ( max-width: 350px )
     .item

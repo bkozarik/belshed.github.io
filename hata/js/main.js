@@ -25,6 +25,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const burger = document.querySelector('.js-burger');
     const mobileMenu = document.querySelector('.js-menu');
 
+    const filterPopupTriggers = document.querySelectorAll('.js-filter-popup');
+    const popupItems = document.querySelectorAll('.js-popup-item');
+    const popupClose = document.querySelectorAll('.js-popup-close');
+
     const setExcerpt = target => {
 
         let targetText = target.innerText;
@@ -223,6 +227,40 @@ document.addEventListener('DOMContentLoaded', () => {
         filterMoreTrigger.classList.toggle('active');
     }
 
+    const filterPopupTriggerClick = () => {
+        let trigger = event.target;
+        let triggerData = trigger.dataset.popup;
+        let popupWrapper = document.querySelector('.js-popup');
+        
+        popupItems.forEach(item => item.classList.remove('active'));
+        filterPopupTriggers.forEach(item => item.classList.remove('active'));
+
+        let targetPopup = Array.prototype.slice.call(popupItems).filter(item => item.dataset.popup == triggerData)[0];
+        let activeTriggers = Array.prototype.slice.call(filterPopupTriggers).filter(item => item.dataset.popup == triggerData);
+
+        activeTriggers.forEach(item => item.classList.add('active'));
+
+        targetPopup.classList.add('active');
+        popupWrapper.classList.add('active');
+
+        document.addEventListener('click', () => {
+            let target = event.target;
+
+            if(target.classList.contains('js-popup') && !target.classList.contains('js-popup-item') ){
+                popupWrapper.classList.remove('active');
+                popupItems.forEach(item => item.classList.remove('active'));
+            }
+        });
+    }
+
+    const popupCloseClick = () => {
+        let popupWrapper = document.querySelector('.js-popup');
+
+        popupWrapper.classList.remove('active');
+        popupItems.forEach(item => item.classList.remove('active'));
+        filterPopupTriggers.forEach(item => item.classList.remove('active'));
+    }
+
     willBeCutted.forEach(item => setExcerpt(item));
     apartmentsSwipers.forEach(item => swipersInit(item));
     
@@ -235,6 +273,8 @@ document.addEventListener('DOMContentLoaded', () => {
     heroTabTriggers.forEach(trigger => trigger.addEventListener('click', heroTabTriggerClick));
     objectsTriggers.forEach(trigger => trigger.addEventListener('click', objectsTriggerClick));
     resultsTriggers.forEach(trigger => trigger.addEventListener('click', resultsTriggerClick));
+    filterPopupTriggers.forEach(trigger => trigger.addEventListener('click', filterPopupTriggerClick));
+    popupClose.forEach(trigger => trigger.addEventListener('click', popupCloseClick));
 
     window.addEventListener('scroll', scrollHandler);
     
@@ -244,12 +284,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     else if(whichPage() == 'apartments'){
 
+        // filterTrigger.click();
+        // filterMoreTrigger.click();
+
     }
     else if(whichPage() == 'item'){
         resultsTriggerInit();
     }
     scrollHandler();
-
-    filterTrigger.click();
-    filterMoreTrigger.click();
 });

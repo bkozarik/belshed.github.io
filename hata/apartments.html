@@ -216,10 +216,10 @@
                             </div>
                         </div>
                         <div class="filter__col">
-                            <button type="button" class="button filter__select js-filter-popup">Область</button>
-                            <button type="button" class="button filter__select js-filter-popup">Район</button>
-                            <button type="button" class="button filter__select js-filter-popup">Улица</button>
-                            <button type="button" class="button filter__select js-filter-popup">Метро</button>
+                            <button type="button" class="button filter__select js-filter-popup" data-popup="area">Область</button>
+                            <button type="button" class="button filter__select js-filter-popup" data-popup="district">Район</button>
+                            <button type="button" class="button filter__select js-filter-popup" data-popup="street">Улица</button>
+                            <button type="button" class="button filter__select js-filter-popup" data-popup="station">Метро</button>
                         </div>
                     </div>
                     <div class="filter__row filter__row_hidden js-filter-more">
@@ -1023,6 +1023,148 @@
             </div>
         </div>
     </footer>
+    <div class="popup js-popup">
+        <div class="popup__body js-popup-item" data-popup="area">
+            <div class="popup__head">
+                <div class="popup__links">
+                    <button type="button" class="button filter__select js-filter-popup" data-popup="area">Область</button>
+                    <button type="button" class="button filter__select js-filter-popup" data-popup="district">Район</button>
+                    <button type="button" class="button filter__select js-filter-popup" data-popup="street">Улица</button>
+                    <button type="button" class="button filter__select js-filter-popup" data-popup="station">Метро</button>
+                </div>
+                <button class="popup__close js-popup-close"></button>
+            </div>
+            <div class="popup__content">
+                <ul class="popup__list">
+                    <li><a href="#" class="popup__link">Ссылка на город 1</a></li>
+                    <li><a href="#" class="popup__link">Ссылка на город 1</a></li>
+                    <li><a href="#" class="popup__link">Ссылка на город 1</a></li>
+                    <li><a href="#" class="popup__link">Ссылка на город 1</a></li>
+                    <li><a href="#" class="popup__link">Ссылка на город 1</a></li>
+                    <li><a href="#" class="popup__link">Ссылка на город 1</a></li>
+                    <li><a href="#" class="popup__link">Ссылка на город 1</a></li>
+                    <li><a href="#" class="popup__link">Ссылка на город 1</a></li>
+                    <li><a href="#" class="popup__link">Ссылка на город 1</a></li>
+                    <li><a href="#" class="popup__link">Ссылка на город 1</a></li>
+                    <li><a href="#" class="popup__link">Ссылка на город 1</a></li>
+                    <li><a href="#" class="popup__link">Ссылка на город 1</a></li>
+                    <li><a href="#" class="popup__link">Ссылка на город 1</a></li>
+                    <li><a href="#" class="popup__link">Ссылка на город 1</a></li>
+                    <li><a href="#" class="popup__link">Ссылка на город 1</a></li>
+                    <li><a href="#" class="popup__link">Ссылка на город 1</a></li>
+                    <li><a href="#" class="popup__link">Ссылка на город 1</a></li>
+                    <li><a href="#" class="popup__link">Ссылка на город 1</a></li>
+                    <li><a href="#" class="popup__link">Ссылка на город 1</a></li>
+                    <li><a href="#" class="popup__link">Ссылка на город 1</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="popup__body js-popup-item" data-popup="district">
+            <div class="popup__head">
+                <div class="popup__links">
+                    <button type="button" class="button filter__select js-filter-popup" data-popup="area">Область</button>
+                    <button type="button" class="button filter__select js-filter-popup" data-popup="district">Район</button>
+                    <button type="button" class="button filter__select js-filter-popup" data-popup="street">Улица</button>
+                    <button type="button" class="button filter__select js-filter-popup" data-popup="station">Метро</button>
+                </div>
+                <button class="popup__close js-popup-close"></button>
+            </div>
+            <div class="popup__content">
+                <ul class="popup__list">
+                    <li><a href="#" class="popup__link">Ссылка на город 2</a></li>
+                    <li><a href="#" class="popup__link">Ссылка на город 2</a></li>
+                    <li><a href="#" class="popup__link">Ссылка на город 2</a></li>
+                    <li><a href="#" class="popup__link">Ссылка на город 2</a></li>
+                    <li><a href="#" class="popup__link">Ссылка на город 2</a></li>
+                    <li><a href="#" class="popup__link">Ссылка на город 2</a></li>
+                    <li><a href="#" class="popup__link">Ссылка на город 2</a></li>
+                    <li><a href="#" class="popup__link">Ссылка на город 2</a></li>
+                    <li><a href="#" class="popup__link">Ссылка на город 2</a></li>
+                    <li><a href="#" class="popup__link">Ссылка на город 2</a></li>
+                    <li><a href="#" class="popup__link">Ссылка на город 2</a></li>
+                    <li><a href="#" class="popup__link">Ссылка на город 2</a></li>
+                    <li><a href="#" class="popup__link">Ссылка на город 2</a></li>
+                    <li><a href="#" class="popup__link">Ссылка на город 2</a></li>
+                    <li><a href="#" class="popup__link">Ссылка на город 2</a></li>
+                    <li><a href="#" class="popup__link">Ссылка на город 2</a></li>
+                    <li><a href="#" class="popup__link">Ссылка на город 2</a></li>
+                    <li><a href="#" class="popup__link">Ссылка на город 2</a></li>
+                    <li><a href="#" class="popup__link">Ссылка на город 2</a></li>
+                    <li><a href="#" class="popup__link">Ссылка на город 2</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="popup__body js-popup-item" data-popup="street">
+            <div class="popup__head">
+                <div class="popup__links">
+                    <button type="button" class="button filter__select js-filter-popup" data-popup="area">Область</button>
+                    <button type="button" class="button filter__select js-filter-popup" data-popup="district">Район</button>
+                    <button type="button" class="button filter__select js-filter-popup" data-popup="street">Улица</button>
+                    <button type="button" class="button filter__select js-filter-popup" data-popup="station">Метро</button>
+                </div>
+                <button class="popup__close js-popup-close"></button>
+            </div>
+            <div class="popup__content">
+                <ul class="popup__list">
+                    <li><a href="#" class="popup__link">Ссылка на город 3</a></li>
+                    <li><a href="#" class="popup__link">Ссылка на город 3</a></li>
+                    <li><a href="#" class="popup__link">Ссылка на город 3</a></li>
+                    <li><a href="#" class="popup__link">Ссылка на город 3</a></li>
+                    <li><a href="#" class="popup__link">Ссылка на город 3</a></li>
+                    <li><a href="#" class="popup__link">Ссылка на город 3</a></li>
+                    <li><a href="#" class="popup__link">Ссылка на город 3</a></li>
+                    <li><a href="#" class="popup__link">Ссылка на город 3</a></li>
+                    <li><a href="#" class="popup__link">Ссылка на город 3</a></li>
+                    <li><a href="#" class="popup__link">Ссылка на город 3</a></li>
+                    <li><a href="#" class="popup__link">Ссылка на город 3</a></li>
+                    <li><a href="#" class="popup__link">Ссылка на город 3</a></li>
+                    <li><a href="#" class="popup__link">Ссылка на город 3</a></li>
+                    <li><a href="#" class="popup__link">Ссылка на город 3</a></li>
+                    <li><a href="#" class="popup__link">Ссылка на город 3</a></li>
+                    <li><a href="#" class="popup__link">Ссылка на город 3</a></li>
+                    <li><a href="#" class="popup__link">Ссылка на город 3</a></li>
+                    <li><a href="#" class="popup__link">Ссылка на город 3</a></li>
+                    <li><a href="#" class="popup__link">Ссылка на город 3</a></li>
+                    <li><a href="#" class="popup__link">Ссылка на город 3</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="popup__body js-popup-item" data-popup="station">
+            <div class="popup__head">
+                <div class="popup__links">
+                    <button type="button" class="button filter__select js-filter-popup" data-popup="area">Область</button>
+                    <button type="button" class="button filter__select js-filter-popup" data-popup="district">Район</button>
+                    <button type="button" class="button filter__select js-filter-popup" data-popup="street">Улица</button>
+                    <button type="button" class="button filter__select js-filter-popup" data-popup="station">Метро</button>
+                </div>
+                <button class="popup__close js-popup-close"></button>
+            </div>
+            <div class="popup__content">
+                <ul class="popup__list">
+                    <li><a href="#" class="popup__link">Ссылка на город 4</a></li>
+                    <li><a href="#" class="popup__link">Ссылка на город 4</a></li>
+                    <li><a href="#" class="popup__link">Ссылка на город 4</a></li>
+                    <li><a href="#" class="popup__link">Ссылка на город 4</a></li>
+                    <li><a href="#" class="popup__link">Ссылка на город 4</a></li>
+                    <li><a href="#" class="popup__link">Ссылка на город 4</a></li>
+                    <li><a href="#" class="popup__link">Ссылка на город 4</a></li>
+                    <li><a href="#" class="popup__link">Ссылка на город 4</a></li>
+                    <li><a href="#" class="popup__link">Ссылка на город 4</a></li>
+                    <li><a href="#" class="popup__link">Ссылка на город 4</a></li>
+                    <li><a href="#" class="popup__link">Ссылка на город 4</a></li>
+                    <li><a href="#" class="popup__link">Ссылка на город 4</a></li>
+                    <li><a href="#" class="popup__link">Ссылка на город 4</a></li>
+                    <li><a href="#" class="popup__link">Ссылка на город 4</a></li>
+                    <li><a href="#" class="popup__link">Ссылка на город 4</a></li>
+                    <li><a href="#" class="popup__link">Ссылка на город 4</a></li>
+                    <li><a href="#" class="popup__link">Ссылка на город 4</a></li>
+                    <li><a href="#" class="popup__link">Ссылка на город 4</a></li>
+                    <li><a href="#" class="popup__link">Ссылка на город 4</a></li>
+                    <li><a href="#" class="popup__link">Ссылка на город 4</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
     <a href="#main" class="scroll js-scroll js-scroll-link"></a>
     <script src="./js/swiper-bundle.min.js"></script>
 </body>
