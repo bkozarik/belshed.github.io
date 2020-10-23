@@ -22,6 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const scrollToTop = document.querySelector('.js-scroll');
 
     const burger = document.querySelector('.js-burger');
+    const mobileMenu = document.querySelector('.js-menu');
 
     const setExcerpt = target => {
 
@@ -145,6 +146,9 @@ document.addEventListener('DOMContentLoaded', () => {
     
     const burgerClick = () => {
         burger.classList.toggle('active');
+        mobileMenu.classList.toggle('active');
+
+
     }
 
     const filterTriggerClick = () => {
@@ -236,4 +240,6 @@ document.addEventListener('DOMContentLoaded', () => {
         resultsTriggerInit();
     }
     scrollHandler();
+
+    burger.click();
 });

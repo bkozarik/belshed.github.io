@@ -13,7 +13,7 @@
             <div class="container">
                 <div class="header__wrap">
                     <a href="./index.html" class="logo">
-                        <img src="./img/logo.png" alt="Логотип" class="logo__img">
+                        <img loading="lazy" src="./img/logo.png" alt="Логотип" class="logo__img">
                     </a>
                     <div class="header__content">
                         <div class="dropdown js-dropdown">
@@ -38,6 +38,7 @@
                         <button class="button button_green button_add">Добавить объявление</button>
                         <button class="button button_white button_login">Войти</button>
                     </div>
+                    <button class="burger js-burger"><span></span></button>
                 </div>
             </div>
         </div>
@@ -59,16 +60,50 @@
                 </button>
                 <div class="types__dropdown js-types-dropdown">
                     <ul class="types__list">
-                        <li class="types__item"><a href="#" class="types__link js-scroll-link">Дома</a></li>
-                        <li class="types__item"><a href="#" class="types__link js-scroll-link">За рубежом</a></li>
-                        <li class="types__item"><a href="#" class="types__link js-scroll-link">Цеха</a></li>
-                        <li class="types__item"><a href="#" class="types__link js-scroll-link">Склады</a></li>
-                        <li class="types__item"><a href="#" class="types__link js-scroll-link">Грузоперевозки</a></li>
+                        <li class="types__item"><a href="#objects" class="types__link js-objects-trigger js-scroll-link" data-target="1">Дома</a></li>
+                        <li class="types__item"><a href="#objects" class="types__link js-objects-trigger js-scroll-link" data-target="2">За рубежом</a></li>
+                        <li class="types__item"><a href="#objects" class="types__link js-objects-trigger js-scroll-link" data-target="3">Цеха</a></li>
+                        <li class="types__item"><a href="#objects" class="types__link js-objects-trigger js-scroll-link" data-target="4">Склады</a></li>
+                        <li class="types__item"><a href="#objects" class="types__link js-objects-trigger js-scroll-link" data-target="5">Грузоперевозки</a></li>
                     </ul>
                 </div>
             </div>
         </div>
     </header>
+    <div class="menu js-menu">
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="./apartments.html" class="nav__link text_ttu">Продажа</a></li>
+                <li class="nav__item"><a href="./apartments.html" class="nav__link text_ttu">Новостройки</a></li>
+                <li class="nav__item"><a href="./apartments.html" class="nav__link text_ttu">Аренда</a></li>
+                <li class="nav__item"><a href="./apartments.html" class="nav__link text_ttu">Земля</a></li>
+                <li class="nav__item"><a href="./apartments.html" class="nav__link text_ttu">Офисы</a></li>
+            </ul>
+        </nav>
+        <div class="header__content">
+            <div class="dropdown js-dropdown">
+                <div class="tab__select-wrap">
+                    <select class="tab__select">
+                        <option value="Минск">USD</option>
+                        <option value="Гомель">EUR</option>
+                        <option value="Брест">RUB</option>
+                    </select>
+                </div>
+            </div>
+            <div class="dropdown js-dropdown">
+                <div class="tab__select-wrap">
+                    <select class="tab__select">
+                        <option value="Минск">Минск</option>
+                        <option value="Гомель">Гомель</option>
+                        <option value="Брест">Брест</option>
+                        <option value="Гомель">Гомель</option>
+                    </select>
+                </div>
+            </div>
+            <button class="button button_green button_add">Добавить объявление</button>
+            <button class="button button_white button_login">Войти</button>
+        </div>
+    </div>
     <main id="main" class="main" data-page="item">
         <div class="filter">
             <div class="filter__body">
@@ -184,7 +219,7 @@
                         Пожаловаться
                     </button>
                 </div>
-                <span class="item__post-data">860 просмотров за все время, 196 с мобильных | Сегодня 24, неделя 544, месяц 860 | Добавлено 21.04.2020</span>
+                <span class="item__post-data">860 просмотров за все время, 196 с мобильных |<br>Сегодня 24, неделя 544, месяц 860 |<br>Добавлено 21.04.2020</span>
                 <div class="item__body">
                     <div class="item__picset">
                         <span class="item__tip">Проверено hata.by</span>
@@ -657,7 +692,7 @@
                 </div>
                 <div class="footer__col">
                     <span class="footer__big-text">
-                        Реклама на сайте: <a href="tel:+375445504545">+375 (44) 550 4545</a><a href="mailto:555@hata.by">555@hata.by</a>
+                        Реклама на сайте:<br> <a href="tel:+375445504545">+375 (44) 550 4545</a><br><a href="mailto:555@hata.by">555@hata.by</a>
                     </span>
                     <div class="footer__services">
                         <a href="#" class="footer__text">Цены на услуги</a>

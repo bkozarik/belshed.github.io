@@ -4,6 +4,21 @@ $main_light: #F1F3F6
 $main_grey: #636363
     
 @media screen and ( max-width: 1200px )
+    .selling
+        &__wrap
+            grid-template-rows: 250px 1fr
+            grid-template-columns: 1fr
+            grid-row-gap: 12px
+        &__banner
+            order: 0
+        &__main
+            order: 1
+
+    .item
+        &__head
+            flex-direction: column
+            align-items: flex-start
+
     .footer
         padding-top: 15px
         &__links
@@ -25,6 +40,29 @@ $main_grey: #636363
         &__container
             grid-template-columns: repeat(4, 1fr)
             grid-template-rows: 320px 320px 300px
+
+    .results
+        .js-results-underline
+            display: none
+        .js-results-trigger.active
+            &::before
+                content: ''
+                display: inline-block
+                width: 100%
+                position: absolute
+                height: 2px
+                background-color: $main_green
+                bottom: 10px
+                left: 0
+        &__wrap
+            overflow: hidden
+        &__top
+            padding: 15px 0px 0px
+            flex-direction: column
+            align-items: center
+        &__body
+            padding: 20px 
+            overflow-x: auto
 
     .article
         &_big
@@ -86,10 +124,33 @@ $main_grey: #636363
             grid-template-columns: repeat(3, 1fr)
 
 @media screen and ( max-width: 1000px )
-    .objects
-        .col-container
-            &_four
-                grid-template-columns: repeat(3, 1fr)
+    .selling
+        &__head
+            flex-direction: column
+            align-items: flex-start
+        &__view, &__filter
+            margin-left: 0
+            margin-top: 20px
+        &__view
+            &-text
+                font-size: 14px
+
+    .col-container
+        &_four
+            grid-template-columns: repeat(3, 1fr)
+
+    .map
+        &__location
+            margin-top: 20px
+        &__top
+            flex-direction: column
+
+    .item
+        &__picset
+            grid-template-rows: 1fr 110px
+        &__body
+            grid-template-columns: 1fr
+            grid-template-rows: 275px 310px 1fr
 
 @media screen and ( max-width: 870px )
     .tab
@@ -103,11 +164,31 @@ $main_grey: #636363
             justify-content: center
             grid-gap: 32px
 
-    .objects
-        .col-container
-            &_four
-                justify-items: center
-                grid-template-columns: repeat(2, 1fr)
+    .map
+        &__wrap
+            grid-template-rows: 140px 1fr
+            grid-template-columns: 1fr
+        &__body
+            order: 1
+        &__objects
+            order: 0
+            flex-direction: row
+            display: flex
+            align-items: center
+            justify-content: space-around
+            flex-wrap: wrap
+            .tab__compare + .tab__compare
+                margin-top: 0
+            .tab__compare
+                margin-right: 10px
+                margin-top: 10px !important
+            .tab__checkbox
+                margin-top: 2px
+
+    .col-container
+        &_four
+            justify-items: center
+            grid-template-columns: repeat(2, 1fr)
 
     .article
         &_big
@@ -156,13 +237,34 @@ $main_grey: #636363
                     margin-top: 0px
 
 @media screen and ( max-width: 720px )
+    .item
+        &__picset
+            grid-template-rows: 1fr 90px
+        &__card
+            &-row
+                .item__subtitle
+                    margin-bottom: 10px
+                    margin-right: 10px
+            &_sb
+                flex-wrap: wrap
+
+    .map
+        &__location
+            width: 100%
+        &__text
+            margin-right: 5px !important
+
     .dropdown
         padding: 5px
+
     .header
-        &__content
-            display: none
+        .header
+            &__content
+                display: none
+
     .burger
         display: inline-block
+
     .main
         margin-top: 110px
 
@@ -231,6 +333,14 @@ $main_grey: #636363
                 margin-left: 0
             &:last-child
                 margin-right: 0
+
+    .item
+        &__body
+                grid-template-rows: 140px auto
+        &__post-data
+            br
+                display: inline
+
     .hero
         &__body
             padding-top: 50px
@@ -243,6 +353,23 @@ $main_grey: #636363
         &__container
             grid-template-rows: 420px 420px 1fr 1fr
             grid-template-columns: repeat(1, 1fr)
+    
+    .map
+        &__objects
+            padding: 10px 20px
+        &__wrap
+            grid-template-rows: 170px 1fr
+
+    .item
+        &__table
+            min-width: auto
+            width: 100%
+        &__picset
+            grid-template-columns: repeat(3, 1fr)
+            grid-template-rows: 1fr 120px 120px
+        &__picture
+            &_big
+                grid-column: 1 / 4
 
     .article
         &_big
@@ -251,17 +378,39 @@ $main_grey: #636363
             &:nth-child(2)
                 grid-column: 1 / 2
 
-@media screen and ( max-width: 490px )
+@media screen and ( max-width: 495px )
     .col-container
         &_three
             grid-template-columns: repeat(1, 1fr)
             justify-content: center
             grid-gap: 32px
 
-    .objects
-        .col-container
-            &_four
-                grid-template-columns: repeat(1, 1fr)
+    .menu
+        padding: 85px 15px 10px
+        .nav
+            display: block
+            margin-bottom: 30px
+            &__item
+                margin: 0px 5px
+                &:first-child
+                    margin-left: 0px
+                &:last-child
+                    margin-right: 0px
+
+    .item
+        .button_subscribe
+            width: 100%
+        &__price
+            flex-direction: row
+            align-items: center
+            margin-bottom: 20px
+            flex-wrap: wrap
+            &-price
+                margin-right: 20px
+
+    .col-container
+        &_four
+            grid-template-columns: repeat(1, 1fr)
 
     .picset
         &__tile
@@ -270,9 +419,9 @@ $main_grey: #636363
     .header
         &__wrap
             padding: 4px 0px
-    .nav
-        display: none
-
+        .nav
+            display: none
+    
     .main
         margin-top: 60px
 
@@ -346,11 +495,32 @@ $main_grey: #636363
         &__container
             grid-template-rows: 480px 480px 1fr 1fr
 
+    .menu
+        .header
+            &__content
+                height: 50%
+        .nav
+            &__list
+                flex-direction: column
+                align-items: flex-start
+            &__item
+                margin: 0px
+
+    .item
+        &__picset
+            grid-template-rows: 1fr repeat(2, 90px)
+
     .picset
         &__tile
             grid-template-rows: repeat(2, 110px)
 
 @media screen and ( max-width: 350px )
+    .item
+        &__card
+            padding: 20px 15px
+        &__picset
+            grid-template-rows: 1fr repeat(2, 80px)
+
     .picset
         &__tile
             grid-template-rows: repeat(2, 90px)
