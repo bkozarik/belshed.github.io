@@ -240,6 +240,4 @@ document.addEventListener('DOMContentLoaded', () => {
         resultsTriggerInit();
     }
     scrollHandler();
-
-    burger.click();
 });
