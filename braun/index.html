@@ -9,20 +9,278 @@
 </head>
 <body>
     <header class="header">
-        <div class="content">
+        <div class="container">
             <div class="header__wrap">
-                
+                <img class="logo logo_braun" src="./img/logo.png" alt="Логотип Braun">
+                <img class="logo logo_ixbt" src="./img/logo-ixbt.png" alt="Логотип Ixbt">
+                <button class="button burger js-burger"><span></span></button>
             </div>
         </div>
     </header>
+    <div class="menu">
+        <ul class="menu__list">
+            <li class="menu__item js-menu-item"><a href="#" class="menu__link js-scroll-link">Электробритвы для бороды</a></li>
+            <li class="menu__item js-menu-item"><a href="#" class="menu__link js-scroll-link">Универсальные триммеры</a></li>
+            <li class="menu__item js-menu-item"><a href="#" class="menu__link js-scroll-link">Триммеры для бороды</a></li>
+        </ul>
+    </div>
     <main class="main">
-        <div class="content">
-            
-        </div>
+        <section class="banner">
+            <picture class="banner__bg">
+                <source srcset="./img/banner_1.webp" type="image/webp">
+                <img src="./img/banner_1.jpg" alt="Фоновое изображение">
+            </picture>
+            <div class="container">
+                <div class="banner__wrap">
+                    <div class="banner__content">
+                        <h1 class="banner__title">Откройте для себя широкий <br>ассортимент продукции Braun <br><span class="text_bold">для мужского бритья</span></h1>
+                    </div>
+                </div>
+            </div>
+        </section> 
+        <section class="row row_dark">
+            <div class="container">
+                <div class="row__container row__container_small">
+                    <a href="#" target="_blank" class="item item_small">
+                        <h3 class="item__title text_tac">Электробритвы</h3>
+                        <picture class="item__img">
+                            <source srcset="./img/item_small_1.webp" type="image/webp">
+                            <img src="./img/item_small_1.jpg" alt="Электробритвы">
+                        </picture>
+                        <span class="item__arrow"></span>
+                    </a>
+                    <a href="#" target="_blank" class="item item_small">
+                        <h3 class="item__title text_tac">Триммеры для&nbsp;бороды</h3>
+                        <picture class="item__img">
+                            <source srcset="./img/item_small_2.webp" type="image/webp">
+                            <img src="./img/item_small_2.jpg" alt="Триммеры для бороды">
+                        </picture>
+                        <span class="item__arrow"></span>
+                    </a>
+                    <a href="#" target="_blank" class="item item_small">
+                        <h3 class="item__title text_tac">Триммеры для&nbsp;всего тела</h3>
+                        <picture class="item__img">
+                            <source srcset="./img/item_small_3.webp" type="image/webp">
+                            <img src="./img/item_small_3.jpg" alt="Триммеры для всего тела">
+                        </picture>
+                        <span class="item__arrow"></span>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="row">
+            <div class="container">
+                <div class="row__container row__container_big">
+                    <article target="_blank" class="item item_big">
+                        <picture class="item__img">
+                            <source srcset="./img/item_big_1.webp" type="image/webp">
+                            <img src="./img/item_big_1.jpg" alt="Электробритвы Series 9">
+                        </picture>
+                        <div class="item__content">
+                            <h3 class="item__title item__title_small">Электробритвы Series&nbsp;9</h3>
+                            <p class="item__text">Лучшее бритье от Braun Эффективность и комфорт.</p>
+                        </div>
+                        <div class="item__video">
+                            <picture class="item__video-preview">
+                                <source srcset="./img/item_big_video_1.webp" type="image/webp">
+                                <img src="./img/item_big_video_1.jpg" alt="Электробритвы Series 9">
+                            </picture>
+                            <button class="item__preview"></button>
+                        </div>
+                        <div class="item__holder">
+                            <a href="#" target="_blank" class="button button_item">подробнее о модели</a>
+                        </div>
+                    </article>
+                    <article target="_blank" class="item item_big">
+                        <picture class="item__img">
+                            <source srcset="./img/item_big_2.webp" type="image/webp">
+                            <img src="./img/item_big_2.jpg" alt="Электробритвы Series 8">
+                        </picture>
+                        <div class="item__content">
+                            <h3 class="item__title item__title_small">Электробритвы Series&nbsp;8</h3>
+                            <p class="item__text">Точная гладкость бритья и комфорт для кожи.</p>
+                        </div>
+                        <div class="item__video">
+                            <picture class="item__video-preview">
+                                <source srcset="./img/item_big_video_2.webp" type="image/webp">
+                                <img src="./img/item_big_video_2.jpg" alt="Электробритвы Series 8">
+                            </picture>
+                            <button class="item__preview"></button>
+                        </div>
+                        <div class="item__holder">
+                            <a href="#" target="_blank" class="button button_item">подробнее о модели</a>
+                        </div>
+                    </article>
+                    <article target="_blank" class="item item_big">
+                        <picture class="item__img">
+                            <source srcset="./img/item_big_3.webp" type="image/webp">
+                            <img src="./img/item_big_3.jpg" alt="Электробритвы Series 3">
+                        </picture>
+                        <div class="item__content">
+                            <h3 class="item__title item__title_small">Электробритвы Series&nbsp;3</h3>
+                            <p class="item__text">Быстрое бритье и превосходный комфорт для кожи.</p>
+                        </div>
+                        <div class="item__video">
+                            <picture class="item__video-preview">
+                                <source srcset="./img/item_big_video_3.webp" type="image/webp">
+                                <img src="./img/item_big_video_3.jpg" alt="Электробритвы Series 3">
+                            </picture>
+                            <button class="item__preview"></button>
+                        </div>
+                        <div class="item__holder">
+                            <a href="#" target="_blank" class="button button_item">подробнее о модели</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section class="row">
+            <div class="container container_big">
+                <div class="row__container row__container_big row__container_tight">
+                    <article target="_blank" class="item item_big">
+                        <picture class="item__img">
+                            <source srcset="./img/item_big_4.webp" type="image/webp">
+                            <img src="./img/item_big_4.jpg" alt="Универсальный триммер MGK3220">
+                        </picture>
+                        <div class="item__content">
+                            <h3 class="item__title item__title_small">Универсальный триммер MGK3220</h3>
+                            <p class="item__text">Набор 6-в-1 для стрижки бороды, волос на лице, голове и чистого бритья.</p>
+                        </div>
+                        <div class="item__video">
+                            <picture class="item__video-preview">
+                                <source srcset="./img/item_big_video_4.webp" type="image/webp">
+                                <img src="./img/item_big_video_4.jpg" alt="Универсальный триммер MGK3220">
+                            </picture>
+                            <button class="item__preview"></button>
+                        </div>
+                        <div class="item__holder">
+                            <a href="#" target="_blank" class="button button_item">подробнее о модели</a>
+                        </div>
+                    </article>
+
+                    <article target="_blank" class="item item_big">
+                        <picture class="item__img">
+                            <source srcset="./img/item_big_5.webp" type="image/webp">
+                            <img src="./img/item_big_5.jpg" alt="Универсальный триммер MGK5245">
+                        </picture>
+                        <div class="item__content">
+                            <h3 class="item__title item__title_small">Универсальный триммер MGK5245</h3>
+                            <p class="item__text">Набор 7-в-1 для стрижки волос на лице, голове и чистого бритья.</p>
+                        </div>
+                        <div class="item__video">
+                            <picture class="item__video-preview">
+                                <source srcset="./img/item_big_video_5.webp" type="image/webp">
+                                <img src="./img/item_big_video_5.jpg" alt="Универсальный триммер MGK5245">
+                            </picture>
+                            <button class="item__preview"></button>
+                        </div>
+                        <div class="item__holder">
+                            <a href="#" target="_blank" class="button button_item">подробнее о модели</a>
+                        </div>
+                    </article>
+
+                    <article target="_blank" class="item item_big">
+                        <picture class="item__img">
+                            <source srcset="./img/item_big_6.webp" type="image/webp">
+                            <img src="./img/item_big_6.jpg" alt="Универсальный триммер MGK7220">
+                        </picture>
+                        <div class="item__content">
+                            <h3 class="item__title item__title_small">Универсальный триммер MGK7220</h3>
+                            <p class="item__text">Набор 10-в-1 для стрижки волос на лице, голове и теле и чистого бритья.</p>
+                        </div>
+                        <div class="item__video">
+                            <picture class="item__video-preview">
+                                <source srcset="./img/item_big_video_6.webp" type="image/webp">
+                                <img src="./img/item_big_video_6.jpg" alt="Универсальный триммер MGK7220">
+                            </picture>
+                            <button class="item__preview"></button>
+                        </div>
+                        <div class="item__holder">
+                            <a href="#" target="_blank" class="button button_item">подробнее о модели</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section class="row">
+            <div class="container container_big">
+                <div class="row__container row__container_big row__container_tight">
+                    <article target="_blank" class="item item_big">
+                        <picture class="item__img">
+                            <source srcset="./img/item_big_7.webp" type="image/webp">
+                            <img src="./img/item_big_7.jpg" alt="Триммер для бороды BT3221">
+                        </picture>
+                        <div class="item__content">
+                            <h3 class="item__title item__title_small">Триммер для бороды BT3221</h3>
+                            <p class="item__text">Создай свой стиль без лишних усилий.</p>
+                        </div>
+                        <div class="item__video">
+                            <picture class="item__video-preview">
+                                <source srcset="./img/item_big_video_7.webp" type="image/webp">
+                                <img src="./img/item_big_video_7.jpg" alt="Триммер для бороды BT3221">
+                            </picture>
+                            <button class="item__preview"></button>
+                        </div>
+                        <div class="item__holder">
+                            <a href="#" target="_blank" class="button button_item">подробнее о модели</a>
+                        </div>
+                    </article>
+
+                    <article target="_blank" class="item item_big">
+                        <picture class="item__img">
+                            <source srcset="./img/item_big_8.webp" type="image/webp">
+                            <img src="./img/item_big_8.jpg" alt="Триммер для бороды BT5240">
+                        </picture>
+                        <div class="item__content">
+                            <h3 class="item__title item__title_small">Триммер для бороды BT5240</h3>
+                            <p class="item__text">Создай свой стиль без лишних усилий.</p>
+                        </div>
+                        <div class="item__video">
+                            <picture class="item__video-preview">
+                                <source srcset="./img/item_big_video_8.webp" type="image/webp">
+                                <img src="./img/item_big_video_8.jpg" alt="Триммер для бороды BT5240">
+                            </picture>
+                            <button class="item__preview"></button>
+                        </div>
+                        <div class="item__holder">
+                            <a href="#" target="_blank" class="button button_item">подробнее о модели</a>
+                        </div>
+                    </article>
+
+                    <article target="_blank" class="item item_big">
+                        <picture class="item__img">
+                            <source srcset="./img/item_big_9.webp" type="image/webp">
+                            <img src="./img/item_big_9.jpg" alt="Триммер для бороды BT7220">
+                        </picture>
+                        <div class="item__content">
+                            <h3 class="item__title item__title_small">Триммер для бороды BT7220</h3>
+                            <p class="item__text">Создай свой стиль без лишних усилий.</p>
+                        </div>
+                        <div class="item__video">
+                            <picture class="item__video-preview">
+                                <source srcset="./img/item_big_video_9.webp" type="image/webp">
+                                <img src="./img/item_big_video_9.jpg" alt="Триммер для бороды BT7220">
+                            </picture>
+                            <button class="item__preview"></button>
+                        </div>
+                        <div class="item__holder">
+                            <a href="#" target="_blank" class="button button_item">подробнее о модели</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
     </main>
     <footer class="footer">
-        <div class="content">
-            
+        <div class="container">
+            <div class="footer__wrap">
+                <div class="footer__content">
+                    <div class="footer__logo">
+                        <img class="footer__logo-img" src="./img/logo-footer.png" alt="Логотип">
+                    </div>
+                    <small class="footer__copyright">© 2020 Procter & Gamble  |  iXbt.com</small>
+                </div>
+            </div>
         </div>
     </footer>
 </body>

@@ -1,4 +1,7 @@
-$main_black: #000000
+$main_black: #1f1f1f
+$header_dark: #1f1f1f
+$header_dark-hover: #161616
+$item_grey: #f0f1f1
 
 *, *::before, *::after
     box-sizing: border-box
@@ -8,12 +11,12 @@ $main_black: #000000
     text-decoration: none
     border-radius: 0px
     transition: all .2s ease-in-out 0s
-    font-family: "", sans-serif
+    font-family: "Helvetica", sans-serif
     font-weight: 400
     color: $main_black
 
 body, html
-    background-color: #fffeff
+    background-color: #f0f3f1
     overflow-x: hidden
 
 body
@@ -32,6 +35,8 @@ section
     max-width: 1230px
     padding: 0px 15px
     margin: 0 auto
+    &_big
+        max-width: 1350px
 
 .text
     &_white
@@ -39,9 +44,11 @@ section
     &_black
         color: $main_black !important
     &_tac
-        text-align: center
+        text-align: center !important
     &_ttu
-        text-transform: uppercase
+        text-transform: uppercase !important
+    &_bold
+        font-weight: 700 !important
 
 .button
     position: relative
@@ -53,26 +60,301 @@ section
     text-align: center
     user-select: none
     overflow: hidden
-    border-radius: 4px
+    text-transform: uppercase
+    letter-spacing: 0.6px
+    border-radius: 50px
+    &_item
+        width: 100%
+        max-width: 280px
+        background-color: #3d3d3d
+        font-size: 12px
+        color: #fff
+        font-weight: 700
+        padding: 15px
+        &:hover
+            background-color: #121212
     &:focus
         outline: none
 
 .header
     flex-grow: 0
+    position: relative
     position: fixed
     left: 0
     top: 0
     width: 100%
     z-index: 5
-    background-color: #1f1f1f
+    background-color: $header_dark
     &__wrap
-        padding: 27px 0px
+        padding: 25px 0px
         display: flex
         align-items: center
-        justify-content: space-between
+        justify-content: flex-start
+
+.logo
+    width: 100px
+    & + &
+        margin-left: 45px
+    &_braun
+        max-height: 40px
+    &_ixbt
+        max-height: 50px
+
+.burger
+    position: absolute
+    top: 50%
+    width: 40px
+    height: 40px
+    display: inline-block
+    right: 0
+    transform: translate(110px, -50%)
+    span, &::before, &::after
+        content: ''
+        display: inline-block
+        width: 30px
+        height: 4px
+        background-color: #fff
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        transition:  top .15s ease-in .15s, transform .15s ease-in 0s, opacity .1s ease-in .15s
+    &::before
+        top: calc( 12px + 50% )
+    &::after
+        top: calc( -12px + 50% )
+    &.active
+        span, &::before, &::after
+            transform: translate(-50%, -50%)
+            top: 50%
+            transition:  top .15s ease-in 0s, transform .15s ease-in .15s, opacity .15s ease-in .1s
+        span
+            opacity: 0
+        &::before
+            transform: translate(-50%, -50%) rotate(45deg)
+        &::after
+            transform: translate(-50%, -50%) rotate(-45deg)
+
+.menu
+    position: relative
+    z-index: 4
+    &__item
+        position: fixed
+        display: flex
+        width: 100%
+        align-items: center
+        justify-content: stretch
+        border-top: 1px solid #363636
+        transition: top .2s ease-out
+        top: 0
+        left: 0
+        opacity: 0
+        pointer-events: none
+        visibility: hidden
+        &:nth-child(1)
+            z-index: 3
+            transition-delay: .1s
+        &:nth-child(2)
+            z-index: 2
+            transition-delay: .05s
+        &:nth-child(3)
+            z-index: 1
+            transition-delay: 0s
+        &:last-child, &:only-child
+            border-botton: 1px solid #363636
+        &.active
+            transition: top .2s ease-out
+            opacity: 1
+            pointer-events: all
+            visibility: visible
+            &:nth-child(1)
+                transition-delay: 0s
+            &:nth-child(2)
+                transition-delay: .05s
+            &:nth-child(3)
+                transition-delay: .1s
+    &__link
+        display: block
+        width: 100%
+        text-align: center
+        color: #fff
+        font-size: 30px
+        padding: 20px 0px
+        background-color: $header_dark
+        &:hover
+            background-color: $header_dark-hover
 
 .main
     flex-grow: 1
+    padding-top: 100px
+
+.banner
+    background-color: #77777d
+    &__bg
+        position: absolute
+        left: 0
+        top: 0
+        width: 100%
+    &__wrap
+            padding: 140px 0px 155px
+    &__title
+        &, & *
+            font-size: 45px
+            line-height: 65px
+            font-weight: 500
+            letter-spacing: .5px
+
+.row
+    padding: 70px 0px
+    background-color: #fefeff
+    &__container
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        grid-gap: 30px 60px
+        justify-items: center
+        &_small
+            grid-template-rows: 320px
+        &_tight
+            grid-gap: 30px 120px
+    &_dark
+        background-color: #eff0f1
+
+.item
+    background-color: #fff
+    height: 100%
+    width: 100%
+    overflow: hidden
+    position: relative
+    &_small
+        padding-top: 55px
+        display: flex
+        justify-content: space-between
+        align-items: center
+        flex-direction: column
+        .item
+            &__title
+                max-width: 230px
+        &:nth-child(1)
+            .item__img
+                transform: translate(20px, 50px)
+            &:hover
+                .item__img
+                    transform: translate(20px, 50px) scale(1.05)
+        &:nth-child(2)
+            .item__img
+                transform: translate(20px, 40px)
+            &:hover
+                .item__img
+                    transform: translate(20px, 40px) scale(1.05)
+        &:nth-child(3)
+            .item__img
+                    transform: translate(15px, 40px)
+            &:hover
+                .item__img
+                    transform: translate(15px, 40px) scale(1.05)
+        &:hover
+            box-shadow: 0 0 0 2px #e3e3e3
+            .item
+                &__arrow
+                    background-color: transparent
+                    &::before, &::after
+                        background-color: $main_black
+    &_big
+        display: grid
+        grid-template-columns: 1fr
+        grid-template-rows: 360px minmax(220px, auto) 200px 120px
+        justify-items: center
+        cursor: pointer
+        .item
+            &__img
+                height: 100%
+                width: 100%
+                width: 100%
+                padding: 20px
+                display: flex
+                align-items: center
+                justify-content: center
+                border: 2px solid $item_grey
+                img
+                    width: 100%
+                    height: 100%
+                    object-fit: contain
+    &__content
+        padding: 35px 40px 40px
+        background-color: $item_grey
+    &__video
+        position: relative
+        &-preview
+            width: 100%
+            height: 100%
+            img
+                width: 100%
+                height: 100%
+                object-fit: cover
+    &__title
+        font-size: 30px
+        line-height: 34px
+        font-weight: 700
+        position: relative
+        z-index: 3
+        letter-spacing: 0px
+        &_small
+            font-size: 25px
+    &__text
+        font-size: 18px
+        line-height: 28px
+        margin-top: 20px
+    &__img
+        transition-duration: .5s
+        transition-timing-function: ease-out
+    &__arrow
+        display: inline-block
+        position: absolute
+        height: 34px
+        width: 34px
+        border-radius: 50%
+        box-shadow: 0 0 0 2px $main_black
+        background-color: $main_black
+        right: 20px
+        bottom: 20px
+        z-index: 3
+        &::before, &::after
+            content: ''
+            display: inline-block
+            height: 2px
+            width: 9px
+            background-color: #fff
+            position: absolute
+            left: 50%
+            top: 50%
+            transform: translate(-50%, -50%)
+        &::before
+            transform: translate(calc( 1px - 50% ), calc( 3px - 50% )) rotate(-45deg)
+        &::after
+            transform: translate(calc( 1px - 50% ), calc( -3px - 50% )) rotate(45deg)
+    &__holder
+        padding: 40px 10px
+        background-color: $item_grey
+        width: 100%
+        display: flex
+        align-items: center
+        justify-content: center
+        cursor: default
 
 .footer
     flex-grow: 0
+    background-color: #f0f0f0
+    padding: 45px 0px
+    &__wrap
+        display: flex
+        justify-content: center
+        align-items: center
+    &__content
+        display: flex
+        flex-direction: column
+        align-items: center
+    &__copyright
+        text-align: center
+        font-size: 18px
+        line-height: 34px
+        margin-top: 17px
