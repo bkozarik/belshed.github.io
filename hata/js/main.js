@@ -121,8 +121,6 @@ document.addEventListener('DOMContentLoaded', () => {
         
         let firstTrigger = objectsTriggers[typesTriggersLength];
         let triggersUnderline = document.querySelector('.js-objects-underline');
-        
-        console.log(firstTrigger);
 
         let triggerWidth = firstTrigger.getBoundingClientRect();
 
