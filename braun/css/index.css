@@ -1,3 +1,6 @@
+/* Animate.css, нужен для анимации при скролле */
+@import "./animate.css";
+
 /* Шрифты */
 @import "./fonts.css";
 

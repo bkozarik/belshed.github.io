@@ -73,6 +73,18 @@ section
         padding: 15px
         &:hover
             background-color: #121212
+    &_video
+        width: 100%
+        max-width: 305px
+        font-size: 15px
+        font-weight: bold
+        color: #000
+        text-transform: uppercase
+        padding: 18px
+        background-color: #ea9e1c
+        margin-top: 55px
+        &:hover
+            background-color: #cf8302
     &:focus
         outline: none
 
@@ -145,12 +157,10 @@ section
         align-items: center
         justify-content: stretch
         border-top: 1px solid #363636
-        transition: top .2s ease-out
+        transition: top .2s ease-out, opacity .2s linear .3s
         top: 0
         left: 0
         opacity: 0
-        pointer-events: none
-        visibility: hidden
         &:nth-child(1)
             z-index: 3
             transition-delay: .1s
@@ -163,10 +173,8 @@ section
         &:last-child, &:only-child
             border-botton: 1px solid #363636
         &.active
-            transition: top .2s ease-out
+            transition: top .2s ease-out, opacity 0s linear .3s
             opacity: 1
-            pointer-events: all
-            visibility: visible
             &:nth-child(1)
                 transition-delay: 0s
             &:nth-child(2)
@@ -189,20 +197,57 @@ section
     padding-top: 100px
 
 .banner
-    background-color: #77777d
     &__bg
         position: absolute
         left: 0
         top: 0
         width: 100%
+        height: 100%
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
     &__wrap
-            padding: 140px 0px 155px
+        padding: 143px 0px 155px
+        display: flex
+        align-items: center
+    &__person
+        position: absolute
     &__title
         &, & *
             font-size: 45px
             line-height: 65px
             font-weight: 500
             letter-spacing: .5px
+    &_first
+        background-color: #77777d
+        .banner__person
+            left: 190px
+            bottom: -3px
+    &_second
+        background-color: #555051
+        .banner__wrap
+            padding: 190px 0px 175px
+        .banner__content
+            margin-left: auto
+            margin-right: 130px
+    &_third
+        background-color: #505d66
+        .banner__wrap
+            padding: 175px 0px 123px
+        .banner__person
+            left: 910px
+            bottom: -178px
+    &_fourth
+        background-color: #8dacae
+        .banner__wrap
+            padding: 184px 0px 176px
+        .banner__content
+            margin-left: auto
+            margin-right: 150px
+        .banner__person
+            left: 191px
+            bottom: -72px
 
 .row
     padding: 70px 0px
@@ -225,34 +270,40 @@ section
     width: 100%
     overflow: hidden
     position: relative
+    
     &_small
-        padding-top: 55px
+        padding-top: 52px
         display: flex
         justify-content: space-between
         align-items: center
         flex-direction: column
+        visibility: hidden
         .item
             &__title
                 max-width: 230px
         &:nth-child(1)
+            transition-delay: .2s
             .item__img
                 transform: translate(20px, 50px)
             &:hover
                 .item__img
                     transform: translate(20px, 50px) scale(1.05)
         &:nth-child(2)
+            transition-delay: .4s
             .item__img
                 transform: translate(20px, 40px)
             &:hover
                 .item__img
                     transform: translate(20px, 40px) scale(1.05)
         &:nth-child(3)
+            transition-delay: .6s
             .item__img
                     transform: translate(15px, 40px)
             &:hover
                 .item__img
                     transform: translate(15px, 40px) scale(1.05)
         &:hover
+            transition: box-shadow .2s ease-out .0s
             box-shadow: 0 0 0 2px #e3e3e3
             .item
                 &__arrow
@@ -280,7 +331,7 @@ section
                     height: 100%
                     object-fit: contain
     &__content
-        padding: 35px 40px 40px
+        padding: 25px 40px 40px
         background-color: $item_grey
     &__video
         position: relative
