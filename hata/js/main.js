@@ -281,8 +281,10 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', scrollHandler);
     
     if(whichPage() == 'index'){
-        objectsTriggerInit();
-        heroTabTriggerInit();
+        setTimeout(() => {
+            objectsTriggerInit();
+            heroTabTriggerInit();
+        }, 100);
     }
     else if(whichPage() == 'apartments'){
         filterTrigger.addEventListener('click', filterTriggerClick);
