@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let triggersUnderline = document.querySelector('.js-tab-underline');
         
         let triggerWidth = firstTrigger.getBoundingClientRect().width;
-
+        console.log(firstTrigger.offsetLeft);
         firstTrigger.classList.toggle('active');
         triggersUnderline.style.width = triggerWidth * 0.7 + "px";
         triggersUnderline.style.left = firstTrigger.offsetLeft + (triggerWidth / 2) + "px";
@@ -122,6 +122,8 @@ document.addEventListener('DOMContentLoaded', () => {
         let firstTrigger = objectsTriggers[typesTriggersLength];
         let triggersUnderline = document.querySelector('.js-objects-underline');
         
+        console.log(firstTrigger);
+
         let triggerWidth = firstTrigger.getBoundingClientRect();
 
         firstTrigger.classList.add('active');
