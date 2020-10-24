@@ -1,0 +1,78 @@
+$main_black: #000000
+
+*, *::before, *::after
+    box-sizing: border-box
+    margin: 0
+    padding: 0
+    border: none
+    text-decoration: none
+    border-radius: 0px
+    transition: all .2s ease-in-out 0s
+    font-family: "", sans-serif
+    font-weight: 400
+    color: $main_black
+
+body, html
+    background-color: #fffeff
+    overflow-x: hidden
+
+body
+    display: flex
+    flex-direction: column
+    overflow: hidden
+    min-height: 100vh
+    position: relative
+
+section
+    position: relative
+
+.container
+    width: 100%
+    position: relative
+    max-width: 1230px
+    padding: 0px 15px
+    margin: 0 auto
+
+.text
+    &_white
+        color: #fff !important
+    &_black
+        color: $main_black !important
+    &_tac
+        text-align: center
+    &_ttu
+        text-transform: uppercase
+
+.button
+    position: relative
+    display: inline-block
+    appearance: none
+    background: transparent
+    cursor: pointer
+    white-space: nowrap
+    text-align: center
+    user-select: none
+    overflow: hidden
+    border-radius: 4px
+    &:focus
+        outline: none
+
+.header
+    flex-grow: 0
+    position: fixed
+    left: 0
+    top: 0
+    width: 100%
+    z-index: 5
+    background-color: #1f1f1f
+    &__wrap
+        padding: 27px 0px
+        display: flex
+        align-items: center
+        justify-content: space-between
+
+.main
+    flex-grow: 1
+
+.footer
+    flex-grow: 0

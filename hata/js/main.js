@@ -56,6 +56,10 @@ document.addEventListener('DOMContentLoaded', () => {
         let swiper = new Swiper(item.querySelector('.top__head') || item.querySelector('.apartment__slider'), {
             slidesPerView: 1,
             loop: true,
+            navigation: {
+                prevEl: '.top__control_prev',
+                nextEl: '.top__control_next',
+            },
         });
     }
 
@@ -266,8 +270,6 @@ document.addEventListener('DOMContentLoaded', () => {
     
     burger.addEventListener('click', burgerClick);
     typesTrigger.addEventListener('click', typesTriggerClick);
-    filterTrigger.addEventListener('click', filterTriggerClick);
-    filterMoreTrigger.addEventListener('click', filterMoreTriggerClick);
 
     scrollLinks.forEach(link => link.addEventListener('click', scrollLinkClick));
     heroTabTriggers.forEach(trigger => trigger.addEventListener('click', heroTabTriggerClick));
@@ -283,10 +285,8 @@ document.addEventListener('DOMContentLoaded', () => {
         objectsTriggerInit();
     }
     else if(whichPage() == 'apartments'){
-
-        // filterTrigger.click();
-        // filterMoreTrigger.click();
-
+        filterTrigger.addEventListener('click', filterTriggerClick);
+        filterMoreTrigger.addEventListener('click', filterMoreTriggerClick);
     }
     else if(whichPage() == 'item'){
         resultsTriggerInit();
