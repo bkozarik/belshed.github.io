@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         firstTrigger.classList.toggle('active');
         triggersUnderline.style.width = triggerWidth * 0.7 + "px";
-        triggersUnderline.style.left = firstTrigger.offsetLeft + (triggerWidth / 2) + "px";
+        triggersUnderline.style.left = firstTrigger.offsetLeft - (triggerWidth / 2) + "px";
 
         heroTabs[0].classList.add('active');
         heroBgItems[0].classList.add('active');
@@ -126,7 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         firstTrigger.classList.add('active');
         triggersUnderline.style.width = triggerWidth.width * 0.8 + "px";
-        triggersUnderline.style.left = firstTrigger.offsetLeft + (triggerWidth.width / 2) + "px";
+        triggersUnderline.style.left = firstTrigger.offsetLeft - (triggerWidth.width / 2) + "px";
 
         objectsTabs[0].classList.add('active');
     }
@@ -281,10 +281,8 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', scrollHandler);
     
     if(whichPage() == 'index'){
-        setTimeout(() => {
-            objectsTriggerInit();
-            heroTabTriggerInit();
-        }, 100);
+        objectsTriggerInit();
+        heroTabTriggerInit();
     }
     else if(whichPage() == 'apartments'){
         filterTrigger.addEventListener('click', filterTriggerClick);
