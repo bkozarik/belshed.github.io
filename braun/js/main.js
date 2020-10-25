@@ -47,12 +47,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
         let link = event.target;
         let href;
-        
-        try{
-            href = link.getAttribute('href');
-            document.querySelector(href).scrollIntoView({'behavior': 'smooth'});
+
+        while(!link.classList.contains('js-scroll-link')){
+            link = link.parentNode;
         }
-        catch{}
+        
+        href = link.getAttribute('href');
+        document.querySelector(href).scrollIntoView({'behavior': 'smooth'});
     }
 
     window.addEventListener('scroll', scrollHandler);
