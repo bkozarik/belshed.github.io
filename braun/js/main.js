@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const header = document.querySelector('.header');
     const burgerBtn = document.querySelector('.js-burger');
     const menuItems = document.querySelectorAll('.js-menu-item');
+    const scrollLinks = document.querySelectorAll('.js-scroll-link');
 
     const toggleMenu = (state = null) => {
         if(typeof(state) == 'object'){
@@ -31,8 +33,32 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    new WOW().init();
+    const wowInit = () => {
+        new WOW().init();
+    }
 
+    const scrollHandler = () => {
+        window.pageYOffset > 100 ? header.classList.add('scrolled') : header.classList.remove('scrolled');
+
+    }
+
+    const scrollLinkClick = () => {
+        event.preventDefault();
+
+        let link = event.target;
+        let href;
+        
+        try{
+            href = link.getAttribute('href');
+            document.querySelector(href).scrollIntoView({'behavior': 'smooth'});
+        }
+        catch{}
+    }
+
+    window.addEventListener('scroll', scrollHandler);
     burgerBtn.addEventListener('click', toggleMenu());
 
+    scrollLinks.forEach(link => link.addEventListener('click', scrollLinkClick));
+
+    wowInit();
 });

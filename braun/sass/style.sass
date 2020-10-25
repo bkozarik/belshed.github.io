@@ -1,5 +1,6 @@
 $main_black: #1f1f1f
 $header_dark: #1f1f1f
+$header_dark: #1f1f1f
 $header_dark-hover: #161616
 $item_grey: #f0f1f1
 
@@ -16,7 +17,7 @@ $item_grey: #f0f1f1
     color: $main_black
 
 body, html
-    background-color: #f0f3f1
+    background-color: $header_dark
     overflow-x: hidden
 
 body
@@ -102,6 +103,10 @@ section
         display: flex
         align-items: center
         justify-content: flex-start
+    &.scrolled
+        .header
+            &__wrap
+                padding: 5px 0px
 
 .logo
     width: 100px
@@ -196,7 +201,13 @@ section
     flex-grow: 1
     padding-top: 100px
 
+.deco
+    position: absolute
+    display: block
+    width: 120px
+
 .banner
+    overflow: hidden
     &__bg
         position: absolute
         left: 0
@@ -208,7 +219,7 @@ section
             height: 100%
             object-fit: cover
     &__wrap
-        padding: 143px 0px 155px
+        padding: 141px 0px 155px
         display: flex
         align-items: center
     &__person
@@ -224,6 +235,20 @@ section
         .banner__person
             left: 190px
             bottom: -3px
+        .deco
+            &:nth-of-type(2)
+                height: 170px
+                background-color: #b3b0b4
+                top: 0
+                left: -222px
+                border-radius: 0 0 120px 0
+            &:nth-of-type(3)
+                height: 205px
+                background-color: #b3b0b4
+                bottom: 0
+                right: -226px
+                border-radius: 120px 0 0 0
+                
     &_second
         background-color: #555051
         .banner__wrap
@@ -231,23 +256,64 @@ section
         .banner__content
             margin-left: auto
             margin-right: 130px
+        .deco
+            &:nth-of-type(2)
+                height: 205px
+                background-color: #000000
+                bottom: 0
+                left: -222px
+                border-radius: 120px 0 0
+            &:nth-of-type(3)
+                height: 190px
+                background-color: #000000
+                top: 0
+                right: -226px
+                border-radius: 0 0 120px 0
     &_third
         background-color: #505d66
         .banner__wrap
             padding: 175px 0px 123px
         .banner__person
-            left: 910px
+            left: 593px
             bottom: -178px
+        .deco
+            &:nth-of-type(2)
+                height: 202px
+                background-color: #00a3e0
+                top: 0
+                left: -103px
+                border-radius: 0 0 120px 0
+            &:nth-of-type(3)
+                height: 284px
+                background-color: #00a3e0
+                bottom: 0
+                right: -227px
+                border-radius: 120px 0 0 0
     &_fourth
         background-color: #8dacae
+        overflow: hidden
         .banner__wrap
             padding: 184px 0px 176px
         .banner__content
             margin-left: auto
             margin-right: 150px
         .banner__person
-            left: 191px
-            bottom: -72px
+            left: -126px
+            bottom: -81px
+            z-index: 1
+        .deco
+            &:nth-of-type(2)
+                height: 202px
+                background-color: #c4cf2c
+                bottom: 0
+                left: -223px
+                border-radius: 120px 0 0 0
+            &:nth-of-type(3)
+                height: 184px
+                background-color: #c4cf2c
+                top: 0
+                right: -227px
+                border-radius: 0 0 120px 0
 
 .row
     padding: 70px 0px
@@ -270,7 +336,6 @@ section
     width: 100%
     overflow: hidden
     position: relative
-    
     &_small
         padding-top: 52px
         display: flex
@@ -316,6 +381,13 @@ section
         grid-template-rows: 360px minmax(220px, auto) 200px 120px
         justify-items: center
         cursor: pointer
+        visibility: hidden
+        &:nth-child(1)
+            transition-delay: .2s
+        &:nth-child(2)
+            transition-delay: .4s
+        &:nth-child(3)
+            transition-delay: .6s
         .item
             &__img
                 height: 100%
