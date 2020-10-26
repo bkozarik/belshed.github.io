@@ -10,8 +10,8 @@
     <header class="header">
         <div class="container">
             <div class="header__wrap">
-                <img class="logo logo_braun" src="./img/logo.png" alt="Логотип Braun">
-                <img class="logo logo_ixbt" src="./img/logo-ixbt.png" alt="Логотип Ixbt">
+                <img loading="lazy" class="logo logo_braun" src="./img/logo.png" alt="Логотип Braun">
+                <img loading="lazy" class="logo logo_ixbt" src="./img/logo-ixbt.png" alt="Логотип Ixbt">
                 <button class="button burger js-burger"><span></span></button>
             </div>
         </div>
@@ -27,7 +27,7 @@
         <section class="banner banner_first">
             <picture class="banner__bg">
                 <source srcset="./img/banner_1.webp" type="image/webp">
-                <img src="./img/banner_1.jpg" alt="Фоновое изображение">
+                <img loading="lazy" src="./img/banner_1.jpg" alt="Фоновое изображение">
             </picture>
             <div class="container">
                 <div class="banner__wrap">
@@ -69,29 +69,29 @@
                 </div>
             </div>
         </section>
-        <section class="banner banner_second">
+        <section class="banner banner_second js-popup-open" data-name="beard-shaves">
             <picture class="banner__bg">
                 <source srcset="./img/banner_2.webp" type="image/webp">
-                <img src="./img/banner_2.jpg" alt="Фоновое изображение">
+                <img loading="lazy" src="./img/banner_2.jpg" alt="Фоновое изображение">
             </picture>
             <div class="container">
                 <div class="banner__wrap">
                     <div class="banner__content">
                         <h2 class="banner__title">Электробритвы<br><span class="text_bold">— для бороды</span></h2>
-                        <button class="button button_video">видео линейки</button>
+                        <button class="button button_video js-popup-open" data-name="beard-shaves">видео линейки</button>
                     </div>
                 </div>
                 <div class="deco"></div>
                 <div class="deco"></div>
             </div>
-        </section> 
+        </section>
         <section id="beard-shaves" class="row">
             <div class="container">
                 <div class="row__container row__container_big">
-                    <article target="_blank" class="item item_big wow animate__fadeInUp" data-wow-duration="1s" data-wow-delay="0s">
+                    <article target="_blank" class="item item_big wow animate__fadeInUp js-popup-open" data-name="Series 9" data-wow-duration="1s" data-wow-delay="0s">
                         <picture class="item__img">
                             <source srcset="./img/item_big_1.webp" type="image/webp">
-                            <img src="./img/item_big_1.jpg" alt="Электробритвы Series 9">
+                            <img loading="lazy" src="./img/item_big_1.jpg" alt="Электробритвы Series 9">
                         </picture>
                         <div class="item__content">
                             <h3 class="item__title item__title_small">Электробритвы Series&nbsp;9</h3>
@@ -100,7 +100,7 @@
                         <div class="item__video">
                             <picture class="item__video-preview">
                                 <source srcset="./img/item_big_video_1.webp" type="image/webp">
-                                <img src="./img/item_big_video_1.jpg" alt="Электробритвы Series 9">
+                                <img loading="lazy" src="./img/item_big_video_1.jpg" alt="Электробритвы Series 9">
                             </picture>
                             <button class="item__preview"></button>
                         </div>
@@ -108,10 +108,11 @@
                             <a href="#" target="_blank" class="button button_item">подробнее о модели</a>
                         </div>
                     </article>
-                    <article target="_blank" class="item item_big wow animate__fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s">
+
+                    <article target="_blank" class="item item_big wow animate__fadeInUp js-popup-open" data-name="Series 8" data-wow-duration="1s" data-wow-delay="0.2s">
                         <picture class="item__img">
                             <source srcset="./img/item_big_2.webp" type="image/webp">
-                            <img src="./img/item_big_2.jpg" alt="Электробритвы Series 8">
+                            <img loading="lazy" src="./img/item_big_2.jpg" alt="Электробритвы Series 8">
                         </picture>
                         <div class="item__content">
                             <h3 class="item__title item__title_small">Электробритвы Series&nbsp;8</h3>
@@ -120,7 +121,7 @@
                         <div class="item__video">
                             <picture class="item__video-preview">
                                 <source srcset="./img/item_big_video_2.webp" type="image/webp">
-                                <img src="./img/item_big_video_2.jpg" alt="Электробритвы Series 8">
+                                <img loading="lazy" src="./img/item_big_video_2.jpg" alt="Электробритвы Series 8">
                             </picture>
                             <button class="item__preview"></button>
                         </div>
@@ -128,10 +129,11 @@
                             <a href="#" target="_blank" class="button button_item">подробнее о модели</a>
                         </div>
                     </article>
-                    <article target="_blank" class="item item_big wow animate__fadeInUp" data-wow-duration="1s" data-wow-delay="0.4s">
+
+                    <article target="_blank" class="item item_big wow animate__fadeInUp js-popup-open" data-name="Series 3" data-wow-duration="1s" data-wow-delay="0.4s">
                         <picture class="item__img">
                             <source srcset="./img/item_big_3.webp" type="image/webp">
-                            <img src="./img/item_big_3.jpg" alt="Электробритвы Series 3">
+                            <img loading="lazy" src="./img/item_big_3.jpg" alt="Электробритвы Series 3">
                         </picture>
                         <div class="item__content">
                             <h3 class="item__title item__title_small">Электробритвы Series&nbsp;3</h3>
@@ -140,7 +142,7 @@
                         <div class="item__video">
                             <picture class="item__video-preview">
                                 <source srcset="./img/item_big_video_3.webp" type="image/webp">
-                                <img src="./img/item_big_video_3.jpg" alt="Электробритвы Series 3">
+                                <img loading="lazy" src="./img/item_big_video_3.jpg" alt="Электробритвы Series 3">
                             </picture>
                             <button class="item__preview"></button>
                         </div>
@@ -151,16 +153,16 @@
                 </div>
             </div>
         </section>
-        <section class="banner banner_third">
+        <section class="banner banner_third js-popup-open" data-name="universal-trimmers">
             <picture class="banner__bg">
                 <source srcset="./img/banner_3.webp" type="image/webp">
-                <img src="./img/banner_3.jpg" alt="Фоновое изображение">
+                <img loading="lazy" src="./img/banner_3.jpg" alt="Фоновое изображение">
             </picture>
             <div class="container">
                 <div class="banner__wrap">
                     <div class="banner__content">
                         <h2 class="banner__title">Универсальные тримеры <br><span class="text_bold">— для волос на голове <br>и на теле, для бороды</span></h2>
-                        <button class="button button_video">видео линейки</button>
+                        <button class="button button_video js-popup-open" data-name="universal-trimmers">видео линейки</button>
                     </div>
                 </div>
                 <div class="deco"></div>
@@ -171,10 +173,10 @@
         <section id="universal-trimmers" class="row">
             <div class="container container_big">
                 <div class="row__container row__container_big row__container_tight">
-                    <article target="_blank" class="item item_big wow animate__fadeInUp" data-wow-duration="1s" data-wow-delay="0s">
+                    <article target="_blank" class="item item_big wow animate__fadeInUp js-popup-open" data-name="MGK3220" data-wow-duration="1s" data-wow-delay="0s">
                         <picture class="item__img">
                             <source srcset="./img/item_big_4.webp" type="image/webp">
-                            <img src="./img/item_big_4.jpg" alt="Универсальный триммер MGK3220">
+                            <img loading="lazy" src="./img/item_big_4.jpg" alt="Универсальный триммер MGK3220">
                         </picture>
                         <div class="item__content">
                             <h3 class="item__title item__title_small">Универсальный триммер MGK3220</h3>
@@ -183,7 +185,7 @@
                         <div class="item__video">
                             <picture class="item__video-preview">
                                 <source srcset="./img/item_big_video_4.webp" type="image/webp">
-                                <img src="./img/item_big_video_4.jpg" alt="Универсальный триммер MGK3220">
+                                <img loading="lazy" src="./img/item_big_video_4.jpg" alt="Универсальный триммер MGK3220">
                             </picture>
                             <button class="item__preview"></button>
                         </div>
@@ -192,10 +194,10 @@
                         </div>
                     </article>
 
-                    <article target="_blank" class="item item_big wow animate__fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s">
+                    <article target="_blank" class="item item_big wow animate__fadeInUp js-popup-open" data-name="MGK5245" data-wow-duration="1s" data-wow-delay="0.2s">
                         <picture class="item__img">
                             <source srcset="./img/item_big_5.webp" type="image/webp">
-                            <img src="./img/item_big_5.jpg" alt="Универсальный триммер MGK5245">
+                            <img loading="lazy" src="./img/item_big_5.jpg" alt="Универсальный триммер MGK5245">
                         </picture>
                         <div class="item__content">
                             <h3 class="item__title item__title_small">Универсальный триммер MGK5245</h3>
@@ -204,7 +206,7 @@
                         <div class="item__video">
                             <picture class="item__video-preview">
                                 <source srcset="./img/item_big_video_5.webp" type="image/webp">
-                                <img src="./img/item_big_video_5.jpg" alt="Универсальный триммер MGK5245">
+                                <img loading="lazy" src="./img/item_big_video_5.jpg" alt="Универсальный триммер MGK5245">
                             </picture>
                             <button class="item__preview"></button>
                         </div>
@@ -213,10 +215,10 @@
                         </div>
                     </article>
 
-                    <article target="_blank" class="item item_big wow animate__fadeInUp" data-wow-duration="1s" data-wow-delay="0.4s">
+                    <article target="_blank" class="item item_big wow animate__fadeInUp js-popup-open" data-name="MGK7220" data-wow-duration="1s" data-wow-delay="0.4s">
                         <picture class="item__img">
                             <source srcset="./img/item_big_6.webp" type="image/webp">
-                            <img src="./img/item_big_6.jpg" alt="Универсальный триммер MGK7220">
+                            <img loading="lazy" src="./img/item_big_6.jpg" alt="Универсальный триммер MGK7220">
                         </picture>
                         <div class="item__content">
                             <h3 class="item__title item__title_small">Универсальный триммер MGK7220</h3>
@@ -225,7 +227,7 @@
                         <div class="item__video">
                             <picture class="item__video-preview">
                                 <source srcset="./img/item_big_video_6.webp" type="image/webp">
-                                <img src="./img/item_big_video_6.jpg" alt="Универсальный триммер MGK7220">
+                                <img loading="lazy" src="./img/item_big_video_6.jpg" alt="Универсальный триммер MGK7220">
                             </picture>
                             <button class="item__preview"></button>
                         </div>
@@ -236,16 +238,16 @@
                 </div>
             </div>
         </section>
-        <section class="banner banner_fourth">
+        <section class="banner banner_fourth js-popup-open" data-name="beard-trimmers">
             <picture class="banner__bg">
                 <source srcset="./img/banner_4.webp" type="image/webp">
-                <img src="./img/banner_4.jpg" alt="Фоновое изображение">
+                <img loading="lazy" src="./img/banner_4.jpg" alt="Фоновое изображение">
             </picture>
             <div class="container">
                 <div class="banner__wrap">
                     <div class="banner__content">
                         <h2 class="banner__title">Тримеры <br><span class="text_bold">— для бороды</span></h2>
-                        <button class="button button_video">видео линейки</button>
+                        <button class="button button_video js-popup-open" data-name="beard-trimmers">видео линейки</button>
                     </div>
                 </div>
                 <div class="deco"></div>
@@ -256,10 +258,10 @@
         <section id="beard-trimmers" class="row">
             <div class="container container_big">
                 <div class="row__container row__container_big row__container_tight">
-                    <article target="_blank" class="item item_big wow animate__fadeInUp" data-wow-duration="1s" data-wow-delay="0s">
+                    <article target="_blank" class="item item_big wow animate__fadeInUp js-popup-open" data-name="BT3221" data-wow-duration="1s" data-wow-delay="0s">
                         <picture class="item__img">
                             <source srcset="./img/item_big_7.webp" type="image/webp">
-                            <img src="./img/item_big_7.jpg" alt="Триммер для бороды BT3221">
+                            <img loading="lazy" src="./img/item_big_7.jpg" alt="Триммер для бороды BT3221">
                         </picture>
                         <div class="item__content">
                             <h3 class="item__title item__title_small">Триммер для бороды BT3221</h3>
@@ -268,7 +270,7 @@
                         <div class="item__video">
                             <picture class="item__video-preview">
                                 <source srcset="./img/item_big_video_7.webp" type="image/webp">
-                                <img src="./img/item_big_video_7.jpg" alt="Триммер для бороды BT3221">
+                                <img loading="lazy" src="./img/item_big_video_7.jpg" alt="Триммер для бороды BT3221">
                             </picture>
                             <button class="item__preview"></button>
                         </div>
@@ -277,10 +279,10 @@
                         </div>
                     </article>
 
-                    <article target="_blank" class="item item_big wow animate__fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s">
+                    <article target="_blank" class="item item_big wow animate__fadeInUp js-popup-open" data-name="BT5240" data-wow-duration="1s" data-wow-delay="0.2s">
                         <picture class="item__img">
                             <source srcset="./img/item_big_8.webp" type="image/webp">
-                            <img src="./img/item_big_8.jpg" alt="Триммер для бороды BT5240">
+                            <img loading="lazy" src="./img/item_big_8.jpg" alt="Триммер для бороды BT5240">
                         </picture>
                         <div class="item__content">
                             <h3 class="item__title item__title_small">Триммер для бороды BT5240</h3>
@@ -289,7 +291,7 @@
                         <div class="item__video">
                             <picture class="item__video-preview">
                                 <source srcset="./img/item_big_video_8.webp" type="image/webp">
-                                <img src="./img/item_big_video_8.jpg" alt="Триммер для бороды BT5240">
+                                <img loading="lazy" src="./img/item_big_video_8.jpg" alt="Триммер для бороды BT5240">
                             </picture>
                             <button class="item__preview"></button>
                         </div>
@@ -298,10 +300,10 @@
                         </div>
                     </article>
 
-                    <article target="_blank" class="item item_big wow animate__fadeInUp" data-wow-duration="1s" data-wow-delay="0.4s">
+                    <article target="_blank" class="item item_big wow animate__fadeInUp js-popup-open" data-name="BT7220" data-wow-duration="1s" data-wow-delay="0.4s">
                         <picture class="item__img">
                             <source srcset="./img/item_big_9.webp" type="image/webp">
-                            <img src="./img/item_big_9.jpg" alt="Триммер для бороды BT7220">
+                            <img loading="lazy" src="./img/item_big_9.jpg" alt="Триммер для бороды BT7220">
                         </picture>
                         <div class="item__content">
                             <h3 class="item__title item__title_small">Триммер для бороды BT7220</h3>
@@ -310,7 +312,7 @@
                         <div class="item__video">
                             <picture class="item__video-preview">
                                 <source srcset="./img/item_big_video_9.webp" type="image/webp">
-                                <img src="./img/item_big_video_9.jpg" alt="Триммер для бороды BT7220">
+                                <img loading="lazy" src="./img/item_big_video_9.jpg" alt="Триммер для бороды BT7220">
                             </picture>
                             <button class="item__preview"></button>
                         </div>
@@ -327,13 +329,75 @@
             <div class="footer__wrap">
                 <div class="footer__content">
                     <div class="footer__logo">
-                        <img class="footer__logo-img" src="./img/logo-footer.png" alt="Логотип">
+                        <img loading="lazy" class="footer__logo-img" src="./img/logo-footer.png" alt="Логотип">
                     </div>
                     <small class="footer__copyright">© 2020 Procter & Gamble  |  iXbt.com</small>
                 </div>
             </div>
         </div>
     </footer>
+    <div class="popup js-popup">
+        <div class="popup__item js-popup-item" data-name="Series 9">
+            <button class="popup__close js-popup-close"></button>
+            <video class="popup__video" preload="none" controls="controls">
+                <source src="./video/myVideo.mp4" type="video/mp4">
+                <source src="./video/myVideo.webm" type="video/webm">
+            </video>
+        </div>
+        <div class="popup__item js-popup-item" data-name="Series 8">
+            <button class="popup__close js-popup-close"></button>
+            <video class="popup__video" preload="none" controls="controls">
+                <source src="./video/myVideo.mp4" type="video/mp4">
+                <source src="./video/myVideo.webm" type="video/webm">
+            </video>
+        </div>
+        <div class="popup__item js-popup-item" data-name="Series 3">
+            <button class="popup__close js-popup-close"></button>
+            <video class="popup__video" preload="none" controls="controls">
+                <source src="./video/myVideo.mp4" type="video/mp4">
+                <source src="./video/myVideo.webm" type="video/webm">
+            </video>
+        </div>
+
+        <div class="popup__item js-popup-item" data-name="MGK3220">
+            <button class="popup__close js-popup-close"></button>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/8LzveZjQRL4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="popup__item js-popup-item" data-name="MGK5245">
+            <button class="popup__close js-popup-close"></button>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/8LzveZjQRL4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="popup__item js-popup-item" data-name="MGK7220">
+            <button class="popup__close js-popup-close"></button>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/8LzveZjQRL4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <div class="popup__item js-popup-item" data-name="BT3221">
+            <button class="popup__close js-popup-close"></button>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/8LzveZjQRL4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="popup__item js-popup-item" data-name="BT5240">
+            <button class="popup__close js-popup-close"></button>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/8LzveZjQRL4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="popup__item js-popup-item" data-name="BT7220">
+            <button class="popup__close js-popup-close"></button>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/8LzveZjQRL4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <div class="popup__item js-popup-item" data-name="beard-shaves">
+            <button class="popup__close js-popup-close"></button>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/8LzveZjQRL4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="popup__item js-popup-item" data-name="universal-trimmers">
+            <button class="popup__close js-popup-close"></button>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/8LzveZjQRL4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="popup__item js-popup-item" data-name="beard-trimmers">
+            <button class="popup__close js-popup-close"></button>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/8LzveZjQRL4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
     <script src="./js/wow.min.js"></script>
     <script src="./js/main.js"></script>
 </body>

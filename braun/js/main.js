@@ -1,8 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
     const header = document.querySelector('.header');
     const burgerBtn = document.querySelector('.js-burger');
+
     const menuItems = document.querySelectorAll('.js-menu-item');
+
     const scrollLinks = document.querySelectorAll('.js-scroll-link');
+
+    const popupItem = document.querySelectorAll('.js-popup-item');
+    const popupTriggers = document.querySelectorAll('.js-popup-open');
+    const popupCloseTriggers = document.querySelectorAll('.js-popup-close');
 
     const toggleMenu = (state = null) => {
         if(typeof(state) == 'object'){
@@ -43,6 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const scrollLinkClick = () => {
+        toggleMenu(false);
         event.preventDefault();
 
         let link = event.target;
@@ -56,10 +63,44 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelector(href).scrollIntoView({'behavior': 'smooth'});
     }
 
+    const closePopup = () => {
+        let popupOverlay = document.querySelector('.js-popup');
+        popupOverlay.classList.remove('active');
+        popupItem.forEach(item => item.classList.remove('active'));
+        document.querySelectorAll("video").forEach(item => item.pause());
+    }
+
+    const popupTriggerClick = () => {
+
+        let target = event.target;
+
+        if(target.tagName == "A" || target.classList.contains('item__holder')){
+            return;
+        }
+
+        let popupOverlay = document.querySelector('.js-popup');
+        popupOverlay.classList.add('active');
+
+        while(!target.classList.contains('js-popup-open')){
+            target = target.parentNode;
+        }
+
+        let targetName = target.dataset.name;
+
+        popupItem.forEach(item => item.dataset.name == targetName ? item.classList.add('active') : item.classList.remove('active'));
+
+        document.addEventListener('click', () => {
+            if(event.target.classList.contains('js-popup'))
+                closePopup();
+        });
+    }
+
     window.addEventListener('scroll', scrollHandler);
     burgerBtn.addEventListener('click', toggleMenu());
 
     scrollLinks.forEach(link => link.addEventListener('click', scrollLinkClick));
+    popupTriggers.forEach(trigger => trigger.addEventListener('click', popupTriggerClick));
+    popupCloseTriggers.forEach(trigger => trigger.addEventListener('click', closePopup));
 
     wowInit();
 });

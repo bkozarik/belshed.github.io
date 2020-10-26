@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         if (resp.ok) {
             
+            console.log();
             return resp.json(); // если все ок, то парсим строку в json и возвращаем
         }
         else{
@@ -24,8 +25,9 @@ document.addEventListener('DOMContentLoaded', () => {
         item.parentNode.classList.toggle('active');
     }
 
-    getData(url) // getData - фсинхронная ф-ция, так что работать с ней нужне немного иначе, она возвращает не переменную, а promise
+    getData(url) // getData - асинхронная ф-ция, так что работать с ней нужне немного иначе, она возвращает не переменную, а promise
         .then(data => {
+            console.log(data);
             const buildTree = data => {
                 let listItems = new Array();
 

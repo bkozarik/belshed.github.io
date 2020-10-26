@@ -248,7 +248,8 @@ section
                 bottom: 0
                 right: -226px
                 border-radius: 120px 0 0 0
-                
+    &_second, &_third, &_fourth
+        cursor: pointer
     &_second
         background-color: #555051
         .banner__wrap
@@ -389,6 +390,15 @@ section
         &:nth-child(3)
             transition-delay: .6s
         .item
+            &__img img, &__video-preview img
+                transition-duration: .4s
+            &__img:hover img, &__video-preview:hover img
+                    transition-duration: .4s
+            &__img:hover img
+                transform: scale(1.05)
+            &__video-preview:hover img
+                width: 103%
+                transform: translateX(-1.5%)
             &__img
                 height: 100%
                 width: 100%
@@ -463,6 +473,78 @@ section
         align-items: center
         justify-content: center
         cursor: default
+
+.popup
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100vh
+    overflow-y: auto
+    background-color: rgba(0, 0, 0, .7)
+    z-index: 100
+    opacity: 0
+    pointer-events: none
+    visibility: hidden
+    display: flex
+    align-items: center
+    justify-content: center
+    padding: 10px
+    &__item
+        position: relative
+        width: 100%
+        height: 90%
+        max-width: 1700px
+        display: none
+        iframe
+            width: 100%
+            height: 100%
+        &.active
+            display: flex
+            align-items: center
+            justify-content: center
+    &__close
+        position: absolute
+        display: inline-block
+        background-color: transparent
+        height: 40px
+        width: 40px
+        border-radius: 0px
+        border: none
+        cursor: pointer
+        right: 0
+        top: 0
+        transform: translate(110%, 110%)
+        &::before, &::after
+            display: inline-block
+            content: ''
+            position: absolute
+            width: 25px
+            height: 2px
+            background-color: #fff
+            border-radius: 5px
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+        &::before
+            transform: translate(-50%, -50%) rotate(-45deg)
+        &::after
+            transform: translate(-50%, -50%) rotate(45deg)
+        &:hover
+            &::before, &::after
+                width: 28px
+                box-shadow: 0 0 7px 2px rgba(255, 255, 255, .2)
+        &:focus
+            outline: none
+    &__video
+        width: auto
+        height: 100%
+        margin: 0 auto
+        display: block
+    &.active
+        opacity: 1
+        pointer-events: all
+        visibility: visible
 
 .footer
     flex-grow: 0
