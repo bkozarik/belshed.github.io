@@ -272,6 +272,8 @@ section
                 border-radius: 0 0 120px 0
     &_third
         background-color: #505d66
+        .play
+            left: 52%
         .banner__wrap
             padding: 175px 0px 123px
         .banner__person
@@ -316,6 +318,22 @@ section
                 right: -227px
                 border-radius: 0 0 120px 0
 
+.play
+    position: absolute
+    display: block
+    width: 134px
+    height: 134px
+    background-image: url(../img/play.png)
+    background-size: contain
+    background-repeat: no-repeat
+    background-position: center
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    z-index: 3
+    &:hover
+        background-image: url(../img/play-hover.png)
+        
 .row
     padding: 70px 0px
     background-color: #fefeff
@@ -424,6 +442,23 @@ section
                 width: 100%
                 height: 100%
                 object-fit: cover
+        &:hover 
+            &::after
+                background-image: url(../img/play.png)
+        &::after
+            content: ''
+            display: inline-block
+            background-image: url(../img/play-hover.png)
+            background-size: contain
+            background-position: center
+            background-repeat: no-repeat
+            position: absolute
+            pointer-events: none
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            height: 105px
+            width: 105px
     &__title
         font-size: 30px
         line-height: 34px

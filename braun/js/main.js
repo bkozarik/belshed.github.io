@@ -87,7 +87,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
         let targetName = target.dataset.name;
 
-        popupItem.forEach(item => item.dataset.name == targetName ? item.classList.add('active') : item.classList.remove('active'));
+        popupItem.forEach(item => {
+            if(item.dataset.name == targetName){
+                item.classList.add('active');
+                
+                item.querySelector('video').play();
+            }
+            else{
+                item.classList.remove('active')
+            }
+        });
 
         document.addEventListener('click', () => {
             if(event.target.classList.contains('js-popup'))
