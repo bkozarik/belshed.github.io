@@ -60,7 +60,11 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         
         href = link.getAttribute('href');
-        document.querySelector(href).scrollIntoView({'behavior': 'smooth'});
+        
+        window.scrollTo({
+            top: document.querySelector(href).offsetTop - 70,
+            behavior: 'smooth'
+        });
     }
 
     const closePopup = () => {
