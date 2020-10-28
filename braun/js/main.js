@@ -42,6 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const aosInit = () => {
         AOS.init({
             once: true,
+            offset: 80,
         });
     }
 
