@@ -133,7 +133,13 @@ const getFullFloorData = (floor=null, tower=null) => {
 const fillPng = async (floor, tower) => {
 
     if(tower != 3){
-        document.querySelector('.plan-help-tower').classList.add('active');
+        if(floor == 24 || floor == 23){
+            document.querySelectorAll('.plan-help-penthouse').forEach(item => item.classList.add('active'));
+            document.querySelector('.plan-help-container').style.display = "flex";
+        }
+        else{
+            document.querySelector('.plan-help-tower').classList.add('active');
+        }
     }
     else{
         document.querySelector('.plan-help-corpus').classList.add('active');
@@ -167,7 +173,45 @@ const fillPng = async (floor, tower) => {
                 apartsPng[index].dataset.apid = apart.id;
                 apartsPng[index].dataset.rooms = apart.rooms;
                 apartsPng[index].classList.add('visible');
+                if(floor == 24 || floor == 23){
+                    apartsPng[index + 10].dataset.apid = apart.id;
+                    apartsPng[index + 10].dataset.rooms = apart.rooms;
+                    apartsPng[index + 10].classList.add('visible');
+                }
+                if(apartsPng[index].classList.contains('visible')){
+                    // console.log(apartsPng[index]);
+
+                }
             });
+            if(floor == 24 || floor == 23){
+                apartsPng.forEach(apart => {
+                    if(apart.dataset.apid && apart.classList.contains('visible')){
+                        apart.addEventListener('mouseover', () => {
+                            let target = event.target;
+
+                            while(!target.classList.contains('js-apartment-img')){
+                                target = target.parentNode;
+                            }
+
+                            let similarApartments = Array.prototype.slice.call(apartsPng).filter(ap => ap.dataset.apid == target.dataset.apid);
+
+                            similarApartments.forEach(item => item.classList.add('active'));
+                        });
+
+                        apart.addEventListener('mouseleave', () => {
+                            let target = event.target;
+
+                            while(!target.classList.contains('js-apartment-img')){
+                                target = target.parentNode;
+                            }
+
+                            let similarApartments = Array.prototype.slice.call(apartsPng).filter(ap => ap.dataset.apid == target.dataset.apid);
+
+                            similarApartments.forEach(item => item.classList.remove('active'));
+                        });
+                    }
+                });
+            }
         }
         rec(resp);
     });
@@ -430,7 +474,7 @@ const filterTable = () => {
                                 <td>${item.price} р.</td>
                             `;
                         }
-                        if((filterParams.type == 0) || (filterParams.type == 5 && item.floor == 32) || (filterParams.type == item.rooms)){
+                        if((filterParams.type == 0) || (filterParams.type == 5 && item.floor >= 23) || (filterParams.type == item.rooms)){
                             if((filterParams.location == 0) || (filterParams.location == item.tower)){
                                 table.appendChild(tr);
                             }

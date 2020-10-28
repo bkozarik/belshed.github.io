@@ -51,7 +51,7 @@ transition: opacity .2s ease-out 0s;
 visibility: visible;
 pointer-events: all;
 }
-.floor-plan-ap:hover, .floor-plan-ap.active{
+.floor-plan-ap:hover, .floor-plan-ap.active, .floor-plan-ap.hover{
 opacity: 1;
 }
 .floor-main .floor-section {
@@ -229,7 +229,7 @@ transition: opacity .2s ease-in 0s;
 -ms-transition: opacity .2s ease-in 0s;
 -o-transition: opacity .2s ease-in 0s;
 }
-.floor-one:hover .floor-one-left, .floor-one:hover .floor-one-right, .floor-one:hover .floor-one-sigle {
+.floor-one:hover .floor-one-left, .floor-one:hover .floor-one-right, .floor-one.active .floor-one-left, .floor-one.active .floor-one-right, .floor-one:hover .floor-one-sigle, .floor-one.active .floor-one-sigle {
     opacity: 1;
 }
 .floor-one-left.active, .floor-one-right.active, .floor-sub .floor-one-sigle.active{
@@ -248,25 +248,41 @@ opacity: 1;
         margin-top: 0;
 }
 .floor-main .floor-help{
-        height: 1.78rem;
+        height: 2.54rem;
 }
 .floor-penthouse .floor-one-left, .floor-penthouse .floor-one-right {
         width: 20.1rem;
 }
+.floor-penthouse .floor-section__col {
+        width: 36rem;
+}
+.floor-penthouse .floor-section{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+}
 .floor-penthouse .floor-one {
         width: 36rem;
+}
+.plan-help-penthouse{
+        position: relative;
+        margin: 0 !important;
+        padding: 0px 5px !important;
 }
 .floor-penthouse {
 position: absolute;
 left: -20.8rem;
-top: 5rem;
+top: 4.7rem;
 width: 78.2rem;
 display: flex;
 justify-content: space-between;
 }
 .floor-penthouse .floor-help {
 width: 7.5rem;
-height: 7rem;
+height: 7.2rem;
+display: flex;
+flex-direction: column;
+justify-content: center;
 }
 .floor-penthouse .floor-help::before, .floor-penthouse .floor-help::after {
 display: none;
@@ -314,8 +330,15 @@ width: 91.3rem;
 width: 6.5rem;
 height: 2.2rem;
 }
-.floor-sub .floor-one + .floor-one {
+.floor-sub .floor-one {
 margin-bottom: 3px;
+}
+.floor-sub .floor-one:first-child{
+        margin-bottom: 10px;
+        height: 3.9rem;
+}
+.floor-sub .floor-one:first-child .floor-help {
+        margin-top: 4px;
 }
 .floor-sub .floor-help::after {
 display: none;

@@ -1,3 +1,21 @@
+@media only screen and (min-width: 1786px){
+  .floor-sub .floor-help {
+    height: 2.4rem;
+  }
+
+  .floor-sub .floor-one:first-child {
+    margin-bottom: 6px;
+  }
+
+  .floor-sub .floor-one{
+    margin-bottom: 0;
+  }
+
+  .floor-sub {
+    bottom: 2.6rem;
+  }
+}
+
 @media only screen and (max-width: 1785px) {
     .house .house-bg{
       width: 179rem;
@@ -47,16 +65,22 @@
       opacity: 1;
     } */
     .floor-penthouse{
-      top: 4.2rem;
+      top: 3.8rem;
       left: -13.8rem;
       width: 71.3rem;
+    }
+    .floor-sub .floor-one {
+      margin-bottom: 4px;
+    } 
+    .floor-sub .floor-one:first-child {
+      margin-bottom: 5px;
     }
     .floor-main{
       width: 71rem;
       left: -12.5rem;
     }
     .floor-penthouse .floor-help{
-      height: 6rem;
+      height: 6.2rem;
     }
     .floor-penthouse .floor-one-left{
       width: 22.7rem;
@@ -64,7 +88,7 @@
     }
     .floor-penthouse .floor-one-right{
       width: 22.7rem;
-      margin-right: 1.6rem;
+      margin-right: 2.3rem;
     }
     .floor-main .floor-one-left{
       width: 26.2rem;
@@ -75,18 +99,18 @@
     }
     .floor-sub .floor-help{
       margin-left: 0;
-      height: 1.93rem;
+      height: 1.9rem;
     }
     .floor-sub .floor-one-sigle{
       /* opacity: 1; */
       width: 73.1rem;
     }
     .floor-main .floor-help {
-      height: 1.5rem;
+      height: 2.15rem;
       font-size: 1.2rem;
     }
     .floor-sub{
-      bottom: 2rem;
+      bottom: 2.1rem;
     }
   }
 @media only screen and (max-width: 1590px) {
@@ -94,14 +118,20 @@
       width: 158rem;
       height: 56rem;
     }
+    .floor-penthouse .floor-section__col{
+      width: 29.2rem;
+    }
     .floor-penthouse{
-      top: 3.9rem;
+      top: 3.6rem;
       left: -7.7rem;
-      width: 65.3rem;
+      width: 61.6rem;
     }
     .floor-main{
       width: 67.7rem;
       left: -8.7rem;
+    }
+    .floor-penthouse .floor-one {
+      width: 32.7rem;
     }
     .floor-penthouse .floor-help{
       height: 6rem;
@@ -115,8 +145,8 @@
     }
     .floor-main .floor-help{
       padding-left: 1rem;
-      font-size: 1.1rem;
-      height: 1.4rem;
+      font-size: 1.3rem;
+      height: 1.99rem;
     }
     .floor-main .floor-one-left{
       width: 24.5rem;
@@ -130,6 +160,9 @@
       right: -14rem;
       bottom: 7rem;
       width: 75rem;
+    }
+    .floor-sub .floor-one:first-child{
+      height: 3rem;
     }
     .floor-sub .floor-help{
       margin-left: 0;
@@ -154,7 +187,7 @@
     } */
     .floor-penthouse {
       left: -5.2rem;
-      width: 63.5rem;
+      width: 60rem;
     }
     .floor-main{
       left: -3.4rem;
@@ -164,7 +197,7 @@
       width: 20.1rem;
     }
     .floor-penthouse .floor-one-left{
-      margin-right: 0.9rem;
+      margin-right: 1.8rem;
     }
     .floor-penthouse .floor-one-right{
       margin-right: 0.9rem;
@@ -185,15 +218,18 @@
       width: 140rem;
       height: 56rem;
     }
+    .floor-penthouse .floor-one-left{
+      margin-right: 3.6rem;
+    }
     .floor-penthouse{
       left: -1.4rem;
-      width: 59.9rem;
+      width: 50rem;
     }
     .floor-penthouse .floor-one-left, .floor-penthouse .floor-one-right{
       width: 19rem;
     }
     .floor-penthouse .floor-one-right{
-      margin-right: 0.9rem;
+      margin-right: 2.7rem;
     }
     .floor-main .floor-help{
       padding-left: 1rem;
@@ -216,19 +252,31 @@
     }
     .floor-penthouse{
       left: 1.2rem;
-      width: 57.9rem;
+    }
+    .floor-penthouse .floor-one {
+      width: 29.8rem;
     }
     .floor-penthouse .floor-one-left, .floor-penthouse .floor-one-right{
       width: 18.2rem;
     }
+    .floor-one-left, .floor-one-right{
+      right: 8.5rem;
+    }
+    .floor-penthouse .floor-one-left {
+      margin-right: 0.6rem;
+    }
     .floor-penthouse .floor-one-right{
       margin-right: 0.9rem;
+    }
+    .floor-penthouse .floor-help{
+      font-size: 1.3rem;
     }
     .floor-main .floor-help{
       padding-left: 1rem;
     }
     .floor-main .floor-one-left, .floor-main .floor-one-right{
       width: 20.9rem;
+      margin-right: 0;
     }
     .floor-sub .floor-one-sigle{
       width: 58.3rem;
@@ -263,6 +311,10 @@
       left: 84%;
       width: 14.64%;
     }
+    .floor-sub .floor-one:first-child {
+      margin-bottom: 5px;
+      height: 3rem;
+  }
   }
 @media only screen and (max-width: 1025px) {
     .house .house-bg{
@@ -293,6 +345,9 @@
       width: 54.1rem;
       left: 6.8rem;
     }
+    .floor-penthouse .floor-one {
+      width: 27.6rem;
+  }
   }
 
 @media only screen and (max-width: 991px){
@@ -301,6 +356,15 @@
     }
     .plan-help-corpus {
       margin: 0 8px;
+    }
+    .plan-help-container {
+      flex-direction: column;
+    }
+    .plan-help-penthouse {
+      margin: 10px 0px !important;
+    }
+    .floor-plan .floor-plan-box{
+      margin: 0;
     }
     .floor-plan-corpus .floor-plan-ap:nth-child(2){
       left: 1.6%;
@@ -325,6 +389,7 @@
       left: 83.8%;
       width: 14.64%;
     }
+    
 }
 
 @media only screen and (max-width: 767px){

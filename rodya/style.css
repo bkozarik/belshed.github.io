@@ -82,7 +82,7 @@ body {
 }
 
 /* скрываем внитренний список если нет класса active */
-.list__item_has-children>.list { 
+.list__item_has-children .list{ 
     visibility: hidden;
 }
 

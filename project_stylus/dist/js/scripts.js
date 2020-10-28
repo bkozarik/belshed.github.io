@@ -197,6 +197,10 @@ $(document).ready(function(){
 		document.querySelectorAll('.js-apartment-img').forEach(img => {
 			img.classList.remove('active');
 		});
+
+		document.querySelectorAll('.plan-help').forEach(item => {
+			item.classList.remove('active');
+		});
 		
 		getFullFloorData(targetFloor, targetTower);
 		fillPng(targetFloor, targetTower);
@@ -246,6 +250,7 @@ $(document).ready(function(){
 				else {
 					$('.floor-one').removeClass('active');
 					$(this).addClass('active');
+					$(this).addClass('hover');
 				}
 			});
 		},
@@ -306,6 +311,7 @@ $(document).ready(function(){
 				    && div.has(e.target).length === 0) { // и не по его дочерним элементам
 					$('.floor-one').removeClass('active');
 					$('.js-apartment-img').removeClass('active');
+					$('.js-apartment-img').removeClass('hover');
 					$('.js-room-list input').prop("checked", false);
 				}
 			});
@@ -347,7 +353,8 @@ $(document).ready(function(){
 
 			helper.origin.querySelector('.tooltipstered').classList.contains('floor-one-left') ? tower = 1 : helper.origin.querySelector('.tooltipstered').classList.contains('floor-one-sigle') ? tower = 3 : tower = 2;
 
-			let floor = Number($(helper.origin).find('.floor-help').find('span').text());
+			let floor = Number($(helper.origin).find('.floor-help').find('span').text().substring(0,2));
+			
 			await getFloorData(floor, tower).then(info => {
 				if(info.freeAp != 0){
 					// instance.__options.updateAnimation = "fade";
