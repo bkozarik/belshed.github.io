@@ -39,8 +39,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    const wowInit = () => {
-        new WOW().init();
+    const aosInit = () => {
+        AOS.init({
+            once: true,
+        });
     }
 
     const scrollHandler = () => {
@@ -115,5 +117,5 @@ document.addEventListener('DOMContentLoaded', () => {
     popupTriggers.forEach(trigger => trigger.addEventListener('click', popupTriggerClick));
     popupCloseTriggers.forEach(trigger => trigger.addEventListener('click', closePopup));
 
-    wowInit();
+    aosInit();
 });

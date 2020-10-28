@@ -359,34 +359,28 @@ section
     width: 100%
     overflow: hidden
     position: relative
-    opacity: 0
-    // transition: opacity 1.5s ease-out 0s
     &_small
         padding-top: 52px
         display: flex
         justify-content: space-between
         align-items: center
         flex-direction: column
-        visibility: hidden
         .item
             &__title
                 max-width: 230px
         &:nth-child(1)
-            transition-delay: .2s
             .item__img
                 transform: translate(20px, 50px)
             &:hover
                 .item__img
                     transform: translate(20px, 50px) scale(1.05)
         &:nth-child(2)
-            transition-delay: .4s
             .item__img
                 transform: translate(20px, 40px)
             &:hover
                 .item__img
                     transform: translate(20px, 40px) scale(1.05)
         &:nth-child(3)
-            transition-delay: .6s
             .item__img
                     transform: translate(15px, 40px)
             &:hover
@@ -406,13 +400,6 @@ section
         grid-template-rows: 360px minmax(220px, auto) 200px 120px
         justify-items: center
         cursor: pointer
-        visibility: hidden
-        &:nth-child(1)
-            transition-delay: .2s
-        &:nth-child(2)
-            transition-delay: .4s
-        &:nth-child(3)
-            transition-delay: .6s
         .item
             &__img img, &__video-preview img
                 transition-duration: .4s
