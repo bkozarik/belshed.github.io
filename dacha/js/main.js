@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     let tableCells = document.querySelectorAll('td');
+    let buttonBanner = document.querySelector('.js-button-catalog');
     let quizButtons = document.querySelectorAll('button.button.button_step');
     let quizPages = document.querySelectorAll('.quiz__page');
     let quizInputs = document.querySelectorAll('.quiz__label input');
@@ -41,9 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
         fixBody();
     }
 
-    const constrain = (val, min, max) => {
-        return val > max ? max : val < min ? min : val;
-    }
+    const constrain = (val, min, max) => val > max ? max : val < min ? min : val;
 
     const scrollLinkClick = () => {
         event.preventDefault();
@@ -91,8 +90,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const quizShowNextPage = () => {
+        setTimeout(() => {
+            return quizShowPage(currPage + 1);
 
-        return quizShowPage(currPage + 1);
+        }, 200);
+
+        
     }
 
     const inputChangeHandler = () => {
@@ -155,11 +158,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if(window.innerWidth <= 780){
             if(mobileErrorsSwiper.dataset.mobile == 'false'){
-                // try{
+                try{
                     document.querySelector('.error__container .swiper-wrapper').insertBefore(errorItems[0], errorItems[1]);
                     document.querySelector('.error .container').appendChild(document.querySelector('.error__item_green'));
-                // }
-                // catch{}
+                }
+                catch{}
 
                 let errorsSwiper = new Swiper('.error__container', {
                     spaceBetween: 30,
@@ -187,7 +190,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
                 mobileErrorsSwiper.dataset.mobile = 'true';
                 mobileErrorsSwiperSW = mobileErrorsSwiper.swiper;
-                // errorItems = document.querySelectorAll('.error__item');
+                errorItems = document.querySelectorAll('.error__item');
             }
             else{
                 mobileErrorsSwiperSW.update();
@@ -247,7 +250,6 @@ document.addEventListener('DOMContentLoaded', () => {
         let targetForm = event.target;
         let formData = new FormData(targetForm);
 
-        let formInputs = targetForm.querySelectorAll('input');
         let request = new XMLHttpRequest();
 
         request.open('POST', './php/ajax-mail.php');
@@ -255,18 +257,14 @@ document.addEventListener('DOMContentLoaded', () => {
         request.onreadystatechange = () => {
             
             if(request.readyState === XMLHttpRequest.DONE) {
-                var status = request.status;
-
                 closePopup();
 
-
-                formData.has('hidden_val') ? openPopup('.js-redirect-popup', null) : openPopup('.js-thx-popup', null);
+                formData.has('hidden_val') && formData.get('hidden_val') != false ? openPopup('.js-redirect-popup', null) : openPopup('.js-thx-popup', null);
+                console.log(request);
             }
         };
 
-        formInputs.forEach(input => {
-            input.value = '';
-        });
+        targetForm.reset();
 
         request.send(formData);
     }
@@ -285,7 +283,7 @@ document.addEventListener('DOMContentLoaded', () => {
             openPopup('.js-download-popup', event.target.dataset.place);
             document.querySelector('.js-download-popup').querySelector('.js-hidden-input').value = index;
 
-            document.querySelector('.js-download-popup form').appendChild(projectName);
+            document.querySelector('.js-download-popup form').appendChild(projectName); //2341
         }
     }
 
@@ -317,7 +315,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const openPopup = (selector, place) => {
 
         let popup = document.querySelector(selector);
-        popup.classList.add('active');
+        popup.classList.add('active');     
 
         switch (place) {
             case "header":
@@ -430,6 +428,7 @@ document.addEventListener('DOMContentLoaded', () => {
     //
     // Попапы
     //
+    //
 
     popupBtn.forEach(btn => btn.addEventListener('click', () => {
         event.preventDefault();
@@ -471,11 +470,9 @@ document.addEventListener('DOMContentLoaded', () => {
         let container = document.querySelector('.portfolio .portfolio__container');
         container.classList.toggle('active');
         container.classList.contains('active') ? event.target.innerText = 'Скрыть' : event.target.innerText = 'Показать еще';
-        let fifthItem = container.querySelectorAll('.portfolio__item')[4];
-        fifthItem.scrollIntoView({block: 'start',})
     });
 
-    document.querySelector('.banner .button_banner').addEventListener('click', () => document.querySelector('.examples').scrollIntoView({ behavior: 'smooth', block: 'start', }));
+    /*document.querySelector('.banner .button_banner').addEventListener('click', () => document.querySelector('.examples').scrollIntoView({ behavior: 'smooth', block: 'start', }));*/
 
     window.addEventListener('resize', resizeHandler);
 
@@ -509,6 +506,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         });
     });
+    
+    buttonBanner.addEventListener('click', () => openPopup('.js-about-popup', 'project'));
 
     resizeHandler();
     popupSwiperInit();

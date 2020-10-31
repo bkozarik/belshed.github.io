@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    const data = getData(url)
+    const data = getData(url);
 
     console.log(data);
 
@@ -60,7 +60,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     if(typeof(data) == 'object'){ // проверяем, что ответ от сервера это объект( массив в js - тоже объект )
-        buildTree(data).forEach(item => mainList.appendChild(item)); // mainList - основной список на странице, тут мы добавляем вы него всех детей, что возвращает buildTree
+        const list = buildTree(data);
+        
+        list.forEach(item => mainList.appendChild(item)); // mainList - основной список на странице, тут мы добавляем вы него всех детей, что возвращает buildTree
     }
     else{
         alert("Че бля?");

@@ -190,9 +190,11 @@ width: 14.74%;
 margin: 30px;
 }
 .house .house-bg {
-background: url("../img/img-house_2.png") no-repeat;
--webkit-background-size: 100% 100%;
+        background: url("../img/img-house_2.png") no-repeat;
+        -webkit-background-size: 100% 100%;
         background-size: 100% 100%;
+        filter: none;
+        -webkit-filter: none;
 }  
 .floor-help{
 margin-left: auto;
@@ -248,7 +250,7 @@ opacity: 1;
         margin-top: 0;
 }
 .floor-main .floor-help{
-        height: 2.54rem;
+        height: 1.8rem;
 }
 .floor-penthouse .floor-one-left, .floor-penthouse .floor-one-right {
         width: 20.1rem;
@@ -301,9 +303,6 @@ background: rgba(210,153,102,0.7);
 position: absolute;
 left: -22.5rem;
 bottom: 3.5rem;
-/* width: 63rem; */
-/* background-color: #fff; */
-/* opacity: .7; */
 width: 80rem;
 }
 .floor-main .floor-one-left{
@@ -322,16 +321,57 @@ display: none;
 }
 .floor-sub {
 position: absolute;
-bottom: 3rem;
+bottom: 3.2rem;
 right: -30rem;
 width: 91.3rem;
 }
 .floor-sub .floor-help {
 width: 6.5rem;
-height: 2.2rem;
+height: 2rem;
+}
+
+.floor-sub .floor-help {
+        height: 2rem;
+}
+    
+.floor-sub .floor-one:first-child {
+margin-bottom: 9px;
 }
 .floor-sub .floor-one {
-margin-bottom: 3px;
+margin-top: 6px;
+}
+.floor-main .floor-one:not(:last-child) {
+        margin-bottom: 7px;
+}
+.floor-main .floor-one:nth-child(19){
+        margin-bottom: 6px;
+}
+.floor-main .floor-one:nth-child(14){
+        margin-bottom: 8px;
+}
+.floor-main .floor-one:nth-child(17) {
+        margin-bottom: 8px;
+}
+.floor-main .floor-one:nth-child(11){
+        margin-bottom: 9px;
+}
+.floor-main .floor-one:nth-child(10) {
+        margin-bottom: 7px;
+}
+.floor-main .floor-one:nth-child(8), .floor-main .floor-one:nth-child(6) {
+        margin-bottom: 9px;
+}
+.floor-main .floor-one:nth-child(5) {
+        margin-bottom: 9px;
+}
+.floor-main .floor-one:nth-child(2) {
+        margin-bottom: 8px;
+}
+.floor-main .floor-one:nth-child(1) {
+        margin-bottom: 8px;
+}
+.floor-main .floor-one:nth-child(1) .floor-help {
+        height: 2rem;
 }
 .floor-sub .floor-one:first-child{
         margin-bottom: 10px;

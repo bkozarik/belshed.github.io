@@ -91,7 +91,7 @@ body {
     height: auto;
 }
 /* показываем внитренний список если есть класс active */
-.list__item_has-children.active>.list {
+.list__item_has-children.active > .list {
     visibility: visible;
     height: auto;
 }

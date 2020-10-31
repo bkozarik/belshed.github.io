@@ -1,0 +1,4 @@
+Email: proekt-dacha@ya.ru
+Password: davtck867
+Smtp host: smtp.yandex.ru
+Smtp port: 465
