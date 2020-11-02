@@ -17,6 +17,10 @@ body
 html
     overflow-x: hidden
 
+span.uk-h1, span.uk-h2, span.uk-h3, span.uk-h4, span.uk-h5, h1, h2, h3, h4, h5
+    display: inline-block
+    position: relative
+
 .no-overflow
     overflow: visible !important
 
@@ -336,6 +340,15 @@ html
         width: 240px
         padding: 0
 
+ul:not([class]) li
+    list-style-image: url(../img/list-img.png)
+    li
+        &::before
+            display: none
+    ul:not([class])
+        margin-left: 2em
+        list-style-image: url(../img/swoosh.png)
+
 .mobile-menu
     position: fixed
     left: 0
@@ -439,7 +452,7 @@ html
     &>*:not(.form)
         overflow: hidden
 
-.uk-h1
+.uk-h1, h1
     font-family: 'Geometria', sans-serif
     font-size: 40px
     font-weight: 700
@@ -452,6 +465,8 @@ html
         max-width: 515px
         margin-top: -30px !important
         .uk-text-large
+            display: inline-block
+            margin-bottom: 20px
             font-size: 16px
             line-height: 24px
             margin-top: 15px
@@ -593,7 +608,7 @@ html
         .uk-list
             margin-left: 2em
             list-style-image: url(../img/swoosh.png)
-    h2.uk-h1
+    h2.uk-h1, span.uk-h1, h2, h1, h3, h4, h5
         position: relative
         &::after
             content: ''
@@ -601,7 +616,7 @@ html
             width: 40px
             height: 5px
             position: absolute
-            bottom: 0px
+            bottom: -4px
             left: 0
             background-color: $green
     .button
@@ -746,7 +761,7 @@ html
                 background-color: $green
                 margin-top: -1px
 
-.uk-h2
+.uk-h2, h2
     font-weight: bold
     font-size: 40px
     margin-bottom: 0
@@ -827,7 +842,7 @@ html
         bottom: 0
         left: 0
         z-index: -1
-    h2.uk-h1
+    h2.uk-h1, h2, h1, h3, h4, h5
         position: relative
         &::after
             content: ''
@@ -940,6 +955,8 @@ html
         &-wrap
             min-width: 250px
             padding: 13px !important
+        &, & *
+            flex-shrink: 0
     &__radio
         display: inline-block
         position: absolute
@@ -1016,7 +1033,7 @@ html
                 visibility: visible
                 opacity: 1
                 transform: translateY(0px)
-    .uk-h2, .uk-text-meta
+    .uk-h2, .uk-text-meta, h2, h3, h4, h1
         color: #fff
         margin: 0
     .uk-text-meta
@@ -1199,7 +1216,7 @@ html
             background-position: center
     &_fullscreen
         padding: 120px 0px
-        .uk-h1
+        .uk-h1, h1, h2, h3, h4, h5
             position: relative
             margin-bottom: 30px
             &::after
@@ -1332,6 +1349,7 @@ html
         font-size: 18px
         line-height: 22px
         margin-bottom: 0
+        margin-right: 10px
     &__body
         position: relative
         max-width: 810px
@@ -1353,6 +1371,51 @@ html
             right: 0
             bottom: 0
             transform: translate(120%, 90%) rotate(180deg)
+    &__info
+        display: flex
+        flex-wrap: wrap
+        align-items: center
+    &__rating
+        flex-grow: 0
+        height: 100%
+        background-repeat-x: repeat
+        background-size: contain
+        background-image: url(../img/rate_off-g.png)
+        height: 13px
+        width: 70px
+        flex-shrink: 0
+        position: relative
+        &_0 .review__stars
+            width: calc( 0 * 14px )
+        &_1 .review__stars
+            width: calc( 1 * 14px )
+        &_2 .review__stars
+            width: calc( 2 * 14px )
+        &_3 .review__stars
+            width: calc( 3 * 14px )
+        &_4 .review__stars
+            width: calc( 4 * 14px )
+        &_5 .review__stars
+            width: calc( 5 * 14px )
+        &_0-5 .review__stars
+            width: calc( 0.5 * 14px )
+        &_1-5 .review__stars
+            width: calc( 1.5 * 14px )
+        &_2-5 .review__stars
+            width: calc( 2.5 * 14px )
+        &_3-5 .review__stars
+            width: calc( 3.5 * 14px )
+        &_4-5 .review__stars
+            width: calc( 4.5 * 14px )
+    &__stars
+        position: absolute
+        width: 14px
+        height: 100%
+        background-image: url(../img/rate_on.png)
+        background-repeat-x: repeat
+        background-size: contain
+        left: 0
+        filter: grayscale(0)
     &__page
         box-shadow: none
         padding-right: 70px

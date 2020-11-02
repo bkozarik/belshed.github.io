@@ -100,9 +100,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const inputChangeHandler = () => {
         if(event.target.value){
-            let nextBtn = quizPages[currPage].querySelector('.button_next');
+            // let nextBtn = quizPages[currPage].querySelector('.button_next');
 
-            nextBtn.classList.add('active');
+            // nextBtn.classList.add('active');
         }
     }
 
@@ -260,7 +260,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 closePopup();
 
                 formData.has('hidden_val') && formData.get('hidden_val') != false ? openPopup('.js-redirect-popup', null) : openPopup('.js-thx-popup', null);
-                console.log(request);
             }
         };
 
