@@ -54,7 +54,7 @@ section
     position: fixed
     width: 100%
     left: 0
-    z-index: 2
+    z-index: 4
 
 .header
     top: 0
@@ -90,6 +90,7 @@ section
     padding: 5px 5px
     box-shadow: 0 0 0 1px #717172
     border-radius: 4px
+    display: flex
     &__item
         cursor: pointer
     &__radio
@@ -106,6 +107,73 @@ section
         line-height: 40px
         display: inline-block
         padding: 0px 15px
+
+.burger
+    display: none
+    height: 40px
+    width: 40px
+    flex-shrink: 0
+    background-color: transparent
+    border: none
+    border-radius: 5px
+    margin-left: 15px
+    position: relative
+    span, &::before, &::after
+        content: ''
+        display: inline-block
+        width: 25px
+        height: 2px
+        background-color: #fff
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        transition:  top .15s ease-in .15s, transform .15s ease-in 0s, opacity .1s ease-in .15s
+    &::before
+        top: calc( 9px + 50% )
+    &::after
+        top: calc( -9px + 50% )
+    &.active
+        span, &::before, &::after
+            transform: translate(-50%, -50%)
+            top: 50%
+            transition:  top .15s ease-in 0s, transform .15s ease-in .15s, opacity .15s ease-in .1s
+        span
+            opacity: 0
+        &::before
+            transform: translate(-50%, -50%) rotate(45deg)
+        &::after
+            transform: translate(-50%, -50%) rotate(-45deg)
+    &:focus
+        outline: none
+
+.menu
+    position: fixed
+    z-index: 3
+    height: 100vh
+    width: 100%
+    left: 0
+    top: 0
+    background-color: rgba(34, 35, 40, 0.7)
+    backdrop-filter: blur(5px)
+    transform: translateY(-100%)
+    opacity: 0
+    visibility: hidden
+    pointer-events: none
+    padding: 70px 10px 0px
+    display: flex
+    flex-direction: column
+    align-items: center
+    &.active
+        transform: translateY(0%)
+        opacity: 1
+        visibility: visible
+        pointer-events: all
+    .nav
+        margin: 20px 0px 40px
+        &__list
+            flex-direction: column
+            align-items: center
 
 .main
     height: 100vh
@@ -133,11 +201,31 @@ section
         display: grid
         grid-template-columns: repeat(4, 1fr)
         grid-gap: 26px 16px
+        justify-items: center
+        &.active
+            max-height: none
+    &__button
+        font-size: 16px
+        width: 100%
+        max-width: 340px
+        display: none
+        margin: 30px auto 0px
+        background-color: $text_blue
+        border-radius: 5px
+        padding: 15px 35px
+        box-shadow: 0 0 16px 8px rgba(0, 0, 0, .15)
+        white-space: nowrap
+        overflow-anchor: none
+        &:hover
+            box-shadow: 0 0 16px 8px rgba(0, 102, 204, 0.1)
+        &:focus
+            outline: none
 
 .project
     display: flex
     flex-direction: column
     align-items: stretch
+    width: 100%
     &:nth-child(1) .project__logo
         background-image: url(../img/partner_1-g.png)
     &:nth-child(2) .project__logo
@@ -195,27 +283,30 @@ section
     &__wrap
         display: flex
         justify-content: space-between
-        align-items: center
+        align-items: stretch
     &__content
-        flex-basis: 24.6%
+        flex-basis: 320px
+        flex-shrink: 0
         & > .about__text
             margin-top: 18px
             display: inline-block
     &__map
         flex-basis: 63.8%
-        height: 100%
         max-height: 482px
         overflow: hidden
+        margin-top: 40px
+        margin-left: 30px
         iframe
             width: 100%
             height: 100%
             border-radius: 10px
 
 .form
-    display: flex
-    flex-direction: column
-    align-items: stretch
     margin-top: 22px
+    &, &__fields
+        display: flex
+        flex-direction: column
+        align-items: stretch
     &__input, &__textarea, &__button
         background-color: transparent
         border: none
@@ -289,7 +380,9 @@ section
         padding: 15px 55px
         box-shadow: 0 0 16px 8px rgba(0, 0, 0, .15)
         &:hover
-            box-shadow: 0 0 16px 8px rgba(0, 102, 204, 0.1)       
+            box-shadow: 0 0 16px 8px rgba(0, 102, 204, 0.1)
+        &:focus
+            outline: none
 
 .footer
     bottom: 0
@@ -308,5 +401,9 @@ section
     &__text
         font-size: 17px
         letter-spacing: -0.1px
-    a.footer__text:hover
-        color: $text_blue
+        text-align: center
+        display: inline-block
+    a.footer__text
+        white-space: nowrap
+        &:hover
+            color: $text_blue

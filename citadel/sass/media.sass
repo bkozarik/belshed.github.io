@@ -1,0 +1,206 @@
+@media screen and ( max-height: 900px )
+    .main
+        padding: 90px 0px 95px
+
+    .about
+        padding-top: 80px
+
+    .portfolio
+        &__wrapper
+            max-width: 800px
+            width: 100%
+            margin: 0 auto
+
+    .project
+        &__logo
+            max-height: 175px
+            background-size: 75%
+        &:nth-child(1) &__logo
+            background-size: 50%
+            
+@media screen and ( max-width: 1060px )
+    .header
+        &__wrap
+            justify-content: space-between
+
+    .nav, .language
+        margin-left: 0px
+
+    .footer
+        &__contacts
+            justify-content: space-between
+            max-width: none
+        &__contact:nth-child(3)
+            margin: 0px 30px
+        &__contact:nth-child(2)
+            order: 1
+            
+@media screen and ( max-width: 900px )
+    .logo
+        &__img
+            max-width: 170px
+            height: auto
+
+    .nav
+        margin: 0px 30px
+
+    .language
+        padding: 0
+        &__text
+            padding: 0px 7px
+
+@media screen and ( max-width: 770px )
+    body
+        height: auto
+
+    .main
+        height: auto
+        .swiper-wrapper
+            display: block
+
+    .about, .portfolio, .contacts
+        padding-top: 60px
+        padding-bottom: 40px
+
+    .about
+        padding-top: 20px
+
+    .nav
+        &__link
+            font-size: 16px
+
+    .language
+        &__text
+            font-size: 16px
+            line-height: 35px
+
+    .logo
+        &__img
+            max-width: 150px
+
+    .header
+        background-color: rgba(34, 35, 40, 0.4)
+        backdrop-filter: blur(5px)
+        &__wrap
+            padding: 25px 0px
+
+    .contacts
+        &__wrap
+            flex-direction: column
+        &__map, &__content
+            flex-basis: auto
+        &__map
+            margin-left: 0
+            height: 400px
+
+    .form
+        &__textarea
+            margin-right: 0
+
+    .footer
+        position: absolute
+
+@media screen and ( max-width: 740px )
+    .portfolio
+        &__wrapper
+            grid-template-columns: repeat(3, 1fr)
+
+@media screen and ( max-width: 680px )
+    .footer
+        &__contacts
+            display: grid
+            grid-template-columns: 140px 1fr
+            width: 100%
+        &__wrap
+            padding-bottom: 10px
+        &__contact
+            width: 100%
+        &__text
+            padding: 5px 0px
+        &__contact:nth-child(3)
+            grid-row: 1 / 3
+            grid-column: 2 / 3
+            order: 2
+            margin: 0px
+            padding-left: 20px
+            .footer__text
+                text-align: right
+                display: inline-block
+                width: 100%
+                line-height: 25px
+
+@media screen and ( max-width: 630px )
+    .burger
+        display: inline-block
+
+    .header
+        .nav, .language
+            display: none
+
+@media screen and ( max-width: 550px )
+    .section
+        &__title
+            font-size: 32px
+            line-height: 38px
+
+    .header
+        &__wrap
+            padding: 15px 0px
+
+    .portfolio
+        &__wrapper
+            grid-template-columns: repeat(2, 1fr)
+
+@media screen and ( max-width: 420px )
+    .portfolio
+        &__button
+            display: block
+        &__wrapper
+            grid-template-columns: repeat(1, 1fr)
+            max-height: 740px
+            overflow: hidden
+
+    .project
+        max-width: 250px
+
+    .about
+        &__title
+            margin-bottom: 30px
+
+    .main
+        padding: 90px 0px 165px
+
+    .form
+        &__button
+            margin-right: 0
+            width: 100%
+
+    .contacts
+        padding-bottom: 0
+        &__map
+            margin-top: 70px
+            height: 300px
+            flex-grow: 1
+
+    .footer
+        &__contacts
+            grid-template-columns: 1fr
+        &__contact
+            display: flex
+            align-items: center
+            justify-content: center
+        &__text
+            text-align: center
+        &__contact:nth-child(3)
+            grid-row: auto
+            grid-column: auto
+            order: auto
+            padding-left: 0px
+            .footer__text
+                text-align: center
+
+@media screen and ( max-width: 350px )
+    .section
+        &__title
+            font-size: 28px
+            line-height: 34px
