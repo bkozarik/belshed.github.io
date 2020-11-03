@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru-Ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Цитадель</title>
+    <link rel="icon" href="./img/favicon.png">
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="./js/main.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container container_large">
+            <div class="header__wrap">
+                <div class="logo">
+                    <img src="./img/logo.png" alt="Логотип">
+                </div>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="#" class="nav__link js-scroll-link active" data-page="1">Цитадель</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link js-scroll-link" data-page="2">Активы</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link js-scroll-link" data-page="3">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="language">
+                    <label class="language__item">
+                        <input class="language__radio js-language-radio" type="radio" name="language" value="rus" checked>
+                        <span class="language__text">rus</span>
+                    </label>
+                    <label class="language__item">
+                        <input class="language__radio js-language-radio" type="radio" name="language" value="eng">
+                        <span class="language__text">eng</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main js-main-swiper">
+        <div class="swiper-wrapper">
+            <section class="about swiper-slide">
+                <div class="container container_small">
+                    <h1 class="section__title about__title">Инвестиционно-управляющая компания «Цитадель»</h1>
+                    <p class="about__text">Инвестиционно-управляющая группа «Цитадель» объединяет ведущие компании в области разработки решений для обеспечения информационной безопасности и реализации требований СпОС.</p>
+                    <p class="about__text">Группа компаний «Цитадель» — крупнейший производитель систем легального контроля и решений по информационной безопасности с офисами в Москве, Санкт-Петербурге, Нижнем Новгороде, Новосибирске, Ярославле, Орле с общим штатом более тысячи специалистов высокой квалификации.</p>
+                    <p class="about__text">Опыт реализации крупных проектов для государственных и коммерческих компаний позволяет участвовать в формировании ключевых направлений развития ИТ-отраслей в соответствии с государственными инициативами. Синергия технического потенциала группы компаний дает основу для постоянного расширения экспертизы.</p>
+                </div>
+            </section>
+            <div class="portfolio swiper-slide">
+                <div class="container container_medium">
+                    <div class="portfolio__wrapper">
+                        <a href="#" class="project">
+                            <div class="project__logo"></div>
+                            <div class="project__body">
+                                <h2 class="project__name">СпОС 2<br>СпОС 3</h2>
+                            </div>
+                        </a>
+                        <a href="#" class="project">
+                            <div class="project__logo"></div>
+                            <div class="project__body">
+                                <h2 class="project__name">СпОС 1<br>СпОС IMS</h2>
+                            </div>
+                        </a>
+                        <a href="#" class="project">
+                            <div class="project__logo"></div>
+                            <div class="project__body">
+                                <h2 class="project__name">СпОС 2<br>СпОС MVNO</h2>
+                            </div>
+                        </a>
+                        <a href="#" class="project">
+                            <div class="project__logo"></div>
+                            <div class="project__body">
+                                <h2 class="project__name">Информационная безопасность</h2>
+                            </div>
+                        </a>
+                        <a href="#" class="project">
+                            <div class="project__logo"></div>
+                            <div class="project__body">
+                                <h2 class="project__name">СпОС 2<br>СпОС 3</h2>
+                            </div>
+                        </a>
+                        <a href="#" class="project">
+                            <div class="project__logo"></div>
+                            <div class="project__body">
+                                <h2 class="project__name">Комплексы ЦКП СОРД<br>Имитаторы ПУ СпОС</h2>
+                            </div>
+                        </a>
+                        <a href="#" class="project">
+                            <div class="project__logo"></div>
+                            <div class="project__body">
+                                <h2 class="project__name">Система анализа трафика/DPI</h2>
+                            </div>
+                        </a>
+                        <a href="#" class="project">
+                            <div class="project__logo"></div>
+                            <div class="project__body">
+                                <h2 class="project__name">Производство и поставка тех.оборудования</h2>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <section class="contacts swiper-slide">
+                <div class="container container_big">
+                    <div class="contacts__wrap">
+                        <div class="contacts__content">
+                            <h2 class="section__title">Напишите нам</h2>
+                            <span class="about__text">Задайте вопрос через форму и мы свяжемся с вами в течение дня</span>
+                            <form class="form js-contact-form">
+                                <input type="text" class="form__input" placeholder="Ваше имя">
+                                <input type="email" class="form__input" placeholder="e-mail">
+                                <input type="tel" class="form__input" placeholder="Телефон">
+                                <input type="text" class="form__input" placeholder="Компания">
+                                <textarea class="form__textarea" rows="3" placeholder="Ваши пожелания"></textarea>
+                                <label class="form__label">
+                                    <input class="form__checkbox" type="checkbox" name="agreement">
+                                    <span class="form__fake"></span>
+                                    <span class="form__label-text">Нажимая кнопку "Отправить" я соглашаюсь с&nbsp;<a href="#" target="_blank" class="form__label-link">Политикой обработки персональных данных</a></span>
+                                </label>
+                                <button class="button form__button">отправить</button>
+                            </form>
+                        </div>
+                        <div class="contacts__map">
+    
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container container_large">
+            <div class="footer__wrap">
+                <ul class="footer__contacts">
+                    <li class="footer__contact">
+                        <a href="tel:+74956662333" class="footer__text">+7 (495) 666-23-33</a>
+                    </li>
+                    <li class="footer__contact">
+                        <a href="mailto:info@ctdl.ru" class="footer__text">info@ctdl.ru</a>
+                    </li>
+                    <li class="footer__contact">
+                        <span class="footer__text">119607, Москва, Мичуринский проспект, д.27, к.5</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/swiper-bundle.min.js"></script>
+</body>
+</html>

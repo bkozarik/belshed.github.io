@@ -44,59 +44,62 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const updSlidersPagination = () => { // Пагинация у слайдеров
-        try{
-            sliders.forEach(slider => {
-                try{
-                    let paginationTotal = slider.querySelectorAll('.slider__pagination-total');
-                    let sliderItems = slider.querySelectorAll('.uk-slider-items li');
-                    let sliderItemsActive = slider.querySelectorAll('li.uk-active');
+        setTimeout(() => {
+            try{
+                sliders.forEach(slider => {
+                    try{
+                        let paginationTotal = slider.querySelectorAll('.slider__pagination-total');
+                        let sliderItems = slider.querySelectorAll('.uk-slider-items li');
+                        let sliderItemsActive = slider.querySelectorAll('li.uk-active');
+        
+                        paginationTotal.forEach(item => {
+                            item.innerText = sliderItems.length - sliderItemsActive.length + 1;
+                        });
     
-                    paginationTotal.forEach(item => {
-                        item.innerText = sliderItems.length - sliderItemsActive.length + 1;
-                    });
-
-                    let counter = 0,
-                        activePos;
-
-                    sliderItems.forEach(item => {
-                        if(item.classList.contains('uk-active') && activePos == undefined){
-                            activePos = counter;
-                        }
-                        counter += 1;
-                    });
-                    let paginationActive = slider.querySelectorAll('.slider__pagination-active');
-                    paginationActive.forEach(span => {
-                        span.innerText = activePos + 1;
-                    });
-
-                }   
-                catch{}
+                        let counter = 0,
+                            activePos;
     
-                UIkit.slider(slider, {finite: true});
-
-                slider.addEventListener('itemshow', () => {
-                    let target = event.target;
-                    let targetWrap = target.parentNode;
-
-                    let sliderItems = targetWrap.querySelectorAll('li');
-                    let counter = 0,
-                        activePos;
-
-                    sliderItems.forEach(item => {
-                        if(target == item){
-                            activePos = counter;
-                        }
-                        counter += 1;
-                    });
-
-                    let paginationActive = slider.querySelectorAll('.slider__pagination-active');
-                    paginationActive.forEach(span => {
-                        span.innerText = activePos + 1;
+                        sliderItems.forEach(item => {
+                            if(item.classList.contains('uk-active') && activePos == undefined){
+                                activePos = counter;
+                            }
+                            counter += 1;
+                        });
+                        let paginationActive = slider.querySelectorAll('.slider__pagination-active');
+                        paginationActive.forEach(span => {
+                            span.innerText = activePos + 1;
+                        });
+    
+                    }   
+                    catch{}
+        
+                    UIkit.slider(slider, {finite: true});
+    
+                    slider.addEventListener('itemshow', () => {
+                        let target = event.target;
+                        let targetWrap = target.parentNode;
+    
+                        let sliderItems = targetWrap.querySelectorAll('li');
+                        let counter = 0,
+                            activePos;
+    
+                        sliderItems.forEach(item => {
+                            if(target == item){
+                                activePos = counter;
+                            }
+                            counter += 1;
+                        });
+    
+                        let paginationActive = slider.querySelectorAll('.slider__pagination-active');
+                        paginationActive.forEach(span => {
+                            span.innerText = activePos + 1;
+                        });
                     });
                 });
-            });
-        }
-        catch{}
+            }
+            catch{}
+
+        }, 200);
     }
 
     const faqActiveCategorySync = () => {

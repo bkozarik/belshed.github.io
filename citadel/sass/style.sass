@@ -1,0 +1,312 @@
+$main_bg: #222328
+$text_blue: #0066cc
+    
+*, *::before, *::after
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    font-family: "PT Sans", sans-serif
+    text-decoration: none
+    border-radius: 0px
+    transition: all .25s ease-in-out 0s
+    color: #ffffff
+
+body
+    position: relative
+    height: 100vh
+    overflow-x: hidden
+    background-color: $main_bg
+
+.container
+    width: 100%
+    padding: 0px 15px
+    position: relative
+    margin: 0 auto
+    &_large
+        max-width: 1530px
+    &_big
+        max-width: 1330px
+    &_medium
+        max-width: 950px
+    &_small
+        max-width: 835px
+
+section
+    position: relative
+
+.section
+    &__title
+        font-weight: 700
+        font-size: 40px
+        line-height: 48px
+
+.button
+    display: inline-block
+    background-color: transparent
+    border-radius: 0px
+    border: none
+    position: relative
+    cursor: pointer
+    text-transform: uppercase
+    color: #ffffff
+
+.header, .footer
+    position: fixed
+    width: 100%
+    left: 0
+    z-index: 2
+
+.header
+    top: 0
+    &__wrap
+        display: flex
+        align-items: center
+        padding: 55px 0px
+
+.nav
+    max-width: 425px
+    width: 100%
+    margin-left: 137px
+    &__list
+        display: flex
+        align-items: center
+        justify-content: space-between
+        width: 100%
+        list-style-type: none
+    &__item
+        margin: 0px 5px
+    &__link
+        display: inline-block
+        font-weight: 700
+        color: #ffffff
+        line-height: 40px
+        font-size: 18px
+        text-transform: uppercase
+        &:hover, &.active
+            color: $text_blue
+
+.language
+    margin-left: auto
+    padding: 5px 5px
+    box-shadow: 0 0 0 1px #717172
+    border-radius: 4px
+    &__item
+        cursor: pointer
+    &__radio
+        position: absolute
+        opacity: 0
+        visibility: hidden
+    &__radio:checked + &__text
+        color: $text_blue
+    &__text
+        text-transform: uppercase
+        font-size: 16px
+        color: #ffffff
+        font-weight: bold
+        line-height: 40px
+        display: inline-block
+        padding: 0px 15px
+
+.main
+    height: 100vh
+    position: relative
+    background-image: url(../img/main_bg.jpg)
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center
+    padding: 160px 0px 95px
+    overflow: hidden
+
+.about
+    padding-top: 121px
+    &__title
+        margin-bottom: 55px
+    &__text
+        font-size: 17px
+        line-height: 23px
+        & + &
+            margin-top: 1.4em
+
+.portfolio
+    padding-top: 50px
+    &__wrapper
+        display: grid
+        grid-template-columns: repeat(4, 1fr)
+        grid-gap: 26px 16px
+
+.project
+    display: flex
+    flex-direction: column
+    align-items: stretch
+    &:nth-child(1) .project__logo
+        background-image: url(../img/partner_1-g.png)
+    &:nth-child(2) .project__logo
+        background-image: url(../img/partner_2-g.png)
+    &:nth-child(3) .project__logo
+        background-image: url(../img/partner_3-g.png)
+    &:nth-child(4) .project__logo
+        background-image: url(../img/partner_4-g.png)
+    &:nth-child(5) .project__logo
+        background-image: url(../img/partner_5-g.png)
+    &:nth-child(6) .project__logo
+        background-image: url(../img/partner_6-g.png)
+    &:nth-child(7) .project__logo
+        background-image: url(../img/partner_7-g.png)
+    &:nth-child(8) .project__logo
+        background-image: url(../img/partner_8-g.png)
+    &__logo
+        border-radius: 5px
+        background-color: #fff
+        height: 215px
+        position: relative
+        overflow: hidden
+        background-position: center
+        background-repeat: no-repeat
+    &__body
+        padding: 10px 5px 0px
+    &__name
+        text-align: center
+        font-weight: 400
+        font-size: 17px
+        line-height: 20px
+    &:hover
+        &:nth-child(1) .project__logo
+            background-image: url(../img/partner_1.png)
+        &:nth-child(2) .project__logo
+            background-image: url(../img/partner_2.png)
+        &:nth-child(3) .project__logo
+            background-image: url(../img/partner_3.png)
+        &:nth-child(4) .project__logo
+            background-image: url(../img/partner_4.png)
+        &:nth-child(5) .project__logo
+            background-image: url(../img/partner_5.png)
+        &:nth-child(6) .project__logo
+            background-image: url(../img/partner_6.png)
+        &:nth-child(7) .project__logo
+            background-image: url(../img/partner_7.png)
+        &:nth-child(8) .project__logo
+            background-image: url(../img/partner_8.png)
+        .project
+            &__logo
+                background-color: $text_blue
+
+.contacts
+    padding-top: 40px
+    &__wrap
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &__content
+        flex-basis: 24.6%
+        & > .about__text
+            margin-top: 18px
+            display: inline-block
+    &__map
+        flex-basis: 63.8%
+        height: 100%
+        max-height: 482px
+        overflow: hidden
+        iframe
+            width: 100%
+            height: 100%
+            border-radius: 10px
+
+.form
+    display: flex
+    flex-direction: column
+    align-items: stretch
+    margin-top: 22px
+    &__input, &__textarea, &__button
+        background-color: transparent
+        border: none
+        resize: none
+        font-size: 16px
+        text-transform: uppercase
+        &:focus
+            outline: none
+    &__input
+        border-bottom: 1px solid #656565
+        padding: 6px 0px
+        & + &
+            margin-top: 12px
+    &__input + &__textarea
+        margin-top: 18px
+    &__textarea
+        border: 1px solid #656565
+        border-radius: 4px
+        text-transform: none
+        font-style: italic
+        margin-right: 10px
+        line-height: 23px
+        padding: 15px 25px
+    &__label
+        user-select: none
+        cursor: pointer
+        margin-top: 15px
+        margin-bottom: 30px
+        &-text, &-text *
+            font-size: 15px
+            line-height: 18px
+        &-link
+            color: $text_blue
+            text-decoration: underline
+    &__checkbox
+        position: absolute
+        opacity: 0
+        visibility: hidden
+        height: 1px
+        width: 1px
+    &__checkbox:checked + &__fake
+        &::before
+            opacity: 1
+    &__fake
+        display: inline-block
+        position: relative
+        height: 11px
+        width: 11px
+        border-radius: 3px
+        background-color: #fff
+        margin-right: 5px
+        &::before
+            transition-duration: .1s
+            opacity: 0
+            position: absolute
+            top: 50%
+            left: 47%
+            transform: translate(-50%, -50%)
+            background-size: contain
+            background-repeat: no-repeat
+            background-position: center
+            background-image: url(../img/tip.png)
+            height: 10px
+            width: 10px
+            display: inline-block
+            content: ''
+    &__button
+        margin-right: auto
+        background-color: $text_blue
+        border-radius: 5px
+        padding: 15px 55px
+        box-shadow: 0 0 16px 8px rgba(0, 0, 0, .15)
+        &:hover
+            box-shadow: 0 0 16px 8px rgba(0, 102, 204, 0.1)       
+
+.footer
+    bottom: 0
+    &__wrap
+        padding: 35px 0px
+        display: flex
+        align-items: center
+        justify-content: flex-start
+    &__contacts
+        display: flex
+        justify-content: space-between
+        align-items: center
+        width: 100%
+        list-style-type: none
+        max-width: 653px
+    &__text
+        font-size: 17px
+        letter-spacing: -0.1px
+    a.footer__text:hover
+        color: $text_blue
