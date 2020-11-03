@@ -506,7 +506,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
     
-    buttonBanner.addEventListener('click', () => openPopup('.js-about-popup', 'project'));
+    // buttonBanner.addEventListener('click', () => openPopup('.js-about-popup', 'project'));
 
     resizeHandler();
     popupSwiperInit();
