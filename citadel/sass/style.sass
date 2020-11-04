@@ -34,6 +34,10 @@ body
 section
     position: relative
 
+.swiper-slide:not(.swiper-slide-active)
+    opacity: 0
+    transition: opacity .3s ease-in 0s
+
 .section
     &__title
         font-weight: 700
