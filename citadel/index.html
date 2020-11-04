@@ -43,29 +43,7 @@
         </div>
     </header>
     <div class="menu js-menu">
-        <nav class="nav">
-            <ul class="nav__list">
-                <li class="nav__item">
-                    <a href="#about" class="nav__link js-scroll-link active" data-page="1">Цитадель</a>
-                </li>
-                <li class="nav__item">
-                    <a href="#portfolio" class="nav__link js-scroll-link" data-page="2">Активы</a>
-                </li>
-                <li class="nav__item">
-                    <a href="#contacts" class="nav__link js-scroll-link" data-page="3">Контакты</a>
-                </li>
-            </ul>
-        </nav>
-        <div class="language">
-            <label class="language__item">
-                <input class="language__radio js-language-radio" type="radio" name="language" value="rus" checked>
-                <span class="language__text">rus</span>
-            </label>
-            <label class="language__item">
-                <input class="language__radio js-language-radio" type="radio" name="language" value="eng">
-                <span class="language__text">eng</span>
-            </label>
-        </div>
+            
     </div>
     <main class="main js-main-swiper">
         <div class="swiper-wrapper">
@@ -140,22 +118,22 @@
                             <span class="about__text">Задайте вопрос через форму и мы свяжемся с вами в течение дня</span>
                             <form class="form js-contact-form">
                                 <div class="form__fields">
-                                    <input type="text" class="form__input" placeholder="Ваше имя">
-                                    <input type="email" class="form__input" placeholder="e-mail">
-                                    <input type="tel" class="form__input" placeholder="Телефон">
-                                    <input type="text" class="form__input" placeholder="Компания">
-                                    <textarea class="form__textarea" rows="3" placeholder="Ваши пожелания"></textarea>
+                                    <input type="text" name="user_name" class="form__input" placeholder="Ваше имя">
+                                    <input type="email" name="user_mail" class="form__input" placeholder="e-mail" required>
+                                    <input type="tel" name="user_tel" class="form__input" placeholder="Телефон" required>
+                                    <input type="text" name="user_company" class="form__input" placeholder="Компания">
+                                    <textarea class="form__textarea" name="user_wishes" rows="3" placeholder="Ваши пожелания"></textarea>
                                 </div>
                                 <label class="form__label">
-                                    <input class="form__checkbox" type="checkbox" name="agreement">
+                                    <input class="form__checkbox" type="checkbox" name="agreement" required>
                                     <span class="form__fake"></span>
-                                    <span class="form__label-text">Нажимая кнопку "Отправить" я соглашаюсь с&nbsp;<a href="#" target="_blank" class="form__label-link">Политикой обработки персональных данных</a></span>
+                                    <span class="form__label-text">Нажимая кнопку "Отправить" я соглашаюсь с <button type="button" class="form__label-link js-policy-trigger">Политикой обработки персональных данных</button></span>
                                 </label>
-                                <button class="button form__button">отправить</button>
+                                <button type="button" class="button form__button js-form-trigger">отправить</button>
                             </form>
                         </div>
                         <div class="contacts__map">
-                            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A17e0a35376584c534891e4a86ad56c338e7c39cdb86ee02730978682c06889e0&amp;source=constructor" width="100%" height="586" frameborder="0"></iframe>
+                            <iframe src="https://www.google.com/maps/d/embed?mid=1Lwy-2-1F1MNeHtJE3mz1H576T8474-w0" width="640" height="480"></iframe>
                         </div>
                     </div>
                 </div>
@@ -179,6 +157,30 @@
             </div>
         </div>
     </footer>
+
+    <div class="popup__overlay js-popup-overlay">
+        <div class="popup popup_success js-success-popup">
+            <button class="popup__close js-close-popup"></button>
+            <div class="popup__tip">
+                <img class="popup__tip-img" src="./img/popup-tip.png" alt="tip">
+            </div>
+            <p class="popup__text">Ваши данные успешно отправлены. В ближайшее время с вами свяжется наш менеджер</p>
+        </div>
+        
+        <div class="popup popup_documents js-documents-popup">
+            <button class="popup__close js-close-popup"></button>
+            <div class="popup__documents">
+                <div class="popup__document">
+                    <img class="popup__document-img" src="./img/doc-view.png" alt="Иконка">
+                    <a href="#" class="popup__text">Просмотреть</a>
+                </div>
+                <div class="popup__document">
+                    <img class="popup__document-img" src="./img/doc-download.png" alt="Иконка">
+                    <a href="#" class="popup__text">Скачать</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="./js/swiper-bundle.min.js"></script>
 </body>

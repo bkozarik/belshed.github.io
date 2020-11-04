@@ -133,10 +133,6 @@
     .burger
         display: inline-block
 
-    .header
-        .nav, .language
-            display: none
-
 @media screen and ( max-width: 550px )
     .section
         &__title
@@ -146,6 +142,12 @@
     .header
         &__wrap
             padding: 15px 0px
+
+    .popup
+        &_success
+            padding: 40px
+        &__documents
+            justify-content: space-between
 
     .portfolio
         &__wrapper
@@ -174,6 +176,8 @@
         &__button
             margin-right: 0
             width: 100%
+        &__textarea
+            padding: 10px 15px
 
     .contacts
         padding-bottom: 0
@@ -181,6 +185,13 @@
             margin-top: 70px
             height: 300px
             flex-grow: 1
+
+    .popup
+        &__documents
+            flex-direction: column
+        &__document
+            & + &
+                margin-top: 30px
 
     .footer
         &__contacts
@@ -204,3 +215,7 @@
         &__title
             font-size: 28px
             line-height: 34px
+
+    .popup
+        &_success
+            padding: 40px 30px

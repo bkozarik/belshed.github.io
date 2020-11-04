@@ -300,6 +300,9 @@ section
             width: 100%
             height: 100%
             border-radius: 10px
+            border: none
+            &:focus
+                outline: none
 
 .form
     margin-top: 22px
@@ -341,6 +344,15 @@ section
         &-link
             color: $text_blue
             text-decoration: underline
+            display: inline
+            border: none
+            background-color: transparent
+            appearance: none
+            text-align: left
+            cursor: pointer
+            white-space: wrap
+            &:focus
+                outline: none
     &__checkbox
         position: absolute
         opacity: 0
@@ -407,3 +419,101 @@ section
         white-space: nowrap
         &:hover
             color: $text_blue
+
+.popup
+    background-color: $text_blue
+    border-radius: 5px
+    box-shadow: 0 0 16px 8px rgba(0, 0, 0, .15)
+    position: relative
+    width: 100%
+    visibility: hidden
+    transform: translateY(-40px)
+    opacity: 0
+    padding: 80px 65px 70px
+    position: absolute
+    &.active
+        visibility: visible
+        transform: translateY(0px)
+        opacity: 1
+        position: relative
+    &__overlay
+        position: fixed
+        left: 0
+        top: 0
+        height: 100vh
+        width: 100%
+        background-color: rgba(0, 0, 0, .5)
+        z-index: 10
+        display: flex
+        align-items: center
+        justify-content: center
+        visibility: hidden
+        opacity: 0
+        pointer-events: none
+        padding: 0px 10px
+        &.active
+            visibility: visible
+            opacity: 1
+            pointer-events: all
+    &__text
+        font-size: 22px
+        line-height: 30px
+    a.popup__text
+        text-decoration: underline
+        display: inline-block
+        margin-top: 10px
+        margin-left: 5px
+    &__documents
+        display: flex
+        align-items: center
+        justify-content: space-around
+    &__document
+        display: flex
+        align-items: center
+        flex-direction: column
+    &__tip
+        height: 78px
+        width: 78px
+        border-radius: 50%
+        box-shadow: 0 0 0 3px #fff
+        margin: 0 auto 40px
+        position: relative
+        &-img
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            max-width: 30px
+    &__close
+        position: absolute
+        right: 10px
+        top: 10px
+        border: none
+        cursor: pointer
+        width: 20px
+        height: 20px
+        background-color: transparent
+        &::before, &::after
+            background-color: #fff
+            position: absolute
+            content: ''
+            display: inline-block
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            height: 2px
+            width: 13px
+            border-radius: 3px
+        &::before
+            transform: translate(-50%, -50%) rotate(-45deg)
+        &::after
+            transform: translate(-50%, -50%) rotate(45deg)
+        &:hover 
+            &::before, &::after
+                width: 15px
+        &:focus
+            outline: none
+    &_success
+        max-width: 480px
+    &_documents
+        max-width: 520px

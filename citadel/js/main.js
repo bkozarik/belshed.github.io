@@ -8,6 +8,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const burger = document.querySelector('.js-burger');
     const menu = document.querySelector('.js-menu');
 
+    const telInputs = document.querySelectorAll('input[type="tel"]');
+    const formTrigger = document.querySelector('.js-form-trigger');
+    const policyTrigger = document.querySelector('.js-policy-trigger');
+
+    const closeButtons = document.querySelectorAll('.js-close-popup');
+
     let mainSwiper, mainSwiperNode;
 
     const languageCheckboxChange = () => {
@@ -82,6 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if(mainSwiper.classList.contains('swiper-container-initialized')){
                 mainSwiperNode.destroy();
+                scrollHandler();
             }
         }
         else{
@@ -93,10 +100,23 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         if(window.innerWidth < 630){
-
+            menu.appendChild(document.querySelector('.nav'));
+            menu.appendChild(document.querySelector('.language'));
         }
         else{
             toggleMenu(false);
+            document.querySelector('.header__wrap').appendChild(document.querySelector('.nav'));
+            document.querySelector('.header__wrap').appendChild(document.querySelector('.language'));
+        }
+    }
+
+    const scrollHandler = () => {
+        if(!mainSwiper.classList.contains('swiper-container-initialized')){
+            scrollLinks.forEach(link => {
+                let linkRect = document.querySelector(link.getAttribute('href')).getBoundingClientRect();
+    
+                linkRect.top < 100 && linkRect.bottom > 100 ? link.classList.add('active') : link.classList.remove('active');
+            });
         }
     }
 
@@ -106,12 +126,72 @@ document.addEventListener('DOMContentLoaded', () => {
         projectsBtn.innerText = projects.classList.contains('active') ? "Скрыть проекты" : "Показать все проекты";
     }
 
+    const maskInit = () => {
+        telInputs.forEach(input => {
+            input.addEventListener('focus', _ => {
+                if(!/^\+\d*$/.test(input.value))
+                  input.value = '+7 (';
+            });
+              
+            input.addEventListener('keypress', event => {
+            let currPos = input.value.length;
+            if((!/\d/.test(event.key) || (input.value.length == 18))){
+                event.preventDefault();
+            }
+            else if ((input.value.length <= 3)){
+                input.value = '+7 (';
+            }
+            switch (currPos) {
+                case 7:
+                    input.value += ") ";
+                    break;
+                case 12:
+                    input.value += "-";
+                    break;
+                case 15:
+                    input.value += "-";
+                    break;
+            
+                default:
+                    break;
+            }
+            });
+        });
+    }
+
+    const openPopup = selector => {
+        const targetPopup = document.querySelector(selector);
+        const popupOverlay = document.querySelector('.js-popup-overlay');
+
+        targetPopup.classList.add('active');
+        popupOverlay.classList.add('active');
+
+        popupOverlay.addEventListener('click', () => {
+            if(event.target.classList.contains('js-popup-overlay')){
+                closePopup();
+            }
+        });
+    }
+
+    const closePopup = () => {
+        document.querySelector('.js-popup-overlay').classList.remove('active');
+        document.querySelectorAll('.popup').forEach(popup => popup.classList.remove('active'));
+    }
+
     burger.addEventListener('click', toggleMenu());
     projectsBtn.addEventListener('click', projectsBtnClick);
+
+    formTrigger.addEventListener('click', () => openPopup('.js-success-popup'));
+    policyTrigger.addEventListener('click', () => openPopup('.js-documents-popup'));
+
     scrollLinks.forEach(link => link.addEventListener('click', scrollLinkClick));
+    closeButtons.forEach(button => button.addEventListener('click', closePopup));
     languageCheckbox.forEach(checkbox => checkbox.addEventListener('input', languageCheckboxChange));
 
+    window.addEventListener('scroll', scrollHandler);
     window.addEventListener('resize', resizeHandler);
 
     resizeHandler();
+    scrollHandler();
+    maskInit();
 });
