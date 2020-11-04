@@ -41,10 +41,9 @@ document.addEventListener('DOMContentLoaded', () => {
             mainSwiperNode.slideTo(targetPage, 500, true);
         }
         else{
+            toggleMenu(false);
             let href;
             
-            console.log(targetLink);
-
             href = targetLink.getAttribute('href');
             
             window.scrollTo({
@@ -91,6 +90,13 @@ document.addEventListener('DOMContentLoaded', () => {
             if(!mainSwiper.classList.contains('swiper-container-initialized')){
                 mainSwiperInit();
             }
+        }
+
+        if(window.innerWidth < 630){
+
+        }
+        else{
+            toggleMenu(false);
         }
     }
 
