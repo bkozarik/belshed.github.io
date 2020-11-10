@@ -203,6 +203,4 @@ document.addEventListener('DOMContentLoaded', () => {
     resizeHandler();
     scrollHandler();
     maskInit();
-
-    mainSwiperNode.slideTo(1, 500, true);
 });
