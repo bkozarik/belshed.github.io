@@ -1,0 +1,292 @@
+$main_blue: #1c3253
+$main_yellow: #cea533
+$border_grey: #dcdcdc
+$bg_grey: #f0f1f2
+$bg_light_grey: #f8f9fa
+$text_black: #1c1d1e
+    
+@media screen and ( max-width: 1810px )
+    .header
+        &__button
+            font-size: 0px
+            margin-left: 20px
+            & + &
+                margin-left: 80px
+            img
+                margin-right: 0px
+
+    .logo
+        left: -30px
+
+@media screen and ( max-width: 1590px )
+    .header
+        &__top
+            padding: 15px
+            .text_white:first-child
+                white-space: nowrap
+            &-content
+                max-width: 1150px
+        &__buttons
+            position: relative
+            transform: none
+            margin-left: 30px
+        &__button
+            margin-left: 0
+            height: 25px
+            width: 50px
+            &::after
+                right: 0px !important
+            & + &
+                margin-left: 20px
+
+    .nav
+        max-width: none
+        width: auto
+        flex-grow: 1
+        margin: 0px 40px 0px 0px
+                
+    .search
+        max-width: none
+        width: auto
+        box-shadow: none
+        margin-left: auto
+        &::after
+            display: none
+        &__input
+            display: none
+        &__button
+            display: block
+
+@media screen and ( max-width: 1590px )
+    .header
+        &__main
+            padding: 5px 0px
+
+    .logo
+        position: static
+        transform: none
+        margin-right: 20px
+        &__img
+            max-height: 50px
+
+    .main
+        margin-top: 113px
+
+
+@media screen and ( max-width: 1480px )
+    .header
+        &__top
+            display: none
+        &__main
+            background-color: $main_blue
+
+    .nav
+        &__link
+            color: #fff
+
+    .search
+        background-color: transparent
+
+    .logo
+        &__img
+            fill: #ffffff !important
+
+    .main
+        margin-top: 64px
+
+@media screen and ( max-width: 1180px )
+
+    .arrival
+        &__item
+            width: 100%
+            max-width: 370px
+        &__container
+            grid-template-columns: repeat(2, 1fr)
+            justify-items: center
+
+    .footer
+        &__row
+            flex-direction: column
+        &__list 
+            & + &
+                margin-left: 0
+
+@media screen and ( max-width: 1180px )
+    .index-catalog
+        &__container
+            grid-gap: 20px
+            grid-template-columns: repeat(2, 1fr)
+            grid-template-rows: repeat(3, 270px)
+            justify-items: center
+        &__item
+            width: 100%
+            max-width: 430px
+
+
+@media screen and ( max-width: 1080px )
+    .burger
+        display: inline-block
+    
+    .nav
+        display: none
+
+    .sales
+        padding: 60px 0px 50px
+        &__item
+            &_yellow, &_blue
+                padding: 0px 10px
+        &__text
+            &-semi-medium
+                font-size: 16px
+            &-medium
+                font-size: 22px
+
+    .brands
+        padding: 40px 0px
+        &__wrap
+            grid-template-columns: repeat(2, 1fr)
+            grid-template-rows: repeat(2, 100px)
+            justify-items: center
+            grid-gap: 20px
+    
+    .brand
+        width: 100%
+        max-width: 300px
+
+@media screen and ( max-width: 890px )
+
+    .sales
+        &__bottom
+            grid-template-columns: 1fr
+            grid-template-rows: repeat(2, 150px)
+            justify-items: center
+
+    .form
+        padding: 30px 0px
+        &__container
+            box-shadow: none
+        &__input
+            padding: 20px 25px 20px 35px
+            &-wrap::before
+                left: 10px
+        &__row
+            grid-template-columns: repeat(1, 1fr)
+            .button
+                padding: 20px 15px
+
+    .footer
+        &__wrap
+            grid-template-columns: 1fr 1fr
+
+@media screen and ( max-width: 890px )
+    .sales
+        &__top
+            grid-template-columns: repeat(2, 1fr)
+            justify-items: center
+            .sales
+                &__item
+                    width: 100%
+                    max-width: 370px
+                    &:last-child
+                        grid-column: 1/ 3
+
+@media screen and ( max-width: 720px )
+    .index-catalog
+        &__container
+            grid-gap: 20px
+            grid-template-columns: 1fr
+            grid-template-rows: repeat(6, 270px)
+        &__item
+            width: 100%
+            max-width: 400px
+            &-title
+                font-size: 14px
+
+    .sales
+        &__title
+            margin-top: 10px
+        &__top
+            grid-template-columns: 1fr
+            .sales__item:last-child
+                grid-column: 1/ 2
+
+@media screen and ( max-width: 650px )
+
+    .form
+        &__subtitle
+            font-size: 16px
+            line-height: 20px
+        &__title
+            font-size: 26px
+            line-height: 30px
+
+    .section
+        &__title
+            padding: 5px 0px
+            text-align: center
+            font-size: 26px
+            line-height: 30px
+            &::before
+                left: 50%
+                transform: translate(-50%, 100%)
+                height: 2px
+                width: 90px
+
+@media screen and ( max-width: 1180px )
+
+    .arrival
+        &__container
+            grid-template-columns: 1fr
+            
+@media screen and ( max-width: 560px )
+    .main
+        margin-top: 50px
+
+    .logo
+        &__img
+            max-height: 30px
+
+    .header
+        &__buttons
+            margin-left: 10px
+        &__button
+            & + &
+                margin-left: 10px
+
+    .burger
+        margin-left: 10px
+
+    .sales
+        &__bottom
+            .sales
+                &__item
+                    width: 100%
+                    &_row
+                        flex-direction: column
+        &__text
+            br
+                display: none
+            &-large
+                font-size: 46px
+            &-big
+                font-size: 30px
+            &-medium
+                font-size: 16px
+            &-semi-medium
+                font-size: 14px            
+        &__item
+            &_yellow
+                .sales__item-deco
+                    height: 70px
+                    width: 70px
+
+    .footer
+        &__wrap
+            grid-template-columns: 1fr
+
+@media screen and ( max-width: 420px )
+    .index-catalog
+        &__item-title
+            font-size: 12px
+            line-height: 18px
+

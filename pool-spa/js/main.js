@@ -10,6 +10,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const popupCloseBtns = document.querySelectorAll('.js-popup-close');
     const popupRecallBtns = document.querySelectorAll('.js-open-popup-recall');
 
+    const burger = document.querySelector('.js-menu');
+
     const whichPage = () => {
         const pageIdentifier = document.querySelector('.js-page-identifier');
 
@@ -123,6 +125,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    const toggleMenu = () => {
+        burger.classList.toggle('active');
+    }
+
     const closePopups = () => {
         const popups = popupOverlay.querySelectorAll('.popup');
 
@@ -161,7 +167,8 @@ document.addEventListener('DOMContentLoaded', () => {
     popupCloseBtns.forEach(trigger => trigger.addEventListener('click', closePopups));
     popupRecallBtns.forEach(trigger => trigger.addEventListener('click', openPopup('.js-popup-recall')));
 
-    categoriesTrgigger.addEventListener('click', toggleCategories)
+    burger.addEventListener('click', toggleMenu);
+    categoriesTrgigger.addEventListener('click', toggleCategories);
 
     if(whichPage() == 'cart'){
         itemCounters.forEach(counter => itemCounterInit(counter));
