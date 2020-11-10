@@ -70,6 +70,7 @@ section
 .logo
     &__img
         max-width: 212px
+        width: 100%
         height: auto
 
 .nav
@@ -236,22 +237,21 @@ section
     align-items: stretch
     width: 100%
     &:nth-child(1) .project__logo
-        background-image: url(../img/partner_1-g.png)
+        background-image: url(../img/partner_1-g.svg)
     &:nth-child(2) .project__logo
-        background-image: url(../img/partner_2-g.png)
+        background-image: url(../img/partner_2-g.svg)
     &:nth-child(3) .project__logo
-        background-image: url(../img/partner_3-g.png)
+        background-image: url(../img/partner_3-g.svg)
     &:nth-child(4) .project__logo
-        background-image: url(../img/partner_4-g.png)
+        background-image: url(../img/partner_4-g.svg)
     &:nth-child(5) .project__logo
-        background-image: url(../img/partner_5-g.png)
+        background-image: url(../img/partner_5-g.svg)
     &:nth-child(6) .project__logo
-        background-image: url(../img/partner_6-g.png)
+        background-image: url(../img/partner_6-g.svg)
     &:nth-child(7) .project__logo
-        background-image: url(../img/partner_7-g.png)
+        background-image: url(../img/partner_7-g.svg)
     &:nth-child(8) .project__logo
-        background-image: url(../img/partner_8-g.png)
-        background-size: 60%
+        background-image: url(../img/partner_8-g.svg)
     &__logo
         border-radius: 5px
         background-color: #fff
@@ -260,6 +260,13 @@ section
         overflow: hidden
         background-position: center
         background-repeat: no-repeat
+        svg
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            max-width: 80%
+            fill: red
     &__body
         padding: 10px 5px 0px
     &__name
@@ -269,21 +276,21 @@ section
         line-height: 20px
     &:hover
         &:nth-child(1) .project__logo
-            background-image: url(../img/partner_1.png)
+            background-image: url(../img/partner_1.svg)
         &:nth-child(2) .project__logo
-            background-image: url(../img/partner_2.png)
+            background-image: url(../img/partner_2.svg)
         &:nth-child(3) .project__logo
-            background-image: url(../img/partner_3.png)
+            background-image: url(../img/partner_3.svg)
         &:nth-child(4) .project__logo
-            background-image: url(../img/partner_4.png)
+            background-image: url(../img/partner_4.svg)
         &:nth-child(5) .project__logo
-            background-image: url(../img/partner_5.png)
+            background-image: url(../img/partner_5.svg)
         &:nth-child(6) .project__logo
-            background-image: url(../img/partner_6.png)
+            background-image: url(../img/partner_6.svg)
         &:nth-child(7) .project__logo
-            background-image: url(../img/partner_7.png)
+            background-image: url(../img/partner_7.svg)
         &:nth-child(8) .project__logo
-            background-image: url(../img/partner_8.png)
+            background-image: url(../img/partner_8.svg)
         .project
             &__logo
                 background-color: $text_blue
