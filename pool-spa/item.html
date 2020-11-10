@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="ru-Ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бассейны</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="./js/main.js" defer></script>
+</head>
+<body class="js-page-identifier" data-page="item">
+    <header class="header">
+        <div class="header__top">
+            <span class="text_white">Дистрибьютор СПА бассейнов</span>
+            <div class="header__top-content">
+                <a href="#" target="_blank" class="text_white header__map">Салон-бутик: Центр дизайна ArtPlay, г. Москва, ул. Нижняя Сыромятническая, 10</a>
+                <a href="tel:+74957262067" class="text_white header__tel">+7 (495) 726-20-67</a>
+                <button class="button button_recall js-open-popup-recall">заказать звонок</button>
+                <div class="header__top-social">
+                    <a href="#" class="header__social">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 308 308" xml:space="preserve" fill="white">
+                            <path d="M227.904,176.981c-0.6-0.288-23.054-11.345-27.044-12.781c-1.629-0.585-3.374-1.156-5.23-1.156 c-3.032,0-5.579,1.511-7.563,4.479c-2.243,3.334-9.033,11.271-11.131,13.642c-0.274,0.313-0.648,0.687-0.872,0.687 c-0.201,0-3.676-1.431-4.728-1.888c-24.087-10.463-42.37-35.624-44.877-39.867c-0.358-0.61-0.373-0.887-0.376-0.887 c0.088-0.323,0.898-1.135,1.316-1.554c1.223-1.21,2.548-2.805,3.83-4.348c0.607-0.731,1.215-1.463,1.812-2.153 c1.86-2.164,2.688-3.844,3.648-5.79l0.503-1.011c2.344-4.657,0.342-8.587-0.305-9.856c-0.531-1.062-10.012-23.944-11.02-26.348 c-2.424-5.801-5.627-8.502-10.078-8.502c-0.413,0,0,0-1.732,0.073c-2.109,0.089-13.594,1.601-18.672,4.802 c-5.385,3.395-14.495,14.217-14.495,33.249c0,17.129,10.87,33.302,15.537,39.453c0.116,0.155,0.329,0.47,0.638,0.922 c17.873,26.102,40.154,45.446,62.741,54.469c21.745,8.686,32.042,9.69,37.896,9.69c0.001,0,0.001,0,0.001,0 c2.46,0,4.429-0.193,6.166-0.364l1.102-0.105c7.512-0.666,24.02-9.22,27.775-19.655c2.958-8.219,3.738-17.199,1.77-20.458 C233.168,179.508,230.845,178.393,227.904,176.981z"/>
+                            <path d="M156.734,0C73.318,0,5.454,67.354,5.454,150.143c0,26.777,7.166,52.988,20.741,75.928L0.212,302.716 c-0.484,1.429-0.124,3.009,0.933,4.085C1.908,307.58,2.943,308,4,308c0.405,0,0.813-0.061,1.211-0.188l79.92-25.396 c21.87,11.685,46.588,17.853,71.604,17.853C240.143,300.27,308,232.923,308,150.143C308,67.354,240.143,0,156.734,0z M156.734,268.994c-23.539,0-46.338-6.797-65.936-19.657c-0.659-0.433-1.424-0.655-2.194-0.655c-0.407,0-0.815,0.062-1.212,0.188 l-40.035,12.726l12.924-38.129c0.418-1.234,0.209-2.595-0.561-3.647c-14.924-20.392-22.813-44.485-22.813-69.677 c0-65.543,53.754-118.867,119.826-118.867c66.064,0,119.812,53.324,119.812,118.867 C276.546,215.678,222.799,268.994,156.734,268.994z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="header__social">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="white">
+                            <path d="m9.417 15.181-.397 5.584c.568 0 .814-.244 1.109-.537l2.663-2.545 5.518 4.041c1.012.564 1.725.267 1.998-.931l3.622-16.972.001-.001c.321-1.496-.541-2.081-1.527-1.714l-21.29 8.151c-1.453.564-1.431 1.374-.247 1.741l5.443 1.693 12.643-7.911c.595-.394 1.136-.176.691.218z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="header__main">
+            <div class="logo">
+                <img src="./img/svg/логотип.svg" alt="Логотип" class="logo__img">
+            </div>
+            <div class="container">
+                <div class="header__main-wrap">
+                    <nav class="nav">
+                        <ul class="nav__list">
+                            <li class="nav__item">
+                                <button class="button nav__link js-categories-trigger"><span></span> Каталог</button>
+                                <ul class="categories js-categories">
+                                    <li class="categories__item">
+                                        <a href="#" class="categories__link">Гидромассажные СПА бассейны</a>
+                                    </li>
+                                    <li class="categories__item">
+                                        <a href="#" class="categories__link">Переливные и коммерческие</a>
+                                    </li>
+                                    <li class="categories__item">
+                                        <a href="#" class="categories__link">СПА из нержавеющей стали</a>
+                                    </li>
+                                    <li class="categories__item">
+                                        <a href="#" class="categories__link">Плавательные СПА с противотоком</a>
+                                    </li>
+                                    <li class="categories__item">
+                                        <a href="#" class="categories__link">Велнес комплекс Jacuzzi® SASHA</a>
+                                    </li>
+                                    <li class="categories__item">
+                                        <a href="#" class="categories__link">Душ впечатлений</a>
+                                    </li>
+                                    <li class="categories__item">
+                                        <a href="#" class="categories__link">Флотарии (флоат камеры)</a>
+                                    </li>
+                                    <li class="categories__item">
+                                        <a href="#" class="categories__link">Аксессуары для СПА</a>
+                                    </li>
+                                    <li class="categories__item">
+                                        <a href="#" class="categories__link">Химия для СПА</a></li>
+                                    <li class="categories__item">
+                                        <a href="#" class="categories__link">Запчасти для СПА</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav__separator"></li>
+                            <li class="nav__item">
+                                <a href="#" class="nav__link">Сервис</a>
+                            </li>
+                            <li class="nav__separator"></li>
+                            <li class="nav__item">
+                                <a href="#" class="nav__link">Партнеры</a>
+                            </li>
+                            <li class="nav__separator"></li>
+                            <li class="nav__item">
+                                <a href="#" class="nav__link">О нас</a>
+                            </li>
+                            <li class="nav__separator"></li>
+                            <li class="nav__item">
+                                <a href="#" class="nav__link">Контакты</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="search">
+                        <input type="search" class="search__input">
+                    </div>
+                </div>
+                <div class="header__buttons">
+                    <button class="button header__button" data-val="2"><img src="./img/svg/bar-chart.svg" alt="Иконка">Сравнить</button>
+                    <button class="button header__button" data-val="12"><img src="./img/svg/shopping-cart.svg" alt="Иконка">Корзина</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <section class="product section_light-grey">
+            <div class="breadcrumbs">
+                <div class="container">
+                    <div class="breadcrumbs__wrap">
+                        <ul class="breadcrumbs__list">
+                            <li class="breadcrumbs__item"><a href="/pool-spa/index.html" class="breadcrumbs__link">Главная</a></li>
+                            <li class="breadcrumbs__item"><a href="/pool-spa/catalog.html" class="breadcrumbs__link">Каталог</a></li>
+                            <li class="breadcrumbs__item"><a class="breadcrumbs__link">Каталог</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                
+            </div>
+        </section>
+        <section class="variants section_light-grey">
+            <div class="container">
+                
+            </div>
+        </section>
+        <section class="tecnologies section_light-grey">
+            <div class="container">
+                
+            </div>
+        </section>
+        <section class="videos section_light-grey">
+            <div class="container">
+                
+            </div>
+        </section>
+        <section class="complectation section_light-grey">
+            <div class="container">
+                
+            </div>
+        </section>
+        <section class="arrival section_grey">
+            <div class="container">
+                <h2 class="section__title text_ttu">Сопутствующие товары</h2>
+                <div class="arrival__container">
+                    <article class="arrival__item arrival__item_new">
+                        <div class="arrival__item-head">
+                            <a href="#" class="arrival__item-name text_semi-bold text_black">Спа бассейн Villeroy&Boch Just Silence Compact</a>
+                        </div>
+                        <div class="arrival__item-pic">
+                            <picture class="arrival__item-img">
+                                <source srcset="./img/new_item_1.webp" type="image/webp">
+                                <img src="./img/new_item_1.png" alt="Изображение продукта">
+                            </picture>
+                            <label class="arrival__item-compare">
+                                <input type="checkbox">
+                                <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="83px" height="89px" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" viewBox="0 0 33.405 35.632" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <path d="M25.053 0l0 33.544 -4.175 0 0 -25.123 -8.351 0 0 25.123 -4.176 0 0 -16.772 -8.351 0c0,0.775 0,18.044 0,18.86 0.845,0 33.175,0 33.405,0 0,-0.185 0,-34.047 0,-35.632l-8.352 0z"/>
+                                </svg>
+                                <span class="arrival__item-compare-circle"></span>
+                            </label>
+                        </div>
+                        <div class="arrival__item-data">
+                            <ul class="arrival__item-characteristics">
+                                <li>Размеры: 220х220х97 см</li>
+                                <li>Количество мест: 6 (1 лежак)</li>
+                                <li>Серия Fashion SPA</li>
+                            </ul>
+                            <span class="arrival__item-price">1 702 823 руб.</span>
+                            <span class="arrival__item-price-old">1 702 823 руб.</span>
+                            <div class="arrival__item-footer">
+                                <a href="#" class="button button_transparent-black">Весь каталог</a>
+                                <button class="button arrival__item-cart">
+
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="arrival__item arrival__item_new">
+                        <div class="arrival__item-head">
+                            <a href="#" class="arrival__item-name text_semi-bold text_black">Спа бассейн Villeroy&Boch Just Silence Compact</a>
+                        </div>
+                        <div class="arrival__item-pic">
+                            <picture class="arrival__item-img">
+                                <source srcset="./img/new_item_1.webp" type="image/webp">
+                                <img src="./img/new_item_1.png" alt="Изображение продукта">
+                            </picture>
+                            <label class="arrival__item-compare">
+                                <input type="checkbox">
+                                <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="83px" height="89px" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" viewBox="0 0 33.405 35.632" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <path d="M25.053 0l0 33.544 -4.175 0 0 -25.123 -8.351 0 0 25.123 -4.176 0 0 -16.772 -8.351 0c0,0.775 0,18.044 0,18.86 0.845,0 33.175,0 33.405,0 0,-0.185 0,-34.047 0,-35.632l-8.352 0z"/>
+                                </svg>
+                                <span class="arrival__item-compare-circle"></span>
+                            </label>
+                        </div>
+                        <div class="arrival__item-data">
+                            <ul class="arrival__item-characteristics">
+                                <li>Размеры: 220х220х97 см</li>
+                                <li>Количество мест: 6 (1 лежак)</li>
+                                <li>Серия Fashion SPA</li>
+                            </ul>
+                            <span class="arrival__item-price">1 702 823 руб.</span>
+                            <span class="arrival__item-price-old">1 702 823 руб.</span>
+                            <div class="arrival__item-footer">
+                                <a href="#" class="button button_transparent-black">Весь каталог</a>
+                                <button class="button arrival__item-cart">
+                                    
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="arrival__item arrival__item_new">
+                        <div class="arrival__item-head">
+                            <a href="#" class="arrival__item-name text_semi-bold text_black">Спа бассейн Villeroy&Boch Just Silence Compact</a>
+                        </div>
+                        <div class="arrival__item-pic">
+                            <picture class="arrival__item-img">
+                                <source srcset="./img/new_item_1.webp" type="image/webp">
+                                <img src="./img/new_item_1.png" alt="Изображение продукта">
+                            </picture>
+                            <label class="arrival__item-compare">
+                                <input type="checkbox">
+                                <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="83px" height="89px" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" viewBox="0 0 33.405 35.632" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <path d="M25.053 0l0 33.544 -4.175 0 0 -25.123 -8.351 0 0 25.123 -4.176 0 0 -16.772 -8.351 0c0,0.775 0,18.044 0,18.86 0.845,0 33.175,0 33.405,0 0,-0.185 0,-34.047 0,-35.632l-8.352 0z"/>
+                                </svg>
+                                <span class="arrival__item-compare-circle"></span>
+                            </label>
+                        </div>
+                        <div class="arrival__item-data">
+                            <ul class="arrival__item-characteristics">
+                                <li>Размеры: 220х220х97 см</li>
+                                <li>Количество мест: 6 (1 лежак)</li>
+                                <li>Серия Fashion SPA</li>
+                            </ul>
+                            <span class="arrival__item-price">1 702 823 руб.</span>
+                            <div class="arrival__item-footer">
+                                <a href="#" class="button button_transparent-black">Весь каталог</a>
+                                <button class="button arrival__item-cart">
+                                    
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="arrival__item">
+                        <div class="arrival__item-head">
+                            <a href="#" class="arrival__item-name text_semi-bold text_black">Спа бассейн Villeroy&Boch Just Silence Compact</a>
+                        </div>
+                        <div class="arrival__item-pic">
+                            <picture class="arrival__item-img">
+                                <source srcset="./img/new_item_1.webp" type="image/webp">
+                                <img src="./img/new_item_1.png" alt="Изображение продукта">
+                            </picture>
+                            <label class="arrival__item-compare">
+                                <input type="checkbox">
+                                <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="83px" height="89px" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" viewBox="0 0 33.405 35.632" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <path d="M25.053 0l0 33.544 -4.175 0 0 -25.123 -8.351 0 0 25.123 -4.176 0 0 -16.772 -8.351 0c0,0.775 0,18.044 0,18.86 0.845,0 33.175,0 33.405,0 0,-0.185 0,-34.047 0,-35.632l-8.352 0z"/>
+                                </svg>
+                                <span class="arrival__item-compare-circle"></span>
+                            </label>
+                        </div>
+                        <div class="arrival__item-data">
+                            <ul class="arrival__item-characteristics">
+                                <li>Размеры: 220х220х97 см</li>
+                                <li>Количество мест: 6 (1 лежак)</li>
+                                <li>Серия Fashion SPA</li>
+                            </ul>
+                            <span class="arrival__item-price">1 702 823 руб.</span>
+                            <div class="arrival__item-footer">
+                                <a href="#" class="button button_transparent-black">Весь каталог</a>
+                                <button class="button arrival__item-cart">
+                                    
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section class="arrival section_light-grey">
+            <div class="container">
+                <h2 class="section__title text_ttu">Другие товары этого бренда</h2>
+                <div class="arrival__container">
+                    <article class="arrival__item arrival__item_new">
+                        <div class="arrival__item-head">
+                            <a href="#" class="arrival__item-name text_semi-bold text_black">Спа бассейн Villeroy&Boch Just Silence Compact</a>
+                        </div>
+                        <div class="arrival__item-pic">
+                            <picture class="arrival__item-img">
+                                <source srcset="./img/new_item_1.webp" type="image/webp">
+                                <img src="./img/new_item_1.png" alt="Изображение продукта">
+                            </picture>
+                            <label class="arrival__item-compare">
+                                <input type="checkbox">
+                                <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="83px" height="89px" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" viewBox="0 0 33.405 35.632" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <path d="M25.053 0l0 33.544 -4.175 0 0 -25.123 -8.351 0 0 25.123 -4.176 0 0 -16.772 -8.351 0c0,0.775 0,18.044 0,18.86 0.845,0 33.175,0 33.405,0 0,-0.185 0,-34.047 0,-35.632l-8.352 0z"/>
+                                </svg>
+                                <span class="arrival__item-compare-circle"></span>
+                            </label>
+                        </div>
+                        <div class="arrival__item-data">
+                            <ul class="arrival__item-characteristics">
+                                <li>Размеры: 220х220х97 см</li>
+                                <li>Количество мест: 6 (1 лежак)</li>
+                                <li>Серия Fashion SPA</li>
+                            </ul>
+                            <span class="arrival__item-price">1 702 823 руб.</span>
+                            <span class="arrival__item-price-old">1 702 823 руб.</span>
+                            <div class="arrival__item-footer">
+                                <a href="#" class="button button_transparent-black">Весь каталог</a>
+                                <button class="button arrival__item-cart">
+
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="arrival__item arrival__item_new">
+                        <div class="arrival__item-head">
+                            <a href="#" class="arrival__item-name text_semi-bold text_black">Спа бассейн Villeroy&Boch Just Silence Compact</a>
+                        </div>
+                        <div class="arrival__item-pic">
+                            <picture class="arrival__item-img">
+                                <source srcset="./img/new_item_1.webp" type="image/webp">
+                                <img src="./img/new_item_1.png" alt="Изображение продукта">
+                            </picture>
+                            <label class="arrival__item-compare">
+                                <input type="checkbox">
+                                <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="83px" height="89px" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" viewBox="0 0 33.405 35.632" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <path d="M25.053 0l0 33.544 -4.175 0 0 -25.123 -8.351 0 0 25.123 -4.176 0 0 -16.772 -8.351 0c0,0.775 0,18.044 0,18.86 0.845,0 33.175,0 33.405,0 0,-0.185 0,-34.047 0,-35.632l-8.352 0z"/>
+                                </svg>
+                                <span class="arrival__item-compare-circle"></span>
+                            </label>
+                        </div>
+                        <div class="arrival__item-data">
+                            <ul class="arrival__item-characteristics">
+                                <li>Размеры: 220х220х97 см</li>
+                                <li>Количество мест: 6 (1 лежак)</li>
+                                <li>Серия Fashion SPA</li>
+                            </ul>
+                            <span class="arrival__item-price">1 702 823 руб.</span>
+                            <span class="arrival__item-price-old">1 702 823 руб.</span>
+                            <div class="arrival__item-footer">
+                                <a href="#" class="button button_transparent-black">Весь каталог</a>
+                                <button class="button arrival__item-cart">
+                                    
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="arrival__item arrival__item_new">
+                        <div class="arrival__item-head">
+                            <a href="#" class="arrival__item-name text_semi-bold text_black">Спа бассейн Villeroy&Boch Just Silence Compact</a>
+                        </div>
+                        <div class="arrival__item-pic">
+                            <picture class="arrival__item-img">
+                                <source srcset="./img/new_item_1.webp" type="image/webp">
+                                <img src="./img/new_item_1.png" alt="Изображение продукта">
+                            </picture>
+                            <label class="arrival__item-compare">
+                                <input type="checkbox">
+                                <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="83px" height="89px" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" viewBox="0 0 33.405 35.632" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <path d="M25.053 0l0 33.544 -4.175 0 0 -25.123 -8.351 0 0 25.123 -4.176 0 0 -16.772 -8.351 0c0,0.775 0,18.044 0,18.86 0.845,0 33.175,0 33.405,0 0,-0.185 0,-34.047 0,-35.632l-8.352 0z"/>
+                                </svg>
+                                <span class="arrival__item-compare-circle"></span>
+                            </label>
+                        </div>
+                        <div class="arrival__item-data">
+                            <ul class="arrival__item-characteristics">
+                                <li>Размеры: 220х220х97 см</li>
+                                <li>Количество мест: 6 (1 лежак)</li>
+                                <li>Серия Fashion SPA</li>
+                            </ul>
+                            <span class="arrival__item-price">1 702 823 руб.</span>
+                            <div class="arrival__item-footer">
+                                <a href="#" class="button button_transparent-black">Весь каталог</a>
+                                <button class="button arrival__item-cart">
+                                    
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="arrival__item">
+                        <div class="arrival__item-head">
+                            <a href="#" class="arrival__item-name text_semi-bold text_black">Спа бассейн Villeroy&Boch Just Silence Compact</a>
+                        </div>
+                        <div class="arrival__item-pic">
+                            <picture class="arrival__item-img">
+                                <source srcset="./img/new_item_1.webp" type="image/webp">
+                                <img src="./img/new_item_1.png" alt="Изображение продукта">
+                            </picture>
+                            <label class="arrival__item-compare">
+                                <input type="checkbox">
+                                <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="83px" height="89px" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" viewBox="0 0 33.405 35.632" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <path d="M25.053 0l0 33.544 -4.175 0 0 -25.123 -8.351 0 0 25.123 -4.176 0 0 -16.772 -8.351 0c0,0.775 0,18.044 0,18.86 0.845,0 33.175,0 33.405,0 0,-0.185 0,-34.047 0,-35.632l-8.352 0z"/>
+                                </svg>
+                                <span class="arrival__item-compare-circle"></span>
+                            </label>
+                        </div>
+                        <div class="arrival__item-data">
+                            <ul class="arrival__item-characteristics">
+                                <li>Размеры: 220х220х97 см</li>
+                                <li>Количество мест: 6 (1 лежак)</li>
+                                <li>Серия Fashion SPA</li>
+                            </ul>
+                            <span class="arrival__item-price">1 702 823 руб.</span>
+                            <div class="arrival__item-footer">
+                                <a href="#" class="button button_transparent-black">Весь каталог</a>
+                                <button class="button arrival__item-cart">
+                                    
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer section_blue">
+        <div class="container">
+            <div class="footer__wrap">
+                <div class="footer__section">
+                    <h3 class="footer__title">Информация</h3>
+                    <ul class="footer__list">
+                        <li class="footer__item">
+                            <a href="#" class="footer__link footer__text">SPA-технологии</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link footer__text">Фото СПА бассейнов</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link footer__text">Видеогалерея</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link footer__text">Сервис-центр</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link footer__text">Салон-бутик с 2005 года</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link footer__text">Дилерам</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link footer__text">Контакты</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__section">
+                    <h3 class="footer__title">Каталог</h3>
+                    <div class="footer__row">
+                        <ul class="footer__list">
+                            <li class="footer__item"><a href="#" class="footer__link footer__text">Гидромассажные СПА бассейны</a></li>
+                            <li class="footer__item"><a href="#" class="footer__link footer__text">Переливные и коммерческие</a></li>
+                            <li class="footer__item"><a href="#" class="footer__link footer__text">СПА из нержавеющей стали</a></li>
+                            <li class="footer__item"><a href="#" class="footer__link footer__text">Плавательные СПА с противотоком</a></li>
+                            <li class="footer__item"><a href="#" class="footer__link footer__text">Велнес комплекс Jacuzzi® SASHA</a></li>
+                            <li class="footer__item"><a href="#" class="footer__link footer__text">Душ впечатлений</a></li>
+                        </ul>
+                        <ul class="footer__list">
+                            <li class="footer__item"><a href="#" class="footer__link footer__text">Флотарии (флоат камеры)</a></li>
+                            <li class="footer__item"><a href="#" class="footer__link footer__text">Аксессуары для СПА</a></li>
+                            <li class="footer__item"><a href="#" class="footer__link footer__text">Химия для СПА</a></li>
+                            <li class="footer__item"><a href="#" class="footer__link footer__text">Запчасти для СПА</a></li>
+                            <li class="footer__item"><a href="#" class="footer__link footer__text">Распродажа СПА бассейнов</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer__section">
+                    <h3 class="footer__title">Быть в курсе</h3>
+                    <span class="footer__text">Рассылка о новинках и акциях:</span>
+                    <div class="footer__subscribe">
+                        <input type="serach" class="footer__subscribe-input" placeholder="E-mail">
+                        <button class="footer__enter">
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="484.5px" height="484.5px" viewBox="0 0 484.5 484.5" style="enable-background:new 0 0 484.5 484.5;" xml:space="preserve">
+                                <polygon fill="white" points="433.5,114.75 433.5,216.75 96.9,216.75 188.7,124.95 153,89.25 0,242.25 153,395.25 188.7,359.55 96.9,267.75 484.5,267.75 484.5,114.75"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="footer__socials">
+                        <a href="#" class="footer__social">
+                            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="548.358px" height="548.358px" viewBox="0 0 548.358 548.358" style="enable-background:new 0 0 548.358 548.358;" xml:space="preserve">
+                                <path fill="#1c3253" d="M545.451,400.298c-0.664-1.431-1.283-2.618-1.858-3.569c-9.514-17.135-27.695-38.167-54.532-63.102l-0.567-0.571 l-0.284-0.28l-0.287-0.287h-0.288c-12.18-11.611-19.893-19.418-23.123-23.415c-5.91-7.614-7.234-15.321-4.004-23.13 c2.282-5.9,10.854-18.36,25.696-37.397c7.807-10.089,13.99-18.175,18.556-24.267c32.931-43.78,47.208-71.756,42.828-83.939 l-1.701-2.847c-1.143-1.714-4.093-3.282-8.846-4.712c-4.764-1.427-10.853-1.663-18.278-0.712l-82.224,0.568 c-1.332-0.472-3.234-0.428-5.712,0.144c-2.475,0.572-3.713,0.859-3.713,0.859l-1.431,0.715l-1.136,0.859 c-0.952,0.568-1.999,1.567-3.142,2.995c-1.137,1.423-2.088,3.093-2.848,4.996c-8.952,23.031-19.13,44.444-30.553,64.238 c-7.043,11.803-13.511,22.032-19.418,30.693c-5.899,8.658-10.848,15.037-14.842,19.126c-4,4.093-7.61,7.372-10.852,9.849 c-3.237,2.478-5.708,3.525-7.419,3.142c-1.715-0.383-3.33-0.763-4.859-1.143c-2.663-1.714-4.805-4.045-6.42-6.995 c-1.622-2.95-2.714-6.663-3.285-11.136c-0.568-4.476-0.904-8.326-1-11.563c-0.089-3.233-0.048-7.806,0.145-13.706 c0.198-5.903,0.287-9.897,0.287-11.991c0-7.234,0.141-15.085,0.424-23.555c0.288-8.47,0.521-15.181,0.716-20.125 c0.194-4.949,0.284-10.185,0.284-15.705s-0.336-9.849-1-12.991c-0.656-3.138-1.663-6.184-2.99-9.137 c-1.335-2.95-3.289-5.232-5.853-6.852c-2.569-1.618-5.763-2.902-9.564-3.856c-10.089-2.283-22.936-3.518-38.547-3.71 c-35.401-0.38-58.148,1.906-68.236,6.855c-3.997,2.091-7.614,4.948-10.848,8.562c-3.427,4.189-3.905,6.475-1.431,6.851 c11.422,1.711,19.508,5.804,24.267,12.275l1.715,3.429c1.334,2.474,2.666,6.854,3.999,13.134c1.331,6.28,2.19,13.227,2.568,20.837 c0.95,13.897,0.95,25.793,0,35.689c-0.953,9.9-1.853,17.607-2.712,23.127c-0.859,5.52-2.143,9.993-3.855,13.418 c-1.715,3.426-2.856,5.52-3.428,6.28c-0.571,0.76-1.047,1.239-1.425,1.427c-2.474,0.948-5.047,1.431-7.71,1.431 c-2.667,0-5.901-1.334-9.707-4c-3.805-2.666-7.754-6.328-11.847-10.992c-4.093-4.665-8.709-11.184-13.85-19.558 c-5.137-8.374-10.467-18.271-15.987-29.691l-4.567-8.282c-2.855-5.328-6.755-13.086-11.704-23.267 c-4.952-10.185-9.329-20.037-13.134-29.554c-1.521-3.997-3.806-7.04-6.851-9.134l-1.429-0.859c-0.95-0.76-2.475-1.567-4.567-2.427 c-2.095-0.859-4.281-1.475-6.567-1.854l-78.229,0.568c-7.994,0-13.418,1.811-16.274,5.428l-1.143,1.711 C0.288,140.146,0,141.668,0,143.763c0,2.094,0.571,4.664,1.714,7.707c11.42,26.84,23.839,52.725,37.257,77.659 c13.418,24.934,25.078,45.019,34.973,60.237c9.897,15.229,19.985,29.602,30.264,43.112c10.279,13.515,17.083,22.176,20.412,25.981 c3.333,3.812,5.951,6.662,7.854,8.565l7.139,6.851c4.568,4.569,11.276,10.041,20.127,16.416 c8.853,6.379,18.654,12.659,29.408,18.85c10.756,6.181,23.269,11.225,37.546,15.126c14.275,3.905,28.169,5.472,41.684,4.716h32.834 c6.659-0.575,11.704-2.669,15.133-6.283l1.136-1.431c0.764-1.136,1.479-2.901,2.139-5.276c0.668-2.379,1-5,1-7.851 c-0.195-8.183,0.428-15.558,1.852-22.124c1.423-6.564,3.045-11.513,4.859-14.846c1.813-3.33,3.859-6.14,6.136-8.418 c2.282-2.283,3.908-3.666,4.862-4.142c0.948-0.479,1.705-0.804,2.276-0.999c4.568-1.522,9.944-0.048,16.136,4.429 c6.187,4.473,11.99,9.996,17.418,16.56c5.425,6.57,11.943,13.941,19.555,22.124c7.617,8.186,14.277,14.271,19.985,18.274 l5.708,3.426c3.812,2.286,8.761,4.38,14.853,6.283c6.081,1.902,11.409,2.378,15.984,1.427l73.087-1.14 c7.229,0,12.854-1.197,16.844-3.572c3.998-2.379,6.373-5,7.139-7.851c0.764-2.854,0.805-6.092,0.145-9.712 C546.782,404.25,546.115,401.725,545.451,400.298z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="footer__social">
+                            <svg enable-background="new 0 0 24 24" height="512" viewBox="0 0 24 24" width="512" xmlns="http://www.w3.org/2000/svg">
+                                <path fill="#1c3253" d="m15.997 3.985h2.191v-3.816c-.378-.052-1.678-.169-3.192-.169-3.159 0-5.323 1.987-5.323 5.639v3.361h-3.486v4.266h3.486v10.734h4.274v-10.733h3.345l.531-4.266h-3.877v-2.939c.001-1.233.333-2.077 2.051-2.077z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="footer__social">
+                            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                                <path fill="#1c3253" d="M512,97.248c-19.04,8.352-39.328,13.888-60.48,16.576c21.76-12.992,38.368-33.408,46.176-58.016 c-20.288,12.096-42.688,20.64-66.56,25.408C411.872,60.704,384.416,48,354.464,48c-58.112,0-104.896,47.168-104.896,104.992 c0,8.32,0.704,16.32,2.432,23.936c-87.264-4.256-164.48-46.08-216.352-109.792c-9.056,15.712-14.368,33.696-14.368,53.056 c0,36.352,18.72,68.576,46.624,87.232c-16.864-0.32-33.408-5.216-47.424-12.928c0,0.32,0,0.736,0,1.152 c0,51.008,36.384,93.376,84.096,103.136c-8.544,2.336-17.856,3.456-27.52,3.456c-6.72,0-13.504-0.384-19.872-1.792 c13.6,41.568,52.192,72.128,98.08,73.12c-35.712,27.936-81.056,44.768-130.144,44.768c-8.608,0-16.864-0.384-25.12-1.44 C46.496,446.88,101.6,464,161.024,464c193.152,0,298.752-160,298.752-298.688c0-4.64-0.16-9.12-0.384-13.568 C480.224,136.96,497.728,118.496,512,97.248z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="container">
+                <small class="footer__copyright">© 2020 Все права защищены Pool-Spa.ru Продажа СПА-бассейнов в Европе</small>
+            </div>
+        </div>
+    </footer>
+
+    <div class="popup__overlay js-popup-overlay">
+        <div class="popup popup_recall contacts__card contacts__card_blue js-popup-recall">
+            <button class="popup__close js-popup-close"></button>
+            <div class="contacts__consultation">
+                <h3 class="contacts__title_blue">Консультация специалиста</h3>
+                <p class="contacts__white-text">Если у вас есть проблемы с выбором товара, оставьте заявку и наш специалист свяжется с вами в кротчайшие сроки</p>
+                <span class="contacts__deco"></span>
+                <form class="contacts__form">
+                    <div class="form__input-wrap">
+                        <input class="form__input" name="user_name" type="text" placeholder="Ваше имя">
+                    </div>
+                    <div class="form__input-wrap">
+                        <input class="form__input" name="user_tel" type="tel" placeholder="Номер телефона">
+                    </div>
+                    <button class="button button_yellow">отправить заявку</button>
+                    <label class="form__agreement">
+                        <input type="checkbox">
+                        <span class="form__agreement-checkbox"></span>
+                        <span class="form__agreement-text">Согласие на обработку персональных данных</span>
+                    </label>
+                </form>
+            </div>
+        </div>
+        <div class="popup popup_recall contacts__card contacts__card_blue js-popup-instruction">
+            <button class="popup__close js-popup-close"></button>
+            <div class="contacts__consultation">
+                <h3 class="contacts__title_blue">Запросить инструкцию</h3>
+                <span class="contacts__deco"></span>
+                <form class="contacts__form">
+                    <div class="form__input-wrap">
+                        <input class="form__input" name="user_name" type="text" placeholder="Ваше имя">
+                    </div>
+                    <div class="form__input-wrap">
+                        <input class="form__input" name="user_tel" type="tel" placeholder="Номер телефона">
+                    </div>
+                    <button class="button button_yellow">отправить заявку</button>
+                    <label class="form__agreement">
+                        <input type="checkbox">
+                        <span class="form__agreement-checkbox"></span>
+                        <span class="form__agreement-text">Согласие на обработку персональных данных</span>
+                    </label>
+                </form>
+            </div>
+        </div>
+        <div class="popup popup_recall contacts__card contacts__card_blue js-popup-layout">
+            <button class="popup__close js-popup-close"></button>
+            <div class="contacts__consultation">
+                <h3 class="contacts__title_blue">Запросить чертежи</h3>
+                <span class="contacts__deco"></span>
+                <form class="contacts__form">
+                    <div class="form__input-wrap">
+                        <input class="form__input" name="user_name" type="text" placeholder="Ваше имя">
+                    </div>
+                    <div class="form__input-wrap">
+                        <input class="form__input" name="user_tel" type="tel" placeholder="Номер телефона">
+                    </div>
+                    <button class="button button_yellow">отправить заявку</button>
+                    <label class="form__agreement">
+                        <input type="checkbox">
+                        <span class="form__agreement-checkbox"></span>
+                        <span class="form__agreement-text">Согласие на обработку персональных данных</span>
+                    </label>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/swiper-bundle.min.js"></script>
+</body>
+</html>

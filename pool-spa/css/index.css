@@ -1,6 +1,9 @@
 /* Свайпер */
 @import "./swiper-bundle.min.css";
 
+/* No Ui Slider */
+@import "./nouislider.min.css";
+
 /* Шрифты */
 @import "./fonts.css";
 

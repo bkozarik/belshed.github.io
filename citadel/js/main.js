@@ -14,6 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const closeButtons = document.querySelectorAll('.js-close-popup');
 
+    const contactForm = document.querySelector('.js-contact-form');
+
     let mainSwiper, mainSwiperNode;
 
     const languageCheckboxChange = () => {
@@ -129,32 +131,32 @@ document.addEventListener('DOMContentLoaded', () => {
     const maskInit = () => {
         telInputs.forEach(input => {
             input.addEventListener('focus', _ => {
-                if(!/^\+\d*$/.test(input.value))
-                  input.value = '+7 (';
+                if(!/^\+\d*$/.test(input.value)){
+                    input.value = '+7 (';
+                }
             });
               
             input.addEventListener('keypress', event => {
-            let currPos = input.value.length;
-            if((!/\d/.test(event.key) || (input.value.length == 18))){
-                event.preventDefault();
-            }
-            else if ((input.value.length <= 3)){
-                input.value = '+7 (';
-            }
-            switch (currPos) {
-                case 7:
-                    input.value += ") ";
-                    break;
-                case 12:
-                    input.value += "-";
-                    break;
-                case 15:
-                    input.value += "-";
-                    break;
-            
-                default:
-                    break;
-            }
+                const currPos = input.value.length;
+
+                if((!/\d/.test(event.key) || (input.value.length == 18))){
+                    event.preventDefault();
+                }
+                else if ((input.value.length <= 3)){
+                    input.value = '+7 (';
+                }
+
+                switch (currPos) {
+                    case 7:
+                        input.value += ") ";
+                        break;
+                    case 12:
+                        input.value += "-";
+                        break;
+                    case 15:
+                        input.value += "-";
+                        break;
+                }
             });
         });
     }
@@ -178,15 +180,22 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelectorAll('.popup').forEach(popup => popup.classList.remove('active'));
     }
 
+    const contactFormSubmitHandler = () => {
+        event.preventDefault();
+
+        openPopup('.js-success-popup');
+    }
+
     burger.addEventListener('click', toggleMenu());
     projectsBtn.addEventListener('click', projectsBtnClick);
 
-    formTrigger.addEventListener('click', () => openPopup('.js-success-popup'));
     policyTrigger.addEventListener('click', () => openPopup('.js-documents-popup'));
 
     scrollLinks.forEach(link => link.addEventListener('click', scrollLinkClick));
     closeButtons.forEach(button => button.addEventListener('click', closePopup));
     languageCheckbox.forEach(checkbox => checkbox.addEventListener('input', languageCheckboxChange));
+
+    contactForm.addEventListener('submit', contactFormSubmitHandler);
 
     window.addEventListener('scroll', scrollHandler);
     window.addEventListener('resize', resizeHandler);
