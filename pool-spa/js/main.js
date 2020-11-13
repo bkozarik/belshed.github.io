@@ -161,6 +161,21 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    const heroSwiperInit = () => {
+        let heroSwiper = new Swiper('.hero', {
+            loop: true,
+            slidesPerView: 1,
+            spaceBetween: 0,
+            autoplay: {
+                delay: 5000,
+            },
+            navigation: {
+                prevEl: '.slide__control_prev',
+                nextEl: '.slide__control_next'
+            },
+        });
+    }
+
     accordionTriggers.forEach(trigger => trigger.addEventListener('click', toggleAccordion('.js-usefull-item', false)));
     filterTriggers.forEach(trigger => trigger.addEventListener('click', toggleAccordion('.js-usefull-item', true)));
     
@@ -170,8 +185,13 @@ document.addEventListener('DOMContentLoaded', () => {
     burger.addEventListener('click', toggleMenu);
     categoriesTrgigger.addEventListener('click', toggleCategories);
 
-    if(whichPage() == 'cart'){
+    if(whichPage() == 'index'){
+        heroSwiperInit();
+    }
+    else if(whichPage() == 'cart'){
         itemCounters.forEach(counter => itemCounterInit(counter));
+
+        // openPopup('.js-popup-recall', true);
     }
     else if(whichPage() == 'catalog'){
         catalogNoUiInit();

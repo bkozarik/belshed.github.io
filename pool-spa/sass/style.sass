@@ -146,11 +146,11 @@ body
         outline: none
 
 .container
-    max-width: 1200px
+    max-width: 1210px
     width: 100%
     margin: 0 auto
     position: relative
-    padding: 0px 15px
+    padding: 0px 20px
     z-index: 2
     height: 100%
 
@@ -422,6 +422,8 @@ body
 
 .hero
     height: 500px
+    background-color: $main_blue
+    position: relative
     
 .slide
     width: 100%
@@ -454,6 +456,7 @@ body
         width: 100px
         height: 60px
         cursor: pointer
+        z-index: 3
         svg
             top: 50%
             transform: translate(0%, -50%)
@@ -559,7 +562,7 @@ body
         margin-top: 50px
         display: grid
         grid-template-columns: repeat(2, 1fr)
-        grid-template-rows: 150px   
+        grid-template-rows: minmax(150px, auto)
         grid-gap: 30px
         .sales
             &__item
@@ -578,7 +581,7 @@ body
         display: grid
         grid-template-columns: repeat(4, 1fr)
         grid-gap: 32px
-        grid-template-rows: 97px
+        grid-template-rows: minmax(97px, auto)
 
 .brand
     display: block
@@ -609,7 +612,7 @@ body
         margin: 40px 0px 0px
         display: grid
         grid-template-columns: repeat(3, 1fr)
-        grid-template-rows: repeat(2, 270px)
+        grid-template-rows: repeat(2, minmax(270px, auto))
         grid-gap: 30px
     &__item
         display: flex
@@ -832,7 +835,7 @@ body
         display: grid
         grid-template-columns: repeat(3, 1fr)
         grid-gap: 30px
-        grid-template-rows: repeat(2, 140px)
+        grid-template-rows: repeat(2, minmax(140px, auto))
     &__item
         box-shadow: 0 0 0 1px $border_grey
         padding: 12.5px
@@ -898,6 +901,7 @@ body
         font-size: 22px
         padding-top: 25px
         padding-bottom: 25px
+        padding-right: 25px
         font-weight: 700
         color: $text_black
         display: block
@@ -935,7 +939,7 @@ body
         display: grid
         grid-template-columns: repeat(3, 1fr)
         grid-gap: 30px
-        grid-template-rows: 180px
+        grid-template-rows: minmax(180px, auto)
     &__item
         box-shadow: 0 0 0 1px $border_grey
         display: block
@@ -973,7 +977,7 @@ body
                 line-height: 21px
         dd + dt
             margin-top: 20px
-    iframe
+    &:not(.map_contacts) iframe
         position: absolute
         height: 100%
         width: 100%
@@ -1247,6 +1251,7 @@ body
     &__price
         font-size: 22px
         font-weight: 600
+        margin-right: 70px
     &__remove
         position: absolute
         top: 0px
@@ -1281,7 +1286,7 @@ body
     border: 1px solid $border_grey
     display: flex
     align-items: stretch
-    margin: 0 30px 0 120px
+    margin: 0 30px 0 auto
     &__button
         background-color: transparent
         border: none
@@ -1477,6 +1482,7 @@ body
         margin-right: 10px
         transform: translateY(1px)
         position: relative
+        flex-shrink: 0
         &::after
             content: ''
             display: inline-block
@@ -1698,6 +1704,7 @@ body
         align-items: start
     &__body
         max-width: 870px
+        width: 100%
     &__products
         display: grid
         grid-template-columns: repeat(3, 1fr)
@@ -1992,6 +1999,7 @@ body
         height: 30px
         width: 30px
         cursor: pointer
+        z-index: 2
         &::before, &::after
             content: ''
             display: inline-block

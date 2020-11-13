@@ -94,7 +94,65 @@ $text_black: #1c1d1e
     .main
         margin-top: 64px
 
+@media screen and ( max-width: 1400px )
+    .slide
+        &__control
+            top: 50%
+            transform: translateY(-50%)
+
+@media screen and ( max-width: 1230px )
+    .catalog
+        &__container
+            grid-template-columns: 1fr
+        &__body
+            max-width: none
+        &__swiper
+            display: none
+        &__products
+            justify-items: center
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr))
+
 @media screen and ( max-width: 1180px )
+    .container
+        &_slide
+            padding: 0
+            height: auto
+    
+    .slide
+        display: flex
+        flex-direction: column
+        &__img
+            position: relative
+        &__content
+            background-color: $main_blue
+        &__control
+            top: 40%
+
+    .item
+        &__price
+            margin-right: 40px
+            font-size: 20px
+            white-space: nowrap
+        &__frame
+            height: 90px
+            width: 90px
+
+    .counter
+        margin-left: 20px
+        &__input
+            width: 30px
+        &__input, &__button
+            font-size: 18px
+
+    .index-catalog
+        &__container
+            grid-gap: 20px
+            grid-template-columns: repeat(2, 1fr)
+            grid-template-rows: repeat(3, 270px)
+            justify-items: center
+        &__item
+            width: 100%
+            max-width: 430px
 
     .arrival
         &__item
@@ -111,17 +169,16 @@ $text_black: #1c1d1e
             & + &
                 margin-left: 0
 
-@media screen and ( max-width: 1180px )
-    .index-catalog
-        &__container
-            grid-gap: 20px
-            grid-template-columns: repeat(2, 1fr)
-            grid-template-rows: repeat(3, 270px)
-            justify-items: center
-        &__item
-            width: 100%
-            max-width: 430px
+    .contacts__card_blue
+        padding: 60px
+        outline-offset: -30px
 
+    .contacts__title_blue
+        font-size: 28px
+        line-height: 32px
+
+    .contacts__white-text
+        font-size: 15px
 
 @media screen and ( max-width: 1080px )
     .burger
@@ -153,7 +210,110 @@ $text_black: #1c1d1e
         width: 100%
         max-width: 300px
 
+@media screen and ( max-width: 998px )
+
+    .contacts__card_blue
+        padding: 60px 50px
+        outline-offset: -25px
+
+    .item
+        &__price
+            margin-right: 20px
+            font-size: 18px
+        &__frame
+            height: 90px
+            width: 90px
+        &__name
+            margin-right: 20px
+
+    .counter
+        margin-left: 0px
+        &__input
+            width: 30px
+        &__input, &__button
+            font-size: 16px
+
+    .slide
+        &__control
+            width: 50px
+            height: 50px
+            svg
+                top: 50%
+                left: 50%
+                transform: translate(-50%, -50%)
+                max-width: 25px
+                height: auto
+            &_prev
+                left: 20px
+            &_next
+                right: 20px
+                svg
+                    transform: translate(-50%, -50%) rotate(180deg)
+
+    .popular
+        &__wrapper
+            grid-gap: 20px
+            grid-template-columns: repeat(2, 1fr)
+            grid-template-rows: repeat(3, 140px)
+
+    .usefull
+        &__title
+            font-size: 18px
+            padding: 15px 25px 15px 0px
+        &__item
+            padding: 0px 15px
+            &.active
+                padding: 0px 15px 15px
+
+    .map
+        display: flex
+        flex-direction: column-reverse
+        background-color: $main_blue
+        &__data
+            transform: none
+            width: 100%
+            // max-width: none
+            background-color: transparent
+            box-shadow: none
+            border: none
+            padding-left: 0
+            padding-right: 0
+        iframe
+            position: relative
+            min-height: 400px
+
 @media screen and ( max-width: 890px )
+
+    .contacts
+        padding-bottom: 20px
+        &__container
+            grid-template-columns: repeat(1, 1fr)
+            justify-items: center
+        &__card
+            width: 100%
+            max-width: 600px
+
+    .item
+        &__price
+            margin-right: 50px
+
+    .counter
+        margin-left: auto
+
+    .cart
+        &__container
+            grid-template-columns: 1fr
+
+    .map
+        &_contacts
+            iframe
+                height: 300px
+
+    .section
+        &__title
+            padding: 10px 0px
+            font-size: 30px
+            margin-bottom: 30px
 
     .sales
         &__bottom
@@ -190,6 +350,20 @@ $text_black: #1c1d1e
                     &:last-child
                         grid-column: 1/ 3
 
+    .news
+        &__wrapper
+            grid-gap: 20px
+            grid-template-columns: repeat(2, 1fr)
+            justify-items: center
+        &__item
+            width: 100%
+            padding: 20px
+            &:last-child
+                max-width: 52%
+                grid-column: 1 / 3
+        &__title
+            font-size: 16px
+                
 @media screen and ( max-width: 720px )
     .index-catalog
         &__container
@@ -202,6 +376,18 @@ $text_black: #1c1d1e
             &-title
                 font-size: 14px
 
+    .articles
+        &__item
+            flex-direction: column
+            align-items: flex-start
+            &-img
+                margin-bottom: 15px
+            &-name
+                font-size: 18px
+                margin-bottom: 10px
+            &-text
+                font-size: 14px
+
     .sales
         &__title
             margin-top: 10px
@@ -210,7 +396,45 @@ $text_black: #1c1d1e
             .sales__item:last-child
                 grid-column: 1/ 2
 
+    .article
+        &__title
+            margin-bottom: 10px
+            font-size: 22px
+        &__body
+            padding: 15px 20px
+
+@media screen and ( max-width: 690px )
+    .popular
+        &__wrapper
+            grid-gap: 20px
+            grid-template-columns: repeat(1, 1fr)
+            grid-template-rows: repeat(6, 140px)
+            justify-items: center
+        &__item
+            width: 100%
+            max-width: 420px
+
 @media screen and ( max-width: 650px )
+
+    .hero
+        height: 400px
+
+    .item
+        padding-bottom: 15px
+        &__price, .counter
+            margin-right: 30px
+
+    .slide
+        &__title
+            font-size: 20px
+        &__link
+            font-size: 12px
+            margin-top: 10px
+        &__control
+            height: 30px
+            width: 30px
+            svg
+                max-width: 15px
 
     .form
         &__subtitle
@@ -226,17 +450,146 @@ $text_black: #1c1d1e
             text-align: center
             font-size: 26px
             line-height: 30px
+            margin-bottom: 20px
             &::before
                 left: 50%
                 transform: translate(-50%, 100%)
                 height: 2px
                 width: 90px
 
+    .map
+        &__data
+            dt
+                font-size: 14px
+            dd
+                font-size: 12px
+        iframe
+            min-height: 300px
+
+@media screen and ( min-width: 590px )
+    .breadcrumbs
+        &__item_mobile
+            display: none
+
 @media screen and ( max-width: 590px )
+
+    .popup
+        height: 100vh
+
+    .order
+        &__title
+            font-size: 22px
+        &__form, .delivery
+            max-width: 450px
+            width: 100%
+            margin: 0 auto
+            padding: 20px
+        &__row
+            flex-direction: column
+        &__col
+            & + &
+                margin-left: 0
+                margin-top: 20px
+
+    .contacts
+        &__deco
+            opacity: 0
+            margin-top: 0
+            margin-bottom: 10px
+        &__form
+            padding: 0px 20px
+        &__title
+            &_blue
+                text-align: center
+                font-size: 26px
+                position: relative
+                padding-bottom: 8px
+                &::before, &::after
+                    position: absolute
+                    bottom: 0
+                    width: 100%
+                    height: 1px
+                    content: ''
+                    background-color: $main_yellow
+                    display: block
+                &::after
+                    height: 2px
+                    left: 50%
+                    transform: translate(-50%, 100%)
+                    width: 60px
+        &__white-text
+            font-size: 14px
+        &__card
+            &_blue
+                width: 100%
+                padding: 30px 0
+                outline: none
+                box-shadow: 0 0 0 20px $main_blue
+
+    .total
+        width: 100%
+        max-width: 450px
+        margin: 0 auto
+        padding: 20px
+        &__price
+            font-size: 20px
+        &__label
+            font-size: 16px
+        .button_yellow, .button_transparent-black
+            padding: 10px 0px
+
+    .item
+        flex-direction: column
+        align-items: flex-start
+        width: 100%
+        max-width: 450px
+        margin: 0 auto
+        & > *
+            margin-left: 0
+            margin-bottom: 10px
+        &__price
+            margin-bottom: 0 !important
+
+    .breadcrumbs
+        &__wrap
+            padding: 10px 0px
+        &__link
+            color: $main_yellow
+            &::before
+                content: ''
+                display: inline-block
+                background-image: url(../img/svg/left-arrow_y.svg)
+                width: 17px
+                height: 20px
+                background-size: contain
+                background-repeat: no-repeat
+                transform: translate(0, 30%)
+                margin-right: 5px
+            &::after 
+                content: '' !important
+        &__item:not(.breadcrumbs__item_mobile)
+            display: none
+
+    .year
+        float: left
 
     .arrival
         &__container
             grid-template-columns: 1fr
+
+    .news
+        &__wrapper
+            grid-template-columns: 1fr
+        &__item
+            padding: 15px 10px
+            &:last-child
+                max-width: none
+                grid-column: 1 / 2
+
+    .footer
+        &__copyright
+            font-size: 12px
+
             
 @media screen and ( max-width: 560px )
     .main
@@ -245,6 +598,13 @@ $text_black: #1c1d1e
     .logo
         &__img
             max-height: 30px
+
+    .contacts
+        &__card
+            &_white
+                padding: 15px
+        &__title
+            font-size: 18px
 
     .header
         &__buttons
@@ -255,6 +615,16 @@ $text_black: #1c1d1e
 
     .burger
         margin-left: 10px
+
+    .popular
+        &__wrapper
+            grid-template-rows: repeat(6, 100px)
+        &__frame
+            height: 80px
+            width: 80px
+        &__name
+            font-size: 12px
+            line-height: 18px
 
     .sales
         &__bottom
@@ -284,9 +654,160 @@ $text_black: #1c1d1e
         &__wrap
             grid-template-columns: 1fr
 
+@media screen and ( max-width: 470px )
+
+    .catalog
+        &__title
+            font-size: 14px
+        &__top
+            flex-direction: column
+            align-items: flex-start
+            .year
+                margin: 4px 0px
+                &, & *
+                    font-size: 12px
+
+    .arrival
+        &__item
+            &-name
+                font-size: 16px
+            &-price
+                font-size: 16px
+                &-old
+                    font-size: 12px
+                    margin-top: 3px
+
+
+    .contacts
+        &__form
+            .button_yellow
+                padding: 15px
+                width: 100%
+            
+            .form
+                &__input
+                    padding: 15px 25px 15px 45px
+        &__title
+            &_blue
+                font-size: 19px
+
+    .articles
+        &__item
+            padding: 20px 10px
+            &-img
+                width: 80px
+                height: 80px
+            &-name
+                font-size: 14px
+            &-text
+                font-size: 12px
+
 @media screen and ( max-width: 420px )
+    .popup
+        .form__input, .button_yellow
+            padding-top: 10px
+            padding-bottom: 10px
+
+    .catalog
+        &__products
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr))
+
+    .order
+        &__title
+            font-size: 16px
+        &__label-title, &__input, .delivery__text
+            &, & *
+                font-size: 11px
+        &__input
+            padding: 10px
+        &__col
+            & + &
+                margin-top: 15px
+
+    .delivery
+        &__text
+            br
+                display: none
+
+    .hero
+        height: 300px
+
+    .section
+        &__title
+            font-size: 18px
+            line-height: 24px
+
+    .contacts
+        &__card
+            padding: 15px 10px
+        &__title
+            font-size: 16px
+            margin-bottom: 5px
+        &__text
+            font-size: 12px
+            line-height: 18px
+        &__white-text
+            font-size: 12px
+
+    .map
+        &_contacts
+            iframe
+                height: 250px
+
+    .slide
+        &__content
+            padding: 25px 20px
+        &__title
+            font-size: 16px
+
     .index-catalog
         &__item-title
             font-size: 12px
             line-height: 18px
+
+    .usefull
+        &__title
+            font-size: 16px
+            &::before, &::after
+                width: 10px
+            &::before
+                transform: translate( 3px, -50%) rotate(-45deg)
+            &::after
+                transform: translate( -3px, -50%) rotate(45deg)
+        &__item.active
+            .usefull
+                &__title
+                    &::before
+                        transform: translate( 3px, -50%) rotate(45deg)
+                    &::after
+                        transform: translate( -3px, -50%) rotate(-45deg)
+
+    .article
+        &__title
+            font-size: 16px
+            margin-bottom: 5px
+        &__body
+            padding: 15px 10px
+        &__text
+            font-size: 12px
+
+    .total
+        &__label, dt, dd
+            font-size: 12px
+        &__price
+            font-size: 18px
+        .button_yellow, .button_transparent-black
+            font-size: 12px
+
+    .map
+        iframe
+            min-height: 200px
+
+    .footer
+        padding-top: 35px
+        &__wrap
+            grid-gap: 35px
+        &__link
+            font-size: 12px
+            padding: 7px 0px
 
