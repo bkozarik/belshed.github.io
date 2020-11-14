@@ -1,4 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const menu = document.querySelector('.js-menu');
+    const burger = document.querySelector('.js-burger');
+
     const unrollBtns = document.querySelectorAll('.js-button-more');
 
     const requestOpen = document.querySelectorAll('.js-open-request');
@@ -28,6 +31,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
     }
 
+    const resizeHandler = () => {
+        if(window.innerWidth <= 880){
+            if(whichPage() == 'about'){
+                document.querySelector('.about-page__top').insertBefore(document.querySelector('.js-about-img'), document.querySelector('.js-about-mobile-target'));
+            }
+        }
+        else{
+            if(whichPage() == 'about'){
+                document.querySelector('.about-page__top').prepend(document.querySelector('.js-about-img'));
+            }
+        }
+
+        if(window.innerWidth >= 980) toggleMenu(false);
+    }
+
     const closePopup = () => {
         const popupOverlay = document.querySelector('.js-popup-overlay');
 
@@ -42,6 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if(state === null){
             return () => {
+                toggleMenu(false);
                 targetPopup.classList.add('active');
                 popupOverlay.classList.add('active');
     
@@ -60,6 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
             targetPopup.classList.remove('active');
             popupOverlay.classList.remove('active');
         }
+        toggleMenu(false);
 
         popupOverlay.addEventListener('click', () => {
             if(event.target.classList.contains('js-popup-overlay')){
@@ -94,12 +114,31 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(closePopup, 2000);
     }
 
+    const toggleMenu = (state = null) => {
+        if(typeof(state) == 'object'){
+            return () => {
+                burger.classList.toggle('active');
+                menu.classList.toggle('active');
+            }
+        }
+        else{
+            state ? menu.classList.add('active') : menu.classList.remove('active');
+            state ? burger.classList.add('active') : burger.classList.remove('active');
+        }
+    }
+
     unrollBtns.forEach( button => button.addEventListener('click', unrollBtnClick));
 
     popupCloseBtns.forEach( button => button.addEventListener('click', closePopup));
     requestOpen.forEach( button => button.addEventListener('click', togglePopup('.js-popup-request')));
 
-    forms.forEach( button => button.addEventListener('submit', formSubmitHandler) );
+    forms.forEach( button => button.addEventListener('submit', formSubmitHandler));
+
+    burger.addEventListener('click', toggleMenu());
 
     window.addEventListener('scroll', scrollHandler);
+    window.addEventListener('resize', resizeHandler);
+
+    scrollHandler();
+    resizeHandler();
 });
