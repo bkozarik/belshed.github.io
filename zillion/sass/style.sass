@@ -303,6 +303,9 @@ body
     left: 0
     z-index: 1
     transform-origin: left top
+    transform: translateX(100%) rotate(-30deg)
+    visibility: hidden
+    pointer-events: none
     &::before
         transition-duration: .35s
         transition-timing-function: ease-out
@@ -315,7 +318,7 @@ body
         right: -115px
         top: -8px
         width: 200px
-        transform: rotate(4deg)
+        transform: rotate(-9deg)
         transform-origin: left top
         transition-delay: .1s
     &__container
@@ -358,12 +361,12 @@ body
                 
                 
             // margin-top: auto
-    &:not(.active)
-        transform: translateX(100%) rotate(-30deg)
-        visibility: hidden
-        pointer-events: none
+    &.active
+        transform: translateX(0%) rotate(0deg)
+        visibility: visible
+        pointer-events: all
         &::before
-            transform: rotate(-9deg)
+            transform: rotate(4deg)
 
 .slide
     padding-top: 225px

@@ -1858,6 +1858,7 @@ body
     &__head
         display: flex
         padding: 20px 40px 40px 20px
+        position: relative
         &-remove
             position: absolute
             top: 0px
@@ -1900,41 +1901,38 @@ body
             align-items: flex-start
     &__table
         border: 1px solid $border_grey
-        border-spacing: 0px
-        th, td
-            border-left: 1px solid $border_grey
-            &:first-child
-                border-left: none
-        td
-            padding: 20px
-            font-size: 14px
-            font-weight: 400
-            border-top: 1px solid $border_grey
-            &:first-child
-                font-size: 16px
-                font-weight: 600
-        th
-            position: relative
-            border-left: 1px solid $border_grey
+
+.table
+    display: grid
+    grid-template-columns: repeat(1, 1fr)
+    &__row
+        display: grid
+        grid-template-columns: 270px repeat(2, 1fr)
+        &:nth-child(1) .table__col
             padding: 0
-            .popular__frame
-                height: 100px
-                width: 100px
-            .arrival__item-price
-                font-size: 14px
-                font-weight: 600
-                margin-top: 10px
-                &-old
-                    font-size: 12px
-                    font-weight: 400
-            &:first-child
-                padding: 30px
-                width: 270px
-                .button
-                    padding: 15px 0px
-                    width: 100%
-                .button + .button
-                    margin-top: 20px
+    .table__params
+        margin-bottom: 0
+    &__params
+        padding: 30px
+        margin-bottom: 20px
+        background-color: #fff
+        .button
+            padding: 15px 0px
+            width: 100%
+        .button + .button
+            margin-top: 20px
+    &__col
+        padding: 20px
+        font-size: 14px
+        font-weight: 400
+        border-top: 1px solid $border_grey
+        border-left: 1px solid $border_grey
+        &:first-child
+            border-left: none
+            font-size: 16px
+            font-weight: 600
+
+            
 
 
 //

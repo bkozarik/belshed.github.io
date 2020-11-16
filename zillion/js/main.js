@@ -270,7 +270,7 @@ document.addEventListener('DOMContentLoaded', () => {
         banditoInit();
         showSliderPage();
 
-        // setInterval(() => getActiveSliderPage() == getMaxSliderPage() ? showSliderPage() : showSliderPage(getActiveSliderPage() + 1), 4000);
+        setInterval(() => getActiveSliderPage() == getMaxSliderPage() ? showSliderPage() : showSliderPage(getActiveSliderPage() + 1), 4000);
 
         document.querySelector('.js-slider-prev').addEventListener('click', () => showSliderPage(getActiveSliderPage() - 1));
         document.querySelector('.js-slider-next').addEventListener('click', () => showSliderPage(getActiveSliderPage() + 1));

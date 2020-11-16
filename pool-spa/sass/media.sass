@@ -72,7 +72,6 @@ $text_black: #1c1d1e
     .main
         margin-top: 113px
 
-
 @media screen and ( max-width: 1480px )
     .header
         &__top
@@ -272,7 +271,6 @@ $text_black: #1c1d1e
         &__data
             transform: none
             width: 100%
-            // max-width: none
             background-color: transparent
             box-shadow: none
             border: none
@@ -281,6 +279,20 @@ $text_black: #1c1d1e
         iframe
             position: relative
             min-height: 400px
+
+    .table
+        &__col
+            // border-top: none
+            // border-left: none
+        &__row:not(:nth-child(1)) &__col
+            grid-row: 2 / 3
+            border-top: none
+            border-left: none
+            &:nth-child(1)
+                grid-row: 1 / 2
+        &__row
+            border-top: 1px solid #dcdcdc
+            grid-template-columns: repeat(2, 1fr)
 
 @media screen and ( max-width: 890px )
 
@@ -589,8 +601,7 @@ $text_black: #1c1d1e
     .footer
         &__copyright
             font-size: 12px
-
-            
+         
 @media screen and ( max-width: 560px )
     .main
         margin-top: 50px
