@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const resizeHandler = () => {
         
-        if(whichPage() == 'game'){
+        if(whichPage() == 'index'){
             banditoWatch();
         }
 
