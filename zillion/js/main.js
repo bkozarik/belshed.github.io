@@ -245,7 +245,7 @@ document.addEventListener('DOMContentLoaded', () => {
             setTimeout(() => {
                 col.style.transitionDuration = colTransitionDuration;
                 col.style.transitionDelay = colTransitionDelay;
-            }, 1000);
+            }, 100);
         });
 
 
