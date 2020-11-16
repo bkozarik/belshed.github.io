@@ -193,6 +193,11 @@ html, body {
     left: 50%;
 }
 
+.schedule .u-timeline-v3-wrap::before {
+    top: 20px;
+    height: 67%;
+}
+
 
 .row.mx-0 .col-md-6 {
     padding: 0px 40px !important;
@@ -274,6 +279,29 @@ html, body {
     -o-transform: translate(100%, 15px);
 }
 
+.schedule .u-timeline-v3:nth-of-type(even) .col-md-6:nth-child(1){
+    justify-content: flex-start !important;
+    align-self: auto !important;
+    margin-top: 8px;
+}
+.schedule .u-timeline-v3:nth-of-type(odd) .col-md-6:nth-child(1){
+    justify-content: flex-end !important;
+    align-self: auto !important;
+    margin-top: 8px;
+}
+
+.schedule .u-timeline-v3:nth-of-type(even) .col-md-6:nth-child(1) span {
+    padding-left: 0 !important;
+    text-align-last: left !important; 
+}
+.schedule .u-timeline-v3:nth-of-type(odd) .col-md-6:nth-child(1) span {
+    padding-right: 0 !important;
+    text-align: right !important;
+}
+
+.u-timeline-v3__icon {
+    top: 30px !important;
+}
 .contacts .col-lg-6 .text-left.d-flex.align-items-center{
     background-color: #fff;
     box-shadow: 0px 4px 30px rgba(7, 3, 31, 0.1);
@@ -510,6 +538,12 @@ html, body {
         display: block;
         margin-left: auto !important;
         margin-right: auto !important;
+    }
+
+    
+    .schedule .u-timeline-v3-wrap::before {
+        top: 20px;
+        height: 63%;
     }
 
     .totalizator__title {
