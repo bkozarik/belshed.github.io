@@ -16,7 +16,7 @@
                 </a>
                 <nav class="nav">
                     <ul class="nav__list">
-                        <li class="nav__item"><a href="./games.html" class="nav__link text_bold active">games</a></li>
+                        <li class="nav__item"><a href="./games.html" class="nav__link text_bold">games</a></li>
                         <li class="nav__item"><a href="./about.html" class="nav__link text_bold">about</a></li>
                         <li class="nav__item"><a href="./news.html" class="nav__link text_bold">news</a></li>
                         <li class="nav__item"><a href="./contacts.html" class="nav__link text_bold">contacts</a></li>
@@ -48,26 +48,27 @@
                 <h1 class="game-page__name section__title section__title_big">Guardians of Valhalla</h1>
                 <div class="game-page__top">
                     <div class="game-page__picset">
-                        <picture class="game-page__img">
+                        <!-- "data-img-src-webp" - опциональный. Если его не указать или оставить пустым, то в "js-picture" поставится картинка из "data-img-src" -->
+                        <picture class="game-page__img js-picture">
                             <source srcset="./img/game-preview_1.webp" type="image/webp">
                             <img src="./img/game-preview_1.jpg" alt="Фото игры">
                         </picture>
-                        <button class="button game-page__preview">
+                        <button class="button game-page__preview js-picture-button" data-img-src="./img/game-preview_2.jpg" data-img-src-webp="./img/game-preview_1.webp">
                             <img src="./img/game-preview_2.jpg" alt="Превью игры">
                         </button>
-                        <button class="button game-page__preview">
+                        <button class="button game-page__preview js-picture-button" data-img-src="./img/game-preview_2.jpg" data-img-src-webp="">
                             <img src="./img/game-preview_3.jpg" alt="Превью игры">
                         </button>
-                        <button class="button game-page__preview">
+                        <button class="button game-page__preview js-picture-button" data-img-src="./img/game-preview_2.jpg">
                             <img src="./img/game-preview_4.jpg" alt="Превью игры">
                         </button>
-                        <button class="button game-page__preview">
+                        <button class="button game-page__preview js-picture-button" data-img-src="./img/game-preview_2.jpg" data-img-src-webp="">
                             <img src="./img/game-preview_5.jpg" alt="Превью игры">
                         </button>
                     </div>
                     <div class="game-page__description">
                         <p class="game-page__description-text">Under the blue northern sky there is a golden city, with transparent gates, and the stars shining above. This is Valhalla, the home of gods and heroes, filled with untold riches. It is protected by animal-looking spirits of the nature.</p>
-                        <button class="button button_about-page">Play Demo</button>
+                        <button class="button button_about-page js-play-demo">Play Demo</button>
                     </div>
                 </div>
                 <div class="game-page__content">
@@ -234,7 +235,5 @@
             
         </div>
     </div>
-    
-    <script src="./js/swiper-bundle.min.js"></script>
 </body>
 </html>

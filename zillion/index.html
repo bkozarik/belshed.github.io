@@ -16,7 +16,7 @@
                 </a>
                 <nav class="nav">
                     <ul class="nav__list">
-                        <li class="nav__item"><a href="./games.html" class="nav__link text_bold active">games</a></li>
+                        <li class="nav__item"><a href="./games.html" class="nav__link text_bold">games</a></li>
                         <li class="nav__item"><a href="./about.html" class="nav__link text_bold">about</a></li>
                         <li class="nav__item"><a href="./news.html" class="nav__link text_bold">news</a></li>
                         <li class="nav__item"><a href="./contacts.html" class="nav__link text_bold">contacts</a></li>
@@ -43,32 +43,112 @@
         </div>
     </header>
     <main class="main main_index">
-        <section class="hero">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide hero__slide slide">
-                    <div class="container">
-                        <div class="slide__content">
-                            <h1 class="slide__title">open <span class="text_yellow">Zillion</span> games</h1>
-                            <span class="slide__game">Totems of Gold</span>
-                            <a href="./game.html" class="slide__link">see more</a>
+        <section class="slide js-slider" data-page="1" data-pages="5">
+            <picture class="slide__bg js-slider-changable active" data-slide="1">
+                <img src="./img/slider_bg-1.png" alt="Фон слайдера">
+            </picture>
+            <picture class="slide__bg js-slider-changable" data-slide="2">
+                <img src="./img/slider_bg-2.png" alt="Фон слайдера">
+            </picture>
+            <picture class="slide__bg js-slider-changable" data-slide="3">
+                <img src="./img/slider_bg-3.png" alt="Фон слайдера">
+            </picture>
+            <picture class="slide__bg js-slider-changable" data-slide="4">
+                <img src="./img/slider_bg-4.png" alt="Фон слайдера">
+            </picture>
+            <picture class="slide__bg js-slider-changable" data-slide="5">
+                <img src="./img/slider_bg-5.png" alt="Фон слайдера">
+            </picture>
+            <div class="container">
+                <div class="slide__data">
+                    <div class="slide__content">
+                        <h1 class="slide__title">open <span class="text_yellow">Zillion</span> games</h1>
+                        <div class="slide__names">
+                            <span class="slide__game js-slider-changable" data-slide="1">Totems of Gold</span>
+                            <span class="slide__game js-slider-changable" data-slide="2">Leprechun's Gold</span>
+                            <span class="slide__game js-slider-changable" data-slide="3">Guardians of Valhalla</span>
+                            <span class="slide__game js-slider-changable" data-slide="4">Book of Hor</span>
+                            <span class="slide__game js-slider-changable" data-slide="5">Ocean's Treasure</span>
                         </div>
-                        <div class="slide__controls">
-                            <button class="button slide__control slide__control_prev">
-                                <svg width="34" height="12" viewBox="0 0 34 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M3.82852 4.70711L7.12141 1.41421L5.7072 0L0.707199 5L9.15527e-05 5.70711L0.707199 6.41421L5.7072 11.4142L7.12141 10L3.82852 6.70711H33.4143V4.70711H3.82852Z"/>
-                                </svg>
-                            </button>
-                            <button class="button slide__control slide__control_next">
-                                <svg width="34" height="12" viewBox="0 0 34 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M3.82852 4.70711L7.12141 1.41421L5.7072 0L0.707199 5L9.15527e-05 5.70711L0.707199 6.41421L5.7072 11.4142L7.12141 10L3.82852 6.70711H33.4143V4.70711H3.82852Z"/>
-                                </svg>
-                            </button>
-                        </div>
+                        <a href="./game.html" class="slide__link js-slider-changable" data-slide="1">see more</a>
+                        <a href="./game.html" class="slide__link js-slider-changable" data-slide="2">see more</a>
+                        <a href="./game.html" class="slide__link js-slider-changable" data-slide="3">see more</a>
+                        <a href="./game.html" class="slide__link js-slider-changable" data-slide="4">see more</a>
+                        <a href="./game.html" class="slide__link js-slider-changable" data-slide="5">see more</a>
+                    </div>
+                    <div class="slide__controls">
+                        <button class="button slide__control slide__control_prev js-slider-prev">
+                            <svg width="34" height="12" viewBox="0 0 34 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M3.82852 4.70711L7.12141 1.41421L5.7072 0L0.707199 5L9.15527e-05 5.70711L0.707199 6.41421L5.7072 11.4142L7.12141 10L3.82852 6.70711H33.4143V4.70711H3.82852Z"/>
+                            </svg>
+                        </button>
+                        <button class="button slide__control slide__control_next js-slider-next">
+                            <svg width="34" height="12" viewBox="0 0 34 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M3.82852 4.70711L7.12141 1.41421L5.7072 0L0.707199 5L9.15527e-05 5.70711L0.707199 6.41421L5.7072 11.4142L7.12141 10L3.82852 6.70711H33.4143V4.70711H3.82852Z"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="slide__images">
+                    <div class="slide__image js-slider-changable active" data-slide="1">
+                        <picture class="slide__image-bg">
+                            <img src="./img/slider_image-bg-1.png" alt="Фон изображения в слайдере">
+                        </picture>
+                        <picture class="slide__image-mobile">
+                            <img src="./img/slider_image-mobile-1.png" alt="Фон изображения в слайдере">
+                        </picture>
+                        <picture class="slide__image-item">
+                            <img src="./img/slider_image-item-1.png" alt="Изображение в слайдере">
+                        </picture>
+                    </div>
+                    <div class="slide__image js-slider-changable" data-slide="2">
+                        <picture class="slide__image-bg">
+                            <img src="./img/slider_image-bg-2.png" alt="Фон изображения в слайдере">
+                        </picture>
+                        <picture class="slide__image-mobile">
+                            <img src="./img/slider_image-mobile-2.png" alt="Фон изображения в слайдере">
+                        </picture>
+                        <picture class="slide__image-item">
+                            <img src="./img/slider_image-item-2.png" alt="Изображение в слайдере">
+                        </picture>
+                    </div>
+                    <div class="slide__image js-slider-changable" data-slide="3">
+                        <picture class="slide__image-bg">
+                            <img src="./img/slider_image-bg-3.png" alt="Фон изображения в слайдере">
+                        </picture>
+                        <picture class="slide__image-mobile">
+                            <img src="./img/slider_image-mobile-3.png" alt="Фон изображения в слайдере">
+                        </picture>
+                        <picture class="slide__image-item">
+                            <img src="./img/slider_image-item-3.png" alt="Изображение в слайдере">
+                        </picture>
+                    </div>
+                    <div class="slide__image js-slider-changable" data-slide="4">
+                        <picture class="slide__image-bg">
+                            <img src="./img/slider_image-bg-4.png" alt="Фон изображения в слайдере">
+                        </picture>
+                        <picture class="slide__image-mobile">
+                            <img src="./img/slider_image-mobile-4.png" alt="Фон изображения в слайдере">
+                        </picture>
+                        <picture class="slide__image-item">
+                            <img src="./img/slider_image-item-4.png" alt="Изображение в слайдере">
+                        </picture>
+                    </div>
+                    <div class="slide__image js-slider-changable" data-slide="5">
+                        <picture class="slide__image-bg">
+                            <img src="./img/slider_image-bg-5.png" alt="Фон изображения в слайдере">
+                        </picture>
+                        <picture class="slide__image-mobile">
+                            <img src="./img/slider_image-mobile-5.png" alt="Фон изображения в слайдере">
+                        </picture>
+                        <picture class="slide__image-item">
+                            <img src="./img/slider_image-item-5.png" alt="Изображение в слайдере">
+                        </picture>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="games">
+        <section class="games games_index">
             <div class="container">
                 <div class="section__top">
                     <h2 class="section__title">our games</h2>
@@ -117,7 +197,858 @@
             <div class="container">
                 <div class="about__container">
                     <div class="about__bandito-wrap">
-                        <div class="about__bandito"></div>
+                        <div class="about__bandito bandito js-bandito">
+
+                            <svg display="none">
+                                <symbol id="lamp" viewBox="0 0 75 77">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M31 67C29.8954 67 29 67.8954 29 69C29 70.8695 30.2825 72.4394 32.0156 72.878C32.2076 75.1864 34.142 77 36.5 77H39.5C41.858 77 43.7924 75.1864 43.9843 72.878C45.7175 72.4394 47 70.8695 47 69C47 67.8954 46.1046 67 45 67H31Z"/>
+                                    <rect x="65" y="36" width="10" height="3" rx="1.5"/>
+                                    <rect y="36" width="10" height="3" rx="1.5"/>
+                                    <rect x="55.6875" y="17" width="10.2472" height="3.41573" rx="1.70787" transform="rotate(-45 55.6875 17)"/>
+                                    <rect width="10.2472" height="3.41573" rx="1.70787" transform="matrix(-0.707107 -0.707107 -0.707107 0.707107 19.459 17)"/>
+                                    <rect x="36" y="10" width="10" height="3" rx="1.5" transform="rotate(-90 36 10)"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M60 37.566C60 46.6242 54.6786 54.8944 47 58.7369V62C47 63.1046 46.1046 64 45 64H31C29.8954 64 29 63.1046 29 62V59.2063C20.7874 55.6018 15 47.0124 15 37.566C15 25.1032 25.0736 15 37.5 15C49.9264 15 60 25.1032 60 37.566ZM28.0838 37.5797L37.3647 24.9238C37.9363 24.1445 39.1712 24.5487 39.1712 25.5152V35.8289H46.11C46.9291 35.8289 47.4008 36.7598 46.9164 37.4203L37.6355 50.0762C37.0639 50.8555 35.8291 50.4513 35.8291 49.4848V39.171H28.8902C28.0711 39.171 27.5994 38.2402 28.0838 37.5797Z"/>
+                                </symbol>
+                                <symbol id="brackets" viewBox="0 0 64 64">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M32 64C49.6731 64 64 49.6731 64 32C64 14.3269 49.6731 0 32 0C14.3269 0 0 14.3269 0 32C0 49.6731 14.3269 64 32 64ZM28.206 41.9688C26.8929 41.5421 26.1743 40.1317 26.6009 38.8186L34.0568 15.8717C34.4835 14.5586 35.8939 13.8399 37.207 14.2666C38.5202 14.6933 39.2388 16.1036 38.8121 17.4168L31.3562 40.3637C30.9295 41.6768 29.5192 42.3955 28.206 41.9688ZM40.9631 19.0375C41.8408 17.9717 43.4164 17.8193 44.4822 18.697L54.6699 27.0868C55.2465 27.5617 55.5806 28.2696 55.5806 29.0167C55.5806 29.7637 55.2465 30.4716 54.6699 30.9465L44.4822 39.3364C43.4164 40.2141 41.8408 40.0616 40.9631 38.9958C40.0854 37.93 40.2378 36.3544 41.3036 35.4767L49.148 29.0167L41.3036 22.5566C40.2378 21.6789 40.0854 20.1033 40.9631 19.0375ZM20.3269 18.697C21.3927 17.8193 22.9683 17.9717 23.846 19.0375C24.7238 20.1033 24.5713 21.6789 23.5055 22.5566L15.6611 29.0167L23.5055 35.4767C24.5713 36.3544 24.7238 37.93 23.846 38.9958C22.9683 40.0616 21.3927 40.2141 20.3269 39.3364L10.1392 30.9465C9.56259 30.4716 9.22852 29.7637 9.22852 29.0167C9.22852 28.2696 9.56259 27.5617 10.1392 27.0868L20.3269 18.697ZM35.0003 50C35.0003 51.6569 33.6571 53 32.0003 53C30.3434 53 29.0003 51.6569 29.0003 50C29.0003 48.3432 30.3434 47 32.0003 47C33.6571 47 35.0003 48.3432 35.0003 50ZM22.0003 53C23.6571 53 25.0003 51.6569 25.0003 50C25.0003 48.3432 23.6571 47 22.0003 47C20.3434 47 19.0003 48.3432 19.0003 50C19.0003 51.6569 20.3434 53 22.0003 53ZM45.0003 50C45.0003 51.6569 43.6571 53 42.0003 53C40.3434 53 39.0003 51.6569 39.0003 50C39.0003 48.3432 40.3434 47 42.0003 47C43.6571 47 45.0003 48.3432 45.0003 50Z"/>
+                                </symbol>
+                                <symbol id="penciles" viewBox="0 0 59 58">
+                                    <g>
+                                        <path d="M6.06862 43.2096L15.9506 53.0915L13.3172 55.7249C10.5884 58.4537 6.16408 58.4537 3.43525 55.7249C0.706423 52.9961 0.706422 48.5717 3.43525 45.8429L6.06862 43.2096Z"/>
+                                        <path d="M37.3359 11.9375L41.4112 16.0127L11.5964 45.8275L7.52115 41.7523L37.3359 11.9375Z"/>
+                                        <path d="M43.334 17.9345L47.2778 21.8783L17.463 51.6931L13.5192 47.7493L43.334 17.9345Z"/>
+                                        <path d="M27.4368 17.8151C26.4612 17.306 25.391 17.0341 24.3136 17.002C24.2688 17.0007 24.2239 16.9997 24.1791 16.9992C22.311 16.9782 20.4323 17.6777 18.9986 19.1114C16.7034 21.4066 16.2898 24.8424 17.7022 27.5496L27.4368 17.8151Z"/>
+                                        <path d="M29.66 19.6119L33.4099 23.8373L23.7244 33.5228L19.499 29.7729L29.66 19.6119Z"/>
+                                        <path d="M25.9471 35.4954L30.0332 39.1217L39.0088 30.1461L35.3825 26.06L25.9471 35.4954Z"/>
+                                        <path d="M48.634 55.6293L32.1631 41.0119L40.899 32.276L55.5162 48.7467C57.2287 50.6763 57.1414 53.606 55.3172 55.4302C54.3285 56.4189 53.0151 56.8974 51.7122 56.8557C50.6112 56.8204 49.5177 56.4136 48.634 55.6293Z"/>
+                                        <path d="M43.5215 5.75057L59 0.270867L53.5203 15.7493L49.154 20.1156L39.1552 10.1169L43.5215 5.75057Z"/>
+                                        <path d="M17.2279 5.82227C20.4105 9.00484 20.4372 14.1381 17.2876 17.2876C14.1381 20.4372 9.00484 20.4105 5.82227 17.2279C2.63971 14.0453 0 0 0 0C0 0 14.0453 2.63971 17.2279 5.82227Z"/>
+                                    </g>
+                                </symbol>
+                                <symbol id="logo" viewBox="0 0 52 48">
+                                    <path d="M5.50709 6.80807L5.88245 4.39297C6.08172 3.16823 6.72488 2.05277 7.69614 1.24741C8.6674 0.442047 9.90295 -0.000301074 11.1803 0H46.6462C47.4149 0.00117725 48.1744 0.162774 48.8732 0.473838C49.5719 0.784902 50.1936 1.23816 50.696 1.80288C51.1985 2.3676 51.57 3.03059 51.7853 3.74689C52.0006 4.46319 52.0548 5.21606 51.9441 5.95446L51.3006 10.1184L49.8099 19.7788C49.6623 20.7291 49.2464 21.6211 48.6085 22.3561C47.9706 23.091 47.1355 23.6402 46.1958 23.9427L11.1696 35.1854H41.1982C41.969 35.1862 42.7306 35.3482 43.4311 35.6605C44.1315 35.9728 44.7544 36.428 45.2572 36.9951C45.76 37.5622 46.131 38.2279 46.3447 38.9467C46.5585 39.6656 46.6101 40.4207 46.4961 41.1607L46.1207 43.5758C45.9284 44.8063 45.2882 45.9291 44.3163 46.7407C43.3443 47.5524 42.105 47.9991 40.8228 48H5.35695C4.58613 47.9993 3.82454 47.8372 3.12407 47.5249C2.42361 47.2126 1.80075 46.7574 1.29793 46.1903C0.795116 45.6232 0.424171 44.9576 0.210378 44.2387C-0.00341406 43.5198 -0.0550284 42.7647 0.0590531 42.0247L0.595277 38.5791L2.08598 28.9291C2.23365 27.9788 2.64948 27.0868 3.2874 26.3518C3.92531 25.6169 4.7604 25.0677 5.70013 24.7651L42.9784 12.7833H10.805C10.0342 12.7826 9.27257 12.6206 8.57211 12.3083C7.87165 11.996 7.24878 11.5408 6.74597 10.9737C6.24315 10.4065 5.87221 9.74089 5.65842 9.02203C5.44462 8.30318 5.39301 7.54804 5.50709 6.80807Z"/>
+                                </symbol>
+                            </svg>
+
+                            <div class="bandito__body">
+                                <div class="bandito__col">
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#lamp"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#brackets"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#lamp"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#logo"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#penciles"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#logo"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#lamp"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg width="64" height="64" viewBox="0 0 64 64">
+                                            <use xlink:href="#brackets"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#lamp"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#logo"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#penciles"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#logo"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#lamp"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#brackets"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#lamp"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#logo"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#penciles"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#logo"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#lamp"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#brackets"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#lamp"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#logo"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#penciles"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#logo"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#lamp"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#brackets"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#lamp"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#logo"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#penciles"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#logo"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#lamp"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#brackets"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#lamp"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#logo"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#penciles"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#logo"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#lamp"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#brackets"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#lamp"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#logo"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#penciles"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#logo"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#lamp"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#brackets"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#lamp"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#logo"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#penciles"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#logo"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#lamp"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#brackets"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#lamp"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#logo"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#penciles"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#logo"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="bandito__col">
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#lamp"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#brackets"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#lamp"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#logo"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#penciles"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#logo"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#lamp"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#brackets"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#lamp"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#logo"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#penciles"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#logo"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#lamp"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#brackets"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#lamp"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#logo"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#penciles"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#logo"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#lamp"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#brackets"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#lamp"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#logo"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#penciles"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#logo"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#lamp"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#brackets"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#lamp"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#logo"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#penciles"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#logo"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#lamp"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#brackets"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#lamp"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#logo"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#penciles"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#logo"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#lamp"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#brackets"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#lamp"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#logo"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#penciles"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#logo"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#lamp"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#brackets"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#lamp"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#logo"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#penciles"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#logo"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#lamp"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#brackets"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#lamp"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#logo"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#penciles"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#logo"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="bandito__col">
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#lamp"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#brackets"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#lamp"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#logo"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#penciles"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#logo"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#lamp"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#brackets"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#lamp"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#logo"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#penciles"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#logo"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#lamp"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#brackets"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#lamp"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#logo"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#penciles"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#logo"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#lamp"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#brackets"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#lamp"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#logo"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#penciles"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#logo"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#lamp"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#brackets"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#lamp"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#logo"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#penciles"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#logo"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#lamp"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#brackets"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#lamp"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#logo"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#penciles"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#logo"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#lamp"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#brackets"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#lamp"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#logo"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#penciles"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#logo"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#lamp"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#brackets"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#lamp"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#logo"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#penciles"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#logo"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#lamp"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#brackets"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#lamp"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#logo"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#penciles"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="bandito__item">
+                                        <svg>
+                                            <use xlink:href="#logo"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="about__content">
                         <h2 class="section__title">About us</h2>
@@ -257,6 +1188,5 @@
         </div>
     </div>
 
-    <script src="./js/swiper-bundle.min.js"></script>
 </body>
 </html>
