@@ -306,6 +306,8 @@ body
     transform: translateX(100%) rotate(-30deg)
     visibility: hidden
     pointer-events: none
+    opacity: 0
+    padding: 0px 15px
     &::before
         transition-duration: .35s
         transition-timing-function: ease-out
@@ -322,7 +324,7 @@ body
         transform-origin: left top
         transition-delay: .1s
     &__container
-        max-width: 310px
+        max-width: 335px
         padding: 0px 0px 28px
         width: 100%
         margin: 0 auto
@@ -333,12 +335,14 @@ body
         justify-content: center
         position: relative
         .nav
+            margin-left: 0px
             &__list
                 flex-direction: column
                 align-items: flex-start
             &__link
                 font-size: 42px
                 line-height: normal
+                padding-left: 0
             &__item
                 display: inline-block
         .nav__item + .nav__item
@@ -358,13 +362,11 @@ body
                 margin-right: 12px
             &:hover, &:active
                 border: 2px solid $main_yellow
-                
-                
-            // margin-top: auto
     &.active
         transform: translateX(0%) rotate(0deg)
         visibility: visible
         pointer-events: all
+        opacity: 1
         &::before
             transform: rotate(4deg)
 
@@ -930,7 +932,7 @@ body
     &__picset
         display: grid
         grid-template-columns: repeat(4, 1fr)
-        grid-template-rows: 1fr 95px
+        grid-template-rows: 400px 95px
         grid-gap: 24px 20px
     &__img
         grid-column: 1 / 5

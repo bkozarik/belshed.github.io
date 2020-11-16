@@ -59,6 +59,10 @@ $bg_white: #f8f8f8
         &__container
             max-width: 46%
 
+    .game-page
+        &__picset
+            grid-template-rows: 340px 95px
+
     .slide
         &__title
             &, & *
@@ -156,6 +160,9 @@ $bg_white: #f8f8f8
 
     .logo
         max-width: 95px
+
+    .menu
+        opacity: 1 !important
 
     .burger
         display: inline-block
@@ -291,6 +298,7 @@ $bg_white: #f8f8f8
         &__picset
             order: 2
             grid-template-columns: 1fr 125px
+            grid-template-rows: repeat(4, 1fr)
             grid-gap: 16px
         &__content
             grid-gap: 40px
@@ -522,7 +530,7 @@ $bg_white: #f8f8f8
             grid-gap: 30px
             margin-bottom: 0
         &__picset
-            grid-template-rows: 1fr repeat(2, 130px)
+            grid-template-rows: 470px repeat(2, 130px)
             grid-template-columns: repeat(2, 1fr)
         &__img
             width: calc( 100% + 40px )
@@ -626,6 +634,10 @@ $bg_white: #f8f8f8
                 &-img
                     height: 160px
 
+    .game-page
+        &__picset
+            grid-template-rows: 400px repeat(2, 130px)
+
     .slide
         &__images
             height: 350px
@@ -646,7 +658,7 @@ $bg_white: #f8f8f8
 @media screen and ( max-width: 470px )
     .game-page
         &__picset
-            grid-template-rows: 1fr repeat(2, 100px)
+            grid-template-rows: 270px repeat(2, 100px)
 
     .bandito
         padding: 20px 0px
@@ -741,6 +753,10 @@ $bg_white: #f8f8f8
             max-height: 200px
 
 @media screen and ( max-width: 365px )
+    .game-page
+        &__picset
+            grid-template-rows: 240px repeat(2, 100px)
+
     .slide__title
         &, & *
             font-size: 70px
