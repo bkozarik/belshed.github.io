@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const resizeHandler = () => {
         
         if(whichPage() == 'index'){
-            banditoWatch();
+            // banditoWatch();
         }
 
         if(window.innerWidth >= 980) toggleMenu(false);
@@ -208,6 +208,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const banditoWatch = () => {
+        if(bandito.classList.contains('bandito_blocked')) return;
         const marginTop = parseInt(getComputedStyle(bandito.querySelectorAll('.bandito__item')[1]).marginTop);
 
         bandito.querySelectorAll('.bandito__item').forEach(item => {
@@ -225,6 +226,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const banditoInit = () => {
+        if(bandito.classList.contains('bandito_blocked')) return;
         const banditoCols = bandito.querySelectorAll('.bandito__col');
         let itemDementions = banditoWatch();
         let marginTop = parseInt(getComputedStyle(bandito.querySelectorAll('.bandito__item')[1]).marginTop);

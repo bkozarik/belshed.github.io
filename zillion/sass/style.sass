@@ -573,11 +573,20 @@ body
 
 .bandito
     overflow: hidden
-    // transform: rotate(180deg)
-    background-image: url(../img/bandito.png)
-    background-size: cover
-    background-repeat: no-repeat
-    background-position: center
+    transform: rotate(180deg)
+    padding: 30px 10px
+    background-color: #fff
+    &_blocked
+        transform: none
+        background-image: url(../img/bandito.png)
+        background-size: cover
+        background-repeat: no-repeat
+        background-position: center
+        padding: 0px
+        background-color: transparent
+        .bandito
+            &__body
+                display: none
     &__body
         padding-bottom: 91%
         height: 100%

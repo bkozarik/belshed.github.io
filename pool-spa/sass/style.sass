@@ -2007,6 +2007,7 @@ body
 
 
 .product
+    padding-bottom: 50px
     &__title
         font-size: 26px
         font-weight: 600
@@ -2015,6 +2016,12 @@ body
         display: grid
         grid-template-columns: 1fr 270px
         grid-gap: 30px
+    &__content, &__aside
+        border: 1px solid $border_grey
+        background-color: #fff
+        padding: 30px
+    &__content
+    &__aside
 
 .complectation
     padding-bottom: 80px
@@ -2079,6 +2086,76 @@ body
         width: 100%
         object-fit: cover
         transition-duration: .5s
+
+.technologies
+    padding-bottom: 70px
+    &__container
+        display: grid
+        grid-template-columns: repeat(4, 1fr)
+        column-gap: 30px
+    &__body
+        border: 1px solid $border_grey
+        padding: 20px
+    &__title, &__title *
+        font-weight: 600
+        font-size: 16px
+        margin-bottom: 20px
+        &:hover
+            color: $main_yellow
+    &__img
+        height: 200px
+        width: 100%
+        object-fit: cover
+    &__item
+        display: flex
+        flex-direction: column
+        align-items: stretch
+        background-color: #fff
+    &__text
+        font-size: 14px
+        line-height: 21px
+
+.variants
+    padding-bottom: 50px
+    &__container
+        display: grid
+        grid-template-columns: repeat(3, 33%)
+        grid-gap: 30px
+    &__item
+        display: flex
+        align-items: center
+        padding: 20px
+        position: relative
+        background-color: #fff
+        border: 1px solid $border_grey
+    &__frame
+        margin-right: 20px
+        height: 120px
+        width: 120px
+        background-color: #fff
+        border: 1px solid $border_grey
+        flex-shrink: 0
+        position: relative
+        img
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            height: 90%
+            width: 90%
+    &__input
+        position: absolute
+        right: 10px
+        top: 10px
+    &__name
+        font-weight: 600
+        font-size: 16px
+        line-height: 24px
+    &__price
+        font-size: 700px
+        font-size: 18px
+        color: $main_yellow
+        margin-top: 15px
 
 //
 //
