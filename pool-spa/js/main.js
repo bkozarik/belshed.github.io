@@ -11,6 +11,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const popupRecallBtns = document.querySelectorAll('.js-open-popup-recall');
 
     const burger = document.querySelector('.js-menu');
+    const search = document.querySelector('.js-search');
+    const searchBtn = document.querySelector('.js-search-button');
 
     const whichPage = () => {
         const pageIdentifier = document.querySelector('.js-page-identifier');
@@ -129,6 +131,16 @@ document.addEventListener('DOMContentLoaded', () => {
         burger.classList.toggle('active');
     }
 
+    const toggleSearch = () => {
+        search.classList.toggle('active');
+
+        document.addEventListener('click', () => {
+            if(!event.target.classList.contains('js-search') && !event.target.classList.contains('js-search-button')){
+                toggleSearch();
+            }
+        });
+    }
+
     const closePopups = () => {
         const popups = popupOverlay.querySelectorAll('.popup');
 
@@ -176,6 +188,15 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    const resizeHandler = () => {
+        if(whichPage() == 'compare'){
+            if(window.innerWidth < 998){
+                document.querySelector('.compare>.container').insertBefore(document.querySelector('.table__params'), document.querySelector('.compare__container'))
+            }
+        }
+
+    }
+
     accordionTriggers.forEach(trigger => trigger.addEventListener('click', toggleAccordion('.js-usefull-item', false)));
     filterTriggers.forEach(trigger => trigger.addEventListener('click', toggleAccordion('.js-usefull-item', true)));
     
@@ -183,7 +204,10 @@ document.addEventListener('DOMContentLoaded', () => {
     popupRecallBtns.forEach(trigger => trigger.addEventListener('click', openPopup('.js-popup-recall')));
 
     burger.addEventListener('click', toggleMenu);
+    searchBtn.addEventListener('click', toggleSearch);
     categoriesTrgigger.addEventListener('click', toggleCategories);
+
+    window.addEventListener('resize', resizeHandler);
 
     if(whichPage() == 'index'){
         heroSwiperInit();
@@ -197,4 +221,6 @@ document.addEventListener('DOMContentLoaded', () => {
         catalogNoUiInit();
         catalogSwiperInit();
     }
+
+    resizeHandler();
 });

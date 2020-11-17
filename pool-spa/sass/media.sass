@@ -26,6 +26,19 @@ $text_black: #1c1d1e
                 white-space: nowrap
             &-content
                 max-width: 1150px
+        &__main
+            background-color: $bg_light_grey
+            .search
+                max-width: none
+                width: auto
+                box-shadow: none
+                margin-left: auto
+                &__button_search
+                    display: none !important
+                &__input
+                    display: none
+                &__button
+                    display: block
         &__buttons
             position: relative
             transform: none
@@ -44,18 +57,8 @@ $text_black: #1c1d1e
         width: auto
         flex-grow: 1
         margin: 0px 40px 0px 0px
-                
-    .search
-        max-width: none
-        width: auto
-        box-shadow: none
-        margin-left: auto
-        &::after
-            display: none
-        &__input
-            display: none
-        &__button
-            display: block
+            
+    
 
 @media screen and ( max-width: 1590px )
     .header
@@ -281,18 +284,20 @@ $text_black: #1c1d1e
             min-height: 400px
 
     .table
-        &__col
-            // border-top: none
-            // border-left: none
-        &__row:not(:nth-child(1)) &__col
-            grid-row: 2 / 3
-            border-top: none
-            border-left: none
-            &:nth-child(1)
-                grid-row: 1 / 2
+        border-top: none
+        &__head &__col
+            padding: 0
         &__row
             border-top: 1px solid #dcdcdc
             grid-template-columns: repeat(2, 1fr)
+            &:nth-child(1)
+                border-top: none
+            &:not(:nth-child(1)) .table__col
+                grid-row: 2 / 3
+                border-top: none
+                border-left: none
+                &:nth-child(1)
+                    grid-row: 1 / 2
 
 @media screen and ( max-width: 890px )
 
@@ -425,6 +430,42 @@ $text_black: #1c1d1e
         &__item
             width: 100%
             max-width: 420px
+
+    .catalog
+        &__promo
+            flex-direction: column
+            &-benefit
+                width: 100%
+                flex-direction: row
+                align-items: center
+                padding-top: 12px
+                padding-bottom: 10px
+                justify-content: flex-end
+                padding-right: 15px
+            &-text, &-price, &-name
+                font-size: 18px
+            &-price
+                margin-left: 7px
+            &-name
+                margin-left: auto
+                margin-right: 15px
+                padding: 20px 0px
+                position: relative
+                z-index: 2
+                max-width: 50%
+
+    .table
+        &__params
+            padding: 20px !important
+            border: 1px solid $border_grey
+        .arrival__item-price
+            margin-top: 10px
+        .popular__frame
+            margin-right: 0
+            margin-bottom: 15px
+        .compare__head
+            padding: 10px 30px 40px 10px
+            flex-direction: column
 
 @media screen and ( max-width: 650px )
 
@@ -668,6 +709,12 @@ $text_black: #1c1d1e
 @media screen and ( max-width: 470px )
 
     .catalog
+        &__promo
+            &-name
+                max-width: 60%
+            &-img
+                max-width: 60%
+                height: 100%
         &__title
             font-size: 14px
         &__top
@@ -822,3 +869,16 @@ $text_black: #1c1d1e
             font-size: 12px
             padding: 7px 0px
 
+    .table
+        .compare__head
+            padding: 10px 20px 40px 10px
+        &__head &__col
+            padding: 0 !important
+        &__head .arrival__item-cart
+            height: 20px
+            width: 20px
+        &__col
+            padding: 5px 15px 15px
+            &:first-child
+                padding-bottom: 5px
+                padding-top: 10px

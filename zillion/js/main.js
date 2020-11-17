@@ -228,54 +228,78 @@ document.addEventListener('DOMContentLoaded', () => {
         const banditoCols = bandito.querySelectorAll('.bandito__col');
         let itemDementions = banditoWatch();
         let marginTop = parseInt(getComputedStyle(bandito.querySelectorAll('.bandito__item')[1]).marginTop);
-        
-        const svgItems = ['lamp', 'brackets', 'penciles', 'logo'];
 
-        banditoCols.forEach((col, index) => {
-            let pos = ((col.querySelectorAll('.bandito__item').length - 3) * (itemDementions.height + marginTop));
-            let colTransitionDuration = getComputedStyle(col).transitionDuration;
-            let colTransitionDelay = getComputedStyle(col).transitionDelay;
+        const createItem = () => {
+            let height = Math.ceil(bandito.querySelector('.bandito__body').getBoundingClientRect().height - 2 * marginTop) / 3;
+            const svgItems = ['lamp', 'brackets', 'penciles', 'logo'];
 
-            col.style.transitionDuration = '0s';
-            col.style.transitionDelay = '0s';
+            let item = document.createElement('div');
+            item.classList.add('bandito__item');
+            item.classList.add('choseble');
+            item.classList.add('created');
+            item.innerHTML = `<svg><use xlink:href="#${svgItems[random(0, svgItems.length - 1)]}"></use></svg>`;
 
-            col.style.transform = `translateY(${-pos}px)`;
+            item.style.height = `${height}px`;
 
-
-            setTimeout(() => {
-                col.style.transitionDuration = colTransitionDuration;
-                col.style.transitionDelay = colTransitionDelay;
-            }, 100);
-        });
-
+            return item;
+        }
 
         const banditoAnimate = () => {
             itemDementions = banditoWatch();
-            const targetItems = [ random(5, banditoCols[0].querySelectorAll('.bandito__item').length - 3), random(5, banditoCols[1].querySelectorAll('.bandito__item').length - 3), random(5, banditoCols[2].querySelectorAll('.bandito__item').length - 3)];
+
+            let targetItems = new Array();
+
+            banditoCols.forEach(col => {
+                targetItems.push(random(10, col.querySelectorAll('.bandito__item.choseble').length - 3));
+            });
 
             banditoCols.forEach((col, index) => {
-                marginTop = parseInt(getComputedStyle(bandito.querySelectorAll('.bandito__item')[1]).marginTop);
+                marginTop = parseInt(getComputedStyle(col.querySelectorAll('.bandito__item')[1]).marginTop);
 
-                pos = (targetItems[index] * (itemDementions.height + marginTop));
+                let pos = (targetItems[index] * (itemDementions.height + marginTop));
 
                 col.style.transform = `translateY(${-pos}px)`;
-                
-                setTimeout(() => {
-                    col.querySelectorAll('.bandito__item').forEach((item, itemIndex) => {
-                        if(itemIndex > targetItems[index] + 2) item.remove();
-                    });
-                }, 2000);
 
                 setTimeout(() => col.querySelectorAll('.bandito__item.active').forEach(item => item.classList.remove('active')), 1000);
                 setTimeout(() => col.querySelectorAll('.bandito__item')[targetItems[index] + 1].classList.add('active'), 1000 + index * 500);
+                
+                // setTimeout(() => {
+                //     col.querySelectorAll('.bandito__item').forEach((item, itemIndex) => {
+                //         if(itemIndex > targetItems[index] + 3) {
+                            
+                //         }
+                //         else if(itemIndex < targetItems[index]){
+                //             // item.remove();
+                //             // pos = pos - (marginTop + itemDementions.height);
+                            
+                //             // let colTransitionDuration = getComputedStyle(col).transitionDuration;
+                //             // let colTransitionDelay = getComputedStyle(col).transitionDelay;
+
+                //             // col.style.transitionDuration = '0s';
+                //             // col.style.transitionDelay = '0s';
+
+                //             // col.style.transform = `translateY(${pos}px)`;
+
+                //             // console.log(pos);
+                            
+                //             // setTimeout(() => {
+                //             //     col.style.transitionDuration = colTransitionDuration;
+                //             //     col.style.transitionDelay = colTransitionDelay;
+                //             // }, 100);
+
+                //             // col.appendChild(createItem());
+                            
+                //         }
+                //     });
+
+                // }, 1500 + index * 500);
+                
             });
         }
 
-        setTimeout(() => banditoAnimate(), 6000);
-        // setTimeout(() => banditoAnimate(), 12000);
-        // setTimeout(() => banditoAnimate(), 18000);
+        banditoAnimate();
 
-        // setInterval(banditoAnimate, 6000);
+        setInterval(banditoAnimate, 4000);
     }
 
     unrollBtns.forEach( button => button.addEventListener('click', unrollBtnClick));

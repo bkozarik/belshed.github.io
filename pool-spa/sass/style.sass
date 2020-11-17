@@ -268,7 +268,25 @@ body
             max-height: 25px
             margin-right: 10px
             width: auto
-
+    &__search
+        position: absolute
+        background-color: $bg_light_grey
+        box-shadow: 0 0 16px 4px rgba(0, 0, 0, 0.1)
+        z-index: -1
+        padding: 10px 0px
+        transform: translateY(-120%)
+        width: 100%
+        pointer-events: none
+        &-wrap
+            align-items: center
+            display: flex
+            justify-content: flex-end
+        &.active
+            transform: translateY(0%)
+            pointer-events: all
+        .search
+            &__input
+                padding: 10px 15px
     &.fixed
         .header
             &__top
@@ -349,10 +367,17 @@ body
     width: 100%
     max-width: 400px
     box-shadow: 0 0 0 1px $border_grey
-    background-color: #f8f9fa
+    background-color: $bg_light_grey
     flex-shrink: 0
-    &::after
-        content: ''
+    &__button
+        display: none
+        height: 25px
+        width: 25px
+        background-image: url(../img/svg/1.svg)
+        background-size: contain
+        background-repeat: no-repeat
+        background-position: center
+    &__button_search
         display: inline-block
         top: 50%
         right: 20px
@@ -364,16 +389,8 @@ body
         background-repeat: no-repeat
         background-position: center
         background-image: url(../img/svg/1.svg)
-    &__button
-        display: none
-        height: 25px
-        width: 25px
-        background-image: url(../img/svg/1.svg)
-        background-size: contain
-        background-repeat: no-repeat
-        background-position: center
     &__input
-        background-color: #f8f9fa
+        background-color: $bg_light_grey
         padding: 10px
         font-size: 18px
         color: $text_black
@@ -384,7 +401,7 @@ body
             outline: none
 
 .burger
-    display: inline-block
+    display: none
     height: 40px
     width: 40px
     position: relative
@@ -715,6 +732,7 @@ body
                 color: #a8a9aa
                 display: block
                 font-size: 14px
+                font-weight: 400
             &-old + .arrival__item-footer
                 margin-top: 25px
         &-footer
@@ -1282,7 +1300,7 @@ body
                 width: 12px
 
 .counter
-    background-color: #f8f9fa
+    background-color: $bg_light_grey
     border: 1px solid $border_grey
     display: flex
     align-items: stretch
@@ -1425,7 +1443,7 @@ body
         border: none
         appearance: none
         box-shadow: 0 0 0 1px $border_grey
-        background-color: #f8f9fa
+        background-color: $bg_light_grey
         font-size: 14px
         padding: 10px 15px
         width: 100%
@@ -1596,6 +1614,49 @@ body
     
 .catalog
     padding-bottom: 80px
+    &__promo
+        width: 100%
+        display: flex
+        background-color: $main_blue
+        justify-content: flex-end
+        margin-top: 30px
+        overflow: hidden
+        align-items: center
+        position: relative
+        &-benefit
+            display: flex
+            flex-direction: column
+            background-color: $main_yellow
+            padding: 24px 30px 20px
+            flex-shrink: 0
+            position: relative
+            z-index: 2
+            height: 100%
+        &-text, &-price
+            color: #fff
+            text-align: center
+            font-weight: 600
+            text-transform: uppercase
+        &-text
+            font-size: 16px
+        &-price
+            font-size: 24px
+        &-img
+            position: absolute
+            left: 0
+            top: 20%
+            transform: translateY(-50%)
+        &-name
+            font-size: 26px
+            color: #fff
+            font-weight: 600
+            display: inline-block
+            margin-right: 25px
+            margin-left: 230px
+            text-transform: uppercase
+            text-align: right
+            padding: 10px 0px
+            
     &__swiper
         overflow: hidden
         width: 100%
@@ -1670,7 +1731,7 @@ body
             width: 100%
             display: block
             border: 1px solid $border_grey
-            background-color: #f8f9fa
+            background-color: $bg_light_grey
             font-size: 14px
             padding: 10px 5px
             &:focus
@@ -1703,8 +1764,9 @@ body
         grid-gap: 30px
         align-items: start
     &__body
-        max-width: 870px
+        // max-width: 870px
         width: 100%
+        min-width: 0
     &__products
         display: grid
         grid-template-columns: repeat(3, 1fr)
@@ -1852,9 +1914,6 @@ body
     padding-bottom: 80px
     &__container
         background-color: #fff
-        max-width: 100%
-        width: 100%
-        overflow-x: auto
     &__head
         display: flex
         padding: 20px 40px 40px 20px
@@ -1899,6 +1958,10 @@ body
             display: flex
             flex-direction: column
             align-items: flex-start
+        .arrival__item-cart
+            position: absolute
+            bottom: 20px
+            right: 20px
     &__table
         border: 1px solid $border_grey
 
@@ -1908,7 +1971,8 @@ body
     &__row
         display: grid
         grid-template-columns: 270px repeat(2, 1fr)
-        &:nth-child(1) .table__col
+    &__head
+        .table__col:nth-child(2), .table__col:nth-child(3)
             padding: 0
     .table__params
         margin-bottom: 0
@@ -1952,6 +2016,69 @@ body
         grid-template-columns: 1fr 270px
         grid-gap: 30px
 
+.complectation
+    padding-bottom: 80px
+    &__body
+        background-color: #fff
+        border: 1px solid $border_grey
+        padding: 20px 30px 28px
+        display: flex
+        align-items: flex-start
+    &__list
+        flex-basis: 48%
+        & + &
+            margin-left: 30px
+    &__item
+        font-size: 14px
+        padding: 10px 0px 5px 10px
+        border-bottom: 1px solid $border_grey
+        list-style-type: none
+        position: relative
+        &::before
+            content: ''
+            display: inline-block
+            position: absolute
+            top: 55%
+            left: 2px
+            transform: translate(0, -50%)
+            height: 2px
+            width: 2px
+            background-color: $text_black
+
+.videos
+    padding-bottom: 50px
+    &__body
+        display: grid
+        grid-template-columns: repeat(4, 1fr)
+        column-gap: 30px
+    &__item
+        position: relative
+        display: block
+        overflow: hidden
+        &::before
+            content: ''
+            display: inline-block
+            position: absolute
+            left: 50%
+            top: 50%
+            transform: translate(-50%, -50%)
+            height: 60px
+            width: 60px
+            border-radius: 50%
+            overflow: hidden
+            pointer-events: none
+            background-image: url(../img/preview-btn.png)
+            background-size: contain
+            background-repeat: no-repeat
+            background-position: center
+            z-index: 2
+    &__item:hover &__preview
+            transform: scale(1.03)
+    &__preview
+        height: 100%
+        width: 100%
+        object-fit: cover
+        transition-duration: .5s
 
 //
 //

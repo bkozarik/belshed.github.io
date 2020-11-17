@@ -416,6 +416,10 @@ body
                 height: 100%
                 width: 100%
                 object-fit: cover
+        &:nth-child(2) &-item
+            right: -40px
+        &:nth-child(3) &-item
+            right: -45px
         &:not(.active)
             .slide
                 &__image
@@ -526,10 +530,10 @@ body
     &__bandito
         width: 460px
         height: 470px
-        background-color: #fff
+        // background-color: #fff
         box-shadow: 0px 14px 54px rgba(0, 0, 0, 0.1)
         border-radius: 20px
-        padding: 35px 10px
+        // padding: 35px 10px
         position: relative
         z-index: 2
         flex-shrink: 0
@@ -569,6 +573,11 @@ body
 
 .bandito
     overflow: hidden
+    // transform: rotate(180deg)
+    background-image: url(../img/bandito.png)
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center
     &__body
         padding-bottom: 91%
         height: 100%
@@ -582,6 +591,7 @@ body
         overflow: hidden
         transition-duration: .2s
         transition-timing-function: ease-out
+        transform: rotate(180deg)
         svg
             position: absolute
             left: 50%
