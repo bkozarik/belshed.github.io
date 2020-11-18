@@ -1,10 +1,10 @@
-const body = document.body;
-const preloader = document.createElement('div');
-const loader = document.createElement('div');
+// const body = document.body;
+// const preloader = document.createElement('div');
+// const loader = document.createElement('div');
 
-preloader.classList.add('preloader');
-loader.classList.add('preloader__loader');
+// preloader.classList.add('preloader');
+// loader.classList.add('preloader__loader');
 
-preloader.appendChild(loader);
+// preloader.appendChild(loader);
 
-body.prepend(preloader);
+// body.prepend(preloader);
