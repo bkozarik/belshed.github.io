@@ -1,3 +1,14 @@
+window.onload = () => {
+    const body = document.body;
+
+    body.classList.add('loaded_hiding');
+
+    setTimeout(() => {
+        body.classList.add('loaded');
+        body.classList.remove('loaded_hiding');
+    },500);
+};
+
 document.addEventListener('DOMContentLoaded', () => {
     const menu = document.querySelector('.js-menu');
     const burger = document.querySelector('.js-burger');
@@ -12,6 +23,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const picsetButtons = document.querySelectorAll('.js-picture-button');
 
     const bandito = document.querySelector('.js-bandito');
+
+    let mainSliderTimer;
 
     const whichPage = () => {
         const pageIdentifier = document.querySelector('.js-page-identifier');
@@ -324,10 +337,22 @@ document.addEventListener('DOMContentLoaded', () => {
     if(whichPage() == 'index'){
         banditoInit();
         showSliderPage();
+        
+        mainSliderTimer = setInterval(() => getActiveSliderPage() == getMaxSliderPage() ? showSliderPage() : showSliderPage(getActiveSliderPage() + 1), 5000);
+        
+        
 
-        setInterval(() => getActiveSliderPage() == getMaxSliderPage() ? showSliderPage() : showSliderPage(getActiveSliderPage() + 1), 5000);
-
-        document.querySelector('.js-slider-prev').addEventListener('click', () => showSliderPage(getActiveSliderPage() - 1));
-        document.querySelector('.js-slider-next').addEventListener('click', () => showSliderPage(getActiveSliderPage() + 1));
+        document.querySelector('.js-slider-prev').addEventListener('click', () => {
+            clearInterval(mainSliderTimer);
+            mainSliderTimer = setInterval(() => getActiveSliderPage() == getMaxSliderPage() ? showSliderPage() : showSliderPage(getActiveSliderPage() + 1), 5000);
+            
+            showSliderPage(getActiveSliderPage() - 1);
+        });
+        document.querySelector('.js-slider-next').addEventListener('click', () => {
+            clearInterval(mainSliderTimer);
+            mainSliderTimer = setInterval(() => getActiveSliderPage() == getMaxSliderPage() ? showSliderPage() : showSliderPage(getActiveSliderPage() + 1), 5000);
+            
+            showSliderPage(getActiveSliderPage() + 1);
+        });
     }
 });

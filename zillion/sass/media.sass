@@ -482,8 +482,12 @@ $bg_white: #f8f8f8
 
     .game:first-of-type
         grid-column: 1 / 2
-        .game__img
-            max-height: 230px
+        .game
+            &__body
+                background: none
+                padding: 0
+            &__img
+                max-height: 230px
     
     .about-page
         &__text
@@ -499,7 +503,8 @@ $bg_white: #f8f8f8
     .game
         max-width: 400px
         &__img
-            max-height: 250px
+            height: 250px !important
+            border-radius: 8px
         &:first-of-type
             .game
                 &__body
@@ -522,6 +527,7 @@ $bg_white: #f8f8f8
         &__container
             grid-gap: 32px
             justify-items: center
+            grid-template-rows: auto
             grid-template-columns: repeat(1, 1fr)
 
     .game-page
@@ -753,7 +759,7 @@ $bg_white: #f8f8f8
 
     .game
         &__img
-            max-height: 200px
+            max-height: 200px !important
 
 @media screen and ( max-width: 365px )
     .game-page
