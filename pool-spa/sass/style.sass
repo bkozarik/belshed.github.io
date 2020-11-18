@@ -226,6 +226,7 @@ body
     &__main
         padding: 17px 60px
         position: relative
+        background-color: #fff
         &-wrap
             display: flex
             align-items: center
@@ -244,10 +245,9 @@ body
         align-items: center
         flex-shrink: 0
         font-size: 14px
+        height: 25px
         & + &
-            margin-left: 70px
-            &::after
-                right: -25px
+            margin-left: 30px
         &::after
             display: inline-block
             height: 16px
@@ -261,10 +261,12 @@ body
             border-radius: 50%
             content: attr(data-val)
             position: absolute
-            right: -55px
-            top: 40%
+            right: -20px
+            top: 10%
             transform: translate(0, -50%)
-        img
+        svg
+            fill: #a8a9aa
+            height: 100%
             max-height: 25px
             margin-right: 10px
             width: auto
@@ -369,14 +371,34 @@ body
     box-shadow: 0 0 0 1px $border_grey
     background-color: $bg_light_grey
     flex-shrink: 0
+    &__close
+        display: none
+        height: 35px
+        width: 35px
+        position: relative
+        margin-left: auto
+        &::before, &::after
+            content: ''
+            display: inline-block
+            height: 2px
+            width: 26px
+            background-color: $text_black
+            position: absolute
+            left: 50%
+            top: 50%
+            transform: translate(-50%, -50%)
+        &::before
+            transform: translate(-50%, -50%) rotate(-45deg)
+        &::after
+            transform: translate(-50%, -50%) rotate(45deg)
     &__button
         display: none
         height: 25px
         width: 25px
-        background-image: url(../img/svg/1.svg)
-        background-size: contain
-        background-repeat: no-repeat
-        background-position: center
+        svg
+            height: 100%
+            width: auto
+            fill: #a8a9aa
     &__button_search
         display: inline-block
         top: 50%
@@ -397,6 +419,7 @@ body
         width: 100%
         display: block
         border: none
+        appearance: none
         &:focus
             outline: none
 
@@ -433,6 +456,67 @@ body
             transform: translate(-50%, -50%) rotate(45deg)
         &::after
             transform: translate(-50%, -50%) rotate(-45deg)
+
+.menu
+    position: fixed
+    height: 100vh
+    width: 100%
+    background-color: $bg_grey
+    top: 0
+    left: 0
+    z-index: 3
+    transform: translateY(-110%)
+    padding: 64px 0px 0px
+    overflow-y: auto
+    &__bottom
+        background-color: $main_blue
+        padding: 35px 20px 25px
+        &-content
+            max-width: 400px
+            display: flex
+            flex-direction: column
+            align-items: flex-start
+            & > *
+                margin-bottom: 15px
+        .header
+            &__tel, &__map
+                margin-left: 0
+                padding-left: 20px
+                font-size: 12px
+                &::before
+                   height: 15px
+                   width: 15px 
+        .button_recall
+            margin-left: 0px
+    .categories
+        position: relative !important
+        visibility: visible !important
+        opacity: 1 !important
+        pointer-events: all !important
+        transform: none !important
+        display: flex
+        width: 100%
+        align-items: stretch
+        box-shadow: none
+        &__link
+            background-color: $main_blue
+            font-size: 12px
+            padding: 10px 20px
+            color: #fff
+    .nav
+        margin: 0
+        &__list
+            padding: 30px 0px
+            flex-direction: column
+            align-items: center
+            min-height: 200px
+        &__separator
+            display: none
+        &__link
+            color: $text_black
+            font-size: 14px
+    &.active
+        transform: translateY(0%)
 
 .main
     margin-top: 126px
@@ -473,7 +557,7 @@ body
         width: 100px
         height: 60px
         cursor: pointer
-        z-index: 3
+        z-index: 2
         svg
             top: 50%
             transform: translate(0%, -50%)
@@ -656,12 +740,16 @@ body
             background-size: 104% 104%
 
 .arrival
-    padding: 70px 0px 80px
+    padding: 50px 0px 80px
     &__container
         display: grid
         grid-template-columns: repeat(4, 1fr)
         grid-gap: 30px
         margin-top: 42px
+        &_1
+            position: relative
+        &_2
+            position: relative
     &__item
         box-shadow: 0 0 0 1px $border_grey
         display: grid
@@ -1213,12 +1301,55 @@ body
     width: 100%
     &__label
         font-weight: 700
+    &__text
+        font-size: 14px
+        font-weight: 400
+        line-height: 21px
+        &_crossed
+            text-decoration: line-through
     &__price
         font-size: 26px
         font-weight: 700
         color: $main_yellow
         display: block
         margin: 10px 0px 30px
+    &__cheaper
+        font-size: 12px
+        text-decoration: underline
+        color: #a8a9aa
+        display: inline-block
+        margin-bottom: 20px
+    &__inline-btn
+        font-size: 14px
+        color: $text_black
+        text-decoration: underline
+        font-weight: 400
+        text-transform: none
+        display: flex
+        align-items: center
+        margin-top: 0 !important
+        margin-bottom: 0 !important
+        & + &
+            margin-top: 25px !important
+        &:last-of-type
+            margin-bottom: 35px !important
+        svg, img
+            margin-right: 10px
+            width: 18px
+            height: 18px
+    &__social
+        display: flex
+        align-items: center
+        justify-content: space-between
+        margin-top: 15px
+        width: 100%
+        &-item
+            width: 20px
+            height: 20px
+            svg, img
+                height: 100%
+                width: 100%
+                object-fit: contain
     &__body
         border-top: 1px solid $border_grey
         border-bottom: 1px solid $border_grey
@@ -1255,7 +1386,7 @@ body
         height: 115px
         width: 115px
         box-shadow: 0 0 0 1px $border_grey
-        margin-right: 20px
+        margin-right: 25px
         display: flex
         align-items: center
         justify-content: center
@@ -1269,7 +1400,7 @@ body
     &__price
         font-size: 22px
         font-weight: 600
-        margin-right: 70px
+        margin-right: 57px
     &__remove
         position: absolute
         top: 0px
@@ -1425,9 +1556,9 @@ body
         justify-content: space-between
         align-items: stretch
         width: 100%
-        margin-top: 20px
+        margin-top: 27px
         & + &
-            margin-top: 20px
+            margin-top: 40px
     &__col
         flex: 0 1 50%
         & + &
@@ -1547,7 +1678,7 @@ body
             outline-offset: -40px
     &__data
         & + &
-            margin-top: 25px
+            margin-top: 21px
     &__title
         font-size: 22px
         font-weight: 600
@@ -1958,6 +2089,35 @@ body
             display: flex
             flex-direction: column
             align-items: flex-start
+        &-control
+            position: absolute
+            height: 25px
+            width: 25px
+            border-radius: 50%
+            background-color: #fff
+            z-index: 3
+            border: 1px solid $border_grey
+            top: calc(100% + 10px)
+            &_prev
+                left: 0
+                transform: translate(50%, 0) rotate(180deg)
+            &_next
+                right: 0
+                transform: translate(-50%, 0)
+            &::before, &::after
+                content: ''
+                display: inline-block
+                position: absolute
+                height: 1px
+                width: 9px
+                background-color: $text_black
+                top: 50%
+                left: 50%
+                transform: translate(-50%, -50%)
+            &::before
+                transform: translate(-50%, calc( -50% - 3px )) rotate(45deg)
+            &::after
+                transform: translate(-50%, calc( -50% + 3px )) rotate(-45deg)
         .arrival__item-cart
             position: absolute
             bottom: 20px
@@ -1968,10 +2128,25 @@ body
 .table
     display: grid
     grid-template-columns: repeat(1, 1fr)
+    .popular__frame
+        height: 97px
+        width: 97px
     &__row
         display: grid
         grid-template-columns: 270px repeat(2, 1fr)
+        overflow: hidden
+        &:first-child
+            border-top: 1px solid $border_grey
+    .table
+        &__head
+            border: none
+            overflow: hidden
     &__head
+        background-color: #fff
+        border: 1px solid #dcdcdc
+        overflow: visible
+        .table__col
+            border-top: none
         .table__col:nth-child(2), .table__col:nth-child(3)
             padding: 0
     .table__params
@@ -1986,7 +2161,7 @@ body
         .button + .button
             margin-top: 20px
     &__col
-        padding: 20px
+        padding: 24px 20px
         font-size: 14px
         font-weight: 400
         border-top: 1px solid $border_grey
@@ -1994,9 +2169,7 @@ body
         &:first-child
             border-left: none
             font-size: 16px
-            font-weight: 600
-
-            
+            font-weight: 600          
 
 
 //
@@ -2021,7 +2194,73 @@ body
         background-color: #fff
         padding: 30px
     &__content
+        display: flex
+    &__data
+        width: 100%
+        &-item
+            display: flex
+            align-items: center
+            justify-content: space-between
+            font-size: 14px
+            padding: 10px 0px
+            border-bottom: 1px solid $border_grey
     &__aside
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        width: 100%
+        height: 100%
+        position: static
+        .button
+            margin-bottom: 30px
+        .total__price
+            margin: 10px 0px
+    &__preview
+        margin-right: 40px
+        width: 370px
+        // min-width: 0
+    &__customize
+        margin-top: 20px
+        &-title
+            display: block
+            font-size: 14px
+            font-weight: 400
+        &-elements
+            display: flex
+            align-items: center
+            margin-top: 5px
+        &-item + &-item
+            margin-top: 15px
+        &-element
+            height: 42px
+            width: 42px
+            overflow: hidden
+            border-radius: 50%
+            cursor: pointer
+            position: relative
+            & + &
+                margin-left: 15px
+        &-input
+            position: absolute
+            opacity: 0
+            visibility: hidden
+            height: 1px
+            width: 1px
+            appearance: none
+            flex-shrink: 0
+        &-input:checked ~ &-img
+            box-shadow: 0 0 0 2px $main_yellow
+        &-img
+            box-shadow: 0 0 0 2px $border_grey
+            height: 39px
+            width: 39px
+            border-radius: 50%
+            object-fit: cover
+            flex-shrink: 0
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
 
 .complectation
     padding-bottom: 80px
@@ -2092,14 +2331,16 @@ body
     &__container
         display: grid
         grid-template-columns: repeat(4, 1fr)
-        column-gap: 30px
+        justify-items: center
+        grid-gap: 30px
     &__body
         border: 1px solid $border_grey
         padding: 20px
+    &__title
+        margin-bottom: 20px
     &__title, &__title *
         font-weight: 600
         font-size: 16px
-        margin-bottom: 20px
         &:hover
             color: $main_yellow
     &__img
@@ -2107,10 +2348,13 @@ body
         width: 100%
         object-fit: cover
     &__item
+        border-top: 1px solid $border_grey
         display: flex
         flex-direction: column
         align-items: stretch
         background-color: #fff
+        width: 100%
+        max-width: 380px
     &__text
         font-size: 14px
         line-height: 21px
@@ -2119,7 +2363,7 @@ body
     padding-bottom: 50px
     &__container
         display: grid
-        grid-template-columns: repeat(3, 33%)
+        grid-template-columns: repeat(3, 1fr)
         grid-gap: 30px
     &__item
         display: flex
@@ -2156,6 +2400,92 @@ body
         font-size: 18px
         color: $main_yellow
         margin-top: 15px
+
+.slider
+    background-color: $bg_light_grey
+    padding: 75px 60px
+    min-width: 370px
+    overflow: hidden
+    position: relative
+    &-thumbs
+        margin-top: 20px
+        overflow: hidden
+        padding: 2px
+        .swiper-slide-thumb-active
+            .slider
+                &__thumb
+                    box-shadow: 0 0 0 1px $main_yellow
+                    img
+                        opacity: .7
+    &__slide
+        &-img
+            height: 100%
+            width: 100%
+            object-fit: contain
+            max-width: 100%
+    &__thumb
+        display: flex
+        align-items: center
+        justify-content: center
+        height: 80px
+        width: 80px
+        overflow: hidden
+        background-color: $bg_light_grey
+        img
+            height: 70%
+            width: auto
+    &__control
+        position: absolute
+        bottom: 0
+        width: 20px
+        height: 30px
+        background-color: #ebeced
+        &_prev
+            left: 0
+        &_next
+            right: 0
+            svg
+                transform: translate(-50%, -50%) rotate(180deg) !important
+        svg
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            height: 20px
+            width: 10px
+            object-fit: cover
+
+.arrival
+    &__control
+        position: absolute
+        height: 25px
+        width: 25px
+        border-radius: 50%
+        background-color: #fff
+        z-index: 3
+        border: 1px solid $border_grey
+        top: 59.4%
+        &_prev
+            left: 0
+            transform: translate(-50%, 0) rotate(180deg)
+        &_next
+            right: 0
+            transform: translate(50%, 0)
+        &::before, &::after
+            content: ''
+            display: inline-block
+            position: absolute
+            height: 1px
+            width: 9px
+            background-color: $text_black
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+        &::before
+            transform: translate(-50%, calc( -50% - 3px )) rotate(45deg)
+        &::after
+            transform: translate(-50%, calc( -50% + 3px )) rotate(-45deg)
+
 
 //
 //

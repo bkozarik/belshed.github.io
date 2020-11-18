@@ -58,6 +58,46 @@ html, body {
     background-color: #6C23B9;
 }
 
+.shortcode-html .js-tabs-mobile-control {
+    border: none !important;
+    color: #fff;
+    position: relative;
+}
+
+.shortcode-html .js-tabs-mobile-control::before, .shortcode-html .js-tabs-mobile-control::after, .materials .js-tabs-mobile-control::before, .materials .js-tabs-mobile-control::after {
+    content: '';
+    display: inline-block;
+    height: 1px;
+    width: 12px;
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    background-color: #fff;
+}
+
+.shortcode-html .js-tabs-mobile-control::before, .materials .js-tabs-mobile-control::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+    -webkit-transform: translate(-50%, -50%) rotate(45deg);
+    -moz-transform: translate(-50%, -50%) rotate(45deg);
+    -ms-transform: translate(-50%, -50%) rotate(45deg);
+    -o-transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.shortcode-html .js-tabs-mobile-control::after, .materials .js-tabs-mobile-control::after  {
+    transform: translate(20%, -50%) rotate(-45deg);
+    -webkit-transform: translate(20%, -50%) rotate(-45deg);
+    -moz-transform: translate(20%, -50%) rotate(-45deg);
+    -ms-transform: translate(20%, -50%) rotate(-45deg);
+    -o-transform: translate(20%, -50%) rotate(-45deg);
+}
+
+.materials .js-tabs-mobile-control {
+    background-color: #6C23B9 !important;
+    border: none !important;
+    position: relative;
+    color: #fff;
+}
+
 .shortcode-html .tab-pane .g-brd-around{
     padding: 1px 0 !important;
     border: none !important;
@@ -408,6 +448,7 @@ html, body {
 
 .demands__img {
     background-color: #ccc;
+    position: relative;
     height: 80px;
     width: 80px;
     border-radius: 50%;
@@ -415,8 +456,27 @@ html, body {
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
+    overflow: hidden;
 }
 
+.demands__img svg {
+    fill: #000;
+    height: 50px;
+    width: 50px;
+    object-fit: contain;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+.demands__item:nth-of-type(2) .demands__img svg {
+    height: 60px;
+    width: 60px;
+}
 .footer {
     background-color: #0E0A32 !important;
 }

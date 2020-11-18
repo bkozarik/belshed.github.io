@@ -9,10 +9,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const popupOverlay = document.querySelector('.js-popup-overlay');
     const popupCloseBtns = document.querySelectorAll('.js-popup-close');
     const popupRecallBtns = document.querySelectorAll('.js-open-popup-recall');
+    const popupInstructionBtns = document.querySelectorAll('.js-open-popup-instruction');
+    const popupLayoutBtns = document.querySelectorAll('.js-open-popup-layout');
 
     const burger = document.querySelector('.js-menu');
+    const menu = document.querySelector('.js-menu-content');
     const search = document.querySelector('.js-search');
     const searchBtn = document.querySelector('.js-search-button');
+
+    let swiperArrival_1_node;
+    let swiperArrival_1;
+
+    let swiperArrival_2_node;
+    let swiperArrival_2;
 
     const whichPage = () => {
         const pageIdentifier = document.querySelector('.js-page-identifier');
@@ -72,6 +81,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 prevEl: '.catalog__swiper .catalog__swiper-control_prev',
                 nextEl: '.catalog__swiper .catalog__swiper-control_next'
             },
+            breakpoints: {
+                1020: {
+                    slidesPerView: 3,
+                },
+                560: {
+                    slidesPerView: 2,
+                },
+                300: {
+                    slidesPerView: 1,
+                }
+            },
         });
     }
 
@@ -127,15 +147,28 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    const toggleMenu = () => {
-        burger.classList.toggle('active');
+    const toggleMenu = (state = null) => {
+        if(state == null){
+            return () => {
+                burger.classList.toggle('active');
+                menu.classList.toggle('active');
+            }
+        }
+        else if(state){
+            burger.classList.add('active');
+            menu.classList.add('active');
+        }
+        else{
+            burger.classList.remove('active');
+            menu.classList.remove('active');
+        }
     }
 
     const toggleSearch = () => {
         search.classList.toggle('active');
 
         document.addEventListener('click', () => {
-            if(!event.target.classList.contains('js-search') && !event.target.classList.contains('js-search-button')){
+            if(event.target.classList.contains('search__close')){
                 toggleSearch();
             }
         });
@@ -188,11 +221,109 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    const itemSwiperInit = () => {
+        let swiperThumbs = new Swiper('.slider-thumbs', {
+            spaceBetween: 10,
+            freeMode: true,
+            watchSlidesVisibility: true,
+            watchSlidesProgress: true,
+            breakpoints: {
+                1080: {
+                    slidesPerView: 4,
+                },
+                400: {
+                    slidesPerView: 6,
+                },
+                300: {
+                    slidesPerView: 5,
+                }
+            }
+        });
+
+        let swiper = new Swiper('.slider', {
+            slidesPerView: 1,
+            centeredSlides: true,
+            spaceBetween: 100,
+            loop: true,
+            navigation: {
+                prevEl: '.slider .slider__control_prev',
+                nextEl: '.slider .slider__control_next',
+            },
+            thumbs: {
+                swiper: swiperThumbs,
+            }
+        });
+    }
+
     const resizeHandler = () => {
         if(whichPage() == 'compare'){
             if(window.innerWidth < 998){
-                document.querySelector('.compare>.container').insertBefore(document.querySelector('.table__params'), document.querySelector('.compare__container'))
+                document.querySelector('.compare>.container').insertBefore(document.querySelector('.table__params'), document.querySelector('.compare__container'));
+                document.querySelector('.compare>.container').insertBefore(document.querySelector('.table__head'), document.querySelector('.compare__container'));
             }
+            else{
+                document.querySelector('.table__head').prepend(document.querySelector('.table__params'));
+                document.querySelector('.compare__table.table').prepend(document.querySelector('.table__head'));
+            }
+        }
+        else if(whichPage() == 'item'){
+            if(window.innerWidth < 590){
+                if(!document.querySelector('.arrival__container_1').classList.contains('swiper-container-initialized')){
+                    swiperArrival_1 = new Swiper('.arrival__container_1', {
+                        slidesPerView: 2,
+                        spaceBetween: 20,
+                        navigation: {
+                            prevEl: '.arrival__container_1 .arrival__control_prev',
+                            nextEl: '.arrival__container_1 .arrival__control_next',
+                        },
+                        breakpoints: {
+                            470: {
+                                slidesPerView: 2,
+                                centeredSlides: false,
+                            },
+                            300: {
+                                slidesPerView: 1,
+                                centeredSlides: true,
+                            }
+                        }
+                    });
+                    swiperArrival_1_node = document.querySelector('.arrival__container_1').swiper;
+                }
+
+                if(!document.querySelector('.arrival__container_2').classList.contains('swiper-container-initialized')){
+                    swiperArrival_2 = new Swiper('.arrival__container_2', {
+                        slidesPerView: 2,
+                        spaceBetween: 20,
+                        navigation: {
+                            prevEl: '.arrival__container_2 .arrival__control_prev',
+                            nextEl: '.arrival__container_2 .arrival__control_next',
+                        },
+                        breakpoints: {
+                            470: {
+                                slidesPerView: 2,
+                                centeredSlides: false,
+                            },
+                            300: {
+                                slidesPerView: 1,
+                                centeredSlides: true,
+                            }
+                        }
+                    });
+                    swiperArrival_2_node = document.querySelector('.arrival__container_2').swiper;
+                }
+            }
+            else {
+                if(document.querySelector('.arrival__container_1').classList.contains('swiper-container-initialized')){
+                    swiperArrival_1_node.destroy();
+                }
+                if(document.querySelector('.arrival__container_2').classList.contains('swiper-container-initialized')){
+                    swiperArrival_2_node.destroy();
+                }
+            }
+        }
+
+        if(window.innerWidth > 1080){
+            toggleMenu(false);
         }
 
     }
@@ -202,8 +333,10 @@ document.addEventListener('DOMContentLoaded', () => {
     
     popupCloseBtns.forEach(trigger => trigger.addEventListener('click', closePopups));
     popupRecallBtns.forEach(trigger => trigger.addEventListener('click', openPopup('.js-popup-recall')));
+    popupInstructionBtns.forEach(trigger => trigger.addEventListener('click', openPopup('.js-popup-instruction')));
+    popupLayoutBtns.forEach(trigger => trigger.addEventListener('click', openPopup('.js-popup-layout')));
 
-    burger.addEventListener('click', toggleMenu);
+    burger.addEventListener('click', toggleMenu());
     searchBtn.addEventListener('click', toggleSearch);
     categoriesTrgigger.addEventListener('click', toggleCategories);
 
@@ -221,6 +354,11 @@ document.addEventListener('DOMContentLoaded', () => {
         catalogNoUiInit();
         catalogSwiperInit();
     }
+    else if(whichPage() == 'item'){
+        itemSwiperInit();
+    }
+
+    // toggleMenu(true);
 
     resizeHandler();
 });
