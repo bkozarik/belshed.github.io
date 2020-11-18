@@ -1,12 +1,13 @@
 window.onload = () => {
     const body = document.body;
-
-    body.classList.add('loaded_hiding');
+    setTimeout(() => {
+        body.classList.add('loaded_hiding');
+    }, 300);
 
     setTimeout(() => {
         body.classList.add('loaded');
         body.classList.remove('loaded_hiding');
-    },500);
+    }, 1000);
 };
 
 document.addEventListener('DOMContentLoaded', () => {
