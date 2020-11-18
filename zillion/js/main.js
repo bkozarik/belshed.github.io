@@ -131,7 +131,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const showSliderPage = (page = 1) => {
         const slider = document.querySelector('.js-slider');
         const sliderMaxPages = parseInt(slider.dataset.pages);
-        page = constrain(page, 1, sliderMaxPages);
+
+        page = page > getMaxSliderPage() ? 1 : page <= 0 ? getMaxSliderPage() : page;
+
         slider.dataset.page = page;
 
         const pageData = slider.querySelectorAll('.js-slider-changable');
@@ -277,38 +279,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 setTimeout(() => col.querySelectorAll('.bandito__item.active').forEach(item => item.classList.remove('active')), 1000);
                 setTimeout(() => col.querySelectorAll('.bandito__item')[targetItems[index] + 1].classList.add('active'), 1000 + index * 500);
-                
-                // setTimeout(() => {
-                //     col.querySelectorAll('.bandito__item').forEach((item, itemIndex) => {
-                //         if(itemIndex > targetItems[index] + 3) {
-                            
-                //         }
-                //         else if(itemIndex < targetItems[index]){
-                //             // item.remove();
-                //             // pos = pos - (marginTop + itemDementions.height);
-                            
-                //             // let colTransitionDuration = getComputedStyle(col).transitionDuration;
-                //             // let colTransitionDelay = getComputedStyle(col).transitionDelay;
-
-                //             // col.style.transitionDuration = '0s';
-                //             // col.style.transitionDelay = '0s';
-
-                //             // col.style.transform = `translateY(${pos}px)`;
-
-                //             // console.log(pos);
-                            
-                //             // setTimeout(() => {
-                //             //     col.style.transitionDuration = colTransitionDuration;
-                //             //     col.style.transitionDelay = colTransitionDelay;
-                //             // }, 100);
-
-                //             // col.appendChild(createItem());
-                            
-                //         }
-                //     });
-
-                // }, 1500 + index * 500);
-                
+                                
             });
         }
 
