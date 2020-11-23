@@ -62,6 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     centeredSlides: true,
                     slidesPerView: 2,
                     loop: true,
+                    lazy: true,
                 }); 
                 swiper_1.classList.add('active');
             break;
@@ -72,6 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     centeredSlides: true,
                     slidesPerView: 2,
                     loop: true,
+                    lazy: true,
                 });
                 swiper_2.classList.add('active');
             break;
@@ -82,6 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     centeredSlides: true,
                     slidesPerView: 2,
                     loop: true,
+                    lazy: true,
                 });
                 swiper_3.classList.add('active');
             break;
@@ -92,6 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     centeredSlides: true,
                     slidesPerView: 2,
                     loop: true,
+                    lazy: true,
                 });
                 swiper_4.classList.add('active');
             break;
@@ -102,6 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     centeredSlides: true,
                     slidesPerView: 2,
                     loop: true,
+                    lazy: true,
                 });
                 swiper_5.classList.add('active');
             break;
@@ -132,6 +137,7 @@ document.addEventListener('DOMContentLoaded', () => {
             centeredSlides: true,
             slidesPerView: 2,
             loop: true,
+            lazy: true,
         });
     }
 
