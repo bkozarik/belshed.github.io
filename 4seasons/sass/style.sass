@@ -471,6 +471,8 @@ section
             transform: scale(1.01)
             height: 100%
             width: 100%
+        &:hover
+            cursor: zoom-in
     &__col
         display: grid
         grid-template-rows: 2fr 1fr
@@ -517,6 +519,61 @@ section
         iframe
             height: 100%
             width: 100%
+
+.swiper
+    position: fixed
+    top: 0
+    left: 0
+    height: 100%
+    width: 100%
+    z-index: 100
+    background-color: rgba(255, 255, 255, .8)
+    opacity: 0
+    visibility: hidden
+    pointer-events: none
+    &__close
+        position: absolute
+        height: 40px
+        width: 40px
+        background-color: transparent
+        border-radius: 0
+        top: 20px
+        right: 15px
+        padding: 0
+        z-index: 10
+        border: none
+        display: inline-block
+        cursor: pointer
+        &:focus
+            outline: none
+        &::before, &::after
+            content: ''
+            display: inline-block
+            height: 5px
+            width: 38px
+            top: 50%
+            left: 50%
+            background-color: $main_brown
+            position: absolute
+        &::before
+            transform: translate(-50%, -50%) rotate(-45deg)
+        &::after
+            transform: translate(-50%, -50%) rotate(45deg)
+    &__item
+        display: flex
+        align-items: center
+        justify-content: center
+    &__img
+        margin: 0 auto
+        display: block
+        max-width: 80%
+        max-height: 90%
+        height: auto
+        
+    &.active
+        opacity: 1
+        visibility: visible
+        pointer-events: all
 
 .popup
     width: 100%

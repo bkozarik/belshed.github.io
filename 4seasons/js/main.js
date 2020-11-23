@@ -14,6 +14,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const ratesItems = document.querySelectorAll('.rates__item');
 
+    const ratesItemsBtns = document.querySelectorAll('.js-rates-preview');
+
+    const galleryImg = document.querySelectorAll('.gallery__img img');
+    const galleryClose = document.querySelectorAll('.js-gallery-close');
+
     const scrollHandler = () => {
         window.pageYOffset > 40 ? document.querySelector('.header').classList.add('fixed') : document.querySelector('.header').classList.remove('fixed');
     }
@@ -40,6 +45,94 @@ document.addEventListener('DOMContentLoaded', () => {
 
         popupOverlay.classList.remove('active');
         popupOverlay.querySelectorAll('.popup').forEach(popup => popup.classList.remove('active'));
+    }
+
+    const ratesItemsBtnClick = () => {
+        let button = event.target;
+
+        while(!button.classList.contains('js-rates-preview')){
+            button = button.parentNode;
+        }
+        const buttonSliderId = parseInt(button.dataset.sliderid);
+
+        switch(buttonSliderId){
+            case 1:
+                const swiper_1 = document.querySelector('.js-slider-1');   
+                let swiper_1_Swiper = new Swiper(swiper_1, {
+                    centeredSlides: true,
+                    slidesPerView: 2,
+                    loop: true,
+                }); 
+                swiper_1.classList.add('active');
+            break;
+            
+            case 2:
+                const swiper_2 = document.querySelector('.js-slider-2');
+                let swiper_2_Swiper = new Swiper(swiper_2, {
+                    centeredSlides: true,
+                    slidesPerView: 2,
+                    loop: true,
+                });
+                swiper_2.classList.add('active');
+            break;
+            
+            case 3:
+                const swiper_3 = document.querySelector('.js-slider-3');
+                let swiper_3_Swiper = new Swiper(swiper_3, {
+                    centeredSlides: true,
+                    slidesPerView: 2,
+                    loop: true,
+                });
+                swiper_3.classList.add('active');
+            break;
+            
+            case 4:
+                const swiper_4 = document.querySelector('.js-slider-4');
+                let swiper_4_Swiper = new Swiper(swiper_4, {
+                    centeredSlides: true,
+                    slidesPerView: 2,
+                    loop: true,
+                });
+                swiper_4.classList.add('active');
+            break;
+            
+            case 5:
+                const swiper_5 = document.querySelector('.js-slider-5');
+                let swiper_5_Swiper = new Swiper(swiper_5, {
+                    centeredSlides: true,
+                    slidesPerView: 2,
+                    loop: true,
+                });
+                swiper_5.classList.add('active');
+            break;
+        }
+    }
+
+    const galleryImgClick = () => {
+        const mainSwiper = document.querySelector('.js-slider-main');
+
+        mainSwiper.classList.add('active');
+    }
+
+    const gallerySliderClose = () => {
+        const swipers = document.querySelectorAll('.swiper');
+
+        swipers.forEach(swiper => {
+            swiper.classList.remove('active');
+            if(swiper.classList.contains('swiper-container-initialized')){
+                setTimeout(() => {
+                    swiper.swiper.destroy();
+                }, 300);
+            }
+        });
+    }
+
+    const mainSwiperInit = () => {
+        let mainSwiper = new Swiper('.js-slider-main', {
+            centeredSlides: true,
+            slidesPerView: 2,
+            loop: true,
+        });
     }
 
     const timerInit = () => {
@@ -136,23 +229,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const formData = new FormData(targetForm);
         
-        // await fetch(url, {
-        //     method: 'POST',
-        //     body: formData,
-        // })
-        // .then(response => {
-        //     console.log(response);
+        await fetch(url, {
+            method: 'POST',
+            body: formData,
+        })
+        .then(response => {
+            console.log(response);
 
-        //     targetForm.reset();
-        //     closePopup();
-        //     togglePopup('.js-order', true);
-        // });
+            targetForm.reset();
+            closePopup();
+            togglePopup('.js-order', true);
+        });
         targetForm.reset();
         closePopup();
         togglePopup('.js-thx', true);
     }
 
+    galleryImg.forEach(img => img.addEventListener('click', galleryImgClick));
+    galleryClose.forEach(link => link.addEventListener('click', gallerySliderClose));
+
+    ratesItemsBtns.forEach(link => link.addEventListener('click', ratesItemsBtnClick));
+
     scrollLinks.forEach(link => link.addEventListener('click', scrollLinkClick));
+
     popupCloseBtns.forEach( button => button.addEventListener('click', closePopup));
     popupTrigger.forEach(trigger => trigger.addEventListener('click', togglePopup('.js-order')))
 
@@ -167,5 +266,6 @@ document.addEventListener('DOMContentLoaded', () => {
     scrollHandler();
     resizeHandler();
 
+    mainSwiperInit();
     timerInit();
 });

@@ -12,15 +12,17 @@ $smtp = new PHPMailer(true);
 $smtp->CharSet = 'utf-8';
 
 $smtp->isSMTP();
-$smtp->Host = 'smtp.yandex.ru'; // SMTP сервер
 $smtp->SMTPAuth = true;
 $smtp->SMTPSecure = 'ssl'; // Тип шифрования
-$smtp->Port = 465; // Порт SMTP сервера
-$smtp->Password = 'davtck867'; // Ваш пароль от почты с которой будут отправляться письма
-
-$mail_settings_string = file_get_contents('mailSettings.txt');
 
 $to = '';
+
+// $smtp->Port = 465;
+// $smtp->Host = 'smtp.yandex.ru';
+// $smtp->Password = 'quaterpast6';
+// $to = 'belshed1@yandex.ru';
+
+$mail_settings_string = file_get_contents('mailSettings.txt');
 
 if(!empty($mail_settings_string)){
 	$settings_strings = explode("\n", $mail_settings_string);
@@ -47,15 +49,15 @@ if(!empty($mail_settings_string)){
 
 $from = $to;
 
-$subject = 'Заявка с сайта Проект-Дача.рф';
+$subject = 'Заявка с сайта 4 сезона';
 $message = '<h3>Новая заявка на сайте</h3> <br> ';
 
-$smtp->setFrom($from, 'Проект-Дача.рф');
+$smtp->setFrom($from, '4seasons.ru');
 $smtp->addReplyTo($from);
 $smtp->addAddress($to);
 
-$fields = array('order_place', 'project_name', 'user_name', 'user_email', 'user_tel', 'user_question', 'complectation', 'materials', 'city', 'budget', 'square');
-$fields_labels = array('Заявка пришла из: ', 'Скачанный проект: ', 'Имя: ', 'E-mail: ', 'Телефон: ', 'Вопрос: ', 'Комплектация: ', 'Материалы: ', 'Город: ', 'Бюджет: ', 'Площадь: ');
+$fields = array('user_apart', 'user_name', 'user_email', 'user_phone', 'user_whishes');
+$fields_labels = array('Дом: ', 'Имя: ', 'E-mail: ', 'Телефон: ', 'Комментарий: ');
 
 foreach($fields as $key => $field){
 	if(isset($_POST[$field])){
