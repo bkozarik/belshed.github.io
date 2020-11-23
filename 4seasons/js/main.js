@@ -60,9 +60,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 const swiper_1 = document.querySelector('.js-slider-1');   
                 let swiper_1_Swiper = new Swiper(swiper_1, {
                     centeredSlides: true,
-                    slidesPerView: 2,
                     loop: true,
                     lazy: true,
+                    updateOnWindowResize: true,
+                    breakpoints: {
+                        300: {
+                            slidesPerView: 1
+                        },
+                        680: {
+                            slidesPerView: 2
+                        }
+                    }
                 }); 
                 swiper_1.classList.add('active');
             break;
@@ -71,9 +79,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 const swiper_2 = document.querySelector('.js-slider-2');
                 let swiper_2_Swiper = new Swiper(swiper_2, {
                     centeredSlides: true,
-                    slidesPerView: 2,
                     loop: true,
                     lazy: true,
+                    updateOnWindowResize: true,
+                    breakpoints: {
+                        300: {
+                            slidesPerView: 1
+                        },
+                        680: {
+                            slidesPerView: 2
+                        }
+                    }
                 });
                 swiper_2.classList.add('active');
             break;
@@ -82,9 +98,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 const swiper_3 = document.querySelector('.js-slider-3');
                 let swiper_3_Swiper = new Swiper(swiper_3, {
                     centeredSlides: true,
-                    slidesPerView: 2,
                     loop: true,
                     lazy: true,
+                    updateOnWindowResize: true,
+                    breakpoints: {
+                        300: {
+                            slidesPerView: 1
+                        },
+                        680: {
+                            slidesPerView: 2
+                        }
+                    }
                 });
                 swiper_3.classList.add('active');
             break;
@@ -93,9 +117,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 const swiper_4 = document.querySelector('.js-slider-4');
                 let swiper_4_Swiper = new Swiper(swiper_4, {
                     centeredSlides: true,
-                    slidesPerView: 2,
                     loop: true,
                     lazy: true,
+                    updateOnWindowResize: true,
+                    breakpoints: {
+                        300: {
+                            slidesPerView: 1
+                        },
+                        680: {
+                            slidesPerView: 2
+                        }
+                    }
                 });
                 swiper_4.classList.add('active');
             break;
@@ -104,9 +136,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 const swiper_5 = document.querySelector('.js-slider-5');
                 let swiper_5_Swiper = new Swiper(swiper_5, {
                     centeredSlides: true,
-                    slidesPerView: 2,
                     loop: true,
                     lazy: true,
+                    updateOnWindowResize: true,
+                    breakpoints: {
+                        300: {
+                            slidesPerView: 1
+                        },
+                        680: {
+                            slidesPerView: 2
+                        }
+                    }
                 });
                 swiper_5.classList.add('active');
             break;
@@ -135,9 +175,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const mainSwiperInit = () => {
         let mainSwiper = new Swiper('.js-slider-main', {
             centeredSlides: true,
-            slidesPerView: 2,
             loop: true,
             lazy: true,
+            updateOnWindowResize: true,
+            breakpoints: {
+                300: {
+                    slidesPerView: 1
+                },
+                680: {
+                    slidesPerView: 2
+                }
+            }
         });
     }
 
@@ -253,33 +301,25 @@ document.addEventListener('DOMContentLoaded', () => {
         const url = './php/ajax-mail.php';
 
         const formData = new FormData(targetForm);
-        
-        let request = new XMLHttpRequest();
 
-        request.open('POST', './php/ajax-mail.php');
-
-        targetForm.reset();
-
-        request.send(formData);
-
-        request.onreadystatechange = () => {
-            
-            if(request.readyState === XMLHttpRequest.DONE) {
-                console.log(request.response);
-            }
-        };
-
-        // await fetch(url, {
-        //     method: 'POST',
-        //     body: formData,
-        // })
-        // .then(response => {
-        //     console.log(response);
-
-        // });
         targetForm.reset();
         closePopup();
-        togglePopup('.js-thx', true);
+
+        if(formData.has('user_apart') && formData.get('user_apart') == 'undefined'){
+            formData.delete('user_apart');
+        }
+
+        await fetch(url, {
+            method: 'POST',
+            body: formData,
+        })
+        .then(response => {
+            response.text()
+            .then(text => {
+                text == '1' ? togglePopup('.js-thx', true) : togglePopup('.js-error', true);
+            });
+
+        });
     }
 
     galleryImg.forEach(img => img.addEventListener('click', galleryImgClick));

@@ -13,41 +13,39 @@ $smtp->CharSet = 'utf-8';
 
 $smtp->isSMTP();
 $smtp->SMTPAuth = true;
-$smtp->SMTPSecure = 'ssl'; // Тип шифрования
+$smtp->SMTPSecure = 'ssl';
 
 $to = '';
+$from = '';
 
-$smtp->Port = 465;
-$smtp->Host = 'smtp.yandex.ru';
-$smtp->Password = 'quaterpast6';
-$to = 'belshed1@yandex.ru';
 
-// $mail_settings_string = file_get_contents('mailSettings.txt');
+$mail_settings_string = file_get_contents('mailSettings.txt');
 
-// if(!empty($mail_settings_string)){
-// 	$settings_strings = explode("\n", $mail_settings_string);
+if(!empty($mail_settings_string)){
+	$settings_strings = explode("\n", $mail_settings_string);
 
-// 	foreach ($settings_strings as $key => $string) {
-// 		$prop_name = trim(explode(":", $string)[0]);
-// 		$prop_val = trim(explode(":", $string)[1]);
+	foreach ($settings_strings as $key => $string) {
+		$prop_name = trim(explode(":", $string)[0]);
+		$prop_val = trim(explode(":", $string)[1]);
 		
-// 		if($prop_name == "Smtp port"){
-// 			$smtp->Port = $prop_val;
-// 		}
-// 		elseif ($prop_name == "Smtp host") {
-// 			$smtp->Host = $prop_val;
-// 		}
-// 		elseif ($prop_name == "Email") {
-// 			$to = $prop_val;
-// 		}
-// 		elseif ($prop_name == "Password") {
-// 			$smtp->Password = $prop_val;
-// 		}
-// 	}
+		if($prop_name == "Smtp port"){
+			$smtp->Port = $prop_val;
+		}
+		elseif ($prop_name == "Smtp host") {
+			$smtp->Host = $prop_val;
+		}
+		elseif ($prop_name == "Email") {
+			$from = $prop_val;
+		}
+		elseif ($prop_name == "Password") {
+			$smtp->Password = $prop_val;
+		}
+		elseif ($prop_name == "To") {
+			$to = $prop_val;
+		}
+	}
 
-// }
-
-$from = $to;
+}
 
 $subject = 'Заявка с сайта 4 сезона';
 $message = '<h3>Новая заявка на сайте</h3> <br> ';
@@ -72,5 +70,10 @@ $smtp->Body    = $message;
 $smtp->AltBody = '';
 
 
-$smtp->send();
+if($smtp->send()){
+	echo '1';
+}
+else{
+	echo '2';
+}
 ?>
