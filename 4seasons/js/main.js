@@ -137,8 +137,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const timerInit = () => {
         const targetDate = new Date(2021, 0, 1, 0, 0, 0, 1);
-        const currDate = new Date();
-        const dateDifff = targetDate - currDate;
+
+        const sec = 1000;
+        const min = sec * 60;
+        const hour = min * 60;
+        const day = hour * 24;
+
+        const countTime = () => {
+            const currDate = new Date();
+            let dateDifff = targetDate - currDate;
+            let days = Math.floor(dateDifff / day);
+            let hours = Math.floor((dateDifff - days * day) / hour);
+            let mins = Math.floor((dateDifff - days * day - hours * hour) / min);
+            let secs = Math.floor((dateDifff - days * day - hours * hour - mins * min) / sec);
+
+            let remainingTimeStr = `${days} дней ${hours} часов ${mins} минуты ${secs} секунд`;
+            document.querySelector('.js-timer-time').innerText = remainingTimeStr;
+        }
+
+        countTime();
+
+        setInterval(countTime, 1000);
     }
 
     const togglePopup = (selector, state = null) => {
@@ -225,21 +244,33 @@ document.addEventListener('DOMContentLoaded', () => {
         event.preventDefault();
         const targetForm = event.target;
 
-        const url = '';
+        const url = './php/ajax-mail.php';
 
         const formData = new FormData(targetForm);
         
-        await fetch(url, {
-            method: 'POST',
-            body: formData,
-        })
-        .then(response => {
-            console.log(response);
+        let request = new XMLHttpRequest();
 
-            targetForm.reset();
-            closePopup();
-            togglePopup('.js-order', true);
-        });
+        request.open('POST', './php/ajax-mail.php');
+
+        targetForm.reset();
+
+        request.send(formData);
+
+        request.onreadystatechange = () => {
+            
+            if(request.readyState === XMLHttpRequest.DONE) {
+                console.log(request.response);
+            }
+        };
+
+        // await fetch(url, {
+        //     method: 'POST',
+        //     body: formData,
+        // })
+        // .then(response => {
+        //     console.log(response);
+
+        // });
         targetForm.reset();
         closePopup();
         togglePopup('.js-thx', true);
