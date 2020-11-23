@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="ru-Ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>4 Сезона Отель</title>
+    <script src="./js/main.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__wrap">
+                <button class="burger js-burger">
+                    <span class="burger__line"></span>
+                </button>
+                <a href="#main" class="logo js-scroll-link">
+                    <img src="./img/logo.svg" alt="Logo" class="logo__img">
+                </a>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="#about" class="nav__link js-scroll-link">О нас</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#rates" class="nav__link js-scroll-link">Тарифы</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#gallery" class="nav__link js-scroll-link">Галерея</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#contacts" class="nav__link js-scroll-link">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div class="menu js-menu">
+        <button class="menu__close js-menu-close"></button>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a href="#about" class="nav__link js-scroll-link">О нас</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#rates" class="nav__link js-scroll-link">Тарифы</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#gallery" class="nav__link js-scroll-link">Галерея</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#contacts" class="nav__link js-scroll-link">Контакты</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <main id="main" class="main">
+        <section class="hero">
+            <picture class="hero__bg">
+                <source srcset="./img/hero-bg.webp" type="image/webp">
+                <img src="./img/hero-bg.jpg" alt="Фон">
+            </picture>
+            <div class="container">
+                <div class="hero__content">
+                    <h1 class="hero__title">Новогодняя ночь за городом в Прованс-отеле «4 сезона»</h1>
+                    <p class="hero__subtitle">Проживание в отеле  - всё включено, волшебный Новогодний бал, подарки от деда Мороза, развлечения для всей семьи!</p>
+                    <button class="button button_hero js-popup-open">Забронировать</button>
+                </div>
+            </div>
+        </section>
+        <div class="timer js-timer">
+            <span class="timer__title">До нового года осталось</span>
+            <span class="timer__time js-timer-time">49 дней 6 часов 22 минуты 5 секунд</span>
+        </div>
+        <section id="about" class="about">
+            <div class="container">
+                <picture class="about__img">
+                    <source srcset="./img/about-bg.webp" type="image/webp">
+                    <img src="./img/about-bg.jpg" alt="">
+                </picture>
+            </div>
+            <div class="about__content">
+                <div class="container">
+                    <div class="about__body">
+                        <h2 class="section__title">О нас</h2>
+                        <p class="about__text">Прованс-отель «4 сезона» - уютный загородный отель для спокойного отдыха в кругу друзей и семьи.</p>
+                        <p class="about__text">У нас не много номеров и коттеджей - отель задуман так, чтобы каждый гость нашего отеля смог отдохнуть от городской суеты и посвятить время себе.</p>
+                        <p class="about__text">На территории отеля вы найдете развлечения для себя и своей семьи: тайм-бар с бильярдом, кинотеатром, детской комнатой и настольными играми, а также настоящая баня, конный клуб, детские площадки.</p>
+                        <p class="about__text">В Прованс-отеле «4 сезона» вы можете насладиться прогулкой на природе, пожарить шашлыки, расслабиться - чего так не хватает в городе.</p>
+                        <p class="about__text">В Новый год мы предлагаем вам специальную программу - 3 дня проживания - всё включено, новогодний бал с шоу программой и различные активности на свежем воздухе.</p>
+                        <div class="about__socials">
+                            <a href="#" target="_blank" class="about__link">
+                                <svg class="about__ico">
+                                    <use xlink:href="./img/icons.svg#facebook"></use>
+                                </svg>
+                            </a>
+                            <a href="#" target="_blank" class="about__link">
+                                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                        width="438.536px" height="438.536px" viewBox="0 0 438.536 438.536" style="enable-background:new 0 0 438.536 438.536;"
+                                        xml:space="preserve">
+                                    <path d="M421.981,16.562C410.941,5.519,397.711,0,382.298,0H56.248C40.83,0,27.604,5.521,16.561,16.562
+                                            C5.52,27.6,0.001,40.828,0.001,56.243V382.29c0,15.413,5.518,28.644,16.56,39.683c11.043,11.04,24.272,16.563,39.687,16.563
+                                            h326.046c15.41,0,28.644-5.523,39.684-16.563c11.043-11.039,16.557-24.27,16.557-39.683V56.243
+                                            C438.534,40.825,433.021,27.604,421.981,16.562z M157.462,158.025c17.224-16.652,37.924-24.982,62.097-24.982
+                                            c24.36,0,45.153,8.33,62.381,24.982c17.228,16.655,25.837,36.785,25.837,60.386c0,23.598-8.609,43.729-25.837,60.379
+                                            c-17.228,16.659-38.014,24.988-62.381,24.988c-24.172,0-44.87-8.336-62.097-24.988c-17.228-16.652-25.841-36.781-25.841-60.379
+                                            C131.621,194.81,140.234,174.681,157.462,158.025z M388.865,370.589c0,4.945-1.718,9.083-5.141,12.416
+                                            c-3.433,3.33-7.519,4.996-12.282,4.996h-305.2c-4.948,0-9.091-1.666-12.419-4.996c-3.333-3.326-4.998-7.471-4.998-12.416V185.575
+                                            H89.08c-3.805,11.993-5.708,24.462-5.708,37.402c0,36.553,13.322,67.715,39.969,93.511c26.65,25.786,58.721,38.685,96.217,38.685
+                                            c24.744,0,47.583-5.903,68.527-17.703c20.937-11.807,37.486-27.839,49.676-48.112c12.183-20.272,18.274-42.4,18.274-66.38
+                                            c0-12.94-1.91-25.406-5.715-37.402h38.547v185.014H388.865z M388.865,115.626c0,5.52-1.903,10.184-5.716,13.99
+                                            c-3.805,3.809-8.466,5.711-13.989,5.711h-49.676c-5.517,0-10.185-1.903-13.99-5.711c-3.806-3.806-5.708-8.47-5.708-13.99V68.522
+                                            c0-5.33,1.902-9.945,5.708-13.848c3.806-3.901,8.474-5.854,13.99-5.854h49.676c5.523,0,10.185,1.952,13.989,5.854
+                                            c3.812,3.903,5.716,8.518,5.716,13.848V115.626z"/>
+                                </svg>
+                            </a>
+                            <a href="#" target="_blank" class="about__link">
+                                <svg class="about__ico">
+                                    <use xlink:href="./img/icons.svg#vk"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="benefits">
+            <h2 class="benefits__title">Новогодние каникулы в Прованс-отеле «4 сезона»</h2>
+            <div class="container">
+                <div class="benefits__container">
+                    <article class="benefit">
+                        <picture class="benefit__img">
+                            <source srcset="./img/benefit-1.webp" type="image/webp">
+                            <img src="./img/benefit-1.jpg" alt="">
+                        </picture>
+                        <div class="benefit__content">
+                            <h3 class="benefit__title">Завтрак, обед и ужин</h3>
+                            <p class="benefit__text">Во все дни заезда вас будут ждать завтраки, обеды и ужины в формате «шведский стол»</p>
+                        </div>
+                    </article>
+                    <article class="benefit">
+                        <picture class="benefit__img">
+                            <source srcset="./img/benefit-2.webp" type="image/webp">
+                            <img src="./img/benefit-2.jpg" alt="">
+                        </picture>
+                        <div class="benefit__content">
+                            <h3 class="benefit__title">Новогодний бал</h3>
+                            <p class="benefit__text">Мы готовим для вас специальную программу в новогоднюю ночь! Праздничный ужин, конкурсы, призы, подарки и дед Мороз гарантированы!</p>
+                        </div>
+                    </article>
+                    <article class="benefit">
+                        <picture class="benefit__img">
+                            <source srcset="./img/benefit-3.webp" type="image/webp">
+                            <img src="./img/benefit-3.jpg" alt="">
+                        </picture>
+                        <div class="benefit__content">
+                            <h3 class="benefit__title">Недалеко от города, близко к природе</h3>
+                            <p class="benefit__text">Наш отель находится всего в полутора часах езды от Москвы, одновременно недалеко от города и вдали от городского шума рядом с природой. Наша территория приятно порадует вас обилием деревьев и спокойствием прованса.</p>
+                        </div>
+                    </article>
+                    <article class="benefit">
+                        <picture class="benefit__img">
+                            <source srcset="./img/benefit-4.webp" type="image/webp">
+                            <img src="./img/benefit-4.jpg" alt="">
+                        </picture>
+                        <div class="benefit__content">
+                            <h3 class="benefit__title">Развлечения на территории отеля</h3>
+                            <p class="benefit__text">На территории отеля расположена баня со всем необходимым, также в отеле есть развлекательный центр «Тайм-бар», который всегда рад гостям! Здесь есть бильярд, настольные игры, кинотеатр, аэрохоккей и мини-библиотека, а также детская комната.</p>
+                        </div>
+                    </article>
+                    <article class="benefit">
+                        <picture class="benefit__img">
+                            <source srcset="./img/benefit-5.webp" type="image/webp">
+                            <img src="./img/benefit-5.jpg" alt="">
+                        </picture>
+                        <div class="benefit__content">
+                            <h3 class="benefit__title">Экскурсия на&nbsp;конюшню</h3>
+                            <p class="benefit__text">У вас будет уникальная возможность познакомиться с чудесными постоянными жителям Прованс-отеля «4 сезона» - лошадьми. Конный клуб подготовил для вас сюрприз - катание на лошадях в упряжке!</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section id="rates" class="rates">
+            <div class="container">
+                <h2 class="section__title section__title_big section__title_brown">Тарифы и номерной фонд</h2>
+                <div class="rates__header">
+                    <p class="rates__text">Мы приглашаем вас встретить Новый год вместе с нами - рядом с природой, вдали от городской суеты.  Мы сделали для вас специальные тарифы, в которые включено всё: питание полный пансион (завтрак, обед и ужин), развлечения для всей семьи, новогодний банкет с шоу-программой, а также проживание в номере или коттедже. В номерах стоимость рассчитана на 2 человека, в коттеджах на 4 человека. Мы с радостью примем больше гостей, предложив дополнительные спальные места.</p>
+                    <p class="rates__text rates__text_bold">Дети до 3-х лет проживают бесплатно! Питание включено :)</p>
+                    <p class="rates__text rates__text_bold">Внимание! У вас есть возможность получить скидку:<br>- Скидка 15% при бронировании и предоплате от 10% в ноябре;<br>- Скидка 10% при бронировании и предоплате от 10% до 15 декабря;<br>- Скидка 20% при оплате 100% до 5 декабря.</p>
+                </div>
+                <div class="rates__container">
+                    <article class="rates__item">
+                        <button class="button rates__preview js-rates-preview">
+                            <picture class="rates__preview-img">
+                                <source srcset="./img/rate-preview-1.webp" type="image/webp">
+                                <img src="./img/rate-preview-1.png" alt="Превью">
+                            </picture>
+                        </button>
+                        <div class="rates__content">
+                            <h3 class="rates__name rates__text_large">Стандарт I категории</h3>
+                            <p class="rates__description rates__text">Однокомнатный двухместный номер.
+                                Отличный вариант для пары с одним ребенком или без детей. 
+                                Для детей мы предлагаем дополнительное спальное место или детскую кроватку.</p>
+                            <span class="rates__text rates__text_large">Цена за 3 дня проживания - <span class="rates__text rates__text_large rates__text_green rates__text_mb">всё включено</span><br><span class="rates__text rates__text_large rates__text_green">59 360 рублей</span> - цена с учетом скидки 20%</span>
+                            <span class="rates__text">(при условии 100% предоплаты до 5 декабря 2020)</span>
+                            <span class="rates__text rates__text_large">74 200 рублей - цена без скидки</span>
+                            <button class="button button_rates js-popup-open" data-apart="Стандарт I категории">Забронировать</button>
+                        </div>
+                    </article>
+                    <article class="rates__item">
+                        <button class="button rates__preview js-rates-preview">
+                            <picture class="rates__preview-img">
+                                <source srcset="./img/rate-preview-2.webp" type="image/webp">
+                                <img src="./img/rate-preview-2.png" alt="Превью">
+                            </picture>
+                        </button>
+                        <div class="rates__content">
+                            <h3 class="rates__name rates__text_large">Полулюкс</h3>
+                            <p class="rates__description rates__text">Однокомнатный двухместный номер. Просторная комната с местом для отдыха, подойдет для небольшой семьи с одним или двумя детьми. Для детей мы предлагаем дополнительное спальное место или детскую кроватку</p>
+                            <span class="rates__text rates__text_large">Цена за 3 дня проживания - <span class="rates__text rates__text_large rates__text_green rates__text_mb">всё включено</span>
+                            <br>
+                            <span class="rates__text rates__text_large rates__text_green">69 120 рублей</span> - цена с учетом скидки 20%</span>
+                            <span class="rates__text">(при условии 100% предоплаты до 5 декабря 2020)</span>
+                            <span class="rates__text rates__text_large">86 400 рублей - цена без скидки</span>
+                            <button class="button button_rates js-popup-open" data-apart="Полулюкс">Забронировать</button>
+                        </div>
+                    </article>
+                    <article class="rates__item">
+                        <button class="button rates__preview js-rates-preview">
+                            <picture class="rates__preview-img">
+                                <source srcset="./img/rate-preview-3.webp" type="image/webp">
+                                <img src="./img/rate-preview-3.png" alt="Превью">
+                            </picture>
+                        </button>
+                        <div class="rates__content">
+                            <h3 class="rates__name rates__text_large">Люкс</h3>
+                            <p class="rates__description rates__text">Двухкомнатный двухместный номер. Спальня и гостиная, выбор семьи с детьми или небольшой компании.  Для дополнительных гостей и детей мы предлагаем дополнительные кровати</p>
+                            <span class="rates__text rates__text_large">Цена за 3 дня проживания - <span class="rates__text rates__text_large rates__text_green rates__text_mb">всё включено</span>
+                            <br>
+                            <span class="rates__text rates__text_large rates__text_green">84 960 рублей</span> - цена с учетом скидки 20%</span>
+                            <span class="rates__text">(при условии 100% предоплаты до 5 декабря 2020)</span>
+                            <span class="rates__text rates__text_large">106 200 рублей - цена без скидки</span>
+                            <button class="button button_rates js-popup-open" data-apart="Люкс">Забронировать</button>
+                        </div>
+                    </article>
+                    <article class="rates__item">
+                        <button class="button rates__preview js-rates-preview">
+                            <picture class="rates__preview-img">
+                                <source srcset="./img/rate-preview-4.webp" type="image/webp">
+                                <img src="./img/rate-preview-4.png" alt="Превью">
+                            </picture>
+                        </button>
+                        <div class="rates__content">
+                            <h3 class="rates__name rates__text_large">Люкс-коттедж - цена для 4 гостей</h3>
+                            <p class="rates__description rates__text">Люкс-коттедж это двухэтажный дом с гостиной, кухней и двумя спальнями. Здесь комфортно располагается до 8 гостей. Спальни рассчитаны на 4 человека. Мы предлагаем дополнительные спальные места, а также диван-кровать на первом этаже в гостиной.</p>
+                            <span class="rates__text rates__text_large">Цена за 3 дня проживания - <span class="rates__text rates__text_large rates__text_green rates__text_mb">всё включено</span>
+                            <br>
+                            <span class="rates__text rates__text_large rates__text_green">137 280 рублей</span> - цена с учетом скидки 20%</span>
+                            <span class="rates__text">(при условии 100% предоплаты до 5 декабря 2020)</span>
+                            <span class="rates__text rates__text_large">171 600 рублей - цена без скидки</span>
+                            <button class="button button_rates js-popup-open" data-apart="Люкс-коттедж - цена для 4 гостей">Забронировать</button>
+                        </div>
+                    </article>
+                    <article class="rates__item">
+                        <button class="button rates__preview js-rates-preview">
+                            <picture class="rates__preview-img">
+                                <source srcset="./img/rate-preview-5.webp" type="image/webp">
+                                <img src="./img/rate-preview-5.png" alt="Превью">
+                            </picture>
+                        </button>
+                        <div class="rates__content">
+                            <h3 class="rates__name rates__text_large">Эко-коттедж - цена для 4-х гостей</h3>
+                            <p class="rates__description rates__text">Двухэтажный эко-дом - уникальный коттедж, рассчитаный на большую семью или компанию. В доме две спальни по 2 спальных места, на первом этаже кухня и гостиная, в которой есть диван-кровать и можно удобно расположить дополнительные спальные места. Дом создан из экологически чистых материалов по старорусской технологии обработки дерева.  Эко-дом - любимый коттедж наших гостей. </p>
+                            <span class="rates__text rates__text_large">Цена за 3 дня проживания - <span class="rates__text rates__text_large rates__text_green rates__text_mb">всё включено</span><br><span class="rates__text rates__text_large rates__text_green">168 960 рублей</span> - цена с учетом скидки 20%</span>
+                            <span class="rates__text">(при условии 100% предоплаты до 5 декабря 2020)</span>
+                            <span class="rates__text rates__text_large">211 200 рублей - цена без скидки</span>
+                            <button class="button button_rates js-popup-open" data-apart="Эко-коттедж - цена для 4-х гостей">Забронировать</button>
+                        </div>
+                    </article>
+                </div>
+                <div class="rates__footer">
+                    <span class="rates__text rates__text_large">Дополнительная информация:</span>
+                    <p class="rates__text">
+                        - Детям до 3-х лет проживание и питание БЕСПЛАТНО (без предоставления дополнительногоместа), дополнительное место – 12 500 руб. <br>
+                        - Отдельное место на Новогоднем банкете для детей до 3-х лет – 3000 руб. <br>
+                        - Дети с 12-ти лет – полная стоимость за дополнительное место. <br>
+                        - Детская кроватка предоставляется по заявке – 600 рублей/сутки. <br>
+                        - При бронировании просим заранее указывать все дополнительные места, включая детей до 3-х лет. <br>
+                        - Проживание с животными (до 6 кг) – 1500 /сутки <br>
+                        - Ввоз своих спиртных напитков и продуктов питания на территорию отеля возможен только по согласованию с администрацией отеля. <br>
+                        - Расчетный час: Заезд после 12:00; выезд до 12:00. <br>
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section id="gallery" class="gallery">
+            <div class="container">
+                <h2 class="section__title section__title_white section__title_tac">Галерея</h2>
+                <div class="gallery__container">
+                    <div class="gallery__col">
+                        <picture class="gallery__img">
+                            <source srcset="" type="image/webp">
+                            <img src="./img/gallery-1.jpg" alt="Фото в галерее" class="gallery__img">
+                        </picture>
+                        <picture class="gallery__img">
+                            <source srcset="" type="image/webp">
+                            <img src="./img/gallery-2.jpg" alt="Фото в галерее" class="gallery__img">
+                        </picture>
+                        <picture class="gallery__img">
+                            <source srcset="" type="image/webp">
+                            <img src="./img/gallery-3.jpg" alt="Фото в галерее" class="gallery__img">
+                        </picture>
+                    </div>
+                    <div class="gallery__col gallery__col_reverse">
+                        <picture class="gallery__img">
+                            <source srcset="" type="image/webp">
+                            <img src="./img/gallery-4.jpg" alt="Фото в галерее" class="gallery__img">
+                        </picture>
+                        <picture class="gallery__img">
+                            <source srcset="" type="image/webp">
+                            <img src="./img/gallery-5.jpg" alt="Фото в галерее" class="gallery__img">
+                        </picture>
+                        <picture class="gallery__img">
+                            <source srcset="" type="image/webp">
+                            <img src="./img/gallery-6.jpg" alt="Фото в галерее" class="gallery__img">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer id="contacts" class="footer">
+        <div class="footer__content">
+            <div class="container">
+                <div class="footer__body">
+                    <a href="#main" class="logo js-scroll-link">
+                        <img src="./img/logo.svg" alt="Logo" class="logo__img">
+                    </a>
+                    <h2 class="footer__title">Прованс-отель «4 сезона»</h2>
+                    <div class="footer__contacts">
+                        <a href="tel:+74992881598" class="footer__text">+7 499 288 15 98</a>
+                        <a href="mailto:info@club4s.ru" class="footer__text">info@club4s.ru</a>
+                    </div>
+                    <span class="footer__text">Васильевское, Серпуховской район, Московская&nbsp;обл., Россия, 142271</span>
+                </div>
+            </div>
+        </div>
+        <div class="footer__map">
+            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Af0654adad83bf714235c18abadfc14904c8983466c2cb4f3ceb00a9eff12543c&amp;source=constructor" width="100%" height="486" frameborder="0"></iframe>
+        </div>
+    </footer>
+
+    <div class="popup__overlay js-popup-overlay">
+
+        <div class="popup js-order">
+            <button class="button popup__close js-popup-close"></button>
+            <div class="popup__head">
+                <h2 class="popup__title">Новогодняя ночь за городом в Прованс-отеле «4 сезона»</h2>
+            </div>
+            <form class="popup__body js-form">
+                <label class="popup__label">
+                    <span class="popup__label-text">Имя</span>
+                    <input type="text" class="popup__input" name="user_name">
+                </label>
+                <label class="popup__label">
+                    <span class="popup__label-text">Телефон</span>
+                    <input type="tel" class="popup__input" name="user_phone">
+                </label>
+                <label class="popup__label">
+                    <span class="popup__label-text">Электронная почта</span>
+                    <input type="email" class="popup__input" name="user_email">
+                </label>
+                <label class="popup__label">
+                    <span class="popup__label-text">Комментарии к брони (количество гостей, пожелания)</span>
+                    <textarea class="popup__input" name="user_whishes" rows="4"></textarea>
+                </label>
+                <input type="hidden" name="user_apart" class="js-form-hidden">
+                <button class="button button_rates button_popup">Забронировать</button>
+            </form>
+        </div>
+
+        <div class="popup js-thx">
+            <button class="button popup__close js-popup-close"></button>
+            <div class="popup__head">
+                <h2 class="popup__title">Новогодняя ночь за городом в Прованс-отеле «4 сезона»</h2>
+            </div>
+            <div class="popup__body">
+                <span class="popup__label-text">Спасибо!</span>
+                <span class="popup__label-text">Ваша заявка принята в работу. Мы свяжемся с вами в ближайшее время</span>
+            </div>
+        </div>
+        
+        <div class="popup js-error">
+            <button class="button popup__close js-popup-close"></button>
+            <div class="popup__head">
+                <h2 class="popup__title">Новогодняя ночь за городом в Прованс-отеле «4 сезона»</h2>
+            </div>
+            <div class="popup__body">
+                <span class="popup__label-text">Извините!</span>
+                <span class="popup__label-text">Произошла ошибка. Попробуйте немного позже.</span>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

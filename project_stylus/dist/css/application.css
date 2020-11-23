@@ -55,8 +55,8 @@ pointer-events: all;
 opacity: 1;
 }
 .floor-main .floor-section {
-        display: flex;
-        justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
 }
 .floor-section__col {
     width: 38rem;
@@ -190,12 +190,48 @@ width: 14.74%;
 margin: 30px;
 }
 .house .house-bg {
-        background: url("../img/img-house_2.png") no-repeat;
-        -webkit-background-size: 100% 100%;
-        background-size: 100% 100%;
-        filter: none;
-        -webkit-filter: none;
+    background: url("../img/img-house_2.png") no-repeat;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    filter: none;
+    -webkit-filter: none;
 }  
+
+.tooltipster-color.tooltipster-top .tooltipster-box {
+    margin-bottom: 1.4rem;
+}
+
+.tooltipster-color.tooltipster-top .tooltipster-arrow {
+    top: 100%;
+    transform: translateY(-140%);
+}
+.btn-check-nav__link{
+    position: relative;
+}
+.btn-check-nav__link svg{
+    fill: #d29966;
+    position: absolute;
+    width: 29px;
+    height: auto;
+    top: 50%;
+    transform: translate(-120%, -50%);
+    -webkit-transform: translate(-120%, -50%);
+    -moz-transform: translate(-120%, -50%);
+    -ms-transform: translate(-120%, -50%);
+    -o-transform: translate(-120%, -50%);
+}
+
+.floor-penthouse .floor-help div + div{
+    display: none;
+}
+
+.floor-penthouse .floor-help {
+    font-weight: 500;
+}
+.floor-penthouse .floor-help span{
+    display: none;
+}
+
 .floor-help{
 margin-left: auto;
 }
@@ -247,29 +283,29 @@ display: none;
 opacity: 1;
 }
 .floor-main .floor-section {
-        margin-top: 0;
+    margin-top: 0;
 }
 .floor-main .floor-help{
-        height: 1.8rem;
+    height: 1.8rem;
 }
 .floor-penthouse .floor-one-left, .floor-penthouse .floor-one-right {
-        width: 20.1rem;
+    width: 20.1rem;
 }
 .floor-penthouse .floor-section__col {
-        width: 36rem;
+    width: 36rem;
 }
 .floor-penthouse .floor-section{
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
 }
 .floor-penthouse .floor-one {
-        width: 36rem;
+    width: 36rem;
 }
 .plan-help-penthouse{
-        position: relative;
-        margin: 0 !important;
-        padding: 0px 5px !important;
+    position: relative;
+    margin: 0 !important;
+    padding: 0px 5px !important;
 }
 .floor-penthouse {
 position: absolute;
@@ -290,13 +326,13 @@ justify-content: center;
 display: none;
 }
 .floor-penthouse .floor-one-left{
-        width: 25.8rem;
-        margin-right: 2.5rem;
+    width: 25.8rem;
+    margin-right: 2.5rem;
 background: rgba(210,153,102,0.7);
 }
 .floor-penthouse .floor-one-right{
-        width: 25.8rem;
-        margin-right: 3.3rem;
+    width: 25.8rem;
+    margin-right: 3.3rem;
 background: rgba(210,153,102,0.7);
 }
 .floor-main {
@@ -331,7 +367,7 @@ height: 2rem;
 }
 
 .floor-sub .floor-help {
-        height: 2rem;
+    height: 2rem;
 }
     
 .floor-sub .floor-one:first-child {
@@ -341,44 +377,44 @@ margin-bottom: 9px;
 margin-top: 6px;
 }
 .floor-main .floor-one:not(:last-child) {
-        margin-bottom: 7px;
+    margin-bottom: 7px;
 }
 .floor-main .floor-one:nth-child(19){
-        margin-bottom: 6px;
+    margin-bottom: 6px;
 }
 .floor-main .floor-one:nth-child(14){
-        margin-bottom: 8px;
+    margin-bottom: 8px;
 }
 .floor-main .floor-one:nth-child(17) {
-        margin-bottom: 8px;
+    margin-bottom: 8px;
 }
 .floor-main .floor-one:nth-child(11){
-        margin-bottom: 9px;
+    margin-bottom: 9px;
 }
 .floor-main .floor-one:nth-child(10) {
-        margin-bottom: 7px;
+    margin-bottom: 7px;
 }
 .floor-main .floor-one:nth-child(8), .floor-main .floor-one:nth-child(6) {
-        margin-bottom: 9px;
+    margin-bottom: 9px;
 }
 .floor-main .floor-one:nth-child(5) {
-        margin-bottom: 9px;
+    margin-bottom: 9px;
 }
 .floor-main .floor-one:nth-child(2) {
-        margin-bottom: 8px;
+    margin-bottom: 8px;
 }
 .floor-main .floor-one:nth-child(1) {
-        margin-bottom: 8px;
+    margin-bottom: 8px;
 }
 .floor-main .floor-one:nth-child(1) .floor-help {
-        height: 2rem;
+    height: 2rem;
 }
 .floor-sub .floor-one:first-child{
-        margin-bottom: 10px;
-        height: 3.9rem;
+    margin-bottom: 10px;
+    height: 3.9rem;
 }
 .floor-sub .floor-one:first-child .floor-help {
-        margin-top: 4px;
+    margin-top: 4px;
 }
 .floor-sub .floor-help::after {
 display: none;

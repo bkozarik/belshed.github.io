@@ -1,0 +1,4 @@
+Email: belshed1@yandex.ru
+Password: quaterpast6
+Smtp host: smtp.yandex.ru
+Smtp port: 465

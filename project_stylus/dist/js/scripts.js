@@ -231,6 +231,7 @@ $(document).ready(function(){
 		contentAsHTML: true,
 		triggerOpen: {
 			click: true,
+			hover: true,
 			tap: true
 		},
 		triggerClose: {
@@ -324,21 +325,31 @@ $(document).ready(function(){
 	$('.js-tower-tooltip').tooltipster({
 		animation: 'fade',
 		updateAnimation: "fade",
-		delay: 10,
+		delay: 0,
 		theme: ['tooltipster-color'],
 		trigger: 'custom',
 		contentAsHTML: true,
 		triggerOpen: {
-			click: true,
-			tap: true
+			tap: true,
+			mouseenter: true
 		},
 		triggerClose: {
-			click: true,
+			tap: true,
+			mouseleave: true
 		},
 		functionInit: function(instance, helper){
 			var content = $(helper.origin).find('.floor-tooltip').html();
 			instance.content(content);
 			$(helper.origin).on( 'click', function() {
+				if ($(this).hasClass('active')) {
+					$('.floor-one').removeClass('active');
+				}
+				else {
+					$('.floor-one').removeClass('active');
+					$(this).addClass('active');
+				}
+			});
+			$(helper.origin).on( 'hover', function() {
 				if ($(this).hasClass('active')) {
 					$('.floor-one').removeClass('active');
 				}
@@ -356,29 +367,18 @@ $(document).ready(function(){
 			let floor = Number($(helper.origin).find('.floor-help').find('span').text().substring(0,2));
 			
 			await getFloorData(floor, tower).then(info => {
-				if(info.freeAp != 0){
-					// instance.__options.updateAnimation = "fade";
-					instance.content(`
-						<div class="floor-tooltip-box">
-							<div class="floor-info">Свободно ${info.freeAp} из ${info.totalAp} квартир</div>
-							<ul class="list-floor-info">
-								${info.apInfo}
-							</ul>
-							<a href="./${floorPlan.replace(/[./]/g, '')}" class="more"><i class="icon-arrow"></i></a>
-						</div>`
-					);
-				}
-				else{
-					instance.content(`
+				instance.content(`
 						<div class="floor-tooltip-box">
 							<div class="floor-info">Свободно ${info.freeAp} из ${info.totalAp} квартир</div>
 							<ul class="list-floor-info">
 								${info.apInfo}
 							</ul>
 						</div>`
-					);
-				}
-				
+				);
+
+				$('.js-tower-tooltip').on('click', () => {
+					window.location.assign(floorPlan.replace(/[./]/g, ''));
+				});
 			});
 		},
 		functionReady: function(instance, helper) {
