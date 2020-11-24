@@ -221,7 +221,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if(state === null){
             return () => {
-                // toggleMenu(false);
+                toggleMenu(false);
                 targetPopup.classList.add('active');
                 popupOverlay.classList.add('active');
     
@@ -244,7 +244,7 @@ document.addEventListener('DOMContentLoaded', () => {
             targetPopup.classList.remove('active');
             popupOverlay.classList.remove('active');
         }
-        // toggleMenu(false);
+        toggleMenu(false);
 
         popupOverlay.addEventListener('click', () => {
             if(event.target.classList.contains('js-popup-overlay')){

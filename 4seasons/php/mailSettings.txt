@@ -1,5 +1,5 @@
-Email: hkiop1@yandex.ru
-Password: canofender5
+Email: почта яндекс отправителя
+Password: пароль
 Smtp host: smtp.yandex.ru
 Smtp port: 465
-To: Belshed1@yandex.ru
+To: info@club4s.ru

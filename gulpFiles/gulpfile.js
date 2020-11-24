@@ -21,7 +21,7 @@ const compileStyles = () => {
 }
 
 const minifyStyles = () => {
-    return src('dist/css/index.css')
+    return src('dist/css/*.css')
         .pipe(cleanCSS())
         .pipe(dest('dist/css/'));
 }
@@ -40,15 +40,18 @@ const autoprefixStyles = () => {
 
 const transferFiles = () => {
     src('source/**/*.html')
-        .pipe(dest('dist/'))
-        .pipe(browserSync.stream());
+        .pipe(dest('dist/'));
+        
+    src(['source/fonts/*.woff2', 'source/fonts/*.woff'])
+        .pipe(dest('dist/fonts'));
 
     src('source/js/*.js')
         .pipe(dest('dist/js/'))
-        .pipe(browserSync.stream());
+        .pipe(jsmin())
 
     return src(['source/img/*.jpg', 'source/img/*.png', 'source/img/*.jpeg', 'source/img/*.svg', 'source/img/*.webp'])
-        .pipe(dest('dist/img'));
+        .pipe(dest('dist/img'))
+        .pipe(browserSync.reload());
 }
 
 const convertFonts = () => {
@@ -85,8 +88,8 @@ const watchFiles = () => {
     watch('./source/img/**.jpeg', transferFiles);
     watch('./source/img/**.png', transferFiles);
     watch('./source/img/**.webp', transferFiles);
-    watch('./source/fonts/**', convertFonts);
+    watch('./source/fonts/**', series(convertFonts, transferFiles));
   }
 
 exports.build = series(wipe, parallel(convertFonts, series(compileStyles, autoprefixStyles, minifyStyles), minifyJS, transferFiles));
-exports.default = series(wipe, parallel(series(compileStyles, autoprefixStyles), transferFiles), watchFiles);
+exports.default = series(wipe, parallel(series(convertFonts, compileStyles, autoprefixStyles), transferFiles), watchFiles);
