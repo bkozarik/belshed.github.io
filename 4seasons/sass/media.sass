@@ -223,11 +223,17 @@ $main_brown-hover: #ac8a48
         padding: 30px 0px
         &__container
             margin-top: 25px
+        &__row
+            margin-top: 10px
+        &__row &__img + &__img
+            margin-left: 10px
         &__col
-            row-gap: 10px
-            column-gap: 10px
             & + &
                 margin-left: 10px
+            &_reverse
+                &>.gallery__img
+                .gallery__row
+                    margin-bottom: 10px
 
     .hero
         padding: 200px 0px 130px

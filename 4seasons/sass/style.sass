@@ -22,7 +22,6 @@ body
 
 section
     position: relative
-    overflow: hidden
 
 .section
     &__title
@@ -463,36 +462,50 @@ section
         padding: 0
     &__container
         display: flex
-        align-items: stretch
+        overflow: hidden
         margin-top: 37px
     &__img
         width: 100%
         height: 100%
         max-width: 100%
         overflow: hidden
+        position: relative
+        border: none
         img
             transform: scale(1.01)
             height: 100%
             width: 100%
+            object-fit: cover
         &:hover
             cursor: zoom-in
+    &__row &__img + &__img
+        margin-left: 15px
+    &__row &__img
+        flex-basis: 49%
+    &__row
+        display: flex
+        flex-shrink: 0
+        margin-top: 15px
+        height: 25%
     &__col
-        display: grid
-        grid-template-rows: 2fr 1fr
-        grid-template-columns: repeat(2, 1fr)
+        display: flex
+        align-items: flex-start
+        flex-direction: column
         flex-grow: 1
-        row-gap: 15px
-        column-gap: 15px
+        flex-shrink: 0
+        flex-basis: 49%
         & + &
             margin-left: 15px
         &_reverse
-            grid-template-rows: 1fr 2fr
-            .gallery__img
-                &:last-child
-                    grid-column: 1 / 3
-        &:not(.gallery__col_reverse) .gallery__img
-            &:first-child
-                grid-column: 1 / 3
+            &>.gallery__img
+                height: 60%
+            .gallery__row
+                margin-top: 0
+                margin-bottom: 15px
+                
+        &:not(.gallery__col_reverse)>.gallery__img:first-child
+            height: 60%
+           
 
 .footer
     display: flex
