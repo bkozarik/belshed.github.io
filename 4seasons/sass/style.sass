@@ -111,6 +111,8 @@ section
         .logo
             width: 60px
             height: auto
+    .container
+        max-width: 1490px
 
 .burger
     display: none
@@ -270,6 +272,8 @@ section
         font-size: 25px
         line-height: 33px
         margin-bottom: 40px
+    .container
+        max-width: 1490px
 
 .timer
     display: flex
@@ -540,7 +544,7 @@ section
         top: 20px
         right: 15px
         padding: 0
-        z-index: 10
+        z-index: 15
         border: none
         display: inline-block
         cursor: pointer
@@ -559,10 +563,49 @@ section
             transform: translate(-50%, -50%) rotate(-45deg)
         &::after
             transform: translate(-50%, -50%) rotate(45deg)
+    &__control
+        position: absolute
+        top: 50%
+        z-index: 10
+        display: block
+        height: 500px
+        width: 70px
+        background: rgba(255, 255, 255, .5)
+        border: none
+        border-radius: 0px
+        appearance: none
+        transform: translate(0, -50%)
+        cursor: pointer
+        &::after, &::before
+            content: ''
+            display: inline-block
+            height: 3px
+            background-color: $main_brown
+            width: 23px
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+        &::before
+            transform: translate(-50%, calc( -7px - 50% )) rotate(-45deg)
+        &::after
+            transform: translate(-50%, calc( 7px - 50% )) rotate(45deg)
+        &_next
+            right: 0
+            transform: translate(0, -50%) rotate(180deg)
+        &_prev
+            left: 0
+        &:hover
+            background: rgba(255, 255, 255, 1)
+        &:focus
+            outline: none
     &__item
         display: flex
         align-items: center
         justify-content: center
+        &:not(.swiper-slide-active)
+            opacity: .7
+            
     &__img
         margin: 0 auto
         display: block

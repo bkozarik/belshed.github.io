@@ -10,15 +10,46 @@ $main_brown-hover: #ac8a48
             flex: 0 0 45%
 
 @media screen and (max-width: 1500px)
+
+    .hero, .header, .footer
+        .container
+            max-width: 1200px
+
+    .hero
+        padding: 250px 0px 160px
+        &__content
+            max-width: 730px
+        &__title
+            font-size: 50px
+            line-height: 70px
+        &__subtitle
+            font-size: 22px
+            line-height: 28px
+
+    .nav
+        &_link
+            font-size: 18px
+
     .benefits
         &__container
             justify-content: space-around
             flex-wrap: wrap
 
     .benefit
-        margin: 0px 50px 50px
+        margin: 0px 20px 50px
+        max-width: 210px
+        &__img
+            height: 210px
+        &__content
+            margin-top: 30px
+        &__title
+            font-size: 20px
+            line-height: 24px
+        &__text
+            font-size: 16px
+            line-height: 20px
+            margin-top: 20px
 
-@media screen and (max-width: 1500px)
     .about
         &__content
             padding-left: 30px
@@ -149,6 +180,10 @@ $main_brown-hover: #ac8a48
         &__time
             font-size: 28px
 
+    .swiper
+        &__control
+            display: none
+
     .benefit
         flex-direction: row
         margin: 0px 0px 30px
@@ -179,8 +214,7 @@ $main_brown-hover: #ac8a48
 @media screen and (max-width: 650px)
     .container
         padding: 0px 35px
-
-    
+  
     .burger
         display: inline-block
 

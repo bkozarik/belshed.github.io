@@ -63,6 +63,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     loop: true,
                     lazy: true,
                     updateOnWindowResize: true,
+                    navigation: {
+                        nextEl: '.swiper__control_next',
+                        prevEl: '.swiper__control_prev',
+                    },
                     breakpoints: {
                         300: {
                             slidesPerView: 1
@@ -82,6 +86,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     loop: true,
                     lazy: true,
                     updateOnWindowResize: true,
+                    navigation: {
+                        nextEl: '.swiper__control_next',
+                        prevEl: '.swiper__control_prev',
+                    },
                     breakpoints: {
                         300: {
                             slidesPerView: 1
@@ -101,6 +109,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     loop: true,
                     lazy: true,
                     updateOnWindowResize: true,
+                    navigation: {
+                        nextEl: '.swiper__control_next',
+                        prevEl: '.swiper__control_prev',
+                    },
                     breakpoints: {
                         300: {
                             slidesPerView: 1
@@ -120,6 +132,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     loop: true,
                     lazy: true,
                     updateOnWindowResize: true,
+                    navigation: {
+                        nextEl: '.swiper__control_next',
+                        prevEl: '.swiper__control_prev',
+                    },
                     breakpoints: {
                         300: {
                             slidesPerView: 1
@@ -139,6 +155,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     loop: true,
                     lazy: true,
                     updateOnWindowResize: true,
+                    navigation: {
+                        nextEl: '.swiper__control_next',
+                        prevEl: '.swiper__control_prev',
+                    },
                     breakpoints: {
                         300: {
                             slidesPerView: 1
@@ -155,7 +175,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const galleryImgClick = () => {
         const mainSwiper = document.querySelector('.js-slider-main');
-
+        
+        mainSwiperInit();
         mainSwiper.classList.add('active');
     }
 
@@ -178,6 +199,10 @@ document.addEventListener('DOMContentLoaded', () => {
             loop: true,
             lazy: true,
             updateOnWindowResize: true,
+            navigation: {
+                nextEl: '.swiper__control_next',
+                prevEl: '.swiper__control_prev',
+            },
             breakpoints: {
                 300: {
                     slidesPerView: 1
