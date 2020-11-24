@@ -367,10 +367,16 @@ $main_brown-hover: #ac8a48
     .gallery
         &__container
             flex-direction: column
+        &__row &__img img
+            height: 135px
+        &__row
+            margin-top: 5px
         &__col
+            &_reverse .gallery__row
+                margin-bottom: 5px
             & + &
                 margin-left: 0
-                margin-top: 10px            
+                margin-top: 5px            
 
     .rates
         &__preview
