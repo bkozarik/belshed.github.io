@@ -61,7 +61,8 @@ $main_brown-hover: #ac8a48
             padding-left: 0
             display: grid
             grid-template-columns: 1fr 1fr
-            grid-gap: 30px
+            row-gap: 30px
+            column-gap: 30px
             justify-items: center
         &__item
             position: relative
@@ -121,7 +122,7 @@ $main_brown-hover: #ac8a48
             width: 100%
             height: 530px
         &__content
-            padding: 50px 0px
+            padding: 30px 0px
 
 @media screen and (max-width: 890px)
     .rates
@@ -223,7 +224,8 @@ $main_brown-hover: #ac8a48
         &__container
             margin-top: 25px
         &__col
-            grid-gap: 10px
+            row-gap: 10px
+            column-gap: 10px
             & + &
                 margin-left: 10px
 
@@ -280,9 +282,11 @@ $main_brown-hover: #ac8a48
 
 @media screen and (max-width: 620px)
     .benefits
+        &__container
+            margin-top: 30px !important
         &__title
             background-color: transparent
-            padding: 20px 15px
+            padding: 0px 15px
             color: $main_brown
             font-size: 28px
             line-height: 34px
