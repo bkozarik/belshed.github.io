@@ -1,17 +1,24 @@
 @media screen and ( max-width: 720px )
     .buxom2
         &_content
-            grid-template-columns: 1fr
+            margin-bottom: 30px
+            &__row
+                flex-direction: column
+                align-items: stretch
         &_item
             display: flex
             justify-content: center
             padding: 0px 15px
+            & + &
+                margin-left: 0px
+                margin-top: 20px
+            & + &
+                margin-top: 20px
+            &-half
+                width: 100%
             &-img
                 width: auto
                 max-width: 100%
-            &_full
-                grid-column-start: auto
-                grid-column-end: auto
         &_combination
             display: flex
             &_reverse

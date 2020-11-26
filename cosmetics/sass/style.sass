@@ -29,23 +29,41 @@ $maxWidth: 1865
         font-weight: normal
         text-align: center
     &_banner
+        margin-bottom: 30px
         &-img
-            width: 100%
+            width: auto
             height: auto
+            display: block
+            max-width: 100%
+            margin: 0 auto
             object-fit: contain
     &_content
         margin: 40px 0px 65px
-        display: grid
-        grid-template-columns: repeat(2, 1fr)
-        grid-gap: 30px
+        &__row
+            display: flex
+            align-items: flex-start
+            justify-content: space-between
+            & + &
+                margin-top: 30px
     &_text
         font-size: 26px
         @include adaptiv-font(26, 16)
         font-weight: normal
+        &-center
+            text-align: center
+            display: block
+            width: 100%
     &_item
+        & + &
+            margin-left: 20px
+        &-half
+            width: 50%
+        &-img
+            flex-shrink: 0
+            &-container
+                flex-shrink: 0
         &_full
-            grid-column-start: 1
-            grid-column-end: 3
+            margin-top: 30px
         &_fill
             width: 100%
             height: auto
@@ -72,6 +90,11 @@ $maxWidth: 1865
             font-weight: normal
             @include adaptiv-font(22, 14)
             line-height: 24px
+        &-small
+            margin-top: 0 !important
+            font-weight: normal
+            @include adaptiv-font(18, 10)
+            line-height: 18px
         &-btn
             display: inline-block
             text-decoration: none
