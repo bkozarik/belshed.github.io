@@ -57,117 +57,87 @@ document.addEventListener('DOMContentLoaded', () => {
 
         switch(buttonSliderId){
             case 1:
-                const swiper_1 = document.querySelector('.js-slider-1');   
-                let swiper_1_Swiper = new Swiper(swiper_1, {
-                    centeredSlides: true,
-                    loop: true,
-                    lazy: true,
-                    updateOnWindowResize: true,
-                    navigation: {
-                        nextEl: '.swiper__control_next',
-                        prevEl: '.swiper__control_prev',
-                    },
-                    breakpoints: {
-                        300: {
-                            slidesPerView: 1
-                        },
-                        680: {
-                            slidesPerView: 1
-                        }
+                const swiperNode_1 = document.querySelector('.js-slider-1');
+                const swiper_1_1 = swiperNode_1.swiper;
+
+                if(swiperNode_1.classList.contains('swiper-container-initialized')){
+                    swiper_1_1.update();
+                }
+
+                window.addEventListener('resize', () => {
+                    if(swiperNode_1.classList.contains('swiper-container-initialized')){
+                        swiper_1_1.update();
                     }
-                }); 
+                });
+
                 swiper_1.classList.add('active');
             break;
             
             case 2:
-                const swiper_2 = document.querySelector('.js-slider-2');
-                let swiper_2_Swiper = new Swiper(swiper_2, {
-                    centeredSlides: true,
-                    loop: true,
-                    lazy: true,
-                    updateOnWindowResize: true,
-                    navigation: {
-                        nextEl: '.swiper__control_next',
-                        prevEl: '.swiper__control_prev',
-                    },
-                    breakpoints: {
-                        300: {
-                            slidesPerView: 1
-                        },
-                        680: {
-                            slidesPerView: 1
-                        }
+                const swiperNode_2 = document.querySelector('.js-slider-2');
+                const swiper_2_2 = swiperNode_2.swiper;
+
+                if(swiperNode_2.classList.contains('swiper-container-initialized')){
+                    swiper_2_2.update();
+                }
+
+                window.addEventListener('resize', () => {
+                    if(swiperNode_2.classList.contains('swiper-container-initialized')){
+                        swiper_2_2.update();
                     }
                 });
+
                 swiper_2.classList.add('active');
             break;
             
             case 3:
-                const swiper_3 = document.querySelector('.js-slider-3');
-                let swiper_3_Swiper = new Swiper(swiper_3, {
-                    centeredSlides: true,
-                    loop: true,
-                    lazy: true,
-                    updateOnWindowResize: true,
-                    navigation: {
-                        nextEl: '.swiper__control_next',
-                        prevEl: '.swiper__control_prev',
-                    },
-                    breakpoints: {
-                        300: {
-                            slidesPerView: 1
-                        },
-                        680: {
-                            slidesPerView: 1
-                        }
+                const swiperNode_3 = document.querySelector('.js-slider-3');
+                const swiper_3_3 = swiperNode_3.swiper;
+
+                if(swiperNode_3.classList.contains('swiper-container-initialized')){
+                    swiper_3_3.update();
+                }
+
+                window.addEventListener('resize', () => {
+                    if(swiperNode_3.classList.contains('swiper-container-initialized')){
+                        swiper_3_3.update();
                     }
                 });
+
                 swiper_3.classList.add('active');
             break;
             
             case 4:
-                const swiper_4 = document.querySelector('.js-slider-4');
-                let swiper_4_Swiper = new Swiper(swiper_4, {
-                    centeredSlides: true,
-                    loop: true,
-                    lazy: true,
-                    updateOnWindowResize: true,
-                    navigation: {
-                        nextEl: '.swiper__control_next',
-                        prevEl: '.swiper__control_prev',
-                    },
-                    breakpoints: {
-                        300: {
-                            slidesPerView: 1
-                        },
-                        680: {
-                            slidesPerView: 1
-                        }
+                const swiperNode_4 = document.querySelector('.js-slider-4');
+                const swiper_4_4 = swiperNode_4.swiper;
+
+                if(swiperNode_4.classList.contains('swiper-container-initialized')){
+                    swiper_4_4.update();
+                }
+
+                window.addEventListener('resize', () => {
+                    if(swiperNode_4.classList.contains('swiper-container-initialized')){
+                        swiper_4_4.update();
                     }
                 });
+
                 swiper_4.classList.add('active');
             break;
             
             case 5:
-                const swiper_5 = document.querySelector('.js-slider-5');
-                let swiper_5_Swiper = new Swiper(swiper_5, {
-                    centeredSlides: true,
-                    loop: true,
-                    lazy: true,
-                    updateOnWindowResize: true,
-                    navigation: {
-                        nextEl: '.swiper__control_next',
-                        prevEl: '.swiper__control_prev',
-                    },
-                    breakpoints: {
-                        300: {
-                            slidesPerView: 1
-                        },
-                        680: {
-                            slidesPerView: 1
-                        }
+                const swiperNode_5 = document.querySelector('.js-slider-5');
+                const swiper_5_5 = swiperNode_5.swiper;
+
+                if(swiperNode_5.classList.contains('swiper-container-initialized')){
+                    swiper_5_5.update();
+                }
+
+                window.addEventListener('resize', () => {
+                    if(swiperNode_5.classList.contains('swiper-container-initialized')){
+                        swiper_5_5.update();
                     }
                 });
+
                 swiper_5.classList.add('active');
             break;
         }
@@ -184,32 +154,23 @@ document.addEventListener('DOMContentLoaded', () => {
         const swipers = document.querySelectorAll('.swiper');
 
         swipers.forEach(swiper => {
-            swiper.classList.remove('active');
-            if(swiper.classList.contains('swiper-container-initialized')){
-                setTimeout(() => {
-                    swiper.swiper.destroy();
-                }, 300);
+            if(swiper.classList.contains('active')){
+                swiper.classList.remove('active');
             }
         });
     }
 
     const mainSwiperInit = () => {
-        let mainSwiper = new Swiper('.js-slider-main', {
-            centeredSlides: true,
-            loop: true,
-            lazy: true,
-            updateOnWindowResize: true,
-            navigation: {
-                nextEl: '.swiper__control_next',
-                prevEl: '.swiper__control_prev',
-            },
-            breakpoints: {
-                300: {
-                    slidesPerView: 1
-                },
-                680: {
-                    slidesPerView: 1
-                }
+        const swiperNode = document.querySelector('.js-slider-main');
+        const swiper = swiperNode.swiper;
+
+        if(swiperNode.classList.contains('swiper-container-initialized')){
+            swiper.update();
+        }
+
+        window.addEventListener('resize', () => {
+            if(swiperNode.classList.contains('swiper-container-initialized')){
+                swiper.update();
             }
         });
     }
@@ -346,6 +307,143 @@ document.addEventListener('DOMContentLoaded', () => {
 
         });
     }
+    
+    const swiper_1 = document.querySelector('.js-slider-1');   
+    let swiper_1_Swiper = new Swiper(swiper_1, {
+        centeredSlides: true,
+        lazy: {
+            loadPrevNext: true,
+        },
+        preloadImages: true,
+        observer: true,
+        updateOnWindowResize: true,
+        navigation: {
+            nextEl: '.swiper__control_next',
+            prevEl: '.swiper__control_prev',
+        },
+        breakpoints: {
+            300: {
+                slidesPerView: 1
+            },
+            760: {
+                slidesPerView: 2
+            }
+        }
+    });
+
+    const swiper_2 = document.querySelector('.js-slider-2');
+    let swiper_2_Swiper = new Swiper(swiper_2, {
+        centeredSlides: true,
+        lazy: {
+            loadPrevNext: true,
+        },
+        preloadImages: true,
+        observer: true,
+        updateOnWindowResize: true,
+        navigation: {
+            nextEl: '.swiper__control_next',
+            prevEl: '.swiper__control_prev',
+        },
+        breakpoints: {
+            300: {
+                slidesPerView: 1
+            },
+            760: {
+                slidesPerView: 2
+            }
+        }
+    });
+    
+    const swiper_3 = document.querySelector('.js-slider-3');
+    let swiper_3_Swiper = new Swiper(swiper_3, {
+        centeredSlides: true,
+        lazy: {
+            loadPrevNext: true,
+        },
+        preloadImages: true,
+        observer: true,
+        updateOnWindowResize: true,
+        navigation: {
+            nextEl: '.swiper__control_next',
+            prevEl: '.swiper__control_prev',
+        },
+        breakpoints: {
+            300: {
+                slidesPerView: 1
+            },
+            760: {
+                slidesPerView: 2
+            }
+        }
+    });
+
+    const swiper_4 = document.querySelector('.js-slider-4');
+    let swiper_4_Swiper = new Swiper(swiper_4, {
+        centeredSlides: true,
+        lazy: {
+            loadPrevNext: true,
+        },
+        preloadImages: true,
+        observer: true,
+        updateOnWindowResize: true,
+        navigation: {
+            nextEl: '.swiper__control_next',
+            prevEl: '.swiper__control_prev',
+        },
+        breakpoints: {
+            300: {
+                slidesPerView: 1
+            },
+            760: {
+                slidesPerView: 2
+            }
+        }
+    });
+
+    const swiper_5 = document.querySelector('.js-slider-5');
+    let swiper_5_Swiper = new Swiper(swiper_5, {
+        centeredSlides: true,
+        lazy: {
+            loadPrevNext: true,
+        },
+        preloadImages: true,
+        observer: true,
+        updateOnWindowResize: true,
+        navigation: {
+            nextEl: '.swiper__control_next',
+            prevEl: '.swiper__control_prev',
+        },
+        breakpoints: {
+            300: {
+                slidesPerView: 1
+            },
+            760: {
+                slidesPerView: 2
+            }
+        }
+    });
+
+    let mainSwiper = new Swiper('.js-slider-main', {
+        centeredSlides: true,
+        lazy: {
+            loadPrevNext: true,
+        },
+        preloadImages: true,
+        observer: true,
+        updateOnWindowResize: true,
+        navigation: {
+            nextEl: '.swiper__control_next',
+            prevEl: '.swiper__control_prev',
+        },
+        breakpoints: {
+            300: {
+                slidesPerView: 1
+            },
+            760: {
+                slidesPerView: 2
+            }
+        }
+    });
 
     galleryImg.forEach(img => img.addEventListener('click', galleryImgClick));
     galleryClose.forEach(link => link.addEventListener('click', gallerySliderClose));

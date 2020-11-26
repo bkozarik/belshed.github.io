@@ -185,6 +185,11 @@ $main_brown-hover: #ac8a48
             font-size: 28px
 
     .swiper
+        &__item
+            &:not(.swiper-slide-active)
+                opacity: 1
+        &__img
+            max-width: 100%
         &__control
             display: none
 
@@ -343,10 +348,6 @@ $main_brown-hover: #ac8a48
             &::before, &::after
                 width: 30px
                 height: 3px
-
-    .swiper
-        &__img
-            max-width: 100%
 
     .rates
         &__preview
