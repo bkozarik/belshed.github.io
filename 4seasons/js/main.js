@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             slidesPerView: 1
                         },
                         680: {
-                            slidesPerView: 2
+                            slidesPerView: 1
                         }
                     }
                 }); 
@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             slidesPerView: 1
                         },
                         680: {
-                            slidesPerView: 2
+                            slidesPerView: 1
                         }
                     }
                 });
@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             slidesPerView: 1
                         },
                         680: {
-                            slidesPerView: 2
+                            slidesPerView: 1
                         }
                     }
                 });
@@ -141,7 +141,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             slidesPerView: 1
                         },
                         680: {
-                            slidesPerView: 2
+                            slidesPerView: 1
                         }
                     }
                 });
@@ -164,7 +164,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             slidesPerView: 1
                         },
                         680: {
-                            slidesPerView: 2
+                            slidesPerView: 1
                         }
                     }
                 });
@@ -208,7 +208,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     slidesPerView: 1
                 },
                 680: {
-                    slidesPerView: 2
+                    slidesPerView: 1
                 }
             }
         });

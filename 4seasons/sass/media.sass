@@ -170,10 +170,13 @@ $main_brown-hover: #ac8a48
 
 @media screen and (max-width: 760px)
     .benefits
+        margin-bottom: 20px
         &__container
             justify-content: center
             flex-direction: column
             align-items: center
+        &__deco
+            display: none
 
     .timer
         &__title
@@ -205,6 +208,12 @@ $main_brown-hover: #ac8a48
             line-height: 24px
         &__text
             margin-top: 10px
+        &:last-child
+            margin-bottom: 0
+
+    .rates
+        &__container
+            margin-top: 20px
 
 @media screen and (min-width: 650px)
     .about
@@ -275,7 +284,7 @@ $main_brown-hover: #ac8a48
         &__header, &__footer
             display: none
         &__container
-            margin-top: 40px
+            margin-top: 20px
 
     .popup
         &__body
