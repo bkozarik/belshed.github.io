@@ -116,6 +116,7 @@ body
     background-color: transparent
     border-radius: 4px
     border: none
+    appearance: none
     position: relative
     cursor: pointer
     text-transform: uppercase
@@ -314,21 +315,24 @@ body
     transform: translateX(100%) rotate(-30deg)
     visibility: hidden
     pointer-events: none
+    overflow: hidden
     padding: 0px 15px
+    overflow: hidden
+    overflow-y: auto
     display: none
     &::before
         transition-duration: .35s
         transition-timing-function: ease-out
         content: ''
         display: block
-        height: 101vh
-        position: absolute
+        height: 100%
+        position: sticky
+        float: right
+        top: 0
         border-radius: 30px
         background-color: $main_yellow
-        right: -115px
-        top: -8px
         width: 200px
-        transform: rotate(-9deg)
+        transform: translateX(165px) rotate(-9deg)
         transform-origin: left top
         transition-delay: .1s
     &__container
@@ -341,7 +345,8 @@ body
         flex-direction: column
         align-items: stretch
         justify-content: center
-        position: relative
+        position: absolute
+        top: 0
         .nav
             margin-left: 0px
             &__list
@@ -360,8 +365,9 @@ body
             border: 2px solid $main_black
             font-size: 18px
             padding: 18px 15px
-            position: absolute
-            bottom: 48px
+            position: relative
+            // bottom: 48px
+            margin-top: auto
             width: 100%
             &::before
                 position: relative
@@ -376,7 +382,7 @@ body
         pointer-events: all
         opacity: 1
         &::before
-            transform: rotate(4deg)
+            transform: translateX(165px) rotate(4deg)
 
 .slide
     padding-top: 225px
@@ -526,6 +532,7 @@ body
             width: 100%
             object-fit: cover
             transition-duration: .6s
+            transform: scale(1.03)
     &__item
         overflow: hidden
         border-radius: 8px

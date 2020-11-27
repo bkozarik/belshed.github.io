@@ -163,6 +163,9 @@ $bg_white: #f8f8f8
 
     .menu
         display: block !important
+        &__container
+            margin-top: 100px
+            justify-content: flex-start
 
     .burger
         display: inline-block
@@ -595,11 +598,10 @@ $bg_white: #f8f8f8
 
     .menu
         &__container
+            justify-content: flex-start
             .nav__link
                 font-size: 38px
                 line-height: normal
-            .button
-                bottom: 28px
 
     .section
         &__top
@@ -707,6 +709,10 @@ $bg_white: #f8f8f8
                 &:last-child .nav__link
                     padding-right: 0
 
+    .header
+        &__wrap
+            padding-top: 20px
+
     .slide
         &__images
             height: 300px
@@ -738,12 +744,9 @@ $bg_white: #f8f8f8
 
 @media screen and ( max-width: 440px )
     .menu
-        &::before
-            right: -150px
         &__container
-            padding-top: 15vh
+            margin-top: 80px
             .button
-                position: static
                 margin-top: auto
 
     .games
@@ -765,6 +768,12 @@ $bg_white: #f8f8f8
     .game-page
         &__picset
             grid-template-rows: 240px repeat(2, 100px)
+
+    .menu
+        &__container
+            width: calc( 100% - 30px )
+        .button_request
+            padding: 18px 0px
 
     .slide__title
         &, & *
