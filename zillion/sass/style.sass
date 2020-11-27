@@ -22,6 +22,14 @@ body
     min-height: 100vh
     display: flex
     flex-direction: column
+    &.block-scroll
+        overflow: hidden !important
+        width: 100%
+        height: 100%
+        position: fixed
+        top: 0
+        left: 0
+        z-index: 10000
 
 .body
     &_white
@@ -1056,12 +1064,15 @@ body
     &__preview
         overflow: hidden
         padding: 0
+        border-radius: 6px
         img
             transition-duration: .4s
             height: 100%
             width: 100%
             object-fit: cover
-        &:hover
+        &:hover, &:hover
+            overflow: hidden
+            border-radius: 6px
             img
                 transform: scale(1.03)
     &__description
@@ -1172,10 +1183,11 @@ body
 .popup
     background-color: #fff
     width: 100%
-    position: relative
     box-shadow: 0px 28px 52px rgba(0, 0, 0, 0.19)
+    max-height: calc( 100% )
     border-radius: 12px
     max-width: 990px
+    overflow: hidden
     overflow-y: auto
     position: absolute
     transform: translateY(-50px)

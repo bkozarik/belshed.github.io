@@ -1,4 +1,7 @@
 $text-black: #19191C
+$main_red: #D6253F
+$text-hover: #B01D33
+$bg-grey: #F3F4F8
     
 *, *::before, *::after
     margin: 0
@@ -17,17 +20,437 @@ body
     display: flex
     flex-direction: column
 
+section
+    position: relative
+
 .header, .footer
     flex-grow: 0
 
+.section
+    &__subtitle
+        font-size: 24px
+        line-height: 33px
+        font-weight: 600
+        display: inline-block
+    &__title
+        font-size: 50px
+        line-height: 60px
+        font-weight: 800
+        color: $text-black
+        text-transform: uppercase
+        &_tac
+            text-align: center
+    &__small-title
+        font-weight: 600
+        font-size: 25px
+        line-height: 33px
+        text-transform: none
+        &_tac
+            text-align: center
+
 .main
     flex-grow: 1
+    margin-top: 98px
 
 .container
     max-width: 1230px
     padding: 0px 15px
     width: 100%
     margin: 0 auto
+    position: relative
+    z-index: 2
+
+.button
+    display: inline-block
+    background-color: transparent
+    border-radius: 5px
+    border: none
+    position: relative
+    cursor: pointer
+    text-decoration: none
+    text-transform: uppercase
+    text-align: center
+    user-select: none
+    color: $text-black
+    padding: 15px
+    font-size: 14px
+    line-height: 14px
+    font-weight: 800
+    overflow-anchor: none
+    vertical-align: middle
+    white-space: nowrap
+    svg
+        vertical-align: middle
+        transition-duration: 0s 
+    &_response
+        padding: 16px 29px 15px
+        border: 2px solid $text-black
+        &:hover
+            color: #ffffff
+            background-color: $text-black
+    &_buy
+        color: #ffffff
+        background-color: $main_red
+        padding: 12px 30px
+        svg
+            margin-right: 23px
+            stroke: #fff
+            fill: #fff
+        &:hover
+            background-color: $text-hover
+    &_testdrive
+        padding: 12px 36px
+        margin-left: 30px
+        border: 2px solid $text-black
+        svg
+            margin-right: 15px
+            fill: $text-black
+        &:hover
+            color: #ffffff
+            background-color: $text-black
+            svg
+                fill: #ffffff
+                stroke: #ffffff
+    &_login
+        color: #ffffff
+        background-color: $main_red
+        margin-left: 20px
+        padding: 18px 28px 15px
+        &:hover
+            background-color: $text-hover
 
 .header
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    z-index: 5
+    background-color: #fff
+    &__wrap
+        display: flex
+        align-items: center
+    &__buttons
+        margin-left: 45px
+        display: flex
+    &.fixed
+        box-shadow: 0 0 15px 3px rgba(0, 0, 0, .1)
     
+.logo
+    background-color: #000
+    flex-shrink: 0
+    padding: 24px 16px
+    &__img
+        height: 100%
+        width: auto
+        max-width: 100%
+
+.nav
+    width: 100%
+    max-width: 632px
+    margin-left: 65px
+    &__list
+        display: flex
+        width: 100%
+        align-items: center
+        justify-content: space-between
+        list-style-type: none
+    &__link
+        font-size: 16px
+        font-weight: 600
+        color: #000000
+        &:hover
+            color: $text-hover
+
+.aside
+    position: fixed
+    right: 0px
+    top: 50%
+    transform: translate(0, -50%)
+    z-index: 3
+    &__top
+        display: flex
+        flex-direction: column
+        align-items: flex-end
+    &__camera, &__cart
+        background-color: $main_red
+        border-radius: 20px 0px 0px 20px
+        padding: 13px
+        color: #ffffff
+        font-weight: 600
+        text-transform: none
+        svg
+            fill: #ffffff
+    &__camera
+        padding-right: 0
+    &__cart
+        margin-top: 8px
+        transform: translateX(83px)
+        svg
+            margin-right: 18px
+        &:hover
+            transform: translateX(0px)
+    &__body
+        margin-top: 20px
+        border-radius: 20px 0px 0px 20px
+        background-color: $main_red
+        padding: 39px 9px 55px 13px
+        display: flex
+        flex-direction: column
+        align-items: center
+        width: 35px
+        right: -83px
+        position: relative
+    &__link
+        position: relative
+        display: inline-block
+        color: $text-black
+        font-size: 16px
+        & + &
+            margin-top: 10px
+        &.active
+            .aside
+                &__text
+                    transform: translate(-30px, -50%)
+                    opacity: 1
+                    visibility: visible
+                &__bullet
+                    opacity: 1
+                    transform: scale(1.6)
+    &__bullet
+        display: inline-block
+        height: 8px
+        width: 8px
+        background-color: #fff
+        border-radius: 50%
+        opacity: .5
+    &__text
+        position: absolute
+        display: inline-block
+        white-space: nowrap
+        top: 50%
+        right: 100%
+        opacity: 0
+        visibility: hidden
+        transform: translate(20px, -50%)
+
+.hero
+    padding: 73px 0px 107px
+    background-color: $bg-grey
+    &__bg
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+    &__container
+        max-width: 635px
+        width: 100%
+    &__logo
+        display: block
+        margin-bottom: 30px
+    &__agit
+        font-size: 52px
+        font-weight: 900
+        margin-bottom: 30px
+        display: inline-block
+    &__title
+        font-size: 36px
+        font-weight: 700
+        line-height: 50px
+        margin-bottom: 30px
+    &__price
+        margin-bottom: 72px
+        &-num, &-rub
+            font-weight: 700
+            font-size: 47px
+            line-height: 56px
+            color: $main_red
+        &-rub
+            color: #000
+            font-weight: 500
+    &__row
+        display: flex
+        align-items: center
+    &__socials
+        margin-left: 35px
+        &-label
+            display: block
+            font-size: 14px
+            text-transform: uppercase
+            font-weight: 800
+        &-link
+            transition-duration: 0s
+            fill: $text-black
+            & + &
+                margin-left: 15px
+            &:hover
+                fill: $main_red
+        &-row
+            margin-top: 5px
+            display: flex
+            align-items: center
+
+.float-img
+    margin-top: 4px
+    &_left
+        float: left
+        margin-right: 20px
+    &_right
+        float: right
+        margin-left: 20px
+    &_mb30
+        margin-bottom: 30px
+
+.column
+    flex-basis: 49%
+    & + &
+        margin-left: 20px
+    &__container
+        display: flex
+        align-items: flex-start
+
+.text
+    font-size: 20px
+    line-height: 30px
+    font-weight: 400
+    &_left
+        max-width: 465px
+    &_mt30
+        margin-top: 30px
+    &_mt50
+        margin-top: 50px
+
+.hybrid
+    padding-top: 50px
+    &::after
+        content: ''
+        position: absolute
+        display: block
+        width: 100%
+        height: 28%
+        background-color: $bg-grey
+        bottom: 5px
+        left: 0
+    &__title
+        margin-top: 110px
+    &__subtitle
+        margin-top: 50px
+    &__img
+        width: 100%
+        margin-top: 50px
+        display: block
+        &_right
+            transform: translateX(120px)
+        &_left
+            transform: translateX(-120px)
+        img
+            max-width: 100%
+            width: 100%
+
+.list
+    padding-left: 40px
+    margin-top: 120px
+    list-style-type: none
+    max-width: 550px
+    &__item
+        position: relative
+        & + &
+            margin-top: 1em
+        &::before
+            height: 24px
+            width: 24px
+            content: ''
+            display: inline-block
+            position: absolute
+            top: 0%
+            left: -15px
+            transform: translate(-100%, 10%)
+            background-image: url(../img/bullet.svg)
+            background-repeat: no-repeat
+            background-size: contain
+            background-position: center
+    &__accent
+        color: $main_red
+
+.author
+    padding: 50px 0px 375px
+    &::after
+        content: ''
+        position: absolute
+        display: block
+        width: 100%
+        height: 59%
+        background-color: $bg-grey
+        bottom: 5px
+        left: 0
+        z-index: 0
+    &__title
+        margin-bottom: 50px
+    &__bg
+        position: absolute
+        max-width: 1440px
+        width: 100%
+        bottom: 0
+        left: 50%
+        z-index: 1
+        transform: translate(-50%, 0px)
+        img
+            width: 100%
+            max-width: 100%
+
+.slider
+    padding-top: 70px
+    &__title
+        margin-bottom: 50px
+    &__body
+        position: relative
+    &__item
+        width: 100%
+        height: 940px
+    &__control
+        position: absolute
+        height: 100px
+        width: 40px
+        background-color: transparent
+        border: none
+        display: inline-block
+        z-index: 3
+        cursor: pointer
+        svg
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            transition-duration: 0s
+            fill: #ffffff
+        &:hover
+            svg
+                fill: $text-hover
+        &_prev
+            left: 0
+        &_next
+            transform: rotate(180deg)
+            right: 0
+        &-container
+            width: 100%
+            height: 100px
+            max-width: 1400px
+            margin: 0 auto
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            position: absolute
+            z-index: 2
+    &__img
+        height: inherit
+        width: 100%
+        display: block
+        overflow: hidden
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover

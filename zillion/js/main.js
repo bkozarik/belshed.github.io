@@ -87,11 +87,27 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    const toggleScrolling = (state = null) => {
+        const body = document.querySelector('body');
+
+        if(state == null){
+            body.classList.toggle('block-scroll');
+        }
+        else if( state == true){
+            body.classList.add('block-scroll');
+        }
+        else if( state == false){
+            body.classList.remove('block-scroll');
+        }
+
+    }
+
     const closePopup = () => {
         const popupOverlay = document.querySelector('.js-popup-overlay');
 
         popupOverlay.classList.remove('active');
         popupOverlay.querySelectorAll('.popup').forEach(popup => popup.classList.remove('active'));
+        toggleScrolling(false);
     }
 
     const togglePopup = (selector, state = null) => {
@@ -104,6 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 toggleMenu(false);
                 targetPopup.classList.add('active');
                 popupOverlay.classList.add('active');
+                toggleScrolling(true);
     
                 popupOverlay.addEventListener('click', () => {
                     if(event.target.classList.contains('js-popup-overlay')){
@@ -115,10 +132,12 @@ document.addEventListener('DOMContentLoaded', () => {
         else if(state === true) {
             targetPopup.classList.add('active');
             popupOverlay.classList.add('active');
+            toggleScrolling(true);
         }
         else{
             targetPopup.classList.remove('active');
             popupOverlay.classList.remove('active');
+            toggleScrolling(false);
         }
         toggleMenu(false);
 
@@ -185,15 +204,19 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const toggleMenu = (state = null) => {
+        closePopup();
+
         if(typeof(state) == 'object'){
             return () => {
                 burger.classList.toggle('active');
                 menu.classList.toggle('active');
+                toggleScrolling();
             }
         }
         else{
             state ? menu.classList.add('active') : menu.classList.remove('active');
             state ? burger.classList.add('active') : burger.classList.remove('active');
+            state ? toggleScrolling(true) : toggleScrolling(false);
         }
     }
 
