@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const scrollHandler = () => {
-        window.pageYOffset > 40 ? document.querySelector('.header').classList.add('fixed') : document.querySelector('.header').classList.remove('fixed');
+        window.pageYOffset > 80 ? document.querySelector('.header').classList.add('fixed') : document.querySelector('.header').classList.remove('fixed');
 
     }
 
