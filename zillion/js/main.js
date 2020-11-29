@@ -55,9 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const resizeHandler = () => {
         
-        if(whichPage() == 'index'){
-            // banditoWatch();
-        }
+        banditoWatch();
 
         if(window.innerWidth >= 980) toggleMenu(false);
 
@@ -90,16 +88,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const toggleScrolling = (state = null) => {
         const body = document.querySelector('body');
 
-        if(state == null){
-            body.classList.toggle('block-scroll');
+        if(window.innerWidth < 960){
+            if(state == null){
+                body.classList.toggle('block-scroll');
+            }
+            else if( state == true){
+                body.classList.add('block-scroll');
+            }
+            else if( state == false){
+                body.classList.remove('block-scroll');
+            }
         }
-        else if( state == true){
-            body.classList.add('block-scroll');
-        }
-        else if( state == false){
-            body.classList.remove('block-scroll');
-        }
-
     }
 
     const closePopup = () => {
@@ -113,8 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const togglePopup = (selector, state = null) => {
         const targetPopup = document.querySelector(selector);
         const popupOverlay = document.querySelector('.js-popup-overlay');
-
-
+        
         if(state === null){
             return () => {
                 toggleMenu(false);
@@ -129,7 +127,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             }
         }
-        else if(state === true) {
+        else if(state == true) {
             targetPopup.classList.add('active');
             popupOverlay.classList.add('active');
             toggleScrolling(true);
@@ -140,7 +138,7 @@ document.addEventListener('DOMContentLoaded', () => {
             toggleScrolling(false);
         }
         toggleMenu(false);
-
+        
         popupOverlay.addEventListener('click', () => {
             if(event.target.classList.contains('js-popup-overlay')){
                 closePopup();
@@ -194,29 +192,31 @@ document.addEventListener('DOMContentLoaded', () => {
             // targetForm.reset();
             // closePopup();
             // togglePopup('.js-popup-thx', true);
-            // setTimeout(closePopup, 1500);
+            // setTimeout(closePopup, 2000);
         // });
 
         targetForm.reset();
         closePopup();
         togglePopup('.js-popup-thx', true);
-        setTimeout(closePopup, 1500);
+        setTimeout(closePopup, 2000);
     }
 
-    const toggleMenu = (state = null) => {
-        closePopup();
+    const toggleMenu = (state=null) => {
 
         if(typeof(state) == 'object'){
             return () => {
                 burger.classList.toggle('active');
                 menu.classList.toggle('active');
                 toggleScrolling();
+                closePopup();
             }
         }
         else{
             state ? menu.classList.add('active') : menu.classList.remove('active');
             state ? burger.classList.add('active') : burger.classList.remove('active');
             state ? toggleScrolling(true) : toggleScrolling(false);
+            
+            if(state) closePopup();
         }
     }
 
@@ -247,7 +247,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const banditoWatch = () => {
-        if(bandito.classList.contains('bandito_blocked')) return;
+        if(bandito.classList.contains('bandito_blocked') || whichPage() != 'index') return;
         const marginTop = parseInt(getComputedStyle(bandito.querySelectorAll('.bandito__item')[1]).marginTop);
 
         bandito.querySelectorAll('.bandito__item').forEach(item => {
@@ -265,7 +265,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const banditoInit = () => {
-        if(bandito.classList.contains('bandito_blocked')) return;
+        if(bandito.classList.contains('bandito_blocked') || whichPage() != 'index') return;
         const banditoCols = bandito.querySelectorAll('.bandito__col');
         let itemDementions = banditoWatch();
         let marginTop = parseInt(getComputedStyle(bandito.querySelectorAll('.bandito__item')[1]).marginTop);

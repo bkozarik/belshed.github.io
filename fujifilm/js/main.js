@@ -12,6 +12,10 @@ $(document).ready(() => {
             navigation: {
                 prevEl: '.slider__control_prev',
                 nextEl: '.slider__control_next',
+            },
+            pagination: {
+                el: '.slider__pagination.swiper-pagination',
+                clickable: true,
             }
         });
     }
