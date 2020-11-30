@@ -1,0 +1,178 @@
+@media screen and ( max-width: 1470px )
+    .hybrid
+        &__img
+            &_right, &_left
+                transform: none
+
+@media screen and ( max-width: 1350px )
+    .control
+        .row_stretch
+            align-items: flex-start
+        &__img img
+            top: auto
+            position: relative
+            width: 90%
+            height: auto
+
+@media screen and ( max-width: 1230px )
+    .float-img_mb30
+        margin-bottom: 0
+
+@media screen and ( max-width: 1200px )
+    .header
+        &__wrap
+            justify-content: space-between
+        &__buttons
+            margin-left: 25px
+        .nav
+            margin-left: 25px
+
+@media screen and ( max-width: 1130px )
+    .header
+        &__buttons
+            display: none
+
+    .nav
+        margin: 0 30px
+        max-width: 800px
+
+    .author
+        .row
+            flex-direction: column
+        .list
+            margin-top: 0
+        .column
+            &:first-of-type
+                margin-top: 60px
+        .column + .column
+            margin-left: 0
+            margin-top: 30px
+        &::after
+            height: 70%
+
+    .aside
+        display: none
+
+    .burger
+        display: inline-block
+
+@media screen and ( max-width: 1070px )
+    .footer
+        &__title
+            margin-top: 20px
+        &__socials
+            margin-top: 50px
+        &__mobile
+            display: flex
+        .row
+            flex-direction: column
+            align-items: center
+            & > .column
+                align-items: center
+                .column
+                    &__inner
+                        .footer__button, .footer__copyright
+                            display: none
+            & > .column + .column
+                flex: none
+                width: 100%
+                margin-top: 50px
+                margin-left: 0
+
+@media screen and ( max-width: 930px )
+    .section
+        &__small-title, &__subtitle
+            font-size: 22px
+            line-height: 28px
+        &__title
+            font-size: 40px
+            line-height: 50px
+    
+    .column
+        &__video, &__img
+            max-width: 600px
+
+    .hybrid, .sooc
+        &__title
+            margin-top: 0
+        &__subtitle
+            margin-top: 30px
+        .row
+            flex-direction: column
+        .column + .column
+            margin-left: 0
+            margin-top: 30px
+                
+        .column
+            flex-direction: column-reverse
+
+    .logo
+        padding: 15px 5px
+
+    .main
+        margin-top: 80px
+
+    .author
+        padding-bottom: 200px
+
+    .nav
+        display: none
+
+@media screen and ( max-width: 620px )
+
+    .control
+        .row
+            flex-direction: column
+        .column + .column
+            margin-left: 0
+            margin-top: 30px
+
+    .footer
+        &__button, &__copyright
+            font-size: 12px
+            line-height: 14px
+        &__row
+            max-width: 300px
+            .column + .column
+                margin-left: 30px
+        &__title
+            font-size: 30px
+            line-height: 38px
+        &__nav
+            width: 100%
+        &__list
+            width: 100%
+            grid-template-columns: 1fr
+        &__socials
+            margin-top: 30px
+            max-width: 220px
+        .row
+            align-items: flex-start
+            & > .column
+                align-items: flex-start
+            & > .column + .column
+                margin-top: 35px
+
+@media screen and ( max-width: 530px )
+
+    .text
+        font-size: 16px
+        line-height: 26px
+
+    .section
+        &__small-title, &__subtitle
+            font-size: 18px
+            line-height: 24px
+        &__title
+            font-size: 30px
+            line-height: 40px
+
+    .logo
+        display: flex
+        align-items: center
+        justify-content: center
+        &__img
+            width: 80%
+
+    .main
+        margin-top: 65px

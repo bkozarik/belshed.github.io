@@ -2,7 +2,8 @@ $text-black: #19191C
 $main_red: #D6253F
 $text-hover: #B01D33
 $bg-grey: #F3F4F8
-    
+$text-blue: #097ABA
+
 *, *::before, *::after
     margin: 0
     padding: 0
@@ -38,6 +39,8 @@ section
         font-weight: 800
         color: $text-black
         text-transform: uppercase
+        &_white
+            color: #ffffff !important
         &_tac
             text-align: center
     &__small-title
@@ -59,6 +62,8 @@ section
     margin: 0 auto
     position: relative
     z-index: 2
+    &_bigger
+        max-width: 1470px
 
 .button
     display: inline-block
@@ -79,6 +84,8 @@ section
     overflow-anchor: none
     vertical-align: middle
     white-space: nowrap
+    &:focus
+        outline: none
     svg
         vertical-align: middle
         transition-duration: 0s 
@@ -160,6 +167,43 @@ section
         color: #000000
         &:hover
             color: $text-hover
+
+.burger
+    padding: 0
+    height: 40px
+    width: 40px
+    position: relative
+    display: none
+    span, &::before, &::after
+        content: ''
+        display: inline-block
+        width: 22px
+        height: 2px
+        background-color: $text-black
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        transition:  top .15s ease-in .15s, transform .15s ease-in 0s, opacity .1s ease-in .15s
+    span
+        width: 16px
+        background-color: $main_red
+        left: 57%
+    &::before
+        top: calc( 7px + 50% )
+    &::after
+        top: calc( -7px + 50% )
+    &.active
+        span, &::before, &::after
+            transform: translate(-50%, -50%)
+            top: 50%
+            transition:  top .15s ease-in 0s, transform .15s ease-in .15s, opacity .15s ease-in .1s
+        span
+            opacity: 0
+        &::before
+            transform: translate(-50%, -50%) rotate(45deg)
+        &::after
+            transform: translate(-50%, -50%) rotate(-45deg)
 
 .aside
     position: fixed
@@ -314,6 +358,14 @@ section
         align-items: stretch
     &_between
         justify-content: space-between
+    &_end
+        align-items: flex-end
+    &_triple
+        .column + .column
+            margin-left: 70px
+        .column
+            &_small
+                flex-basis: 28%
     &_mt30
         margin-top: 30px
     &_mt40
@@ -345,14 +397,34 @@ section
 .mt
     &-10
         margin-top: 10px !important
+    &-15
+        margin-top: 15px !important
     &-20
         margin-top: 20px !important
+    &-25
+        margin-top: 25px !important
     &-30
         margin-top: 30px !important
+    &-35
+        margin-top: 35px !important
     &-40
         margin-top: 40px !important
+    &-45
+        margin-top: 45px !important
     &-50
         margin-top: 50px !important
+    &-55
+        margin-top: 55px !important
+    &-60
+        margin-top: 60px !important
+    &-65
+        margin-top: 65px !important
+    &-70
+        margin-top: 70px !important
+    &-75
+        margin-top: 75px !important
+    &-80
+        margin-top: 80px !important
         
 .ml
     &-10
@@ -390,6 +462,18 @@ section
     &-50
         margin-bottom: 50px !important
 
+.pl
+    &-10
+        padding-left: 10px !important
+    &-20
+        padding-left: 20px !important
+    &-30
+        padding-left: 30px !important
+    &-40
+        padding-left: 40px !important
+    &-50
+        padding-left: 50px !important
+
 .column
     flex-basis: 49%
     display: flex
@@ -398,16 +482,22 @@ section
     &_nomutations
         flex-grow: 0
         flex-shrink: 0
+    &_normal
+        max-width: 590px
     &_small
         flex-basis: 30%
+    &_end
+        justify-content: flex-end
     &_medium
         flex-basis: 38%
     &_big
         flex-basis: 59%
     &__video, &__img
         width: 100%
+        height: 100%
         max-width: 100%
         position: relative
+        display: block
     &__inner
         max-width: 470px
         width: 100%
@@ -417,6 +507,8 @@ section
     &__img
         &_corpus
             margin-top: -180px
+        &_corpus-2
+            max-height: 360px
     &__img img
         width: 100%
         height: 100%
@@ -433,13 +525,21 @@ section
     & + &
         margin-left: 20px
 
+a.text
+    font-size: 20px
+    line-height: 30px
+    font-weight: 400
+    color: $text-blue
+    &:hover
+        color: $text-hover
+
 .text
     font-size: 20px
     line-height: 30px
     font-weight: 400
     &-block
         & + &
-            margin-top: 45px
+            margin-top: 50px
     &_left
         max-width: 465px
     &_mt10
@@ -455,7 +555,12 @@ section
     &_mt50
         margin-top: 50px
     a
-        color: #169AE5
+        color: $text-blue
+        line-height: inherit
+        font-size: inherit
+        font-weight: inherit
+        &:hover
+            color: $text-hover
 
 .hybrid
     padding-top: 50px
@@ -537,6 +642,12 @@ section
 
 .slider
     padding-top: 60px
+    &_last
+        padding-bottom: 140px
+        .slider
+            &__pagination
+                &-block
+                    transform: translate(-50%, 100%)
     &__title
         margin-bottom: 50px
     &__body
@@ -681,3 +792,206 @@ section
     padding: 70px 0px
 
 .corpus
+    &__img
+        padding-left: 20px
+        padding-right: 60px
+
+.inside
+    padding: 70px 0px
+
+.lens
+    padding-bottom: 70px
+    &__title
+        position: relative
+        background-color: #000000
+        z-index: 2
+        padding: 345px 0px
+        &-bg
+            z-index: -1
+            top: 0
+            left: 0
+            position: absolute
+            width: 100%
+            height: 100%
+            display: block
+            overflow: hidden
+            img
+                width: 100%
+                height: 100%
+                object-fit: cover
+
+.competition, .reviews
+    display: flex
+    align-items: center
+    flex-direction: column
+
+.competition
+    padding: 70px 0px
+    &__button
+        color: $text-blue
+        padding: 0
+        font-weight: 600
+
+.reviews
+    &__body
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        column-gap: 100px
+        row-gap: 30px
+    &__item
+        height: 100%
+        width: 100%
+        overflow: hidden
+        position: relative
+        max-height: 235px
+        video, iframe, picture, img
+            height: 100%
+            width: 100%
+            object-fit: cover
+
+.footer
+    &__mobile
+        display: none
+        align-items: center
+        flex-direction: column
+        margin-bottom: -20px
+    &__title
+        font-size: 37px
+        font-weight: 800
+        text-transform: uppercase
+        line-height: 40px
+        margin-top: 35px
+    &__row
+        display: flex
+        align-items: center
+        .column
+            flex-basis: 42%
+        .column + .column
+            margin-left: 50px
+    &__logo
+        width: 100%
+        max-width: 100%
+    &__socials
+        display: flex
+        align-items: center
+        justify-content: space-between
+        width: 100%
+        max-width: 300px
+        margin-top: 90px
+    &__list
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        list-style-type: none
+        column-gap: 100px
+        row-gap: 25px
+    &__item
+        &:nth-child(1)
+            order: 0
+        &:nth-child(2)
+            order: 3
+        &:nth-child(3)
+            order: 1
+        &:nth-child(4)
+            order: 4
+        &:nth-child(5)
+            order: 2
+        &:nth-child(6)
+            order: 5
+    &__link
+        font-size: 18px
+        font-weight: 600
+        line-height: 24px
+        color: inherit
+        svg
+            transition-duration: 0s
+        &:hover
+            color: $text-hover
+            svg
+                fill: $text-hover
+    &__button
+        padding: 0
+        font-weight: 400
+        color: #777
+        text-transform: none
+        font-size: 16px
+        &:hover
+            color: $text-hover
+    &__copyright
+        font-size: 16px
+        font-weight: 400
+        display: block
+        color: #000000
+
+.popup
+    background-color: #fff
+    box-shadow: 0 0 20px 3px rgba(0, 0, 0, .2)
+    padding: 80px 30px 40px
+    position: relative
+    width: 100%
+    max-width: 940px
+    opacity: 0
+    transform: translateY(-50px)
+    &__body
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        column-gap: 20px
+        row-gap: 15px
+    &__item
+        color: inherit
+        display: flex
+        align-items: center
+        flex-direction: column
+        &-location
+            margin-top: 10px
+    &__close
+        position: absolute
+        right: 10px
+        top: 10px
+        height: 40px
+        width: 40px
+        display: inline-block
+        background-color: transparent
+        border: none
+        border-radius: 0
+        cursor: pointer
+        &::before, &::after
+            content: ''
+            display: inline-block
+            width: 25px
+            height: 2px
+            background-color: $text-black
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+        &::before
+            transform: translate(-50%, -50%) rotate(45deg)
+        &::after
+            transform: translate(-50%, -50%) rotate(-45deg)
+        &:active
+            &::before, &::after
+                width: 22px
+        &:focus
+            outline: none
+    &__overlay
+        position: fixed
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        z-index: 100
+        background-color: rgba(255, 255, 255, .8)
+        display: flex
+        justify-content: center
+        align-items: center
+        opacity: 0
+        pointer-events: none
+        visibility: hidden
+        &.active
+            opacity: 1
+            pointer-events: all
+            visibility: visible
+            .popup
+                opacity: 1
+                transform: translateY(0px)
+
