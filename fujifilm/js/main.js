@@ -1,6 +1,7 @@
 $(document).ready(() => {
 
     const popupBuyTrigger = $('.js-open-popup-buy');
+    const popupTableTrigger = $('.js-open-popup-table');
     const popupTestdriveTrigger = $('.js-open-popup-testdrive');
 
     const popupCloseTrigger = $('.js-close-popup');
@@ -12,6 +13,17 @@ $(document).ready(() => {
         $(window).get(0).pageYOffset > 40 ? $('.header').addClass('fixed') : $('.header').removeClass('fixed');
     }
 
+    const resizeHandler = () => {
+        const movingImg = $('.js-moving-img');
+
+        if($(window).width() < 730){
+            movingImg.insertAfter($('.js-moving-img-target'));
+        }
+        else{
+            $('.js-moving-img-home').append(movingImg);
+        }
+    }
+
     const slidersInit = () => {
         let slider_1 = $('.js-slider-color').get(0);
         let slider_2 = $('.js-slider-examples').get(0);
@@ -19,12 +31,20 @@ $(document).ready(() => {
         let slider_1_obj = new Swiper(slider_1, {
             slidesPerView: 1,
             speed: 700,
+            watchSlidesVisibility: true,
+            autoHeight: true,
+            lazy: {
+                loadPrevNext: true,
+                loadOnTransitionStart: true,
+                loadPrevNext: true,
+            },
             navigation: {
                 prevEl: '.slider__control_prev',
                 nextEl: '.slider__control_next',
             },
             pagination: {
                 el: '.slider__pagination.swiper-pagination',
+                type: 'bullets',
                 clickable: true,
             }
         });
@@ -32,12 +52,21 @@ $(document).ready(() => {
         let slider_2_obj = new Swiper(slider_2, {
             slidesPerView: 1,
             speed: 700,
+            watchSlidesVisibility: true,
+            autoHeight: true,
+            lazy: {
+                loadPrevNext: true,
+                loadOnTransitionStart: true,
+                loadPrevNext: true,
+            },
             navigation: {
                 prevEl: '.slider__control_prev',
                 nextEl: '.slider__control_next',
             },
             pagination: {
+                dynamicBullets: true,
                 el: '.slider__pagination.swiper-pagination',
+                // dynamicMainBullets: 20,
                 clickable: true,
             }
         });
@@ -46,7 +75,8 @@ $(document).ready(() => {
     const closePopup = () => {
         $('.popup__overlay').removeClass('active');
     }
-    const closePopupByOverlay = () => {
+
+    const closePopupByOverlayClick = () => {
         $(document).click(() => $(event.target).hasClass('popup__overlay') ? closePopup() : null);
     }
 
@@ -59,14 +89,14 @@ $(document).ready(() => {
                 targetPopup.addClass('active');
 
                 toggleMenu(false);
-                closePopupByOverlay();
+                closePopupByOverlayClick();
             };
         }
         else{
             state ? targetPopup.addClass('active') : targetPopup.removeClass('active');
             toggleMenu(false);
 
-            closePopupByOverlay();
+            closePopupByOverlayClick();
         }
     }
 
@@ -83,14 +113,19 @@ $(document).ready(() => {
         }
     }
 
-    $(window).on('scroll', scrollHandler);
+    $(window).scroll(scrollHandler);
+    $(window).resize(resizeHandler);
     
     popupCloseTrigger.click(closePopup);
     
     popupBuyTrigger.click(togglePopup('.js-popup-buy'));
+    popupTableTrigger.click(togglePopup('.js-popup-table'));
     popupTestdriveTrigger.click(togglePopup('.js-popup-testdrive'));
 
     burger.click(toggleMenu());
     
     slidersInit();
+
+    resizeHandler();
+    scrollHandler();
 });

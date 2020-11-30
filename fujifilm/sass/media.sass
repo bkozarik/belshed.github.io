@@ -1,10 +1,35 @@
+@media screen and ( max-width: 1500px )
+    .corpus
+        .column
+            &_nomutations
+                flex: 1 1 49%
+            &_big
+                flex-basis: 49%
+        .corpus__img
+            padding: 0
+            margin-left: 0 !important
+            img
+                max-width: 100%
+
 @media screen and ( max-width: 1470px )
+
+    .slider
+        &__control
+            &-container
+                width: 90%
+
     .hybrid
         &__img
             &_right, &_left
                 transform: none
 
 @media screen and ( max-width: 1350px )
+
+    .reviews
+        &__body
+            justify-items: center
+            column-gap: 30px
+
     .control
         .row_stretch
             align-items: flex-start
@@ -18,6 +43,12 @@
     .float-img_mb30
         margin-bottom: 0
 
+    .corpus
+        .column__img_corpus
+            margin-top: 0
+        .column__img
+            margin-left: 0 !important
+
 @media screen and ( max-width: 1200px )
     .header
         &__wrap
@@ -29,8 +60,9 @@
 
 @media screen and ( max-width: 1130px )
     .header
-        &__buttons
-            display: none
+        .header
+            &__buttons
+                display: none
 
     .nav
         margin: 0 30px
@@ -57,6 +89,13 @@
         display: inline-block
 
 @media screen and ( max-width: 1070px )
+
+    .slider
+        &__pagination
+            margin-top: 15px
+            &-block
+                padding-top: 10px
+
     .footer
         &__title
             margin-top: 20px
@@ -87,12 +126,49 @@
         &__title
             font-size: 40px
             line-height: 50px
-    
+
+    .slider
+        &__name
+            font-size: 20px
+            line-height: 22px
+
+    .reviews
+        &__body
+            grid-template-columns: repeat(2, 1fr)
+
     .column
         &__video, &__img
             max-width: 600px
 
-    .hybrid, .sooc
+    .hybrid, .sooc, .filming, .autofocus, .inside, .connection
+        .row
+            flex-direction: column
+        .column + .column
+            margin-left: 0
+            margin-top: 30px
+    
+    .inside
+        .column__img 
+            display: none
+        .mt-70
+            margin-top: 50px !important
+
+    .autofocus
+        .row
+            &:nth-child(2)
+                flex-direction: column-reverse
+                .column_big
+                    margin-top: 0
+                    margin-bottom: 30px
+            &_end
+                align-items: center
+
+
+    .text
+        font-size: 18px
+        line-height: 28px
+
+    .hybrid
         &__title
             margin-top: 0
         &__subtitle
@@ -106,6 +182,10 @@
         .column
             flex-direction: column-reverse
 
+    .filming, .connection
+        .row
+            align-items: center
+
     .logo
         padding: 15px 5px
 
@@ -115,8 +195,48 @@
     .author
         padding-bottom: 200px
 
-    .nav
-        display: none
+    .header
+        .nav
+            display: none
+
+@media screen and ( max-width: 740px )
+
+    .slider
+        &__control
+            height: 60px
+            width: 30px
+
+    .float-img
+        width: 70px
+        height: 70px
+        &_left
+            margin-right: 10px
+        &_right
+            margin-left: 10px
+
+    .lens .float-img
+        width: auto !important
+        height: auto !important
+
+    .corpus
+        &__img
+            margin-top: 30px
+        &__img + .text
+            margin-top: 30px
+        .row
+            flex-direction: column
+            align-items: center
+            &__container_mt70
+                .row:last-child
+                    flex-direction: column-reverse
+        .row + .row
+            margin-top: 20px
+        .column__img
+            &_corpus
+                margin-top: 30px
+        .column + .column
+            margin-left: 0
+            margin-top: 40px
 
 @media screen and ( max-width: 620px )
 
@@ -126,6 +246,13 @@
         .column + .column
             margin-left: 0
             margin-top: 30px
+
+    .lens
+        .float-img
+            display: block
+            max-width: 100%
+            float: none
+            margin: 0 auto
 
     .footer
         &__button, &__copyright
@@ -153,11 +280,26 @@
             & > .column + .column
                 margin-top: 35px
 
+    .slider__name
+        font-size: 18px
+        line-height: 20px
+
+@media screen and ( max-width: 590px )
+    .popup
+        &__body
+            grid-template-columns: repeat(2, 1fr)
+
 @media screen and ( max-width: 530px )
 
     .text
         font-size: 16px
         line-height: 26px
+
+    
+    .reviews
+        &__body
+            row-gap: 15px
+            grid-template-columns: repeat(1, 1fr)
 
     .section
         &__small-title, &__subtitle
@@ -176,3 +318,20 @@
 
     .main
         margin-top: 65px
+
+@media screen and ( max-width: 430px )
+    .slider
+        &__item, &__img
+            min-height: 250px
+
+@media screen and ( max-width: 400px )
+
+    
+    .slider
+        &__control
+            height: 50px
+            width: 20px
+
+    .popup
+        &__body
+            grid-template-columns: repeat(1, 1fr)

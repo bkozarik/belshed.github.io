@@ -57,7 +57,7 @@
         <path d="M12.9809 23.9788C17.6988 23.5951 21.6532 20.4695 23.2463 16.2011L16.9849 11.6497L12.9809 23.9788Z" fill="black"/>
     </symbol>
 
-    <symbol id="slider-arrow" width="40" height="100" viewBox="0 0 40 100"  xmlns="http://www.w3.org/2000/svg">
+    <symbol id="slider-arrow" viewBox="0 0 40 100"  xmlns="http://www.w3.org/2000/svg">
         <path d="M0.249023 46.5L32.7829 0H37.7881L5.25424 46.5L37.7881 93H32.7829L0.249023 46.5Z"/>    
     </symbol>
 </svg>

@@ -205,6 +205,48 @@ section
         &::after
             transform: translate(-50%, -50%) rotate(-45deg)
 
+.menu
+    position: fixed
+    top: 0
+    left: 0
+    z-index: 4
+    width: 100%
+    height: 100%
+    transform: translateY(-105%)
+    display: flex
+    flex-direction: column
+    opacity: 0
+    visibility: hidden
+    pointer-events: none
+    background-color: #fff
+    padding: 85px 15px 0px
+    overflow-y: auto
+    .nav
+        margin-left: 0
+        &__list
+            flex-direction: column
+            align-items: flex-start
+        &__link
+            font-size: 18px
+            display: inline-block
+            padding: 5px 0px
+        &__item + &__item
+            margin-top: 5px
+    .header__buttons
+        margin-left: 0
+        margin-top: 30px
+        flex-direction: column-reverse
+        align-items: flex-start
+    .button
+        margin-left: 0
+    .button + .button
+        margin-bottom: 20px
+    &.active
+        transform: translateY(0%)
+        opacity: 1
+        visibility: visible
+        pointer-events: all
+
 .aside
     position: fixed
     right: 0px
@@ -507,7 +549,9 @@ section
     &__img
         &_corpus
             margin-top: -180px
-        &_corpus-2
+            img
+                transform: translateY(6px)
+        &_corpus-2, &_corpus-2 img
             max-height: 360px
     &__img img
         width: 100%
@@ -642,10 +686,16 @@ a.text
 
 .slider
     padding-top: 60px
+    .swiper-lazy-preloader-red
+        --swiper-preloader-color: #D6253F
     &_last
         padding-bottom: 140px
         .slider
             &__pagination
+                width: 100% !important
+                max-width: 90px
+                .swiper-pagination-bullet
+                    margin: 0 5px
                 &-block
                     transform: translate(-50%, 100%)
     &__title
@@ -654,9 +704,9 @@ a.text
         position: relative
     &__item
         width: 100%
-        height: 940px
+        min-height: 300px
     &__control
-        position: absolute
+        position: relative
         height: 100px
         width: 40px
         background-color: transparent
@@ -665,6 +715,7 @@ a.text
         z-index: 3
         cursor: pointer
         svg
+            height: 100%
             position: absolute
             top: 50%
             left: 50%
@@ -684,6 +735,9 @@ a.text
             height: 100px
             max-width: 1400px
             margin: 0 auto
+            display: flex
+            justify-content: space-between
+            align-items: center
             top: 50%
             left: 50%
             transform: translate(-50%, -50%)
@@ -702,6 +756,7 @@ a.text
         align-items: center
         justify-content: space-between
         margin-top: 25px
+        padding: 5px 0px
         &-block
             background: linear-gradient(180deg, rgba(255, 255, 255, 0.7) 0%, #FFFFFF 100%)
             padding: 30px 20px 9px
@@ -718,23 +773,25 @@ a.text
         .swiper-pagination-bullet
             opacity: 1
             border-radius: 100%
-            height: 2px
-            width: 2px
+            flex-shrink: 0
+            height: 8px
+            width: 8px
             background-color: #000000
-            box-shadow: 0 0 0 4px #000000
+            box-shadow: 0 0 0 0px $main_red
             &-active
-                height: 2px
-                width: 2px
+                height: 8px
+                width: 8px
                 background-color: #ffffff
-                box-shadow: 0 0 0 4px #ffffff, 0 0 0 8px $main_red
+                box-shadow: 0 0 0 4px $main_red
     &__img
         height: inherit
         width: 100%
+        min-height: 300px
         display: block
         overflow: hidden
         img
             width: 100%
-            height: 100%
+            height: auto
             object-fit: cover
 
 .sooc
@@ -805,7 +862,7 @@ a.text
         position: relative
         background-color: #000000
         z-index: 2
-        padding: 345px 0px
+        padding: 18.5% 0px
         &-bg
             z-index: -1
             top: 0
@@ -931,8 +988,12 @@ a.text
     max-width: 940px
     opacity: 0
     transform: translateY(-50px)
+    overflow: hidden
+    overflow-y: auto
+    max-height: 95%
     &__body
         display: grid
+        justify-items: center
         grid-template-columns: repeat(3, 1fr)
         column-gap: 20px
         row-gap: 15px
@@ -946,6 +1007,7 @@ a.text
     &__close
         position: absolute
         right: 10px
+        background-color: #fff
         top: 10px
         height: 40px
         width: 40px
@@ -973,7 +1035,26 @@ a.text
                 width: 22px
         &:focus
             outline: none
+    &__table
+        width: 100%
+        min-width: 500px
+        border-spacing: 0px
+        th
+            padding: 15px 5px
+        td
+            padding: 10px 5px
+            &:first-child
+                width: 200px
+        th, td
+            text-align: left
+            border: 1px solid $bg-grey
+        &-text
+            font-size: 18px
+        &-wrap
+            position: relative
+            overflow-x: auto
     &__overlay
+        padding: 10px
         position: fixed
         top: 0
         left: 0
