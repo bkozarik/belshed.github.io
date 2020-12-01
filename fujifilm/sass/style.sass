@@ -3,13 +3,14 @@ $main_red: #D6253F
 $text-hover: #B01D33
 $bg-grey: #F3F4F8
 $text-blue: #097ABA
+    
+$transition: all .3s ease-out 0s
 
 *, *::before, *::after
     margin: 0
     padding: 0
     text-decoration: none
     box-sizing: border-box
-    transition: all .3s ease-out 0s
     font-family: 'Open Sans', sans-serif
     border-radius: 0px
 
@@ -84,6 +85,7 @@ section
     overflow-anchor: none
     vertical-align: middle
     white-space: nowrap
+    transition: $transition
     &:focus
         outline: none
     svg
@@ -133,6 +135,7 @@ section
     width: 100%
     z-index: 5
     background-color: #fff
+    transition: $transition
     &__wrap
         display: flex
         align-items: center
@@ -165,6 +168,7 @@ section
         font-size: 16px
         font-weight: 600
         color: #000000
+        transition: $transition
         &:hover
             color: $text-hover
 
@@ -221,6 +225,7 @@ section
     background-color: #fff
     padding: 85px 15px 0px
     overflow-y: auto
+    transition: $transition
     .nav
         margin-left: 0
         &__list
@@ -378,6 +383,7 @@ section
         &-link
             transition-duration: 0s
             fill: $text-black
+            transition: $transition
             & + &
                 margin-left: 15px
             &:hover
@@ -588,6 +594,7 @@ a.text
     font-size: 20px
     line-height: 30px
     font-weight: 400
+    transition: $transition
     &-block
         & + &
             margin-top: 50px
@@ -721,6 +728,7 @@ a.text
         display: inline-block
         z-index: 3
         cursor: pointer
+        transition: $transition
         svg
             height: 100%
             position: absolute
@@ -785,6 +793,7 @@ a.text
             width: 8px
             background-color: #000000
             box-shadow: 0 0 0 0px $main_red
+            transition: $transition
             &-active
                 height: 8px
                 width: 8px
@@ -966,6 +975,7 @@ a.text
         font-weight: 600
         line-height: 24px
         color: inherit
+        transition: $transition
         svg
             transition-duration: 0s
         &:hover
@@ -978,6 +988,7 @@ a.text
         color: #777
         text-transform: none
         font-size: 16px
+        transition: $transition
         &:hover
             color: $text-hover
     &__copyright
@@ -998,6 +1009,7 @@ a.text
     overflow: hidden
     overflow-y: auto
     max-height: 95%
+    transition: $transition
     &__body
         display: grid
         justify-items: center
@@ -1023,6 +1035,7 @@ a.text
         border: none
         border-radius: 0
         cursor: pointer
+        transition: $transition 
         &::before, &::after
             content: ''
             display: inline-block
@@ -1063,6 +1076,7 @@ a.text
     &__overlay
         padding: 10px
         position: fixed
+        transition: $transition
         top: 0
         left: 0
         width: 100%
