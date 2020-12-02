@@ -43,9 +43,6 @@
       width: 168rem;
       height: 61rem;
     }
-    .floor-one-left, .floor-one-right{
-      /* opacity: 1; */
-    }
     .floor-penthouse{
       top: 3.8rem;
       left: -13.8rem;
@@ -374,6 +371,15 @@
     }
   }
 @media only screen and (max-width: 1250px){
+
+    .plan-help {
+        margin: 0px 8px;
+        display: none;
+    }
+    .plan-help-corpus{
+        margin: 0px 1.3%;
+    }
+
     .floor-plan-corpus .floor-plan-ap:nth-child(2){
       left: 1.3%;
     }
@@ -495,13 +501,17 @@
       margin: 0 6px;
     }
     .plan-help-corpus {
-      margin: 0 8px;
+      margin: 0 1.4%;
     }
     .plan-help-container {
       flex-direction: column;
     }
     .plan-help-penthouse {
       margin: 10px 0px !important;
+      width: 100%;
+    }
+    .plan-help-penthouse.active {
+      width: 100%;
     }
     .floor-plan .floor-plan-box{
       margin: 0;
@@ -533,11 +543,14 @@
 }
 
 @media only screen and (max-width: 767px){
-    .plan-help-tower {
-      margin: 0 7px;
+    .floor-plan{
+      padding: 0;
     }
     .plan-help-corpus {
-      margin: 0 11.5px;
+      margin: 0 1.6%;
+    }
+    .plan-help-tower {
+      margin: 0 1.2%;
     }
     .floor-plan .compass{
     bottom: -13rem;
@@ -545,7 +558,7 @@
 }
 @media only screen and (max-width: 575px){
     .plan-help-tower {
-      margin: 0 4px;
+      margin: 0 1.2%;
     }
     .plan-help-corpus {
       margin: 0 8.5px;
@@ -553,7 +566,10 @@
 }
 @media only screen and (max-width: 475px){
     .plan-help-tower {
-      margin: 0 4px;
+      margin: 0 1.2%;
+    }
+    .compass{
+      display: none;
     }
     .plan-help-corpus {
       margin: 0 5px;

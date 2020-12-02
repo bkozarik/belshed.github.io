@@ -9,8 +9,18 @@ $(document).ready(() => {
     const burger = $('.js-burger');
     const menu = $('.js-menu');
 
+    const scrollLinks = $('.js-scroll-link');
+
     const scrollHandler = () => {
         $(window).get(0).pageYOffset > 40 ? $('.header').addClass('fixed') : $('.header').removeClass('fixed');
+
+        const offset = 200;
+
+        scrollLinks.each(function() {
+            let linkRect = $($(this).attr('href')).get(0).getBoundingClientRect();
+
+            linkRect.top < offset && linkRect.bottom > offset ? $(this).addClass('active') : $(this).removeClass('active');
+        });
     }
 
     const resizeHandler = () => {
@@ -113,6 +123,28 @@ $(document).ready(() => {
         }
     }
 
+    const scrollLinkClick = () => {
+
+        event.preventDefault();
+
+        let targetLink = $(event.target);
+
+        while(!targetLink.hasClass('js-scroll-link')){
+            targetLink = targetLink.parent();
+        }
+
+        const targetId = targetLink.attr('href');
+        const targetTopOffset = $(targetId).offset().top;
+
+        const headerOffset = 100;
+
+        scrollLinks.removeClass('active');
+        targetLink.addClass('active');
+
+        $('body,html').animate({scrollTop: targetTopOffset - headerOffset}, 700);
+
+    }
+
     $(window).scroll(scrollHandler);
     $(window).resize(resizeHandler);
     
@@ -124,6 +156,8 @@ $(document).ready(() => {
 
     burger.click(toggleMenu());
     
+    scrollLinks.click(scrollLinkClick);
+
     slidersInit();
 
     resizeHandler();

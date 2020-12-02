@@ -3,7 +3,7 @@ $(document).ready(function(){
 	try{
 		currFloor = Number(sessionStorage.getItem('floor'));
 	}
-	catch{}
+	catch(e){}
 
 	$('.open-menu').on( 'click', function() {
 		$('.header-content').addClass('active');
@@ -190,15 +190,15 @@ $(document).ready(function(){
 		dots: false,
 	});
 
-	$('.SliderFloor').on('beforeChange', (event, slick, currentSlide, nextSlide) => {
+	$('.SliderFloor').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
 		let targetFloor = nextSlide + 1;
 		let targetTower = Number(sessionStorage.getItem('tower'));
 
-		document.querySelectorAll('.js-apartment-img').forEach(img => {
+		document.querySelectorAll('.js-apartment-img').forEach(function(img){
 			img.classList.remove('active');
 		});
 
-		document.querySelectorAll('.plan-help').forEach(item => {
+		document.querySelectorAll('.plan-help').forEach(function(item){
 			item.classList.remove('active');
 		});
 		
@@ -207,17 +207,18 @@ $(document).ready(function(){
 		fillTable(targetFloor);
 
 		let filterInputs = document.querySelectorAll('.js-room-list input');
-        filterInputs.forEach(input => input.addEventListener('change', () => {
-            let chosenRoomAmount = Number(input.parentNode.querySelector('.number').innerText);
+        filterInputs.forEach(function(input){
+			input.addEventListener('change', function(){
+				let chosenRoomAmount = Number(input.parentNode.querySelector('.number').innerText);
 
-            document.querySelectorAll('.js-apartment-img').forEach(img => {
-                img.classList.remove('active');
+				document.querySelectorAll('.js-apartment-img').forEach(function(img){
+					img.classList.remove('active');
 
-                if(Number(img.dataset.rooms) == chosenRoomAmount){
-                    img.classList.add('active');
-                }
-            });
-        }));
+					if(Number(img.dataset.rooms) == chosenRoomAmount){
+						img.classList.add('active');
+					}
+				});
+        })});
 	});
 
 	$('table').wrap("<div class='table-responsive'></div>");
@@ -260,7 +261,7 @@ $(document).ready(function(){
 			let tower = sessionStorage.getItem('tower');
 			let apId = $(helper.origin).data('apid');
 			
-			getApData(floor, tower, apId).then(data => {
+			getApData(floor, tower, apId).then(function(data){
 				if(data.status.toLowerCase() == "свободна"){
 					instance.content(`
 						<div class="plan-tooltip-box">
@@ -366,7 +367,7 @@ $(document).ready(function(){
 
 			let floor = Number($(helper.origin).find('.floor-help').find('span').text().substring(0,2));
 			
-			await getFloorData(floor, tower).then(info => {
+			await getFloorData(floor, tower).then(function(info){
 				instance.content(`
 						<div class="floor-tooltip-box">
 							<div class="floor-info">Свободно ${info.freeAp} из ${info.totalAp} квартир</div>
@@ -376,7 +377,7 @@ $(document).ready(function(){
 						</div>`
 				);
 
-				$('.js-tower-tooltip').on('click', () => {
+				$('.js-tower-tooltip').on('click', function(){
 					window.location.assign(floorPlan.replace(/[./]/g, ''));
 				});
 			});

@@ -179,7 +179,6 @@ const fillPng = async (floor, tower) => {
                     apartsPng[index + 10].classList.add('visible');
                 }
                 if(apartsPng[index].classList.contains('visible')){
-                    // console.log(apartsPng[index]);
 
                 }
             });

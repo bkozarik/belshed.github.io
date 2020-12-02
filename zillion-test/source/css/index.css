@@ -1,0 +1,8 @@
+/* Шрифты */
+@import "./fonts.css";
+
+/* Десктоп стили */
+@import "./style.css";
+
+/* Мобильные стили */
+@import "./media.css";

@@ -291,21 +291,22 @@ section
         margin-top: 20px
         border-radius: 20px 0px 0px 20px
         background-color: $main_red
-        padding: 39px 9px 55px 13px
+        padding: 39px 2px 55px 6px
         display: flex
         flex-direction: column
         align-items: center
         width: 35px
-        // right: -83px
         position: relative
     &__link
         position: relative
         display: inline-block
         color: $text-black
+        transition: $transition
         font-size: 16px
+        padding: 0px 7px
         & + &
             margin-top: 10px
-        &.active
+        &.active, &.preview, &:hover
             .aside
                 &__text
                     transform: translate(-30px, -50%)
@@ -316,6 +317,7 @@ section
                     transform: scale(1.6)
     &__bullet
         display: inline-block
+        transition: $transition
         height: 8px
         width: 8px
         background-color: #fff
@@ -323,6 +325,7 @@ section
         opacity: .5
     &__text
         position: absolute
+        transition: $transition
         display: inline-block
         white-space: nowrap
         top: 50%
@@ -1096,4 +1099,3 @@ a.text
             .popup
                 opacity: 1
                 transform: translateY(0px)
-

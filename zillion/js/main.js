@@ -85,18 +85,32 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    function noScroll() {
+        // window.scrollTo(0, 0);
+      }
+      
+      
+
     const toggleScrolling = (state = null) => {
         const body = document.querySelector('body');
 
-        if(window.innerWidth < 960){
+        if(window.innerWidth < 960 || true){
             if(state == null){
                 body.classList.toggle('block-scroll');
+
+                body.classList.contains('block-scroll') ? window.addEventListener('scroll', noScroll) : window.removeEventListener('scroll', noScroll);
             }
             else if( state == true){
                 body.classList.add('block-scroll');
+
+                // add listener to disable scroll
+                window.addEventListener('scroll', noScroll);
             }
             else if( state == false){
                 body.classList.remove('block-scroll');
+                
+                // Remove listener to re-enable scroll
+                window.removeEventListener('scroll', noScroll);
             }
         }
     }
@@ -207,7 +221,9 @@ document.addEventListener('DOMContentLoaded', () => {
             return () => {
                 burger.classList.toggle('active');
                 menu.classList.toggle('active');
-                toggleScrolling();
+
+                burger.classList.contains('active') ? toggleScrolling(true) : toggleScrolling(false) ;
+                
                 closePopup();
             }
         }
