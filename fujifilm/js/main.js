@@ -14,10 +14,23 @@ $(document).ready(() => {
 
     const scrollLinks = $('.js-scroll-link');
 
+    const header  = document.querySelector('.header');
+
     let videos = $('video.video-unloaded');
 
+    // videos.each(function(event){
+    //     if($(this).offset().top - $(window).get(0).pageYOffset < 2000 || true){
+    //         $(this).attr('src', $(this).data('src'));
+            
+    //         $(this).removeClass('video-unloaded');
+    //         $(this).removeAttr('data-src');
+
+    //         videos = $('video.video-unloaded');
+    //     }
+    // });
+
     const scrollHandler = () => {
-        $(window).get(0).pageYOffset > 40 ? $('.header').addClass('fixed') : $('.header').removeClass('fixed');
+        window.pageYOffset > 40 ? header.classList.add('fixed') : header.classList.remove('fixed');
 
         const offset = 200;
 
@@ -83,7 +96,7 @@ $(document).ready(() => {
             watchSlidesVisibility: true,
             autoHeight: true,
             lazy: {
-                loadPrevNext: true,
+                loadPrevNext: false,
                 loadOnTransitionStart: true,
                 loadPrevNext: true,
             },
@@ -104,7 +117,7 @@ $(document).ready(() => {
             watchSlidesVisibility: true,
             autoHeight: true,
             lazy: {
-                loadPrevNext: true,
+                loadPrevNext: false,
                 loadOnTransitionStart: true,
                 loadPrevNext: true,
             },
@@ -175,17 +188,28 @@ $(document).ready(() => {
         while(!targetLink.hasClass('js-scroll-link')){
             targetLink = targetLink.parent();
         }
-
         const targetId = targetLink.attr('href');
         const targetTopOffset = $(targetId).offset().top;
 
-        const headerOffset = 100;
+        const headerOffset = 200;
 
         scrollLinks.removeClass('active');
-        targetLink.addClass('active');
+        
 
-        $('body,html').animate({scrollTop: targetTopOffset - headerOffset}, 700);
+        const scrollDist = targetTopOffset - $(window).get(0).pageYOffset;
 
+        videos.each(function(event){
+            if($(this).offset().top < scrollDist){
+                $(this).attr('src', $(this).data('src'));
+                
+                $(this).removeClass('video-unloaded');
+                $(this).removeAttr('data-src');
+
+                videos = $('video.video-unloaded');
+            }
+        });
+
+        $('body,html').animate({scrollTop: targetTopOffset - headerOffset}, 3000);
     }
 
     const findVideos = () => {
@@ -238,9 +262,7 @@ $(document).ready(() => {
         return 'https://www.youtube.com/embed/' + id + query;
     }
     
-    findVideos();
-
-    $(window).scroll(scrollHandler);
+    window.addEventListener('scroll', scrollHandler);
     $(window).resize(resizeHandler);
     
     popupCloseTrigger.click(closePopup);
@@ -259,4 +281,6 @@ $(document).ready(() => {
 
     resizeHandler();
     scrollHandler();
+
+    findVideos();
 });
