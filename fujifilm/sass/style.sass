@@ -1015,6 +1015,7 @@ a.text
     &__body
         display: grid
         justify-items: center
+        justify-items: center
         grid-template-columns: repeat(3, 1fr)
         column-gap: 20px
         row-gap: 15px
@@ -1023,8 +1024,17 @@ a.text
         display: flex
         align-items: center
         flex-direction: column
+        max-width: 230px
+        &-img
+            width: 100%
+            max-width: 100px
+            height: auto
+            object-fit: contain
         &-location
+            font-size: 14px
             margin-top: 10px
+            display: inline-block
+            text-align: center
     &__close
         position: absolute
         right: 10px

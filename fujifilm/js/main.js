@@ -167,7 +167,7 @@ $(document).ready(() => {
     
     scrollLinks.click(scrollLinkClick);
 
-    togglePopup('.js-popup-table', true);
+    togglePopup('.js-popup-buy', true);
 
     slidersInit();
 
