@@ -332,8 +332,6 @@ opacity: 1;
     width: 36rem;
 }
 .floor-penthouse .floor-section{
-    display: flex;
-    justify-content: space-between;
     width: 100%;
 }
 .floor-penthouse .floor-one {
@@ -351,9 +349,7 @@ opacity: 1;
 position: absolute;
 left: -20.8rem;
 top: 4.7rem;
-width: 84.3rem;
-display: flex;
-justify-content: space-between;
+width: 78.2rem;
 }
 .floor-penthouse .floor-help {
 width: 7.5rem;

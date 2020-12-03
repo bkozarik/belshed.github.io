@@ -4,7 +4,7 @@
     }
     .floor-penthouse{
       left: -16.8rem;
-      width: 76.3rem;
+      width: 74.3rem;
     }
     .floor-penthouse .floor-one-left{
       width: 24.2rem;
@@ -46,7 +46,7 @@
     .floor-penthouse{
       top: 3.8rem;
       left: -13.8rem;
-      width: 71.3rem;
+      width: 72rem;
     }
     .floor-sub .floor-one {
       margin-bottom: 4px;
@@ -157,7 +157,7 @@
     .floor-penthouse{
       top: 3.6rem;
       left: -7.7rem;
-      width: 65rem;
+      width: 61.7rem;
     }
     .floor-main{
       width: 67.7rem;
@@ -278,7 +278,7 @@
     }
     .floor-penthouse {
       left: -5.2rem;
-      width: 61.6rem;
+      width: 60rem;
     }
     .floor-main{
       left: -3.4rem;
@@ -305,6 +305,7 @@
     }
 }
 @media only screen and (max-width: 1410px) {
+  
     .house .house-bg{
       width: 140rem;
       height: 56rem;
@@ -314,7 +315,7 @@
     }
     .floor-penthouse{
       left: -1.4rem;
-      width: 50rem;
+      width: 58.4rem;
     }
     .floor-penthouse .floor-one-left, .floor-penthouse .floor-one-right{
       width: 19rem;
@@ -338,7 +339,29 @@
     .floor-main .floor-section__col{
       width: 30rem;
     }
+}
+
+@media only screen and (max-width: 1410px) and (min-width: 1350px){
+  .floor-penthouse .floor-section__col {
+    width: 26.2rem;
   }
+  .floor-penthouse .floor-one-left{
+    margin-right: 0.6rem;
+  }
+  .floor-penthouse .floor-one{
+    width: 29.7rem;
+  }
+  .floor-penthouse{
+    left: -1.4rem;
+    width: 58.4rem;
+  }
+  .floor-penthouse .floor-one-left, .floor-penthouse .floor-one-right{
+    width: 19rem;
+  }
+  .floor-penthouse .floor-one-right{
+    margin-right: 2.7rem;
+  }
+}
 @media only screen and (max-width: 1350px) {
     .house .house-bg{
       width: 134rem;
@@ -383,7 +406,7 @@
     .floor-main .floor-section__col{
       width: 28.5rem;
     }
-  }
+}
 @media only screen and (max-width: 1250px){
 
     .plan-help {
@@ -475,7 +498,7 @@
     .floor-main .floor-one:nth-child(1) .floor-help {
       height: 1.4rem;
     }
-  }
+}
 @media only screen and (max-width: 1025px) {
     .house .house-bg{
       width: 127rem;
@@ -483,10 +506,13 @@
     }
     .floor-penthouse{
       left: 5.5rem;
-      width: 54rem;
+      width: 51.7rem;
     }
     .floor-penthouse .floor-one-left, .floor-penthouse .floor-one-right{
       width: 17.2rem;
+    }
+    .floor-penthouse .floor-section__col {
+      width: 24.2rem;
     }
     .floor-penthouse .floor-one-right{
       margin-right: 0.9rem;
@@ -511,8 +537,7 @@
     .floor-penthouse .floor-one {
       width: 27.6rem;
   }
-  }
-
+}
 @media only screen and (max-width: 991px){
     .plan-help-tower {
       margin: 0 6px;
@@ -558,7 +583,6 @@
     }
     
 }
-
 @media only screen and (max-width: 767px){
     .floor-plan{
       padding: 0;
@@ -591,4 +615,4 @@
     .plan-help-corpus {
       margin: 0 5px;
     }
-  }
+}
