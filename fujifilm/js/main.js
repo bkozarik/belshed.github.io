@@ -22,7 +22,7 @@ $(document).ready(() => {
         const offset = 200;
 
         videos.each(function(event){
-            if($(this).offset().top - $(window).get(0).pageYOffset < 1000){
+            if($(this).offset().top - $(window).get(0).pageYOffset < 2000){
                 $(this).attr('src', $(this).data('src'));
                 
                 $(this).removeClass('video-unloaded');
