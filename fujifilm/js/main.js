@@ -123,6 +123,9 @@ $(document).ready(() => {
 
     const closePopup = () => {
         $('.popup__overlay').removeClass('active');
+        $('.popup').each(function(event){
+            $(this).find('.popup_video').remove()
+        })
     }
 
     const closePopupByOverlayClick = () => {
@@ -202,7 +205,9 @@ $(document).ready(() => {
     
             link.remove();
             button.remove();
-            video.appendChild(iframe);
+
+            $('.js-popup-player').find('.popup_video').get(0).appendChild(iframe);
+            togglePopup('.js-popup-player', true);
         });
     
         link.removeAttribute('href');
