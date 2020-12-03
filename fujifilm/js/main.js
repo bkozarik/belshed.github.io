@@ -191,7 +191,7 @@ $(document).ready(() => {
         const targetId = targetLink.attr('href');
         const targetTopOffset = $(targetId).offset().top;
 
-        const headerOffset = 200;
+        const headerOffset = 150;
 
         scrollLinks.removeClass('active');
         
