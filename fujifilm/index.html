@@ -82,6 +82,11 @@
     </div>
     <aside class="aside">
         <div class="aside__top">
+            <button class="button aside__nav js-open-nav">
+                <svg height="19" width="22">
+                    <use height="19" width="22" xlink:href="./img/icons.svg#aside-arrow"></use>
+                </svg>
+            </button>
             <button class="button aside__camera js-open-popup-testdrive">
                 <svg height="19" width="22">
                     <use height="19" width="22" xlink:href="./img/icons.svg#camera"></use>
@@ -142,6 +147,65 @@
             </a>
         </div>
     </aside>
+    <nav class="mobile-nav js-mobile-nav">
+        <ul class="mobile-nav__list">
+            <li class="mobile-nav__item">
+                <a href="#pro" class="mobile-nav__link js-scroll-link active">
+                    <span class="mobile-nav__text">Профессиональная камера</span>
+                </a>
+            </li>
+            <li class="mobile-nav__item">
+                <a href="#hybrid" class="mobile-nav__link js-scroll-link">
+                    <span class="mobile-nav__text">Fujifilm X-S10 — Настоящий Гибрид</span>
+                </a>
+            </li>
+            <li class="mobile-nav__item">
+                <a href="#control" class="mobile-nav__link js-scroll-link">
+                    <span class="mobile-nav__text">Полный контроль</span>
+                </a>
+            </li>
+            <li class="mobile-nav__item">
+                <a href="#video" class="mobile-nav__link js-scroll-link">
+                    <span class="mobile-nav__text">Видеосъемка — от блога к кино</span>
+                </a>
+            </li>
+            <li class="mobile-nav__item">
+                <a href="#autofocus" class="mobile-nav__link js-scroll-link">
+                    <span class="mobile-nav__text">Флагманский автофокус</span>
+                </a>
+            </li>
+            <li class="mobile-nav__item">
+                <a href="#corpus" class="mobile-nav__link js-scroll-link">
+                    <span class="mobile-nav__text">Корпус — магниевый, легкий и прочный</span>
+                </a>
+            </li>
+            <li class="mobile-nav__item">
+                <a href="#whatsin" class="mobile-nav__link js-scroll-link">
+                    <span class="mobile-nav__text">Что внутри?</span>
+                </a>
+            </li>
+            <li class="mobile-nav__item">
+                <a href="#lens" class="mobile-nav__link js-scroll-link">
+                    <span class="mobile-nav__text">Сменные объективы</span>
+                </a>
+            </li>
+            <li class="mobile-nav__item">
+                <a href="#connection" class="mobile-nav__link js-scroll-link">
+                    <span class="mobile-nav__text">Подключение</span>
+                </a>
+            </li>
+            <li class="mobile-nav__item">
+                <a href="#compare" class="mobile-nav__link js-scroll-link">
+                    <span class="mobile-nav__text">Сравниение</span>
+                </a>
+            </li>
+            <li class="mobile-nav__item">
+                <a href="#reviews" class="mobile-nav__link js-scroll-link">
+                    <span class="mobile-nav__text">Обзоры</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
     <main class="main">
         <section id="pro" class="hero">
             <picture class="hero__bg">
@@ -756,59 +820,19 @@
             <div class="container container_bigger">
                 <h2 class="section__title section__title_tac">ОБЗОРЫ</h2>
                 <div class="reviews__body mt-50">
-                    <div class="reviews__item">
-                        <video controls preload="auto">
-                            <source src="./video/monochrome_color.webm" type="video/webm">
-                            <source src="./video/monochrome_color.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                    <div class="reviews__item">
-                        <video controls preload="auto">
-                            <source src="./video/monochrome_color.webm" type="video/webm">
-                            <source src="./video/monochrome_color.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                    <div class="reviews__item">
-                        <video controls preload="auto">
-                            <source src="./video/monochrome_color.webm" type="video/webm">
-                            <source src="./video/monochrome_color.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                    <div class="reviews__item">
-                        <video controls preload="auto">
-                            <source src="./video/monochrome_color.webm" type="video/webm">
-                            <source src="./video/monochrome_color.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                    <div class="reviews__item">
-                        <video controls preload="auto">
-                            <source src="./video/monochrome_color.webm" type="video/webm">
-                            <source src="./video/monochrome_color.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                    <div class="reviews__item">
-                        <video controls preload="auto">
-                            <source src="./video/monochrome_color.webm" type="video/webm">
-                            <source src="./video/monochrome_color.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                    <div class="reviews__item">
-                        <video controls preload="auto">
-                            <source src="./video/monochrome_color.webm" type="video/webm">
-                            <source src="./video/monochrome_color.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                    <div class="reviews__item">
-                        <video controls preload="auto">
-                            <source src="./video/monochrome_color.webm" type="video/webm">
-                            <source src="./video/monochrome_color.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                    <div class="reviews__item">
-                        <video controls preload="auto">
-                            <source src="./video/monochrome_color.webm" type="video/webm">
-                            <source src="./video/monochrome_color.mp4" type="video/mp4">
-                        </video>
+                    <div class="reviews__item review">
+                        <!-- ссылка на видео в ютубе,  везде нужно менять только "neHA4MJwpnY", это id видео -->
+                        <a class="review__link" href="https://youtu.be/neHA4MJwpnY"> 
+                            <picture>
+                                <!-- ссылка на превью в формате webp -->
+                                <source srcset="https://i.ytimg.com/vi_webp/neHA4MJwpnY/maxresdefault.webp" type="image/webp">
+                                    <!-- ссылка на превью в формате jpg -->
+                                <img class="review__media" src="https://i.ytimg.com/vi/neHA4MJwpnY/maxresdefault.jpg" alt="Ембед видео">
+                            </picture>
+                        </a>
+                        <button class="review__button" aria-label="Запустить видео">
+                            <svg width="68" height="48" viewBox="0 0 68 48"><path class="review__button-shape" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"></path><path class="review__button-icon" d="M 45,24 27,14 27,34"></path></svg>
+                        </button>
                     </div>
                 </div>
             </div>

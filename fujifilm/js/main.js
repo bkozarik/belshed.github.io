@@ -4,6 +4,9 @@ $(document).ready(() => {
     const popupTableTrigger = $('.js-open-popup-table');
     const popupTestdriveTrigger = $('.js-open-popup-testdrive');
 
+    const navTrigger = $('.js-open-nav');
+    const mobileNav = $('.js-mobile-nav');
+
     const popupCloseTrigger = $('.js-close-popup');
 
     const burger = $('.js-burger');
@@ -34,6 +37,29 @@ $(document).ready(() => {
 
             linkRect.top < offset && linkRect.bottom > offset ? $(this).addClass('active') : $(this).removeClass('active');
         });
+    }
+
+    const toggleNav = (state=null) => {
+        if(state == null){
+            return () => {
+                mobileNav.toggleClass('active');
+
+                $(document).mouseup(function(e){
+                    if (!mobileNav.is(e.target) && mobileNav.has(e.target).length === 0){
+                        mobileNav.removeClass('active');
+                    }
+                });
+            }
+        }
+        else{
+            state ? mobileNav.addClass('active') : mobileNav.removeClass('active');
+
+            $(document).mouseup(function(e){
+                if (!mobileNav.is(e.target) && mobileNav.has(e.target).length === 0){
+                    mobileNav.removeClass('active');
+                }
+            });
+        }
     }
 
     const resizeHandler = () => {
@@ -138,7 +164,7 @@ $(document).ready(() => {
     const scrollLinkClick = () => {
 
         event.preventDefault();
-
+        toggleNav(false);
         let targetLink = $(event.target);
 
         while(!targetLink.hasClass('js-scroll-link')){
@@ -157,6 +183,59 @@ $(document).ready(() => {
 
     }
 
+    function findVideos() {
+        let videos = document.querySelectorAll('.review');
+    
+        for (let i = 0; i < videos.length; i++) {
+            setupVideo(videos[i]);
+        }
+    }
+    
+    function setupVideo(video) {
+        let link = video.querySelector('.review__link');
+        let media = video.querySelector('.review__media');
+        let button = video.querySelector('.review__button');
+        let id = parseMediaURL(media);
+    
+        video.addEventListener('click', () => {
+            let iframe = createIframe(id);
+    
+            link.remove();
+            button.remove();
+            video.appendChild(iframe);
+        });
+    
+        link.removeAttribute('href');
+        video.classList.add('review--enabled');
+    }
+    
+    function parseMediaURL(media) {
+        let regexp = /https:\/\/i\.ytimg\.com\/vi\/([a-zA-Z0-9_-]+)\/maxresdefault\.jpg/i;
+        let url = media.src;
+        let match = url.match(regexp);
+    
+        return match[1];
+    }
+    
+    function createIframe(id) {
+        let iframe = document.createElement('iframe');
+    
+        iframe.setAttribute('allowfullscreen', '');
+        iframe.setAttribute('allow', 'autoplay');
+        iframe.setAttribute('src', generateURL(id));
+        iframe.classList.add('review__media');
+    
+        return iframe;
+    }
+    
+    function generateURL(id) {
+        let query = '?rel=0&showinfo=0&autoplay=1';
+    
+        return 'https://www.youtube.com/embed/' + id + query;
+    }
+    
+    findVideos();
+
     $(window).scroll(scrollHandler);
     $(window).resize(resizeHandler);
     
@@ -170,7 +249,7 @@ $(document).ready(() => {
     
     scrollLinks.click(scrollLinkClick);
 
-    // togglePopup('.js-popup-buy', true);
+    navTrigger.click(toggleNav);
 
     slidersInit();
 

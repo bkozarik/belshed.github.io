@@ -267,7 +267,7 @@ section
         display: flex
         flex-direction: column
         align-items: flex-end
-    &__camera, &__cart, &__mobile
+    &__camera, &__cart, &__nav
         background-color: $main_red
         border-radius: 20px 0px 0px 20px
         padding: 13px
@@ -279,6 +279,10 @@ section
             margin-right: 18px
         &:hover
             transform: translateX(0px)
+    &__nav
+        display: none
+        svg
+            transform: rotate(-180deg) !important
     &__camera
         transform: translateX(113px)
     &__cart
@@ -331,6 +335,39 @@ section
         visibility: hidden
         transform: translate(20px, -50%)
 
+.mobile-nav
+    background-color: $main_red
+    position: fixed
+    bottom: 0
+    transform: translateY(100%)
+    left: 0
+    width: 100%
+    z-index: 4
+    padding: 15px
+    transition: $transition
+    &__list
+        list-style-type: none
+        padding-left: 20px
+    &__link
+        color: #fff
+    &__item
+        position: relative
+        & + &
+            margin-top: 10px
+        &::before
+            content: ''
+            display: inline-block
+            height: 6px
+            width: 6px
+            position: absolute
+            background-color: #fff
+            top: 0.7em
+            left: -15px
+            transform: translate(0, -50%)
+            border-radius: 50%
+    &.active
+        transform: translateY(0%)
+
 .hero
     padding: 73px 0px 107px
     background-color: $bg-grey
@@ -349,6 +386,7 @@ section
         width: 100%
     &__logo
         display: block
+        max-width: 100%
         margin-bottom: 30px
     &__agit
         font-size: 52px
@@ -921,6 +959,57 @@ a.text
             height: 100%
             width: 100%
             object-fit: cover
+
+.review
+    position: relative
+    width: 100%
+    height: 0
+    padding-bottom: 56.25%
+    background-color: #000000
+    &__link 
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+    &__media 
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        border: none
+    &__button 
+        position: absolute
+        top: 50%
+        left: 50%
+        z-index: 1
+        display: none
+        padding: 0
+        width: 68px
+        height: 48px
+        border: none
+        background-color: transparent
+        transform: translate(-50%, -50%)
+        cursor: pointer
+        transition: $transition
+    &__button-shape 
+        fill: #212121
+        fill-opacity: 0.8
+        transition: $transition
+    &__button-icon 
+        fill: #ffffff
+        transition: $transition
+    &__button:focus 
+        outline: none
+    &:hover &__button-shape,
+    &__button:focus &__button-shape 
+        fill: $main_red
+        fill-opacity: 1
+    &--enabled 
+        cursor: pointer
+    &--enabled &__button 
+        display: block
 
 .footer
     &__mobile

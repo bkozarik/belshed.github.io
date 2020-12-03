@@ -52,6 +52,8 @@
         padding-right: 15px
         &__body
             display: none
+        &__nav
+            display: inline-block
         &__top
             flex-direction: row
             .button + .button
@@ -89,6 +91,13 @@
             &__buttons
                 display: none
 
+    .hero
+        &__bg
+            width: 130%
+            img
+                // width: auto
+                // transform: translateX(100px)
+
     .nav
         margin: 0 30px
         max-width: 800px
@@ -107,9 +116,6 @@
         &::after
             height: 70%
 
-    .aside
-        display: none
-
     .burger
         display: inline-block
 
@@ -122,6 +128,7 @@
                 padding-top: 10px
 
     .footer
+        padding-bottom: 100px
         &__title
             margin-top: 20px
         &__socials
@@ -229,7 +236,39 @@
         .nav
             display: none
 
+@media screen and ( max-width: 890px )
+    .hero
+        &__bg
+            width: 120%
+        &__container
+            max-width: 440px
+        &__title
+            br
+                display: none
+        &__row
+            flex-direction: column
+            align-items: flex-start
+            .button
+                width: 100%
+                max-width: 400px
+            .button_testdrive, .hero__socials
+                margin-left: 0
+                margin-top: 20px
+
 @media screen and ( max-width: 740px )
+
+    .hero
+        padding: 50px 0px
+        &__container
+            max-width: 340px
+        &__title
+            font-size: 32px
+            line-height: 36px
+        &__price
+            font-size: 18px
+            &-num, &-rub
+                font-size: 40px
+                line-height: 44px
 
     .slider
         &__control
@@ -269,6 +308,10 @@
             margin-top: 40px
 
 @media screen and ( max-width: 620px )
+
+    .hero
+        &__bg
+            width: 240%
 
     .control
         .row
@@ -318,6 +361,20 @@
     .popup
         &__body
             grid-template-columns: repeat(2, 1fr)
+
+    .hero
+        &__agit, &__title
+            margin-bottom: 20px
+        &__title
+            font-size: 21px
+            line-height: 24px
+        &__price
+            font-size: 16px
+            br
+                display: none
+            &-num, &-rub
+                font-size: 36px
+                line-height: 40px
 
 @media screen and ( max-width: 530px )
 
