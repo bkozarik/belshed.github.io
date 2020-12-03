@@ -55,13 +55,19 @@ pointer-events: all;
 opacity: 1;
 }
 .floor-main .floor-section {
-    display: flex;
-    justify-content: space-between;
+    /* display: flex; */
+    /* justify-content: space-between; */
+    opacity: 1;
 }
 .floor-section__col {
     width: 38rem;
 }
-
+.floor-section__col:first-child{
+    float: left;
+}
+.floor-section__col:first-child{
+    float: right;
+}
 .mini-corpus__wrap {
     display: flex;
     justify-content: center;
@@ -255,6 +261,12 @@ margin: 30px;
 }
 .floor-penthouse .floor-help span{
     display: none;
+}
+
+.custom-clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
 .floor-help{
