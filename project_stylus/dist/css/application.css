@@ -62,10 +62,10 @@ opacity: 1;
 .floor-section__col {
     width: 38rem;
 }
-.floor-section__col:first-child{
+.floor-section__col:nth-child(1){
     float: left;
 }
-.floor-section__col:first-child{
+.floor-section__col:nth-child(2){
     float: right;
 }
 .mini-corpus__wrap {
@@ -351,7 +351,7 @@ opacity: 1;
 position: absolute;
 left: -20.8rem;
 top: 4.7rem;
-width: 78.2rem;
+width: 84.3rem;
 display: flex;
 justify-content: space-between;
 }

@@ -4,7 +4,7 @@
     }
     .floor-penthouse{
       left: -16.8rem;
-      width: 74.3rem;
+      width: 76.3rem;
     }
     .floor-penthouse .floor-one-left{
       width: 24.2rem;
@@ -34,7 +34,7 @@
     .floor-sub .floor-one-sigle{
       width: 78rem;
     }
-  }
+}
 @media only screen and (max-width: 1690px) {
     .house{
       height: 61rem;
@@ -58,6 +58,10 @@
       width: 71rem;
       left: -12.5rem;
       bottom: 3.1rem;
+    }
+    
+    .floor-main .floor-section__col{
+      width: 35.5rem;
     }
     .floor-penthouse .floor-help{
       height: 6.2rem;
@@ -141,7 +145,7 @@
           height: 1.6rem;
     }
 
-  }
+}
 @media only screen and (max-width: 1590px) {
     .house .house-bg{
       width: 158rem;
@@ -153,11 +157,15 @@
     .floor-penthouse{
       top: 3.6rem;
       left: -7.7rem;
-      width: 61.6rem;
+      width: 65rem;
     }
     .floor-main{
       width: 67.7rem;
       left: -8.7rem;
+    }
+    
+    .floor-main .floor-section__col{
+      width: 33.8rem;
     }
     .floor-penthouse .floor-one {
       width: 32.7rem;
@@ -258,19 +266,19 @@
     .floor-main .floor-one:nth-child(1) {
           margin-bottom: 7px;
     }
-  }
-  
+}
 @media only screen and (max-width: 1480px) {
     .house .house-bg{
       width: 147rem;
       height: 56rem;
     }
-    /* .floor-one-left, .floor-one-right{
-      opacity: 1;
-    } */
+    
+    .floor-main .floor-section__col{
+      width: 31.5rem;
+    }
     .floor-penthouse {
       left: -5.2rem;
-      width: 60rem;
+      width: 61.6rem;
     }
     .floor-main{
       left: -3.4rem;
@@ -295,7 +303,7 @@
       /* opacity: 1; */
       width: 64.1rem;
     }
-  }
+}
 @media only screen and (max-width: 1410px) {
     .house .house-bg{
       width: 140rem;
@@ -326,6 +334,9 @@
     .floor-main{
       left: 0.1rem;
       width: 60rem;
+    }
+    .floor-main .floor-section__col{
+      width: 30rem;
     }
   }
 @media only screen and (max-width: 1350px) {
@@ -368,6 +379,9 @@
     .floor-main{
       left: 3.3rem;
       width: 57.1rem;
+    }
+    .floor-main .floor-section__col{
+      width: 28.5rem;
     }
   }
 @media only screen and (max-width: 1250px){
@@ -490,6 +504,9 @@
     .floor-main{
       width: 54.1rem;
       left: 6.8rem;
+    }
+    .floor-main .floor-section__col{
+      width: 26.8rem;
     }
     .floor-penthouse .floor-one {
       width: 27.6rem;
