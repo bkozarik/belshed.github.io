@@ -1,3 +1,7 @@
+@media screen and ( max-height: 930px )
+    .aside
+        top: 57%
+
 @media screen and ( max-width: 1500px )
     .corpus
         .column
@@ -38,6 +42,27 @@
             position: relative
             width: 90%
             height: auto
+
+@media screen and ( max-width: 1270px )
+    .aside
+        top: auto
+        bottom: 0px
+        transform: none
+        flex-direction: row
+        padding-right: 15px
+        &__body
+            display: none
+        &__top
+            flex-direction: row
+            .button + .button
+                margin-left: 15px
+            .button
+                transform: rotate(90deg)
+                svg
+                    margin-right: 0
+                    transform: rotate(-90deg)
+                span
+                    display: none
 
 @media screen and ( max-width: 1230px )
     .float-img_mb30
@@ -193,6 +218,12 @@
 
     .author
         padding-bottom: 200px
+
+    .popup
+        &__table
+            td
+                &:first-child
+                    width: 200px
 
     .header
         .nav

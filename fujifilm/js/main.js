@@ -11,10 +11,20 @@ $(document).ready(() => {
 
     const scrollLinks = $('.js-scroll-link');
 
+    const videos = $('video');
+
     const scrollHandler = () => {
         $(window).get(0).pageYOffset > 40 ? $('.header').addClass('fixed') : $('.header').removeClass('fixed');
 
         const offset = 200;
+
+        videos.each(function(){
+            $(this).find('source').each(function(){
+                if($(this).data('src')){
+                    console.log($(this).data('src'));
+                }
+            });
+        });
 
         scrollLinks.each(function() {
             let linkRect = $($(this).attr('href')).get(0).getBoundingClientRect();
@@ -91,11 +101,10 @@ $(document).ready(() => {
     }
 
     const togglePopup = (selector, state = null) => {
+        const targetPopup = $(selector);
 
         if(state == null){
             return () => {
-                const targetPopup = $(selector);
-
                 targetPopup.addClass('active');
 
                 toggleMenu(false);
@@ -157,6 +166,8 @@ $(document).ready(() => {
     burger.click(toggleMenu());
     
     scrollLinks.click(scrollLinkClick);
+
+    togglePopup('.js-popup-table', true);
 
     slidersInit();
 

@@ -164,8 +164,11 @@ $bg_white: #f8f8f8
     .menu
         display: block !important
         &__container
-            margin-top: 100px
+            margin: 80px auto 10px
+            // padding-bottom: 10px !important
             justify-content: flex-start
+            .button_request
+                margin-bottom: 30px
 
     .burger
         display: inline-block
@@ -432,6 +435,9 @@ $bg_white: #f8f8f8
             max-height: none
             columns: 1
 
+    .menu__container
+        margin: 80px auto 10px
+
 @media screen and ( max-width: 680px )
     .main:not(.main_index)
         padding-top: 20px
@@ -598,6 +604,8 @@ $bg_white: #f8f8f8
     .menu
         &__container
             justify-content: flex-start
+            .nav__item + .nav__item
+                margin-top: 30px
             .nav__link
                 font-size: 38px
                 line-height: normal
@@ -708,7 +716,7 @@ $bg_white: #f8f8f8
                 &:last-child .nav__link
                     padding-right: 0
 
-    .header
+    .header:not(.menu-opened)
         &__wrap
             padding-top: 20px
 
@@ -770,7 +778,7 @@ $bg_white: #f8f8f8
 
     .menu
         &__container
-            width: calc( 100% - 30px )
+            width: calc( 100% - 10px )
         .button_request
             padding: 18px 0px
 

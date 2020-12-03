@@ -1,0 +1,1 @@
+{"version":3,"sources":["index.css"],"names":[],"mappings":"AAAA,WAAW;AACX,qBAAqB;;AAErB,kBAAkB;AAClB,qBAAqB;;AAErB,oBAAoB;AACpB,qBAAqB","file":"index.css","sourcesContent":["/* Шрифты */\r\n@import \"./fonts.css\";\r\n\r\n/* Десктоп стили */\r\n@import \"./style.css\";\r\n\r\n/* Мобильные стили */\r\n@import \"./media.css\";"]}

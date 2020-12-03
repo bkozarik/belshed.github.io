@@ -25,6 +25,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const bandito = document.querySelector('.js-bandito');
 
+    const header = document.querySelector('.header');
+
     let mainSliderTimer;
 
     const whichPage = () => {
@@ -55,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const resizeHandler = () => {
         
-        banditoWatch();
+        if(whichPage() == 'index') banditoWatch();
 
         if(window.innerWidth >= 980) toggleMenu(false);
 
@@ -85,32 +87,18 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    function noScroll() {
-        // window.scrollTo(0, 0);
-      }
-      
-      
-
     const toggleScrolling = (state = null) => {
         const body = document.querySelector('body');
 
         if(window.innerWidth < 960 || true){
             if(state == null){
                 body.classList.toggle('block-scroll');
-
-                body.classList.contains('block-scroll') ? window.addEventListener('scroll', noScroll) : window.removeEventListener('scroll', noScroll);
             }
             else if( state == true){
                 body.classList.add('block-scroll');
-
-                // add listener to disable scroll
-                window.addEventListener('scroll', noScroll);
             }
             else if( state == false){
                 body.classList.remove('block-scroll');
-                
-                // Remove listener to re-enable scroll
-                window.removeEventListener('scroll', noScroll);
             }
         }
     }
@@ -118,9 +106,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const closePopup = () => {
         const popupOverlay = document.querySelector('.js-popup-overlay');
 
+        if(popupOverlay.classList.contains('active')){
+            toggleScrolling(false);
+        }
+
         popupOverlay.classList.remove('active');
         popupOverlay.querySelectorAll('.popup').forEach(popup => popup.classList.remove('active'));
-        toggleScrolling(false);
     }
 
     const togglePopup = (selector, state = null) => {
@@ -223,6 +214,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 menu.classList.toggle('active');
 
                 burger.classList.contains('active') ? toggleScrolling(true) : toggleScrolling(false) ;
+                burger.classList.contains('active') ? header.classList.add('menu-opened') : header.classList.remove('menu-opened');
                 
                 closePopup();
             }
@@ -230,6 +222,8 @@ document.addEventListener('DOMContentLoaded', () => {
         else{
             state ? menu.classList.add('active') : menu.classList.remove('active');
             state ? burger.classList.add('active') : burger.classList.remove('active');
+            state ? header.classList.add('menu-opened') : header.classList.remove('menu-opened');
+            
             state ? toggleScrolling(true) : toggleScrolling(false);
             
             if(state) closePopup();

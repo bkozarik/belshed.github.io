@@ -23,13 +23,14 @@ body
     display: flex
     flex-direction: column
     &.block-scroll
-        // overflow: hidden !important
-        // width: 100%
-        // height: 100%
-        // position: fixed
-        // top: 0
-        // left: 0
-        // z-index: 10000
+        overflow: hidden !important
+        width: 100%
+        height: 100%
+        min-height: auto
+        position: fixed
+        top: 0
+        left: 0
+        z-index: 10000
 
 .body
     &_white
@@ -211,6 +212,7 @@ body
 .header
     position: fixed
     left: 0
+    overflow: hidden
     top: 0
     width: 100%
     z-index: 5
@@ -221,6 +223,11 @@ body
         .header
             &__wrap
                 padding: 10px 0px
+    &.menu-opened
+        background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 65%, rgba(255,255,255,0) 66%, rgba(255,255,255,0) 100%)
+        .header__wrap
+            padding-top: 20px
+            padding-bottom: 3px
     &__wrap
         padding-top: 38px
         padding-bottom: 30px
@@ -311,15 +318,13 @@ body
     background-color: #fff
     top: 0
     left: 0
-    z-index: 1
+    z-index: 4
     transform-origin: left top
     transform: translateX(100%) rotate(-30deg)
     visibility: hidden
     pointer-events: none
+    padding: 0px 5px
     overflow: hidden
-    padding: 0px 15px
-    overflow: hidden
-    overflow-y: auto
     display: none
     &::before
         transition-duration: .35s
@@ -328,8 +333,11 @@ body
         display: block
         height: 100%
         position: sticky
+        position: absolute
         float: right
+        float: none
         top: 0
+        right: 20px
         border-radius: 30px
         background-color: $main_yellow
         width: 200px
@@ -337,18 +345,20 @@ body
         transform-origin: left top
         transition-delay: .1s
     &__container
-        max-width: 335px
-        padding: 0px 0px 28px
-        width: 100%
-        margin: 0 auto
-        height: 100%
+        // max-width: 335px
+        padding: 0px 10px 20px
+        width: calc( 100% - 10px )
+        margin: 0 auto 10px
+        height: 90%
         display: flex
         flex-direction: column
         align-items: stretch
         justify-content: center
         position: absolute
+        overflow-y: auto
         top: 0
         .nav
+            margin-bottom: 30px
             margin-left: 0px
             &__list
                 flex-direction: column
@@ -764,7 +774,7 @@ body
     top: 0
     left: 0
     width: 100%
-    height: 100vh
+    height: 100%
     outline: none
     z-index: 100
     transition-duration: 0s
@@ -1221,6 +1231,7 @@ body
         transform: translateY(0px)
         opacity: 1
         visibility: visible
+        // visibility: hidden
         pointer-events: all
     &__form
         margin-top: 15px
@@ -1290,7 +1301,7 @@ body
         top: 0
         left: 0
         width: 100%
-        height: 100vh
+        height: 100%
         display: flex
         align-items: center
         justify-content: center

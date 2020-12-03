@@ -40,6 +40,7 @@ section
         font-weight: 800
         color: $text-black
         text-transform: uppercase
+        font-family: 'SFUIDisplay', sans-serif
         &_white
             color: #ffffff !important
         &_tac
@@ -49,6 +50,7 @@ section
         font-size: 25px
         line-height: 33px
         text-transform: none
+        font-family: 'SFUIDisplay', sans-serif
         &_tac
             text-align: center
 
@@ -265,7 +267,7 @@ section
         display: flex
         flex-direction: column
         align-items: flex-end
-    &__camera, &__cart
+    &__camera, &__cart, &__mobile
         background-color: $main_red
         border-radius: 20px 0px 0px 20px
         padding: 13px
@@ -274,19 +276,14 @@ section
         text-transform: none
         svg
             fill: #ffffff
-    &__camera
-        transform: translateX(113px)
-        svg
             margin-right: 18px
         &:hover
             transform: translateX(0px)
+    &__camera
+        transform: translateX(113px)
     &__cart
         margin-top: 8px
         transform: translateX(83px)
-        svg
-            margin-right: 18px
-        &:hover
-            transform: translateX(0px)
     &__body
         margin-top: 20px
         border-radius: 20px 0px 0px 20px
@@ -305,7 +302,7 @@ section
         font-size: 16px
         padding: 0px 7px
         & + &
-            margin-top: 10px
+            margin-top: 1vh
         &.active, &.preview, &:hover
             .aside
                 &__text
@@ -1013,6 +1010,8 @@ a.text
     overflow-y: auto
     max-height: 95%
     transition: $transition
+    &_table
+        max-width: 1200px
     &__body
         display: grid
         justify-items: center
@@ -1045,6 +1044,7 @@ a.text
             width: 25px
             height: 2px
             background-color: $text-black
+            transition: $transition 
             position: absolute
             top: 50%
             left: 50%
@@ -1060,19 +1060,41 @@ a.text
             outline: none
     &__table
         width: 100%
-        min-width: 500px
+        min-width: 750px
         border-spacing: 0px
+        &-img
+            max-width: 100%
+            width: 100%
+            margin-top: 20px
+        &-head            
+            display: flex
+            align-items: center
+            justify-content: space-between
+            height: 100%
+            flex-direction: column
         th
             padding: 15px 5px
+            min-width: 200px
+            .popup__table-text
+                font-weight: 700
+                white-space: nowrap
         td
-            padding: 10px 5px
-            &:first-child
-                width: 200px
-        th, td
+            padding: 5px 7px
             text-align: left
+            &:not(:first-child)
+                text-align: center
+                .popup__table-text
+                    font-size: 14px
+            &:first-child
+                width: 300px
+                .popup__table-text
+                    font-weight: 600
+        th, td
             border: 1px solid $bg-grey
         &-text
-            font-size: 18px
+            font-size: 16px
+            display: inline-block
+            text-align: center
         &-wrap
             position: relative
             overflow-x: auto
