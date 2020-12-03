@@ -124,8 +124,10 @@ $(document).ready(() => {
     const closePopup = () => {
         $('.popup__overlay').removeClass('active');
         $('.popup').each(function(event){
-            $(this).find('.popup_video').remove()
-        })
+            $(this).each(function(event){
+                $(this).find('iframe').remove();
+            });
+        });
     }
 
     const closePopupByOverlayClick = () => {
@@ -186,7 +188,7 @@ $(document).ready(() => {
 
     }
 
-    function findVideos() {
+    const findVideos = () => {
         let videos = document.querySelectorAll('.review');
     
         for (let i = 0; i < videos.length; i++) {
@@ -194,7 +196,7 @@ $(document).ready(() => {
         }
     }
     
-    function setupVideo(video) {
+    const setupVideo = (video) => {
         let link = video.querySelector('.review__link');
         let media = video.querySelector('.review__media');
         let button = video.querySelector('.review__button');
@@ -202,9 +204,6 @@ $(document).ready(() => {
     
         video.addEventListener('click', () => {
             let iframe = createIframe(id);
-    
-            link.remove();
-            button.remove();
 
             $('.js-popup-player').find('.popup_video').get(0).appendChild(iframe);
             togglePopup('.js-popup-player', true);
@@ -214,7 +213,7 @@ $(document).ready(() => {
         video.classList.add('review--enabled');
     }
     
-    function parseMediaURL(media) {
+    const parseMediaURL = (media) => {
         let regexp = /https:\/\/i\.ytimg\.com\/vi\/([a-zA-Z0-9_-]+)\/maxresdefault\.jpg/i;
         let url = media.src;
         let match = url.match(regexp);
@@ -222,7 +221,7 @@ $(document).ready(() => {
         return match[1];
     }
     
-    function createIframe(id) {
+    const createIframe = (id) => {
         let iframe = document.createElement('iframe');
     
         iframe.setAttribute('allowfullscreen', '');
@@ -233,7 +232,7 @@ $(document).ready(() => {
         return iframe;
     }
     
-    function generateURL(id) {
+    const generateURL = (id) => {
         let query = '?rel=0&showinfo=0&autoplay=1';
     
         return 'https://www.youtube.com/embed/' + id + query;
