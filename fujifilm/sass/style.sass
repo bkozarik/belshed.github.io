@@ -1025,6 +1025,14 @@ a.text
         align-items: center
         flex-direction: column
         max-width: 230px
+        padding: 10px
+        &-logo
+            display: flex
+            align-items: center
+            justify-content: center
+            height: 100px
+            width: 200px
+            padding: 10px
         &-img
             width: 100%
             max-width: 100px
@@ -1035,6 +1043,9 @@ a.text
             margin-top: 10px
             display: inline-block
             text-align: center
+        &:hover, &:focus
+            outline: none
+            box-shadow: 0 0 10px 4px $bg-grey
     &__close
         position: absolute
         right: 10px

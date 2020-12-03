@@ -12,7 +12,7 @@
         <div class="container">
             <div class="header__wrap">
                 <div class="logo">
-                    <img loading="lazy" src="./img/logo.svg" alt="Логотип" class="logo__img">
+                    <img src="./img/logo.svg" alt="Логотип" class="logo__img">
                 </div>
                 <nav class="nav">
                     <ul class="nav__list">
@@ -364,10 +364,7 @@
                         </div>
                         <div class="row row_middle mt-50">
                             <div class="column">
-                                <video class="column__video" preload="metadata" playsinline muted loop autoplay>
-                                    <source src="./video/tone-adjustment.webm" data-src="222" type="video/webm">
-                                    <source src="./video/tone-adjustment.mp4" type="video/mp4">
-                                </video>
+                                <video class="column__video video-unloaded" data-src="./video/tone-adjustment.mp4" type="video/mp4" preload="none" playsinline muted loop autoplay></video>
                             </div>
                             <div class="column">
                                 <picture class="column__img">
@@ -442,10 +439,7 @@
             <div class="container mt-50">
                 <p class="text">Многие современные камеры снимают в 4K, но X-S10 уникальна тем, что изначально она записывает в разрешении 6K со всей площади матрицы, а затем преобразует видео в 4К. Используя эти данные, камера передает кадры с высокой детализацией и низким уровнем шума.  Она также поддерживает съемку в формате DCI с соотношением сторон 17:9, что позволяет получить кинематографический вид.</p>
                 <p class="text text_mt30">Непревзойденный цвет Fujifilm приносит свои выгоды для видео. При создании фильмов вы можете использовать любую из 18 различных режимов моделирования пленок, чтобы добавить уникальный вид к отснятому материалу, включая режим ETERNA. Именно на эту киноплёнку были сняты многие шедевры кино. Помимо этого, для более углубленной работы в дальнейшей постобработке доступен режим съемки в формате F-Log.</p>
-                <video playsinline muted loop autoplay preload="metadata" class="filming__img mt-50 mb-50">
-                    <source src="./video/F-log.webm" type="video/webm">
-                    <source src="./video/F-log.mp4" type="video/mp4">
-                </video>
+                <video playsinline muted loop autoplay data-src="./video/F-log.mp4" type="video/mp4" preload="none" class="filming__img mt-50 mb-50 video-unloaded"></video>
             </div>
             <div class="filming__colored mb-50">
                 <div class="container">
@@ -457,10 +451,7 @@
                             </article>
                         </div>
                         <div class="column column_big">
-                            <video playsinline muted loop autoplay preload="metadata" class="column__video">
-                                <source src="./video/1080_240P.webm" type="video/webm">
-                                <source src="./video/1080_240P.mp4" type="video/mp4">
-                            </video>
+                            <video playsinline muted loop autoplay preload="none" data-src="./video/1080_240P.mp4" type="video/mp4" class="column__video video-unloaded"></video>
                         </div>
                     </div>
                 </div>
@@ -468,10 +459,7 @@
             <div class="container">
                 <h3 class="section__subtitle">Все это со стабилизацией!</h3>
                 <p class="text text_mt30"> <img loading="lazy" class="float-img float-img_left" src="./img/float-img_5.png" alt="Изображение в тексте"> В дополнение к встроенной стабилизации изображения (IBIS), включение режима цифровой стабилизации изображения (DIS) позволит мощно компенсировать дрожание камеры даже при ходьбе. Режим форсирования стабилизации (IS Mode Boost) обеспечивает еще большую стабилизацию, почти устраняя дрожание камеры при съемке с рук, как если бы вы снимали видео с использованием штатива.</p>
-                <video playsinline muted loop autoplay preload="metadata" class="filming__img mt-50">
-                    <source src="./video/DIS.webm" type="video/webm">
-                    <source src="./video/DIS.mp4" type="video/mp4">
-                </video>
+                <video playsinline muted loop autoplay preload="none" data-src="./video/DIS.mp4" type="video/mp4" class="filming__img mt-50 video-unloaded"></video>
                 <h3 class="section__subtitle mt-50">X-S10 любит снимать видео!</h3>
                 <p class="text text_mt30">Корпус камеры разработан с учетом того, что на нее будут снимать видео. К блоку матрицы подведен радиатор, который охлаждает ее и позволяет снимать видео продолжительное время.</p>
             </div>
@@ -502,10 +490,7 @@
                 <div class="row__container row_mt50">
                     <div class="row row_between row_middle">
                         <div class="column column_big">
-                            <video playsinline muted loop autoplay preload="metadata" class="column__video hybrid__img_left">
-                                <source src="./video/face_eye_AF.webm" type="video/webm">
-                                <source src="./video/face_eye_AF.mp4" type="video/mp4">
-                            </video>
+                            <video playsinline muted loop autoplay preload="none" data-src="./video/face_eye_AF.mp4" type="video/mp4" class="column__video hybrid__img_left video-unloaded"></video>
                         </div>
                         <div class="column column_medium">
                             <article class="text-block">
@@ -522,18 +507,12 @@
                             </article>
                         </div>
                         <div class="column column_big">
-                            <video playsinline muted loop autoplay preload="metadata" class="column__video hybrid__img_right">
-                                <source src="./video/low_light.webm" type="video/webm">
-                                <source src="./video/low_light.mp4" type="video/mp4">
-                            </video>
+                            <video playsinline muted loop autoplay preload="none" data-src="./video/low_light.mp4" type="video/mp4" class="column__video hybrid__img_right video-unloaded"></video>
                         </div>
                     </div>
                     <div class="row row_mt50 row_end row_between">
                         <div class="column ">
-                            <video playsinline muted loop autoplay preload="metadata" class="column__video">
-                                <source src="./video/Tracking-AF.webm" type="video/webm">
-                                <source src="./video/Tracking-AF.mp4" type="video/mp4">
-                            </video>
+                            <video playsinline muted loop autoplay preload="none" data-src="./video/Tracking-AF.mp4" type="video/mp4" class="column__video video-unloaded"></video>
                         </div>
                         <div class="column column_medium">
                             <article class="text-block">
@@ -680,10 +659,7 @@
                 <div class="container container_bigger">
                     <div class="row row_middle">
                         <div class="column">
-                            <video class="column__video" preload="metadata" playsinline muted loop autoplay>
-                                <source src="./video/X-S10_BOUSHIN_anim_0915_01.webm" type="video/webm">
-                                <source src="./video/X-S10_BOUSHIN_anim_0915_01.mp4" type="video/mp4">
-                            </video>
+                            <video class="column__video video-unloaded" preload="none" data-src="./video/X-S10_BOUSHIN_anim_0915_01.mp4" type="video/mp4" playsinline muted loop autoplay></video>
                         </div>
                         <div class="column column_normal">
                             <article class="text-block">
@@ -731,10 +707,7 @@
                             <p class="text text_mt50">Используя Bluetooth или Wi-Fi, вы можете поделиться своими воспоминаниями с друзьями и семьей в социальных сетях, подключив и загрузив свои изображения в удаленное приложение FUJFILM Camera Remote или мгновенно подключить и распечатать избранное с любого совместимого принтера instax ™</p>
                         </div>
                         <div class="column">
-                            <video class="column__video" preload="metadata" playsinline muted loop autoplay>
-                                <source src="./video/instax.webm" type="video/webm">
-                                <source src="./video/instax.mp4" type="video/mp4">
-                            </video>
+                            <video class="column__video video-unloaded" preload="none" data-src="./video/instax.mp4" type="video/mp4" playsinline muted loop autoplay></video>
                         </div>
                     </div>
                     <div class="row row_triple row_between row_mt50">
@@ -1032,115 +1005,171 @@
             <button class="popup__close js-close-popup"></button>
             <div class="popup__body">
                 <a href="https://www.yarkiy.ru/goods/40547-fujifilm-x-s10-body" class="popup__item" target="_blank">
-                    <img loading="lazy" src="./img/logos/yarkiy-mini.png" alt="Лого магазина" class="popup__item-img">
+                    <div class="popup__item-logo">
+                        <img loading="lazy" src="./img/logos/yarkiy-mini.png" alt="Лого магазина" class="popup__item-img">
+                    </div>
                     <span class="popup__item-location">Москва, Санкт-Петербург, Ростов-на-дону, Выборг, Краснодар</span>
                 </a>
                 <a href="https://www.onlinetrade.ru/catalogue/tsifrovye_fotoapparaty_so_smennoy_optikoy-c268/fujifilm/tsifrovoy_fotoapparat_fujifilm_x_s10_body_black_16670041-2349842.html" class="popup__item" target="_blank">
-                    <img loading="lazy" src="./img/logos/onlinetr.png" alt="Лого магазина" class="popup__item-img">
+                    <div class="popup__item-logo">
+                        <img loading="lazy" src="./img/logos/onlinetr.png" alt="Лого магазина" class="popup__item-img">
+                    </div>
                     <span class="popup__item-location">Москва, Краснодар, Нижний Новогород, Самара, Тула</span>
                 </a>
                 <a href="https://www.mvideo.ru/products/fotoapparat-sistemnyi-fujifilm-x-s10-body-10025361" class="popup__item" target="_blank">
-                    <img loading="lazy" src="./img/logos/mvideo.png" alt="Лого магазина" class="popup__item-img">
+                    <div class="popup__item-logo">
+                        <img loading="lazy" src="./img/logos/mvideo.png" alt="Лого магазина" class="popup__item-img">
+                    </div>
                     <span class="popup__item-location">Вся Россия</span>
                 </a>
                 <a href="https://www.dns-shop.ru/product/4295494f11d23332/fujifilm-x-s10-kit-18-55/" class="popup__item" target="_blank">
-                    <img loading="lazy" src="./img/logos/dns.jpg" alt="Лого магазина" class="popup__item-img">
+                    <div class="popup__item-logo">
+                        <img loading="lazy" src="./img/logos/dns.jpg" alt="Лого магазина" class="popup__item-img">
+                    </div>
                     <span class="popup__item-location">Вся Россия</span>
                 </a>
                 <a href="https://www.svyaznoy.ru/" class="popup__item" target="_blank">
-                    <img loading="lazy" src="./img/logos/svyaznoy.png" alt="Лого магазина" class="popup__item-img">
+                    <div class="popup__item-logo">
+                        <img loading="lazy" src="./img/logos/svyaznoy.png" alt="Лого магазина" class="popup__item-img">
+                    </div>
                     <span class="popup__item-location">Вся Россия</span>
                 </a>
                 <a href="https://pixel24.ru/catalog/view/id/55671" class="popup__item" target="_blank">
-                    <img loading="lazy" src="./img/logos/pxl24-3.png" alt="Лого магазина" class="popup__item-img">
+                    <div class="popup__item-logo">
+                        <img loading="lazy" src="./img/logos/pxl24-3.png" alt="Лого магазина" class="popup__item-img">
+                    </div>
                     <span class="popup__item-location">Москва</span>
                 </a>
                 <a href="https://photosale.ru/fototechnika/fotoapparaty_tsifrovye/fujifilm_x_s10_body_black/?sphrase_id=451888" class="popup__item" target="_blank">
-                    <img loading="lazy" src="./img/logos/fotosale.jpg" alt="Лого магазина" class="popup__item-img">
+                    <div class="popup__item-logo">
+                        <img loading="lazy" src="./img/logos/fotosale.jpg" alt="Лого магазина" class="popup__item-img">
+                    </div>
                     <span class="popup__item-location">Москва</span>
                 </a>
                 <a href="https://www.kutuzov-photo.ru/" class="popup__item" target="_blank">
-                    <img loading="lazy" src="./img/logos/kutuzov.png" alt="Лого магазина" class="popup__item-img">
+                    <div class="popup__item-logo">
+                        <img loading="lazy" src="./img/logos/kutuzov.png" alt="Лого магазина" class="popup__item-img">
+                    </div>
                     <span class="popup__item-location">Москва</span>
                 </a>
                 <a href="https://asn-foto.ru/" class="popup__item" target="_blank">
-                    <img loading="lazy" src="./img/logos/asnfoto.png" alt="Лого магазина" class="popup__item-img">
+                    <div class="popup__item-logo">
+                        <img loading="lazy" src="./img/logos/asnfoto.png" alt="Лого магазина" class="popup__item-img">
+                    </div>
                     <span class="popup__item-location">Москва</span>
                 </a>
                 <a href="https://www.ligafoto.ru/catalog/id-64621/" class="popup__item" target="_blank">
-                    <img loading="lazy" src="./img/logos/liga-foto.png" alt="Лого магазина" class="popup__item-img">
+                    <div class="popup__item-logo">
+                        <img loading="lazy" src="./img/logos/liga-foto.png" alt="Лого магазина" class="popup__item-img">
+                    </div>
                     <span class="popup__item-location">Москва</span>
                 </a>
                 <a href="https://www.olimp.ru/shop/sgroup91101/item9110100003/" class="popup__item" target="_blank">
-                    <img loading="lazy" src="./img/logos/olimp.png" alt="Лого магазина" class="popup__item-img">
+                    <div class="popup__item-logo">
+                        <img loading="lazy" src="./img/logos/olimp.png" alt="Лого магазина" class="popup__item-img">
+                    </div>
                     <span class="popup__item-location">Обнинск, Калуга</span>
                 </a>
                 <a href="https://www.intel-foto.ru/catalog/bezzerkalnye-fotokamery/fujifilm/tsifrovoj-fotoapparat-fujifilm-x-s10-body-34596/" class="popup__item" target="_blank">
-                    <img loading="lazy" src="./img/logos/intelfoto.png" alt="Лого магазина" class="popup__item-img">
+                    <div class="popup__item-logo">
+                        <img loading="lazy" src="./img/logos/intelfoto.png" alt="Лого магазина" class="popup__item-img">
+                    </div>
                     <span class="popup__item-location">Екатеринбур г, Челябинск, Тюмень</span>
                 </a>
                 <a href="https://www.technocity.ru/catalog/detail/763474/" class="popup__item" target="_blank">
-                    <img loading="lazy" src="./img/logos/tcd120x100.png" alt="Лого магазина" class="popup__item-img">
+                    <div class="popup__item-logo">
+                        <img loading="lazy" src="./img/logos/tcd120x100.png" alt="Лого магазина" class="popup__item-img">
+                    </div>
                     <span class="popup__item-location">Новосибирск</span>
                 </a>
                 <a href="https://foto74.ru/fotoapparat-so-smennoy-optikoy-fujifilmx-s10-body/" class="popup__item" target="_blank">
-                    <img loading="lazy" src="./img/logos/fotolux.png" alt="Лого магазина" class="popup__item-img">
+                    <div class="popup__item-logo">
+                        <img loading="lazy" src="./img/logos/fotolux.png" alt="Лого магазина" class="popup__item-img">
+                    </div>
                     <span class="popup__item-location">Челябинск</span>
                 </a>
                 <a href="https://shx.ru/catalog/fototekhnika_i_videotekhnika/bezzerkalki_so_smennoy_optikoy/fotoapparat-Fujifilm-X-S10-body-chernyy" class="popup__item" target="_blank">
-                    <img loading="lazy" src="./img/logos/shx.png" alt="Лого магазина" class="popup__item-img">
+                    <div class="popup__item-logo">
+                        <img loading="lazy" src="./img/logos/shx.png" alt="Лого магазина" class="popup__item-img">
+                    </div>
                     <span class="popup__item-location">Пермь, Ижевск, Челябинск</span>
                 </a>
                 <a href="https://photopark.ru/catalog/item/tsifrovaya-fotokamera-fujifilm-x-s10-body-i3938" class="popup__item" target="_blank">
-                    <img loading="lazy" src="./img/logos/msccity.png" alt="Лого магазина" class="popup__item-img">
+                    <div class="popup__item-logo">
+                        <img loading="lazy" src="./img/logos/msccity.png" alt="Лого магазина" class="popup__item-img">
+                    </div>
                     <span class="popup__item-location">Махачкала</span>
                 </a>
                 <a href="https://fotomen.ru/bezzerkalnaya-fotokamera-fujifilm-x-s10-body-black/" class="popup__item" target="_blank">
-                    <img loading="lazy" src="./img/logos/fotomen.png" alt="Лого магазина" class="popup__item-img">
+                    <div class="popup__item-logo">
+                        <img loading="lazy" src="./img/logos/fotomen.png" alt="Лого магазина" class="popup__item-img">
+                    </div>
                     <span class="popup__item-location">Уфа</span>
                 </a>
                 <a href="https://digital30.ru/foto-video-tekhnika-120/fotoapparaty-4/fotoapparaty-fujifilm-14/fujifilm-x-s10-body-black" class="popup__item" target="_blank">
-                    <img loading="lazy" src="./img/logos/cifrovoy.png" alt="Лого магазина" class="popup__item-img">
+                    <div class="popup__item-logo">
+                        <img loading="lazy" src="./img/logos/cifrovoy.png" alt="Лого магазина" class="popup__item-img">
+                    </div>
                     <span class="popup__item-location">Астрахань</span>
                 </a>
                 <a href="https://binar-shop.ru/catalog/product/fotoapparat_so_smennoy_optikoy_fujifilm_x_s10_kit_18_55mm_f_2_8_4_0_ois_black/" class="popup__item" target="_blank">
-                    <img loading="lazy" src="./img/logos/binar.png" alt="Лого магазина" class="popup__item-img">
+                    <div class="popup__item-logo">
+                        <img loading="lazy" src="./img/logos/binar.png" alt="Лого магазина" class="popup__item-img">
+                    </div>
                     <span class="popup__item-location">Красноярск</span>
                 </a>
                 <a href="https://www.vlfoto.ru/product/tsifrovoy-bezzerkalnyy-fotoapparat-x-s10-body-black" class="popup__item" target="_blank">
-                    <img loading="lazy" src="./img/logos/vl-foto.png" alt="Лого магазина" class="popup__item-img">
+                    <div class="popup__item-logo">
+                        <img loading="lazy" src="./img/logos/vl-foto.png" alt="Лого магазина" class="popup__item-img">
+                    </div>
                     <span class="popup__item-location">Владивосток</span>
                 </a>
                 <a href="http://fotik-npd.ru/fotoapparati/cifrovie-fotoapparati-so-smennoj-optikoj/fotoapparatiso-smennoj-optikoj-fujifilm/" class="popup__item" target="_blank">
-                    <img loading="lazy" src="./img/logos/photik.png" alt="Лого магазина" class="popup__item-img">
+                    <div class="popup__item-logo">
+                        <img loading="lazy" src="./img/logos/photik.png" alt="Лого магазина" class="popup__item-img">
+                    </div>
                     <span class="popup__item-location">Смоленск</span>
                 </a>
                 <a href="https://openschool.biz/product/fujifilm-x-s10/" class="popup__item" target="_blank">
-                    <img loading="lazy" src="./img/logos/otkr-shkola.png" alt="Лого магазина" class="popup__item-img">
+                    <div class="popup__item-logo">
+                        <img loading="lazy" src="./img/logos/otkr-shkola.png" alt="Лого магазина" class="popup__item-img">
+                    </div>
                     <span class="popup__item-location">Казань</span>
                 </a>
                 <a href="https://fotomagazin.ru/" class="popup__item" target="_blank">
-                    <img loading="lazy" src="./img/logos/logo-photo-mgzn.jpg" alt="Лого магазина" class="popup__item-img">
+                    <div class="popup__item-logo">
+                        <img loading="lazy" src="./img/logos/logo-photo-mgzn.jpg" alt="Лого магазина" class="popup__item-img">
+                    </div>
                     <span class="popup__item-location">Воронеж</span>
                 </a>
                 <a href="http://acomplex.ru/katalog/fototehnika/fotoapparaty/fujifilm/" class="popup__item" target="_blank">
-                    <img loading="lazy" src="./img/logos/logo-dw.gif" alt="Лого магазина" class="popup__item-img">
+                    <div class="popup__item-logo">
+                        <img loading="lazy" src="./img/logos/logo-dw.gif" alt="Лого магазина" class="popup__item-img">
+                    </div>
                     <span class="popup__item-location">Самара, Казань</span>
                 </a>
                 <a href="https://interfoto.by/fotoapparaty/fujifilm-foto/x-series/xs10/" class="popup__item" target="_blank">
-                    <img loading="lazy" src="./img/logos/interfoto.png" alt="Лого магазина" class="popup__item-img">
+                    <div class="popup__item-logo">
+                        <img loading="lazy" src="./img/logos/interfoto.png" alt="Лого магазина" class="popup__item-img">
+                    </div>
                     <span class="popup__item-location">Минск</span>
                 </a>
                 <a href="https://vega.am/hy/" class="popup__item" target="_blank">
-                    <img loading="lazy" src="./img/logos/logo-vega.png" alt="Лого магазина" class="popup__item-img">
+                    <div class="popup__item-logo">
+                        <img loading="lazy" src="./img/logos/logo-vega.png" alt="Лого магазина" class="popup__item-img">
+                    </div>
                     <span class="popup__item-location">Ереван</span>
                 </a>
                 <a href="https://dw.kz/catalog/digital-cameras/SLR/tsifrovoy_fotoapparat_fujifilm_x_s10_black_body/" class="popup__item" target="_blank">
-                    <img loading="lazy" src="./img/logos/logo-dw.gif" alt="Лого магазина" class="popup__item-img">
+                    <div class="popup__item-logo">
+                        <img loading="lazy" src="./img/logos/logo-dw.gif" alt="Лого магазина" class="popup__item-img">
+                    </div>
                     <span class="popup__item-location">Караганда</span>
                 </a>
                 <a href="https://www.technodom.kz/" class="popup__item" target="_blank">
-                    <img loading="lazy" src="./img/logos/td.png" alt="Лого магазина" class="popup__item-img">
+                    <div class="popup__item-logo">
+                        <img loading="lazy" src="./img/logos/td.png" alt="Лого магазина" class="popup__item-img">
+                    </div>
                     <span class="popup__item-location">Алматы, Нурсултан и др.</span>
                 </a>
             </div>
@@ -1151,17 +1180,173 @@
         <div class="popup">
             <button class="popup__close js-close-popup"></button>
             <div class="popup__body">
-                <a href="#" class="popup__item">
-                    <img loading="lazy" src="" alt="Лого магазина" class="popup__item-img">
+                <a href="https://www.yarkiy.ru/goods/40547-fujifilm-x-s10-body" class="popup__item" target="_blank">
+                    <div class="popup__item-logo">
+                        <img loading="lazy" src="./img/logos/yarkiy-mini.png" alt="Лого магазина" class="popup__item-img">
+                    </div>
+                    <span class="popup__item-location">Москва, Санкт-Петербург, Ростов-на-дону, Выборг, Краснодар</span>
+                </a>
+                <a href="https://www.onlinetrade.ru/catalogue/tsifrovye_fotoapparaty_so_smennoy_optikoy-c268/fujifilm/tsifrovoy_fotoapparat_fujifilm_x_s10_body_black_16670041-2349842.html" class="popup__item" target="_blank">
+                    <div class="popup__item-logo">
+                        <img loading="lazy" src="./img/logos/onlinetr.png" alt="Лого магазина" class="popup__item-img">
+                    </div>
+                    <span class="popup__item-location">Москва, Краснодар, Нижний Новогород, Самара, Тула</span>
+                </a>
+                <a href="https://www.mvideo.ru/products/fotoapparat-sistemnyi-fujifilm-x-s10-body-10025361" class="popup__item" target="_blank">
+                    <div class="popup__item-logo">
+                        <img loading="lazy" src="./img/logos/mvideo.png" alt="Лого магазина" class="popup__item-img">
+                    </div>
+                    <span class="popup__item-location">Вся Россия</span>
+                </a>
+                <a href="https://www.dns-shop.ru/product/4295494f11d23332/fujifilm-x-s10-kit-18-55/" class="popup__item" target="_blank">
+                    <div class="popup__item-logo">
+                        <img loading="lazy" src="./img/logos/dns.jpg" alt="Лого магазина" class="popup__item-img">
+                    </div>
+                    <span class="popup__item-location">Вся Россия</span>
+                </a>
+                <a href="https://www.svyaznoy.ru/" class="popup__item" target="_blank">
+                    <div class="popup__item-logo">
+                        <img loading="lazy" src="./img/logos/svyaznoy.png" alt="Лого магазина" class="popup__item-img">
+                    </div>
+                    <span class="popup__item-location">Вся Россия</span>
+                </a>
+                <a href="https://pixel24.ru/catalog/view/id/55671" class="popup__item" target="_blank">
+                    <div class="popup__item-logo">
+                        <img loading="lazy" src="./img/logos/pxl24-3.png" alt="Лого магазина" class="popup__item-img">
+                    </div>
                     <span class="popup__item-location">Москва</span>
                 </a>
-                <a href="#" class="popup__item">
-                    <img loading="lazy" src="" alt="Лого магазина" class="popup__item-img">
+                <a href="https://photosale.ru/fototechnika/fotoapparaty_tsifrovye/fujifilm_x_s10_body_black/?sphrase_id=451888" class="popup__item" target="_blank">
+                    <div class="popup__item-logo">
+                        <img loading="lazy" src="./img/logos/fotosale.jpg" alt="Лого магазина" class="popup__item-img">
+                    </div>
                     <span class="popup__item-location">Москва</span>
                 </a>
-                <a href="#" class="popup__item">
-                    <img loading="lazy" src="" alt="Лого магазина" class="popup__item-img">
+                <a href="https://www.kutuzov-photo.ru/" class="popup__item" target="_blank">
+                    <div class="popup__item-logo">
+                        <img loading="lazy" src="./img/logos/kutuzov.png" alt="Лого магазина" class="popup__item-img">
+                    </div>
                     <span class="popup__item-location">Москва</span>
+                </a>
+                <a href="https://asn-foto.ru/" class="popup__item" target="_blank">
+                    <div class="popup__item-logo">
+                        <img loading="lazy" src="./img/logos/asnfoto.png" alt="Лого магазина" class="popup__item-img">
+                    </div>
+                    <span class="popup__item-location">Москва</span>
+                </a>
+                <a href="https://www.ligafoto.ru/catalog/id-64621/" class="popup__item" target="_blank">
+                    <div class="popup__item-logo">
+                        <img loading="lazy" src="./img/logos/liga-foto.png" alt="Лого магазина" class="popup__item-img">
+                    </div>
+                    <span class="popup__item-location">Москва</span>
+                </a>
+                <a href="https://www.olimp.ru/shop/sgroup91101/item9110100003/" class="popup__item" target="_blank">
+                    <div class="popup__item-logo">
+                        <img loading="lazy" src="./img/logos/olimp.png" alt="Лого магазина" class="popup__item-img">
+                    </div>
+                    <span class="popup__item-location">Обнинск, Калуга</span>
+                </a>
+                <a href="https://www.intel-foto.ru/catalog/bezzerkalnye-fotokamery/fujifilm/tsifrovoj-fotoapparat-fujifilm-x-s10-body-34596/" class="popup__item" target="_blank">
+                    <div class="popup__item-logo">
+                        <img loading="lazy" src="./img/logos/intelfoto.png" alt="Лого магазина" class="popup__item-img">
+                    </div>
+                    <span class="popup__item-location">Екатеринбур г, Челябинск, Тюмень</span>
+                </a>
+                <a href="https://www.technocity.ru/catalog/detail/763474/" class="popup__item" target="_blank">
+                    <div class="popup__item-logo">
+                        <img loading="lazy" src="./img/logos/tcd120x100.png" alt="Лого магазина" class="popup__item-img">
+                    </div>
+                    <span class="popup__item-location">Новосибирск</span>
+                </a>
+                <a href="https://foto74.ru/fotoapparat-so-smennoy-optikoy-fujifilmx-s10-body/" class="popup__item" target="_blank">
+                    <div class="popup__item-logo">
+                        <img loading="lazy" src="./img/logos/fotolux.png" alt="Лого магазина" class="popup__item-img">
+                    </div>
+                    <span class="popup__item-location">Челябинск</span>
+                </a>
+                <a href="https://shx.ru/catalog/fototekhnika_i_videotekhnika/bezzerkalki_so_smennoy_optikoy/fotoapparat-Fujifilm-X-S10-body-chernyy" class="popup__item" target="_blank">
+                    <div class="popup__item-logo">
+                        <img loading="lazy" src="./img/logos/shx.png" alt="Лого магазина" class="popup__item-img">
+                    </div>
+                    <span class="popup__item-location">Пермь, Ижевск, Челябинск</span>
+                </a>
+                <a href="https://photopark.ru/catalog/item/tsifrovaya-fotokamera-fujifilm-x-s10-body-i3938" class="popup__item" target="_blank">
+                    <div class="popup__item-logo">
+                        <img loading="lazy" src="./img/logos/msccity.png" alt="Лого магазина" class="popup__item-img">
+                    </div>
+                    <span class="popup__item-location">Махачкала</span>
+                </a>
+                <a href="https://fotomen.ru/bezzerkalnaya-fotokamera-fujifilm-x-s10-body-black/" class="popup__item" target="_blank">
+                    <div class="popup__item-logo">
+                        <img loading="lazy" src="./img/logos/fotomen.png" alt="Лого магазина" class="popup__item-img">
+                    </div>
+                    <span class="popup__item-location">Уфа</span>
+                </a>
+                <a href="https://digital30.ru/foto-video-tekhnika-120/fotoapparaty-4/fotoapparaty-fujifilm-14/fujifilm-x-s10-body-black" class="popup__item" target="_blank">
+                    <div class="popup__item-logo">
+                        <img loading="lazy" src="./img/logos/cifrovoy.png" alt="Лого магазина" class="popup__item-img">
+                    </div>
+                    <span class="popup__item-location">Астрахань</span>
+                </a>
+                <a href="https://binar-shop.ru/catalog/product/fotoapparat_so_smennoy_optikoy_fujifilm_x_s10_kit_18_55mm_f_2_8_4_0_ois_black/" class="popup__item" target="_blank">
+                    <div class="popup__item-logo">
+                        <img loading="lazy" src="./img/logos/binar.png" alt="Лого магазина" class="popup__item-img">
+                    </div>
+                    <span class="popup__item-location">Красноярск</span>
+                </a>
+                <a href="https://www.vlfoto.ru/product/tsifrovoy-bezzerkalnyy-fotoapparat-x-s10-body-black" class="popup__item" target="_blank">
+                    <div class="popup__item-logo">
+                        <img loading="lazy" src="./img/logos/vl-foto.png" alt="Лого магазина" class="popup__item-img">
+                    </div>
+                    <span class="popup__item-location">Владивосток</span>
+                </a>
+                <a href="http://fotik-npd.ru/fotoapparati/cifrovie-fotoapparati-so-smennoj-optikoj/fotoapparatiso-smennoj-optikoj-fujifilm/" class="popup__item" target="_blank">
+                    <div class="popup__item-logo">
+                        <img loading="lazy" src="./img/logos/photik.png" alt="Лого магазина" class="popup__item-img">
+                    </div>
+                    <span class="popup__item-location">Смоленск</span>
+                </a>
+                <a href="https://openschool.biz/product/fujifilm-x-s10/" class="popup__item" target="_blank">
+                    <div class="popup__item-logo">
+                        <img loading="lazy" src="./img/logos/otkr-shkola.png" alt="Лого магазина" class="popup__item-img">
+                    </div>
+                    <span class="popup__item-location">Казань</span>
+                </a>
+                <a href="https://fotomagazin.ru/" class="popup__item" target="_blank">
+                    <div class="popup__item-logo">
+                        <img loading="lazy" src="./img/logos/logo-photo-mgzn.jpg" alt="Лого магазина" class="popup__item-img">
+                    </div>
+                    <span class="popup__item-location">Воронеж</span>
+                </a>
+                <a href="http://acomplex.ru/katalog/fototehnika/fotoapparaty/fujifilm/" class="popup__item" target="_blank">
+                    <div class="popup__item-logo">
+                        <img loading="lazy" src="./img/logos/logo-dw.gif" alt="Лого магазина" class="popup__item-img">
+                    </div>
+                    <span class="popup__item-location">Самара, Казань</span>
+                </a>
+                <a href="https://interfoto.by/fotoapparaty/fujifilm-foto/x-series/xs10/" class="popup__item" target="_blank">
+                    <div class="popup__item-logo">
+                        <img loading="lazy" src="./img/logos/interfoto.png" alt="Лого магазина" class="popup__item-img">
+                    </div>
+                    <span class="popup__item-location">Минск</span>
+                </a>
+                <a href="https://vega.am/hy/" class="popup__item" target="_blank">
+                    <div class="popup__item-logo">
+                        <img loading="lazy" src="./img/logos/logo-vega.png" alt="Лого магазина" class="popup__item-img">
+                    </div>
+                    <span class="popup__item-location">Ереван</span>
+                </a>
+                <a href="https://dw.kz/catalog/digital-cameras/SLR/tsifrovoy_fotoapparat_fujifilm_x_s10_black_body/" class="popup__item" target="_blank">
+                    <div class="popup__item-logo">
+                        <img loading="lazy" src="./img/logos/logo-dw.gif" alt="Лого магазина" class="popup__item-img">
+                    </div>
+                    <span class="popup__item-location">Караганда</span>
+                </a>
+                <a href="https://www.technodom.kz/" class="popup__item" target="_blank">
+                    <div class="popup__item-logo">
+                        <img loading="lazy" src="./img/logos/td.png" alt="Лого магазина" class="popup__item-img">
+                    </div>
+                    <span class="popup__item-location">Алматы, Нурсултан и др.</span>
                 </a>
             </div>
         </div>

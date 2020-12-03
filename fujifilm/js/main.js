@@ -11,19 +11,22 @@ $(document).ready(() => {
 
     const scrollLinks = $('.js-scroll-link');
 
-    const videos = $('video');
+    let videos = $('video.video-unloaded');
 
     const scrollHandler = () => {
         $(window).get(0).pageYOffset > 40 ? $('.header').addClass('fixed') : $('.header').removeClass('fixed');
 
         const offset = 200;
 
-        videos.each(function(){
-            $(this).find('source').each(function(){
-                if($(this).data('src')){
-                    console.log($(this).data('src'));
-                }
-            });
+        videos.each(function(event){
+            if($(this).offset().top - $(window).get(0).pageYOffset < 1000){
+                $(this).attr('src', $(this).data('src'));
+                
+                $(this).removeClass('video-unloaded');
+                $(this).removeAttr('data-src');
+
+                videos = $('video.video-unloaded');
+            }
         });
 
         scrollLinks.each(function() {
@@ -167,7 +170,7 @@ $(document).ready(() => {
     
     scrollLinks.click(scrollLinkClick);
 
-    togglePopup('.js-popup-buy', true);
+    // togglePopup('.js-popup-buy', true);
 
     slidersInit();
 

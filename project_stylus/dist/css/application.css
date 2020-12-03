@@ -283,7 +283,6 @@ margin: 0 43rem 0 0;
 
 .floor-one {
 position: relative;
-display: flex;
 }
 .floor-one:hover .floor-help{
 color: #d29966;
@@ -291,6 +290,27 @@ color: #d29966;
 .floor-one .floor-tooltip{
 display: none;
 }
+.floor-sub .floor-one {
+    content: "";
+    display: table;
+    clear: both;
+}
+.floor-sub .floor-one .floor-one-sigle {
+    
+    float: left;
+}
+.floor-sub .floor-one .floor-help {
+    float: right;
+}
+
+.floor-sub .floor-one:first-child .floor-one-sigle{
+    height: 3.9rem;
+}
+
+.floor-sub .floor-one-sigle{
+    height: 2rem;
+}
+
 .floor-one-left, .floor-one-right{
 cursor: pointer;
 flex-shrink: 0;
@@ -410,7 +430,7 @@ height: 2rem;
 margin-bottom: 9px;
 }
 .floor-sub .floor-one {
-margin-top: 6px;
+margin-top: 5px;
 }
 .floor-main .floor-one:not(:last-child) {
     margin-bottom: 7px;
@@ -459,7 +479,7 @@ display: none;
 display: none;
 }
 .floor-sub .floor-one-sigle{
-width: 85rem;
+width: 83.2rem;
 margin-right: 1.5rem;
 background: rgba(210,153,102,0.7);
 opacity: 0;
