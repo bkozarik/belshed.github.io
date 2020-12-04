@@ -19,6 +19,7 @@
                         <li class="nav__item">
                             <a href="./index.html" class="nav__link active">Главная</a>
                         </li>
+                        <li class="nav__divide"></li>
                         <li class="nav__item">
                             <a href="#" class="nav__link">Все сливы</a>
                         </li>
@@ -39,19 +40,209 @@
         </div>
     </header>
     <main class="main">
+        <div class="filter">
+            <div class="container">
+                <div class="filter__wrap">
+                    <button class="button filter__trigger js-filters-trigger">
+                        <span class="filter__trigger-text">
+                            Фильтр поиска
+                        </span>
+                        <span class="filter__trigger-icon">
+                            <svg width="16" height="8">
+                                <use width="16" height="8" xlink:href="./img/icons.svg#arrow"></use>
+                            </svg>
+                        </span>
+                    </button>
+                    <form class="filter__body js-filters">
+                        <div class="filter__item js-filter-item">
+                            <select name="2">
+                                <option value="none" hidden>Цвет волос</option>
+                                <option value="1">Значение 1</option>
+                                <option value="2">Значение 2</option>
+                                <option value="3">Значение 3</option>
+                                <option value="4">Значение 4</option>
+                            </select>
+                        </div>
+                        <div class="filter__item js-filter-item">
+                            <select name="2">
+                                <option value="none" hidden>Возраст</option>
+                                <option value="1">Значение 1</option>
+                                <option value="2">Значение 2</option>
+                                <option value="3">Значение 3</option>
+                                <option value="4">Значение 4</option>
+                            </select>
+                        </div>
+                        <div class="filter__item js-filter-item">
+                            <select name="2">
+                                <option value="none" hidden>Телосложение</option>
+                                <option value="1">Значение 1</option>
+                                <option value="2">Значение 2</option>
+                                <option value="3">Значение 3</option>
+                                <option value="4">Значение 4</option>
+                            </select>
+                        </div>
+                        <div class="filter__item js-filter-item">
+                            <select name="2">
+                                <option value="none" hidden>Национальность</option>
+                                <option value="1">Значение 1</option>
+                                <option value="2">Значение 2</option>
+                                <option value="3">Значение 3</option>
+                                <option value="4">Значение 4</option>
+                            </select>
+                        </div>
+                        <div class="filter__item js-filter-item">
+                            <select name="2">
+                                <option value="none" hidden>Размер груди</option>
+                                <option value="1">Значение 1</option>
+                                <option value="2">Значение 2</option>
+                                <option value="3">Значение 3</option>
+                                <option value="4">Значение 4</option>
+                            </select>
+                        </div>
+                        <div class="filter__item js-filter-item">
+                            <select name="2">
+                                <option value="none" hidden>Тип груди</option>
+                                <option value="1">Значение 1</option>
+                                <option value="2">Значение 2</option>
+                                <option value="3">Значение 3</option>
+                                <option value="4">Значение 4</option>
+                            </select>
+                        </div>
+                        <div class="filter__item js-filter-item">
+                            <select name="2">
+                                <option value="none" hidden>Татуировки</option>
+                                <option value="1">Значение 1</option>
+                                <option value="2">Значение 2</option>
+                                <option value="3">Значение 3</option>
+                                <option value="4">Значение 4</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="button button_blue filter__button">Найти</button>
+                    </form>
+                </div>
+            </div>
+        </div>
         <section class="about">
             <div class="container">
                 <div class="about__wrap">
-                    <div class="about__slider slider">
+                    <div class="about__slider slider js-index-slider-container">
                         <div class="slider__top">
                             <span class="slider__title">Top Onlyfans</span>
                             <div class="slider__controls">
-                                <button class="button slider__control slider__control_prev"></button>
-                                <button class="button slider__control slider__control_next"></button>
+                                <button class="button slider__control slider__control_prev active">
+                                    <svg width="16" height="16">
+                                        <use width="16" height="16" xlink:href="./img/icons.svg#arrow"></use>
+                                    </svg>
+                                </button>
+                                <button class="button slider__control slider__control_next active">
+                                    <svg width="16" height="16">
+                                        <use width="16" height="16" xlink:href="./img/icons.svg#arrow"></use>
+                                    </svg>
+                                </button>
                             </div>
                         </div>
-                        <div class="slider__body">
-                            
+                        <div class="slider__body js-index-slider">
+                            <div class="swiper-wrapper">
+                                <article class="swiper-slide slider__item slider__item_free">
+                                    <img src="./img/temp-bg.jpg" alt="Фон" class="slider__bg">
+                                    <button class="button slider__item-settings"></button>
+                                    <a href="#" class="slider__item-ico">
+                                        <img src="./img/temp-bg.jpg" alt="Иконка модели">
+                                    </a>
+                                    <a href="#" class="slider__item-content">
+                                        <h3 class="slider__item-name">Shoot with Mads</h3>
+                                        <span class="slider__item-nickname">@nickname</span>
+                                    </a>
+                                </article>
+                                <article class="swiper-slide slider__item">
+                                    <img src="./img/temp-bg.jpg" alt="Фон" class="slider__bg">
+                                    <button class="button slider__item-settings"></button>
+                                    <a href="#" class="slider__item-ico">
+                                        <img src="./img/temp-bg.jpg" alt="Иконка модели">
+                                    </a>
+                                    <a href="#" class="slider__item-content">
+                                        <h3 class="slider__item-name">Shoot with Mads</h3>
+                                        <span class="slider__item-nickname">@nickname</span>
+                                    </a>
+                                </article>
+                                <article class="swiper-slide slider__item slider__item_free">
+                                    <img src="./img/temp-bg.jpg" alt="Фон" class="slider__bg">
+                                    <button class="button slider__item-settings"></button>
+                                    <a href="#" class="slider__item-ico">
+                                        <img src="./img/temp-bg.jpg" alt="Иконка модели">
+                                    </a>
+                                    <a href="#" class="slider__item-content">
+                                        <h3 class="slider__item-name">Shoot with Mads</h3>
+                                        <span class="slider__item-nickname">@nickname</span>
+                                    </a>
+                                </article>
+                                <article class="swiper-slide slider__item">
+                                    <img src="./img/temp-bg.jpg" alt="Фон" class="slider__bg">
+                                    <button class="button slider__item-settings"></button>
+                                    <a href="#" class="slider__item-ico">
+                                        <img src="./img/temp-bg.jpg" alt="Иконка модели">
+                                    </a>
+                                    <a href="#" class="slider__item-content">
+                                        <h3 class="slider__item-name">Shoot with Mads</h3>
+                                        <span class="slider__item-nickname">@nickname</span>
+                                    </a>
+                                </article>
+                                <article class="swiper-slide slider__item slider__item_free">
+                                    <img src="./img/temp-bg.jpg" alt="Фон" class="slider__bg">
+                                    <button class="button slider__item-settings"></button>
+                                    <a href="#" class="slider__item-ico">
+                                        <img src="./img/temp-bg.jpg" alt="Иконка модели">
+                                    </a>
+                                    <a href="#" class="slider__item-content">
+                                        <h3 class="slider__item-name">Shoot with Mads</h3>
+                                        <span class="slider__item-nickname">@nickname</span>
+                                    </a>
+                                </article>
+                                <article class="swiper-slide slider__item slider__item_free">
+                                    <img src="./img/temp-bg.jpg" alt="Фон" class="slider__bg">
+                                    <button class="button slider__item-settings"></button>
+                                    <a href="#" class="slider__item-ico">
+                                        <img src="./img/temp-bg.jpg" alt="Иконка модели">
+                                    </a>
+                                    <a href="#" class="slider__item-content">
+                                        <h3 class="slider__item-name">Shoot with Mads</h3>
+                                        <span class="slider__item-nickname">@nickname</span>
+                                    </a>
+                                </article>
+                                <article class="swiper-slide slider__item">
+                                    <img src="./img/temp-bg.jpg" alt="Фон" class="slider__bg">
+                                    <button class="button slider__item-settings"></button>
+                                    <a href="#" class="slider__item-ico">
+                                        <img src="./img/temp-bg.jpg" alt="Иконка модели">
+                                    </a>
+                                    <a href="#" class="slider__item-content">
+                                        <h3 class="slider__item-name">Shoot with Mads</h3>
+                                        <span class="slider__item-nickname">@nickname</span>
+                                    </a>
+                                </article>
+                                <article class="swiper-slide slider__item slider__item_free">
+                                    <img src="./img/temp-bg.jpg" alt="Фон" class="slider__bg">
+                                    <button class="button slider__item-settings"></button>
+                                    <a href="#" class="slider__item-ico">
+                                        <img src="./img/temp-bg.jpg" alt="Иконка модели">
+                                    </a>
+                                    <a href="#" class="slider__item-content">
+                                        <h3 class="slider__item-name">Shoot with Mads</h3>
+                                        <span class="slider__item-nickname">@nickname</span>
+                                    </a>
+                                </article>
+                                <article class="swiper-slide slider__item slider__item_free">
+                                    <img src="./img/temp-bg.jpg" alt="Фон" class="slider__bg">
+                                    <button class="button slider__item-settings"></button>
+                                    <a href="#" class="slider__item-ico">
+                                        <img src="./img/temp-bg.jpg" alt="Иконка модели">
+                                    </a>
+                                    <a href="#" class="slider__item-content">
+                                        <h3 class="slider__item-name">Shoot with Mads</h3>
+                                        <span class="slider__item-nickname">@nickname</span>
+                                    </a>
+                                </article>
+                            </div>
                         </div>
                     </div>
                     <div class="about__main">
@@ -70,7 +261,10 @@
             <div class="container">
                 <div class="prices__wrap">
                     <article class="tariff">
-                        <h3 class="tariff__name">One</h3>
+                        <div class="tariff__head">
+                            <h3 class="tariff__name">One</h3>
+                            <a href="#" target="_blank" class="button button_blue tariff__button">Купить</a>
+                        </div>
                         <span class="tariff__description">$3.00</span>
                         <ul class="tariff__list">
                             <li class="tariff__item">Слив одной модели</li>
@@ -78,7 +272,10 @@
                         <a href="#" target="_blank" class="button button_blue tariff__button">Купить доступ</a>
                     </article>
                     <article class="tariff">
-                        <h3 class="tariff__name">DEMO</h3>
+                        <div class="tariff__head">
+                            <h3 class="tariff__name">DEMO</h3>
+                            <a href="#" target="_blank" class="button button_blue tariff__button">Купить</a>
+                        </div>
                         <span class="tariff__description">Подписка $5.00 навсегда</span>
                         <ul class="tariff__list">
                             <li class="tariff__item">Слив одной модели</li>
@@ -87,7 +284,10 @@
                         <a href="#" target="_blank" class="button button_blue tariff__button">Купить доступ</a>
                     </article>
                     <article class="tariff">
-                        <h3 class="tariff__name">Premium</h3>
+                        <div class="tariff__head">
+                            <h3 class="tariff__name">Premium</h3>
+                            <a href="#" target="_blank" class="button button_pink tariff__button">Купить</a>
+                        </div>
                         <span class="tariff__description">Подписка $15.00 навсегда</span>
                         <ul class="tariff__list">
                             <li class="tariff__item">Слив одной модели</li>
@@ -96,7 +296,10 @@
                         <a href="#" target="_blank" class="button button_pink tariff__button">Купить доступ</a>
                     </article>
                     <article class="tariff">
-                        <h3 class="tariff__name">VIP</h3>
+                        <div class="tariff__head">
+                            <h3 class="tariff__name">VIP</h3>
+                            <a href="#" target="_blank" class="button button_pink tariff__button">Купить</a>
+                        </div>
                         <span class="tariff__description">Подписка $50.00 навсегда</span>
                         <ul class="tariff__list">
                             <li class="tariff__item">Слив одной модели</li>

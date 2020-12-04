@@ -1,6 +1,10 @@
 <svg>
-    <symbol id="search-ico" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="6" cy="6" r="5" stroke="#BD0CFF" stroke-width="2"/>
-        <line x1="9.70711" y1="10.2929" x2="14.4214" y2="15.0072" stroke="#BD0CFF" stroke-width="2"/>    
+    <symbol id="search-ico" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="6" cy="6" r="5" stroke-width="2"/>
+        <line x1="9.70711" y1="10.2929" x2="14.4214" y2="15.0072" stroke-width="2"/>    
+    </symbol>
+
+    <symbol id="arrow" width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1 17L9 9L1 1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
     </symbol>
 </svg>

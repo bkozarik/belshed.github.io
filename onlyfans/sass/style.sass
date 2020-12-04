@@ -1,6 +1,8 @@
 $text-black: #001A49
 $search-ico-color: #BD0CFF
-    
+
+$light-pink: #fcf3ff
+
 $transition: all .3s ease-out 0s
 
 input[type="text"]::-ms-clear,
@@ -111,6 +113,14 @@ section
         width: 100%
         justify-content: space-between
         list-style-type: none
+    &__divide
+        display: inline-block
+        width: 1px
+        height: 50px
+        background-color: $text-black
+        position: relative
+        opacity: .5
+        display: none
     &__link
         opacity: 0.5
         font-weight: bold
@@ -157,7 +167,6 @@ section
         margin-bottom: 5px
         svg
             fill: none
-        circle, line
             stroke: $search-ico-color
     &.focus
         &::after
@@ -174,12 +183,98 @@ section
         width: 100%
         height: 100%
 
+.filter
+    margin-top: 59px
+    position: relative
+    &.active
+        z-index: 3
+    &__body
+        border-radius: 20px
+        background-color: #E8F8FE
+        padding: 0px 75px
+        flex: 1 0 100%
+        transition: $transition
+        max-height: 0px
+        display: grid
+        grid-template-columns: repeat(4, 1fr)
+        column-gap: 130px
+        row-gap: 40px
+        overflow: hidden
+        &.active
+            overflow: visible
+            margin-top: 15px
+            max-height: none
+            padding: 45px 75px
+            margin-bottom: 10px
+    &__wrap
+        display: flex
+        flex-wrap: wrap
+        justify-content: flex-end
+    &__item
+        position: relative
+        display: flex
+        justify-content: flex-end
+        &-list
+            background-color: $light-pink
+            list-style-type: none
+            position: absolute
+            width: 100%
+            top: calc( 100% + 5px )
+            right: -5px
+            border-radius: 10px
+            overflow: hidden
+            box-shadow: 0 3px 13px 2px #f5e3fc
+            visibility: hidden
+            opacity: 0
+            transform: translateY(-20px)
+            transition: $transition
+            z-index: 2
+            &.active
+                visibility: visible
+                opacity: 1
+                transform: translateY(0px)
+        &-value
+            padding: 5px 10px
+            cursor: pointer
+            user-select: none
+            &:hover, &.active
+                background-color: #f5e3fc
+            & + &
+                border-top: 1px solid #f5e3fc
+        select
+            display: none
+    &__button
+        padding: 17px 62px
+    &__trigger
+        color: $text-black
+        font-size: 14px
+        font-weight: 400
+        &.active svg
+            transform: translate(-50%, -50%) rotate(-90deg)
+        &-icon
+            margin-left: 10px
+            vertical-align: middle
+            display: inline-block
+            height: 26px
+            width: 26px
+            border-radius: 50%
+            background: linear-gradient(35.71deg, rgba(26, 183, 241, .2) 9.11%, rgba(205, 16, 255, .2) 71.64%)
+            position: relative
+            svg
+                transition: $transition
+                position: absolute
+                top: 50%
+                left: 50%
+                transform: translate(-50%, -50%) rotate(90deg)
+                stroke: $search-ico-color
+
 .about
-    margin: 55px 0px 75px
+    margin: 40px 0px 75px
     &__wrap
         display: flex
     &__slider
         flex-basis: 44%
+        min-width: 0
     &__main
         padding: 60px 0px 80px 50px
         position: relative
@@ -190,28 +285,33 @@ section
             z-index: -1
             content: ''
             display: block
-            width: 100%
+            width: 770px
             height: 100%
             left: 0
             top: 0
             position: absolute
-            background-color: #fcf3ff
+            background-color: $light-pink
     &__content
         max-width: 480px
     &__title
         font-size: 64px
-        line-height: 150%
+        line-height: 100%
         font-weight: 700
+        margin-bottom: 10px
     &__subtitle
         font-size: 20px
         line-height: 150%
     &__text
-        margin-top: 1em
+        margin-top: 1.6em
+        line-height: 150%
         font-weight: 300
         &_medium
             font-weight: 500
 
 .slider
+    position: relative
+    margin-top: -70px
+    transition: $transition
     &__top
         display: flex
         align-items: center
@@ -221,10 +321,124 @@ section
         font-size: 24px
         line-height: 24px
         font-weight: 700
+    &__controls
+        user-select: none
+        display: flex
+        align-items: center
+    &__control
+        position: relative
+        height: 25px
+        width: 25px
+        border-radius: 50%
+        opacity: .6
+        pointer-events: none
+        & + &
+            margin-left: 15px
+        &:hover
+            background-color: #fcf3ffc7
+        &.active
+            opacity: 1
+            pointer-events: all
+        &_prev
+            transform: rotate(-180deg)
+        svg
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            stroke: #000000
+    &__body
+        overflow: hidden
+        .swiper-wrapper
+            max-height: 520px
+    &__item
+        padding: 10px
+        position: relative
+        border-radius: 10px
+        overflow: hidden
+        display: flex
+        align-items: flex-end
+        height: 155px
+        &::after
+            position: absolute
+            width: 100%
+            height: 50%
+            bottom: 0
+            left: 0
+            background-color: rgba(0, 0, 0, .1)
+            content: ''
+            z-index: -1
+        &-content
+            margin-left: 20px
+            display: block
+        &-name
+            font-weight: 700
+            font-size: 18px
+            line-height: 18px
+            color: #ffffff
+            margin-bottom: 5px
+        &-nickname
+            line-height: 12px
+            font-size: 12px
+            color: #ffffff
+            font-weight: 400
+        &-ico
+            height: 120px
+            width: 120px
+            border-radius: 100%
+            display: block
+            box-shadow: 0 0 0 2px #ffffff
+            overflow: hidden
+            flex-shrink: 0
+            margin-bottom: 5px
+            margin-left: 5px
+            img
+                width: 100%
+                height: 100%
+                object-fit: cover
+        &-settings
+            position: absolute
+            top: 15px
+            right: 10px
+            height: 25px
+            width: 25px
+            z-index: 5
+            border-radius: 50%
+            &:hover
+                background-color: rgba(0, 0, 0, .1)
+            svg
+                top: 50%
+                left: 50%
+                transform: translate(-50%, -50%)
+                fill: #fff
+        &_free::before
+            content: 'Free'
+            font-size: 12px
+            position: absolute
+            top: 5px
+            left: 10px
+            display: inline-block
+            padding: 10px 8px
+            background-color: rgba(0, 0, 0, .2)
+            z-index: 5
+            border-radius: 7px
+            font-weight: 500
+            color: #ffffff
+    &__bg
+        z-index: -1
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        object-fit: cover
+    &.slide
+        margin-top: -10px
 
 .prices
     padding-bottom: 60px
     &__wrap
+        flex-wrap: wrap
         display: flex
         align-items: stretch
         justify-content: space-around
@@ -236,13 +450,20 @@ section
     display: flex
     flex-direction: column
     align-items: center
-    padding-top: 35px
+    padding-top: 28px
+    &__head
+        display: flex
+        justify-content: center
+        width: 100%
+        margin-bottom: 10px
+        align-items: center
+        .button
+            display: none
     &__name
         font-weight: 700
         text-align: center
         font-size: 36px
         text-transform: uppercase
-        margin-bottom: 10px
     &__description
         font-size: 14px
         line-height: 16px

@@ -1,0 +1,178 @@
+@media screen and ( max-width: 1140px )
+    .filter
+        &__body
+            column-gap: 70px
+
+@media screen and ( max-width: 1120px )
+    .tariff
+        flex-basis: 33%
+        margin: 0px 20px 50px 
+
+@media screen and ( max-width: 1020px )
+
+    .prices
+        margin-top: 25px
+        padding-bottom: 0
+
+    .tariff
+        margin-bottom: 30px
+        &:last-child
+            margin-bottom: 0
+
+    .filter
+        margin-top: 10px
+
+    .about
+        margin-bottom: 20px
+        &__wrap
+            flex-direction: column
+            align-items: center
+        &__slider
+            margin-top: 0
+            width: 100%
+            max-width: 700px
+        &__content
+            // margin: 0 auto
+        &__main
+            max-width: 700px
+            margin: 25px auto 25px
+            padding: 25px 20px
+            &::before
+                width: 900px
+        &__text
+            margin-top: 1.2em
+
+@media screen and ( max-width: 960px )
+    .header
+        .search
+            margin: 0px 20px
+        .telegram
+            margin-left: 0
+    
+    .main
+        margin-top: 110px
+
+    .nav
+        margin: 0px auto 0px
+        max-width: 270px
+        &__divide
+            display: inline-block
+
+    .filter
+        &__body
+            column-gap: 40px
+
+@media screen and ( max-width: 870px )
+    .filter
+        &__body
+            padding: 0px 35px
+            &.active
+                padding: 35px
+
+@media screen and ( max-width: 820px )
+    .tariff
+        flex-basis: 40%
+
+@media screen and ( max-width: 800px )
+    .filter
+        &__body
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr))
+
+@media screen and ( max-width: 620px )
+    .header
+        .search
+            display: none
+
+    .tariff
+        flex-basis: 60%
+
+    .footer
+        &::after, .telegram_footer
+            display: inline-block
+
+@media screen and ( max-width: 530px )
+    .filter
+        .container
+            padding: 0
+        &__wrap > &__trigger
+            margin-right: 15px
+        &__body
+            column-gap: 20px
+            grid-template-columns: repeat(2, 1fr)
+
+@media screen and ( max-width: 500px )
+    .header
+        .telegram
+            width: 38px
+            overflow: hidden
+            &__img
+                height: 36px
+                width: auto
+
+    .tariff
+        flex-basis: 80%
+        margin: 0px 0px 50px
+        box-shadow: 0px 4px 10px 4px rgba(152,149,149,0.2)
+        &__name
+            font-size: 30px
+            line-height: 32px
+        &__button
+            padding: 18px
+
+@media screen and ( max-width: 460px )
+    
+    .slider
+        max-width: 300px
+        &__item
+            &-name
+                font-size: 16px
+                margin-bottom: 0
+            &-ico
+                height: 100px
+                width: 100px
+
+    .tariff
+        flex-basis: 77%
+        padding: 15px 0px 15px 10px
+        align-items: flex-start
+        &>.button
+            display: none
+        &__head
+            justify-content: space-between
+            margin-bottom: 10px
+            .button
+                display: inline-block
+        &__name
+            font-size: 24px
+            line-height: 24px
+        &__description, &__list
+            padding-right: 10px
+            text-align: left
+        &__description
+            margin-bottom: 13px
+        &__list
+            padding-left: 20px
+            margin-bottom: 0
+        &__button
+            text-transform: uppercase
+            font-size: 12px
+            font-weight: 700
+            padding: 10px
+            width: auto
+            max-width: none
+
+@media screen and ( max-width: 365px )
+    .filter
+        &__body
+            grid-template-columns: repeat(1, 1fr)
+    
+    .about
+        &__title
+            font-size: 54px
+        &__subtitle
+            font-size: 18px
+            line-height: 130%
+
+@media screen and ( max-width: 340px )
+    .nav
+        max-width: 230px
