@@ -7,4 +7,10 @@
     <symbol id="arrow" width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M1 17L9 9L1 1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
     </symbol>
+
+    <symbol version="1.1" id="more" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 384 384" style="enable-background:new 0 0 384 384;" xml:space="preserve">
+        <circle cx="192" cy="42.667" r="42.667"/>
+        <circle cx="192" cy="192" r="42.667"/>
+        <circle cx="192" cy="341.333" r="42.667"/>
+    </symbol>
 </svg>
