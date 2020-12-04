@@ -18,17 +18,6 @@ $(document).ready(() => {
 
     let videos = $('video.video-unloaded');
 
-    // videos.each(function(event){
-    //     if($(this).offset().top - $(window).get(0).pageYOffset < 2000 || true){
-    //         $(this).attr('src', $(this).data('src'));
-            
-    //         $(this).removeClass('video-unloaded');
-    //         $(this).removeAttr('data-src');
-
-    //         videos = $('video.video-unloaded');
-    //     }
-    // });
-
     const scrollHandler = () => {
         window.pageYOffset > 40 ? header.classList.add('fixed') : header.classList.remove('fixed');
 
@@ -89,12 +78,11 @@ $(document).ready(() => {
     const slidersInit = () => {
         let slider_1 = $('.js-slider-color').get(0);
         let slider_2 = $('.js-slider-examples').get(0);
-        
+
         let slider_1_obj = new Swiper(slider_1, {
             slidesPerView: 1,
             speed: 700,
             watchSlidesVisibility: true,
-            autoHeight: true,
             lazy: {
                 loadPrevNext: false,
                 loadOnTransitionStart: true,
@@ -115,7 +103,6 @@ $(document).ready(() => {
             slidesPerView: 1,
             speed: 700,
             watchSlidesVisibility: true,
-            autoHeight: true,
             lazy: {
                 loadPrevNext: false,
                 loadOnTransitionStart: true,
@@ -128,7 +115,6 @@ $(document).ready(() => {
             pagination: {
                 dynamicBullets: true,
                 el: '.slider__pagination.swiper-pagination',
-                // dynamicMainBullets: 20,
                 clickable: true,
             }
         });
@@ -220,7 +206,7 @@ $(document).ready(() => {
         }
     }
     
-    const setupVideo = (video) => {
+    const setupVideo = video => {
         let link = video.querySelector('.review__link');
         let media = video.querySelector('.review__media');
         let button = video.querySelector('.review__button');
@@ -237,7 +223,7 @@ $(document).ready(() => {
         video.classList.add('review--enabled');
     }
     
-    const parseMediaURL = (media) => {
+    const parseMediaURL = media => {
         let regexp = /https:\/\/i\.ytimg\.com\/vi\/([a-zA-Z0-9_-]+)\/maxresdefault\.jpg/i;
         let url = media.src;
         let match = url.match(regexp);
@@ -245,7 +231,7 @@ $(document).ready(() => {
         return match[1];
     }
     
-    const createIframe = (id) => {
+    const createIframe = id => {
         let iframe = document.createElement('iframe');
     
         iframe.setAttribute('allowfullscreen', '');
@@ -256,7 +242,7 @@ $(document).ready(() => {
         return iframe;
     }
     
-    const generateURL = (id) => {
+    const generateURL = id => {
         let query = '?rel=0&showinfo=0&autoplay=1';
     
         return 'https://www.youtube.com/embed/' + id + query;
