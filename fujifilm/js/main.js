@@ -1,5 +1,4 @@
 $(document).ready(() => {
-
     const popupBuyTrigger = $('.js-open-popup-buy');
     const popupTableTrigger = $('.js-open-popup-table');
     const popupTestdriveTrigger = $('.js-open-popup-testdrive');
@@ -14,13 +13,13 @@ $(document).ready(() => {
 
     const scrollLinks = $('.js-scroll-link');
 
+    const asideBody = $('.js-aside-body')
+
     const header  = document.querySelector('.header');
 
     let videos = $('video.video-unloaded');
 
     const scrollHandler = () => {
-        window.pageYOffset > 40 ? header.classList.add('fixed') : header.classList.remove('fixed');
-
         const offset = 200;
 
         videos.each(function(event){
@@ -129,6 +128,35 @@ $(document).ready(() => {
         });
     }
 
+    const asideBodyToggle = (state=null) => {
+        if(state == null){
+            return () => {
+                if(event.target.classList.contains('js-aside-body')){
+                    asideBody.addClass('active');
+
+                    $(document).click(function(event){
+                        if(!event.target.classList.contains('js-aside-body')) asideBody.removeClass('active');
+                    });
+                    
+                    asideBody.mouseleave(function(event){
+                        setTimeout(asideBodyToggle, 500, false);
+                    });
+                }
+            }
+        }
+        else{
+            state ? asideBody.addClass('active') : asideBody.removeClass('active');
+
+            $(document).click(function(event){
+                if(!event.target.classList.contains('js-aside-body')) asideBody.removeClass('active');
+            });
+
+            asideBody.mouseleave(function(event){
+                setTimeout(asideBodyToggle, 500, false);
+            });
+        }
+    }
+
     const closePopupByOverlayClick = () => {
         $(document).click(() => $(event.target).hasClass('popup__overlay') ? closePopup() : null);
     }
@@ -169,11 +197,13 @@ $(document).ready(() => {
 
         event.preventDefault();
         toggleNav(false);
+        asideBodyToggle(false);
         let targetLink = $(event.target);
 
         while(!targetLink.hasClass('js-scroll-link')){
             targetLink = targetLink.parent();
         }
+
         const targetId = targetLink.attr('href');
         const targetTopOffset = $(targetId).offset().top;
 
@@ -248,7 +278,7 @@ $(document).ready(() => {
         return 'https://www.youtube.com/embed/' + id + query;
     }
     
-    window.addEventListener('scroll', scrollHandler);
+    $(window).scroll(scrollHandler);
     $(window).resize(resizeHandler);
     
     popupCloseTrigger.click(closePopup);
@@ -264,6 +294,8 @@ $(document).ready(() => {
     navTrigger.click(toggleNav);
 
     slidersInit();
+
+    asideBody.click(asideBodyToggle());
 
     resizeHandler();
     scrollHandler();

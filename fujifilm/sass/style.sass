@@ -56,7 +56,6 @@ section
 
 .main
     flex-grow: 1
-    margin-top: 98px
 
 .container
     max-width: 1230px
@@ -131,7 +130,7 @@ section
             background-color: $text-hover
 
 .header
-    position: fixed
+    position: relative
     top: 0
     left: 0
     width: 100%
@@ -270,13 +269,13 @@ section
     &__camera, &__cart, &__nav
         background-color: $main_red
         border-radius: 20px 0px 0px 20px
-        padding: 13px
+        padding: 13px 13px 11px 13px
         color: #ffffff
         font-weight: 600
         text-transform: none
         svg
             fill: #ffffff
-            margin-right: 18px
+            margin-right: 23px
         &:hover
             transform: translateX(0px)
     &__nav
@@ -289,15 +288,50 @@ section
         margin-top: 8px
         transform: translateX(83px)
     &__body
-        margin-top: 20px
+        margin-top: 8px
         border-radius: 20px 0px 0px 20px
         background-color: $main_red
-        padding: 39px 2px 55px 6px
         display: flex
         flex-direction: column
         align-items: center
-        width: 35px
+        width: 39px
         position: relative
+        max-height: 46px
+        overflow: hidden
+        padding: 0
+        transition: $transition
+        cursor: pointer
+        svg
+            pointer-events: none
+            fill: #ffffff
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+        &::before
+            content: ''
+            display: inline-block
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+        .aside__link
+            visibility: hidden
+            opacity: 0
+        &.active
+            padding: 39px 2px 55px 6px
+            width: 36px
+            margin-top: 20px
+            max-height: none
+            overflow: visible
+            cursor: default
+            svg
+                display: none
+            &::before
+                display: none
+            .aside__link
+                visibility: visible
+                opacity: 1
     &__link
         position: relative
         display: inline-block
@@ -845,7 +879,6 @@ a.text
                 background-color: #ffffff
                 box-shadow: 0 0 0 4px $main_red
     
-
 .sooc
     padding-top: 50px
     padding-bottom: 70px
@@ -1004,6 +1037,8 @@ a.text
     &__button:focus &__button-shape 
         fill: $main_red
         fill-opacity: 1
+    &_outer &__button
+        display: none
     &--enabled 
         cursor: pointer
     &--enabled &__button 
@@ -1016,20 +1051,21 @@ a.text
         flex-direction: column
         margin-bottom: -20px
     &__title
-        font-size: 37px
+        font-size: 36.6px
         font-weight: 800
         text-transform: uppercase
         line-height: 40px
-        margin-top: 35px
+        margin-top: 15px
     &__row
         display: flex
         align-items: center
         .column
             flex-basis: 42%
         .column + .column
-            margin-left: 50px
+            margin-left: 55px
     &__logo
-        width: 100%
+        width: 196px
+        height: 33px
         max-width: 100%
     &__socials
         display: flex
@@ -1118,6 +1154,7 @@ a.text
         flex-direction: column
         max-width: 230px
         padding: 10px
+        transition: $transition
         &-logo
             display: flex
             align-items: center
@@ -1127,7 +1164,8 @@ a.text
             padding: 10px
         &-img
             width: 100%
-            max-width: 100px
+            max-width: 140px
+            max-height: 70px
             height: auto
             object-fit: contain
         &-location
@@ -1175,6 +1213,8 @@ a.text
         width: 100%
         min-width: 750px
         border-spacing: 0px
+        &-bg
+            background-color: $bg-grey
         &-img
             max-width: 100%
             width: 100%

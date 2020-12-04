@@ -100,8 +100,11 @@
                 <span>Купить</span>
             </button>
         </div>
-        <div class="aside__body">
-            <a href="#pro" class="aside__link js-scroll-link active">
+        <div class="aside__body js-aside-body">
+            <svg id="aside-arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                <path d="M508.875,248.458l-160-160c-4.167-4.167-10.917-4.167-15.083,0c-4.167,4.167-4.167,10.917,0,15.083l141.792,141.792   H10.667C4.771,245.333,0,250.104,0,256s4.771,10.667,10.667,10.667h464.917L333.792,408.458c-4.167,4.167-4.167,10.917,0,15.083   c2.083,2.083,4.813,3.125,7.542,3.125c2.729,0,5.458-1.042,7.542-3.125l160-160C513.042,259.375,513.042,252.625,508.875,248.458z   "/>
+            </svg>
+            <a href="#pro" class="aside__link js-scroll-link">
                 <span class="aside__text">Профессиональная камера</span>
                 <span class="aside__bullet"></span>
             </a>
@@ -820,52 +823,10 @@
             <div class="container container_bigger">
                 <h2 class="section__title section__title_tac">ОБЗОРЫ</h2>
                 <div class="reviews__body mt-50">
-                    <div class="reviews__item review">
-                        <!-- ссылка на видео в ютубе,  везде нужно менять только "gQPM9IuNv8k", это id видео -->
-                        <a class="review__link" href="https://youtu.be/gQPM9IuNv8k"> 
-                            <picture>
-                                <!-- ссылка на превью в формате webp -->
-                                <source srcset="https://i.ytimg.com/vi_webp/gQPM9IuNv8k/maxresdefault.webp" type="image/webp">
-                                    <!-- ссылка на превью в формате jpg -->
-                                <img class="review__media" src="https://i.ytimg.com/vi/gQPM9IuNv8k/maxresdefault.jpg" alt="Ембед видео">
-                            </picture>
-                        </a>
-                        <button class="review__button" aria-label="Запустить видео">
-                            <svg width="68" height="48" viewBox="0 0 68 48"><path class="review__button-shape" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"></path><path class="review__button-icon" d="M 45,24 27,14 27,34"></path></svg>
-                        </button>
-                    </div>
-                    <div class="reviews__item review">
-                        <!-- ссылка на видео в ютубе,  везде нужно менять только "gQPM9IuNv8k", это id видео -->
-                        <a class="review__link" href="https://youtu.be/gQPM9IuNv8k"> 
-                            <picture>
-                                <!-- ссылка на превью в формате webp -->
-                                <source srcset="https://i.ytimg.com/vi_webp/gQPM9IuNv8k/maxresdefault.webp" type="image/webp">
-                                    <!-- ссылка на превью в формате jpg -->
-                                <img class="review__media" src="https://i.ytimg.com/vi/gQPM9IuNv8k/maxresdefault.jpg" alt="Ембед видео">
-                            </picture>
-                        </a>
-                        <button class="review__button" aria-label="Запустить видео">
-                            <svg width="68" height="48" viewBox="0 0 68 48"><path class="review__button-shape" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"></path><path class="review__button-icon" d="M 45,24 27,14 27,34"></path></svg>
-                        </button>
-                    </div>
-                    <div class="reviews__item review-outer">
-                        <!-- ссылка на видео в ютубе,  везде нужно менять только "gQPM9IuNv8k", это id видео -->
+                    <div class="reviews__item review_outer">
                         <a class="review__link" target="_blank" href="https://youtu.be/gQPM9IuNv8k"> 
                             <picture>
-                                <!-- ссылка на превью в формате webp -->
                                 <source srcset="https://i.ytimg.com/vi_webp/gQPM9IuNv8k/maxresdefault.webp" type="image/webp">
-                                    <!-- ссылка на превью в формате jpg -->
-                                <img class="review__media" src="https://i.ytimg.com/vi/gQPM9IuNv8k/maxresdefault.jpg" alt="Ембед видео">
-                            </picture>
-                        </a>
-                    </div>
-                    <div class="reviews__item review">
-                        <!-- ссылка на видео в ютубе,  везде нужно менять только "gQPM9IuNv8k", это id видео -->
-                        <a class="review__link" href="https://youtu.be/gQPM9IuNv8k"> 
-                            <picture>
-                                <!-- ссылка на превью в формате webp -->
-                                <source srcset="https://i.ytimg.com/vi_webp/gQPM9IuNv8k/maxresdefault.webp" type="image/webp">
-                                    <!-- ссылка на превью в формате jpg -->
                                 <img class="review__media" src="https://i.ytimg.com/vi/gQPM9IuNv8k/maxresdefault.jpg" alt="Ембед видео">
                             </picture>
                         </a>
@@ -874,13 +835,13 @@
                         </button>
                     </div>
                     <div class="reviews__item review">
-                        <!-- ссылка на видео в ютубе,  везде нужно менять только "gQPM9IuNv8k", это id видео -->
-                        <a class="review__link" href="https://youtu.be/gQPM9IuNv8k"> 
+                        <!-- ссылка на видео в ютубе,  везде нужно менять только "QTVpR9vQ_ps", это id видео -->
+                        <a class="review__link" href="https://youtu.be/QTVpR9vQ_ps"> 
                             <picture>
                                 <!-- ссылка на превью в формате webp -->
-                                <source srcset="https://i.ytimg.com/vi_webp/gQPM9IuNv8k/maxresdefault.webp" type="image/webp">
+                                <source srcset="https://i.ytimg.com/vi_webp/QTVpR9vQ_ps/maxresdefault.webp" type="image/webp">
                                     <!-- ссылка на превью в формате jpg -->
-                                <img class="review__media" src="https://i.ytimg.com/vi/gQPM9IuNv8k/maxresdefault.jpg" alt="Ембед видео">
+                                <img class="review__media" src="https://i.ytimg.com/vi/QTVpR9vQ_ps/maxresdefault.jpg" alt="Ембед видео">
                             </picture>
                         </a>
                         <button class="review__button" aria-label="Запустить видео">
@@ -888,12 +849,51 @@
                         </button>
                     </div>
                     <div class="reviews__item review">
-                        <!-- ссылка на видео в ютубе,  везде нужно менять только "gQPM9IuNv8k", это id видео -->
-                        <a class="review__link" href="https://youtu.be/gQPM9IuNv8k"> 
+                        <!-- ссылка на видео в ютубе,  везде нужно менять только "Set5ndznC9c", это id видео -->
+                        <a class="review__link" href="https://youtu.be/Set5ndznC9c"> 
                             <picture>
                                 <!-- ссылка на превью в формате webp -->
-                                <source srcset="https://i.ytimg.com/vi_webp/gQPM9IuNv8k/maxresdefault.webp" type="image/webp">
+                                <source srcset="https://i.ytimg.com/vi_webp/Set5ndznC9c/maxresdefault.webp" type="image/webp">
                                     <!-- ссылка на превью в формате jpg -->
+                                <img class="review__media" src="https://i.ytimg.com/vi/Set5ndznC9c/maxresdefault.jpg" alt="Ембед видео">
+                            </picture>
+                        </a>
+                        <button class="review__button" aria-label="Запустить видео">
+                            <svg width="68" height="48" viewBox="0 0 68 48"><path class="review__button-shape" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"></path><path class="review__button-icon" d="M 45,24 27,14 27,34"></path></svg>
+                        </button>
+                    </div>
+                    <div class="reviews__item review">
+                        <!-- ссылка на видео в ютубе,  везде нужно менять только "3zO99iVy2eY", это id видео -->
+                        <a class="review__link" target="_blank" href="https://youtu.be/3zO99iVy2eY"> 
+                            <picture>
+                                <!-- ссылка на превью в формате webp -->
+                                <source srcset="https://i.ytimg.com/vi_webp/3zO99iVy2eY/maxresdefault.webp" type="image/webp">
+                                    <!-- ссылка на превью в формате jpg -->
+                                <img class="review__media" src="https://i.ytimg.com/vi/3zO99iVy2eY/maxresdefault.jpg" alt="Ембед видео">
+                            </picture>
+                        </a>
+                        <button class="review__button" aria-label="Запустить видео">
+                            <svg width="68" height="48" viewBox="0 0 68 48"><path class="review__button-shape" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"></path><path class="review__button-icon" d="M 45,24 27,14 27,34"></path></svg>
+                        </button>
+                    </div>
+                    <div class="reviews__item review">
+                        <!-- ссылка на видео в ютубе,  везде нужно менять только "UctXhZlrm64", это id видео -->
+                        <a class="review__link" href="https://youtu.be/UctXhZlrm64"> 
+                            <picture>
+                                <!-- ссылка на превью в формате webp -->
+                                <source srcset="https://i.ytimg.com/vi_webp/UctXhZlrm64/maxresdefault.webp" type="image/webp">
+                                    <!-- ссылка на превью в формате jpg -->
+                                <img class="review__media" src="https://i.ytimg.com/vi/UctXhZlrm64/maxresdefault.jpg" alt="Ембед видео">
+                            </picture>
+                        </a>
+                        <button class="review__button" aria-label="Запустить видео">
+                            <svg width="68" height="48" viewBox="0 0 68 48"><path class="review__button-shape" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"></path><path class="review__button-icon" d="M 45,24 27,14 27,34"></path></svg>
+                        </button>
+                    </div>
+                    <div class="reviews__item review_outer">
+                        <a class="review__link" target="_blank" href="https://dphotoworld.net/publ/testy_i_obzory/obzor_fujifilm_x_s10/6-1-0-1174"> 
+                            <picture>
+                                <source srcset="https://i.ytimg.com/vi_webp/gQPM9IuNv8k/maxresdefault.webp" type="image/webp">
                                 <img class="review__media" src="https://i.ytimg.com/vi/gQPM9IuNv8k/maxresdefault.jpg" alt="Ембед видео">
                             </picture>
                         </a>
@@ -1026,7 +1026,37 @@
                     <div class="column__inner">
                         <div class="footer__row">
                             <div class="column">
-                                <img  class="footer__logo" src="./img/logo-black.png" alt="Fujifilm">
+                                <svg class="footer__logo" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" id="svg25166" viewBox="0 0 1028.9351 171.233" height="171.233" width="1028.9351" inkscape:version="0.91 r13725" sodipodi:docname="Fujifilm_logo.svg">
+                                    <g id="g5512" transform="matrix(2.0661355,0,0,2.0661355,0,-4.1323115)">
+                                        <g style="fill:#000000" transform="matrix(4.3916816,0,0,-4.3916816,379.3486,2.01011)" id="g24728">
+                                        <path id="path24730" style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none" d="m 0,0 0,-14.77 c 0,-0.96 0.474,-1.453 1.44,-1.502 0.012,-0.001 4.867,-0.001 4.867,-0.001 l 0,-1.657 c 0,-0.185 -0.1,-0.315 -0.306,-0.315 l -7.879,0 c -2.434,0 -2.794,1.34 -2.794,2.557 l 0,14.684 c 0,0.693 0.264,1.021 1.083,1.003 L 0,0" inkscape:connector-curvature="0"/>
+                                        </g>
+                                        <g style="fill:#000000" transform="matrix(4.3916816,0,0,-4.3916816,339.47168,2.01011)" id="g24732">
+                                        <path id="path24734" style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none" d="m 0,0 0.001,-17.283 c 0,-0.769 -0.326,-0.962 -0.98,-0.962 l -3.697,0 0,17.291 c 0,0.57 0.218,0.953 1.047,0.953 L 0,0" inkscape:connector-curvature="0"/>
+                                        </g>
+                                        <g style="fill:#000000" transform="matrix(4.3916816,0,0,-4.3916816,0,13.05386)" id="g24736">
+                                        <path id="path24738" style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none" d="m 0,0 c 0,1.391 0.003,2.517 2.288,2.517 l 10.044,0 0,-1.756 c 0,-0.125 -0.059,-0.238 -0.234,-0.238 L 6.079,0.525 C 5.27,0.525 4.863,0.137 4.863,-0.679 l 0,-4.633 7.082,0 10e-4,-1.84 c 0,-0.163 -0.102,-0.249 -0.262,-0.249 l -6.821,0 0,-7.351 C 4.848,-15.461 4.494,-15.743 3.716,-15.729 L 0,-15.729 0,0" inkscape:connector-curvature="0"/>
+                                        </g>
+                                        <g style="fill:#000000" transform="matrix(4.3916816,0,0,-4.3916816,86.0146,2.00221)" id="g24740">
+                                        <path id="path24742" style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none" d="m 0,0 0,-13.907 c 0,-1.194 0.169,-2.031 1.007,-2.515 1.123,-0.65 3.025,-0.66 4.17,-0.018 0.783,0.437 1.082,1.139 1.082,2.529 l 0,12.984 C 6.259,-0.343 6.482,0 7.298,0 l 3.635,0 10e-4,-13.496 c 0,-3.135 -1.974,-4.421 -3.719,-4.898 -2.322,-0.633 -5.849,-0.643 -8.04,0.015 -2.618,0.788 -3.841,2.338 -3.844,4.882 l -0.002,12.56 C -4.671,-0.331 -4.453,0 -3.756,0 L 0,0" inkscape:connector-curvature="0"/>
+                                        </g>
+                                        <g style="fill:#000000" transform="matrix(4.3916816,0,0,-4.3916816,474.26296,2.01451)" id="g24744">
+                                        <path id="path24746" style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none" d="M 0,0 C -0.922,0 -1.448,-0.43 -1.656,-1.253 L -4.633,-13.834 -4.714,-13.832 -7.789,0 -11.993,0 c -0.811,0 -1.066,-0.417 -1.066,-1.061 l 0,-17.183 1.776,0 c 0.286,0 0.404,0.142 0.404,0.433 l 0,14.407 0.281,0 3.801,-14.84 2.489,0 c 0.938,0 1.287,0.385 1.518,1.312 l 3.412,13.528 0.276,0 -0.001,-14.84 3.321,0.005 c 0.815,0 1.187,0.313 1.187,1.114 l 0,17.126 L 0,0" inkscape:connector-curvature="0"/>
+                                        </g>
+                                        <g style="fill:#000000" transform="matrix(4.3916816,0,0,-4.3916816,231.57952,45.55406)" id="g24748">
+                                        <path id="path24750" style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none" d="m 0,0 -4.674,0 0,-8.33 3.696,0 c 0.651,0 0.979,0.191 0.979,0.962 C 0.001,-7.368 0,-3.805 0,0" inkscape:connector-curvature="0"/>
+                                        </g>
+                                        <g transform="matrix(4.3916816,0,0,-4.3916816,230.38322,29.92143)" id="g24752">
+                                        <path id="path24754" style="fill:#ed1a3a;fill-opacity:1;fill-rule:nonzero;stroke:none" d="m 0,0 c 0.164,0.133 0.26,0.233 0.272,0.519 l 0,5.835 -3.629,0 c -0.817,0 -1.044,-0.399 -1.044,-0.967 l 0,-8.834 L 0,0" inkscape:connector-curvature="0"/>
+                                        </g>
+                                        <g style="fill:#000000" transform="matrix(4.3916816,0,0,-4.3916816,160.01264,75.79827)" id="g24756">
+                                        <path id="path24758" style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none" d="m 0,0 c 2.03,0.287 2.705,1.493 2.705,3.271 l 0,12.54 c 0,0.75 0.406,0.993 0.93,0.993 l 3.744,0 0,-11.857 C 7.379,2.031 6.765,0.558 5.038,-0.685 4.139,-1.33 2.567,-2.066 -0.839,-2.066 c -1.95,0 -2.817,0.11 -2.934,0.137 -0.165,0.038 -0.232,0.139 -0.232,0.282 l 0,1.531 C -3.204,-0.139 -1.37,-0.195 0,0" inkscape:connector-curvature="0"/>
+                                        </g>
+                                        <g style="fill:#000000" transform="matrix(4.3916816,0,0,-4.3916816,262.67744,2.00221)" id="g24760">
+                                        <path id="path24762" style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none" d="m 0,0 c -2.283,0 -2.284,-1.126 -2.284,-2.517 l 0,-4.701 c 0,-0.097 -0.042,-0.136 -0.086,-0.179 l -3.197,-2.519 3.283,0 0,-8.329 3.714,0 c 0.778,-0.015 1.132,0.268 1.145,0.976 l 0,7.351 6.821,0 c 0.16,0 0.263,0.087 0.263,0.249 l 0,1.841 -7.084,0 0,4.633 c 0,0.815 0.408,1.204 1.216,1.204 l 6.021,-0.002 c 0.173,0 0.234,0.112 0.234,0.237 L 10.046,0 0,0" inkscape:connector-curvature="0"/>
+                                        </g>
+                                    </g>
+                                </svg>
                             </div>
                             <div class="column">
                                 <img  class="footer__logo" src="./img/x-s10-logo.png" alt="Лого камеры">
@@ -1095,169 +1125,169 @@
         <div class="popup">
             <button class="popup__close js-close-popup"></button>
             <div class="popup__body">
-                <a href="https://www.yarkiy.ru/goods/40547-fujifilm-x-s10-body" class="popup__item" target="_blank">
+                <a href="http://shopfujifilm.ru/goods/37210-fujifilm-x-s10-body?utm_source=landing_page_xs10&utm_medium=organic&utm_campaign=xs10" class="popup__item" target="_blank">
+                    <div class="popup__item-logo">
+                        <img  src="./img/logos/fuji-logo.png" alt="Лого магазина" class="popup__item-img">
+                    </div>
+                    <span class="popup__item-location">Вся Россия</span>
+                </a>
+                <a href="http://www.yarkiy.ru/goods/40547-fujifilm-x-s10-body?utm_source=landing_page_xs10&utm_medium=organic&utm_campaign=xs10" class="popup__item" target="_blank">
                     <div class="popup__item-logo">
                         <img  src="./img/logos/yarkiy-mini.png" alt="Лого магазина" class="popup__item-img">
                     </div>
                     <span class="popup__item-location">Москва, Санкт-Петербург, Ростов-на-дону, Выборг, Краснодар</span>
                 </a>
-                <a href="https://www.onlinetrade.ru/catalogue/tsifrovye_fotoapparaty_so_smennoy_optikoy-c268/fujifilm/tsifrovoy_fotoapparat_fujifilm_x_s10_body_black_16670041-2349842.html" class="popup__item" target="_blank">
+                <a href="http://www.onlinetrade.ru/catalogue/tsifrovye_fotoapparaty_so_smennoy_optikoy-c268/fujifilm/tsifrovoy_fotoapparat_fujifilm_x_s10_body_black_16670041-2349842.html?utm_source=landing_page_xs10&utm_medium=organic&utm_campaign=xs10 " class="popup__item" target="_blank">
                     <div class="popup__item-logo">
                         <img  src="./img/logos/onlinetr.png" alt="Лого магазина" class="popup__item-img">
                     </div>
                     <span class="popup__item-location">Москва, Краснодар, Нижний Новогород, Самара, Тула</span>
                 </a>
-                <a href="https://www.mvideo.ru/products/fotoapparat-sistemnyi-fujifilm-x-s10-body-10025361" class="popup__item" target="_blank">
+                <a href="http://www.mvideo.ru/products/fotoapparat-sistemnyi-fujifilm-x-s10-body-10025361?utm_source=landing_page_xs10&utm_medium=organic&utm_campaign=xs10" class="popup__item" target="_blank">
                     <div class="popup__item-logo">
                         <img  src="./img/logos/mvideo.png" alt="Лого магазина" class="popup__item-img">
                     </div>
                     <span class="popup__item-location">Вся Россия</span>
                 </a>
-                <a href="https://www.dns-shop.ru/product/4295494f11d23332/fujifilm-x-s10-kit-18-55/" class="popup__item" target="_blank">
+                <a href="http://www.dns-shop.ru/product/4295494f11d23332/fujifilm-x-s10-kit-18-55/?utm_source=landing_page_xs10&utm_medium=organic&utm_campaign=xs10" class="popup__item" target="_blank">
                     <div class="popup__item-logo">
                         <img  src="./img/logos/dns.jpg" alt="Лого магазина" class="popup__item-img">
                     </div>
                     <span class="popup__item-location">Вся Россия</span>
                 </a>
-                <a href="https://www.svyaznoy.ru/" class="popup__item" target="_blank">
-                    <div class="popup__item-logo">
-                        <img  src="./img/logos/svyaznoy.png" alt="Лого магазина" class="popup__item-img">
-                    </div>
-                    <span class="popup__item-location">Вся Россия</span>
-                </a>
-                <a href="https://pixel24.ru/catalog/view/id/55671" class="popup__item" target="_blank">
+                <a href="http://pixel24.ru/catalog/view/id/55671?utm_source=landing_page_xs10&utm_medium=organic&utm_campaign=xs10" class="popup__item" target="_blank">
                     <div class="popup__item-logo">
                         <img  src="./img/logos/pxl24-3.png" alt="Лого магазина" class="popup__item-img">
                     </div>
                     <span class="popup__item-location">Москва</span>
                 </a>
-                <a href="https://photosale.ru/fototechnika/fotoapparaty_tsifrovye/fujifilm_x_s10_body_black/?sphrase_id=451888" class="popup__item" target="_blank">
+                <a href="http://photosale.ru/fototechnika/fotoapparaty_tsifrovye/fujifilm_x_s10_body_black/?sphrase_id=451888&utm_source=landing_page_xs10&utm_medium=organic&utm_campaign=xs10" class="popup__item" target="_blank">
                     <div class="popup__item-logo">
                         <img  src="./img/logos/fotosale.jpg" alt="Лого магазина" class="popup__item-img">
                     </div>
                     <span class="popup__item-location">Москва</span>
                 </a>
-                <a href="https://www.kutuzov-photo.ru/" class="popup__item" target="_blank">
+                <a href="http://www.kutuzov-photo.ru/?utm_source=landing_page_xs10&utm_medium=organic&utm_campaign=xs10" class="popup__item" target="_blank">
                     <div class="popup__item-logo">
                         <img  src="./img/logos/kutuzov.png" alt="Лого магазина" class="popup__item-img">
                     </div>
                     <span class="popup__item-location">Москва</span>
                 </a>
-                <a href="https://asn-foto.ru/" class="popup__item" target="_blank">
+                <a href="http://asn-foto.ru/?utm_source=landing_page_xs10&utm_medium=organic&utm_campaign=xs10" class="popup__item" target="_blank">
                     <div class="popup__item-logo">
                         <img  src="./img/logos/asnfoto.png" alt="Лого магазина" class="popup__item-img">
                     </div>
                     <span class="popup__item-location">Москва</span>
                 </a>
-                <a href="https://www.ligafoto.ru/catalog/id-64621/" class="popup__item" target="_blank">
+                <a href="http://www.ligafoto.ru/catalog/id-64621/?utm_source=landing_page_xs10&utm_medium=organic&utm_campaign=xs10" class="popup__item" target="_blank">
                     <div class="popup__item-logo">
                         <img  src="./img/logos/liga-foto.png" alt="Лого магазина" class="popup__item-img">
                     </div>
                     <span class="popup__item-location">Москва</span>
                 </a>
-                <a href="https://www.olimp.ru/shop/sgroup91101/item9110100003/" class="popup__item" target="_blank">
+                <a href="http://www.olimp.ru/shop/sgroup91101/item9110100003/?utm_source=landing_page_xs10&utm_medium=organic&utm_campaign=xs10" class="popup__item" target="_blank">
                     <div class="popup__item-logo">
                         <img  src="./img/logos/olimp.png" alt="Лого магазина" class="popup__item-img">
                     </div>
                     <span class="popup__item-location">Обнинск, Калуга</span>
                 </a>
-                <a href="https://www.intel-foto.ru/catalog/bezzerkalnye-fotokamery/fujifilm/tsifrovoj-fotoapparat-fujifilm-x-s10-body-34596/" class="popup__item" target="_blank">
+                <a href="http://www.intel-foto.ru/catalog/bezzerkalnye-fotokamery/fujifilm/tsifrovoj-fotoapparat-fujifilm-x-s10-body-34596/?utm_source=landing_page_xs10&utm_medium=organic&utm_campaign=xs10" class="popup__item" target="_blank">
                     <div class="popup__item-logo">
                         <img  src="./img/logos/intelfoto.png" alt="Лого магазина" class="popup__item-img">
                     </div>
                     <span class="popup__item-location">Екатеринбур г, Челябинск, Тюмень</span>
                 </a>
-                <a href="https://www.technocity.ru/catalog/detail/763474/" class="popup__item" target="_blank">
+                <a href="http://www.technocity.ru/catalog/detail/763474/?utm_source=landing_page_xs10&utm_medium=organic&utm_campaign=xs10" class="popup__item" target="_blank">
                     <div class="popup__item-logo">
                         <img  src="./img/logos/tcd120x100.png" alt="Лого магазина" class="popup__item-img">
                     </div>
                     <span class="popup__item-location">Новосибирск</span>
                 </a>
-                <a href="https://foto74.ru/fotoapparat-so-smennoy-optikoy-fujifilmx-s10-body/" class="popup__item" target="_blank">
+                <a href="http://foto74.ru/fotoapparat-so-smennoy-optikoy-fujifilm-x-s10-body/?utm_source=landing_page_xs10&utm_medium=organic&utm_campaign=xs10" class="popup__item" target="_blank">
                     <div class="popup__item-logo">
                         <img  src="./img/logos/fotolux.png" alt="Лого магазина" class="popup__item-img">
                     </div>
                     <span class="popup__item-location">Челябинск</span>
                 </a>
-                <a href="https://shx.ru/catalog/fototekhnika_i_videotekhnika/bezzerkalki_so_smennoy_optikoy/fotoapparat-Fujifilm-X-S10-body-chernyy" class="popup__item" target="_blank">
+                <a href="http://shx.ru/catalog/fototekhnika_i_videotekhnika/bezzerkalki_so_smennoy_optikoy/fotoapparat-Fujifilm-X-S10-body-chernyy?utm_source=landing_page_xs10&utm_medium=organic&utm_campaign=xs10" class="popup__item" target="_blank">
                     <div class="popup__item-logo">
                         <img  src="./img/logos/shx.png" alt="Лого магазина" class="popup__item-img">
                     </div>
                     <span class="popup__item-location">Пермь, Ижевск, Челябинск</span>
                 </a>
-                <a href="https://photopark.ru/catalog/item/tsifrovaya-fotokamera-fujifilm-x-s10-body-i3938" class="popup__item" target="_blank">
+                <a href="http://photopark.ru/catalog/item/tsifrovaya-fotokamera-fujifilm-x-s10-body-i3938?utm_source=landing_page_xs10&utm_medium=organic&utm_campaign=xs10" class="popup__item" target="_blank">
                     <div class="popup__item-logo">
                         <img  src="./img/logos/msccity.png" alt="Лого магазина" class="popup__item-img">
                     </div>
                     <span class="popup__item-location">Махачкала</span>
                 </a>
-                <a href="https://fotomen.ru/bezzerkalnaya-fotokamera-fujifilm-x-s10-body-black/" class="popup__item" target="_blank">
+                <a href="http://fotomen.ru/bezzerkalnaya-fotokamera-fujifilm-x-s10-body-black/?utm_source=landing_page_xs10&utm_medium=organic&utm_campaign=xs10" class="popup__item" target="_blank">
                     <div class="popup__item-logo">
                         <img  src="./img/logos/fotomen.png" alt="Лого магазина" class="popup__item-img">
                     </div>
                     <span class="popup__item-location">Уфа</span>
                 </a>
-                <a href="https://digital30.ru/foto-video-tekhnika-120/fotoapparaty-4/fotoapparaty-fujifilm-14/fujifilm-x-s10-body-black" class="popup__item" target="_blank">
+                <a href="http://digital30.ru/foto-video-tekhnika-120/fotoapparaty-4/fotoapparaty-fujifilm-14/fujifilm-x-s10-body-black?utm_source=landing_page_xs10&utm_medium=organic&utm_campaign=xs10" class="popup__item" target="_blank">
                     <div class="popup__item-logo">
                         <img  src="./img/logos/cifrovoy.png" alt="Лого магазина" class="popup__item-img">
                     </div>
                     <span class="popup__item-location">Астрахань</span>
                 </a>
-                <a href="https://binar-shop.ru/catalog/product/fotoapparat_so_smennoy_optikoy_fujifilm_x_s10_kit_18_55mm_f_2_8_4_0_ois_black/" class="popup__item" target="_blank">
+                <a href="http://binar-shop.ru/catalog/product/fotoapparat_so_smennoy_optikoy_fujifilm_x_s10_kit_18_55mm_f_2_8_4_0_ois_black/?utm_source=landing_page_xs10&utm_medium=organic&utm_campaign=xs10" class="popup__item" target="_blank">
                     <div class="popup__item-logo">
                         <img  src="./img/logos/binar.png" alt="Лого магазина" class="popup__item-img">
                     </div>
                     <span class="popup__item-location">Красноярск</span>
                 </a>
-                <a href="https://www.vlfoto.ru/product/tsifrovoy-bezzerkalnyy-fotoapparat-x-s10-body-black" class="popup__item" target="_blank">
+                <a href="http://www.vlfoto.ru/product/tsifrovoy-bezzerkalnyy-fotoapparat-x-s10-body-black?utm_source=landing_page_xs10&utm_medium=organic&utm_campaign=xs10" class="popup__item" target="_blank">
                     <div class="popup__item-logo">
                         <img  src="./img/logos/vl-foto.png" alt="Лого магазина" class="popup__item-img">
                     </div>
                     <span class="popup__item-location">Владивосток</span>
                 </a>
-                <a href="http://fotik-npd.ru/fotoapparati/cifrovie-fotoapparati-so-smennoj-optikoj/fotoapparatiso-smennoj-optikoj-fujifilm/" class="popup__item" target="_blank">
+                <a href="http://blikfokus.ru/?utm_source=landing_page_xs10&utm_medium=organic&utm_campaign=xs10" class="popup__item" target="_blank">
                     <div class="popup__item-logo">
-                        <img  src="./img/logos/photik.png" alt="Лого магазина" class="popup__item-img">
+                        <img  src="./img/logos/blick-logo.png" alt="Лого магазина" class="popup__item-img">
                     </div>
-                    <span class="popup__item-location">Смоленск</span>
+                    <span class="popup__item-location">Пенза</span>
                 </a>
-                <a href="https://openschool.biz/product/fujifilm-x-s10/" class="popup__item" target="_blank">
+                <a href="http://openschool.biz/product/fujifilm-x-s10/?utm_source=landing_page_xs10&utm_medium=organic&utm_campaign=xs10" class="popup__item" target="_blank">
                     <div class="popup__item-logo">
                         <img  src="./img/logos/otkr-shkola.png" alt="Лого магазина" class="popup__item-img">
                     </div>
                     <span class="popup__item-location">Казань</span>
                 </a>
-                <a href="https://fotomagazin.ru/" class="popup__item" target="_blank">
+                <a href="http://fotomagazin.ru/?utm_source=landing_page_xs10&utm_medium=organic&utm_campaign=xs10" class="popup__item" target="_blank">
                     <div class="popup__item-logo">
                         <img  src="./img/logos/logo-photo-mgzn.jpg" alt="Лого магазина" class="popup__item-img">
                     </div>
                     <span class="popup__item-location">Воронеж</span>
                 </a>
-                <a href="http://acomplex.ru/katalog/fototehnika/fotoapparaty/fujifilm/" class="popup__item" target="_blank">
+                <a href="http://acomplex.ru/katalog/fototehnika/fotoapparaty/fujifilm/?utm_source=landing_page_xs10&utm_medium=organic&utm_campaign=xs10" class="popup__item" target="_blank">
                     <div class="popup__item-logo">
                         <img  src="./img/logos/logo-dw.gif" alt="Лого магазина" class="popup__item-img">
                     </div>
                     <span class="popup__item-location">Самара, Казань</span>
                 </a>
-                <a href="https://interfoto.by/fotoapparaty/fujifilm-foto/x-series/xs10/" class="popup__item" target="_blank">
+                <a href="http://interfoto.by/fotoapparaty/fujifilm-foto/x-series/xs10/?utm_source=landing_page_xs10&utm_medium=organic&utm_campaign=xs10" class="popup__item" target="_blank">
                     <div class="popup__item-logo">
                         <img  src="./img/logos/interfoto.png" alt="Лого магазина" class="popup__item-img">
                     </div>
                     <span class="popup__item-location">Минск</span>
                 </a>
-                <a href="https://vega.am/hy/" class="popup__item" target="_blank">
+                <a href="http://vega.am/hy/?utm_source=landing_page_xs10&utm_medium=organic&utm_campaign=xs10" class="popup__item" target="_blank">
                     <div class="popup__item-logo">
                         <img  src="./img/logos/logo-vega.png" alt="Лого магазина" class="popup__item-img">
                     </div>
                     <span class="popup__item-location">Ереван</span>
                 </a>
-                <a href="https://dw.kz/catalog/digital-cameras/SLR/tsifrovoy_fotoapparat_fujifilm_x_s10_black_body/" class="popup__item" target="_blank">
+                <a href="http://dw.kz/catalog/digital-cameras/SLR/tsifrovoy_fotoapparat_fujifilm_x_s10_black_body/?utm_source=landing_page_xs10&utm_medium=organic&utm_campaign=xs10" class="popup__item" target="_blank">
                     <div class="popup__item-logo">
                         <img  src="./img/logos/logo-dw.gif" alt="Лого магазина" class="popup__item-img">
                     </div>
                     <span class="popup__item-location">Караганда</span>
                 </a>
-                <a href="https://www.technodom.kz/" class="popup__item" target="_blank">
+                <a href="http://www.technodom.kz/?utm_source=landing_page_xs10&utm_medium=organic&utm_campaign=xs10" class="popup__item" target="_blank">
                     <div class="popup__item-logo">
                         <img  src="./img/logos/td.png" alt="Лого магазина" class="popup__item-img">
                     </div>
@@ -1271,173 +1301,107 @@
         <div class="popup">
             <button class="popup__close js-close-popup"></button>
             <div class="popup__body">
-                <a href="https://www.yarkiy.ru/goods/40547-fujifilm-x-s10-body" class="popup__item" target="_blank">
+                <a href="http://shopfujifilm.ru/goods/37210-fujifilm-x-s10-body?utm_source=landing_page_xs10&utm_medium=organic&utm_campaign=xs10" class="popup__item" target="_blank">
+                    <div class="popup__item-logo">
+                        <img  src="./img/logos/fuji-logo.png" alt="Лого магазина" class="popup__item-img">
+                    </div>
+                    <span class="popup__item-location">Вся Россия</span>
+                </a>
+                <a href="http://www.yarkiy.ru/goods/40547-fujifilm-x-s10-body?utm_source=landing_page_xs10&utm_medium=organic&utm_campaign=xs10" class="popup__item" target="_blank">
                     <div class="popup__item-logo">
                         <img  src="./img/logos/yarkiy-mini.png" alt="Лого магазина" class="popup__item-img">
                     </div>
                     <span class="popup__item-location">Москва, Санкт-Петербург, Ростов-на-дону, Выборг, Краснодар</span>
                 </a>
-                <a href="https://www.onlinetrade.ru/catalogue/tsifrovye_fotoapparaty_so_smennoy_optikoy-c268/fujifilm/tsifrovoy_fotoapparat_fujifilm_x_s10_body_black_16670041-2349842.html" class="popup__item" target="_blank">
-                    <div class="popup__item-logo">
-                        <img  src="./img/logos/onlinetr.png" alt="Лого магазина" class="popup__item-img">
-                    </div>
-                    <span class="popup__item-location">Москва, Краснодар, Нижний Новогород, Самара, Тула</span>
-                </a>
-                <a href="https://www.mvideo.ru/products/fotoapparat-sistemnyi-fujifilm-x-s10-body-10025361" class="popup__item" target="_blank">
-                    <div class="popup__item-logo">
-                        <img  src="./img/logos/mvideo.png" alt="Лого магазина" class="popup__item-img">
-                    </div>
-                    <span class="popup__item-location">Вся Россия</span>
-                </a>
-                <a href="https://www.dns-shop.ru/product/4295494f11d23332/fujifilm-x-s10-kit-18-55/" class="popup__item" target="_blank">
-                    <div class="popup__item-logo">
-                        <img  src="./img/logos/dns.jpg" alt="Лого магазина" class="popup__item-img">
-                    </div>
-                    <span class="popup__item-location">Вся Россия</span>
-                </a>
-                <a href="https://www.svyaznoy.ru/" class="popup__item" target="_blank">
-                    <div class="popup__item-logo">
-                        <img  src="./img/logos/svyaznoy.png" alt="Лого магазина" class="popup__item-img">
-                    </div>
-                    <span class="popup__item-location">Вся Россия</span>
-                </a>
-                <a href="https://pixel24.ru/catalog/view/id/55671" class="popup__item" target="_blank">
+                <a href="http://pixel24.ru/catalog/view/id/55671?utm_source=landing_page_xs10&utm_medium=organic&utm_campaign=xs10" class="popup__item" target="_blank">
                     <div class="popup__item-logo">
                         <img  src="./img/logos/pxl24-3.png" alt="Лого магазина" class="popup__item-img">
                     </div>
                     <span class="popup__item-location">Москва</span>
                 </a>
-                <a href="https://photosale.ru/fototechnika/fotoapparaty_tsifrovye/fujifilm_x_s10_body_black/?sphrase_id=451888" class="popup__item" target="_blank">
+                <a href="http://photosale.ru/fototechnika/fotoapparaty_tsifrovye/fujifilm_x_s10_body_black/?sphrase_id=451888&utm_source=landing_page_xs10&utm_medium=organic&utm_campaign=xs10" class="popup__item" target="_blank">
                     <div class="popup__item-logo">
                         <img  src="./img/logos/fotosale.jpg" alt="Лого магазина" class="popup__item-img">
                     </div>
                     <span class="popup__item-location">Москва</span>
                 </a>
-                <a href="https://www.kutuzov-photo.ru/" class="popup__item" target="_blank">
-                    <div class="popup__item-logo">
-                        <img  src="./img/logos/kutuzov.png" alt="Лого магазина" class="popup__item-img">
-                    </div>
-                    <span class="popup__item-location">Москва</span>
-                </a>
-                <a href="https://asn-foto.ru/" class="popup__item" target="_blank">
-                    <div class="popup__item-logo">
-                        <img  src="./img/logos/asnfoto.png" alt="Лого магазина" class="popup__item-img">
-                    </div>
-                    <span class="popup__item-location">Москва</span>
-                </a>
-                <a href="https://www.ligafoto.ru/catalog/id-64621/" class="popup__item" target="_blank">
+                <a href="http://www.ligafoto.ru/catalog/id-64621/?utm_source=landing_page_xs10&utm_medium=organic&utm_campaign=xs10" class="popup__item" target="_blank">
                     <div class="popup__item-logo">
                         <img  src="./img/logos/liga-foto.png" alt="Лого магазина" class="popup__item-img">
                     </div>
                     <span class="popup__item-location">Москва</span>
                 </a>
-                <a href="https://www.olimp.ru/shop/sgroup91101/item9110100003/" class="popup__item" target="_blank">
+                <a href="http://www.olimp.ru/shop/sgroup91101/item9110100003/?utm_source=landing_page_xs10&utm_medium=organic&utm_campaign=xs10" class="popup__item" target="_blank">
                     <div class="popup__item-logo">
                         <img  src="./img/logos/olimp.png" alt="Лого магазина" class="popup__item-img">
                     </div>
                     <span class="popup__item-location">Обнинск, Калуга</span>
                 </a>
-                <a href="https://www.intel-foto.ru/catalog/bezzerkalnye-fotokamery/fujifilm/tsifrovoj-fotoapparat-fujifilm-x-s10-body-34596/" class="popup__item" target="_blank">
+                <a href="http://www.intel-foto.ru/catalog/bezzerkalnye-fotokamery/fujifilm/tsifrovoj-fotoapparat-fujifilm-x-s10-body-34596/?utm_source=landing_page_xs10&utm_medium=organic&utm_campaign=xs10" class="popup__item" target="_blank">
                     <div class="popup__item-logo">
                         <img  src="./img/logos/intelfoto.png" alt="Лого магазина" class="popup__item-img">
                     </div>
                     <span class="popup__item-location">Екатеринбур г, Челябинск, Тюмень</span>
                 </a>
-                <a href="https://www.technocity.ru/catalog/detail/763474/" class="popup__item" target="_blank">
+                <a href="http://www.technocity.ru/catalog/detail/763474/?utm_source=landing_page_xs10&utm_medium=organic&utm_campaign=xs10" class="popup__item" target="_blank">
                     <div class="popup__item-logo">
                         <img  src="./img/logos/tcd120x100.png" alt="Лого магазина" class="popup__item-img">
                     </div>
                     <span class="popup__item-location">Новосибирск</span>
                 </a>
-                <a href="https://foto74.ru/fotoapparat-so-smennoy-optikoy-fujifilmx-s10-body/" class="popup__item" target="_blank">
+                <a href="http://foto74.ru/fotoapparat-so-smennoy-optikoy-fujifilm-x-s10-body/?utm_source=landing_page_xs10&utm_medium=organic&utm_campaign=xs10" class="popup__item" target="_blank">
                     <div class="popup__item-logo">
                         <img  src="./img/logos/fotolux.png" alt="Лого магазина" class="popup__item-img">
                     </div>
                     <span class="popup__item-location">Челябинск</span>
                 </a>
-                <a href="https://shx.ru/catalog/fototekhnika_i_videotekhnika/bezzerkalki_so_smennoy_optikoy/fotoapparat-Fujifilm-X-S10-body-chernyy" class="popup__item" target="_blank">
+                <a href="http://shx.ru/catalog/fototekhnika_i_videotekhnika/bezzerkalki_so_smennoy_optikoy/fotoapparat-Fujifilm-X-S10-body-chernyy?utm_source=landing_page_xs10&utm_medium=organic&utm_campaign=xs10" class="popup__item" target="_blank">
                     <div class="popup__item-logo">
                         <img  src="./img/logos/shx.png" alt="Лого магазина" class="popup__item-img">
                     </div>
                     <span class="popup__item-location">Пермь, Ижевск, Челябинск</span>
                 </a>
-                <a href="https://photopark.ru/catalog/item/tsifrovaya-fotokamera-fujifilm-x-s10-body-i3938" class="popup__item" target="_blank">
+                <a href="http://photopark.ru/catalog/item/tsifrovaya-fotokamera-fujifilm-x-s10-body-i3938?utm_source=landing_page_xs10&utm_medium=organic&utm_campaign=xs10" class="popup__item" target="_blank">
                     <div class="popup__item-logo">
                         <img  src="./img/logos/msccity.png" alt="Лого магазина" class="popup__item-img">
                     </div>
                     <span class="popup__item-location">Махачкала</span>
                 </a>
-                <a href="https://fotomen.ru/bezzerkalnaya-fotokamera-fujifilm-x-s10-body-black/" class="popup__item" target="_blank">
+                <a href="http://fotomen.ru/bezzerkalnaya-fotokamera-fujifilm-x-s10-body-black/?utm_source=landing_page_xs10&utm_medium=organic&utm_campaign=xs10" class="popup__item" target="_blank">
                     <div class="popup__item-logo">
                         <img  src="./img/logos/fotomen.png" alt="Лого магазина" class="popup__item-img">
                     </div>
                     <span class="popup__item-location">Уфа</span>
                 </a>
-                <a href="https://digital30.ru/foto-video-tekhnika-120/fotoapparaty-4/fotoapparaty-fujifilm-14/fujifilm-x-s10-body-black" class="popup__item" target="_blank">
+                <a href="http://digital30.ru/foto-video-tekhnika-120/fotoapparaty-4/fotoapparaty-fujifilm-14/fujifilm-x-s10-body-black?utm_source=landing_page_xs10&utm_medium=organic&utm_campaign=xs10" class="popup__item" target="_blank">
                     <div class="popup__item-logo">
                         <img  src="./img/logos/cifrovoy.png" alt="Лого магазина" class="popup__item-img">
                     </div>
                     <span class="popup__item-location">Астрахань</span>
                 </a>
-                <a href="https://binar-shop.ru/catalog/product/fotoapparat_so_smennoy_optikoy_fujifilm_x_s10_kit_18_55mm_f_2_8_4_0_ois_black/" class="popup__item" target="_blank">
+                <a href="http://binar-shop.ru/catalog/product/fotoapparat_so_smennoy_optikoy_fujifilm_x_s10_kit_18_55mm_f_2_8_4_0_ois_black/?utm_source=landing_page_xs10&utm_medium=organic&utm_campaign=xs10" class="popup__item" target="_blank">
                     <div class="popup__item-logo">
                         <img  src="./img/logos/binar.png" alt="Лого магазина" class="popup__item-img">
                     </div>
                     <span class="popup__item-location">Красноярск</span>
                 </a>
-                <a href="https://www.vlfoto.ru/product/tsifrovoy-bezzerkalnyy-fotoapparat-x-s10-body-black" class="popup__item" target="_blank">
+                <a href="http://blikfokus.ru/?utm_source=landing_page_xs10&utm_medium=organic&utm_campaign=xs10" class="popup__item" target="_blank">
                     <div class="popup__item-logo">
-                        <img  src="./img/logos/vl-foto.png" alt="Лого магазина" class="popup__item-img">
+                        <img  src="./img/logos/blick-logo.png" alt="Лого магазина" class="popup__item-img">
                     </div>
-                    <span class="popup__item-location">Владивосток</span>
+                    <span class="popup__item-location">Пенза</span>
                 </a>
-                <a href="http://fotik-npd.ru/fotoapparati/cifrovie-fotoapparati-so-smennoj-optikoj/fotoapparatiso-smennoj-optikoj-fujifilm/" class="popup__item" target="_blank">
-                    <div class="popup__item-logo">
-                        <img  src="./img/logos/photik.png" alt="Лого магазина" class="popup__item-img">
-                    </div>
-                    <span class="popup__item-location">Смоленск</span>
-                </a>
-                <a href="https://openschool.biz/product/fujifilm-x-s10/" class="popup__item" target="_blank">
+                <a href="http://openschool.biz/product/fujifilm-x-s10/?utm_source=landing_page_xs10&utm_medium=organic&utm_campaign=xs10" class="popup__item" target="_blank">
                     <div class="popup__item-logo">
                         <img  src="./img/logos/otkr-shkola.png" alt="Лого магазина" class="popup__item-img">
                     </div>
                     <span class="popup__item-location">Казань</span>
                 </a>
-                <a href="https://fotomagazin.ru/" class="popup__item" target="_blank">
-                    <div class="popup__item-logo">
-                        <img  src="./img/logos/logo-photo-mgzn.jpg" alt="Лого магазина" class="popup__item-img">
-                    </div>
-                    <span class="popup__item-location">Воронеж</span>
-                </a>
-                <a href="http://acomplex.ru/katalog/fototehnika/fotoapparaty/fujifilm/" class="popup__item" target="_blank">
-                    <div class="popup__item-logo">
-                        <img  src="./img/logos/logo-dw.gif" alt="Лого магазина" class="popup__item-img">
-                    </div>
-                    <span class="popup__item-location">Самара, Казань</span>
-                </a>
-                <a href="https://interfoto.by/fotoapparaty/fujifilm-foto/x-series/xs10/" class="popup__item" target="_blank">
+                <a href="http://interfoto.by/fotoapparaty/fujifilm-foto/x-series/xs10/?utm_source=landing_page_xs10&utm_medium=organic&utm_campaign=xs10" class="popup__item" target="_blank">
                     <div class="popup__item-logo">
                         <img  src="./img/logos/interfoto.png" alt="Лого магазина" class="popup__item-img">
                     </div>
                     <span class="popup__item-location">Минск</span>
-                </a>
-                <a href="https://vega.am/hy/" class="popup__item" target="_blank">
-                    <div class="popup__item-logo">
-                        <img  src="./img/logos/logo-vega.png" alt="Лого магазина" class="popup__item-img">
-                    </div>
-                    <span class="popup__item-location">Ереван</span>
-                </a>
-                <a href="https://dw.kz/catalog/digital-cameras/SLR/tsifrovoy_fotoapparat_fujifilm_x_s10_black_body/" class="popup__item" target="_blank">
-                    <div class="popup__item-logo">
-                        <img  src="./img/logos/logo-dw.gif" alt="Лого магазина" class="popup__item-img">
-                    </div>
-                    <span class="popup__item-location">Караганда</span>
-                </a>
-                <a href="https://www.technodom.kz/" class="popup__item" target="_blank">
-                    <div class="popup__item-logo">
-                        <img  src="./img/logos/td.png" alt="Лого магазина" class="popup__item-img">
-                    </div>
-                    <span class="popup__item-location">Алматы, Нурсултан и др.</span>
                 </a>
             </div>
         </div>
@@ -1502,7 +1466,7 @@
                         <td>
                             <span class="popup__table-text">нет</span>
                         </td>
-                        <td>
+                        <td class="popup__table-bg">
                             <span class="popup__table-text">до 6 стопов</span>
                         </td>
                         <td>
@@ -1519,7 +1483,7 @@
                         <td>
                             <span class="popup__table-text">да</span>
                         </td>
-                        <td>
+                        <td class="popup__table-bg">
                             <span class="popup__table-text">нет</span>
                         </td>
                         <td>
@@ -1536,7 +1500,7 @@
                         <td>
                             <span class="popup__table-text">1/8000, 1/32000</span>
                         </td>
-                        <td>
+                        <td class="popup__table-bg">
                             <span class="popup__table-text">1/4000, 1/32000</span>
                         </td>
                         <td>
@@ -1553,7 +1517,7 @@
                         <td>
                             <span class="popup__table-text">11 кадр/с. механ. <br>30 кадр/с. электрон. </span>
                         </td>
-                        <td>
+                        <td class="popup__table-bg">
                             <span class="popup__table-text">8 кадр/с. механ. <br>30 кадр/с. электрон. </span>
                         </td>
                         <td>
@@ -1570,7 +1534,7 @@
                         <td>
                             <span class="popup__table-text">3.7Мп <br> 0.75x</span>
                         </td>
-                        <td>
+                        <td class="popup__table-bg">
                             <span class="popup__table-text">2.4Мп <br> 0.62x</span>
                         </td>
                         <td>
@@ -1587,7 +1551,7 @@
                         <td>
                             <span class="popup__table-text">1.04Мп</span>
                         </td>
-                        <td>
+                        <td class="popup__table-bg">
                             <span class="popup__table-text">1.04Мп</span>
                         </td>
                         <td>
@@ -1604,7 +1568,7 @@
                         <td>
                             <span class="popup__table-text">Поворотный в 3х направлениях </span>
                         </td>
-                        <td>
+                        <td class="popup__table-bg">
                             <span class="popup__table-text">С переменным углом наклона </span>
                         </td>
                         <td>
@@ -1632,7 +1596,7 @@
                         <td>
                             <span class="popup__table-text">16 типов, вкл. ETERNA</span>
                         </td>
-                        <td>
+                        <td class="popup__table-bg">
                             <span class="popup__table-text">18 типов, вкл. ETERNA BP</span>
                         </td>
                         <td>
@@ -1646,7 +1610,7 @@
                         <td colspan="2">
                             <span class="popup__table-text">60p, до 30 мин.</span>
                         </td>
-                        <td>
+                        <td class="popup__table-bg">
                             <span class="popup__table-text">30p, до 30 мин.</span>
                         </td>
                         <td>
@@ -1663,7 +1627,7 @@
                         <td>
                             <span class="popup__table-text">120p</span>
                         </td>
-                        <td>
+                        <td class="popup__table-bg">
                             <span class="popup__table-text">240p</span>
                         </td>
                         <td>
@@ -1710,7 +1674,7 @@
                         <td>
                             <span class="popup__table-text">да / да</span>
                         </td>
-                        <td>
+                        <td class="popup__table-bg">
                             <span class="popup__table-text">да / да (с адаптером)</span>
                         </td>
                         <td>
@@ -1727,7 +1691,7 @@
                         <td>
                             <span class="popup__table-text">Кодеки H.264/H.265, бат. блок (опция)</span>
                         </td>
-                        <td>
+                        <td class="popup__table-bg">
                             <span class="popup__table-text">Режимы P/A/S/M, C1-4, большой хват</span>
                         </td>
                         <td>
@@ -1752,7 +1716,7 @@
                         <td>
                             <span class="popup__table-text">NP-W126S, <br>390 кадров</span>
                         </td>
-                        <td>
+                        <td class="popup__table-bg">
                             <span class="popup__table-text">NP-W126S, <br>325 кадров</span>
                         </td>
                         <td>
@@ -1769,7 +1733,7 @@
                         <td>
                             <span class="popup__table-text">539 г </span>
                         </td>
-                        <td>
+                        <td class="popup__table-bg">
                             <span class="popup__table-text">465 г </span>
                         </td>
                         <td>
@@ -1786,7 +1750,7 @@
                         <td>
                             <span class="popup__table-text">94 999 руб.</span>
                         </td>
-                        <td>
+                        <td class="popup__table-bg">
                             <span class="popup__table-text">85 999 руб.</span>
                         </td>
                         <td>
