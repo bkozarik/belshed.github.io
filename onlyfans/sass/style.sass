@@ -5,14 +5,15 @@ $light-pink: #fcf3ff
 
 $transition: all .3s ease-out 0s
 
-input[type="text"]::-ms-clear,
-input[type="text"]::-ms-reveal,
+input[type="search"]::-ms-clear,
+input[type="search"]::-ms-reveal,
 input[type="search"]::-webkit-search-decoration,
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-results-button,
 input[type="search"]::-webkit-search-results-decoration
     display: none
     width: 0
+    opacity: 0
     height: 0
 
 *, *::before, *::after
@@ -65,6 +66,7 @@ section
     color: $text-black
     font-weight: 700
     overflow-anchor: none
+    overflow: hidden
     vertical-align: middle
     white-space: nowrap
     transition: $transition
@@ -77,6 +79,8 @@ section
         background-color: #1AB7F1
         &:hover
             background-color: #49c3f0
+    &_rounded
+        border-radius: 6px
     &:focus
         outline: none
 
@@ -163,7 +167,9 @@ section
         border: none
         display: block
         padding: 0px 5px 5px
+        appearance: none
         font-size: 16px
+        outline: none
         &:focus
             outline: none
     &__button
@@ -182,6 +188,8 @@ section
     display: block
     flex-shrink: 0
     flex-grow: 0
+    &_header-item
+        display: none
     &_header
         margin-left: 30px
     &_footer
@@ -286,6 +294,7 @@ section
         flex-basis: 44%
         min-width: 0
     &__main
+        margin-left: 30px
         padding: 60px 0px 80px 50px
         position: relative
         z-index: 2
@@ -541,9 +550,59 @@ section
 //
 //
 
+.breadcrumbs
+    margin-top: 15px
+    &__list
+        display: flex
+        align-items: center
+        list-style-type: none
+    &__item
+        display: none
+        &:last-child .breadcrumbs__link
+            pointer-events: none
+            opacity: .7
+        &_mobile .breadcrumbs__link
+            &::after, &::before
+                content: ''
+                position: absolute
+                display: inline-block
+                left: -10px
+                top: 50%
+                height: 2px
+                width: 10px
+                border-radius: 3px
+                background-color: $text-black
+            &::before
+                transform: translate(-50%, calc( -50% - 3px )) rotate(-45deg)
+            &::after
+                transform: translate(-50%, calc( -50% + 3px )) rotate(45deg)
+            &:hover
+                &::before, &::after
+                    background-color: $search-ico-color            
+        & + &
+            &::before
+                content: '/'
+                margin: 0px 5px 0px 7px
+    &__link
+        font-size: 20px
+        display: inline-block
+        position: relative
+        padding: 3px 0px
+        transition: $transition
+        &::before, &::after
+            transition: $transition
+        &:hover
+            color: $search-ico-color
+            opacity: .8
+            &::before, &::after
+                color: $search-ico-color
+
 .model
     &__wrap, &__priselist
         display: flex
+    &__name
+        font-weight: 700
+        font-size: 30px
     &__priselist
         flex-direction: column
         align-items: flex-start
@@ -582,15 +641,128 @@ section
                 padding: 10px
                 width: auto
                 max-width: none
-            &__button
                 padding: 10px
-            &__head
-                justify-content: space-between
-                .button
-                    display: inline-block
             & > .button
                 display: none
     &__main
+        width: 100%
         margin-left: 30px
         flex-grow: 1
     &__head
+        display: flex
+        flex-direction: column
+        align-items: stretch
+        position: relative
+        &-wrap
+            display: flex
+            width: 100%
+            justify-content: space-between
+            align-items: flex-end
+        &-top
+            position: relative
+        &-body
+            padding-left: 35px
+        &-data
+            display: inline-flex
+            flex-direction: column
+            align-items: flex-start
+        &-name
+            display: inline-block
+            margin-bottom: 5px
+            font-size: 24px
+            font-weight: 400
+        &-nickname
+            font-size: 14px
+            font-weight: 400
+            color: #808080
+    &__icon
+        border-radius: 50%
+        overflow: hidden
+        height: 137px
+        width: 137px
+        flex-shrink: 0
+        position: relative
+        z-index: 2
+        margin: -80px 0px 15px
+        box-shadow: 0 0 0 2px #ffffff
+        img
+            height: inherit
+            width: inherit
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            position: absolute
+    &__social
+        display: flex
+        align-items: center
+        justify-content: space-between
+        width: 100%
+        max-width: 220px
+        list-style-type: none
+        &-link
+            display: inline-block
+            position: relative
+            width: 40px
+            height: 40px
+            svg
+                position: absolute
+                top: 50%
+                left: 50%
+                transform: translate(-50%, -50%)
+                width: 30px
+                height: 30px
+    &__photo
+        height: auto
+        width: 100%
+        object-fit: cover
+    &__return-link
+        background-color: #001a49c7
+        overflow: hidden
+        border-radius: 3px 0px 0px 0px
+        display: inline-block
+        color: #ffffff
+        font-size: 14px
+        font-weight: 700
+        padding: 15px 30px 15px 20px
+        position: absolute
+        z-index: 2
+        top: 0
+        left: 1px
+        transition: $transition
+        &:hover
+            background-color: #001a49e7
+        svg
+            margin-right: 10px
+            vertical-align: middle
+            fill: #ffffff
+            stroke: #ffffff
+    &__button
+        font-size: 24px
+        text-transform: uppercase
+        max-width: 190px
+        width: 100%
+        padding: 18px
+    &__body
+        margin: 70px 0px 80px
+        padding-left: 20px
+    &__subscribe
+        margin-bottom: 20px
+        max-width: 630px
+        &-item
+            margin-top: 10px
+            display: flex
+            align-items: center
+            justify-content: space-between
+            width: 100%
+            & + &
+                margin-top: 15px
+    &__text
+        font-size: 16px
+        line-height: 150%
+        & + &
+            margin-top: 1.2em
+        &_bold
+            font-weight: 700
+        &_light
+            font-weight: 500
+            opacity: .7

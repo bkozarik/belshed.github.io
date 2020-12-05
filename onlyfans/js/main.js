@@ -171,6 +171,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 mainNode.prepend(document.querySelector('.filter'));
                 document.querySelector('.about__wrap').appendChild(document.querySelector('.about__main'));
             }
+        }
+        
+        if(whichPage() == 'item' || whichPage() == 'index'){
             
             if(window.innerWidth < 960){
                 mainNode.prepend(document.querySelector('.nav'));
@@ -178,6 +181,7 @@ document.addEventListener('DOMContentLoaded', () => {
             else{
                 document.querySelector('.header__wrap').insertBefore(document.querySelector('.nav'), document.querySelector('.js-head-search-wrap'));
             }
+
         }
     }
 

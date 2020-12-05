@@ -1,10 +1,13 @@
+$text-black: #001A49
+$search-ico-color: #BD0CFF
+    
 @media screen and ( max-width: 1140px )
     .filter
         &__body
             column-gap: 70px
 
 @media screen and ( max-width: 1120px )
-    .tariff
+    .prices .tariff
         flex-basis: 33%
         margin: 0px 20px 50px 
 
@@ -14,7 +17,7 @@
         margin-top: 25px
         padding-bottom: 0
 
-    .tariff
+    .prices .tariff
         margin-bottom: 30px
         &:last-child
             margin-bottom: 0
@@ -42,10 +45,13 @@
 
 @media screen and ( max-width: 960px )
     .header
+        padding: 10px 0px
         .search
             margin: 0px 20px
         .telegram
             margin-left: 0
+            &_header-item
+                display: inline-block
     
     .main
         margin-top: 110px
@@ -60,6 +66,56 @@
         &__body
             column-gap: 40px
 
+    .breadcrumbs
+        &__list
+            justify-content: flex-end
+        &__item
+            &_mobile
+                display: inline-block
+                    
+
+    .model
+        margin-top: 80px
+        &__name
+            margin-top: 30px
+        &__return-link
+            display: none
+        &__wrap
+            flex-direction: column-reverse
+            align-items: center
+            margin-bottom: 30px
+        &__main
+            margin-left: 0
+            margin-top: 20px
+        &__body
+            padding-left: 0
+            margin-bottom: 0
+        &__description
+            margin-top: 40px
+        &__subscribe
+            padding: 0px 25px
+            margin: 0px auto 20px
+            .model__text
+                text-align: center
+                display: inline-block
+                width: 100%
+            &-item
+                flex-direction: column
+                padding: 0px 10px
+                & + &
+                    margin-top: 35px
+                .model__text
+                    text-align: center
+                    display: inline-block
+                    margin-bottom: 20px
+
+    .telegram_pricelist
+        display: none
+
+    .footer
+        &::after, .telegram_footer
+            display: inline-block
+
 @media screen and ( max-width: 870px )
     .filter
         &__body
@@ -68,11 +124,28 @@
                 padding: 35px
 
 @media screen and ( max-width: 820px )
-    .tariff
+    .prices .tariff
         flex-basis: 40%
 
 @media screen and ( max-width: 800px )
-    .filter
+    .model
+        &__head
+            &-top, .model__photo
+                min-height: 100px
+            &-body
+                padding-left: 20px
+        &__icon
+            height: 100px
+            width: 100px
+            margin: -40px 0px 15px
+        &__social
+            max-width: 190px
+            &-link svg
+                width: 30px
+                height: 30px
+        
+
+    .prices .filter
         &__body
             grid-template-columns: repeat(auto-fill, minmax(180px, 1fr))
 
@@ -81,14 +154,15 @@
         .search
             display: none
 
-    .tariff
+    .prices .tariff
         flex-basis: 60%
 
-    .footer
-        &::after, .telegram_footer
-            display: inline-block
-
 @media screen and ( max-width: 530px )
+    .model
+        &__icon
+            height: 80px
+            width: 80px
+
     .filter
         .container
             padding: 0
@@ -107,7 +181,7 @@
                 height: 36px
                 width: auto
 
-    .tariff
+    .prices .tariff
         flex-basis: 80%
         margin: 0px 0px 50px
         box-shadow: 0px 4px 10px 4px rgba(152,149,149,0.2)
@@ -129,7 +203,7 @@
                 height: 100px
                 width: 100px
 
-    .tariff
+    .prices .tariff
         flex-basis: 77%
         padding: 15px 0px 15px 10px
         align-items: flex-start
@@ -164,6 +238,10 @@
         &__body
             grid-template-columns: repeat(1, 1fr)
     
+    .model
+        &__social
+            max-width: 160px
+
     .about
         &__title
             font-size: 54px
