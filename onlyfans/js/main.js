@@ -181,16 +181,19 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    headerSearch.addEventListener('focus', headerSearchFocus);
-    headerSearch.addEventListener('focusout', headerSearchFocus);
-
-    filterTrigger.addEventListener('click', toggleFilter())
-
     window.addEventListener('resize', resizeHandler);
     
     if(whichPage() == 'index'){
         indexSwiperInit();
         filterSelectInit(filterItems);
+
+        headerSearch.addEventListener('focus', headerSearchFocus);
+        headerSearch.addEventListener('focusout', headerSearchFocus);
+
+        filterTrigger.addEventListener('click', toggleFilter());
+    }
+    else if(whichPage() == 'item'){
+
     }
 
     resizeHandler();
