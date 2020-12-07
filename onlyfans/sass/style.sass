@@ -128,14 +128,17 @@ section
         position: relative
         opacity: .5
         display: none
-    &__link
-        opacity: 0.5
-        font-weight: bold
-        font-size: 16px
-        transition: $transition
-        &.active, &:hover
-            opacity: 1
-        & + &
+    &__item.active a
+        opacity: 1
+    &__item
+        a
+            opacity: 0.5
+            font-weight: bold
+            font-size: 16px
+            transition: $transition
+            &:hover
+                opacity: 1
+        a + a
             margin-left: 20px
 
 .search
@@ -182,12 +185,14 @@ section
             transform: scaleX(1)
 
 .telegram
-    max-width: 124px
-    width: 100%
-    height: auto
-    display: block
+    display: flex
+    align-items: center
     flex-shrink: 0
     flex-grow: 0
+    &__text
+        font-size: 21px
+        font-weight: 500
+        transform: scaleX(0.9)
     &_header-item
         display: none
     &_header
@@ -197,8 +202,11 @@ section
     &_pricelist
         margin-top: 65px
     &__img
-        width: 100%
-        height: auto
+        width: 38px
+        height: 38px
+        flex-shrink: 0
+        flex-grow: 0
+        margin-right: 5px
 
 .filter
     margin-top: 59px
@@ -236,10 +244,12 @@ section
             list-style-type: none
             position: absolute
             width: 100%
+            max-height: 200px
             top: calc( 100% + 5px )
             right: -5px
             border-radius: 10px
             overflow: hidden
+            overflow-y: auto
             box-shadow: 0 3px 13px 2px #f5e3fc
             visibility: hidden
             opacity: 0
@@ -261,7 +271,7 @@ section
         select
             display: none
     &__button
-        padding: 17px 62px
+        padding: 17px 32px
     &__trigger
         color: $text-black
         font-size: 14px
@@ -320,12 +330,12 @@ section
     &__subtitle
         font-size: 20px
         line-height: 150%
-    &__text
+    p
         margin-top: 1.6em
         line-height: 150%
         font-weight: 300
-        &_medium
-            font-weight: 500
+    strong
+        font-weight: 500
 
 .slider
     position: relative
@@ -484,17 +494,19 @@ section
         text-align: center
         font-size: 36px
         text-transform: uppercase
-    &__description
+    p, span
         font-size: 14px
         line-height: 16px
         font-weight: 600
         display: inline-block
         text-align: center
         margin-bottom: 25px
-    &__list
+    ul
+        max-width: 150px
+        margin-left: 10px
         list-style-type: none
         margin-bottom: 50px
-    &__item
+    li
         position: relative
         font-weight: 700
         font-size: 12px
@@ -510,8 +522,8 @@ section
             transform: translate(-100%, -50%)
             border-radius: 50%
             background-color: #CBD5E0
-        & + &
-            margin-top: 15px
+    li + li
+        margin-top: 15px
     &__button
         margin-top: auto
         font-weight: 700
@@ -626,14 +638,18 @@ section
             &__name
                 font-size: 24px
                 line-height: 24px
-            &__description, &__list
+            p, ul
                 padding-right: 10px
                 text-align: left
-            &__description
+                margin-left: 0
+            p
                 margin-bottom: 13px
-            &__list
+            ul
                 padding-left: 20px
                 margin-bottom: 0
+                max-width: 170px
+            li
+                font-weight: 400
             &__button
                 text-transform: uppercase
                 font-size: 12px
@@ -714,6 +730,7 @@ section
     &__photo
         height: auto
         width: 100%
+        max-height: 210px
         object-fit: cover
     &__return-link
         background-color: #001a49c7
@@ -756,13 +773,13 @@ section
             width: 100%
             & + &
                 margin-top: 15px
-    &__text
+    &__description p
+        font-weight: 500
+        opacity: .7
+    &__text, p
         font-size: 16px
         line-height: 150%
-        & + &
-            margin-top: 1.2em
         &_bold
             font-weight: 700
-        &_light
-            font-weight: 500
-            opacity: .7
+    &__text + &__text, p + p
+        margin-top: 1.2em

@@ -74,6 +74,17 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    const createOptionPopupItem = (option, index) => {
+        let filterPopupItem = document.createElement('li');
+        filterPopupItem.classList.add('filter__item-value');
+        filterPopupItem.setAttribute('tabindex', 0);
+
+        filterPopupItem.innerText = option.innerText;
+        filterPopupItem.dataset.index = index;
+
+        return filterPopupItem;
+    }
+
     const filterSelectInit = filterItems => {
         filterItems.forEach(item => {
             const options = item.querySelectorAll('option');
@@ -100,24 +111,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
             options.forEach((option, index) => {
                 if(option.value != 'none'){
-                    let filterPopupItem = document.createElement('li');
-                    filterPopupItem.classList.add('filter__item-value');
-    
-                    filterPopupItem.innerText = option.innerText;
-                    filterPopupItem.dataset.index = index;
-    
+                    let filterPopupItem = createOptionPopupItem(option, index);
                     filterPopupList.appendChild(filterPopupItem);
 
                     filterPopupItem.addEventListener('click', () => {
                         let targetItem = event.target;
-
+            
                         while(!targetItem.classList.contains('filter__item-value')){
                             targetItem.parentNode;
                         }
                         targetItemIndex = parseInt(targetItem.dataset.index);
-
+            
                         options[targetItemIndex].selected = true;
-
+            
                         options.forEach(option => {
                             if(option.selected) filterText.innerText = option.innerText;
                         });
@@ -185,11 +191,29 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    const filtersReset = filterItems => {
+        filterItems.forEach(item => {
+            const options = item.querySelectorAll('option');
+            item.querySelector('.filter__trigger-text').innerText = options[0].innerText;
+            options[0].selected = true;
+        });
+    }
+
+    const filterSubmitHandler = async () => {
+        event.preventDefault();
+        let formNode = event.target;
+        let form = new FormData(event.target);
+        
+        filtersReset(filterItems);
+    }
+
     window.addEventListener('resize', resizeHandler);
     
     if(whichPage() == 'index'){
         indexSwiperInit();
         filterSelectInit(filterItems);
+
+        filter.addEventListener('submit', filterSubmitHandler);
 
         headerSearch.addEventListener('focus', headerSearchFocus);
         headerSearch.addEventListener('focusout', headerSearchFocus);
