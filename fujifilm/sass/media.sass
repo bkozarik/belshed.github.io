@@ -29,6 +29,11 @@
 
 @media screen and ( max-width: 1350px )
 
+    .slider
+        &__pagination
+            &-block
+                position: relative
+
     .reviews
         &__body
             justify-items: center
@@ -234,6 +239,11 @@
             display: none
 
 @media screen and ( max-width: 890px )
+    .slider__author, .filming__img::before
+        font-size: 16px
+        right: 50px
+        bottom: 30px
+
     .hero
         &__bg
             width: 120%
@@ -318,11 +328,17 @@
             margin-top: 30px
 
     .lens
-        .float-img
-            display: block
-            max-width: 100%
-            float: none
-            margin: 0 auto
+        .row
+            flex-direction: column
+            align-items: flex-start
+            .column
+                margin-left: 0 !important
+                &_small
+                    .text
+                        font-size: 14px
+                        line-height: 20px
+            .column + .column
+                margin-top: 30px
 
     .footer
         &__button, &__copyright
@@ -400,7 +416,17 @@
             width: 80%
 
 @media screen and ( max-width: 430px )
+    
+    .filming__img::before
+        font-size: 12px
+        right: 30px
+        bottom: 20px
+
     .slider
+        &__author
+            font-size: 12px
+            right: 30px
+            bottom: 20px
         &__item, &__img
             min-height: 250px
 

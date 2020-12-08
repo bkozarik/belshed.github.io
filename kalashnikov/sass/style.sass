@@ -1,0 +1,219 @@
+$main_red: #c8000c
+$transition: all .3s ease-out 0s
+
+*, *::before, *::after
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    text-decoration: none
+    border-radius: 0px
+    font-family: 'PFEncoreSansPro', sans-serif
+
+body
+    background-color: #000000
+
+.header
+    padding-top: 40px
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    z-index: 5
+    &__wrap
+        display: flex
+        align-items: flex-end
+        justify-content: space-between
+
+.logo
+    max-width: 191px
+    width: 100%
+    &__img
+        max-width: 100%
+        width: 100%
+
+.main
+    margin-top: 125px
+
+.nav
+    width: 100%
+    max-width: 775px
+    &__list
+        list-style-type: none
+    &__link
+        font-size: 19px
+        color: #ffffff
+        display: inline-block
+        position: relative
+        padding: 6px 22px 4px 40px
+        &::before
+            content: ''
+            display: inline-block
+            position: absolute
+            top: 0
+            left: 0
+            height: 100%
+            width: 100%
+            z-index: -1
+            background-color: $main_red
+            box-shadow: 0 0 0 2px #a5a5a5
+            transform: skewX(-20deg) scaleX(0)
+            background: rgb(180,0,11)
+            background: linear-gradient(90deg, rgba(180,0,11,1) 0%, rgba(227,0,13,1) 100%)
+            opacity: 0
+            transition: $transition
+            transform-origin: left
+        &::after
+            transition: $transition
+            transition-duration: .2s
+            content: ''
+            display: inline-block
+            width: 48px
+            height: 48px
+            position: absolute
+            left: -24px
+            top: 50%
+            transform: translate(0, -50%)
+            background-image: url(../img/nav-icon.png)
+            background-size: contain
+            background-position: center
+            background-repeat: no-repeat
+            opacity: 0
+        &:hover, &.active
+            &::after
+                opacity: 1
+            &::before
+                transform: skewX(-20deg) scaleX(1)
+                opacity: 1
+
+.hero
+    padding-top: 45px
+    margin-bottom: 80px
+    &__wrap
+        display: flex
+        flex-direction: column
+        align-items: center
+    &__logo
+        flex-shrink: 0
+        flex-grow: 0
+        width: 100%
+        max-width: 500px
+        &-img
+            width: 100%
+            height: 100%
+            object-fit: contain
+    &__date
+        margin-top: 20px
+    &__text
+        font-weight: 500
+        font-size: 55px
+        &_red
+            color: #e30613
+        &_silver
+            color: #cdcdcd
+            margin-left: 40px
+        &_big
+            font-size: 78px
+    &__timer
+        margin-top: 35px
+
+.timer
+    &__label
+        display: block
+        text-align: center
+        font-size: 24px
+        font-weight: 300
+        margin-left: 0
+    &__container
+        margin-top: 20px
+        display: flex
+    &__item
+        position: relative
+        &-caption
+            position: absolute
+            display: inline-block
+            text-align: center
+            bottom: -10px
+            left: 50%
+            transform: translate(-50%, 100%)
+            color: #a3a3a3
+            font-weight: 300
+            font-size: 19px
+        & + &
+            margin-left: 30px
+            &::before
+                color: #afafaf
+                font-size: 59px
+                content: ':'
+                position: absolute
+                top: 40%
+                left: -15px
+                transform: translate(-50%, -50%)
+    &__num
+        display: inline-block
+        position: relative
+        border-radius: 5px
+        box-shadow: 0 -1px 0 1px #dddddd
+        background: rgb(241,241,241)
+        background: linear-gradient(0deg, rgba(241,241,241,1) 0%, rgba(175,175,175,1) 100%)
+        &, & span
+            line-height: 75px
+            text-align: center
+            width: 50px
+            font-size: 59px
+            color: #000000
+        & span
+            position: relative
+            z-index: 2
+        &::after
+            content: ''
+            display: inline-block
+            position: absolute
+            top: 50%
+            left: 2px
+            width: calc( 100% - 4px )
+            height: 2px
+            z-index: 0
+            background-color: #a3a3a3
+        & + &
+            margin-left: 0px
+
+.embed
+    margin-bottom: 95px
+    &__wrap
+        width: 100%
+        max-width: 920px
+        margin: 0 auto
+        overflow: hidden
+    &__iframe
+        width: 100%
+        min-height: 510px
+    &__subtitle
+        color: #ffffff
+        background-color: #cd0611
+        font-size: 22px
+        padding: 10px 45px
+        margin-top: -5px
+        display: inline-block
+        transform: skewX(-20deg) translateX(-20px)
+        span
+            display: inline-block
+            transform: skewX(20deg)
+
+.big-title
+    padding: 90px 0px 80px
+    position: relative
+    &__bg
+        position: absolute
+        left: 66%
+        top: -133%
+        transform: translate(-50%, 0)
+        z-index: -1
+    &__text
+        text-transform: uppercase
+        color: #adadad
+        display: block
+        text-align: center
+        padding: 0px 20px
+        font-weight: 700
+        font-size: 60px
+
