@@ -7,7 +7,7 @@
     <title>Калашников</title>
 </head>
 <body>
-    <header class="header">
+    <header class="header js-header">
         <div class="container">
             <div class="header__wrap">
                 <div class="logo">
@@ -101,6 +101,162 @@
                 <div class="big-title">
                     <img class="big-title__bg" src="./img/big-title_bg.png" alt="Фон - разделитель">
                     <h2 class="big-title__text">Трансляция мероприятия</h2>
+                </div>
+            </div>
+        </section>
+        <section class="program">
+            <div class="container">
+                <div class="big-title">
+                    <img class="big-title__bg" src="./img/big-title_bg.png" alt="Фон - разделитель">
+                    <h2 class="big-title__text">Программа</h2>
+                </div>
+                <div class="program__table">
+                    <div class="program__column">
+                        <div class="program__row">
+                            <span class="program__time">17:00-17:02</span>
+                            <span class="program__name">Интро-ролик</span>
+                        </div>
+                        <div class="program__row">
+                            <span class="program__time">17:02-17:07</span>
+                            <span class="program__name">Выход ведущего</span>
+                        </div>
+                        <div class="program__row">
+                            <span class="program__time">17:07-17:12</span>
+                            <span class="program__name">Рубрика «Интересный гость»</span>
+                        </div>
+                        <div class="program__row">
+                            <span class="program__time">17:12-17:20</span>
+                            <span class="program__name">Рубрика «Коротко о важном» <br>(топ-10 новостей года)</span>
+                        </div>
+                        <div class="program__row">
+                            <span class="program__time">17:20-17:30</span>
+                            <span class="program__name">«Лучший сотрудник года»</span>
+                        </div>
+                        <div class="program__row">
+                            <span class="program__time">17:30-17:35</span>
+                            <span class="program__name">«Алло, мы ищем таланты», <br>творческий номер #1</span>
+                        </div>
+                        <div class="program__row">
+                            <span class="program__time">17:35-17:37</span>
+                            <span class="program__name">«Острый репортаж»</span>
+                        </div>
+                        <div class="program__row">
+                            <span class="program__time">17:37-17:45</span>
+                            <span class="program__name">Рубрика «Носки судьбы»</span>
+                        </div>
+                        <div class="program__row">
+                            <span class="program__time">17:45-17:50</span>
+                            <span class="program__name">Рубрика «Я/Не Я»</span>
+                        </div>
+                        <div class="program__row">
+                            <span class="program__time">17:50-17:55</span>
+                            <span class="program__name">«Алло, мы ищем таланты», <br>
+                                творческий номер #2</span>
+                        </div>
+                    </div>
+                    <div class="program__column">
+                        <div class="program__row">
+                            <span class="program__time">17:55-18:00</span>
+                            <span class="program__name">Баттл «60 секунд» с голосованием зрителей #1</span>
+                        </div>
+                        <div class="program__row">
+                            <span class="program__time">18:00-18:02</span>
+                            <span class="program__name">«Острый репортаж» (Рубрика с сотрудниками) </span>
+                        </div>
+                        <div class="program__row">
+                            <span class="program__time">18:02-18:10</span>
+                            <span class="program__name">Баттл «60 секунд» с голосованием зрителей #2</span>
+                        </div>
+                        <div class="program__row">
+                            <span class="program__time">18:10-18:20</span>
+                            <span class="program__name">«Взгляд снизу» <br> (Рубрика с детьми сотрудников)</span>
+                        </div>
+                        <div class="program__row">
+                            <span class="program__time">18:20-18:30</span>
+                            <span class="program__name">Стихмоб «Ценности Калашникова» </span>
+                        </div>
+                        <div class="program__row">
+                            <span class="program__time">18:30-18:40</span>
+                            <span class="program__name">«Острый репортаж» <br> (Рубрика с сотрудниками)</span>
+                        </div>
+                        <div class="program__row">
+                            <span class="program__time">18:40-18:50</span>
+                            <span class="program__name">Новогодняя лотерея со зрителями</span>
+                        </div>
+                        <div class="program__row">
+                            <span class="program__time">18:50-19:00</span>
+                            <span class="program__name">Кульминация (Новогодний гимн <br> ГК «Калашников»)</span>
+                        </div>
+                        <div class="program__row">
+                            <span class="program__time">19:00-19:30</span>
+                            <span class="program__name">Топ-чарт «В десяточку!» от кавер-группы</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="question">
+            <div class="container">
+                <div class="big-title">
+                    <img class="big-title__bg" src="./img/big-title_bg.png" alt="Фон - разделитель">
+                    <h2 class="big-title__text">Задать вопрос</h2>
+                </div>
+                <div class="question__wrap">
+                    <span class="question__subtitle">Если у вас появились вопросы по мероприятию, можете отправить их нам!</span>
+                    <form class="question__form form">
+                        <div class="form__row">
+                            <input type="text" name="user_name" class="form__input form__input_purple" placeholder="Имя">
+                            <input type="email" name="user_email" class="form__input form__input_purple" placeholder="E-mail">
+                        </div>
+                        <div class="form__row">
+                            <textarea class="form__input form__input_purple" name="user__comment" rows="4" placeholder="Ваше сообщение по мероприятию"></textarea>
+                        </div>
+                        <div class="form__row form__row_between">
+                            <label class="form__file-label">
+                                <input type="file" accept="image/*" class="form__file">
+                                <span class="form__file-text">Загрузить изображение</span>
+                            </label>
+                            <span class="form__file-result active"><span class="form__file-name js-file-name">3333</span><span class="form__file-success">успешно загружен!</span></span>
+                        </div>
+                        <div class="form__row form__row_center">
+                            <button type="submit" class="button form__button"><span>Отправить</span></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section class="tops">
+            <div class="container">
+                <div class="big-title">
+                    <img class="big-title__bg" src="./img/big-title_bg.png" alt="Фон - разделитель">
+                    <div class="tops__row">
+                        <div class="tops__col">
+                            <h2 class="tops__title">Топ-10 лучших песен!</h2>
+                            <ol class="tops__list">
+                                <li class="tops__item">Sub urban<span class="tops__item-silver"> - Kms</span></li>
+                                <li class="tops__item">6ix9ine<span class="tops__item-silver"> - Gooba</span></li>
+                                <li class="tops__item">Little big<span class="tops__item-silver"> - Hypnodancer</span></li>
+                                <li class="tops__item">Morgenshtern<span class="tops__item-silver"> - Малышка</span></li>
+                                <li class="tops__item">Morgenshtern<span class="tops__item-silver"> - Ice</span></li>
+                                <li class="tops__item">Zivert x niletto<span class="tops__item-silver"> - Fly 2</span></li>
+                                <li class="tops__item">The weeknd<span class="tops__item-silver"> - Blinding lights</span></li>
+                                <li class="tops__item">Intelligency<span class="tops__item-silver"> - August</span></li>
+                                <li class="tops__item">Billie Eilish<span class="tops__item-silver"> - Everything i wanted</span></li>
+                                <li class="tops__item">Natan<span class="tops__item-silver"> - Ананасовый сироп</span></li>
+                            </ol>
+                            <a href="#" class="form__button"><span>Голосовать!</span></a>
+                        </div>
+                        <div class="tops__col">
+                            <h2 class="tops__title">Самое лучшее фото</h2>
+                            <img src="./img/tops-img.jpg" alt="Фото" class="tops__img">
+                        </div>
+                        <div class="tops__col">
+                            <h2 class="tops__title">Самый активный участник</h2>
+                            <img src="./img/gift-ico.png" alt="Иконка" class="tops__icon">
+                            <span class="tops__italic">Наиболее активный <br> участник чата получит <br><span class="tops__italic tops__italic_medium">ценный приз!</span></span>
+                            <a href="#" class="form__button"><span>Подробнее</span></a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

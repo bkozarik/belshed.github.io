@@ -615,6 +615,8 @@ section
     &__name
         font-weight: 700
         font-size: 30px
+        &_mb
+            margin-bottom: 30px
     &__priselist
         flex-direction: column
         align-items: flex-start
@@ -783,3 +785,34 @@ section
             font-weight: 700
     &__text + &__text, p + p
         margin-top: 1.2em
+
+
+//
+//
+// - Страница всех сливов
+//
+//
+
+.all-models
+    &__wrap
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        column-gap: 30px
+        row-gap: 25px
+    &__item
+        padding: 10px
+        position: relative
+        border-radius: 10px
+        overflow: hidden
+        display: flex
+        align-items: flex-end
+        height: 155px
+        &::after
+            position: absolute
+            width: 100%
+            height: 50%
+            bottom: 0
+            left: 0
+            background-color: rgba(0, 0, 0, .1)
+            content: ''
+            z-index: -1

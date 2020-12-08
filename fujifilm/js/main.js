@@ -78,27 +78,7 @@ $(document).ready(() => {
         let slider_1 = $('.js-slider-color').get(0);
         let slider_2 = $('.js-slider-examples').get(0);
 
-        let slider_1_obj = new Swiper(slider_1, {
-            slidesPerView: 1,
-            speed: 700,
-            watchSlidesVisibility: true,
-            lazy: {
-                loadPrevNext: false,
-                loadOnTransitionStart: true,
-                loadPrevNext: true,
-            },
-            navigation: {
-                prevEl: '.slider__control_prev',
-                nextEl: '.slider__control_next',
-            },
-            pagination: {
-                el: '.slider__pagination.swiper-pagination',
-                type: 'bullets',
-                clickable: true,
-            }
-        });
-
-        let slider_2_obj = new Swiper(slider_2, {
+        const swiperSettings = {
             slidesPerView: 1,
             speed: 700,
             watchSlidesVisibility: true,
@@ -116,7 +96,11 @@ $(document).ready(() => {
                 el: '.slider__pagination.swiper-pagination',
                 clickable: true,
             }
-        });
+        };
+
+        let slider_1_obj = new Swiper(slider_1, swiperSettings);
+
+        let slider_2_obj = new Swiper(slider_2, swiperSettings);
     }
 
     const closePopup = () => {
