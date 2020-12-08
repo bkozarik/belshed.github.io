@@ -14,6 +14,11 @@ body, html
 
 body
     background-color: #000000
+    display: flex
+    flex-direction: column
+
+.header, .footer
+    flex-grow: 0
 
 .header
     padding-top: 40px
@@ -39,7 +44,7 @@ body
         width: 100%
 
 .main
-    display: block
+    flex-grow: 1
     position: relative
     margin-top: 125px
 
@@ -235,7 +240,7 @@ body
         display: flex
         justify-content: space-between
     &__column
-        flex: 1 1 48%
+        width: 48%
     &__row
         display: flex
         align-items: center
@@ -246,11 +251,13 @@ body
         color: #ffffff
         font-weight: 500
         flex-shrink: 0
+        display: inline-block
     &__name
         margin-left: 30px
         font-weight: 500
         font-size: 22px
         color: #cd0611
+        display: inline-block
 
 .question
     &__wrap
@@ -264,7 +271,6 @@ body
         font-size: 24px
         font-weight: 300
         margin-bottom: 30px
-    &__form
 
 .form
     width: 100%
@@ -281,7 +287,7 @@ body
             justify-content: center
     &__input
         display: block
-        width: 100%
+        width: 49%
         border: none
         outline: none
         border-radius: 5px
@@ -293,8 +299,12 @@ body
         resize: none
         &_purple
             background-color: #130a1a
+        &_red
+            background-color: #210b02
         & + &
             margin-left: 17px
+    textarea.form__input
+        width: 100%
     &__file
         position: absolute
         visibility: hidden
@@ -362,7 +372,7 @@ body
         cursor: pointer
         background-color: $main_red
         box-shadow: 0 0 0 2px #a5a5a5
-        transform: skewX(-20deg)
+        transform: skewX(-10deg)
         background: rgb(180,0,11)
         background: linear-gradient(90deg, rgba(180,0,11,1) 0%, rgba(227,0,13,1) 100%)
         transition: $transition
@@ -372,7 +382,7 @@ body
             position: absolute
             top: 50%
             right: 15px
-            transform: translate(0, -50%) skewX(20deg)
+            transform: translate(0, -50%) skewX(10deg)
             height: 15px
             width: 10px
             background-image: url(../img/button-chevron.png)
@@ -381,7 +391,7 @@ body
             background-position: center
         span
             display: inline-block
-            transform: skewX(20deg)
+            transform: skewX(10deg)
         &:hover
             background: linear-gradient(90deg, rgba(227,0,13,1) 0%, rgba(227,0,13,1) 100%)
             
@@ -396,7 +406,7 @@ body
         flex-direction: column
         justify-content: space-between
         align-items: center
-        flex-basis: 30%
+        width: 30%
         .form__button
             font-size: 20px
             padding: 10px 55px 10px 35px
@@ -440,3 +450,59 @@ body
         font-weight: 300
         &_medium
             font-weight: 500
+
+.footer
+    padding: 65px 0px 70px
+    &__top
+        display: flex
+        justify-content: space-between
+        align-items: flex-end
+    &__body
+        display: flex
+        flex-direction: column
+        align-items: center
+    &__contacts
+        margin-top: 50px
+        display: flex
+        align-items: center
+    &__text
+        font-size: 18px
+        color: #ffffff
+        font-weight: 300
+        line-height: 22px
+        display: inline-block
+        & + &
+            margin-left: 10px
+        img
+            vertical-align: middle
+        &_red
+            color: #e30613
+        &_big
+            font-size: 20px
+        &_small
+            font-size: 15px
+        &_grey
+            color: #898989
+        &_medium
+            font-weight: 500
+    &__form
+        margin-top: 50px
+        display: flex
+        align-content: center
+        &-col
+            &:nth-of-type(1)
+                margin-left: 15px
+            &:nth-of-type(2)
+                margin-right: 30px
+            & + &
+                margin-left: 15px
+        .form
+            &__button
+                align-self: center
+            &__input
+                width: 100%
+        .form__input + .form__input
+            margin-left: 0
+            margin-top: 25px
+    &__service
+        

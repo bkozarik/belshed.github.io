@@ -19,6 +19,8 @@ $(document).ready(() => {
 
     let videos = $('video.video-unloaded');
 
+    let slider_1_obj;
+
     const scrollHandler = () => {
         const offset = 200;
 
@@ -98,9 +100,37 @@ $(document).ready(() => {
             }
         };
 
-        let slider_1_obj = new Swiper(slider_1, swiperSettings);
+        slider_1_obj = new Swiper(slider_1, {
+            slidesPerView: 1,
+            speed: 700,
+            watchSlidesVisibility: true,
+            lazy: {
+                loadPrevNext: false,
+                loadOnTransitionStart: true,
+                loadPrevNext: true,
+            },
+            navigation: {
+                prevEl: '.slider__control_prev',
+                nextEl: '.slider__control_next',
+            },
+            pagination: {
+                el: '.slider__pagination.swiper-pagination',
+                clickable: true,
+            }
+        });
 
         let slider_2_obj = new Swiper(slider_2, swiperSettings);
+
+        checkSlidePos();
+        slider_1_obj.on('slideChange', checkSlidePos);
+    }
+
+    const checkSlidePos = () => {
+        const rollNames = document.querySelectorAll('.slider__name');
+
+        rollNames.forEach(name => name.classList.remove('active'));
+
+        rollNames[slider_1_obj.activeIndex].classList.add('active');
     }
 
     const closePopup = () => {

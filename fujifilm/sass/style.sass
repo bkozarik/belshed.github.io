@@ -781,6 +781,9 @@ a.text
 .slider
     padding-top: 60px
     overflow: hidden
+    .swiper-wrapper
+        height: 100%
+        align-items: stretch
     .swiper-lazy-preloader-red
         --swiper-preloader-color: #D6253F
     &_last
@@ -789,12 +792,12 @@ a.text
             &__pagination
                 &-block
                     transform: translate(-50%, 100%)
-    .slider
-        &__pagination
-            width: 100% !important
-            max-width: 90px
-            .swiper-pagination-bullet
-                margin: 0 5px
+        .slider
+            &__pagination
+                width: 100% !important
+                max-width: 90px
+                .swiper-pagination-bullet
+                    margin: 0 5px
     &__title
         margin-bottom: 50px
     &__body
@@ -810,11 +813,15 @@ a.text
         z-index: 5
     &__item
         width: 100%
-        min-height: 300px
-        max-height: 940px
+        min-height: 400px
+        height: 100%
+        max-height: 875px
         overflow: hidden
         position: relative
     &__img
+        position: absolute
+        top: 0
+        left: 0
         width: 100%
         height: 100%
         object-fit: cover
@@ -857,11 +864,25 @@ a.text
             transform: translate(-50%, -50%)
             position: absolute
             z-index: 2
+    &__names
+        position: relative
+        height: 30px
+        width: 100%
     &__name
+        position: absolute
+        top: 50%
+        width: 100%
+        left: 50%
+        transform: translate(-50%, 0%)
+        opacity: 0
         font-weight: 600
         font-size: 30px
         line-height: 45px
         text-align: center
+        transition: $transition
+        &.active
+            transform: translate(-50%, -50%)
+            opacity: 1
     &__pagination
         position: relative
         width: 100%
@@ -1089,6 +1110,8 @@ a.text
     &__button:focus &__button-shape 
         fill: $main_red
         fill-opacity: 1
+    &_outer
+        padding-bottom: 56.25%
     &_outer &__button
         display: none
     &--enabled 

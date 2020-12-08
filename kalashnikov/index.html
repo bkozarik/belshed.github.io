@@ -91,7 +91,7 @@
         <div class="embed">
             <div class="container">
                 <div class="embed__wrap">
-                    <iframe class="embed__iframe" src="https://www.youtube.com/embed/kbPiWmoXObM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <!-- <iframe class="embed__iframe" src="https://www.youtube.com/embed/kbPiWmoXObM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
                     <span class="embed__subtitle"><span>Обращение генерального директора</span></span>
                 </div>
             </div>
@@ -204,7 +204,7 @@
                 <div class="question__wrap">
                     <span class="question__subtitle">Если у вас появились вопросы по мероприятию, можете отправить их нам!</span>
                     <form class="question__form form">
-                        <div class="form__row">
+                        <div class="form__row form__row_between">
                             <input type="text" name="user_name" class="form__input form__input_purple" placeholder="Имя">
                             <input type="email" name="user_email" class="form__input form__input_purple" placeholder="E-mail">
                         </div>
@@ -262,7 +262,51 @@
         </section>
     </main>
     <footer class="footer">
-
+        <div class="container">
+            <div class="footer__top">
+                <div class="logo">
+                    <img src="./img/logo.png" alt="Логотип" class="logo__img">
+                </div>
+                <nav class="nav">
+                    <ul class="nav__list row justify-content-between">
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">О мероприятии</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Трансляция</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Программа</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer__body">
+                <div class="footer__contacts">
+                    <span class="footer__text footer__text_medium footer__text_red">Для связи с нами: </span>
+                    <a href="tel:+74952607990" class="footer__text footer__text_medium"><img src="./img/phone-ico.png" alt="Иконка"> +7 (495) 260-79-90</a>
+                    <span class="footer__text">Власова Екатерина (Event-специалист)</span>
+                    <a href="mailto:vlasova@kalashnikov.ru" class="footer__text footer__text_red"><img src="./img/mail-ico.png" alt="Иконка"> vlasova@kalashnikov.ru</a>
+                </div>
+                <form class="footer__form">
+                    <span class="footer__text footer__text_medium footer__text_red">Задать вопрос:</span>
+                    <div class="footer__form-col">
+                        <input type="text" name="user_name" class="form__input form__input_red" placeholder="Имя">
+                        <input type="email" name="user_email" class="form__input form__input_red" placeholder="E-mail">
+                    </div>
+                    <div class="footer__form-col">
+                        <textarea class="form__input form__input_red" name="user__comment" rows="4" placeholder="Ваш вопрос"></textarea>
+                    </div>
+                    <button type="submit" class="button form__button"><span>Отправить</span></button>
+                </form>
+                <div class="footer__service">
+                    
+                </div>
+            </div>
+        </div>
     </footer>
     <script src="./js/main.js"></script>
 </body>

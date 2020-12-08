@@ -278,6 +278,9 @@
                 line-height: 44px
 
     .slider
+        &_last
+            .slider__pagination-block
+                position: absolute
         &__control
             height: 60px
             width: 30px
@@ -293,6 +296,21 @@
     .lens .float-img
         width: auto !important
         height: auto !important
+
+    .popup
+        padding: 60px 10px 30px
+
+    .competition
+        &__item
+            & + &
+                margin-left: 0
+        &__button
+            padding: 0px 15px
+            display: grid
+            justify-items: center
+            grid-template-columns: repeat(2, 1fr)
+            column-gap: 25px
+            row-gap: 25px
 
     .corpus
         &__img
