@@ -1,4 +1,13 @@
 document.addEventListener('DOMContentLoaded', function(){
+    if (window.NodeList && !NodeList.prototype.forEach) {
+        NodeList.prototype.forEach = function (callback, thisArg) {
+            thisArg = thisArg || window;
+            for (var i = 0; i < this.length; i++) {
+                callback.call(thisArg, this[i], i, this);
+            }
+        };
+    }
+
     var header = document.querySelector('.js-header');
 
     var burger = document.querySelector('.js-burger');
