@@ -37,15 +37,15 @@ body
     top: 0
     left: 0
     width: 100%
-    z-index: 5
-    transition: $transition 
+    z-index: 10
+    transition: $transition
     &__wrap
         display: flex
         align-items: flex-end
         justify-content: space-between
     &.fixed
-        // padding: 20px 0px
-        // background-color: rgba(0, 0, 0, .7)
+        padding: 20px 0px
+        background-color: rgba(0, 0, 0, .7)
 
 .logo
     max-width: 191px
@@ -175,11 +175,12 @@ body
     flex-grow: 1
     overflow: hidden
     z-index: 2
-    // padding-top: 125px
+    margin-top: 125px
 
 .hero
     padding-top: 45px
     margin-bottom: 80px
+    z-index: 8
     &__bg
         position: absolute
         top: 0
@@ -663,7 +664,7 @@ body
             &__input
                 padding: 5px
                 font-size: 16px
-                width: 100%
+                width: 220px
         .form__input + .form__input
             margin-left: 0
             margin-top: 10px

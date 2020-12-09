@@ -20,7 +20,9 @@ document.addEventListener('DOMContentLoaded', function(){
     var formFile = document.querySelector('.js-form-file')
 
     function scrollHandler(){
-        window.pageYOffset >= 60 ? header.classList.add('fixed') : header.classList.remove('fixed');
+        if(window.innerWidth < 900){
+            window.pageYOffset >= 160 ? header.classList.add('fixed') : header.classList.remove('fixed');
+        }
     }
 
     function toggleMenu(state){
@@ -104,10 +106,13 @@ document.addEventListener('DOMContentLoaded', function(){
     }
 
     window.addEventListener('scroll', scrollHandler);
-    formFile.addEventListener('change', fileUpload);
 
     burger.addEventListener('click', toggleMenu());
     scrollLinks.forEach(function(link){link.addEventListener('click', scrollLinkClick)});
     
-    timerInit();
+    try{
+        formFile.addEventListener('change', fileUpload);
+        timerInit();
+    }
+    catch(e){}
 });
