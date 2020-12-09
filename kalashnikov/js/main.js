@@ -59,20 +59,13 @@ document.addEventListener('DOMContentLoaded', function(){
 
             dateArr.forEach(function(num, index){
                 timerItems[index].innerHTML = num.length > 1 ? 
-                    `<span class="timer__num">
-                        <span>${num[0]}</span>
-                    </span>
-                    <span class="timer__num">
-                        <span>${num[1]}</span>
-                    </span>
-                    <span class="timer__item-caption">${captionsArr[index]}</span>` :
-                        `<span class="timer__num">
-                            <span>0</span>
-                        </span>
-                        <span class="timer__num">
-                            <span>${num[0]}</span>
-                        </span>
-                        <span class="timer__item-caption">${captionsArr[index]}</span>`;
+                    '<span class="timer__num"><span>' + num[0] + 
+                    '</span></span><span class="timer__num"><span>' + num[1] + 
+                    '</span></span><span class="timer__item-caption">' + captionsArr[index] + 
+                    '</span>':
+                    '<span class="timer__num"><span>0</span></span><span class="timer__num"><span>' + num[0] + 
+                    '</span></span><span class="timer__item-caption">' + captionsArr[index] + 
+                    '</span>';
             });
 
             setTimeout(countTime, 1000);
