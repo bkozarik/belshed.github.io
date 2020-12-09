@@ -14,7 +14,9 @@ document.addEventListener('DOMContentLoaded', function(){
         window.pageYOffset >= 60 ? header.classList.add('fixed') : header.classList.remove('fixed');
     }
 
-    function toggleMenu(state = null){
+    function toggleMenu(state){
+        state = state || null;
+
         if(state == null){
             return function(){
                 burger.classList.toggle('active');
