@@ -1,22 +1,22 @@
 document.addEventListener('DOMContentLoaded', function(){
-    const header = document.querySelector('.js-header');
+    var header = document.querySelector('.js-header');
 
-    const burger = document.querySelector('.js-burger');
-    const menu = document.querySelector('.js-menu');
+    var burger = document.querySelector('.js-burger');
+    var menu = document.querySelector('.js-menu');
 
-    const scrollLinks = document.querySelectorAll('.js-scroll-link');
+    var scrollLinks = document.querySelectorAll('.js-scroll-link');
 
-    const timer = document.querySelector('.js-timer');
+    var timer = document.querySelector('.js-timer');
 
-    const formFile = document.querySelector('.js-form-file')
+    var formFile = document.querySelector('.js-form-file')
 
-    const scrollHandler = () => {
+    function scrollHandler(){
         window.pageYOffset >= 60 ? header.classList.add('fixed') : header.classList.remove('fixed');
     }
 
-    const toggleMenu = (state = null) => {
+    function toggleMenu(state = null){
         if(state == null){
-            return () => {
+            return function(){
                 burger.classList.toggle('active');
                 menu.classList.toggle('active');
             }
@@ -27,35 +27,35 @@ document.addEventListener('DOMContentLoaded', function(){
         }
     }
 
-    const fileUpload = () => {
-        let fileName = document.querySelector('.js-form-file-name');
+    function fileUpload(){
+        var fileName = document.querySelector('.js-form-file-name');
 
         fileName.parentNode.classList.add('active');
         fileName.innerText = event.target.files[0].name;
     }
 
-    const timerInit = () => {
-        const targetDate = new  Date(2020, 11, 24, 17, 0, 0, 0);
+    function timerInit(){
+        var targetDate = new  Date(2020, 11, 24, 17, 0, 0, 0);
 
-        const sec = 1000;
-        const min = sec * 60;
-        const hour = min * 60;
-        const day = hour * 24;
+        var sec = 1000;
+        var min = sec * 60;
+        var hour = min * 60;
+        var day = hour * 24;
 
-        let captionsArr = ['дни', 'часы', 'минуты', 'секунды'];
-        let timerItems = timer.querySelectorAll('.timer__item');
+        var captionsArr = ['дни', 'часы', 'минуты', 'секунды'];
+        var timerItems = timer.querySelectorAll('.timer__item');
 
-        const countTime = () => {
-            const currDate = new Date();
-            let dateDifff = targetDate - currDate;
-            let days = String(Math.floor(dateDifff / day));
-            let hours = String(Math.floor((dateDifff - days * day) / hour));
-            let mins = String(Math.floor((dateDifff - days * day - hours * hour) / min));
-            let secs = String(Math.floor((dateDifff - days * day - hours * hour - mins * min) / sec));
+        function countTime(){
+            var currDate = new Date();
+            var dateDifff = targetDate - currDate;
+            var days = String(Math.floor(dateDifff / day));
+            var hours = String(Math.floor((dateDifff - days * day) / hour));
+            var mins = String(Math.floor((dateDifff - days * day - hours * hour) / min));
+            var secs = String(Math.floor((dateDifff - days * day - hours * hour - mins * min) / sec));
             
-            let dateArr = [days, hours, mins, secs];
+            var dateArr = [days, hours, mins, secs];
 
-            dateArr.forEach((num, index) => {
+            dateArr.forEach(function(num, index){
                 timerItems[index].innerHTML = num.length > 1 ? 
                     `<span class="timer__num">
                         <span>${num[0]}</span>
@@ -79,17 +79,17 @@ document.addEventListener('DOMContentLoaded', function(){
         countTime();
     }
 
-    const scrollLinkClick = () => {
+    function scrollLinkClick(){
         event.preventDefault();
 
-        const targetLink = event.target;
+        var targetLink = event.target;
     
-        scrollLinks.forEach(link => link.classList.remove('active'));
+        scrollLinks.forEach(function(link){link.classList.remove('active')});
 
         toggleMenu(false);
 
-        let href;
-        const offset = 120;
+        var href;
+        var offset = 120;
         
         href = targetLink.getAttribute('href');
         
@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', function(){
     formFile.addEventListener('change', fileUpload);
 
     burger.addEventListener('click', toggleMenu());
-    scrollLinks.forEach(link => link.addEventListener('click', scrollLinkClick));
+    scrollLinks.forEach(function(link){link.addEventListener('click', scrollLinkClick)});
     
     timerInit();
 });
