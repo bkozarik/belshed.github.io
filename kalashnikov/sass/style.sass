@@ -12,10 +12,22 @@ $transition: all .3s ease-out 0s
 body, html
     overflow-x: hidden
 
+section
+    position: relative
+
 body
     background-color: #000000
     display: flex
     flex-direction: column
+    min-height: 100vh
+
+.container
+    max-width: 1200px
+    width: 100%
+    padding: 0px 15px
+    margin: 0 auto
+    position: relative
+    z-index: 2
 
 .header, .footer
     flex-grow: 0
@@ -34,7 +46,7 @@ body
         justify-content: space-between
     &.fixed
         padding: 20px 0px
-        background-color: rgba(0, 0, 0, .4)
+        background-color: rgba(0, 0, 0, .7)
 
 .logo
     max-width: 191px
@@ -43,16 +55,15 @@ body
         max-width: 100%
         width: 100%
 
-.main
-    flex-grow: 1
-    position: relative
-    margin-top: 125px
-
 .nav
     width: 100%
     max-width: 775px
     &__list
         list-style-type: none
+        display: flex
+        width: 100%
+        justify-content: space-between
+        align-items: center
     &__link
         font-size: 19px
         color: #ffffff
@@ -99,9 +110,84 @@ body
                 transform: skewX(-20deg) scaleX(1)
                 opacity: 1
 
+.burger
+    display: none
+    height: 40px
+    width: 40px
+    border-radius: 0px
+    background-color: transparent
+    border: none
+    transition: $transition
+    position: relative
+    &:focus
+        outline: none
+    span, &::before, &::after
+        content: ''
+        display: inline-block
+        width: 24px
+        height: 3px
+        background-color: $main_red
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        transition:  top .15s ease-in .15s, transform .15s ease-in 0s, opacity .1s ease-in .15s
+    &::before
+        top: calc( 9px + 50% )
+    &::after
+        top: calc( -9px + 50% )
+    &.active
+        span, &::before, &::after
+            transform: translate(-50%, -50%)
+            top: 50%
+            transition:  top .15s ease-in 0s, transform .15s ease-in .15s, opacity .15s ease-in .1s
+        span
+            opacity: 0
+        &::before
+            transform: translate(-50%, -50%) rotate(45deg)
+        &::after
+            transform: translate(-50%, -50%) rotate(-45deg)
+
+.menu
+    position: fixed
+    padding: 135px 15px 10px
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    z-index: 4
+    transform: translateY(-100%)
+    transition: $transition
+    opacity: 0
+    visibility: hidden
+    background-color: rgba(0, 0, 0, .7)
+    .nav
+        &__list
+            flex-direction: column
+            align-items: center
+        &__item
+            margin-bottom: 20px
+    &.active
+        opacity: 1
+        visibility: visible
+        transform: translateY(0%)
+
+.main
+    flex-grow: 1
+    overflow: hidden
+    position: relative
+    z-index: 2
+    padding-top: 125px
+
 .hero
     padding-top: 45px
     margin-bottom: 80px
+    &__bg
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: auto
     &__wrap
         display: flex
         flex-direction: column
@@ -116,7 +202,7 @@ body
             height: 100%
             object-fit: contain
     &__date
-        margin-top: 20px
+        margin-top: 13px
     &__text
         font-weight: 500
         font-size: 55px
@@ -198,15 +284,22 @@ body
         max-width: 920px
         margin: 0 auto
         overflow: hidden
+        position: relative
     &__iframe
         width: 100%
-        min-height: 510px
+        height: 100%
+        position: absolute
+        top: 0
+        left: 0
+        &-wrap
+            overflow: hidden
+            position: relative
+            padding-bottom: 56.25%
     &__subtitle
         color: #ffffff
         background-color: #cd0611
         font-size: 22px
         padding: 10px 45px
-        margin-top: -5px
         display: inline-block
         transform: skewX(-20deg) translateX(-20px)
         span
@@ -217,6 +310,7 @@ body
     padding: 90px 0px 80px
     position: relative
     &__bg
+        pointer-events: none
         position: absolute
         left: 66%
         top: -133%
@@ -230,13 +324,32 @@ body
         padding: 0px 20px
         font-weight: 700
         font-size: 60px
+        color: transparent    
+        -webkit-background-clip: text
+        background-clip: text
+        background-image: linear-gradient(to bottom, #9f9f9f, #e8e8e8)
 
 .translation
     padding-bottom: 90px
+    &__bg
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: auto
+        transform: translateY(-50%)
 
 .program
     padding-bottom: 90px
+    &__bg
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: auto
     &__table
+        max-width: 1050px
+        margin: 0 auto
         display: flex
         justify-content: space-between
     &__column
@@ -245,7 +358,7 @@ body
         display: flex
         align-items: center
         & + &
-            margin-top: 10px
+            margin-top: 15px
     &__time
         font-size: 21px
         color: #ffffff
@@ -260,6 +373,12 @@ body
         display: inline-block
 
 .question
+    z-index: 4
+    &__bg
+        position: absolute
+        width: 100%
+        top: 0
+        left: 0
     &__wrap
         display: flex
         flex-direction: column
@@ -299,6 +418,9 @@ body
         resize: none
         &_purple
             background-color: #130a1a
+        &_blue
+            background-color: #181032
+            box-shadow: 0 0 0 2px #4b539f
         &_red
             background-color: #210b02
         & + &
@@ -396,8 +518,16 @@ body
             background: linear-gradient(90deg, rgba(227,0,13,1) 0%, rgba(227,0,13,1) 100%)
             
 .tops
+    z-index: 3
+    &__bg
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        object-fit: cover
+        height: 100%
     .big-title__bg
-        top: -115%
+        top: -45%
     &__row
         display: flex
         justify-content: space-between
@@ -420,14 +550,20 @@ body
         height: auto
         margin-top: 40px
     &__title
-        margin-bottom: 30px
+        margin-bottom: 40px
         text-align: center
         font-size: 38px
         line-height: 40px
         font-weight: 700
-        color: #ffffff
+        max-width: 350px
+        color: transparent    
+        -webkit-background-clip: text
+        background-clip: text
+        background-image: linear-gradient(to bottom, #9f9f9f, #e8e8e8)
     &__list
         list-style-position: inside
+    &__img
+        max-width: 100%
     &__item
         color: #e30613
         font-size: 18px
@@ -452,7 +588,19 @@ body
             font-weight: 500
 
 .footer
-    padding: 65px 0px 70px
+    padding: 30px 0px 70px
+    position: relative
+    overflow: hidden
+    &__bg
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        object-fit: cover
+    .big-title__bg
+        top: -83%
+        left: 64%
     &__top
         display: flex
         justify-content: space-between
@@ -481,6 +629,7 @@ body
             font-size: 20px
         &_small
             font-size: 15px
+            text-align: center
         &_grey
             color: #898989
         &_medium
@@ -500,10 +649,12 @@ body
             &__button
                 align-self: center
             &__input
+                padding: 5px
+                font-size: 16px
                 width: 100%
         .form__input + .form__input
             margin-left: 0
-            margin-top: 25px
+            margin-top: 10px
     &__service
         .footer__text
             margin-right: 20px
@@ -513,3 +664,33 @@ body
         align-items: center
     &__copyright
         margin-top: 35px
+
+.login
+    &__wrap
+        display: flex
+        align-items: center
+        justify-content: center
+    &__body
+        border-radius: 10px
+        box-shadow: 0 0 0 2px #e30613
+        margin: 120px auto 80px
+        max-width: 620px
+        width: 100%
+        display: flex
+        align-items: center
+        flex-direction: column
+        padding: 60px 20px 70px
+        background-image: url(../img/login-bg.png)
+        background-size: cover
+        background-position: center
+        background-repeat: no-repeat
+        .big-title__text
+            margin-bottom: 40px
+        .form__input
+            width: 100%
+            max-width: 340px
+        .form__input + .form__input
+            margin-left: 0
+            margin-top: 20px
+        .form__button
+            margin-top: 55px
