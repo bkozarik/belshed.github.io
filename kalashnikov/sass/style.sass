@@ -34,7 +34,6 @@ body
 
 .header
     padding-top: 40px
-    position: fixed
     top: 0
     left: 0
     width: 100%
@@ -45,8 +44,8 @@ body
         align-items: flex-end
         justify-content: space-between
     &.fixed
-        padding: 20px 0px
-        background-color: rgba(0, 0, 0, .7)
+        // padding: 20px 0px
+        // background-color: rgba(0, 0, 0, .7)
 
 .logo
     max-width: 191px
@@ -175,9 +174,8 @@ body
 .main
     flex-grow: 1
     overflow: hidden
-    position: relative
     z-index: 2
-    padding-top: 125px
+    // padding-top: 125px
 
 .hero
     padding-top: 45px
@@ -255,6 +253,8 @@ body
         box-shadow: 0 -1px 0 1px #dddddd
         background: rgb(241,241,241)
         background: linear-gradient(0deg, rgba(241,241,241,1) 0%, rgba(175,175,175,1) 100%)
+        & + &
+            margin-left: 5px
         &, & span
             line-height: 75px
             text-align: center
@@ -274,10 +274,10 @@ body
             height: 2px
             z-index: 0
             background-color: #a3a3a3
-        & + &
-            margin-left: 0px
 
 .embed
+    position: relative
+    z-index: 7
     margin-bottom: 95px
     &__wrap
         width: 100%
@@ -327,7 +327,10 @@ body
         text-shadow: 0 -2px 2px #e8e8e8
 
 .translation
+    z-index: 6
     padding-bottom: 90px
+    .big-title__bg
+        top: -33%
     &__bg
         position: absolute
         top: 0
@@ -335,9 +338,21 @@ body
         width: 100%
         height: auto
         transform: translateY(-50%)
+    &__media
+        margin-top: 30px
+        width: 100%
+        padding-bottom: 56.25%
+        position: relative
+        iframe
+            position: absolute
+            width: 100%
+            height: 100%
+            left: 0
+            top: 0
 
 .program
     padding-bottom: 90px
+    z-index: 5
     &__bg
         position: absolute
         top: 0
@@ -413,6 +428,7 @@ body
         padding: 10px 20px
         color: #adacae
         resize: none
+        overflow: hidden
         &_purple
             background-color: #130a1a
         &_blue
@@ -518,11 +534,11 @@ body
     z-index: 3
     &__bg
         position: absolute
-        top: 0
+        top: -80%
         left: 0
         width: 100%
-        object-fit: cover
-        height: 100%
+        // object-fit: cover
+        // height: 100%
     .big-title__bg
         top: -45%
     &__row
@@ -585,6 +601,7 @@ body
     padding: 30px 0px 70px
     position: relative
     overflow: hidden
+    z-index: 7
     &__bg
         position: absolute
         top: 0
@@ -616,6 +633,7 @@ body
         & + &
             margin-left: 10px
         img
+            border: none
             vertical-align: middle
         &_red
             color: #e30613
