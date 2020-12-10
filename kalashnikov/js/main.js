@@ -17,7 +17,9 @@ document.addEventListener('DOMContentLoaded', function(){
 
     var timer = document.querySelector('.js-timer');
 
-    var formFile = document.querySelector('.js-form-file')
+    var formFile = document.querySelector('.js-form-file');
+
+    var galleryImg = document.querySelectorAll('.js-gallery-item');
 
     function scrollHandler(){
         if(window.innerWidth < 900){
@@ -44,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function(){
         var fileName = document.querySelector('.js-form-file-name');
 
         fileName.parentNode.classList.add('active');
-        fileName.innerText = event.target.files[0].name;
+        fileName.innerText = this.files[0].name;
     }
 
     function timerInit(){
@@ -85,6 +87,27 @@ document.addEventListener('DOMContentLoaded', function(){
         countTime();
     }
 
+    function swiperInit(){
+        var popupSwiper = new Swiper('.js-popup-swiper', {
+            slidesPerView: 2,
+            spaceBetween: 100,
+            speed: 700,
+            watchSlidesVisibility: true,
+            observer: true,
+            centeredSlides: true,
+            lazy: {
+                loadOnTransitionStart: true,
+                loadPrevNext: true,
+            },
+            navigation: {
+                prevEl: '.swiper__control_prev',
+                nextEl: '.swiper__control_next',
+            },
+        });
+
+
+    }
+
     function scrollLinkClick(){
         event.preventDefault();
 
@@ -105,14 +128,33 @@ document.addEventListener('DOMContentLoaded', function(){
         });
     }
 
+    function galleryImgClick(){
+        var targetItem = this;
+
+        while(!targetItem.classList.contains('js-gallery-item')){
+            targetItem = targetItem.parentNode;
+        }
+
+        var popupSwiper = document.querySelector('.js-popup-swiper').swiper;
+        popupSwiper.slideTo(targetItem.dataset.index, 0, true);
+
+        document.querySelector('.js-popup').classList.add('active');
+
+        document.querySelector('.js-popup-close').addEventListener('click', function(event){
+            document.querySelector('.js-popup').classList.remove('active');
+        });
+    }
+
     window.addEventListener('scroll', scrollHandler);
 
     burger.addEventListener('click', toggleMenu());
     scrollLinks.forEach(function(link){link.addEventListener('click', scrollLinkClick)});
+    galleryImg.forEach(function(img){img.addEventListener('click', galleryImgClick)});
     
     try{
         formFile.addEventListener('change', fileUpload);
         timerInit();
+        swiperInit();
     }
     catch(e){}
 });

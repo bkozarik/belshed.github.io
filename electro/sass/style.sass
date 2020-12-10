@@ -1,0 +1,238 @@
+$text-dark: #292a2a
+$btn-orange: #e29c2b
+$btn-blue: #5185d6
+
+$transition-duration: .2s
+
+@mixin transition
+    transition: all  $transition-duration ease-in-out 0s
+
+*, *::before, *::after
+    box-sizing: border-box
+    border-radius: 0px
+    text-decoration: none
+    border: none
+    appearance: none
+    margin: 0
+    padding: 0
+    color: $text-dark
+    font-family: 'Ubuntu', sans-serif
+
+body
+    display: flex
+    flex-direction: column
+    background-color: #191f26
+    min-height: 100vh
+
+.header, .footer
+    flex-grow: 0
+
+.container
+    width: 100%
+    max-width: 1440px
+    padding: 0px 15px
+    margin: 0 auto
+
+.button
+    position: relative
+    display: inline-block
+    background-color: transparent
+    cursor: pointer
+    color: #ffffff
+    border-radius: 30px
+    overflow: hidden
+    font-size: 18px
+    @include transition
+    &_orange
+        background-color: $btn-orange
+    &_blue
+        background-color: $btn-blue
+    &:focus
+        outline: none
+
+.header
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    z-index: 10
+    padding: 30px 0px
+    border-bottom: 1px solid #2f3b60
+    @include transition
+    &__wrap
+        display: flex
+        align-items: center
+        justify-content: space-between
+    &.fixed
+        padding: 15px 0px
+        background-color: rgba(47, 59, 96, .8)
+
+.logo
+    display: block
+    position: relative
+    max-width: 240px
+    flex-shrink: 0
+    &__img
+        width: 100%
+        height: auto
+
+.services-btn
+    display: flex
+    align-items: stretch
+    &__icon
+        width: 65px
+        position: relative
+        span, &::before, &::after
+            content: ''
+            display: inline-block
+            width: 25px
+            height: 3px
+            background-color: #ffffff
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            transition:  top $transition-duration ease-in-out $transition-duration, transform $transition-duration ease-in-out 0s, opacity .1s ease-in-out $transition-duration
+        &::before
+            top: calc( 9px + 50% )
+        &::after
+            top: calc( -9px + 50% )
+        span
+            width: 20px
+            transform: translate(-62%, -50%)
+    &.active &__icon
+        span, &::before, &::after
+            transform: translate(-50%, -50%)
+            top: 50%
+            transition:  top $transition-duration ease-in-out 0s, transform $transition-duration ease-in-out $transition-duration, opacity $transition-duration ease-in-out .1s
+        span
+            opacity: 0
+        &::before
+            transform: translate(-50%, -50%) rotate(45deg)
+        &::after
+            transform: translate(-50%, -50%) rotate(-45deg)
+    &__label
+        border-left: 1px solid #ebaf45
+        padding: 12px 20px
+        color: #ffffff
+        font-size: 18px
+
+.nav
+    max-width: 540px
+    width: 100%
+    &__list
+        width: 100%
+        display: flex
+        align-items: center
+        list-style-type: none
+        justify-content: space-around
+    &__link
+        display: inline-block
+        color: #ffffff
+        @include transition
+        &:hover
+            color: $btn-orange
+
+.contacts-dropdown
+    display: flex
+    align-items: center
+    &__icon
+        flex-shrink: 0
+        flex-grow: 0
+    &__body
+        margin-left: 10px
+        position: relative
+        &::after
+            content: ''
+            height: 10px
+            width: 10px
+            background-image: url(../img/small-chevron-icon.png)
+            background-size: contain
+            background-repeat: no-repeat
+            background-position: center
+            display: inline-block
+            position: absolute
+            top: 50%
+            right: -10px
+            transform: translate(100%, -50%)
+            @include transition
+        &:hover, &.active
+            &::after
+                transform: translate(100%, -50%) rotate(180deg)
+    &__tel
+        color: #ffffff
+        font-size: 20px
+        font-weight: 500
+    &__text
+        font-size: 14px
+        font-weight: 300
+        color: $btn-orange
+        display: block
+        margin-top: 2px
+
+.language
+    position: relative
+    &__trigger
+        position: relative
+        overflow: visible
+        padding-right: 20px
+        &::after
+            content: ''
+            height: 10px
+            width: 10px
+            background-image: url(../img/small-chevron-icon.png)
+            background-size: contain
+            background-repeat: no-repeat
+            background-position: center
+            display: inline-block
+            position: absolute
+            top: 50%
+            right: 0px
+            transform: translate(0%, -50%)
+            @include transition
+        &.active
+            & + .language__list
+                bottom: -100px
+                opacity: 1
+                visibility: visible
+            &::after
+                transform: translate(0%, -50%) rotate(180deg)
+            
+        &-text
+            color: #ffffff
+            text-transform: uppercase
+            font-size: 20px
+            font-weight: 500
+    &__list
+        position: absolute
+        list-style-type: none
+        border-top: 1px solid $btn-orange
+        background-color: #fff
+        bottom: -70px
+        opacity: 0
+        visibility: hidden
+        @include transition
+        &::before
+            content: ''
+            bottom: 100%
+            right: 0
+            position: absolute
+            border: 10px solid transparent
+            border-bottom: 10px solid $btn-orange
+    &__value
+        padding: 6px 15px
+        cursor: pointer
+        outline: none
+        & + &
+            border-top: 1px solid $btn-orange
+        &:hover
+            background-color: #e7e7e7
+    &__select
+        position: absolute
+        opacity: 0
+        visibility: hidden
+        height: 1px
+        width: 1px
+
+.main
+    flex-grow: 1

@@ -87,7 +87,6 @@ $(document).ready(() => {
             lazy: {
                 loadPrevNext: false,
                 loadOnTransitionStart: true,
-                loadPrevNext: true,
             },
             navigation: {
                 prevEl: '.slider__control_prev',
@@ -107,7 +106,6 @@ $(document).ready(() => {
             lazy: {
                 loadPrevNext: false,
                 loadOnTransitionStart: true,
-                loadPrevNext: true,
             },
             navigation: {
                 prevEl: '.slider__control_prev',

@@ -1,0 +1,9 @@
+/* Стили шрифтов */
+@import './fonts.css';
+
+/* Стили десктоп */
+@import './style.css';
+
+/* Стили мобильные */
+@import './media.css';
+

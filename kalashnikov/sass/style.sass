@@ -385,6 +385,45 @@ body
         color: #cd0611
         display: inline-block
 
+.gallery
+    z-index: 7
+    padding-bottom: 100px
+    background-image: url(../img/gallery-bg.png)
+    background-size: cover
+    background-position: 0 -130px
+    background-repeat: no-repeat
+    .question__subtitle
+        display: block
+        margin: 0 auto
+    &__medium
+        font-weight: 500
+    &__wa
+        color: #46b14b
+    &__tg
+        color: #30b9e7
+    &__wa, &__tg
+        font-weight: 500
+        img
+            vertical-align: middle
+    &__container
+        margin-top: 30px
+        display: flex
+        align-items: center
+        justify-content: center
+        flex-wrap: wrap
+    &__item
+        margin: 10px
+        width: 175px
+        height: 175px
+        position: relative
+        overflow: hidden
+        cursor: zoom-in
+        img
+            position: absolute
+            width: 100%
+            object-fit: cover
+            height: 100%
+
 .question
     z-index: 4
     &__bg
@@ -597,6 +636,102 @@ body
         font-weight: 300
         &_medium
             font-weight: 500
+
+.swiper
+    &__control
+        position: absolute
+        z-index: 2
+        display: inline-block
+        height: 70%
+        width: 100px
+        background-color: rgba(0, 0, 0, .1)
+        top: 50%
+        transform: translateY(-50%)
+        transition: $transition
+        &::before, &::after
+            content: ''
+            display: inline-block
+            position: absolute
+            background-color: #fff
+            height: 2px
+            width: 40px
+            top: 50%
+            left: 50%
+        &::before
+            transform: translate(-50%, calc( 17px - 50% )) rotate(60deg)
+        &::after
+            transform: translate(-50%, calc( -17px - 50% )) rotate(-60deg)
+        &:hover
+            background-color: rgba(0, 0, 0, .7)
+        &_prev
+            left: 0
+        &_next
+            right: 0
+            transform: translateY(-50%) rotate(180deg)
+
+.swiper-popup
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-color: rgba(0, 0, 0, .7)
+    z-index: 100
+    opacity: 0
+    visibility: hidden
+    pointer-events: none
+    transition: $transition
+    display: flex
+    align-items: center
+    justify-content: center
+    &__body
+        max-height: 88%
+        height: 100%
+        width: 100%
+        display: flex
+        .swiper-wrapper
+            height: 100%
+            width: 100%
+    &, &__body
+        min-width: 0
+    &__item
+        overflow: hidden
+    &__img
+        display: block
+        margin: 0 auto
+        height: 100%
+        width: 100%
+        object-fit: cover
+    &__close
+        cursor: pointer
+        position: absolute
+        z-index: 5
+        display: inline-block
+        height: 50px
+        width: 50px
+        outline: none
+        background-color: transparent
+        border: none
+        top: 10px
+        right: 10px
+        &::before, &::after
+            content: ''
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            display: inline-block
+            width: 35px
+            height: 2px
+            background-color: #fff
+        &::before
+            transform: translate(-50%, -50%) rotate(-45deg)
+        &::after
+            transform: translate(-50%, -50%) rotate(45deg)
+    &.active
+        opacity: 1
+        visibility: visible
+        pointer-events: all
 
 .footer
     padding: 30px 0px 70px
