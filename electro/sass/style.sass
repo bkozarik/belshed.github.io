@@ -1,6 +1,6 @@
-$text-dark: #292a2a
-$btn-orange: #e29c2b
-$btn-blue: #5185d6
+$text-dark: #242526
+$btn-orange: #f89d13
+$btn-blue: #2286da
 
 $transition-duration: .2s
 
@@ -21,8 +21,16 @@ $transition-duration: .2s
 body
     display: flex
     flex-direction: column
-    background-color: #191f26
     min-height: 100vh
+
+section
+    position: relative
+
+.section
+    &__title
+        font-size: 32px
+        line-height: 36px
+        font-weight: 500
 
 .header, .footer
     flex-grow: 0
@@ -32,6 +40,8 @@ body
     max-width: 1440px
     padding: 0px 15px
     margin: 0 auto
+    position: relative
+    z-index: 2
 
 .button
     position: relative
@@ -42,11 +52,20 @@ body
     border-radius: 30px
     overflow: hidden
     font-size: 18px
+    text-align: center
     @include transition
+    img
+        vertical-align: middle
+        margin-right: 20px
     &_orange
         background-color: $btn-orange
     &_blue
         background-color: $btn-blue
+    &:not(&_no-hover):hover
+        &.button_orange
+            box-shadow: 0 2px 10px 3px #f89d139d
+        &.button_blue
+            box-shadow: 0 2px 10px 3px #2287daab
     &:focus
         outline: none
 
@@ -65,7 +84,7 @@ body
         justify-content: space-between
     &.fixed
         padding: 15px 0px
-        background-color: rgba(47, 59, 96, .8)
+        background-color: rgba(11, 16, 31, 0.8)
 
 .logo
     display: block
@@ -190,6 +209,9 @@ body
             right: 0px
             transform: translate(0%, -50%)
             @include transition
+        &:hover
+            .language__trigger-text
+                color: $btn-orange
         &.active
             & + .language__list
                 bottom: -100px
@@ -203,6 +225,7 @@ body
             text-transform: uppercase
             font-size: 20px
             font-weight: 500
+            @include transition
     &__list
         position: absolute
         list-style-type: none
@@ -236,3 +259,53 @@ body
 
 .main
     flex-grow: 1
+    
+.hero
+    padding: 220px 0px 200px
+    &__bg
+        top: 0
+        left: 0
+        position: absolute
+        width: 100%
+        height: 100%
+        object-fit: cover
+    &__content
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+    &__pretitle
+        font-size: 18px
+        font-weight: 500
+        color: $btn-blue
+    &__title
+        max-width: 510px
+        font-weight: 500
+        font-size: 50px
+        line-height: 60px
+        color: #ffffff
+        margin-bottom: 40px
+    &__subtitle
+        font-size: 18px
+        color: #ffffff
+        line-height: 30px
+        display: inline-block
+        margin-bottom: 40px
+        max-width: 390px
+    &__button
+        padding: 13px
+        width: 100%
+        max-width: 330px
+        & + &
+            margin-top: 30px
+
+.services
+    padding: 80px 0px 40px
+    &__wrap
+        margin: 45px -15px 0px
+        display: flex
+        justify-content: center
+        flex-wrap: wrap
+    &__item
+        border-radius: 10px
+        background: linear-gradient( 50deg, rgb(248,248,248) 13%, rgb(255,255,255) 100%)
+        margin: 0px 15px 30px

@@ -84,5 +84,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    const scrollHandler = () => {
+        window.pageYOffset > 60 ? document.querySelector('.header').classList.add('fixed') : document.querySelector('.header').classList.remove('fixed');
+    }
+
     languageSelectInit(languageSelets);
+
+    window.addEventListener('scroll', scrollHandler);
 });
