@@ -89,12 +89,19 @@ document.addEventListener('DOMContentLoaded', function(){
 
     function swiperInit(){
         var popupSwiper = new Swiper('.js-popup-swiper', {
-            slidesPerView: 2,
             spaceBetween: 100,
             speed: 700,
             watchSlidesVisibility: true,
             observer: true,
             centeredSlides: true,
+            breakpoints: {
+                1200: {
+                    slidesPerView: 2,
+                },
+                300: {
+                    slidesPerView: 1,
+                }
+            },
             lazy: {
                 loadOnTransitionStart: true,
                 loadPrevNext: true,
