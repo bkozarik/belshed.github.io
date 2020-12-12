@@ -75,21 +75,127 @@
             <div class="container">
                 <h2 class="section__title">Наши услуги</h2>
                 <div class="services__wrap">
-                    <article class="services__item">
-                        22
+                    <article class="services__item service-item">
+                        <img src="./img/svg/molniya.svg" alt="Иконка" class="service-item__icon">
+                        <h3 class="service-item__name">Молниезащита зданий и сооружений</h3>
+                        <a href="./service.html" class="button button_white service-item__link">Подробнее</a>
                     </article>
                     <article class="services__item">
-                        22
+                        <img src="./img/svg/montazh.svg" alt="Иконка" class="service-item__icon">
+                        <h3 class="service-item__name">Электромонтажные работы</h3>
+                        <a href="./service.html" class="button button_white service-item__link">Подробнее</a>
                     </article>
                     <article class="services__item">
-                        22
+                        <img src="./img/svg/zazemlenie.svg" alt="Иконка" class="service-item__icon">
+                        <h3 class="service-item__name">Заземление, контур заземления</h3>
+                        <a href="./service.html" class="button button_white service-item__link">Подробнее</a>
                     </article>
                     <article class="services__item">
-                        22
+                        <img src="./img/svg/kontur.svg" alt="Иконка" class="service-item__icon">
+                        <h3 class="service-item__name">Измерение сопротивления контура заземления</h3>
+                        <a href="./service.html" class="button button_white service-item__link">Подробнее</a>
                     </article>
                     <article class="services__item">
-                        22
+                        <img src="./img/svg/proekt.svg" alt="Иконка" class="service-item__icon">
+                        <h3 class="service-item__name">Проектные роботы (электроснабжение, связь)</h3>
+                        <a href="./service.html" class="button button_white service-item__link">Подробнее</a>
                     </article>
+                </div>
+            </div>
+        </section>
+        <section class="calculator">
+            <div class="container">
+                <div class="calculator__wrap">
+                    <div class="calculator__content">
+                        <picture class="calculator__content-bg">
+                            <source srcset="./img/calculator-bg.webp" type="image/webp">
+                            <img src="./img/calculator-bg.jpg" alt="Фон">
+                        </picture>
+                        <div class="calculator__container">
+                            <h2 class="calculator__title">Онлайн калькулятор</h2>
+                            <p class="calculator__subtitle">Рассчитайте самостоятельно примерную стоимость работ</p>
+                            <div class="calculator__contacts">
+                                <p class="calculator__contacts-text">Нет времени на заполнение формы? Просто позвоните или напишите нам для консультации:</p>
+                                <a href="tel:+3800675060118" class="calculator__tel">(067) 506-01-18</a>
+                                <div class="calculator__socials">
+                                    <a href="#" class="calculator__social-item">
+                                        <img src="./img/svg/telegram.svg" alt="Иконка">
+                                    </a>
+                                    <a href="#" class="calculator__social-item">
+                                        <img src="./img/svg/viber.svg" alt="Иконка">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="calculator__body calc">
+                        <div class="calc__item">
+                            <h3 class="calc__title">Выберите тип дома:</h3>
+                            <div class="calc__types">
+                                <label class="calc__type-item">
+                                    <img src="./img/svg/dom-1.svg" alt="Плоская крыша" class="calc__type-img">
+                                    <div class="calc__type-choose">
+                                        <input type="radio" name="house_type" class="calc__type-input">
+                                        <span class="calc__type-fake"></span>
+                                        <span class="calc__type-name">Плоская крыша</span>
+                                    </div>
+                                </label>
+                                <label class="calc__type-item">
+                                    <img src="./img/svg/dom-2.svg" alt="Двухскатная кровля" class="calc__type-img">
+                                    <div class="calc__type-choose">
+                                        <input type="radio" name="house_type" class="calc__type-input">
+                                        <span class="calc__type-fake"></span>
+                                        <span class="calc__type-name">Двухскатная кровля</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="calc__item">
+                            <h3 class="calc__title">Введите параметры Вашего дома (в сантиметрах):</h3>
+                            <span class="calc__subtitle">a - длинна, b - ширина, h1 - высота, h2 - высота</span>
+                            <div class="calc__inputs">
+                                <div class="calc__input-wrap">
+                                    <span class="calc__input-name">
+                                        a:
+                                    </span>
+                                    <input type="number" class="calc__input" name="house_a">
+                                </div>
+                                <div class="calc__input-wrap">
+                                    <span class="calc__input-name">
+                                        b:
+                                    </span>
+                                    <input type="number" class="calc__input" name="house_b">
+                                </div>
+                                <div class="calc__input-wrap">
+                                    <span class="calc__input-name">
+                                        h1:
+                                    </span>
+                                    <input type="number" class="calc__input" name="house_h1">
+                                </div>
+                                <div class="calc__input-wrap">
+                                    <span class="calc__input-name">
+                                        h2:
+                                    </span>
+                                    <input type="number" class="calc__input" name="house_h2">
+                                </div>
+                            </div>
+                            <div class="calc__bottom">
+                                <button class="button button_blue calc__button">
+                                    <img src="./img/svg/load-icon.svg" alt="Иконка">
+                                    Рассчитать
+                                </button>
+                                <span class="calc__price">0 грн</span>
+                            </div>
+                            <form class="calc__form">
+                                <div class="calc__form-row">
+                                    
+                                </div>
+                                <div class="calc__form-row">
+                                    
+                                </div>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

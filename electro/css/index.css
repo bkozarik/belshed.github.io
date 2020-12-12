@@ -1,6 +1,9 @@
 /* Стили шрифтов */
 @import './fonts.css';
 
+/* Анимации */
+@import './keyframes.css';
+
 /* Стили десктоп */
 @import './style.css';
 

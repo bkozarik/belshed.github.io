@@ -91,4 +91,6 @@ document.addEventListener('DOMContentLoaded', () => {
     languageSelectInit(languageSelets);
 
     window.addEventListener('scroll', scrollHandler);
+
+    scrollHandler();
 });
