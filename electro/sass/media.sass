@@ -1,0 +1,399 @@
+@media screen and ( max-width: 1580px )
+    .index-portfolio
+        &__control
+            z-index: 2
+            &_prev
+                left: -15px
+                transform: translate(60%, -50%)
+            &_next
+                right: -15px
+                transform: translate(-60%, -50%) rotate(180deg)
+
+@media screen and ( max-width: 1400px )
+    .service-item
+        &__icon, &__name
+            margin-bottom: 15px
+            font-size: 22px
+            line-height: 32px
+
+@media screen and ( max-width: 1360px )
+    .footer
+        &__list
+            margin-top: 15px
+        &__wrap > &__col:last-child
+            display: none
+        &__col
+            & > .footer__col
+                margin-top: 30px
+            .button
+                margin-top: 30px
+
+    .header
+        .services-btn, .contacts-dropdown, .language
+            display: none
+
+    .calculator__container
+        max-width: 510px
+
+@media screen and ( max-width: 1250px )
+    .index-portfolio__item
+        padding-bottom: 34%
+
+
+@media screen and ( max-width: 1270px )
+    .calc
+        &__type-item
+            justify-content: space-around
+            & + &
+                margin-left: 0
+                margin-top: 30px
+        &__types
+            flex-direction: column
+            
+@media screen and ( max-width: 1200px )
+    .calc
+        &__bottom
+            padding-bottom: 25px
+        &__form
+            margin-top: 25px
+        &__inputs
+            display: grid
+            grid-template-columns: repeat(2, 1fr)
+            row-gap: 10px
+            column-gap: 10px
+        &__input-wrap
+            & + &
+                margin-left: 0            
+
+@media screen and ( max-width: 1180px )
+
+    .calculator
+        &__title
+            font-size: 40px
+            line-height: 50px
+        &__subtitle
+            font-size: 26px
+            line-height: 34px
+        &__contacts
+            &-text
+                font-size: 20px
+                line-height: 31px
+        &__tel
+            font-size: 28px
+        &__socials
+            margin-top: 30px
+        &__social-item
+            height: 50px
+            width: 50px
+
+    .header
+        padding: 15px 0px
+
+    .logo
+        max-width: 190px
+
+@media screen and ( max-width: 1080px )
+
+    .calculator
+        &__title
+            font-size: 34px
+            line-height: 42px
+        &__subtitle
+            font-size: 22px
+            line-height: 28px
+        &__container
+            padding: 20px
+            max-width: 410px
+        &__contacts
+            margin-top: 40px
+            &-text
+                font-size: 16px
+                line-height: 22px
+        &__tel
+            font-size: 24px
+
+    .calc
+        &__type-item
+            justify-content: flex-start
+            & + &
+                margin-left: 30px
+                margin-top: 0px
+        &__bottom
+            flex-direction: column
+        &__price
+            margin-top: 20px
+        &__form
+            &-wrap
+                & + &
+                    margin-top: 15px
+            &-row
+                flex-direction: column
+                align-items: stretch
+                & + &
+                    flex-direction: column-reverse
+                    .calc__subtitle
+                        display: inline-block
+                        text-align: center
+                        margin-top: 10px
+
+@media screen and ( max-width: 910px )
+
+    .articles
+        &__wrap
+            justify-content: space-around
+            margin-top: 10px
+            flex-wrap: wrap
+
+    .article-item
+        max-width: 330px
+        margin-top: 30px
+        &__title
+            line-height: 24px
+        &__text
+            font-size: 14px
+            line-height: 22px
+            margin-bottom: 20px
+        &__link
+            font-size: 16px
+            padding: 10px 15px
+
+    .section
+        &__title
+            font-size: 28px
+            line-height: 32px
+
+    .services
+        &__wrap
+            margin: 25px -15px 0px
+
+    .benefits
+        &__wrap
+            justify-content: center
+            flex-wrap: wrap
+
+    .benefits-item
+        margin-top: 20px
+        &:nth-child(2)
+            margin-top: 20px
+        min-width: 240px
+
+@media screen and ( max-width: 900px )
+    .index-portfolio__item
+        padding-bottom: 54%
+
+@media screen and ( max-width: 880px )
+    .calculator
+        &__wrap
+            flex-direction: column
+        &__container
+            max-width: none
+
+    .calc
+        margin-top: 30px
+        transform: none
+        &__type-name
+            white-space: normal
+        &__types
+            flex-direction: row
+        &__bottom
+            flex-direction: row
+        &__form
+            &-wrap
+                & + &
+                    margin-top: 0px
+            &-row
+                flex-direction: row
+                align-items: stretch
+                & + &
+                    flex-direction: row
+                    .calc__subtitle
+                        text-align: left
+                        margin-top: 0px
+
+@media screen and ( max-width: 850px )
+    .index-portfolio
+        &__control
+            height: 40px
+            width: 40px
+
+    .footer
+        padding-top: 10px
+        &__wrap:first-child
+            justify-content: flex-end
+            flex-wrap: wrap
+            margin-bottom: 40px
+        &__col
+            margin-top: 30px
+            flex-basis: 50%
+    
+    .benefits-item
+        margin-top: 40px
+        &:nth-child(2)
+            margin-top: 40px
+
+    .index-about
+        padding: 50px 0px 60px
+        &__subtitle
+            font-size: 21px
+            line-height: 32px
+        &__list
+            margin-top: 30px
+        &__item
+            margin-bottom: 20px
+
+    .header
+        .nav
+            display: none
+
+@media screen and ( max-width: 780px )
+    .hero
+        padding: 15% 0px 12%
+
+    .services
+        padding: 40px 0px
+
+    .hero
+        &__title
+            font-size: 40px
+            line-height: 44px
+
+@media screen and ( max-width: 720px )
+    .calc
+        &__types
+            flex-direction: column
+        &__type
+            &-item
+                justify-content: space-around
+                & + &
+                    margin-left: 0
+                    margin-top: 30px
+
+@media screen and ( max-width: 700px )
+
+    .footer
+        &__col
+            flex-basis: 100%
+
+    .articles
+        padding-bottom: 50px
+        &__wrap
+            margin-top: -20px
+
+    .article-item
+        margin-top: 60px
+        max-width: 400px
+
+    .service-item
+        &__icon
+            height: 80px
+            width: 80px
+        &__icon, &__name, &__link
+            font-size: 18px
+            line-height: 22px
+        &__link
+            padding: 10px 20px
+
+@media screen and ( max-width: 600px )
+    .index-portfolio
+        &__wrap
+            margin: 30px auto 0px
+            max-width: 450px
+        &__item
+            padding-bottom: 114%
+
+@media screen and ( max-width: 580px )
+    .benefits-item
+        &__img, &__title
+            margin-bottom: 10px
+        &__img
+            height: 70px
+        &__title
+            font-size: 20px
+            line-height: 24px
+        &__text
+            font-size: 14px
+            line-height: 22px
+
+    .hero
+        padding: 18% 0px 12%
+        &__title
+            margin-top: 5px
+            font-size: 30px
+            line-height: 34px
+            margin-bottom: 20px
+        &__subtitle
+            font-size: 16px
+            line-height: 22px
+            
+    .calc
+        padding: 20px
+        &__bottom
+            flex-direction: column
+        &__type
+            &-fake
+                height: 25px
+                width: 25px
+            &-img
+                width: 100px
+                height: 120px
+        &__price
+            margin-top: 20px
+        &__form
+            &-wrap
+                & + &
+                    margin-top: 15px
+            &-row
+                flex-direction: column
+                align-items: stretch
+                & + &
+                    flex-direction: column-reverse
+                    .calc__subtitle
+                        display: inline-block
+                        text-align: center
+                        margin-top: 10px
+         
+@media screen and ( max-width: 475px )
+
+    .footer
+        &__wrap:last-child
+            flex-direction: column
+            align-items: center
+            br
+                display: none
+        &__copyright
+            & + &
+                margin-top: 20px
+
+    .index-about
+        &__subtitle
+            font-size: 18px
+            line-height: 26px
+
+    .hero
+        padding: 25% 0px 12%
+        &__buttons
+            width: 100%
+        &__button
+            width: 100%
+            max-width: none
+
+    .button
+        font-size: 16px
+
+    .header
+        padding: 10px 0px
+        &.fixed
+            padding: 5px 0px
+
+    .logo
+        max-width: 160px
+
+    .service-item
+        margin: 10px 15px
+        min-width: auto
+        max-width: none
+            
+@media screen and ( max-width: 410px )
+    .calc
+        &__inputs
+            grid-template-columns: repeat(1, 1fr)

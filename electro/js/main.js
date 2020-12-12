@@ -1,5 +1,17 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const languageSelets = document.querySelectorAll('.js-language')
+    const languageSelets = document.querySelectorAll('.js-language');
+    const servicesBtn = document.querySelector('.js-services-btn');
+    const scrollLinks = document.querySelectorAll('.js-scroll-link');
+
+    const houseTypeInputs = document.querySelectorAll('.js-house-type-input');
+
+    const calcForm = document.querySelector('.js-calc-form');
+
+    const burger = document.querySelector('.js-burger');
+
+    const whichPage = () => {
+        return document.querySelector('.js-page-id').dataset.page;
+    }
 
     const createOptionPopupItem = (option, index) => {
         let languagePopupItem = document.createElement('li');
@@ -10,6 +22,80 @@ document.addEventListener('DOMContentLoaded', () => {
         languagePopupItem.dataset.index = index;
 
         return languagePopupItem;
+    }
+
+    const toggleServicesMenu = () => {
+        event.stopImmediatePropagation();
+        servicesBtn.classList.toggle('active');
+
+        document.addEventListener('click', () => {   
+            if(servicesBtn.classList.contains('active')){
+                servicesBtn.classList.remove('active');
+            }
+        });
+    }
+
+    const calcFormCount = () => {
+        event.preventDefault();
+
+        const var_meterPrice = 1000;
+
+        let formData = new FormData(calcForm);
+
+        document.querySelector('.js-calc-btn').classList.add('animate');
+
+        let totalPrice;
+
+        if(formData.get('house_type') == 1){
+            let var_a = parseFloat(formData.get('house_a')) || 0;
+            let var_b = parseFloat(formData.get('house_b')) || 0;
+            let var_h1 = parseFloat(formData.get('house_h1')) || 0;
+            let var_h2 = parseFloat(formData.get('house_h2')) || 0;
+            totalPrice = var_a * var_b * (var_h1 + var_h2) * 0.5 * var_meterPrice;
+        }
+        else if(formData.get('house_type') == 2){
+            let var_a = parseFloat(formData.get('house_a-1')) || 0;
+            let var_b = parseFloat(formData.get('house_b-1')) || 0;
+            let var_h = parseFloat(formData.get('house_h')) || 0;
+
+            totalPrice = var_a * var_b * var_h * var_meterPrice;
+        }
+
+        setTimeout(() => {
+            calcForm.reset();
+            document.querySelector('.js-calc-btn').classList.remove('animate');
+            if(totalPrice){
+                document.querySelector('.js-calc-price').innerHTML = totalPrice + ' грн';
+            }
+        }, 1550);
+    }
+
+    const scrollLinkClick = () => {
+        event.preventDefault();
+
+        const targetLink = event.target;
+    
+        toggleMenu(false);
+        let href;
+        let offset = -100;
+        
+        href = targetLink.getAttribute('href');
+        
+        window.scrollTo({
+            top: document.querySelector(href).offsetTop + offset,
+            behavior: 'smooth'
+        });
+    }
+
+    const toggleMenu = (state = null) => {
+        if(state == null){
+            return () => {
+                burger.classList.toggle('active');
+            };
+        }
+        else{
+
+        }
     }
 
     const languageSelectInit = languageItems => {
@@ -35,6 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                     languagePopupItem.addEventListener('click', () => {
                         let targetItem = event.target;
+                        event.stopImmediatePropagation();
             
                         while(!targetItem.classList.contains('language__value')){
                             targetItem.parentNode;
@@ -46,6 +133,8 @@ document.addEventListener('DOMContentLoaded', () => {
                         options.forEach(option => {
                             if(option.selected) languageText.innerText = option.innerText;
                         });
+                        languagePopupList.classList.remove('active');
+                        languageTrigger.classList.remove('active');
                     });
                 }
             });
@@ -56,6 +145,7 @@ document.addEventListener('DOMContentLoaded', () => {
             item.appendChild(languagePopupList);
 
             languageTrigger.addEventListener('click', () => {
+                event.stopImmediatePropagation();
                 let target = event.target;
 
                 while(!target.classList.contains('js-language-select')){
@@ -66,6 +156,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 languagePopupList.classList.toggle('active');
 
                 document.addEventListener('click', () => {
+                    event.stopImmediatePropagation();
                     let target = event.target;
                     if(!target.parentNode.classList.contains('js-language-select') && !target.classList.contains('js-language-select')){
                         document.querySelectorAll('.language__list').forEach(item => item.classList.remove('active'));
@@ -84,13 +175,91 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    const indexSwiperInit = () => {
+        let indexSwiper = new Swiper('.index-portfolio__slider', {
+            
+            spaceBetween: 30,
+            loop: true,
+            preloadImages: false,
+            navigation: {
+                prevEl: '.index-portfolio__control_prev',
+                nextEl: '.index-portfolio__control_next',
+            },
+            lazy: {
+                loadPrevNext: true,
+                loadOnTransitionStart: true,
+            },
+            breakpoints: {
+                1250: {
+                    slidesPerView: 4,
+                },
+                900: {
+                    slidesPerView: 3,
+                },
+                600: {
+                    slidesPerView: 2,
+                },
+                300: {
+                    slidesPerView: 1,
+                },
+            }
+        });
+    }
+
+    const houseTypeInputChange = () => {
+        if(event.target.value){
+            document.querySelectorAll('.calc__type-item').forEach(item => item.classList.remove('active'));
+
+            event.target.parentNode.parentNode.classList.add('active');
+
+            document.querySelectorAll('.js-house-type').forEach(item => item.classList.remove('active'));
+            document.querySelectorAll('.js-house-type')[parseInt(event.target.value) - 1].classList.add('active');
+        }
+    }
+
     const scrollHandler = () => {
         window.pageYOffset > 60 ? document.querySelector('.header').classList.add('fixed') : document.querySelector('.header').classList.remove('fixed');
     }
 
+    const resizeHandler = () => {
+        if(whichPage() == 'main'){
+            if(window.innerWidth <= 1360){
+                document.querySelectorAll('.footer .footer__col .button').forEach(btn => {
+                    document.querySelector('.footer .footer__col').insertBefore(btn, document.querySelector('.footer .footer__col .footer__social'));
+                });
+            }
+            else{
+                document.querySelectorAll('.footer .footer__col .button').forEach(btn => {
+                    document.querySelectorAll('.footer .footer__col')[document.querySelectorAll('.footer .footer__col').length - 1].appendChild(btn);
+                });
+            }
+
+            if(window.innerWidth <= 1080){
+                document.querySelector('.js-transit-parent').appendChild(document.querySelector('.js-transit-child'));
+            }
+            else{
+                document.querySelector('.footer__wrap').insertBefore(document.querySelector('.js-transit-child'), document.querySelector('.js-transit-sibling'));
+            }
+        }
+    }
+
+    scrollLinks.forEach(link => link.addEventListener('click', scrollLinkClick));
+    houseTypeInputs.forEach(input => input.addEventListener('change', houseTypeInputChange));
+
+    servicesBtn.addEventListener('click', toggleServicesMenu);
+    burger.addEventListener('click', toggleMenu());
+
     languageSelectInit(languageSelets);
 
     window.addEventListener('scroll', scrollHandler);
+    window.addEventListener('resize', resizeHandler);
 
     scrollHandler();
+    resizeHandler();
+
+    if(whichPage() == 'main'){
+        indexSwiperInit();
+
+        calcForm.addEventListener('submit', calcFormCount);
+    }
 });

@@ -18,6 +18,9 @@ $transition-duration: .25s
     color: $text-dark
     font-family: 'Ubuntu', sans-serif
 
+body, html
+    overflow-x: hidden
+
 body
     display: flex
     flex-direction: column
@@ -33,6 +36,8 @@ section
         font-weight: 500
         &_white
             color: #ffffff
+        &_orange
+            color: $btn-orange
 
 .header, .footer
     flex-grow: 0
@@ -94,6 +99,10 @@ section
     &.fixed
         padding: 15px 0px
         background-color: rgba(11, 16, 31, 0.8)
+        .services-btn__dropdown-list
+            top: calc( 18px + 100% )
+        .contacts-dropdown__dropdown-list
+            top: calc( -31px + 100% )
 
 .logo
     display: block
@@ -107,6 +116,13 @@ section
 .services-btn
     display: flex
     align-items: stretch
+    position: relative
+    overflow: visible
+    &.active &__dropdown-list
+        transform: translateY(0px)
+        opacity: 1
+        pointer-events: all
+        visibility: visible
     &__icon
         width: 65px
         position: relative
@@ -144,6 +160,40 @@ section
         padding: 12px 20px
         color: #ffffff
         font-size: 18px
+    &__dropdown-list
+        width: auto
+        position: absolute
+        background-color: #fff
+        list-style-type: none
+        min-width: 300px
+        left: -17px
+        top: calc( 34px + 100% )
+        border-top: 2px solid $btn-orange
+        transform: translateY(-20px)
+        opacity: 0
+        pointer-events: none
+        visibility: hidden
+        @include transition
+        box-shadow: 0 3px 16px 2px rgba(0, 0, 0, .1)
+        &::before
+            content: ''
+            bottom: 100%
+            left: 20px
+            position: absolute
+            border: 30px solid transparent
+            border-bottom: 20px solid $btn-orange
+    &__item:first-child &__link
+        padding: 30px 30px 15px
+    &__item:last-child &__link
+        padding: 15px 30px 30px
+    &__link
+        padding: 15px 30px
+        display: inline-block
+        text-align: left
+        width: 100%
+        &:hover
+            color: $btn-orange
+            background-color: #e7e7e7
 
 .nav
     max-width: 540px
@@ -164,6 +214,12 @@ section
 .contacts-dropdown
     display: flex
     align-items: center
+    position: relative
+    &.active &__dropdown-list, &:hover &__dropdown-list
+        transform: translateY(0px)
+        opacity: 1
+        pointer-events: all
+        visibility: visible
     &__icon
         flex-shrink: 0
         flex-grow: 0
@@ -191,12 +247,60 @@ section
         color: #ffffff
         font-size: 20px
         font-weight: 500
-    &__text
+    &__subtext
         font-size: 14px
         font-weight: 300
         color: $btn-orange
         display: block
         margin-top: 2px
+    &__link
+        @include transition
+    &__dropdown-list
+        position: absolute
+        padding-top: 50px
+        top: calc( -14px + 100% )
+        min-width: 330px
+        list-style-type: none
+        right: -65px
+        transform: translateY(-20px)
+        opacity: 0
+        pointer-events: none
+        visibility: hidden
+        @include transition
+    &__item
+        background-color: #fff
+        display: flex
+        align-items: center
+        padding: 15px 20px
+        position: relative
+        box-shadow: 0 9px 9px 2px rgba(0,0,0,0.1)
+        &:nth-child(1)
+            z-index: 1
+        &:nth-child(2)
+            z-index: 2
+        &:nth-child(3)
+            z-index: 3
+        &:nth-child(4)
+            z-index: 4
+        &:first-child
+            border-top: 2px solid $btn-orange
+            &::before
+                content: ''
+                bottom: 100%
+                right: 20px
+                position: absolute
+                border: 30px solid transparent
+                border-bottom: 20px solid $btn-orange
+            
+        img, svg
+            height: 30px
+            width: 30px
+            margin-right: 15px
+            fill: $btn-orange
+            flex-shrink: 0
+    &__link
+        &:hover
+            color: $btn-orange
 
 .language
     position: relative
@@ -266,11 +370,43 @@ section
         height: 1px
         width: 1px
 
+.burger
+    height: 40px
+    width: 40px
+    span, &::before, &::after
+        content: ''
+        display: inline-block
+        width: 25px
+        height: 2px
+        background-color: #ffffff
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        transition:  top $transition-duration ease-in-out $transition-duration, transform $transition-duration ease-in-out 0s, opacity .1s ease-in-out $transition-duration
+    &::before
+        top: calc( 9px + 50% )
+    &::after
+        top: calc( -9px + 50% )
+    span
+        transform: translate(-50%, -50%)
+    &.active
+        span, &::before, &::after
+            transform: translate(-50%, -50%)
+            top: 50%
+            transition:  top $transition-duration ease-in-out 0s, transform $transition-duration ease-in-out $transition-duration, opacity $transition-duration ease-in-out .1s
+        span
+            opacity: 0
+        &::before
+            transform: translate(-50%, -50%) rotate(45deg)
+        &::after
+            transform: translate(-50%, -50%) rotate(-45deg)
+
 .main
     flex-grow: 1
     
 .hero
-    padding: 220px 0px 200px
+    padding: 11.5% 0px 11%
     &__bg
         top: 0
         left: 0
@@ -315,13 +451,15 @@ section
         justify-content: center
         flex-wrap: wrap
     &__item
-        flex-basis: 30%
-        border-radius: 10px
-        background: linear-gradient( 50deg, rgb(248,248,248) 13%, rgb(255,255,255) 100%)
         margin: 0px 15px 30px
-        padding: 20px 30px
 
 .service-item
+    width: 100%
+    max-width: 430px
+    min-width: 380px
+    padding: 20px 30px
+    border-radius: 10px
+    background: linear-gradient( 50deg, rgb(248,248,248) 13%, rgb(255,255,255) 100%)
     &__icon
         max-width: 110px
         height: auto
@@ -352,6 +490,7 @@ section
             position: absolute
             width: 100%
             height: 100%
+            object-fit: cover
             left: 0
             top: 0
             z-index: -1            
@@ -403,6 +542,10 @@ section
     border-radius: 10px
     box-shadow: 0 0 16px 2px rgba(0, 0, 0, .2)
     flex: 0 0 50%
+    &__house-type
+        display: none
+    &__house-type.active
+        display: block
     &__item + &__item
         margin-top: 30px
     &__title
@@ -428,7 +571,7 @@ section
             height: 30px
         &.animate
             svg, img
-                animation: count 1 1s linear
+                animation: count 1 1.5s ease-out
     &__bottom
         display: flex
         align-items: center
@@ -514,6 +657,9 @@ section
             padding: 20px 40px 20px 10px
             display: flex
             align-items: center
+            @include transition
+            &.active
+                box-shadow: 0 0 0 2px $btn-orange
         &-choose
             display: flex
             align-items: center
@@ -531,7 +677,7 @@ section
             overflow: hidden
             height: 50px
             background: #f7f7fb
-            padding: 10px 55px
+            padding: 10px 15px 10px 55px
             position: relative
             &::before
                 position: absolute
@@ -585,6 +731,8 @@ section
     align-items: center
     flex-direction: column
     max-width: 345px
+    &:nth-child(2)
+        margin: 0px 20px
     &__img
         height: 100px
         width: auto
@@ -604,6 +752,13 @@ section
 .index-about
     background-color: #000000
     padding: 75px 0px 90px
+    &__bg
+        position: absolute
+        width: 100%
+        height: 100%
+        object-fit: cover
+        top: 0
+        left: 0
     &__subtitle
         margin-top: 20px
         display: inline-block
@@ -631,3 +786,167 @@ section
         color: #ffffff
         font-size: 18px
         line-height: 30px
+
+.index-portfolio
+    padding: 80px 0px
+    &__wrap
+        margin-top: 45px
+        min-width: 0
+        position: relative
+    &__slider
+        min-width: 0
+        overflow: hidden
+    &__item
+        max-height: 380px
+        height: 100%
+        position: relative
+        padding-bottom: 27%
+    &__img
+        height: 100%
+        width: 100%
+        position: absolute
+    &__control
+        height: 50px
+        width: 50px
+        position: absolute
+        top: 50%
+        &::before, &::after
+            content: ''
+            display: inline-block
+            position: absolute
+            top: 50%
+            left: 50%
+            height: 2px
+            width: 10px
+            background-color: #fff
+            transform: translate(-50%, -50%)
+        &::before
+            transform: translate(-50%, calc( -3px - 50% )) rotate(-45deg)
+        &::after
+            transform: translate(-50%, calc( 3px - 50% )) rotate(45deg)
+        &_prev
+            left: -15px
+            transform: translate(-100%, -50%)
+        &_next
+            right: -15px
+            transform: translate(100%, -50%) rotate(180deg)
+
+.articles
+    padding-bottom: 80px
+    &__wrap
+        margin-top: 40px
+        display: flex
+        justify-content: space-between
+        align-items: center
+
+.article-item
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    max-width: 450px
+    margin-right: 15px
+    &:nth-child(3n)
+        margin-right: 0
+    &__title
+        font-weight: 500
+        font-size: 20px
+        line-height: 30px
+        margin-bottom: 15px
+    &__text
+        font-size: 16px
+        line-height: 24px
+        display: inline-block
+        margin-bottom: 25px
+    &__link
+        padding: 12px 23px
+        text-transform: uppercase
+        box-shadow: 0 0 0 1px $btn-orange
+
+.footer
+    padding: 40px 0px 20px
+    background-color: #242526
+    &__wrap
+        display: flex
+        justify-content: space-between
+        align-items: stretch
+        & + &
+            margin-top: 20px
+    &__col
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        .button
+            width: 100%
+            max-width: 210px
+            font-size: 18px
+            font-weight: 500
+    &__social
+        margin-top: 35px
+        &-label
+            font-size: 17px
+            color: #ffffff
+            display: inline-block
+            margin-bottom: 15px
+        &-wrap
+            display: flex
+            align-items: center
+        &-link
+            height: 40px
+            width: 40px
+            svg
+                @include transition
+                fill: #ffffff
+            &:hover svg
+                fill: $btn-orange
+            & + &
+                margin-left: 15px
+    &__list
+        margin-top: 30px
+        max-width: 230px
+    &__item + &__item
+        margin-top: 20px
+    &__item
+        list-style-type: none
+    &__contact
+        max-width: 330px
+        & + &
+            margin-top: 30px
+    &__link, &__text
+        display: flex
+        align-items: center
+        font-size: 17px
+        line-height: 18px
+        &, & > span
+            color: #ffffff
+        & > span
+            display: inline-block
+        svg, img
+            vertical-align: middle
+            height: 30px
+            width: 30px
+            object-fit: contain
+            margin-right: 15px
+    &__link
+        &, & span
+            @include transition
+        &:hover
+            &, & span
+                color: $btn-orange
+    &__copyright
+        font-weight: 300
+        font-size: 14px
+        line-height: 18px
+        color: #8b929f
+        display: inline-flex
+        align-items: flex-end
+        a svg
+            width: 100%
+            max-width: 80px
+            flex-shrink: 0
+            fill: #ffffff
+            margin-left: 10px
+            @include transition
+        a:hover svg
+            fill: $btn-orange
+    &__mta
+        margin-top: auto

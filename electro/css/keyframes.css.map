@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "AAAA,UAAU,CAAV,KAAU,CACN,EAAE,CACE,SAAS,CAAE,YAAY,CAC3B,IAAI,CACA,SAAS,CAAE,cAAc",
+    "mappings": "AAAA,UAAU,CAAV,KAAU,CACN,EAAE,CACE,SAAS,CAAE,YAAY,CAC3B,IAAI,CACA,SAAS,CAAE,eAAe",
     "sources": [
         "../sass/keyframes.sass"
     ],

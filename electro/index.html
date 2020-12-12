@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/index.css">
     <title>ПБВ Електро</title>
+    <script src="./js/main.js" defer></script>
 </head>
 <body>
     <header class="header">
@@ -13,12 +14,29 @@
                 <a href="./index.html" class="logo">
                     <img src="./img/logo.svg" alt="Логотип" class="logo__img">
                 </a>
-                <a href="./services.html" class="button button_orange button_no-hover services-btn">
+                <button class="button button_orange button_no-hover services-btn js-services-btn">
                     <span class="services-btn__icon">
                         <span></span>
                     </span>
                     <span class="services-btn__label">Услуги</span>
-                </a>
+                    <ul class="services-btn__dropdown-list">
+                        <li class="services-btn__item">
+                            <a href="#" class="services-btn__link">Молниезащита</a>
+                        </li>
+                        <li class="services-btn__item">
+                            <a href="#" class="services-btn__link">Электромонтажные работы</a>
+                        </li>
+                        <li class="services-btn__item">
+                            <a href="#" class="services-btn__link">Заземление</a>
+                        </li>
+                        <li class="services-btn__item">
+                            <a href="#" class="services-btn__link">Измерение сопротивления контура заземления</a>
+                        </li>
+                        <li class="services-btn__item">
+                            <a href="#" class="services-btn__link">Проектные роботы</a>
+                        </li>
+                    </ul>
+                </button>
                 <nav class="nav">
                     <ul class="nav__list">
                         <li class="nav__item">
@@ -39,8 +57,34 @@
                     <img src="./img/phone-icon.png" alt="Иконка телефона" class="contacts-dropdown__icon">
                     <div class="contacts-dropdown__body">
                         <a href="tel:+3800675060118" class="contacts-dropdown__tel">(067) 506-01-18</a>
-                        <span class="contacts-dropdown__text">связаться с нами</span>
+                        <span class="contacts-dropdown__subtext">связаться с нами</span>
                     </div>
+                    <ul class="contacts-dropdown__dropdown-list active">
+                        <li class="contacts-dropdown__item">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+                                <path class="cls-1" d="M25.61,4.39A15,15,0,1,0,30,15,15,15,0,0,0,25.61,4.39ZM15.49,22.9l-.49.52-.49-.52c-.61-.65-6-6.46-6-9.84a6.48,6.48,0,0,1,13,0C21.48,16.44,16.1,22.25,15.49,22.9Zm2.19-9.84A2.68,2.68,0,1,1,15,10.38,2.68,2.68,0,0,1,17.68,13.06Z"/>
+                            </svg>
+                            <span class="contacts-dropdown__text">Киев, ул. Межигорская 24Б офис 12 (юридический адрес)</span>
+                        </li>
+                        <li class="contacts-dropdown__item">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+                                <path class="cls-1" d="M25.61,4.39A15,15,0,1,0,30,15,15,15,0,0,0,25.61,4.39ZM15.49,22.9l-.49.52-.49-.52c-.61-.65-6-6.46-6-9.84a6.48,6.48,0,0,1,13,0C21.48,16.44,16.1,22.25,15.49,22.9Zm2.19-9.84A2.68,2.68,0,1,1,15,10.38,2.68,2.68,0,0,1,17.68,13.06Z"/>
+                            </svg>
+                            <span class="contacts-dropdown__text">с. Софиевская Борщаговка, ул. Павла Чубинского, 4А, офис 222</span>
+                        </li>
+                        <li class="contacts-dropdown__item">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+                                <path class="cls-1" d="M17.7,14.94a2.64,2.64,0,1,1-2.64-2.64A2.64,2.64,0,0,1,17.7,14.94Zm12.3,0A15.16,15.16,0,0,1,14.94,30,15,15,0,1,1,30,14.94Zm-5.27.88c0-7-4.81-10.55-9.67-10.55a9.67,9.67,0,1,0,5.88,17.35.88.88,0,0,0-1.07-1.4,7.81,7.81,0,0,1-4.81,1.63A7.91,7.91,0,0,1,15.06,7c4,0,7.91,2.91,7.91,8.79a1.76,1.76,0,1,1-3.52,0V11.43a.88.88,0,1,0-1.75,0v0a4.36,4.36,0,0,0-2.64-.9,4.4,4.4,0,1,0,3.28,7.29,3.51,3.51,0,0,0,6.39-2Z"/>
+                            </svg>
+                            <a href="mailto:pbv2017@ukr.net" class="contacts-dropdown__link">pbv2017@ukr.net</a>
+                        </li>
+                        <li class="contacts-dropdown__item">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+                                <path class="cls-1" d="M15,0A15,15,0,1,0,30,15,15,15,0,0,0,15,0Zm7.13,22.76a1.23,1.23,0,0,1-1.76,0l-6.25-6.25a1.22,1.22,0,0,1-.37-.88V7.5a1.25,1.25,0,0,1,2.5,0v7.61L22.13,21a1.25,1.25,0,0,1,0,1.77Z"/>
+                            </svg>
+                            <span class="contacts-dropdown__text">Пн-Пт 09:00 - 18:00</span>
+                        </li>
+                    </ul>
                 </div>
                 <div class="language js-language">
                     <select class="language__select" name="language">
@@ -50,10 +94,13 @@
                         <option value="EN">EN</option>
                     </select>
                 </div>
+                <button class="button burger js-burger">
+                    <span></span>
+                </button>
             </div>
         </div>
     </header>
-    <main class="main">
+    <main class="main js-page-id" data-page="main">
         <section class="hero">
             <picture>
                 <source srcset="./img/hero-bg.webp" type="image/webp">
@@ -80,22 +127,22 @@
                         <h3 class="service-item__name">Молниезащита зданий и сооружений</h3>
                         <a href="./service.html" class="button button_white service-item__link">Подробнее</a>
                     </article>
-                    <article class="services__item">
+                    <article class="services__item service-item">
                         <img src="./img/svg/montazh.svg" alt="Иконка" class="service-item__icon">
                         <h3 class="service-item__name">Электромонтажные работы</h3>
                         <a href="./service.html" class="button button_white service-item__link">Подробнее</a>
                     </article>
-                    <article class="services__item">
+                    <article class="services__item service-item">
                         <img src="./img/svg/zazemlenie.svg" alt="Иконка" class="service-item__icon">
                         <h3 class="service-item__name">Заземление, контур заземления</h3>
                         <a href="./service.html" class="button button_white service-item__link">Подробнее</a>
                     </article>
-                    <article class="services__item">
+                    <article class="services__item service-item">
                         <img src="./img/svg/kontur.svg" alt="Иконка" class="service-item__icon">
                         <h3 class="service-item__name">Измерение сопротивления контура заземления</h3>
                         <a href="./service.html" class="button button_white service-item__link">Подробнее</a>
                     </article>
-                    <article class="services__item">
+                    <article class="services__item service-item">
                         <img src="./img/svg/proekt.svg" alt="Иконка" class="service-item__icon">
                         <h3 class="service-item__name">Проектные роботы (электроснабжение, связь)</h3>
                         <a href="./service.html" class="button button_white service-item__link">Подробнее</a>
@@ -103,7 +150,7 @@
                 </div>
             </div>
         </section>
-        <section class="calculator">
+        <section id="calculator" class="calculator">
             <div class="container">
                 <div class="calculator__wrap">
                     <div class="calculator__content">
@@ -129,55 +176,82 @@
                         </div>
                     </div>
                     <div class="calculator__body calc">
-                        <div class="calc__item">
-                            <h3 class="calc__title">Выберите тип дома:</h3>
-                            <div class="calc__types">
-                                <label class="calc__type-item">
-                                    <img src="./img/svg/dom-1.svg" alt="Плоская крыша" class="calc__type-img">
-                                    <div class="calc__type-choose">
-                                        <input type="radio" name="house_type" class="calc__type-input">
-                                        <span class="calc__type-fake"></span>
-                                        <span class="calc__type-name">Плоская крыша</span>
-                                    </div>
-                                </label>
-                                <label class="calc__type-item">
-                                    <img src="./img/svg/dom-2.svg" alt="Двухскатная кровля" class="calc__type-img">
-                                    <div class="calc__type-choose">
-                                        <input type="radio" name="house_type" class="calc__type-input">
-                                        <span class="calc__type-fake"></span>
-                                        <span class="calc__type-name">Двухскатная кровля</span>
-                                    </div>
-                                </label>
+                        <form class="calc__calc-form js-calc-form">
+                            <div class="calc__item">
+                                <h3 class="calc__title">Выберите тип дома:</h3>
+                                <div class="calc__types">
+                                    <label class="calc__type-item active">
+                                        <img src="./img/svg/dom-1.svg" alt="Плоская крыша" class="calc__type-img">
+                                        <div class="calc__type-choose">
+                                            <input type="radio" name="house_type" value="1" class="calc__type-input js-house-type-input" checked>
+                                            <span class="calc__type-fake"></span>
+                                            <span class="calc__type-name">Плоская крыша</span>
+                                        </div>
+                                    </label>
+                                    <label class="calc__type-item">
+                                        <img src="./img/svg/dom-2.svg" alt="Двухскатная кровля" class="calc__type-img">
+                                        <div class="calc__type-choose">
+                                            <input type="radio" name="house_type" value="2" class="calc__type-input js-house-type-input">
+                                            <span class="calc__type-fake"></span>
+                                            <span class="calc__type-name">Двухскатная кровля</span>
+                                        </div>
+                                    </label>
+                                </div>
                             </div>
-                        </div>
-                        <div class="calc__item">
-                            <h3 class="calc__title">Введите параметры Вашего дома (в сантиметрах):</h3>
-                            <span class="calc__subtitle">a - длинна, b - ширина, h1 - высота, h2 - высота</span>
-                            <div class="calc__inputs">
-                                <label class="calc__input-wrap">
-                                    <span class="calc__input-name">
-                                        a:
-                                    </span>
-                                    <input type="number" class="calc__input js-calc-input" name="house_a">
-                                </label>
-                                <label class="calc__input-wrap">
-                                    <span class="calc__input-name">
-                                        b:
-                                    </span>
-                                    <input type="number" class="calc__input js-calc-input" name="house_b">
-                                </label>
-                                <label class="calc__input-wrap">
-                                    <span class="calc__input-name">
-                                        h1:
-                                    </span>
-                                    <input type="number" class="calc__input js-calc-input" name="house_h1">
-                                </label>
-                                <label class="calc__input-wrap">
-                                    <span class="calc__input-name">
-                                        h2:
-                                    </span>
-                                    <input type="number" class="calc__input js-calc-input" name="house_h2">
-                                </label>
+                            <div class="calc__item">
+                                <h3 class="calc__title">Введите параметры Вашего дома (в сантиметрах):</h3>
+                                <div class="calc__house-type js-house-type active">
+                                    <span class="calc__subtitle">a&nbsp;-&nbsp;длинна, b&nbsp;-&nbsp;ширина, h1&nbsp;-&nbsp;высота, h2&nbsp;-&nbsp;высота</span>
+                                    <div class="calc__inputs">
+                                        <label class="calc__input-wrap">
+                                            <span class="calc__input-name">
+                                                a:
+                                            </span>
+                                            <input type="number" min="0" class="calc__input js-calc-input" name="house_a">
+                                        </label>
+                                        <label class="calc__input-wrap">
+                                            <span class="calc__input-name">
+                                                b:
+                                            </span>
+                                            <input type="number" min="0" class="calc__input js-calc-input" name="house_b">
+                                        </label>
+                                        <label class="calc__input-wrap">
+                                            <span class="calc__input-name">
+                                                h1:
+                                            </span>
+                                            <input type="number" min="0" class="calc__input js-calc-input" name="house_h1">
+                                        </label>
+                                        <label class="calc__input-wrap">
+                                            <span class="calc__input-name">
+                                                h2:
+                                            </span>
+                                            <input type="number" min="0" class="calc__input js-calc-input" name="house_h2">
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="calc__house-type js-house-type">
+                                    <span class="calc__subtitle">a&nbsp;-&nbsp;длинна, b&nbsp;-&nbsp;ширина, h&nbsp;-&nbsp;высота</span>
+                                    <div class="calc__inputs">
+                                        <label class="calc__input-wrap">
+                                            <span class="calc__input-name">
+                                                a:
+                                            </span>
+                                            <input type="number" min="0" class="calc__input js-calc-input" name="house_a-1">
+                                        </label>
+                                        <label class="calc__input-wrap">
+                                            <span class="calc__input-name">
+                                                b:
+                                            </span>
+                                            <input type="number" min="0" class="calc__input js-calc-input" name="house_b-1">
+                                        </label>
+                                        <label class="calc__input-wrap">
+                                            <span class="calc__input-name">
+                                                h:
+                                            </span>
+                                            <input type="number" min="0" class="calc__input js-calc-input" name="house_h">
+                                        </label>
+                                    </div>
+                                </div>
                             </div>
                             <div class="calc__bottom">
                                 <button class="button button_blue calc__button js-calc-btn">
@@ -186,20 +260,21 @@
                                 </button>
                                 <span class="calc__price js-calc-price">0 грн</span>
                             </div>
-                            <form class="calc__form">
-                                <div class="calc__form-row">
-                                    <label class="calc__form-wrap">
-                                        <input type="text" class="calc__form-input" name="user_name" placeholder="Ваше имя">
-                                    </label>
-                                    <label class="calc__form-wrap">
-                                        <input type="tel" class="calc__form-input" name="user_tel" placeholder="Контактый телефон">
-                                    </label>
-                                </div>
-                                <div class="calc__form-row">
-                                    <p class="calc__subtitle">Нажимая «Оформить заявку», я принимаю условия по обработке личных данных</p>
-                                    <button class="button button_orange calc__form-button js-calc-btn">Оформить заявку</button>
-                                </div>
-                            </form>
+                        </form>
+                        <form class="calc__form">
+                            <div class="calc__form-row">
+                                <label class="calc__form-wrap">
+                                    <input type="text" class="calc__form-input" name="user_name" placeholder="Ваше имя">
+                                </label>
+                                <label class="calc__form-wrap">
+                                    <input type="tel" class="calc__form-input" name="user_tel" placeholder="Контактый телефон">
+                                </label>
+                            </div>
+                            <div class="calc__form-row">
+                                <p class="calc__subtitle">Нажимая «Оформить заявку», я принимаю условия по обработке личных данных</p>
+                                <button class="button button_orange calc__form-button">Оформить заявку</button>
+                            </div>
+                        </form>
                         </div>
                     </div>
                 </div>
@@ -227,6 +302,10 @@
             </div>
         </section>
         <section class="index-about">
+            <picture>
+                <source srcset="./img/index-about-bg.wepb" type="image/wepb">
+                <img class="index-about__bg" src="./img/index-about-bg.jpg" alt="Фон">
+            </picture>
             <div class="container">
                 <div class="index-about__body">
                     <h2 class="section__title section__title_white">ПБВ Електро</h2>
@@ -268,10 +347,194 @@
                 </div>
             </div>
         </section>
+        <section class="index-portfolio">
+            <div class="container">
+                <h2 class="section__title">Наши работы</h2>
+                <div class="index-portfolio__wrap">
+                    <div class="index-portfolio__slider">
+                        <div class="swiper-wrapper">
+                            <a href="#" class="swiper-slide index-portfolio__item">
+                                <img data-src="./img/portfolio-img.jpg" alt="Картинка портфолио" class="index-portfolio__img swiper-lazy">
+                                <div class="swiper-lazy-preloader"></div>
+                            </a>
+                            <a href="#" class="swiper-slide index-portfolio__item">
+                                <img data-src="./img/portfolio-img.jpg" alt="Картинка портфолио" class="index-portfolio__img swiper-lazy">
+                                <div class="swiper-lazy-preloader"></div>
+                            </a>
+                            <a href="#" class="swiper-slide index-portfolio__item">
+                                <img data-src="./img/portfolio-img.jpg" alt="Картинка портфолио" class="index-portfolio__img swiper-lazy">
+                                <div class="swiper-lazy-preloader"></div>
+                            </a>
+                            <a href="#" class="swiper-slide index-portfolio__item">
+                                <img data-src="./img/portfolio-img.jpg" alt="Картинка портфолио" class="index-portfolio__img swiper-lazy">
+                                <div class="swiper-lazy-preloader"></div>
+                            </a>
+                            <a href="#" class="swiper-slide index-portfolio__item">
+                                <img data-src="./img/portfolio-img.jpg" alt="Картинка портфолио" class="index-portfolio__img swiper-lazy">
+                                <div class="swiper-lazy-preloader"></div>
+                            </a>
+                            <a href="#" class="swiper-slide index-portfolio__item">
+                                <img data-src="./img/portfolio-img.jpg" alt="Картинка портфолио" class="index-portfolio__img swiper-lazy">
+                                <div class="swiper-lazy-preloader"></div>
+                            </a>
+                            <a href="#" class="swiper-slide index-portfolio__item">
+                                <img data-src="./img/portfolio-img.jpg" alt="Картинка портфолио" class="index-portfolio__img swiper-lazy">
+                                <div class="swiper-lazy-preloader"></div>
+                            </a>
+                            <a href="#" class="swiper-slide index-portfolio__item">
+                                <img data-src="./img/portfolio-img.jpg" alt="Картинка портфолио" class="index-portfolio__img swiper-lazy">
+                                <div class="swiper-lazy-preloader"></div>
+                            </a>
+                        </div>
+                    </div>
+                    <button class="button button_orange index-portfolio__control index-portfolio__control_prev"></button>
+                    <button class="button button_orange index-portfolio__control index-portfolio__control_next"></button>
+                </div>
+            </div>
+        </section>
+        <section class="articles">
+            <div class="container">
+                <h2 class="section__title">Полезные статьи</h2>
+                <div class="articles__wrap">
+                    <article class="article-item">
+                        <h3 class="article-item__title">Зачем нужно делать проект систем электроснабжения?</h3>
+                        <p class="article-item__text">Проектирование систем электроснабжения - это этап, без которого невозможно реализовать работу по созданию проекта здания. </p>
+                        <a href="#" class="button button_white article-item__link">подробнее</a>
+                    </article>
+                    <article class="article-item">
+                        <h3 class="article-item__title">Зачем нужно делать проект систем электроснабжения?</h3>
+                        <p class="article-item__text">Проектирование систем электроснабжения - это этап, без которого невозможно реализовать работу по созданию проекта здания. </p>
+                        <a href="#" class="button button_white article-item__link">подробнее</a>
+                    </article>
+                    <article class="article-item">
+                        <h3 class="article-item__title">Зачем нужно делать проект систем электроснабжения?</h3>
+                        <p class="article-item__text">Проектирование систем электроснабжения - это этап, без которого невозможно реализовать работу по созданию проекта здания. </p>
+                        <a href="#" class="button button_white article-item__link">подробнее</a>
+                    </article>
+                </div>
+            </div>
+        </section>
     </main>
     <footer class="footer">
-
+        <div class="container">
+            <div class="footer__wrap">
+                <div class="footer__col">
+                    <a href="./index.html" class="logo">
+                        <img src="./img/logo.svg" alt="Логотип" class="logo__img">
+                    </a>
+                    <div class="footer__social">
+                        <span class="footer__social-label">Присоединяйтесь:</span>
+                        <div class="footer__social-wrap">
+                            <a href="#" class="footer__social-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
+                                    <path class="cls-1" d="M20,40A20,20,0,1,1,40,20,20,20,0,0,1,20,40ZM20,1.9A18.1,18.1,0,1,0,38.1,20,18.12,18.12,0,0,0,20,1.9Z"/>
+                                    <path class="cls-1" d="M23.46,20.75H20.92v9.32H17.07V20.75H15.23V17.48h1.84V15.36A3.61,3.61,0,0,1,21,11.47h2.86v3.18H21.74a.79.79,0,0,0-.82.89v1.93H23.8Z"/>    
+                                </svg>
+                            </a>
+                            <a href="#" class="footer__social-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
+                                    <path class="cls-1" d="M20,40A20,20,0,1,1,40,20,20,20,0,0,1,20,40ZM20,1.9A18.1,18.1,0,1,0,38.1,20,18.12,18.12,0,0,0,20,1.9Z"/>
+                                    <path class="cls-1" d="M24.75,12.5h-9.5a2.75,2.75,0,0,0-2.75,2.75v9.5a2.75,2.75,0,0,0,2.75,2.75h9.5a2.75,2.75,0,0,0,2.75-2.75v-9.5a2.75,2.75,0,0,0-2.75-2.75ZM20,24.94A4.94,4.94,0,1,1,24.94,20,5,5,0,0,1,20,24.94Zm5.1-8.86a1.17,1.17,0,1,1,1.17-1.17,1.17,1.17,0,0,1-1.17,1.17ZM20,17.15A2.85,2.85,0,1,0,22.85,20,2.86,2.86,0,0,0,20,17.15Zm9.59,7.6a4.84,4.84,0,0,1-4.84,4.84h-9.5a4.84,4.84,0,0,1-4.84-4.84v-9.5a4.84,4.84,0,0,1,4.84-4.84h9.5a4.84,4.84,0,0,1,4.84,4.84Z"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="footer__social-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
+                                    <path d="M20,40A20,20,0,1,1,40,20,20,20,0,0,1,20,40ZM20,1.9A18.1,18.1,0,1,0,38.1,20,18.12,18.12,0,0,0,20,1.9Z"/>
+                                    <path class="cls-1" d="M20,27.65h0c-.64,0-6.28-.06-7.88-.49a3.26,3.26,0,0,1-2.3-2.3A23.41,23.41,0,0,1,9.42,20a23.71,23.71,0,0,1,.39-4.87h0a3.36,3.36,0,0,1,2.3-2.32h0A60.16,60.16,0,0,1,20,12.35h0c.64,0,6.3.06,7.88.49a3.26,3.26,0,0,1,2.3,2.3,22.5,22.5,0,0,1,.39,4.9,24.07,24.07,0,0,1-.39,4.83h0a3.28,3.28,0,0,1-2.3,2.3h0a60,60,0,0,1-7.87.47ZM11.4,15.57A24.3,24.3,0,0,0,11.07,20v0a22.62,22.62,0,0,0,.33,4.4,1.62,1.62,0,0,0,1.14,1.13A55,55,0,0,0,20,26a58.51,58.51,0,0,0,7.46-.41,1.59,1.59,0,0,0,1.13-1.13,22.14,22.14,0,0,0,.34-4.4v0a22.45,22.45,0,0,0-.33-4.45h0a1.62,1.62,0,0,0-1.14-1.13A54.86,54.86,0,0,0,20,14a56.73,56.73,0,0,0-7.46.41,1.67,1.67,0,0,0-1.14,1.15Zm18,9.09Zm-11.5-1.31v-6.7L23.68,20Z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__col js-transit-parent">
+                    <h2 class="section__title section__title_orange">Информация</h2>
+                    <ul class="footer__list">
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">О компании</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">Расчет стоимости</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">Наши работы</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">Статьи</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">Контакты</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__col js-transit-child">
+                    <h2 class="section__title section__title_orange">Услуги</h2>
+                    <ul class="footer__list">
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">Молниезащита</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">Электромонтажные работы</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">Заземление</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">Измерение сопротивления контура заземления</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">Проектные роботы</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__col js-transit-sibling">
+                    <ul class="footer__contact-list">
+                        <li class="footer__contact">
+                            <a href="#" class="footer__link">
+                                <img src="./img/svg/phone.svg" alt="Иконка">
+                                <span>(067) 506-01-18</span>
+                            </a>
+                        </li>
+                        <li class="footer__contact">
+                            <span class="footer__text">
+                                <img src="./img/svg/adres.svg" alt="Иконка">
+                                <span>с. Софиевская Борщаговка, ул. Павла Чубинского, 4А, офис 222</span>
+                            </span>
+                        </li>
+                        <li class="footer__contact">
+                            <span class="footer__text">
+                                <img src="./img/svg/adres.svg" alt="Иконка">
+                                <span>Киев, ул. Межигорская 24Б офис 12 (юридический адрес)</span>
+                            </span>
+                        </li>
+                        <li class="footer__contact">
+                            <a href="#" class="footer__link">
+                                <img src="./img/svg/mail.svg" alt="Иконка">
+                                <span>pbv2017@ukr.net</span>
+                            </a>
+                        </li>
+                        <li class="footer__contact">
+                            <span class="footer__text">
+                                <img src="./img/svg/grafik.svg" alt="Иконка">
+                                <span>Пн-Пт 09:00 - 18:00</span>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <button class="button button_orange hero__button">Оставить заявку</button>
+                    <a href="#calculator" class="button button_blue hero__button js-scroll-link">Рассчет стоимости</a>
+                </div>
+            </div>
+            <div class="footer__wrap">
+                <small class="footer__copyright">© 2016 - 2020 ПБВ ЕЛЕКТРО <br> Все права защищены</small>
+                <small class="footer__copyright">Разработка сайта: <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 78.47 13">
+                        <path class="cls-1" d="M6.48.26H9.57V12.74H6.48v-5H3.09v5H0V.26H3.09V4.84H6.48ZM11.3,12.74h3.09V.26H11.3ZM22.39,8.61H25.2a1.5,1.5,0,0,1-.45.66,2.92,2.92,0,0,1-.71.47,3.88,3.88,0,0,1-.83.29,4,4,0,0,1-.82.09,3.22,3.22,0,0,1-1.34-.28A3.44,3.44,0,0,1,20,9.06a3.77,3.77,0,0,1-.74-1.16,3.47,3.47,0,0,1-.28-1.4,3.47,3.47,0,0,1,.28-1.4A3.77,3.77,0,0,1,20,3.94a3.44,3.44,0,0,1,1.1-.78,3.22,3.22,0,0,1,1.34-.28,3.1,3.1,0,0,1,1.69.47,3.21,3.21,0,0,1,1.17,1.23h3.42a6.32,6.32,0,0,0-1-1.88,7.3,7.3,0,0,0-1.5-1.44A6.9,6.9,0,0,0,24.35.33a6,6,0,0,0-2-.33,6.51,6.51,0,0,0-2.57.51,6.88,6.88,0,0,0-2.11,1.4A6.59,6.59,0,0,0,16.29,4a6.41,6.41,0,0,0,0,5.06,6.59,6.59,0,0,0,1.42,2.06,6.88,6.88,0,0,0,2.11,1.4,6.51,6.51,0,0,0,2.57.51A6,6,0,0,0,25,12.45a6.69,6.69,0,0,0,2.09-1.52,7.36,7.36,0,0,0,1.93-5H22.39ZM36.85,4.84h-3.4V.26H30.37V12.74h3.08v-5h3.4v5h3.09V.26H36.85Zm15.2,2.73V.26H49.31L44.74,7.57V.26H41.65V12.74h3.09L49,5.89v6.85h3.38L60.56.26H56.63Zm9,5.17h7.21V9.86H64.17V7.75h4.12V4.87H65A.87.87,0,0,1,64.17,4h0A.87.87,0,0,1,65,3.14h3.26V.26H61.08ZM78.33,7.9A3.32,3.32,0,0,0,78,7.07a3.24,3.24,0,0,0-.52-.64A4.55,4.55,0,0,0,76.8,6a2.86,2.86,0,0,0,.72-1,3.27,3.27,0,0,0,.27-1.34,3.09,3.09,0,0,0-.29-1.31,3.25,3.25,0,0,0-.82-1.06A4.18,4.18,0,0,0,75.47.53,4.05,4.05,0,0,0,74,.26h-4V12.74h4.21a4.87,4.87,0,0,0,1.73-.3,4.25,4.25,0,0,0,1.37-.83,3.83,3.83,0,0,0,.9-1.21,3.56,3.56,0,0,0,.32-1.49A3.52,3.52,0,0,0,78.33,7.9Z"/>
+                    </svg>
+                </a></small>
+            </div>
+        </div>
     </footer>
-    <script src="./js/main.js" defer></script>
+    <script src="./js/swiper-bundle.min.js"></script>
 </body>
 </html>

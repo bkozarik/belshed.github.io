@@ -1,4 +1,7 @@
 /* Стили шрифтов */
+@import './swiper-bundle.min.css';
+
+/* Стили шрифтов */
 @import './fonts.css';
 
 /* Анимации */
