@@ -154,48 +154,117 @@
                             <h3 class="calc__title">Введите параметры Вашего дома (в сантиметрах):</h3>
                             <span class="calc__subtitle">a - длинна, b - ширина, h1 - высота, h2 - высота</span>
                             <div class="calc__inputs">
-                                <div class="calc__input-wrap">
+                                <label class="calc__input-wrap">
                                     <span class="calc__input-name">
                                         a:
                                     </span>
-                                    <input type="number" class="calc__input" name="house_a">
-                                </div>
-                                <div class="calc__input-wrap">
+                                    <input type="number" class="calc__input js-calc-input" name="house_a">
+                                </label>
+                                <label class="calc__input-wrap">
                                     <span class="calc__input-name">
                                         b:
                                     </span>
-                                    <input type="number" class="calc__input" name="house_b">
-                                </div>
-                                <div class="calc__input-wrap">
+                                    <input type="number" class="calc__input js-calc-input" name="house_b">
+                                </label>
+                                <label class="calc__input-wrap">
                                     <span class="calc__input-name">
                                         h1:
                                     </span>
-                                    <input type="number" class="calc__input" name="house_h1">
-                                </div>
-                                <div class="calc__input-wrap">
+                                    <input type="number" class="calc__input js-calc-input" name="house_h1">
+                                </label>
+                                <label class="calc__input-wrap">
                                     <span class="calc__input-name">
                                         h2:
                                     </span>
-                                    <input type="number" class="calc__input" name="house_h2">
-                                </div>
+                                    <input type="number" class="calc__input js-calc-input" name="house_h2">
+                                </label>
                             </div>
                             <div class="calc__bottom">
-                                <button class="button button_blue calc__button">
+                                <button class="button button_blue calc__button js-calc-btn">
                                     <img src="./img/svg/load-icon.svg" alt="Иконка">
                                     Рассчитать
                                 </button>
-                                <span class="calc__price">0 грн</span>
+                                <span class="calc__price js-calc-price">0 грн</span>
                             </div>
                             <form class="calc__form">
                                 <div class="calc__form-row">
-                                    
+                                    <label class="calc__form-wrap">
+                                        <input type="text" class="calc__form-input" name="user_name" placeholder="Ваше имя">
+                                    </label>
+                                    <label class="calc__form-wrap">
+                                        <input type="tel" class="calc__form-input" name="user_tel" placeholder="Контактый телефон">
+                                    </label>
                                 </div>
                                 <div class="calc__form-row">
-                                    
+                                    <p class="calc__subtitle">Нажимая «Оформить заявку», я принимаю условия по обработке личных данных</p>
+                                    <button class="button button_orange calc__form-button js-calc-btn">Оформить заявку</button>
                                 </div>
                             </form>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+        <section class="benefits">
+            <div class="container">
+                <div class="benefits__wrap">
+                    <article class="benefits-item">
+                        <img src="./img/svg/benefit-1.svg" alt="Иконка преимущества" class="benefits-item__img">
+                        <h3 class="benefits-item__title">Качество и надежность</h3>
+                        <p class="benefits-item__text">Качественное выполнение работ является гарантией безопасности и надежной работы в течение всего срока эксплуатации.</p>
+                    </article>
+                    <article class="benefits-item">
+                        <img src="./img/svg/benefit-2.svg" alt="Иконка преимущества" class="benefits-item__img">
+                        <h3 class="benefits-item__title">Своевременность</h3>
+                        <p class="benefits-item__text">Относимся к времени как самому ценному не возобновляемому ресурсу. Мы отчетливо понимаем важность обязательств по срокам.</p>
+                    </article>
+                    <article class="benefits-item">
+                        <img src="./img/svg/benefit-3.svg" alt="Иконка преимущества" class="benefits-item__img">
+                        <h3 class="benefits-item__title">Ответственность и гарантии</h3>
+                        <p class="benefits-item__text">Единая ответственность за весь комплекс выполненных работ, материалы и оборудование. Гарантии подкреплены договором страхования.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section class="index-about">
+            <div class="container">
+                <div class="index-about__body">
+                    <h2 class="section__title section__title_white">ПБВ Електро</h2>
+                    <p class="index-about__subtitle">Мы работаем по всей территории Украины, выполняем молниезащиту самых различных объектов:</p>
+                    <ul class="index-about__list">
+                        <li class="index-about__item">
+                            <img src="./img/svg/1-torgovie.svg" alt="Иконка в списке" class="index-about__img">
+                            <span class="index-about__text">Торговые и офисные центры</span>
+                        </li>
+                        <li class="index-about__item">
+                            <img src="./img/svg/2-sanatorii.svg" alt="Иконка в списке" class="index-about__img">
+                            <span class="index-about__text">Санатории и рекреационные комплексы</span>
+                        </li>
+                        <li class="index-about__item">
+                            <img src="./img/svg/3-kotedzh.svg" alt="Иконка в списке" class="index-about__img">
+                            <span class="index-about__text">Коттеджи</span>
+                        </li>
+                        <li class="index-about__item">
+                            <img src="./img/svg/4-restorany.svg" alt="Иконка в списке" class="index-about__img">
+                            <span class="index-about__text">Ресторанные комплексы</span>
+                        </li>
+                        <li class="index-about__item">
+                            <img src="./img/svg/5-prom.svg" alt="Иконка в списке" class="index-about__img">
+                            <span class="index-about__text">Промышленные предприятия</span>
+                        </li>
+                        <li class="index-about__item">
+                            <img src="./img/svg/6-mob.svg" alt="Иконка в списке" class="index-about__img">
+                            <span class="index-about__text">Базовые станции мобильной связи</span>
+                        </li>
+                        <li class="index-about__item">
+                            <img src="./img/svg/7-azs.svg" alt="Иконка в списке" class="index-about__img">
+                            <span class="index-about__text">Автозаправочные станции</span>
+                        </li>
+                        <li class="index-about__item">
+                            <img src="./img/svg/8-doma.svg" alt="Иконка в списке" class="index-about__img">
+                            <span class="index-about__text">Многоэтажные дома</span>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </section>

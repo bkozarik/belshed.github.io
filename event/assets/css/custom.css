@@ -354,7 +354,7 @@ html, body {
 }
 
 .player {
-    background-image: url(/platform/player-bg.jpg);
+    background-image: url(/event/platform/player-bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -464,7 +464,7 @@ html, body {
 }
 
 .hero {
-    background-image: url(/platform/hero_bg.jpg);
+    background-image: url(/event/platform/hero_bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -515,7 +515,7 @@ html, body {
 
 .gallery {
     position: relative;
-    background-image: url(/platform/gallery-bg.jpg);
+    background-image: url(/event/platform/gallery-bg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -648,7 +648,7 @@ html, body {
 }
 
 .login__bg {
-    background-image: url(/platform/login-bg.jpg);
+    background-image: url(/event/platform/login-bg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
