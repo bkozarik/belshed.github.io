@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const forms = document.querySelectorAll('form:not(.js-calc-form)');
 
-    let telInputs = document.querySelectorAll('input[type="tel"]');
+    const telInputs = document.querySelectorAll('input[type="tel"]');
     
     const whichPage = () => {
         return document.querySelector('.js-page-id').dataset.page;
