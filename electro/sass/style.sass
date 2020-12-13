@@ -34,6 +34,8 @@ section
         font-size: 32px
         line-height: 36px
         font-weight: 500
+        &_tac
+            text-align: center
         &_white
             color: #ffffff
         &_orange
@@ -491,6 +493,7 @@ section
             position: absolute
             width: 100%
             height: 100%
+            border-radius: 10px
             object-fit: cover
             left: 0
             top: 0
@@ -951,3 +954,100 @@ section
             fill: $btn-orange
     &__mta
         margin-top: auto
+
+.popup
+    position: fixed
+    z-index: 100
+    width: 100%
+    height: 100%
+    display: flex
+    align-items: center
+    justify-content: center
+    top: 0
+    left: 0
+    background-color: rgba(13, 15, 25, .9)
+    opacity: 0
+    visibility: hidden
+    pointer-events: none
+    @include transition
+    &.active &__body
+        opacity: 1
+        position: relative
+        visibility: visible
+        pointer-events: all
+        transform: translateY(0px)
+    &.active
+        opacity: 1
+        visibility: visible
+        pointer-events: all
+    &__body
+        max-width: 450px
+        width: 100%
+        background-color: #fff
+        border-radius: 10px
+        padding: 60px 30px 30px
+        position: relative
+        display: flex
+        flex-direction: column
+        align-items: center
+        @include transition
+        opacity: 0
+        position: absolute
+        visibility: hidden
+        pointer-events: none
+        transform: translateY(-30px)
+    &__close
+        height: 40px
+        width: 40px
+        position: absolute
+        top: 0
+        right: 0
+        z-index: 2
+        &::before, &::after
+            content: ''
+            display: inline-block
+            height: 2px
+            width: 25px
+            top: 50%
+            left: 50%
+            position: absolute
+            background-color: $text-dark
+        &::before
+            transform: translate(-50%, -50%) rotate(45deg)
+        &::after
+            transform: translate(-50%, -50%) rotate(-45deg)
+    &__text
+        text-align: center
+        display: inline-block
+        font-size: 18px
+        line-height: 30px
+        margin-top: 20px
+        &_small
+            font-size: 14px
+            line-height: 24px
+            color: #8b929f
+            padding: 0px 40px
+        &_big
+            text-transform: uppercase
+            font-weight: 500
+    &__form
+        margin-top: 20px
+        display: flex
+        flex-direction: column
+        align-items: stretch
+        .calc__form-wrap + .calc__form-wrap
+            margin: 15px 0px
+    &__submit
+        font-weight: 500
+        padding: 15px
+        text-transform: uppercase
+    &__icon
+        height: 100px
+        width: auto
+        margin-bottom: 20px
+    &__return
+        margin-top: 30px
+        width: 100%
+        font-weight: 500
+        padding: 15px
+        text-transform: uppercase

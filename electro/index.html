@@ -112,7 +112,7 @@
                     <h1 class="hero__title">Защитим от прямого удара молнии!</h1>
                     <p class="hero__subtitle">Полный комплекс работ «под ключ» начиная с обследования и заканчивая подготовкой исполнительской документации.</p>
                     <div class="hero__buttons">
-                        <button class="button button_orange hero__button"><img src="./img/icon-lightning-sm.png" alt="Иконка"> Оставить заявку</button>
+                        <button class="button button_orange hero__button js-toggle-popup" data-target-popup="js-popup-request"><img src="./img/icon-lightning-sm.png" alt="Иконка"> Оставить заявку</button>
                         <a href="#calculator" class="button button_blue hero__button js-scroll-link"><img src="./img/icon-house-sm.png" alt="Иконка"> Рассчет стоимости</a>
                     </div>
                 </div>
@@ -521,7 +521,7 @@
                     </ul>
                 </div>
                 <div class="footer__col">
-                    <button class="button button_orange hero__button">Оставить заявку</button>
+                    <button class="button button_orange hero__button js-toggle-popup" data-target-popup="js-popup-request">Оставить заявку</button>
                     <a href="#calculator" class="button button_blue hero__button js-scroll-link">Рассчет стоимости</a>
                 </div>
             </div>
@@ -535,6 +535,47 @@
             </div>
         </div>
     </footer>
+
+    <div class="popup js-popup-request js-popup-close">
+        <div class="popup__body">
+            <button class="button popup__close js-popup-close"></button>
+            <h2 class="section__title section__title_tac">Заявка на проект</h2>
+            <p class="popup__text">Оставьте заявку и наш специалист свяжется с&nbsp;вами для обсуждения деталей проекта</p>
+            <form class="popup__form">
+                <label class="calc__form-wrap">
+                    <input type="text" class="calc__form-input" name="user_name" placeholder="Ваше имя">
+                </label>
+                <label class="calc__form-wrap">
+                    <input type="tel" class="calc__form-input" name="user_tel" placeholder="Контактый телефон">
+                </label>
+                <button class="button button_orange popup__submit">Оформить заявку</button>
+                <p class="popup__text popup__text_small">Нажимая «Оформить заявку», я принимаю условия по обработке личных данных</p>
+            </form>
+        </div>
+    </div>
+
+    <div class="popup js-popup-thx js-popup-close">
+        <div class="popup__body">
+            <button class="button popup__close js-popup-close"></button>
+            <img src="./img/svg/popup-icon.svg" alt="Иконка" class="popup__icon">
+            <h2 class="section__title section__title_tac">Спасибо!</h2>
+            <p class="popup__text">Ваша заявка принята и уже обрабатывается нашими специалистами.</p>
+            <p class="popup__text popup__text_big">Оставайтесь на связи.</p>
+            <button class="button button_orange popup__return js-popup-close">Вернуться на главную</button>
+        </div>
+    </div>
+
+    <div class="popup js-popup-close js-popup-err">
+        <div class="popup__body">
+            <button class="button popup__close js-popup-close"></button>
+            <img src="./img/svg/popup-icon.svg" alt="Иконка" class="popup__icon">
+            <h2 class="section__title section__title_tac">Извините!</h2>
+            <p class="popup__text">У нас произошла техническая ошибка</p>
+            <p class="popup__text popup__text_big">Попробуйте немного позже.</p>
+            <button class="button button_orange popup__return js-popup-close">Вернуться на главную</button>
+        </div>
+    </div>
+
     <script src="./js/aos.js"></script>
     <script src="./js/swiper-bundle.min.js"></script>
 </body>

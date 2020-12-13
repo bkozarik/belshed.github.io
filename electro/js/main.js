@@ -9,6 +9,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const burger = document.querySelector('.js-burger');
 
+    const popupTriggers = document.querySelectorAll('.js-toggle-popup');
+    const popupCloseTriggers = document.querySelectorAll('.js-popup-close');
+
+    const forms = document.querySelectorAll('form:not(.js-calc-form)');
+
+    let telInputs = document.querySelectorAll('input[type="tel"]');
+    
     const whichPage = () => {
         return document.querySelector('.js-page-id').dataset.page;
     }
@@ -28,10 +35,33 @@ document.addEventListener('DOMContentLoaded', () => {
         event.stopImmediatePropagation();
         servicesBtn.classList.toggle('active');
 
-        document.addEventListener('click', () => {   
+        document.addEventListener('click', () => {
             if(servicesBtn.classList.contains('active')){
                 servicesBtn.classList.remove('active');
             }
+        });
+    }
+
+    const togglePopup = (selector, state = null) => {
+        const targetPopup = document.querySelector(`.${selector}`);
+
+        if(state == null){
+            return () => {
+                targetPopup.classList.add('active');
+                toggleMenu(false);
+            };
+        }
+        else{
+            state ? targetPopup.classList.add('active') : targetPopup.classList.remove('active');
+            toggleMenu(false);
+        }
+    }
+
+    const closePopups = () => {
+        let popups = document.querySelectorAll('.popup');
+
+        popups.forEach(popup => {
+            popup.classList.remove('active');
         });
     }
 
@@ -73,6 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const animationInit = () => {
         AOS.init({
             once: true,
+            disable: 'mobile',
         });
     }
 
@@ -162,7 +193,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 languagePopupList.classList.toggle('active');
 
                 document.addEventListener('click', () => {
-                    event.stopImmediatePropagation();
                     let target = event.target;
                     if(!target.parentNode.classList.contains('js-language-select') && !target.classList.contains('js-language-select')){
                         document.querySelectorAll('.language__list').forEach(item => item.classList.remove('active'));
@@ -178,6 +208,37 @@ document.addEventListener('DOMContentLoaded', () => {
                     if(option.selected) languageText.innerText = option.innerText;
                 });
             });
+        });
+    }
+
+    const maskInit = (input) => {
+        input.addEventListener('focus', _ => {
+            if(!/^\+\d*$/.test(input.value))
+              input.value = '+7 (';
+        });
+          
+        input.addEventListener('keypress', event => {
+        let currPos = input.value.length;
+        if((!/\d/.test(event.key) || (input.value.length == 18))){
+            event.preventDefault();
+        }
+        else if ((input.value.length <= 3)){
+            input.value = '+7 (';
+        }
+        switch (currPos) {
+            case 7:
+                input.value += ") ";
+                break;
+            case 12:
+                input.value += "-";
+                break;
+            case 15:
+                input.value += "-";
+                break;
+        
+            default:
+                break;
+        }
         });
     }
 
@@ -249,11 +310,55 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    const formSubmitHandler = () => {
+        event.preventDefault();
+
+        const targetForm = event.target;
+        const url = '';
+
+        const formData = new FormData(targetForm);
+        formData.set('action', 'ajax_form_handler');
+
+        fetch(url, {
+            method: 'POST',
+            body: formData,
+        })
+        .then(response => {
+            if(response.ok){
+                closePopups();
+                togglePopup('js-popup-thx', true);
+                setTimeout(closePopups, 2000);
+            }
+        })
+        .catch(response => {
+            closePopups();
+            togglePopup('js-popup-err', true);
+            setTimeout(closePopups, 2000);
+        });
+
+        closePopups();
+        togglePopup('js-popup-thx', true);
+        setTimeout(closePopups, 2000);
+    }
+
+    forms.forEach(form => form.addEventListener('submit', formSubmitHandler));
+
     scrollLinks.forEach(link => link.addEventListener('click', scrollLinkClick));
     houseTypeInputs.forEach(input => input.addEventListener('change', houseTypeInputChange));
 
     servicesBtn.addEventListener('click', toggleServicesMenu);
     burger.addEventListener('click', toggleMenu());
+
+    popupTriggers.forEach(trigger => trigger.addEventListener('click', togglePopup(trigger.dataset.targetPopup)));
+
+    popupCloseTriggers.forEach(trigger => trigger.addEventListener('click', () => {
+        event.stopPropagation();
+        if(event.target.classList.contains('js-popup-close')){
+            closePopups();
+        }
+    }));
+
+    telInputs.forEach(input => maskInit(input));
 
     languageSelectInit(languageSelets);
 
