@@ -70,6 +70,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 1550);
     }
 
+    const animationInit = () => {
+        AOS.init({
+            once: true,
+        });
+    }
+
     const scrollLinkClick = () => {
         event.preventDefault();
 
@@ -259,6 +265,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if(whichPage() == 'main'){
         indexSwiperInit();
+        animationInit();
 
         calcForm.addEventListener('submit', calcFormCount);
     }
