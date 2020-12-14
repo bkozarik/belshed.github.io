@@ -96,10 +96,25 @@ section
     padding: 30px 0px
     border-bottom: 1px solid #2f3b60
     @include transition
+    &_inner
+        border: none
+        background-color: #fff
+        .nav
+            &__link
+                color:  $text-dark
+        .contacts-dropdown
+            &__tel
+                color:  $text-dark
+            &__body
+                &::after
+                    background-image: url(../img/svg/arrow.svg)
     &__wrap
         display: flex
         align-items: center
         justify-content: space-between
+    &_inner.fixed
+        background-color: #fff !important
+        box-shadow: 0 0 16px 2px rgba(0, 0, 0, .15)
     &.fixed
         padding: 15px 0px
         background-color: rgba(11, 16, 31, 0.8)
@@ -231,6 +246,7 @@ section
     &__body
         margin-left: 10px
         position: relative
+        z-index: 4
         &::after
             content: ''
             height: 10px
@@ -245,9 +261,9 @@ section
             right: -10px
             transform: translate(100%, -50%)
             @include transition
-        &:hover, &.active
-            &::after
-                transform: translate(100%, -50%) rotate(180deg)
+    &:hover, &.active
+        .contacts-dropdown__body::after
+            transform: translate(100%, -50%) rotate(180deg)
     &__tel
         color: #ffffff
         font-size: 20px
@@ -454,7 +470,9 @@ section
 
 .main
     flex-grow: 1
-    
+    &_inner
+        margin-top: 111px
+
 .hero
     padding: 11.5% 0px 11%
     &__bg
@@ -1100,3 +1118,47 @@ section
         font-weight: 500
         padding: 15px
         text-transform: uppercase
+
+//
+//
+// -- Калькулятор
+//
+//
+
+.breadcrumbs
+    background-color: #f5f6f7
+    &__list
+        padding: 11px 0px
+        display: flex
+        align-items: center
+        list-style-type: none
+    &__link
+        font-size: 14px
+        font-weight: 300
+    &__item
+        display: inline-block
+        position: relative
+        &:not(:last-child)
+            &::before
+                color: $btn-orange
+            .breadcrumbs__link
+                color: $btn-orange
+                text-decoration: underline
+        & + &
+            margin-left: 30px
+            &::before
+                content: '|'
+                display: inline-block
+                position: absolute
+                left: -15px
+
+.page-title
+    padding: 40px 0px
+
+//
+//
+// -- Наши работы
+//
+//
+
+.portfolio

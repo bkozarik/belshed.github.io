@@ -79,6 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
         popups.forEach(popup => {
             popup.classList.remove('active');
         });
+        toggleScroll(true);
     }
 
     const calcFormCount = () => {
@@ -395,5 +396,10 @@ document.addEventListener('DOMContentLoaded', () => {
         animationInit();
 
         calcForm.addEventListener('submit', calcFormCount);
+    }
+    else if(whichPage() == 'main' || whichPage() == 'calculator'){
+        animationInit();
+        calcForm.addEventListener('submit', calcFormCount);
+
     }
 });

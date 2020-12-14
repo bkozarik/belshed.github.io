@@ -168,4 +168,6 @@ document.addEventListener('DOMContentLoaded', function(){
         swiperInit();
     }
     catch(e){}
+
+    polyfill();
 });

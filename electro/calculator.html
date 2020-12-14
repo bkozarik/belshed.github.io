@@ -8,11 +8,11 @@
     <script src="./js/main.js" defer></script>
 </head>
 <body>
-    <header class="header">
+    <header class="header header_inner">
         <div class="container">
             <div class="header__wrap">
                 <a href="./index.html" class="logo">
-                    <img loading="lazy" src="./img/logo.svg" alt="Логотип" class="logo__img">
+                    <img loading="lazy" src="./img/logo-dark.svg" alt="Логотип" class="logo__img">
                 </a>
                 <button class="button button_orange button_no-hover services-btn js-services-btn">
                     <span class="services-btn__icon">
@@ -185,56 +185,18 @@
             </ul>
         </div>
     </div>
-    <main class="main js-page-id" data-page="main">
-        <section class="hero">
-            <picture>
-                <source srcset="./img/hero-bg.webp" type="image/webp">
-                <img loading="lazy" class="hero__bg" src="./img/hero-bg.jpg" alt="Фон первого экрана">
-            </picture>
+    <main class="main main_inner js-page-id" data-page="calculator">
+        <div class="breadcrumbs">
             <div class="container">
-                <div class="hero__content">
-                    <span class="hero__pretitle">Работаем по всей Украине</span>
-                    <h1 class="hero__title">Защитим от прямого удара молнии!</h1>
-                    <p class="hero__subtitle">Полный комплекс работ «под ключ» начиная с обследования и заканчивая подготовкой исполнительской документации.</p>
-                    <div class="hero__buttons">
-                        <button class="button button_orange hero__button js-toggle-popup" data-target-popup="js-popup-request"><img loading="lazy" src="./img/icon-lightning-sm.png" alt="Иконка"> Оставить заявку</button>
-                        <a href="#calculator" class="button button_blue hero__button js-scroll-link"><img loading="lazy" src="./img/icon-house-sm.png" alt="Иконка"> Рассчет стоимости</a>
-                    </div>
-                </div>
+                <ul class="breadcrumbs__list">
+                    <li class="breadcrumbs__item"><a href="./index.html" class="breadcrumbs__link">Главная</a></li>
+                    <li class="breadcrumbs__item"><a class="breadcrumbs__link">Калькулятор</a></li>
+                </ul>
             </div>
-        </section>
-        <section class="services">
-            <div class="container">
-                <h2 class="section__title">Наши услуги</h2>
-                <div class="services__wrap">
-                    <article class="services__item service-item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="0">
-                        <img loading="lazy" src="./img/svg/molniya.svg" alt="Иконка" class="service-item__icon">
-                        <h3 class="service-item__name">Молниезащита зданий и сооружений</h3>
-                        <a href="./service.html" class="button button_white service-item__link">Подробнее</a>
-                    </article>
-                    <article class="services__item service-item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="350">
-                        <img loading="lazy" src="./img/svg/montazh.svg" alt="Иконка" class="service-item__icon">
-                        <h3 class="service-item__name">Электромонтажные работы</h3>
-                        <a href="./service.html" class="button button_white service-item__link">Подробнее</a>
-                    </article>
-                    <article class="services__item service-item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="700">
-                        <img loading="lazy" src="./img/svg/zazemlenie.svg" alt="Иконка" class="service-item__icon">
-                        <h3 class="service-item__name">Заземление, контур заземления</h3>
-                        <a href="./service.html" class="button button_white service-item__link">Подробнее</a>
-                    </article>
-                    <article class="services__item service-item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="350">
-                        <img loading="lazy" src="./img/svg/kontur.svg" alt="Иконка" class="service-item__icon">
-                        <h3 class="service-item__name">Измерение сопротивления контура заземления</h3>
-                        <a href="./service.html" class="button button_white service-item__link">Подробнее</a>
-                    </article>
-                    <article class="services__item service-item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="700">
-                        <img loading="lazy" src="./img/svg/proekt.svg" alt="Иконка" class="service-item__icon">
-                        <h3 class="service-item__name">Проектные роботы (электроснабжение, связь)</h3>
-                        <a href="./service.html" class="button button_white service-item__link">Подробнее</a>
-                    </article>
-                </div>
-            </div>
-        </section>
+        </div>
+        <div class="page-title">
+            <h1 class="section__title section__title_tac">Калькулятор</h1>
+        </div>
         <section id="calculator" class="calculator">
             <div class="container">
                 <div class="calculator__wrap">
@@ -382,119 +344,6 @@
                         <img loading="lazy" src="./img/svg/benefit-3.svg" alt="Иконка преимущества" class="benefits-item__img">
                         <h3 class="benefits-item__title">Ответственность и гарантии</h3>
                         <p class="benefits-item__text">Единая ответственность за весь комплекс выполненных работ, материалы и оборудование. Гарантии подкреплены договором страхования.</p>
-                    </article>
-                </div>
-            </div>
-        </section>
-        <section class="index-about">
-            <picture>
-                <source srcset="./img/index-about-bg.wepb" type="image/wepb">
-                <img loading="lazy" class="index-about__bg" src="./img/index-about-bg.jpg" alt="Фон">
-            </picture>
-            <div class="container">
-                <div class="index-about__body">
-                    <h2 class="section__title section__title_white">ПБВ Електро</h2>
-                    <p class="index-about__subtitle">Мы работаем по всей территории Украины, выполняем молниезащиту самых различных объектов:</p>
-                    <ul class="index-about__list">
-                        <li class="index-about__item">
-                            <img loading="lazy" src="./img/svg/1-torgovie.svg" alt="Иконка в списке" class="index-about__img">
-                            <span class="index-about__text">Торговые и офисные центры</span>
-                        </li>
-                        <li class="index-about__item">
-                            <img loading="lazy" src="./img/svg/2-sanatorii.svg" alt="Иконка в списке" class="index-about__img">
-                            <span class="index-about__text">Санатории и рекреационные комплексы</span>
-                        </li>
-                        <li class="index-about__item">
-                            <img loading="lazy" src="./img/svg/3-kotedzh.svg" alt="Иконка в списке" class="index-about__img">
-                            <span class="index-about__text">Коттеджи</span>
-                        </li>
-                        <li class="index-about__item">
-                            <img loading="lazy" src="./img/svg/4-restorany.svg" alt="Иконка в списке" class="index-about__img">
-                            <span class="index-about__text">Ресторанные комплексы</span>
-                        </li>
-                        <li class="index-about__item">
-                            <img loading="lazy" src="./img/svg/5-prom.svg" alt="Иконка в списке" class="index-about__img">
-                            <span class="index-about__text">Промышленные предприятия</span>
-                        </li>
-                        <li class="index-about__item">
-                            <img loading="lazy" src="./img/svg/6-mob.svg" alt="Иконка в списке" class="index-about__img">
-                            <span class="index-about__text">Базовые станции мобильной связи</span>
-                        </li>
-                        <li class="index-about__item">
-                            <img loading="lazy" src="./img/svg/7-azs.svg" alt="Иконка в списке" class="index-about__img">
-                            <span class="index-about__text">Автозаправочные станции</span>
-                        </li>
-                        <li class="index-about__item">
-                            <img loading="lazy" src="./img/svg/8-doma.svg" alt="Иконка в списке" class="index-about__img">
-                            <span class="index-about__text">Многоэтажные дома</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-        <section class="index-portfolio">
-            <div class="container">
-                <h2 class="section__title">Наши работы</h2>
-                <div class="index-portfolio__wrap">
-                    <div class="index-portfolio__slider">
-                        <div class="swiper-wrapper">
-                            <a href="#" class="swiper-slide index-portfolio__item">
-                                <img data-src="./img/portfolio-img.jpg" alt="Картинка портфолио" class="index-portfolio__img swiper-lazy">
-                                <div class="swiper-lazy-preloader"></div>
-                            </a>
-                            <a href="#" class="swiper-slide index-portfolio__item">
-                                <img data-src="./img/portfolio-img.jpg" alt="Картинка портфолио" class="index-portfolio__img swiper-lazy">
-                                <div class="swiper-lazy-preloader"></div>
-                            </a>
-                            <a href="#" class="swiper-slide index-portfolio__item">
-                                <img data-src="./img/portfolio-img.jpg" alt="Картинка портфолио" class="index-portfolio__img swiper-lazy">
-                                <div class="swiper-lazy-preloader"></div>
-                            </a>
-                            <a href="#" class="swiper-slide index-portfolio__item">
-                                <img data-src="./img/portfolio-img.jpg" alt="Картинка портфолио" class="index-portfolio__img swiper-lazy">
-                                <div class="swiper-lazy-preloader"></div>
-                            </a>
-                            <a href="#" class="swiper-slide index-portfolio__item">
-                                <img data-src="./img/portfolio-img.jpg" alt="Картинка портфолио" class="index-portfolio__img swiper-lazy">
-                                <div class="swiper-lazy-preloader"></div>
-                            </a>
-                            <a href="#" class="swiper-slide index-portfolio__item">
-                                <img data-src="./img/portfolio-img.jpg" alt="Картинка портфолио" class="index-portfolio__img swiper-lazy">
-                                <div class="swiper-lazy-preloader"></div>
-                            </a>
-                            <a href="#" class="swiper-slide index-portfolio__item">
-                                <img data-src="./img/portfolio-img.jpg" alt="Картинка портфолио" class="index-portfolio__img swiper-lazy">
-                                <div class="swiper-lazy-preloader"></div>
-                            </a>
-                            <a href="#" class="swiper-slide index-portfolio__item">
-                                <img data-src="./img/portfolio-img.jpg" alt="Картинка портфолио" class="index-portfolio__img swiper-lazy">
-                                <div class="swiper-lazy-preloader"></div>
-                            </a>
-                        </div>
-                    </div>
-                    <button class="button button_orange index-portfolio__control index-portfolio__control_prev"></button>
-                    <button class="button button_orange index-portfolio__control index-portfolio__control_next"></button>
-                </div>
-            </div>
-        </section>
-        <section class="articles">
-            <div class="container">
-                <h2 class="section__title">Полезные статьи</h2>
-                <div class="articles__wrap">
-                    <article class="article-item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="0">
-                        <h3 class="article-item__title">Зачем нужно делать проект систем электроснабжения?</h3>
-                        <p class="article-item__text">Проектирование систем электроснабжения - это этап, без которого невозможно реализовать работу по созданию проекта здания. </p>
-                        <a href="#" class="button button_white article-item__link">подробнее</a>
-                    </article>
-                    <article class="article-item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="350">
-                        <h3 class="article-item__title">Зачем нужно делать проект систем электроснабжения?</h3>
-                        <p class="article-item__text">Проектирование систем электроснабжения - это этап, без которого невозможно реализовать работу по созданию проекта здания. </p>
-                        <a href="#" class="button button_white article-item__link">подробнее</a>
-                    </article>
-                    <article class="article-item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="700">
-                        <h3 class="article-item__title">Зачем нужно делать проект систем электроснабжения?</h3>
-                        <p class="article-item__text">Проектирование систем электроснабжения - это этап, без которого невозможно реализовать работу по созданию проекта здания. </p>
-                        <a href="#" class="button button_white article-item__link">подробнее</a>
                     </article>
                 </div>
             </div>
