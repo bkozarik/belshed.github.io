@@ -90,6 +90,9 @@
     .header
         padding: 15px 0px
 
+    .menu
+        padding: 90px 15px 10px
+
     .logo
         max-width: 190px
 
@@ -216,6 +219,13 @@
         &__control
             height: 40px
             width: 40px
+
+    .menu
+        &__col
+            &_info
+                display: block
+            &_services
+                order: 0
 
     .footer
         padding-top: 10px
@@ -362,8 +372,21 @@
                         display: inline-block
                         text-align: center
                         margin-top: 10px
-         
+   
+@media screen and ( max-width: 535px )
+    .menu
+        grid-template-columns: 1fr
+        .language
+            position: absolute
+            top: 70px
+            right: 20px
+
 @media screen and ( max-width: 475px )
+
+    .menu
+        padding: 70px 15px 10px
+        .language
+            top: 50px
 
     .footer
         &__wrap:last-child
@@ -372,7 +395,9 @@
             br
                 display: none
         &__copyright
+            text-align: center
             & + &
+                text-align: left
                 margin-top: 20px
 
     .index-about

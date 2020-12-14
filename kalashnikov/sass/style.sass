@@ -39,6 +39,7 @@ body
     width: 100%
     z-index: 10
     transition: $transition
+    position: absolute
     &__wrap
         display: flex
         align-items: flex-end
@@ -177,6 +178,28 @@ body
     z-index: 2
     margin-top: 125px
 
+@keyframes logoBlick
+    0%
+        top: -280px
+        left: -120px
+    100%
+        top: 120px
+        left: 480px
+
+@keyframes bg-pulse
+    0%
+        opacity: 1
+    20%
+        opacity: .8
+    40%
+        opacity: .5
+    60%
+        opacity: .5
+    80%
+        opacity: .8
+    100%
+        opacity: 1
+
 .hero
     padding-top: 45px
     margin-bottom: 80px
@@ -196,11 +219,27 @@ body
         flex-grow: 0
         width: 100%
         max-width: 500px
+        border-radius: 50%
+        overflow: hidden
+        position: relative
+        &::before
+            display: inline-block
+            width: 120px
+            height: 800px
+            top: -280px
+            left: -120px
+            background-color: #fff
+            position: absolute
+            content: ''
+            transform: rotate(40deg) skew(20deg)
+            transition: $transition
+            animation: logoBlick .4s ease-in .4s 1
         &-img
             width: 100%
             height: 100%
             object-fit: contain
     &__date
+        position: relative
         margin-top: 13px
     &__text
         font-weight: 500
@@ -330,11 +369,16 @@ body
 .translation
     z-index: 6
     padding-bottom: 90px
+    &__micro
+        position: absolute
+        right: 0
+        top: 0px
+        transform: translateY(400px)
     .big-title__bg
         top: -33%
     &__bg
         position: absolute
-        top: 0
+        top: 80%
         left: 0
         width: 100%
         height: auto
@@ -342,14 +386,12 @@ body
     &__media
         margin-top: 30px
         width: 100%
-        padding-bottom: 56.25%
         position: relative
+        background-color: #000
         iframe
-            position: absolute
             width: 100%
             height: 100%
-            left: 0
-            top: 0
+            min-height: 477px
 
 .program
     padding-bottom: 90px
@@ -431,6 +473,8 @@ body
         width: 100%
         top: 0
         left: 0
+        animation: bg-pulse 6s ease-out 0s infinite
+        transition: $transition
     &__wrap
         display: flex
         flex-direction: column
@@ -741,6 +785,9 @@ body
     position: relative
     overflow: hidden
     z-index: 7
+    .form__button
+        padding: 6px 50px
+        font-size: 18px
     &__bg
         position: absolute
         top: 0
@@ -817,6 +864,11 @@ body
         margin-top: 35px
 
 .login
+    margin-top: 0
+    padding-top: 125px
+    background-size: cover
+    background-repeat: no-repeat
+    background-image: url(../img/header-bg.png)
     &__wrap
         display: flex
         align-items: center
@@ -824,7 +876,7 @@ body
     &__body
         border-radius: 10px
         box-shadow: 0 0 0 2px #e30613
-        margin: 120px auto 80px
+        margin: 125px auto 80px
         max-width: 620px
         width: 100%
         display: flex
@@ -836,6 +888,8 @@ body
         background-position: center
         background-repeat: no-repeat
         .big-title__text
+            font-size: 46px
+            line-height: 54px
             margin-bottom: 40px
         .form__input
             width: 100%

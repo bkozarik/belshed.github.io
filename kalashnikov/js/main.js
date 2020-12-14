@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function(){
             }
         };
     }
-
+    
     var header = document.querySelector('.js-header');
 
     var burger = document.querySelector('.js-burger');
@@ -25,6 +25,10 @@ document.addEventListener('DOMContentLoaded', function(){
         if(window.innerWidth < 900){
             window.pageYOffset >= 160 ? header.classList.add('fixed') : header.classList.remove('fixed');
         }
+
+        document.querySelectorAll('.js-parallax-item').forEach(function(item){
+            item.style.top = -1 * window.pageYOffset * 0.2 + 'px';
+        });
     }
 
     function toggleMenu(state){
@@ -125,11 +129,11 @@ document.addEventListener('DOMContentLoaded', function(){
         toggleMenu(false);
 
         var href;
-        var offset = 120;
+        var offset = 80;
         
         href = targetLink.getAttribute('href');
         
-        window.scrollTo({
+        window.scroll({
             top: document.querySelector(href).offsetTop - offset,
             behavior: 'smooth'
         });

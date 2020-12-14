@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const languageSelets = document.querySelectorAll('.js-language');
-    const servicesBtn = document.querySelector('.js-services-btn');
+    const servicesBtn = document.querySelectorAll('.js-services-btn');
     const scrollLinks = document.querySelectorAll('.js-scroll-link');
 
     const houseTypeInputs = document.querySelectorAll('.js-house-type-input');
@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const calcForm = document.querySelector('.js-calc-form');
 
     const burger = document.querySelector('.js-burger');
+    const menu = document.querySelector('.js-menu');
 
     const popupTriggers = document.querySelectorAll('.js-toggle-popup');
     const popupCloseTriggers = document.querySelectorAll('.js-popup-close');
@@ -31,14 +32,27 @@ document.addEventListener('DOMContentLoaded', () => {
         return languagePopupItem;
     }
 
+    const toggleScroll = (state = null) => {
+        const html = document.querySelector('html');
+        const body = document.querySelector('body');
+        if(state == null){
+            html.classList.toggle('fixed');
+            body.classList.toggle('fixed');
+        }
+        else{
+            state ? html.classList.remove('fixed') : html.classList.add('fixed');
+            state ? body.classList.remove('fixed') : body.classList.add('fixed');
+        }
+    }
+
     const toggleServicesMenu = () => {
         event.stopImmediatePropagation();
-        servicesBtn.classList.toggle('active');
+        servicesBtn.forEach(btn => btn.classList.toggle('active'));
 
         document.addEventListener('click', () => {
-            if(servicesBtn.classList.contains('active')){
-                servicesBtn.classList.remove('active');
-            }
+            // if(servicesBtn.classList.contains('active')){
+            servicesBtn.forEach(btn => btn.classList.remove('active'));
+            // }
         });
     }
 
@@ -49,10 +63,12 @@ document.addEventListener('DOMContentLoaded', () => {
             return () => {
                 targetPopup.classList.add('active');
                 toggleMenu(false);
+                toggleScroll(false);
             };
         }
         else{
             state ? targetPopup.classList.add('active') : targetPopup.classList.remove('active');
+            state ? toggleScroll(false) : toggleScroll(true);
             toggleMenu(false);
         }
     }
@@ -128,10 +144,14 @@ document.addEventListener('DOMContentLoaded', () => {
         if(state == null){
             return () => {
                 burger.classList.toggle('active');
+                menu.classList.toggle('active');
+                toggleScroll();
             };
         }
         else{
-
+            state ? burger.classList.add('active') : burger.classList.remove('active');
+            state ? menu.classList.add('active') : menu.classList.remove('active');
+            state ? toggleScroll(false) : toggleScroll(true);
         }
     }
 
@@ -308,6 +328,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 document.querySelector('.footer__wrap').insertBefore(document.querySelector('.js-transit-child'), document.querySelector('.js-transit-sibling'));
             }
         }
+
+        if(window.innerWidth >= 1360){
+            toggleMenu(false);
+        }
     }
 
     const formSubmitHandler = () => {
@@ -346,7 +370,7 @@ document.addEventListener('DOMContentLoaded', () => {
     scrollLinks.forEach(link => link.addEventListener('click', scrollLinkClick));
     houseTypeInputs.forEach(input => input.addEventListener('change', houseTypeInputChange));
 
-    servicesBtn.addEventListener('click', toggleServicesMenu);
+    servicesBtn.forEach(btn => btn.addEventListener('click', toggleServicesMenu));
     burger.addEventListener('click', toggleMenu());
 
     popupTriggers.forEach(trigger => trigger.addEventListener('click', togglePopup(trigger.dataset.targetPopup)));
