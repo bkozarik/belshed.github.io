@@ -381,9 +381,6 @@ html, body {
     height: 100%;
     left: 0;
 }
-.contacts {
-    background-color: #F3F3F3;
-}
 
 .contacts__info {
     width: 100%;
@@ -493,6 +490,9 @@ html, body {
     -o-border-radius: 50%;
     overflow: hidden;
 }
+main {
+    overflow: hidden;
+}
 
 .navbar {
     padding: 0;
@@ -509,13 +509,13 @@ html, body {
 .contacts {
     background-color: #0080ED;
     position: relative;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .contacts__deco {
     position: absolute;
     left: 0;
-    bottom: -50px;
+    bottom: 0px;
 }
 
 .gallery {
@@ -542,15 +542,15 @@ html, body {
 }
 .gallery__deco:nth-child(2){
     right: 0;
-    bottom: -20px;
+    top: 90%;
 }
 .gallery__deco:nth-child(3){
     left: 0;
-    bottom: -80px;
+    top: 105%;
 }
 .gallery__deco:nth-child(4){
     right: 0;
-    bottom: -140px;
+    top: 109%;
 }
 
 .gallery__title span {
@@ -703,6 +703,28 @@ html, body {
 .login__input:focus, .login__button:focus{
     outline: none;
     border: 1px solid #006EE2;
+}
+
+@keyframes rotate {
+    from{
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+}
+}
+
+.css-rotate-animation {
+    animation: rotate 8s linear 0s infinite;
+    -webkit-animation: rotate 8s linear 0s infinite;
 }
 
 .login__button {
@@ -879,6 +901,7 @@ html, body {
         display: flex;
         flex-direction: column;
         align-items: center;
+        text-align: center;
     }
 
     .plug__title {
