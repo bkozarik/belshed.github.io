@@ -58,6 +58,7 @@ section
     position: relative
     display: inline-block
     background-color: transparent
+    overflow-anchor: none 
     cursor: pointer
     color: #ffffff
     border-radius: 30px
@@ -99,15 +100,13 @@ section
     &_inner
         border: none
         background-color: #fff
-        .nav
-            &__link
-                color:  $text-dark
-        .contacts-dropdown
-            &__tel
-                color:  $text-dark
-            &__body
-                &::after
-                    background-image: url(../img/svg/arrow.svg)
+        .language__trigger-text, .nav__link, .contacts-dropdown__tel
+            color: $text-dark
+        .burger
+            span, &::before, &::after
+                background-color: $text-dark
+        .contacts-dropdown__body::after, .language__trigger::after
+            background-image: url(../img/svg/arrow.svg)
     &__wrap
         display: flex
         align-items: center
@@ -368,6 +367,7 @@ section
         background-color: #fff
         bottom: -70px
         opacity: 0
+        z-index: 2
         visibility: hidden
         @include transition
         &::before
@@ -1162,3 +1162,82 @@ section
 //
 
 .portfolio
+    padding-bottom: 80px
+    .language
+        &__trigger
+            &::after
+                background-image: url(../img/svg/arrow.svg)
+            &.active + .language__list
+                bottom: -200px
+                &::before
+                    right: 90px
+            &-text
+                color: $text-dark
+    &__header
+        display: flex
+        align-items: center
+        justify-content: space-between
+        border-bottom: 2px solid #f0f0f6
+        padding: 0px 20px
+        position: relative
+    &__tab-underline
+        position: absolute
+        bottom: -2px
+        width: 70px
+        height: 2px
+        display: inline-block
+        background-color: $btn-orange
+        transform: translateX(-5%)
+        @include transition
+    &__tab-title
+        color: $text-dark
+        padding: 5px 5px 30px
+        &:hover, &.active
+            color: $btn-orange
+    &__container
+        margin: 40px 0px 30px
+        min-height: 400px
+        display: grid
+        justify-content: center
+        grid-template-columns: repeat(auto-fit, minmax(300px, 330px))
+        column-gap: 30px
+        row-gap: 30px
+    &__item
+        display: block
+        border-radius: 0px
+        height: 370px
+        width: 100%
+        &-img
+            top: 0
+            left: 0
+            position: absolute
+            height: 100%
+            width: 100%
+            object-fit: cover
+            margin-right: 0 !important
+        &:hover
+            box-shadow: 0 0 16px 3px rgba(0, 0, 0, .25)
+    &__err-item
+        padding: 30px
+        max-height: 150px
+        font-size: 24px
+        line-height: 28px
+        font-weight: 500
+        display: inline-block
+        grid-column: 1 / 5
+        border: 2px solid #fc4848
+        border-radius: 5px
+        background-color: #fdb7b7
+        color: $text-dark
+    &__more
+        display: block
+        margin: 0 auto
+        padding: 15px 55px 15px 26px
+        &::before
+            content: ''
+            position: absolute
+            top: 55%
+            border: 6px solid transparent
+            border-top: 6px solid #ffffff
+            transform: translate(0, -50%)
+            right: 35px

@@ -16,6 +16,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const forms = document.querySelectorAll('form:not(.js-calc-form)');
 
     const telInputs = document.querySelectorAll('input[type="tel"]');
+
+    const portfolioTabs = document.querySelectorAll('.js-tab-header');
+    const portfolioContainer = document.querySelector('.js-tab-container');
     
     const whichPage = () => {
         return document.querySelector('.js-page-id').dataset.page;
@@ -263,6 +266,90 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    const portfolioTabsInit = (tabs) => {
+        const getPosts = async () => {
+            const resp =  await fetch('./js/data.json');
+
+            if (resp.ok) return resp.json();            
+        }
+
+        const calcUnderlinePos = (activeTabHeader) => {
+            const portfolioUnderline = document.querySelector('.js-tab-underline');
+
+            let underlineWidth = Math.ceil(activeTabHeader.getBoundingClientRect().width) * 1.1;
+            let underlineLeft = Math.ceil(activeTabHeader.offsetLeft);
+
+            portfolioUnderline.style.width = underlineWidth + 'px';
+            portfolioUnderline.style.left = underlineLeft + 'px';
+        }
+
+        const createPreview = data => {
+            const portfolioItem = document.createElement('a');
+            portfolioItem.setAttribute('herf', '#');
+            portfolioItem.classList.add('button', 'portfolio__item');
+
+            const portfolioItemImg = document.createElement('img');
+            portfolioItemImg.classList.add('portfolio__item-img');
+            portfolioItemImg.setAttribute('src', data.preview);
+            portfolioItemImg.setAttribute('loading', 'lazy');
+
+            portfolioItem.appendChild(portfolioItemImg);
+            portfolioContainer.appendChild(portfolioItem);
+        }
+
+        const fillPortfolioContainer = (activeTabHeader, count = -1, start = 0) => {
+            const targetHeading = activeTabHeader.dataset.heading.toLowerCase();
+
+            getPosts()
+                .then(response => {
+                    const posts = response["data"].filter(heading => targetHeading == heading.heading)[0];
+
+                    try{
+                        posts.items.forEach((item, index) => {if((index < count || count == -1) && index >= start) createPreview(item)});
+                    }
+                    catch(err){
+                        const errItem = document.createElement('div');
+                        errItem.classList.add('portfolio__err-item');
+                        errItem.innerHTML = "Извините, работ в этой категории не найдено!";
+
+
+                        portfolioContainer.appendChild(errItem);
+                    }
+                });
+        }
+
+        tabs.forEach((tab, index) => {
+            if(index == 0){
+                tab.classList.add('active');
+                calcUnderlinePos(tab);
+                fillPortfolioContainer(tab, 12);
+            };            
+
+            tab.addEventListener('click', () => {
+                document.querySelector('.js-tab-more').style.display = 'block';
+
+                while (portfolioContainer.firstChild) {
+                    portfolioContainer.removeChild(portfolioContainer.firstChild);
+                }
+
+                tabs.forEach(tab => tab.classList.remove('active'));
+                event.target.classList.add('active');
+                const activeTabHeader = Array.from(tabs).filter(tab => tab.classList.contains('active'))[0];
+
+                calcUnderlinePos(activeTabHeader);
+                fillPortfolioContainer(activeTabHeader, 12);
+            });
+        });
+
+        document.querySelector('.js-tab-more').addEventListener('click', () => {
+            document.querySelector('.js-tab-more').style.display = 'none';
+            const activeTabHeader = Array.from(tabs).filter(tab => tab.classList.contains('active'))[0];
+            fillPortfolioContainer(activeTabHeader);
+        })
+
+        window.addEventListener('resize', () => calcUnderlinePos(document.querySelector('.js-tab-header.active')));
+    }
+
     const indexSwiperInit = () => {
         let indexSwiper = new Swiper('.index-portfolio__slider', {
             
@@ -396,6 +483,9 @@ document.addEventListener('DOMContentLoaded', () => {
         animationInit();
 
         calcForm.addEventListener('submit', calcFormCount);
+    }
+    else if(whichPage() == 'portfolio'){
+        portfolioTabsInit(portfolioTabs);
     }
     else if(whichPage() == 'main' || whichPage() == 'calculator'){
         animationInit();
