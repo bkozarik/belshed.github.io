@@ -309,24 +309,22 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const resizeHandler = () => {
-        if(whichPage() == 'main'){
-            if(window.innerWidth <= 1360){
-                document.querySelectorAll('.footer .footer__col .button').forEach(btn => {
-                    document.querySelector('.footer .footer__col').insertBefore(btn, document.querySelector('.footer .footer__col .footer__social'));
-                });
-            }
-            else{
-                document.querySelectorAll('.footer .footer__col .button').forEach(btn => {
-                    document.querySelectorAll('.footer .footer__col')[document.querySelectorAll('.footer .footer__col').length - 1].appendChild(btn);
-                });
-            }
+        if(window.innerWidth <= 1360){
+            document.querySelectorAll('.footer .footer__col .button').forEach(btn => {
+                document.querySelector('.footer .footer__col').insertBefore(btn, document.querySelector('.footer .footer__col .footer__social'));
+            });
+        }
+        else{
+            document.querySelectorAll('.footer .footer__col .button').forEach(btn => {
+                document.querySelectorAll('.footer .footer__col')[document.querySelectorAll('.footer .footer__col').length - 1].appendChild(btn);
+            });
+        }
 
-            if(window.innerWidth <= 1080){
-                document.querySelector('.js-transit-parent').appendChild(document.querySelector('.js-transit-child'));
-            }
-            else{
-                document.querySelector('.footer__wrap').insertBefore(document.querySelector('.js-transit-child'), document.querySelector('.js-transit-sibling'));
-            }
+        if(window.innerWidth <= 1080){
+            document.querySelector('.js-transit-parent').appendChild(document.querySelector('.js-transit-child'));
+        }
+        else{
+            document.querySelector('.footer__wrap').insertBefore(document.querySelector('.js-transit-child'), document.querySelector('.js-transit-sibling'));
         }
 
         if(window.innerWidth >= 1360){
