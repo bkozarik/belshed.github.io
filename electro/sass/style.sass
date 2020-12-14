@@ -1241,3 +1241,53 @@ section
             border-top: 6px solid #ffffff
             transform: translate(0, -50%)
             right: 35px
+
+//
+//
+// -- Контакты
+//
+//
+
+.contacts
+    padding: 40px 0px 80px
+    &__wrap
+        display: flex
+        justify-content: space-between
+    &__text
+        font-size: 17px
+        line-height: 24px
+        display: inline-block
+        max-width: 500px
+    &__col
+        width: 100%
+        & + &
+            margin-left: 20px
+        &:first-child
+            max-width: 565px
+    &__title
+        margin-bottom: 50px
+    &__list
+        margin-top: 40px
+        list-style-type: none
+        display: grid
+        grid-template-columns: 220px 1fr
+        column-gap: 40px
+        row-gap: 40px
+    &__bottom
+        margin-top: 40px
+        display: flex
+        align-items: center
+    .footer__contact
+        margin: 0
+    .footer__social-wrap
+        margin-left: 30px
+    .footer__social-link svg
+        fill: $btn-orange
+    .footer__link, .footer__text
+        &, & *
+            color: $text-dark !important
+            line-height: 24px
+            font-size: 17px
+    .footer__link:hover
+        &, & *
+            color: $btn-orange !important
