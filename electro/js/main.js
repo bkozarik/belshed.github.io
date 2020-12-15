@@ -477,19 +477,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     scrollHandler();
     resizeHandler();
+    animationInit();
 
     if(whichPage() == 'main'){
         indexSwiperInit();
-        animationInit();
-
         calcForm.addEventListener('submit', calcFormCount);
     }
     else if(whichPage() == 'portfolio'){
         portfolioTabsInit(portfolioTabs);
     }
     else if(whichPage() == 'main' || whichPage() == 'calculator'){
-        animationInit();
         calcForm.addEventListener('submit', calcFormCount);
-
     }
 });

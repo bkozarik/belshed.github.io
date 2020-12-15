@@ -164,10 +164,17 @@ document.addEventListener('DOMContentLoaded', function(){
     
     try{
         formFile.addEventListener('change', fileUpload);
-        timerInit();
-        swiperInit();
     }
     catch(e){}
 
     polyfill();
+    try{
+        timerInit();
+    }
+    catch(e){}
+    
+    try{
+        swiperInit();
+    }
+    catch(e){}
 });
