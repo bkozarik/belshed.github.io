@@ -238,7 +238,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const maskInit = (input) => {
         input.addEventListener('focus', _ => {
             if(!/^\+\d*$/.test(input.value))
-              input.value = '+7 (';
+              input.value = '+3 (';
         });
           
         input.addEventListener('keypress', event => {
@@ -247,7 +247,7 @@ document.addEventListener('DOMContentLoaded', () => {
             event.preventDefault();
         }
         else if ((input.value.length <= 3)){
-            input.value = '+7 (';
+            input.value = '+3 (';
         }
         switch (currPos) {
             case 7:
