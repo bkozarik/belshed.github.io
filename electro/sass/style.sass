@@ -2,6 +2,8 @@ $text-dark: #242526
 $btn-orange: #f89d13
 $btn-blue: #2286da
 
+$bg-light: #f7f7fb
+
 $transition-duration: .25s
 
 @mixin transition
@@ -19,7 +21,7 @@ $transition-duration: .25s
     font-family: 'Ubuntu', sans-serif
 
 body, html
-    overflow-x: hidden
+    // overflow-x: hidden
     &.fixed
         overflow: hidden
 
@@ -76,8 +78,14 @@ section
     &_white
         background-color: #fff
         color: $btn-orange
+    &_transparent
+        color: #ffffff
+        box-shadow: 0 0 0 2px #ffffff
     &:not(&_no-hover):hover
         &.button
+            &_transparent
+                background-color: #fff
+                color: $btn-orange
             &_orange
                 box-shadow: 0 2px 10px 3px #f89d139d
             &_blue
@@ -471,6 +479,7 @@ section
 
 .main
     flex-grow: 1
+    position: relative
     &_inner
         margin-top: 111px
 
@@ -675,7 +684,7 @@ section
             position: relative
             display: flex
             align-items: stretch
-            background-color: #f7f7fb
+            background-color: $bg-light
     &__types
         display: flex
         align-items: stretch
@@ -720,7 +729,7 @@ section
         &-item + &-item
             margin-left: 22px
         &-item
-            background: #f7f7fb
+            background: $bg-light
             border-radius: 10px
             cursor: pointer
             width: 100%
@@ -746,7 +755,7 @@ section
             border-radius: 10px
             overflow: hidden
             height: 50px
-            background: #f7f7fb
+            background: $bg-light
             padding: 10px 15px 10px 55px
             position: relative
             &::before
@@ -1154,6 +1163,19 @@ section
                 display: inline-block
                 position: absolute
                 left: -15px
+    &_service
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        z-index: 4
+        background-color: transparent
+        .breadcrumbs
+            &__item:last-child
+                .breadcrumbs__link
+                    color: #ffffff
+                &::before
+                    color: #ffffff
 
 .page-title
     padding: 40px 0px
@@ -1335,3 +1357,260 @@ section
     .footer__link:hover
         &, & *
             color: $btn-orange !important
+
+//
+//
+// -- Услуга
+//
+//
+
+.service
+    padding-bottom: 80px
+    &__head
+        position: relative
+        background-color: $text-dark
+        background-repeat: no-repeat
+        background-position: center
+        background-size: cover
+        background-image: url(../img/service-bg.jpg)
+        padding: 7.5877% 0px
+        max-height: 350px
+        margin-bottom: 40px
+        overflow: hidden
+        &-bg
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+    &__title
+        font-size: 32px
+        font-weight: 500
+        &_white
+            color: #ffffff
+    &__wrap
+        display: flex
+        align-items: flex-start
+    &__body
+        @include transition
+        margin-left: 30px
+    &__benefits
+        display: flex
+        align-items: center
+        margin: 25px 0px 40px
+    &__benefit
+        &-icon
+            height: 55px
+            width: 55px
+            flex-shrink: 0  
+            margin-right: 20px
+        &-title
+            display: inline-block
+            font-size: 24px
+            font-weight: 500
+            line-height: 28px
+        &-item
+            display: flex
+            align-items: center
+            & + &
+                margin-left: 55px
+    &__content
+        margin-bottom: 40px
+        p
+            font-size: 16px
+            line-height: 30px
+        img
+            margin: 20px auto
+            display: block
+            max-width: 100%
+
+.form
+    background-color: $btn-orange
+    width: 100%
+    padding: 50px 50px 30px
+    border-radius: 10px
+    &__title
+        font-size: 32px
+        font-weight: 500
+        color: #ffffff
+    &__subtitle
+        color: #ffffff
+        font-size: 24px
+        font-weight: 500
+        display: inline-block
+        margin-top: 5px
+    &__inputs
+        margin: 30px 0px 50px
+        display: flex
+        justify-content: space-between
+    &__item
+        background-color: #fff
+        border-radius: 10px
+        overflow: hidden
+        position: relative
+        flex-basis: 32%
+        &::before
+            content: ''
+            display: inline-block
+            height: 20px
+            width: 20px
+            background-repeat: no-repeat
+            background-size: contain
+            background-position: center
+            position: absolute
+            top: 50%
+            left: 15px
+            transform: translate(0, -50%)
+        &:nth-child(1)::before        
+            background-image: url(../img/svg/name.svg)
+        &:nth-child(2)::before
+            background-image: url(../img/svg/telefon.svg)
+        &:nth-child(3)::before
+            background-image: url(../img/svg/mail_1.svg)
+    &__input
+        outline: none
+        display: block
+        font-size: 16px
+        font-weight: 300
+        padding: 15px 15px 15px 55px
+        width: 100%
+        background-color: #fff
+    &__bottom
+        display: flex
+        align-items: center
+        justify-content: flex-end
+    &__agreement
+        max-width: 290px
+        color: #ffffff
+        font-size: 14px
+        line-height: 24px
+        display: inline-block
+        margin-right: 25px
+    &__button
+        width: 100%
+        flex-basis: calc( 32% - 2px )
+        text-transform: uppercase
+        font-weight: 500
+        padding: 15px
+
+.service-aside-mobile
+    display: none
+    width: 100%
+    margin-bottom: 30px
+    overflow: hidden
+    position: relative
+    &__header
+        padding: 15px !important
+        width: 100%
+        color: $text-dark
+        font-size: 22px !important
+        @include transition
+        position: relative
+        z-index: 2
+        .service-aside__header-ico
+            margin-right: 25px
+            span, &::before, &::after
+                transition:  top $transition-duration ease-in-out $transition-duration, transform $transition-duration ease-in-out 0s, opacity .1s ease-in-out $transition-duration
+        &.active
+            background-color: $btn-orange
+            .service-aside__header-ico
+                span, &::before, &::after
+                    background-color: #fff
+                    transform: translate(-50%, -50%)
+                    top: 50%
+                    transition:  top $transition-duration ease-in-out 0s, transform $transition-duration ease-in-out $transition-duration, opacity $transition-duration ease-in-out .1s
+                span
+                    opacity: 0
+                &::before
+                    transform: translate(-50%, -50%) rotate(45deg)
+                &::after
+                    transform: translate(-50%, -50%) rotate(-45deg)
+            color: #ffffff
+    &__header.active + &__list
+        @include transition
+        opacity: 1
+        pointer-events: all
+        transform: translateY(0%)
+        position: relative
+    &__list
+        width: 100%
+        margin-top: 3px
+        position: absolute
+        transform: translateY(-100%)
+        // opacity: 0
+        pointer-events: none
+        list-style-type: none
+        @include transition
+        display: flex
+        flex-direction: column
+        align-items: stretch
+        overflow: hidden
+        .service-aside__item:first-child
+            border-radius: 10px 10px 0 0 
+            overflow: hidden
+
+.service-aside
+    width: 100%
+    max-width: 330px
+    flex-shrink: 0
+    position: sticky
+    top: 100px
+    &__header
+        display: flex
+        align-items: center
+        font-weight: 500
+        font-size: 24px
+        border-radius: 10px
+        background-color: $bg-light
+        border-radius: 10px
+        padding: 25px 15px
+        &-ico
+            height: 20px
+            width: 25px
+            position: relative
+            display: inline-block
+            margin-right: 15px
+            span, &::before, &::after
+                content: ''
+                display: inline-block
+                width: 25px
+                height: 3px
+                background-color: $text-dark
+                position: absolute
+                top: 50%
+                left: 50%
+                transform: translate(-50%, -50%)
+            &::before
+                top: calc( 9px + 50% )
+            &::after
+                top: calc( -9px + 50% )
+            span
+                width: 20px
+                transform: translate(-62%, -50%)
+    &__list
+        list-style-type: none
+    &__item
+        &:last-child
+            border-radius: 0 0 10px 10px
+            overflow: hidden
+        & + &
+            margin-top: 3px
+    &__link
+        padding: 15px
+        background-color: $bg-light
+        display: flex
+        align-items: center
+        width: 100%
+        width: 100%
+        font-size: 16px
+        line-height: 24px
+        font-weight: 500
+        @include transition
+        img, svg
+            margin-right: 15px
+            height: 40px
+            width: 40px
+            object-fit: contain
+        &.active, &:hover
+            background-color: $btn-orange
+            color: #ffffff

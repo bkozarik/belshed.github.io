@@ -19,6 +19,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const portfolioTabs = document.querySelectorAll('.js-tab-header');
     const portfolioContainer = document.querySelector('.js-tab-container');
+
+    const serviceRoll = document.querySelector('.js-services-roll');
     
     const whichPage = () => {
         return document.querySelector('.js-page-id').dataset.page;
@@ -235,7 +237,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    const maskInit = (input) => {
+    const maskInit = input => {
         input.addEventListener('focus', _ => {
             if(!/^\+\d*$/.test(input.value))
               input.value = '+3 (';
@@ -266,7 +268,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    const portfolioTabsInit = (tabs) => {
+    const portfolioTabsInit = tabs => {
         const getPosts = async () => {
             const resp =  await fetch('./js/data.json');
 
@@ -451,6 +453,16 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(closePopups, 2000);
     }
 
+    const serviceRollClick = () => {
+        let roll = event.target;
+        
+        while(!roll.classList.contains('js-services-roll')){
+            roll = roll.parentNode;
+        }
+
+        roll.classList.toggle('active');
+    }
+
     forms.forEach(form => form.addEventListener('submit', formSubmitHandler));
 
     scrollLinks.forEach(link => link.addEventListener('click', scrollLinkClick));
@@ -488,5 +500,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     else if(whichPage() == 'main' || whichPage() == 'calculator'){
         calcForm.addEventListener('submit', calcFormCount);
+    }
+    else if(whichPage() == 'service'){
+        serviceRoll.addEventListener('click', serviceRollClick);
     }
 });

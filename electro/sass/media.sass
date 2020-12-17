@@ -1,3 +1,11 @@
+$text-dark: #242526
+$btn-orange: #f89d13
+$btn-blue: #2286da
+
+$bg-light: #f7f7fb
+
+$transition-duration: .25s
+    
 @media screen and ( max-width: 1580px )
     .index-portfolio
         &__control
@@ -46,10 +54,6 @@
     .calculator__container
         max-width: 510px
 
-@media screen and ( max-width: 1250px )
-    .index-portfolio__item
-        padding-bottom: 34%
-
 @media screen and ( max-width: 1270px )
     .calc
         &__type-item
@@ -59,7 +63,18 @@
                 margin-top: 30px
         &__types
             flex-direction: column
-            
+
+@media screen and ( max-width: 1250px )
+    .index-portfolio__item
+        padding-bottom: 34%
+    
+    .form
+        padding: 30px
+        &__title
+            font-size: 26px
+        &__subtitle
+            font-size: 20px
+
 @media screen and ( max-width: 1200px )
     .calc
         &__bottom
@@ -76,6 +91,34 @@
                 margin-left: 0            
 
 @media screen and ( max-width: 1180px )
+
+    .service
+        &__benefits
+            justify-content: space-around
+            flex-wrap: wrap
+        &__benefit-item
+            width: 320px
+            margin: 10px
+            & + &
+                margin-left: 10px
+
+    .form
+        &__title
+            font-size: 24px
+        &__subtitle
+            font-size: 18px
+            line-height: 24px
+        &__inputs
+            flex-direction: column
+            margin: 30px 0px
+        &__item
+            & + &
+                margin-top: 15px
+        &__button
+            flex-basis: auto
+
+    .service-aside
+        max-width: 290px
 
     .main
         &_inner
@@ -207,6 +250,18 @@
             grid-template-columns: repeat(2, 1fr)
 
 @media screen and ( max-width: 910px )
+    
+    .service
+        &__wrap
+            flex-direction: column
+        &__body
+            margin-left: 0
+
+    .service-aside
+        display: none
+
+    .service-aside-mobile
+        display: block
 
     .articles
         &__wrap
@@ -386,8 +441,31 @@
         &__banner
             margin-left: 0px
             margin-bottom: 50px
-
+    
 @media screen and ( max-width: 720px )
+    
+    .service
+        &__title
+            font-size: 26px
+            line-height: 34px
+        &__benefits
+            flex-direction: column
+            align-items: flex-start
+            justify-content: flex-start
+            margin: 30px 0px
+        &__benefit
+            &-icon
+                height: 50px
+                width: 50px
+            &-title
+                font-size: 20px
+                line-height: 24px
+            &-item
+                margin: 0
+                width: auto
+                & + &
+                    margin-left: 0
+                    margin-top: 15px
 
     .services__wrap
         grid-template-columns: repeat(auto-fill, minmax(260px, 1fr))
@@ -449,6 +527,27 @@
             max-width: 450px
         &__item
             padding-bottom: 114%
+
+    .breadcrumbs
+        &_service
+            background-color: #f5f6f7
+            position: relative
+            .breadcrumbs
+                &__item:last-child
+                    .breadcrumbs__link
+                        color: $text-dark
+                    &::before
+                        color: $text-dark
+
+    .form
+        &__title, &__subtitle
+            text-align: center
+        &__agreement
+            max-width: none
+            margin-top: 15px
+            text-align: center
+        &__bottom
+            flex-direction: column-reverse
 
 @media screen and ( max-width: 580px )
     .services__wrap
@@ -542,6 +641,22 @@
             right: 20px
 
 @media screen and ( max-width: 475px )
+
+    .service
+        &__head
+            padding: 11% 0px
+
+    .form
+        padding: 30px 15px
+        &__title
+            font-size: 20px
+        &__subtitle
+            font-size: 16px
+            line-height: 24px
+        &__input
+            font-size: 14px
+        &__button
+            font-size: 14px
 
     .main
         &_inner
