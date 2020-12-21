@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', function(){
             dropdownPopupList.classList.add('dropdown__list');
 
             options.forEach((option, index) => {
-                if(option.value != 'none'){
+                if(option.value != 'none' && !option.hasAttribute('hidden')){
                     var dropdownPopupItem = createOptionPopupItem(option, index);
                     dropdownPopupList.appendChild(dropdownPopupItem);
                     
