@@ -897,5 +897,73 @@ body
         .form__input + .form__input
             margin-left: 0
             margin-top: 20px
+        .login__select
+            margin-top: 20px
         .form__button
             margin-top: 55px
+
+.dropdown
+    width: 100%
+    max-width: 340px
+    position: relative
+    &__trigger
+        border: none
+        width: 100%
+        background-color: #181032
+        box-shadow: 0 0 0 2px #4b539f
+        outline: none
+        padding: 10px 20px
+        border-radius: 5px
+        text-align-last: left
+        position: relative
+        cursor: pointer
+        &::after
+            content: ''
+            display: inline-block
+            position: absolute
+            top: 55%
+            right: 20px
+            transform: translate(0, -50%)
+            border: 8px solid transparent
+            border-top: 8px solid #4b539f
+            transition: $transition
+        &-text
+            color: #adacae
+            font-size: 20px
+            font-weight: 300
+            opacity: .6
+        &.active::after
+            transform: translate(0, -90%) rotateX(180deg)
+    &__list
+        position: absolute
+        opacity: 0
+        visibility: hidden
+        z-index: 2
+        transform: translateY(-40px)
+        transition: $transition
+        list-style-type: none
+        width: 100%
+        background-color: #181032
+        box-shadow: 0 0 0 2px #4b539f
+        overflow: hidden
+        border-radius: 5px
+        &.active
+            opacity: 1
+            visibility: visible
+            transform: translateY(20px)
+    &__value + &__value
+        border-top: 1px solid #4b539f
+    &__value
+        cursor: pointer
+        padding: 10px 20px
+        color: #adacae
+        font-size: 20px
+        font-weight: 300
+        opacity: .6
+        &:hover
+            background-color: #231946
+    select
+        position: absolute
+        opacity: 0
+        visibility: hidden
+    

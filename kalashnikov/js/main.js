@@ -21,6 +21,8 @@ document.addEventListener('DOMContentLoaded', function(){
 
     var galleryImg = document.querySelectorAll('.js-gallery-item');
 
+    var customSelects = document.querySelectorAll('.js-dorpdown');
+
     function scrollHandler(){
         if(window.innerWidth < 900){
             window.pageYOffset >= 160 ? header.classList.add('fixed') : header.classList.remove('fixed');
@@ -44,6 +46,88 @@ document.addEventListener('DOMContentLoaded', function(){
             state ? burger.classList.add('active') : burger.classList.remove('active');
             state ? menu.classList.add('active') : menu.classList.remove('active');
         }
+    }
+
+    function dropdownSelectInit (dropdownItems){
+
+        function createOptionPopupItem (option, index){
+            var dropdownPopupItem = document.createElement('li');
+            dropdownPopupItem.classList.add('dropdown__value');
+            dropdownPopupItem.setAttribute('tabindex', 0);
+            
+            dropdownPopupItem.innerHTML = option.innerHTML;
+            dropdownPopupItem.dataset.index = index;
+    
+            return dropdownPopupItem;
+        }
+
+        dropdownItems.forEach(item => {
+            var options = item.querySelectorAll('option');
+            options[0].selected = true;
+            
+            var dropdownTrigger = document.createElement('button');
+            dropdownTrigger.classList.add('button', 'dropdown__trigger', 'js-dropdown-trigger');
+            dropdownTrigger.setAttribute('type', 'button');
+            
+            var dropdownText = document.createElement('span');
+            dropdownText.classList.add('dropdown__trigger-text');
+            dropdownText.innerText = options[0].innerText;
+
+            var dropdownPopupList = document.createElement('ul');
+            dropdownPopupList.classList.add('dropdown__list');
+
+            options.forEach((option, index) => {
+                if(option.value != 'none'){
+                    var dropdownPopupItem = createOptionPopupItem(option, index);
+                    dropdownPopupList.appendChild(dropdownPopupItem);
+                    
+                    dropdownPopupItem.addEventListener('click', () => {
+                        let targetItem = event.target;
+
+                        targetItemIndex = parseInt(targetItem.dataset.index);
+
+                        options[targetItemIndex].selected = true;
+
+                        options.forEach(option => {
+                            if(option.selected) dropdownText.innerText = option.innerText;
+                        });
+                    });
+                }
+            });
+
+            dropdownTrigger.appendChild(dropdownText);
+
+            item.appendChild(dropdownTrigger);
+            item.appendChild(dropdownPopupList);
+
+            dropdownTrigger.addEventListener('click', () => {
+                event.stopImmediatePropagation();
+                var target = event.target;
+
+                while(!target.classList.contains('js-dropdown-trigger')){
+                    target = target.parentNode;
+                }
+
+                target.classList.toggle('active');
+                dropdownPopupList.classList.toggle('active');
+
+                document.addEventListener('click', () => {
+                    var target = event.target;
+                    if(!target.parentNode.classList.contains('js-dropdown-trigger') && !target.classList.contains('js-dropdown-trigger')){
+                        document.querySelectorAll('.dropdown__list').forEach(item => item.classList.remove('active'));
+                        document.querySelectorAll('.js-dropdown-trigger').forEach(item => item.classList.remove('active'));
+                    }
+                }, {onse: true});
+            });
+
+            item.querySelector('select').addEventListener('change', () => {
+                var targetOption = event.target;
+
+                options.forEach(option => {
+                    if(option.selected) dropdownText.innerText = option.innerText;
+                });
+            });
+        });
     }
 
     function fileUpload(){
@@ -162,12 +246,18 @@ document.addEventListener('DOMContentLoaded', function(){
     scrollLinks.forEach(function(link){link.addEventListener('click', scrollLinkClick)});
     galleryImg.forEach(function(img){img.addEventListener('click', galleryImgClick)});
     
+    polyfill();
+
+    try{
+        dropdownSelectInit(customSelects);
+    }
+    catch(e){}
+
     try{
         formFile.addEventListener('change', fileUpload);
     }
     catch(e){}
 
-    polyfill();
     try{
         timerInit();
     }

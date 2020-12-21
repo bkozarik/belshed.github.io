@@ -91,18 +91,19 @@ $(document).ready(() => {
             navigation: {
                 prevEl: '.slider__control_prev',
                 nextEl: '.slider__control_next',
+            },
+            pagination: {
+                dynamicBullets: true,
+                el: '.slider__pagination.swiper-pagination',
+                clickable: true,
             }
         };
 
         slider_1_obj = new Swiper(slider_1, {
-            slidesPerView: 6,
+            slidesPerView: 1,
             spaceBetween: 50,
             speed: 700,
             watchSlidesVisibility: true,
-            loop: true,
-            autoplay: {
-                delay: 3000,
-            },
             lazy: {
                 loadPrevNext: false,
                 loadOnTransitionStart: true,
@@ -111,28 +112,26 @@ $(document).ready(() => {
                 prevEl: '.slider__control_prev',
                 nextEl: '.slider__control_next',
             },
-            breakpoints: {
-                1500: {
-                    slidesPerView: 5,
-                },
-                1300: {
-                    slidesPerView: 4,
-                },
-                900: {
-                    slidesPerView: 3,
-                },
-                500: {
-                    slidesPerView: 2,
-                },
-                300: {
-                    slidesPerView: 1,
-                },
+            pagination: {
+                el: '.slider__pagination.swiper-pagination',
+                clickable: true,
             }
         });
 
         let slider_2_obj = new Swiper(slider_2, swiperSettings);
+
+        checkSlidePos();
+        slider_1_obj.on('slideChange', checkSlidePos);
     }
 
+    const checkSlidePos = () => {
+        const rollNames = document.querySelectorAll('.slider__name');
+
+        rollNames.forEach(name => name.classList.remove('active'));
+
+        rollNames[slider_1_obj.activeIndex].classList.add('active');
+    }
+    
     const closePopup = () => {
         $('.popup__overlay').removeClass('active');
         $('.popup').each(function(event){

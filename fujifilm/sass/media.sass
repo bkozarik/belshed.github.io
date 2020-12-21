@@ -30,6 +30,8 @@
 @media screen and ( max-width: 1350px )
 
     .slider
+        &__control-container
+            top: 40%
         &__pagination
             &-block
                 position: relative
@@ -125,7 +127,11 @@
         display: inline-block
 
 @media screen and ( max-width: 1070px )
-
+    .slider__author, .filming__img::before
+        font-size: 16px
+        right: 50px
+        bottom: 30px
+        
     .slider
         &__pagination
             margin-top: 15px
@@ -239,10 +245,6 @@
             display: none
 
 @media screen and ( max-width: 890px )
-    .slider__author, .filming__img::before
-        font-size: 16px
-        right: 50px
-        bottom: 30px
 
     .hero
         &__bg
