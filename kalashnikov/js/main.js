@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function(){
             return dropdownPopupItem;
         }
 
-        dropdownItems.forEach(item => {
+        dropdownItems.forEach(function(item){
             var options = item.querySelectorAll('option');
             options[0].selected = true;
             
