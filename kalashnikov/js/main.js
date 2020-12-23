@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function(){
                     dropdownPopupList.appendChild(dropdownPopupItem);
                     
                     dropdownPopupItem.addEventListener('click', function(){
-                        let targetItem = event.target;
+                        var targetItem = event.target;
 
                         targetItemIndex = parseInt(targetItem.dataset.index);
 
@@ -245,7 +245,7 @@ document.addEventListener('DOMContentLoaded', function(){
     burger.addEventListener('click', toggleMenu());
     scrollLinks.forEach(function(link){link.addEventListener('click', scrollLinkClick)});
     galleryImg.forEach(function(img){img.addEventListener('click', galleryImgClick)});
-    
+
     polyfill();
 
     try{
@@ -262,7 +262,7 @@ document.addEventListener('DOMContentLoaded', function(){
         timerInit();
     }
     catch(e){}
-    
+
     try{
         swiperInit();
     }
