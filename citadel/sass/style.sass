@@ -314,12 +314,16 @@ section
         border: none
         resize: none
         font-size: 16px
-        text-transform: uppercase
         &:focus
             outline: none
     &__input
         border-bottom: 1px solid #656565
         padding: 6px 0px
+        &_err
+            color: #fd4a4a
+            border-bottom: 1px solid #fd4a4a
+            &::placeholder
+                color: #fd4a4a
         & + &
             margin-top: 12px
     &__input + &__textarea
@@ -327,7 +331,6 @@ section
     &__textarea
         border: 1px solid #656565
         border-radius: 4px
-        text-transform: none
         font-style: italic
         margin-right: 10px
         line-height: 23px
@@ -386,14 +389,19 @@ section
             content: ''
     &__button
         margin-right: auto
-        background-color: $text_blue
+        background-color: #696969
         border-radius: 5px
         padding: 15px 55px
-        box-shadow: 0 0 16px 8px rgba(0, 0, 0, .15)
-        &:hover
-            box-shadow: 0 0 16px 8px rgba(0, 102, 204, 0.1)
-        &:focus
-            outline: none
+        text-transform: uppercase
+        cursor: default
+        outline: none
+        &:not(&_disabled)
+            background-color: $text_blue
+            box-shadow: 0 0 16px 8px rgba(0, 0, 0, .15)
+            &:hover
+                cursor: pointer
+                box-shadow: 0 0 16px 8px rgba(0, 102, 204, 0.1)
+            &:focus
 
 .footer
     bottom: 0

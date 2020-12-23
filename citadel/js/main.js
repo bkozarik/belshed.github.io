@@ -131,7 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const maskInit = () => {
         telInputs.forEach(input => {
             input.addEventListener('focus', _ => {
-                if(!/^\+\d*$/.test(input.value)){
+                if(!/^\+\d*$/.test(input.value) && input.value.length <= 3){
                     input.value = '+7 (';
                 }
             });
@@ -183,7 +183,44 @@ document.addEventListener('DOMContentLoaded', () => {
     const contactFormSubmitHandler = () => {
         event.preventDefault();
 
+        contactForm.querySelectorAll('.form__fields input').forEach(input => {
+            if(input.value.length == 0){
+                input.classList.add('form__input_err');
+
+                input.addEventListener('input', () => {
+                    if(event.target.value.length != 0) event.target.classList.remove('form__input_err');
+                });
+            }
+            if(input.getAttribute('type') == 'tel' && input.value.length != 18){
+                input.classList.add('form__input_err');
+            }
+        });
+
+        if(contactForm.querySelector('.form__input_err')){
+            contactForm.querySelector('.form__input_err').focus();
+            return;
+        }
+
         openPopup('.js-success-popup');
+    }
+
+    const checkboxInit = () => {
+        const formCheckbox = document.querySelector('.js-form-checkbox');
+        const formButton = document.querySelector('.js-form-button');
+
+        const checkState = () => {
+            if(!formCheckbox.checked){
+                formButton.classList.add('form__button_disabled');
+                formButton.setAttribute('disabled', true);
+            }
+            else{
+                formButton.classList.remove('form__button_disabled');
+                formButton.removeAttribute('disabled');
+            }
+        }
+
+        checkState();
+        formCheckbox.addEventListener('input', checkState);
     }
 
     burger.addEventListener('click', toggleMenu());
@@ -203,4 +240,7 @@ document.addEventListener('DOMContentLoaded', () => {
     resizeHandler();
     scrollHandler();
     maskInit();
+    checkboxInit();
+
+    mainSwiperNode.slideTo(2, 0, true);
 });
