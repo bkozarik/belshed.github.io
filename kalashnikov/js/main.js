@@ -7,6 +7,47 @@ document.addEventListener('DOMContentLoaded', function(){
             }
         };
     }
+
+    function toCamelCase(str)
+    {
+        return str.replace(/\-./g, function(substr){ return substr.charAt(1).toUpperCase();});
+    }
+
+    Element.prototype.setDataAttribute = function(name, value) {
+        if ( value !== undefined ) return this.setAttribute('data-'+name, value);
+        else return this.removeDataAttribute(name);
+    };
+    Element.prototype.removeDataAttribute = function(name) {
+        return this.removeAttribute('data-'+name);
+    };
+    Element.prototype.setDataAttributes = function(items) {
+        if ( items instanceof Object ) {
+            for (attr in items) if ( items.hasOwnProperty(attr) ) this.setDataAttribute(attr, items[attr]);
+        }
+    };
+    if ( !Element.prototype.__lookupGetter__("dataset") ) {
+        Element.prototype.__defineGetter__("dataset", function() {
+        try { // simulate DOMStringMap w/accessor support
+            var getter_test = {};
+            getter_test.__defineGetter__("test", function(){}); // test setting accessor on normal object
+            delete getter_test;
+            var HTML5_DOMStringMap = {};
+        } catch(e) { var HTML5_DOMStringMap = document.createElement("div") } // use a DOM object for IE8
+        function lambda(o) { return function(){return o} };
+        function dataSetterFunc(ref_el, attrName) { return function(val){ return ref_el.setDataAttribute(attrName, val) } };
+        for ( attr in this.attributes ) {
+            if ( this.attributes.hasOwnProperty(attr) && this.attributes[attr].name && /^data-[a-z_\-\d]*$/i.test(this.attributes[attr].name) ) {
+                var attrName = toCamelCase(this.attributes[attr].name.substr(5)), attrVal = this.attributes[attr].value;
+                try {
+                    HTML5_DOMStringMap.__defineGetter__(attrName, lambda(attrVal || '') );
+                    HTML5_DOMStringMap.__defineSetter__(attrName, dataSetterFunc(this, attrName) );
+                }
+                catch (e) { HTML5_DOMStringMap[attrName] = attrVal } // if accessors are not working
+            }
+        }
+        return HTML5_DOMStringMap;
+        });
+    }
     
     var header = document.querySelector('.js-header');
 
@@ -66,7 +107,9 @@ document.addEventListener('DOMContentLoaded', function(){
             options[0].selected = true;
             
             var dropdownTrigger = document.createElement('button');
-            dropdownTrigger.classList.add('button', 'dropdown__trigger', 'js-dropdown-trigger');
+            dropdownTrigger.classList.add('button');
+            dropdownTrigger.classList.add('dropdown__trigger');
+            dropdownTrigger.classList.add('js-dropdown-trigger');
             dropdownTrigger.setAttribute('type', 'button');
             
             var dropdownText = document.createElement('span');
