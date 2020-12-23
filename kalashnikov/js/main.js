@@ -120,10 +120,10 @@ document.addEventListener('DOMContentLoaded', function(){
                 }, {once: true});
             });
 
-            item.querySelector('select').addEventListener('change', () => {
+            item.querySelector('select').addEventListener('change', function(){
                 var targetOption = event.target;
 
-                options.forEach(option => {
+                options.forEach(function(option) {
                     if(option.selected) dropdownText.innerText = option.innerText;
                 });
             });

@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const languageCheckbox = document.querySelectorAll('.js-language-radio');
     const scrollLinks = document.querySelectorAll('.js-scroll-link');
     
     const projects = document.querySelector('.js-projects');
@@ -17,10 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const contactForm = document.querySelector('.js-contact-form');
 
     let mainSwiper, mainSwiperNode;
-
-    const languageCheckboxChange = () => {
-
-    }
 
     const toggleMenu = (state = null) => {
         if(typeof(state) == 'object'){
@@ -230,7 +225,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     scrollLinks.forEach(link => link.addEventListener('click', scrollLinkClick));
     closeButtons.forEach(button => button.addEventListener('click', closePopup));
-    languageCheckbox.forEach(checkbox => checkbox.addEventListener('input', languageCheckboxChange));
 
     contactForm.addEventListener('submit', contactFormSubmitHandler);
 
@@ -241,6 +235,4 @@ document.addEventListener('DOMContentLoaded', () => {
     scrollHandler();
     maskInit();
     checkboxInit();
-
-    mainSwiperNode.slideTo(2, 0, true);
 });
