@@ -8,7 +8,9 @@ document.addEventListener('DOMContentLoaded', function(){
         };
     }
 
+    //
     // Старт нового полифила
+    //
 
     if (!document.documentElement.dataset &&
         (
@@ -68,7 +70,9 @@ document.addEventListener('DOMContentLoaded', function(){
         Object.defineProperty(HTMLElement.prototype, 'dataset', descriptor)
       }
      
+    //
     // Конец нового полифила
+    //
 
     var header = document.querySelector('.js-header');
 
@@ -181,7 +185,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
                 document.addEventListener('click', function(event){
                     var target = event.target;
-                    console.log(target);
+                    
                     if(!target.parentNode.classList.contains('js-dropdown-trigger') && !target.classList.contains('js-dropdown-trigger')){
                         document.querySelectorAll('.dropdown__list').forEach(function(item){item.classList.remove('active')});
                         document.querySelectorAll('.js-dropdown-trigger').forEach(function(item){item.classList.remove('active')});
@@ -318,9 +322,9 @@ document.addEventListener('DOMContentLoaded', function(){
     polyfill();
 
     try{
+        dropdownSelectInit(customSelects);
     }
     catch(e){}
-    dropdownSelectInit(customSelects);
 
     try{
         formFile.addEventListener('change', fileUpload);
