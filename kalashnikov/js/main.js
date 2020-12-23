@@ -10,46 +10,63 @@ document.addEventListener('DOMContentLoaded', function(){
 
     // Старт нового полифила
 
-    function toCamelCase(str)
-    {
-        return str.replace(/\-./g, function(substr){ return substr.charAt(1).toUpperCase();});
-    }
-
-    Element.prototype.setDataAttribute = function(name, value) {
-        if ( value !== undefined ) return this.setAttribute('data-'+name, value);
-        else return this.removeDataAttribute(name);
-    };
-    Element.prototype.removeDataAttribute = function(name) {
-        return this.removeAttribute('data-'+name);
-    };
-    Element.prototype.setDataAttributes = function(items) {
-        if ( items instanceof Object ) {
-            for (attr in items) if ( items.hasOwnProperty(attr) ) this.setDataAttribute(attr, items[attr]);
-        }
-    };
-    if ( !Element.prototype.__lookupGetter__("dataset") ) {
-        Element.prototype.__defineGetter__("dataset", function() {
-        try { // simulate DOMStringMap w/accessor support
-            var getter_test = {};
-            getter_test.__defineGetter__("test", function(){}); // test setting accessor on normal object
-            delete getter_test;
-            var HTML5_DOMStringMap = {};
-        } catch(e) { var HTML5_DOMStringMap = document.createElement("div") } // use a DOM object for IE8
-        function lambda(o) { return function(){return o} };
-        function dataSetterFunc(ref_el, attrName) { return function(val){ return ref_el.setDataAttribute(attrName, val) } };
-        for ( attr in this.attributes ) {
-            if ( this.attributes.hasOwnProperty(attr) && this.attributes[attr].name && /^data-[a-z_\-\d]*$/i.test(this.attributes[attr].name) ) {
-                var attrName = toCamelCase(this.attributes[attr].name.substr(5)), attrVal = this.attributes[attr].value;
-                try {
-                    HTML5_DOMStringMap.__defineGetter__(attrName, lambda(attrVal || '') );
-                    HTML5_DOMStringMap.__defineSetter__(attrName, dataSetterFunc(this, attrName) );
-                }
-                catch (e) { HTML5_DOMStringMap[attrName] = attrVal } // if accessors are not working
+    if (!document.documentElement.dataset &&
+        (
+          !Object.getOwnPropertyDescriptor(HTMLElement.prototype, 'dataset') ||
+          !Object.getOwnPropertyDescriptor(HTMLElement.prototype, 'dataset').get
+        )
+      ) {
+        var descriptor = {}
+    
+        descriptor.enumerable = true
+    
+        descriptor.get = function get () {
+          var element = this
+          var map = {}
+          var attributes = this.attributes
+    
+          function toUpperCase (n0) {
+            return n0.charAt(1).toUpperCase()
+          }
+    
+          function getter () {
+            return this.value
+          }
+    
+          function setter (name, value) {
+            if (typeof value !== 'undefined') {
+              this.setAttribute(name, value)
+            } else {
+              this.removeAttribute(name)
             }
+          }
+    
+          for (var i = 0; i < attributes.length; i += 1) {
+            var attribute = attributes[i]
+    
+            // This test really should allow any XML Name without
+            // colons (and non-uppercase for XHTML)
+    
+            if (attribute && attribute.name && (/^data-\w[\w-]*$/).test(attribute.name)) {
+              var name = attribute.name
+              var value = attribute.value
+    
+              // Change to CamelCase
+    
+              var propName = name.substr(5).replace(/-./g, toUpperCase)
+    
+              Object.defineProperty(map, propName, {
+                enumerable: descriptor.enumerable,
+                get: getter.bind({ value: value || '' }),
+                set: setter.bind(element, name)
+              })
+            }
+          }
+          return map
         }
-        return HTML5_DOMStringMap;
-        });
-    }
+    
+        Object.defineProperty(HTMLElement.prototype, 'dataset', descriptor)
+      }
      
     // Конец нового полифила
 
@@ -102,7 +119,7 @@ document.addEventListener('DOMContentLoaded', function(){
             dropdownPopupItem.setAttribute('tabindex', 0);
             
             dropdownPopupItem.innerHTML = option.innerHTML;
-            dropdownPopupItem.dataset.index = index;
+            dropdownPopupItem.setAttribute('data-index', index);
     
             return dropdownPopupItem;
         }
@@ -129,11 +146,11 @@ document.addEventListener('DOMContentLoaded', function(){
                     var dropdownPopupItem = createOptionPopupItem(option, index);
                     dropdownPopupList.appendChild(dropdownPopupItem);
                     
-                    dropdownPopupItem.addEventListener('click', function(){
+                    dropdownPopupItem.addEventListener('click', function(event){
                         var targetItem = event.target;
 
                         targetItemIndex = parseInt(targetItem.dataset.index);
-
+                        
                         options[targetItemIndex].selected = true;
 
                         options.forEach(function(option){
@@ -148,8 +165,11 @@ document.addEventListener('DOMContentLoaded', function(){
             item.appendChild(dropdownTrigger);
             item.appendChild(dropdownPopupList);
 
-            dropdownTrigger.addEventListener('click', function(){
-                event.stopImmediatePropagation();
+            dropdownTrigger.addEventListener('click', function(event){
+                try{
+                    event.target.stopImmediatePropagation();
+                }
+                catch(e){}
                 var target = event.target;
 
                 while(!target.classList.contains('js-dropdown-trigger')){
@@ -159,17 +179,18 @@ document.addEventListener('DOMContentLoaded', function(){
                 target.classList.toggle('active');
                 dropdownPopupList.classList.toggle('active');
 
-                document.addEventListener('click', function(){
+                document.addEventListener('click', function(event){
                     var target = event.target;
+                    console.log(target);
                     if(!target.parentNode.classList.contains('js-dropdown-trigger') && !target.classList.contains('js-dropdown-trigger')){
                         document.querySelectorAll('.dropdown__list').forEach(function(item){item.classList.remove('active')});
                         document.querySelectorAll('.js-dropdown-trigger').forEach(function(item){item.classList.remove('active')});
                     }
-                }, {once: true});
+                });
             });
 
             item.querySelector('select').addEventListener('change', function(){
-                var targetOption = event.target;
+                var targetOption = this;
 
                 options.forEach(function(option) {
                     if(option.selected) dropdownText.innerText = option.innerText;
