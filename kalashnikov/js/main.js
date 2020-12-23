@@ -8,6 +8,8 @@ document.addEventListener('DOMContentLoaded', function(){
         };
     }
 
+    // Старт нового полифила
+
     function toCamelCase(str)
     {
         return str.replace(/\-./g, function(substr){ return substr.charAt(1).toUpperCase();});
@@ -48,10 +50,13 @@ document.addEventListener('DOMContentLoaded', function(){
         return HTML5_DOMStringMap;
         });
     }
-    
+     
+    // Конец нового полифила
+
     var header = document.querySelector('.js-header');
 
     var burger = document.querySelector('.js-burger');
+
     var menu = document.querySelector('.js-menu');
 
     var scrollLinks = document.querySelectorAll('.js-scroll-link');
