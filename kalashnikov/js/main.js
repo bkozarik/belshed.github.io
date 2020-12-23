@@ -158,7 +158,7 @@ document.addEventListener('DOMContentLoaded', function(){
                         options[targetItemIndex].selected = true;
 
                         options.forEach(function(option){
-                            if(option.selected) dropdownText.innerText = option.innerText;
+                            if(option.selected) dropdownText.innerHTML = option.innerHTML;
                         });
                     });
                 }
@@ -322,9 +322,9 @@ document.addEventListener('DOMContentLoaded', function(){
     polyfill();
 
     try{
-        dropdownSelectInit(customSelects);
     }
     catch(e){}
+    dropdownSelectInit(customSelects);
 
     try{
         formFile.addEventListener('change', fileUpload);
