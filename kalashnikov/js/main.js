@@ -76,19 +76,19 @@ document.addEventListener('DOMContentLoaded', function(){
             var dropdownPopupList = document.createElement('ul');
             dropdownPopupList.classList.add('dropdown__list');
 
-            options.forEach((option, index) => {
+            options.forEach(function(option, index){
                 if(option.value != 'none' && !option.hasAttribute('hidden')){
                     var dropdownPopupItem = createOptionPopupItem(option, index);
                     dropdownPopupList.appendChild(dropdownPopupItem);
                     
-                    dropdownPopupItem.addEventListener('click', () => {
+                    dropdownPopupItem.addEventListener('click', function(){
                         let targetItem = event.target;
 
                         targetItemIndex = parseInt(targetItem.dataset.index);
 
                         options[targetItemIndex].selected = true;
 
-                        options.forEach(option => {
+                        options.forEach(function(option){
                             if(option.selected) dropdownText.innerText = option.innerText;
                         });
                     });
@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', function(){
             item.appendChild(dropdownTrigger);
             item.appendChild(dropdownPopupList);
 
-            dropdownTrigger.addEventListener('click', () => {
+            dropdownTrigger.addEventListener('click', function(){
                 event.stopImmediatePropagation();
                 var target = event.target;
 
@@ -111,13 +111,13 @@ document.addEventListener('DOMContentLoaded', function(){
                 target.classList.toggle('active');
                 dropdownPopupList.classList.toggle('active');
 
-                document.addEventListener('click', () => {
+                document.addEventListener('click', function(){
                     var target = event.target;
                     if(!target.parentNode.classList.contains('js-dropdown-trigger') && !target.classList.contains('js-dropdown-trigger')){
-                        document.querySelectorAll('.dropdown__list').forEach(item => item.classList.remove('active'));
-                        document.querySelectorAll('.js-dropdown-trigger').forEach(item => item.classList.remove('active'));
+                        document.querySelectorAll('.dropdown__list').forEach(function(item){item.classList.remove('active')});
+                        document.querySelectorAll('.js-dropdown-trigger').forEach(function(item){item.classList.remove('active')});
                     }
-                }, {onse: true});
+                }, {once: true});
             });
 
             item.querySelector('select').addEventListener('change', () => {
