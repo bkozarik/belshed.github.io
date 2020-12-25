@@ -124,35 +124,43 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const maskInit = () => {
+
+        const setCursorPosition = (pos, elem) => {
+            elem.focus();
+            if (elem.setSelectionRange) elem.setSelectionRange(pos, pos);
+            else if (elem.createTextRange) {
+                var range = elem.createTextRange();
+                range.collapse(true);
+                range.moveEnd("character", pos);
+                range.moveStart("character", pos);
+                range.select();
+            }
+        }
+
+        function mask(event) {
+            var matrix = "+7 (___) ___ __ __",
+                i = 0,
+                def = matrix.replace(/\D/g, ""),
+                val = this.value.replace(/\D/g, "");
+
+            if (def.length >= val.length) val = def;
+
+            this.value = matrix.replace(/./g, function(a) {
+                return /[_\d]/g.test(a) && i < val.length ? val.charAt(i++) : i >= val.length ? "" : a;
+            });
+            
+            if (event.type == "blur") {
+                if (this.value.length == 2) this.value = "";
+            } 
+            else{
+                setCursorPosition(this.value.length, this);
+            }
+        };  
+
         telInputs.forEach(input => {
-            input.addEventListener('focus', _ => {
-                if(!/^\+\d*$/.test(input.value) && input.value.length <= 3){
-                    input.value = '+7 (';
-                }
-            });
-              
-            input.addEventListener('keypress', event => {
-                const currPos = input.value.length;
-
-                if((!/\d/.test(event.key) || (input.value.length == 18))){
-                    event.preventDefault();
-                }
-                else if ((input.value.length <= 3)){
-                    input.value = '+7 (';
-                }
-
-                switch (currPos) {
-                    case 7:
-                        input.value += ") ";
-                        break;
-                    case 12:
-                        input.value += "-";
-                        break;
-                    case 15:
-                        input.value += "-";
-                        break;
-                }
-            });
+            input.addEventListener("input", mask, false);
+            input.addEventListener("focus", mask, false);
+            input.addEventListener("blur", mask, false);
         });
     }
 
@@ -186,8 +194,20 @@ document.addEventListener('DOMContentLoaded', () => {
                     if(event.target.value.length != 0) event.target.classList.remove('form__input_err');
                 });
             }
+
             if(input.getAttribute('type') == 'tel' && input.value.length != 18){
                 input.classList.add('form__input_err');
+                
+                input.addEventListener('input', () => {
+                    if(event.target.value.length == 18) event.target.classList.remove('form__input_err');
+                });
+            }
+            else if(input.getAttribute('type') == 'email' && input.value.indexOf('@') < 0){
+                input.classList.add('form__input_err');
+
+                input.addEventListener('input', () => {
+                    if(input.value.indexOf('@') > 0) event.target.classList.remove('form__input_err');
+                });
             }
         });
 
@@ -197,22 +217,27 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         openPopup('.js-success-popup');
+        setTimeout(closePopup, 1500);
+        contactForm.reset();
+        checkState();
+    }
+
+    const checkState = () => {
+        const formButton = document.querySelector('.js-form-button');
+        const formCheckbox = document.querySelector('.js-form-checkbox');
+
+        if(!formCheckbox.checked){
+            formButton.classList.add('form__button_disabled');
+            formButton.setAttribute('disabled', true);
+        }
+        else{
+            formButton.classList.remove('form__button_disabled');
+            formButton.removeAttribute('disabled');
+        }
     }
 
     const checkboxInit = () => {
         const formCheckbox = document.querySelector('.js-form-checkbox');
-        const formButton = document.querySelector('.js-form-button');
-
-        const checkState = () => {
-            if(!formCheckbox.checked){
-                formButton.classList.add('form__button_disabled');
-                formButton.setAttribute('disabled', true);
-            }
-            else{
-                formButton.classList.remove('form__button_disabled');
-                formButton.removeAttribute('disabled');
-            }
-        }
 
         checkState();
         formCheckbox.addEventListener('input', checkState);

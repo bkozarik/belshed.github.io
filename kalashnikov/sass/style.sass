@@ -870,7 +870,9 @@ body
     background-size: cover
     background-repeat: no-repeat
     background-image: url(../img/header-bg.png)
-    z-index: 5
+    z-index: 8
+    overflow: visible
+    position: relative
     &__wrap
         display: flex
         align-items: center
@@ -937,8 +939,6 @@ body
         &.active::after
             transform: translate(0, -90%) rotateX(180deg)
     &__list
-        max-height: 218px 
-        overflow-y: auto
         position: absolute
         opacity: 0
         visibility: hidden
@@ -958,9 +958,9 @@ body
         border-top: 1px solid #4b539f
     &__value
         cursor: pointer
-        padding: 10px 20px
+        padding: 5px 20px
         color: #adacae
-        font-size: 20px
+        font-size: 14px
         font-weight: 300
         opacity: .6
         &:hover

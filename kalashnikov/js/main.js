@@ -322,9 +322,9 @@ document.addEventListener('DOMContentLoaded', function(){
     polyfill();
 
     try{
+        dropdownSelectInit(customSelects);
     }
     catch(e){}
-    dropdownSelectInit(customSelects);
 
     try{
         formFile.addEventListener('change', fileUpload);
