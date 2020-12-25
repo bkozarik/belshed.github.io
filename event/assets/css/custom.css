@@ -15,6 +15,10 @@ html, body {
     font-weight: 300;
 }
 
+.u-header {
+    flex-grow: 0;
+}
+
 .navbar-nav .nav-link:hover {
     color: #5C1BA1 !important;
 }
@@ -565,6 +569,7 @@ main {
     justify-content: center;
     flex-wrap: wrap;
     max-width: 580px;
+    margin-left: 5px;
 }
 
 .gallery__item {
@@ -662,6 +667,10 @@ main {
     background-position: center;
 }
 
+body.main-col-flex {
+    flex-grow: 0;
+}
+
 .main-col-flex {
     flex-grow: 1;
     min-height: 100vh;
@@ -680,6 +689,10 @@ main {
 }
 
 .main-col-flex .purple__bg{
+    flex-grow: 1;
+}
+
+.main-col-flex main {
     flex-grow: 1;
 }
 

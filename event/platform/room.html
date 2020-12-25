@@ -36,11 +36,7 @@
     <link rel="stylesheet" href="/event/assets/css/custom.css">
 </head>
 
-<body>
-  <main>
-
-
-
+<body class="main-col-flex">
     <!-- Header -->
     <header id="js-header" class="u-header header header_blue u-header--static">
       <div class="u-header__section u-header__section--light g-transition-0_3">
@@ -90,7 +86,8 @@
       </div>
     </header>
     <!-- End Header -->
-
+    
+  <main>
     <section class="player g-pb-20 g-pt-75">
       <div class="container">
         <div class="row justify-content-between">
@@ -182,28 +179,25 @@
               </div>
           </div>
       </div>
-  </section>
-
+    </section>
+  </main>
     <!-- Copyright Footer -->
-    <footer class="footer footer_light g-py-20">
-      <div class="container">
-          <div class="row">
-              <div class="col-md-4 text-center g-order-2 g-order-1--md text-md-left g-mb-10 g-mb-0--md">
-                  <div class="d-lg-flex align-items-center">
-                    <img src="./footer-logo.svg" alt="Лjго футер" class="footer__logo">
-                      <small class="d-block g-font-size-14 g-color-white g-mr-10 g-mb-10 g-mb-0--md">© Digital Economy League</small>
-                  </div>
-              </div>
-          </div>
-      </div>
-    </footer>
+  <footer class="footer footer_light g-py-20">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 text-center g-order-2 g-order-1--md text-md-left g-mb-10 g-mb-0--md">
+                <div class="d-lg-flex align-items-center">
+                  <img src="./footer-logo.svg" alt="Лjго футер" class="footer__logo">
+                    <small class="d-block g-font-size-14 g-color-white g-mr-10 g-mb-10 g-mb-0--md">© Digital Economy League</small>
+                </div>
+            </div>
+        </div>
+    </div>
+  </footer>
     <!-- End Copyright Footer -->
-    <a class="js-go-to u-go-to-v1" href="#" data-type="fixed" data-position='{
-     "bottom": 15,
-     "right": 15 }' data-offset-top="400" data-compensation="#js-header" data-show-effect="zoomIn">
+    <a class="js-go-to u-go-to-v1" href="#" data-type="fixed" data-position='{ "bottom": 15, "right": 15 }' data-offset-top="400" data-compensation="#js-header" data-show-effect="zoomIn">
       <i class="hs-icon hs-icon-arrow-top"></i>
     </a>
-  </main>
 
   <div class="u-outer-spaces-helper"></div>
 
@@ -277,13 +271,6 @@
         }, 200);
       });
   </script>
-
-
-
-
-
-
-
 </body>
 
 </html>
