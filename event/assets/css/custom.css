@@ -500,6 +500,7 @@ main {
 
 .navbar .navbar-brand {
     padding: 0 !important;
+    flex-grow: 0;
     flex-shrink: 0;
 }
 
@@ -835,7 +836,9 @@ main {
 
     .navbar-brand img{
         width: 100%;
+        max-width: 100%;
         height: auto !important;
+        flex-grow: 0;
         flex-shrink: 0;
     }
 
