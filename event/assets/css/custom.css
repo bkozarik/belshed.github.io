@@ -500,8 +500,8 @@ main {
 
 .navbar .navbar-brand {
     padding: 0 !important;
+    flex-shrink: 0; 
     flex-grow: 0;
-    flex-shrink: 0;
 }
 
 .header_blue{
@@ -838,8 +838,8 @@ main {
         width: 100%;
         max-width: 100%;
         height: auto !important;
-        flex-grow: 0;
         flex-shrink: 0;
+        flex-grow: 0;
     }
 
     .gallery__deco:nth-child(1){
