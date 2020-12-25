@@ -835,6 +835,10 @@ main {
         padding: 20px;
     }
 
+    .navbar-brand {
+        width: 180px !important;
+    }
+
     .navbar-brand img{
         width: 100%;
         max-width: 100%;
