@@ -1,0 +1,19 @@
+/* Свайпер */
+@import './swiper-bundle.min.css';
+
+
+/* Стили шрифтов */
+@import './fonts.css';
+
+
+/* Анимации */
+@import './keyframes.css';
+
+
+/* Десктоп стили */
+@import './style.css';
+
+
+/* Медиа стили */
+@import './media.css';
+
