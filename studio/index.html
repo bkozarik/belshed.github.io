@@ -15,7 +15,7 @@
                 <a href="#" class="logo">
                     <!-- <img src="./" class="logo__img" alt="Логотип"> -->
                 </a>
-                <div class="nav">
+                <nav class="nav">
                     <ul class="nav__list">
                         <li class="nav__item">
                             <a href="#" class="nav__link">Услуги</a>
@@ -36,7 +36,7 @@
                             <a href="#" class="nav__link">Контакты</a>
                         </li>
                     </ul>
-                </div>
+                </nav>
                 <div class="header__buttons">
                     <a href="#" class="button button_purple header__whatsapp" target="_blank">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -56,13 +56,17 @@
     </header>
     <main class="main">
         <section class="hero">
+            <div class="deco-item deco-item_cross"></div>
+            <div class="deco-item deco-item_cross"></div>
+            <div class="deco-item deco-item_cross"></div>
+            <div class="deco-item deco-item_circle"></div>
             <div class="hero__content">
                 <div class="container">
                     <div class="hero__body">
                         <h1 class="hero__title">От стартапов до&nbsp;энтерпрайзов и&nbsp;банковских решений</h1>
                         <span class="hero__subtitle">Мы создаем высококачественные мобильные <br> и&nbsp;веб-приложения для решения ваших бизнес-задач.</span>
                         <form class="hero__form">
-                            <div class="hero__code dropdown js-dropdown" data-trigger-val="html">
+                            <div class="hero__code dropdown js-dropdown" data-select-name="user_code" data-trigger-val="html">
                                 <ul class="js-dropdown-select">
                                     <li data-value="none" hidden><img src="./img/languge-icons/ru.png" alt="Флаг страны">+7</li>
                                     <li data-value="+7"><img src="./img/languge-icons/ru.png" alt="Флаг страны">+7</li>
@@ -72,7 +76,7 @@
                                     <li data-value="+3"><img src="./img/languge-icons/de.png" alt="Флаг страны">+3</li>
                                 </ul>
                             </div>
-                            <input type="tel" class="hero__tel" placeholder="Ваш телефон">
+                            <input type="tel" name="user_phone" class="hero__tel" placeholder="Ваш телефон">
                             <button class="button button_red hero__submit">Реализовать мою идею</button>
                         </form>
                     </div>
@@ -94,9 +98,67 @@
                             <span class="hero__data-text">Пользователей вашего <br> приложения</span>
                         </div>
                     </div>
+                    <div class="graf">
+                        <div class="graf__head">
+                            <img src="./img/graf-icon.svg" alt="Иконка" class="graf__icon">
+                            <div class="graf__text">
+                                <span class="graf__title">Рост прибыли компании</span>
+                                <span class="graf__subtitle">Развитие приложения</span>
+                            </div>
+                        </div>
+                        <div class="graf__body">
+                            <svg class="graf__path" width="241" height="138" stroke-dasharray="380" viewBox="0 0 241 138" fill="none">
+                                <path d="M3 136.5C9.83333 122.833 28.6 89.3998 63 80.9998C106 70.4998 139 100.5 168 71.9998C197 43.4998 189 0.499809 240 2.99981" stroke="#FFD02C" stroke-width="5"/>
+                                <animate attributeName="stroke-dashoffset" fill="freeze" dur="10s" values="380;0;" repeatCount="indefinite"/>
+                            </svg>
+                            <div class="graf__cell">
+                                <span class="graf__cell-val">400</span>
+                            </div>
+                            <div class="graf__cell">
+                                <span class="graf__cell-val">300</span>
+                            </div>
+                            <div class="graf__cell">
+                                <span class="graf__cell-val">200</span>
+                            </div>
+                            <div class="graf__cell">
+                                <span class="graf__cell-val">100</span>
+                            </div>
+                            <div class="graf__cell"></div>
+                            <div class="graf__cell"></div>
+                            <div class="graf__cell"></div>
+                            <div class="graf__cell"></div>
+                            <div class="graf__cell"></div>
+                            <div class="graf__cell"></div>
+                            <div class="graf__cell"></div>
+                            <div class="graf__cell"></div>
+                            <div class="graf__cell"></div>
+                            <div class="graf__cell"></div>
+                            <div class="graf__cell"></div>
+                            <div class="graf__cell"></div>
+                            <div class="graf__cell"></div>
+                            <div class="graf__cell"></div>
+                            <div class="graf__cell"></div>
+                            <div class="graf__cell"></div>
+                            <div class="graf__cell"></div>
+                            <div class="graf__cell"></div>
+                            <div class="graf__cell"></div>
+                            <div class="graf__cell"></div>
+                            <div class="graf__cell"></div>
+                            <div class="graf__cell"></div>
+                            <div class="graf__cell"></div>
+                            <div class="graf__cell"></div>
+                            <div class="graf__cell"></div>
+                            <div class="graf__cell"></div>
+                            <div class="graf__cell"></div>
+                            <div class="graf__cell"></div>
+                        </div>
+                    </div>
                     <img src="./img/deco-items/deco-triangle.svg" alt="Треугольник" class="hero__deco-triangle">
                     <img src="./img/deco-items/deco-dots.svg" alt="Точки" class="hero__deco-dots">
-                    <img src="./img/girl.png" alt="Фото девушки" class="hero__img">
+                    <picture>
+                        <source srcset="./img/girl.webp" type="image/webp">
+                        <img src="./img/girl.png" alt="Фото девушки" class="hero__img">
+                    </picture>
                 </div>
             </div>
         </section>
@@ -170,9 +232,7 @@
                             <a href="#" class="project__link">Смотреть кейс</a>
                         </div>
                         <div class="project__swiper js-project-swiper">
-                            <div class="project__pagination js-project-swiper-pagination">
-
-                            </div>
+                            <div class="project__pagination js-project-swiper-pagination"></div>
                             <div class="swiper-wrapper">
                                 <div class="project__slide swiper-slide">
                                         <img class="project__slide-img swiper-lazy" data-srcset="./img/mockup.webp" data-src="./img/mockup.png" alt="Фото в слайлере">
@@ -269,9 +329,7 @@
                             <a href="#" class="project__link">Смотреть кейс</a>
                         </div>
                         <div class="project__swiper js-project-swiper">
-                            <div class="project__pagination js-project-swiper-pagination">
-
-                            </div>
+                            <div class="project__pagination js-project-swiper-pagination"></div>
                             <div class="swiper-wrapper">
                                 <div class="project__slide swiper-slide">
                                         <img class="project__slide-img swiper-lazy" data-srcset="./img/mockup.webp" data-src="./img/mockup.png" alt="Фото в слайлере">
@@ -308,9 +366,7 @@
                             <a href="#" class="project__link">Смотреть кейс</a>
                         </div>
                         <div class="project__swiper js-project-swiper">
-                            <div class="project__pagination js-project-swiper-pagination">
-                                
-                            </div>
+                            <div class="project__pagination js-project-swiper-pagination"></div>
                             <div class="swiper-wrapper">
                                 <div class="project__slide swiper-slide">
                                     <img class="project__slide-img swiper-lazy" data-srcset="./img/mockup.webp" data-src="./img/mockup.png" alt="Фото в слайлере">
@@ -423,25 +479,39 @@
                 </div>
                 <div class="articles__swiper js-articles-swiper">
                     <div class="swiper-wrapper">
-                        <a class="swiper-slide articles__item articles__item_big">
-                            <picture>
-                                <source srcset="./img/article-1.webp" type="image/webp">
-                                <img src="./img/article-1.jpg" alt="Картинка статьи" class="articles__item-img">
-                            </picture>
+                        <a href="#" class="swiper-slide articles__item articles__item_big">
+                            <div class="articles__item-wrap">
+                                <img data-srcset="./img/article-1.webp" data-src="./img/article-1.jpg" alt="Картинка статьи" class="articles__item-img swiper-lazy">
+                                <div class="swiper-lazy-preloader"></div>
+                            </div>
                             <h3 class="articles__item-title">Как дополненная реальность помогает создавать комфорт в доме</h3>
                         </a>
-                        <a class="swiper-slide articles__item">
-                            <picture>
-                                <source srcset="./img/article-2.webp" type="image/webp">
-                                <img src="./img/article-2.jpg" alt="Картинка статьи" class="articles__item-img">
-                            </picture>
+                        <a href="#" class="swiper-slide articles__item">
+                            <div class="articles__item-wrap">
+                                <img data-srcset="./img/article-2.webp" data-src="./img/article-2.jpg" alt="Картинка статьи" class="articles__item-img swiper-lazy">
+                                <div class="swiper-lazy-preloader"></div>
+                            </div>
                             <h3 class="articles__item-title">Разработка приложения для&nbsp;туризма</h3>
                         </a>
-                        <a class="swiper-slide articles__item">
-                            <picture>
-                                <source srcset="./img/article-3.webp" type="image/webp">
-                                <img src="./img/article-3.jpg" alt="Картинка статьи" class="articles__item-img">
-                            </picture>
+                        <a href="#" class="swiper-slide articles__item">
+                            <div class="articles__item-wrap">
+                                <img data-srcset="./img/article-3.webp" data-src="./img/article-3.jpg" alt="Картинка статьи" class="articles__item-img swiper-lazy">
+                                <div class="swiper-lazy-preloader"></div>
+                            </div>
+                            <h3 class="articles__item-title">Изучаем виджеты в iOS 14 и App Library</h3>
+                        </a>
+                        <a href="#" class="swiper-slide articles__item articles__item_big">
+                            <div class="articles__item-wrap">
+                                <img data-srcset="./img/article-1.webp" data-src="./img/article-1.jpg" alt="Картинка статьи" class="articles__item-img swiper-lazy">
+                                <div class="swiper-lazy-preloader"></div>
+                            </div>
+                            <h3 class="articles__item-title">Разработка приложения для&nbsp;туризма</h3>
+                        </a>
+                        <a href="#" class="swiper-slide articles__item">
+                            <div class="articles__item-wrap">
+                                <img data-srcset="./img/article-3.webp" data-src="./img/article-3.jpg" alt="Картинка статьи" class="articles__item-img swiper-lazy">
+                                <div class="swiper-lazy-preloader"></div>
+                            </div>
                             <h3 class="articles__item-title">Изучаем виджеты в iOS 14 и App Library</h3>
                         </a>
                     </div>
@@ -453,9 +523,117 @@
                 </div>
             </div>
         </section>
+        <section class="contact">
+            <div class="container">
+                <div class="contact__container">
+                    <form class="form">
+                        <h2 class="section-title section-title_tac section-title_white">Давайте вместе создадим крутой проект!</h2>
+                        <div class="form__wrap">
+                            <div class="form__manager">
+                                <img src="./img/manager.png" alt="Фото менеджера" class="form__img">
+                                <span class="form__name">Александр Михайлов</span>
+                                <span class="form__position">Специалист по продажам</span>
+                                <ul class="form__links">
+                                    <li class="form__links-item">
+                                        <a href="tel:88002508478" class="form__link">8 (800) 250-84-78</a>
+                                    </li>
+                                    <li class="form__links-item">
+                                        <a href="mailto:hello@mail.ru" class="form__link">hello@mail.ru</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="form__body">
+                                <div class="form__fields">
+                                    <label class="form__input-wrap">
+                                        <input type="text" class="form__input" name="user_name" placeholder="Ваше имя">
+                                    </label>
+                                    <label class="form__input-wrap">
+                                        <input type="email" class="form__input" name="user_mail" placeholder="E-mail">
+                                    </label>
+                                    <label class="form__input-wrap">
+                                        <input type="tel" class="form__input" name="user_phone" placeholder="Телефон">
+                                    </label>
+                                    <label class="form__input-wrap">
+                                        <input type="text" class="form__input" name="user_company" placeholder="Название компании">
+                                    </label>
+                                    <label class="form__input-wrap">
+                                        <input type="text" class="form__input" name="user_project" placeholder="Пара слов о проекте">
+                                    </label>
+                                </div>
+                                <div class="form__bottom">
+                                    <button class="button button_red form__button">Отправить</button>
+                                    <small class="form__agreement">Нажимая на кнопку, вы соглашаетесь c политикой конфиденциальности</small>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
     </main>
     <footer class="footer">
-
+        <div class="container">
+            <div class="footer__wrap">
+                <a href="#" class="logo">
+                    <!-- <img src="" alt="Логотип" class="logo__img"> -->
+                </a>
+                <nav class="nav nav_footer">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Услуги</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Клиенты</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Кейсы</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Отзывы</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Блог</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+                <ul class="footer__socials">
+                    <li class="footer__socials-item">
+                        <a href="#" class="footer__socials-link">
+                            <img src="./img/social-logo-1.png" alt="Иконка ресурса">
+                        </a>
+                    </li>
+                    <li class="footer__socials-item">
+                        <a href="#" class="footer__socials-link">
+                            <img src="./img/social-logo-2.png" alt="Иконка ресурса">
+                        </a>
+                    </li>
+                    <li class="footer__socials-item">
+                        <a href="#" class="footer__socials-link">
+                            <img src="./img/social-logo-3.png" alt="Иконка ресурса">
+                        </a>
+                    </li>
+                    <li class="footer__socials-item">
+                        <a href="#" class="footer__socials-link">
+                            <img src="./img/social-logo-4.png" alt="Иконка ресурса">
+                        </a>
+                    </li>
+                    <li class="footer__socials-item">
+                        <a href="#" class="footer__socials-link">
+                            <img src="./img/social-logo-5.png" alt="Иконка ресурса">
+                        </a>
+                    </li>
+                    <li class="footer__socials-item">
+                        <a href="#" class="footer__socials-link">
+                            <img src="./img/social-logo-6.png" alt="Иконка ресурса">
+                        </a>
+                    </li>
+                </ul>
+                <small class="footer__year">© 2008–2020 </small>
+            </div>
+        </div>
     </footer>
     <script src="./js/swiper-bundle.min.js"></script>
 </body>

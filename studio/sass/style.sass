@@ -4,6 +4,8 @@ $main-red: #F86161
 
 $text-black: #121B30
 
+$err-red: #ff4848
+
 @mixin transition($prop)
     transition: $prop .3s ease-in-out 0s
 
@@ -81,6 +83,7 @@ body
     font-weight: 700
     line-height: 50px
     &_tac
+        width: 100%
         text-align: center
     &_white
         color: #ffffff
@@ -106,7 +109,7 @@ body
         @include transition(padding)
     &__buttons
         display: flex
-        align-items: center
+        align-items: stretch
     &__whatsapp
         font-size: 17px
         padding: 10px
@@ -119,10 +122,17 @@ body
         backdrop-filter: blur(20px)
         .header
             &__bg
-                opacity: .7
+                opacity: .8
                 background-color: $main-purple
             &__wrap
                 padding: 20px 0px
+
+.logo
+    display: block
+    &__img
+        max-width: 100%
+        height: 100%
+        width: 100%
 
 .language
     .header__whatsapp + &
@@ -149,6 +159,13 @@ body
 .nav
     width: 100%
     max-width: 580px
+    &_footer
+        max-width: 500px
+        .nav
+            &__link
+                color: $text-black
+                &::before
+                    background-color: $text-black
     &__list
         width: 100%
         display: flex
@@ -163,9 +180,20 @@ body
         font-weight: 700
         font-size: 16px
         color: #ffffff
-        @include transition(color)
-        &:hover
-            color: $main-red
+        &::before
+            position: absolute
+            bottom: -3px
+            display: inline-block
+            content: ''
+            left: 0
+            width: 100%
+            background-color: #ffffff
+            height: 2px
+            transform: scaleX(0)
+            transform-origin: left
+            @include transition(transform)
+        &:hover::before
+            transform: scaleX(1)
 
 .hero
     background-color: $main-purple
@@ -173,6 +201,7 @@ body
     display: flex
     align-items: center
     padding: 230px 0px 150px
+    position: relative
     &__title, &__subtitle
         color: #ffffff
         max-width: 600px
@@ -301,10 +330,98 @@ body
             top: 350px
             filter: blur(10px)
 
+.deco-item
+    position: absolute
+    z-index: 0
+    &::after, &::before
+        content: ''
+        display: inline-block
+        background-color: #fff
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+    &_cross
+        &:nth-child(1)
+            top: 180px
+            left: 160px
+            &::after, &::before
+                height: 3px
+                width: 14px
+        &:nth-child(2)
+            top: 760px
+            left: 240px
+            &::after, &::before
+                height: 2px
+                width: 12px
+        &:nth-child(3)
+            top: 450px
+            left: 1000px
+            &::after, &::before
+                height: 2px
+                width: 9px
+        &::after
+            transform: translate(-50%, -50%) rotate(90deg)
+        
+
+.graf
+    top: 400px
+    left: 185px
+    position: absolute
+    z-index: 3
+    background-color: #fff
+    border-radius: 15px
+    padding: 23px
+    width: 320px
+    &__path
+        position: absolute
+        right: 0
+        z-index: 3
+    &__head
+        display: flex
+        align-items: flex-start
+        margin-bottom: 15px
+    &__icon
+        width: 50px
+        height: 50px
+        object-fit: contain
+        margin-right: 20px
+    &__text
+        display: flex
+        flex-direction: column
+    &__title
+        font-size: 18px
+        font-weight: 700
+        margin-bottom: 5px
+    &__subtitle
+        font-size: 14px
+        color: #878E9C
+        display: inline-block
+    &__body
+        display: grid
+        grid-template-columns: repeat(8, 1fr)
+        grid-template-rows: repeat(4, 40px)
+        grid-auto-flow: column
+        position: relative
+    &__cell
+        border: none
+        position: relative
+        &-val
+            position: absolute
+            top: 0
+            left: 0
+            transform: translateY(-50%)
+            display: inline-block
+            font-size: 10px
+            color: #878E9C
+        &:nth-of-type(n+5)
+            border: 1px solid #E6EBF0
+
 .dropdown
     position: relative
     &__trigger
         width: 100%
+        height: 100%
         @include transition(background-color)
         &:hover
             .dropdown__trigger-text
@@ -450,8 +567,8 @@ body
         position: relative
         padding-bottom: 37%
         @include transition(transform)
-        &:hover
-            transform: scale(1.02)
+        &.swiper-container-initialized:hover
+            transform: scale(1.01)
         .swiper-wrapper
             position: absolute
             top: 0
@@ -623,13 +740,15 @@ body
         justify-content: space-between
     &__control
         padding-left: 5px
+        cursor:  default
         & + &
             margin-left: 10px
         svg
             fill: $text-black
             margin: 0
             @include transition(fill)
-        &.active, &:hover
+        &:not(.swiper-button-disabled).active, &:not(.swiper-button-disabled):hover
+            cursor: pointer
             svg
                 fill: $main-purple
         &_prev
@@ -640,12 +759,221 @@ body
         margin-bottom: 60px
         overflow: hidden
     &__item
+        width: 22.5%
+        &_big
+            width: 50%
         &-img
+            position: absolute
+            object-fit: cover
+            height: 100%
+            width: 100%
+            left: 0
+            top: 0
+        &-wrap
             margin-bottom: 30px
             border-radius: 20px
             overflow: hidden
+            height: 290px
+            width: 100%
+            position: relative
         &-title
             font-size: 18px
             font-weight: 500
             line-height: 30px
 
+.contact
+    margin-bottom: 50px
+    &__container
+        position: relative
+        &::before, &::after
+            content: ''
+            display: inline-block
+            position: absolute
+            height: 160px
+            width: 50px
+            top: 50%
+            background-image: url(../img/deco-items/deco-dots-dark.svg)
+            background-repeat: no-repeat
+            background-position: center
+            background-size: contain
+        &::before
+            left: -20px
+            transform: translate(-100%, -50%)
+        &::after            
+            right: -20px
+            transform: translate(100%, -50%)
+
+.form
+    background-color: $text-black
+    border-radius: 22px
+    position: relative
+    padding: 75px 80px 110px
+    z-index: 3
+    &__wrap
+        margin-top: 60px
+        display: flex
+        align-items: stretch
+    &__manager
+        flex-shrink: 0
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        justify-content: flex-start
+        max-width: 230px
+    &__img
+        color: #ffffff
+        border-radius: 15px
+        overflow: hidden
+        width: auto
+        max-width: 100%
+        height: 210px
+        margin-bottom: 20px
+    &__name
+        font-weight: 700
+        color: #ffffff
+        font-size: 25px
+        line-height: 32px
+        margin-bottom: 30px
+    &__position
+        color: #ffffff
+        font-size: 18px
+        line-height: 26px
+        font-weight: 300
+        margin-bottom: 20px
+    &__links
+        list-style-type: none
+        margin-top: auto
+        &-item
+            & + &
+                margin-top: 3px
+    &__link
+        display: inline-block
+        padding-bottom: 2px
+        position: relative
+        font-weight: 700
+        color: #ffffff
+        font-size: 18px
+        line-height: 30px
+        &::before
+            content: ''
+            position: absolute
+            bottom: 0
+            left: 0
+            transform-origin: left
+            height: 2px
+            width: 100%
+            background-color: #fff
+            display: inline-block
+            transform: scaleX(0)
+            @include transition(transform)
+        &:hover::before
+            transform: scaleX(1)
+    &__body
+        margin-left: 75px
+        width: 100%
+    &__fields
+        margin-bottom: 60px
+        display: grid
+        grid-template-columns: 1fr
+        row-gap: 20px
+        column-gap: 20px
+    &__input
+        display: block
+        width: 100%
+        font-size: 18px
+        font-weight: 500
+        background-color: transparent
+        border: none
+        border-bottom: 1px solid #585C65
+        padding: 15px 0px 15px
+        color: #ffffff
+        &-wrap
+            position: relative
+            &::after
+                height: 9px
+                width: 9px
+                content: '*'
+                text-align: center
+                vertical-align: middle
+                font-size: 21px
+                color: $err-red
+                right: 0
+                top: 50%
+                transform: translate(0, -50%)
+                position: absolute
+                display: inline-block
+                @include transition(background-color)
+                border-radius: 50%
+            &::before
+                content: ''
+                display: inline-block
+                bottom: 0
+                transform: scaleX(0)
+                @include transition(transform)
+                height: 1px
+                width: 100%
+                background-color: $err-red
+                transform-origin: left
+                position: absolute
+                left: 0
+            &.valid::after
+                color: transparent
+                background-color: #05bc39
+            &.invalid
+                &::before
+                    transform: scaleX(1)
+                .form__input
+                    color: $err-red
+        &::placeholder
+            font-weight: 300
+    &__bottom
+        display: flex
+        align-items: center
+    &__button
+        width: 100%
+        max-width: 335px
+        padding: 15px
+    &__agreement
+        opacity: .6
+        line-height: 25px
+        display: inline-block
+        margin-left: 35px
+        color: #fff
+        font-weight: 300
+        font-size: 16px
+
+.footer
+    padding: 25px 0px 60px
+    &__wrap
+        display: flex
+        align-items: center
+        justify-content: space-between
+    &__socials
+        display: flex
+        align-items: center
+        list-style-type: none
+        &-item
+            display: inline-block
+            & + &
+                margin-left: 6px
+        &-link
+            display: inline-block
+            height: 35px
+            width: 35px
+            flex-shrink: 0
+            @include transition(transform)
+            overflow: hidden
+            position: relative
+            border-radius: 50%
+            &:hover
+                transform: translateY(-5px)
+            img
+                height: 100%
+                width: 100%
+                position: absolute
+                top: 50%
+                left: 50%
+                transform: translate(-50%, -50%)
+    &__year
+        font-size: 16px
+        white-space: nowrap

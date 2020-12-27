@@ -46,6 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
             dropdownPopupList.classList.add('dropdown__list');
 
             const dropdownSelect = document.createElement('select');
+            dropdownSelect.setAttribute('name', item.dataset.selectName)
 
             options.forEach((option, index) => {
                 if(option.dataset.value != 'none' && !option.hasAttribute('hidden')){
@@ -122,8 +123,19 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const articlesSwiperInit = () => {
+
         const articlesSwiper = new Swiper('.js-articles-swiper', {
-            
+            slidesPerView: 'auto',
+            spaceBetween: 30,
+            lazy: {
+                loadPrevNext: true,
+                loadPrevNextAmount: 4,
+                loadOnTransitionStart: true,
+            },
+            navigation: {
+                prevEl: '.articles__control_prev',
+                nextEl: '.articles__control_next',
+            }
         });
     }
 
