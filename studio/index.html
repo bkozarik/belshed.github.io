@@ -60,6 +60,8 @@
             <div class="deco-item deco-item_cross"></div>
             <div class="deco-item deco-item_cross"></div>
             <div class="deco-item deco-item_circle"></div>
+            <img class="deco-item deco-item_bubble" loading="lazy" src="./img/bubble.png" alt="Пузырик">
+            <img class="deco-item deco-item_bubble" loading="lazy" src="./img/bubble.png" alt="Пузырик">
             <div class="hero__content">
                 <div class="container">
                     <div class="hero__body">
@@ -76,7 +78,9 @@
                                     <li data-value="+3"><img src="./img/languge-icons/de.png" alt="Флаг страны">+3</li>
                                 </ul>
                             </div>
-                            <input type="tel" name="user_phone" class="hero__tel" placeholder="Ваш телефон">
+                            <label class="hero__tel-wrap">
+                                <input type="tel" name="user_phone" class="hero__tel js-hero-tel" placeholder="Ваш телефон">
+                            </label>
                             <button class="button button_red hero__submit">Реализовать мою идею</button>
                         </form>
                     </div>
@@ -84,21 +88,21 @@
             </div>
             <div class="hero__aside">
                 <div class="hero__img-wrap">
-                    <div class="hero__data hero__data_col">
+                    <div class="hero__data hero__data_col js-mouse-move" data-speed="-0.1">
                         <img src="./img/hero_data-1.svg" alt="Иконка" class="hero__data-icon">
                         <div class="hero__data-body">
-                            <span class="hero__data-value">+80%</span>
+                            <span class="hero__data-value js-count-up" data-target="80" data-time="5000" data-format="+-/-%">+80%</span>
                             <span class="hero__data-text">Увеличение <br> клиентов</span>
                         </div>
                     </div>
-                    <div class="hero__data">
+                    <div class="hero__data js-mouse-move" data-speed="0.1">
                         <img src="./img/hero_data-2.svg" alt="Иконка" class="hero__data-icon">
                         <div class="hero__data-body">
-                            <span class="hero__data-value">1 000 000+</span>
+                            <span class="hero__data-value js-count-up" data-target="1000000" data-time="20000000" data-format="-/-+">1 000 000+</span>
                             <span class="hero__data-text">Пользователей вашего <br> приложения</span>
                         </div>
                     </div>
-                    <div class="graf">
+                    <div class="graf js-mouse-move" data-speed="0.02">
                         <div class="graf__head">
                             <img src="./img/graf-icon.svg" alt="Иконка" class="graf__icon">
                             <div class="graf__text">
@@ -153,11 +157,11 @@
                             <div class="graf__cell"></div>
                         </div>
                     </div>
-                    <img src="./img/deco-items/deco-triangle.svg" alt="Треугольник" class="hero__deco-triangle">
-                    <img src="./img/deco-items/deco-dots.svg" alt="Точки" class="hero__deco-dots">
+                    <img loading="lazy" src="./img/deco-items/deco-triangle.svg" alt="Треугольник" class="hero__deco-triangle js-mouse-move" data-speed="0.3">
+                    <img loading="lazy" src="./img/deco-items/deco-dots.svg" alt="Точки" class="hero__deco-dots js-mouse-move" data-speed="0.1">
                     <picture>
                         <source srcset="./img/girl.webp" type="image/webp">
-                        <img src="./img/girl.png" alt="Фото девушки" class="hero__img">
+                        <img loading="lazy" src="./img/girl.png" alt="Фото девушки" class="hero__img">
                     </picture>
                 </div>
             </div>
@@ -374,7 +378,8 @@
                                 </div>
                             </div>
                             <img src="./img/project-logo.png" alt="Лого проекта" class="project__logo">
-                            <div class="project__data project__data_dark">
+                            <div class="project__data">
+                                <!-- Если нужно сделать цвет текста темным, то блоку project__data надо присвоить доп класс project__data_dark -->
                                 <h3 class="project__data-title">Лекторий "Прямая речь"</h3>
                                 <p class="project__data-description">Признанный лидер в области интеллектуального досуга</p>
                             </div>
@@ -430,12 +435,12 @@
                             <li class="service-item__tag">Соцсети</li>
                         </ul>
                         <p class="service-item__description">Наши профессиональные разработчики iOS и Android создают высококачественный продукт, который будет оптимизировать задачи вашего бизнеса и способствовать увеличению вашей прибыли</p>
-                        <button class="button button_red service-item__button">Получить оценку</button>
+                        <button class="button button_red service-item__button js-toggle-popup" data-target=".js-popup-main">Получить оценку</button>
                     </div>
                     <div class="service-item__media">
                         <picture>
                             <source srcset="./img/service-1.webp" type="image/webp">
-                            <img src="./img/service-1.png" alt="Картинка" class="service-item__img">
+                            <img loading="lazy" src="./img/service-1.png" alt="Картинка" class="service-item__img js-mouse-move" data-center="true" data-speed="0.025">
                         </picture>
                     </div>
                 </article>
@@ -449,12 +454,12 @@
                             <li class="service-item__tag">Сервисы</li>
                         </ul>
                         <p class="service-item__description">Команда наших специалистов создает функционально сложные, интеграционные и высоконагруженные проекты. Имеет большой опыт создания сайтов и сервисов, интернет-магазинов и лендингов</p>
-                        <button class="button button_red service-item__button">Получить оценку</button>
+                        <button class="button button_red service-item__button js-toggle-popup" data-target=".js-popup-main">Получить оценку</button>
                     </div>
                     <div class="service-item__media">
                         <picture>
                             <source srcset="./img/service-2.webp" type="image/webp">
-                            <img src="./img/service-2.png" alt="Картинка" class="service-item__img">
+                            <img loading="lazy" src="./img/service-2.png" alt="Картинка" class="service-item__img js-mouse-move" data-center="true" data-speed="-0.02">
                         </picture>
                     </div>
                 </article>
@@ -526,11 +531,13 @@
         <section class="contact">
             <div class="container">
                 <div class="contact__container">
-                    <form class="form">
+                    <div class="contact__dots contact__dots_left js-parallax" data-speed="2"></div>
+                    <div class="contact__dots contact__dots_right js-parallax" data-speed="2"></div>
+                    <form class="form js-main-form">
                         <h2 class="section-title section-title_tac section-title_white">Давайте вместе создадим крутой проект!</h2>
                         <div class="form__wrap">
                             <div class="form__manager">
-                                <img src="./img/manager.png" alt="Фото менеджера" class="form__img">
+                                <img loading="lazy" src="./img/manager.png" alt="Фото менеджера" class="form__img">
                                 <span class="form__name">Александр Михайлов</span>
                                 <span class="form__position">Специалист по продажам</span>
                                 <ul class="form__links">
@@ -635,6 +642,55 @@
             </div>
         </div>
     </footer>
+
+    <div class="popup js-popup js-popup-main js-popup-close">
+        <div class="popup__body">
+            <button class="button popup__close js-popup-close"></button>
+            <h2 class="section-title section-title_tac">Оставьте заявку и мы оценим ваш проект</h2>
+            <form class="popup__form js-popup-form">
+                <label class="form__input-wrap">
+                    <input type="text" class="form__input" name="user_name" placeholder="Ваше имя">
+                </label>
+                <label class="form__input-wrap">
+                    <input type="email" class="form__input" name="user_mail" placeholder="E-mail">
+                </label>
+                <label class="form__input-wrap">
+                    <input type="text" class="form__input" name="user_project" placeholder="Пара слов о проекте">
+                </label>
+                <button class="button button_red form__button">Отправить</button>
+                <small class="form__agreement">Нажимая на кнопку, вы соглашаетесь c политикой конфиденциальности</small>
+            </form>
+        </div>
+    </div>
+
+    <div class="popup js-popup js-popup-thx js-popup-close">
+        <div class="popup__body">
+            <button class="button popup__close js-popup-close"></button>
+            <h2 class="section-title section-title_tac">Спасибо, ваша заявка успешно отправлена!</h2>
+            <p class="popup__text">Наш менеджер свяжется с Вам в ближайшее время.</p>
+            <button class="button button_red form__button form__button_close js-popup-close">Закрыть</button>
+        </div>
+    </div>
+
+    <div class="popup js-popup js-popup-err js-popup-close">
+        <div class="popup__body">
+            <button class="button popup__close js-popup-close"></button>
+            <h2 class="section-title section-title_tac">Оставьте заявку и мы оценим ваш проект</h2>
+            <form class="popup__form js-popup-form">
+                <label class="form__input-wrap">
+                    <input type="text" class="form__input" name="user_name" placeholder="Ваше имя">
+                </label>
+                <label class="form__input-wrap">
+                    <input type="email" class="form__input" name="user_mail" placeholder="E-mail">
+                </label>
+                <label class="form__input-wrap">
+                    <input type="text" class="form__input" name="user_project" placeholder="Пара слов о проекте">
+                </label>
+                <button class="button button_red form__button">Отправить</button>
+                <small class="form__agreement">Нажимая на кнопку, вы соглашаетесь c политикой конфиденциальности</small>
+            </form>
+        </div>
+    </div>
     <script src="./js/swiper-bundle.min.js"></script>
 </body>
 </html>

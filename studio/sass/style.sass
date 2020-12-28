@@ -59,6 +59,7 @@ body
     cursor: pointer
     text-align: center
     color: #fff
+    @include transition(all)
     img, svg
         fill: #ffffff
         vertical-align: middle
@@ -67,8 +68,14 @@ body
         margin-right: 10px
     &_purple
         background-color: $btn-bg
+        &:hover
+            background-color: #492a9c
+            box-shadow: 0 0 10px 2px rgba(73, 42, 156, .4)
     &_red
         background-color: $main-red
+        &:hover
+            background-color: #ce4141
+            box-shadow: 0 0 10px 2px rgba(206, 65, 65, .4)
 
 .header, .footer
     flex-grow: 0
@@ -202,6 +209,7 @@ body
     align-items: center
     padding: 230px 0px 150px
     position: relative
+    overflow: hidden
     &__title, &__subtitle
         color: #ffffff
         max-width: 600px
@@ -240,14 +248,23 @@ body
         display: flex
         align-items: stretch
     &__tel
-        max-width: 245px
         padding: 0px 15px 0px 25px
         font-weight: 300
         color: #000000
         font-size: 18px
         border-radius: 9px
         border: none
-        margin: 0 10px
+        display: block
+        width: 100%
+        height: 100%
+        @include transition(box-shadow)
+        &-wrap
+            border-radius: 9px
+            max-width: 245px
+            margin: 0 10px
+            width: 100%
+            &.invalid .hero__tel
+                box-shadow: 0 0 0 2px #ff1111
     &__submit
         padding: 14px
         font-weight: 400
@@ -283,6 +300,9 @@ body
         min-width: 160px
         display: flex
         align-items: center
+        @include transition(transform)
+        transition-timing-function: linear
+        transition-duration: 0.01s
         &_col
             flex-direction: column
             .hero__data
@@ -312,18 +332,24 @@ body
             font-size: 15px
             font-weight: 300
         &:nth-of-type(1)
-            transform: translate(-20px, -20px)
+            top: -20px
+            left: -20px
         &:nth-of-type(2)
-            right: 0
+            right: -130px
             top: 220px
-            transform: translate(50%, 0)
     &__deco
         &-dots
+            @include transition(transform)
+            transition-timing-function: linear
+            transition-duration: 0.01s
             position: absolute
             right: -20px
             top: -20px
             z-index: -1
         &-triangle
+            @include transition(transform)
+            transition-timing-function: linear
+            transition-duration: 0.01s
             position: absolute
             z-index: 3
             left: -20px
@@ -332,7 +358,6 @@ body
 
 .deco-item
     position: absolute
-    z-index: 0
     &::after, &::before
         content: ''
         display: inline-block
@@ -341,7 +366,25 @@ body
         top: 50%
         left: 50%
         transform: translate(-50%, -50%)
+    &_bubble
+        z-index: 0
+        filter: blur(27px)
+        opacity: .4
+        animation: bubbles-move 25s linear infinite
+        &:nth-of-type(2)
+            left: 940px
+            top: 220px
+            animation-delay: 2s
+    &_circle
+        z-index: 1
+        left: 980px
+        top: 270px
+        height: 19px
+        width: 19px
+        border-radius: 50%
+        border: 2px solid #ffffff
     &_cross
+        z-index: 1
         &:nth-child(1)
             top: 180px
             left: 160px
@@ -363,7 +406,6 @@ body
         &::after
             transform: translate(-50%, -50%) rotate(90deg)
         
-
 .graf
     top: 400px
     left: 185px
@@ -373,6 +415,9 @@ body
     border-radius: 15px
     padding: 23px
     width: 320px
+    @include transition(transform)
+    transition-timing-function: linear
+    transition-duration: 0.01s
     &__path
         position: absolute
         right: 0
@@ -484,6 +529,7 @@ body
     margin: 50px 0px 40px
     .swiper-wrapper
         align-items: center
+        // transition: all .2s linear 0s !important
     &__item
         display: flex
         justify-content: center
@@ -765,6 +811,7 @@ body
         &-img
             position: absolute
             object-fit: cover
+            @include transition(transform)
             height: 100%
             width: 100%
             left: 0
@@ -777,31 +824,40 @@ body
             width: 100%
             position: relative
         &-title
+            @include transition(color)
             font-size: 18px
             font-weight: 500
             line-height: 30px
+        &:hover &-title
+            color: $btn-bg
+        &:hover &-img
+            transform: scale(1.02)
+            transition-duration: .5s
 
 .contact
     margin-bottom: 50px
+    overflow: hidden
     &__container
         position: relative
-        &::before, &::after
-            content: ''
-            display: inline-block
-            position: absolute
-            height: 160px
-            width: 50px
-            top: 50%
-            background-image: url(../img/deco-items/deco-dots-dark.svg)
-            background-repeat: no-repeat
-            background-position: center
-            background-size: contain
-        &::before
-            left: -20px
-            transform: translate(-100%, -50%)
-        &::after            
-            right: -20px
-            transform: translate(100%, -50%)
+    &__dots
+        display: inline-block
+        position: absolute
+        height: 160px
+        width: 50px
+        top: 50%
+        background-image: url(../img/deco-items/deco-dots-dark.svg)
+        background-repeat: no-repeat
+        background-position: center
+        background-size: contain
+        @include transition(transform)
+        transition-timing-function: linear
+        transition-duration: 0.01s
+        &_left
+            left: -70px
+            transform: translate(0%, -50%)
+        &_right         
+            right: -70px
+            transform: translate(0%, -50%)
 
 .form
     background-color: $text-black
@@ -887,12 +943,17 @@ body
         border-bottom: 1px solid #585C65
         padding: 15px 0px 15px
         color: #ffffff
+        &:-webkit-autofill
+            -webkit-box-shadow: inset 0 0 0 50px $text-black !important
+            -webkit-text-fill-color: #fff !important
+            color: #fff !important
         &-wrap
             position: relative
             &::after
-                height: 9px
-                width: 9px
+                height: 10px
+                width: 10px
                 content: '*'
+                line-height: 18px
                 text-align: center
                 vertical-align: middle
                 font-size: 21px
@@ -977,3 +1038,103 @@ body
     &__year
         font-size: 16px
         white-space: nowrap
+
+.popup
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    z-index: 100
+    background-color: #ffffffaa
+    display: flex
+    align-items: center
+    justify-content: center
+    visibility: hidden
+    opacity: 0
+    @include transition(all)
+    &.active &__body
+        transform: translateY(0px)
+        visibility: visible
+        opacity: 1
+    &.active
+        visibility: visible
+        opacity: 1
+    &__close
+        position: absolute
+        height: 40px
+        width: 40px
+        right: 10px
+        top: 10px
+        background-color: transparent
+        &::before, &::after
+            @include transition(width)
+            content: ''
+            display: inline-block
+            position: absolute
+            top: 50%
+            left: 50%
+            height: 2px
+            width: 25px
+            background-color: #40485e
+        &::before
+            transform: translate(-50%, -50%) rotate(45deg)
+        &::after
+            transform: translate(-50%, -50%) rotate(-45deg)
+        &:hover
+            &::before, &::after
+                width: 23px
+    &__body
+        max-width: 620px
+        width: 100%
+        border-radius: 21px
+        padding: 60px 40px
+        position: relative
+        display: flex
+        flex-direction: column
+        align-items: center
+        background-color: #F6F5FF
+        box-shadow: 0 0 20px 5px #F6F5FF
+        @include transition(all)
+        visibility: hidden
+        opacity: 0
+        transform: translateY(-50px)
+        .section-title
+            font-size: 36px
+            line-height: 44px
+            max-width: 440px
+    &__text
+        font-size: 20px
+        text-align: center
+        display: inline-block
+        margin-top: 30px
+        max-width: 440px
+    &__button
+        &_close
+            margin-top: 40px
+    &__form
+        margin-top: 20px
+        display: flex
+        flex-direction: column
+        align-items: center
+    .form__input-wrap + .form__input-wrap
+        margin-top: 10px
+    .form
+        &__button
+            margin-top: 35px
+        &__agreement
+            text-align: center
+            color: $text-black
+            margin-left: 0
+            margin-top: 10px
+            max-width: 400px
+        &__input
+            color: $text-black
+            &:-webkit-autofill
+                -webkit-box-shadow: inset 0 0 0 50px #F6F5FF !important
+                -webkit-text-fill-color: $text-black !important
+                color: $text-black !important
+                font-size: 18px
+            &-wrap
+                width: 100%
+                max-width: 400px
