@@ -160,6 +160,21 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    const toggleScroll = (state = null) => {
+        
+        const body = document.querySelector('body');
+        const html = document.querySelector('html');
+
+        if(state != null){
+            state ? body.classList.remove('no-scroll') : body.classList.add('no-scroll');
+            state ? html.classList.remove('no-scroll') : html.classList.add('no-scroll');
+        }
+        else{
+            body.classList.toggle('no-scroll');
+            html.classList.toggle('no-scroll');
+        }
+    }
+
     const resizeHandler = () => {
         if(window.innerWidth <= 920){
             serviceItems.forEach(item => {
@@ -228,11 +243,13 @@ document.addEventListener('DOMContentLoaded', () => {
             return () => {
                 burger.classList.toggle('active');
                 menu.classList.toggle('active');
+                toggleScroll();
             }
         }
         else{
             state ? burger.classList.add('active') : burger.classList.remove('active');
             state ? menu.classList.add('active') : menu.classList.remove('active');
+            state ? toggleScroll(false) : toggleScroll(true);
         }
     }
 
@@ -551,6 +568,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const openPopup = target => {
         toggleMenu(false);
+        toggleScroll(false);
 
         const targetPopup = document.querySelector(target);
 
@@ -561,6 +579,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const closePopup = () => {
         popups.forEach(popup => popup.classList.remove('active'));
+        toggleScroll(true);
     }
 
     const animationInit = () => {
@@ -575,10 +594,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     popupTriggers.forEach(trigger => trigger.addEventListener('click', () => openPopup(trigger.dataset.target)));
     popupCloseTriggers.forEach(trigger => trigger.addEventListener('click', event => {
-        if(event.target.classList.contains('js-popup-close')) popups.forEach(popup => popup.classList.remove('active'));
+        if(event.target.classList.contains('js-popup-close')) {
+            popups.forEach(popup => popup.classList.remove('active'));
+            toggleScroll(true);
+        }
     }));
-
-    openPopup('.js-popup-main')
 
     burger.addEventListener('click', toggleMenu());
 

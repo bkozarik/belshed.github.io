@@ -1,8 +1,14 @@
-@media screen and ( max-width: 1440px )
+@media screen and ( max-width: 1500px )
     .hero
         &__body
             max-width: 620px
+        &__aside
+            margin-right: 70px
+        &__data
+            &:nth-of-type(2)
+                right: -60px
 
+@media screen and ( max-width: 1440px )
     .project
         &__logo
             right: 30px
@@ -16,6 +22,33 @@
         &__img
             max-width: 120%
 
+    .hero
+        padding: 200px 0px 150px
+        &__form
+            margin-top: 30px
+            flex-direction: column
+            max-width: 400px
+        &__phone
+            margin-bottom: 15px
+        &__tel
+            &-wrap
+                max-width: none
+                margin-right: 0
+        &__img
+            width: 100%
+
+@media screen and ( max-width: 1160px )
+    .hero
+        &__title
+            font-size: 36px
+            line-height: 44px
+        &__body
+            max-width: 460px
+        &__subtitle
+            margin-top: 20px
+            br
+                display: none
+
 @media screen and ( max-width: 1120px )
     .service-item
         justify-content: space-between
@@ -26,6 +59,58 @@
             max-width: 470px
         &__tags
             grid-template-columns: repeat(3, min-content)
+
+@media screen and ( min-width: 1020px )
+    .hero
+        &__content &__data
+            display: none
+
+@media screen and ( max-width: 1020px )
+    .hero
+        padding-top: 130px
+        padding-bottom: 80px
+        &__body
+            max-width: 440px
+            margin-bottom: 20px
+        &__content
+            flex-shrink: 0
+        &__aside
+            margin-right: 0
+            margin-left: 20px
+            width: 100%
+            max-width: 445px
+        &__img
+            &-wrap
+                width: 100%
+                max-width: 445px
+                height: auto
+                padding-bottom: 135%
+                .hero__data
+                    display: none
+        &__data
+            position: static
+            width: 100%
+            max-width: 400px
+            & + &
+                margin-top: 20px
+            &_col
+                flex-direction: row
+                .hero__data
+                    &-body
+                        align-items: flex-start
+                    &-icon
+                        margin-bottom: 0
+                        margin-right: 15px
+                    &-title, &-text
+                        text-align: left
+                        br
+                            display: none
+
+        .deco-item.deco-item_cross
+            display: none
+
+        .graf
+            display: none
 
 @media screen and ( max-width: 970px )
     .footer
@@ -46,8 +131,6 @@
             font-size: 38px
             line-height: 45px
         &__tag
-            font-size: 16px
-        &__description
             font-size: 16px
 
     .project
@@ -114,6 +197,14 @@
             margin-bottom: 30px
             margin-top: 30px
 
+@media screen and ( max-width: 830px )
+    .hero
+        &__content
+            flex-shrink: 1
+            width: 100%
+        &__aside
+            display: none
+    
 @media screen and ( max-width: 770px )
     .form
         padding: 25px 40px 60px
@@ -228,6 +319,15 @@
                 height: 250px
 
 @media screen and ( max-width: 530px )
+    .hero
+        padding-top: 100px
+        &__title
+            font-size: 30px
+            line-height: 40px
+        &__subtitle
+            font-size: 18px
+            line-height: 24px
+
     .footer
         &__socials
             margin-bottom: 30px
@@ -293,6 +393,10 @@
             height: 21px
 
 @media screen and ( max-width: 465px )
+    .hero
+        &__subtitle
+            font-size: 18px
+
     .form
         padding: 30px 20px 40px
         &__manager

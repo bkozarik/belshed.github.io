@@ -32,6 +32,9 @@ body
     flex-direction: column
     min-height: 100vh
 
+.no-scroll
+    overflow: hidden
+
 .button-holder
     display: flex
     align-items: center
@@ -51,6 +54,7 @@ body
 
 .button
     display: inline-block
+    user-select: none
     position: relative
     background-color: #fff
     font-size: 17px
@@ -65,8 +69,7 @@ body
     img, svg
         fill: #ffffff
         vertical-align: middle
-        width: 100%
-        max-width: 23px
+        width: 23px
         margin-right: 10px
     &_purple
         background-color: $btn-bg
@@ -120,8 +123,6 @@ body
         margin-left: 20px
         display: flex
         align-items: stretch
-        .button
-            flex-shrink: 0
     &__whatsapp
         font-size: 17px
         padding: 10px
@@ -141,6 +142,7 @@ body
 
 .logo
     display: block
+    min-width: 80px
     &__img
         max-width: 100%
         height: 100%
@@ -274,6 +276,7 @@ body
             margin-left: 0
             margin-top: 30px
             .button
+                flex-shrink: 0
                 height: 44px
                 width: 44px
         &__whatsapp
@@ -293,6 +296,10 @@ body
     padding: 230px 0px 150px
     position: relative
     overflow: hidden
+    &__wrap
+        display: flex
+        align-items: center
+        justify-content: space-between
     &__title, &__subtitle
         color: #ffffff
         max-width: 600px
@@ -308,11 +315,9 @@ body
         margin-top: 40px
     &__form
         margin-top: 50px
-    &__content
-        flex: 0 0 100%
-    &__aside
-        flex: 0 0 42%
-        transform: translateX(-100%)
+    &__phone
+        display: flex
+        align-items: stretch
     &__body
         max-width: 685px
     &__img
@@ -332,7 +337,7 @@ body
         align-items: stretch
     &__tel
         padding: 0px 15px 0px 25px
-        font-weight: 300
+        font-weight: 400
         color: #000000
         font-size: 18px
         border-radius: 9px
@@ -361,7 +366,7 @@ body
                 padding-left: 10px
                 padding-right: 10px
                 &-text
-                    font-weight: 300
+                    font-weight: 400
                     color: #000000
                     font-size: 18px
             &__item
@@ -441,6 +446,8 @@ body
 
 .deco-item
     position: absolute
+    height: 40px
+    width: 40px
     &::after, &::before
         content: ''
         display: inline-block
@@ -634,7 +641,7 @@ body
     &__title
         font-weight: 700
         font-size: 32px
-        margin-bottom: 20px
+        margin-bottom: 30px
     &__description
         font-size: 18px
         line-height: 30px
@@ -799,7 +806,7 @@ body
 
 .benefit-item
     &__icon
-        margin-bottom: 50px
+        margin-bottom: 60px
         fill: $text-black
         @include transition(fill)
     &__title
@@ -1033,7 +1040,7 @@ body
         margin-bottom: 60px
         display: grid
         grid-template-columns: 1fr
-        row-gap: 20px
+        row-gap: 30px
         column-gap: 20px
     &__input
         display: block
@@ -1197,7 +1204,6 @@ body
         flex-direction: column
         align-items: center
         background-color: #F6F5FF
-        box-shadow: 0 0 20px 5px #F6F5FF
         @include transition(all)
         visibility: hidden
         opacity: 0

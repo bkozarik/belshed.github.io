@@ -96,113 +96,131 @@
     </div>
     <main class="main">
         <section class="hero">
-            <div class="deco-item deco-item_cross"></div>
-            <div class="deco-item deco-item_cross"></div>
-            <div class="deco-item deco-item_cross"></div>
-            <div class="deco-item deco-item_circle"></div>
+            <div class="deco-item deco-item_cross js-parallax" data-speed="4"></div>
+            <div class="deco-item deco-item_cross js-parallax" data-speed="4"></div>
+            <div class="deco-item deco-item_cross js-parallax" data-speed="4"></div>
+            <div class="deco-item deco-item_circle js-parallax" data-speed="4"></div>
             <img class="deco-item deco-item_bubble" loading="lazy" src="./img/bubble.png" alt="Пузырик">
             <img class="deco-item deco-item_bubble" loading="lazy" src="./img/bubble.png" alt="Пузырик">
-            <div class="hero__content">
-                <div class="container">
-                    <div class="hero__body">
-                        <h1 class="hero__title">От стартапов до&nbsp;энтерпрайзов и&nbsp;банковских решений</h1>
-                        <span class="hero__subtitle">Мы создаем высококачественные мобильные <br> и&nbsp;веб-приложения для решения ваших бизнес-задач.</span>
-                        <form class="hero__form">
-                            <div class="hero__code dropdown js-dropdown" data-select-name="user_code" data-trigger-val="html">
-                                <ul class="js-dropdown-select">
-                                    <li data-value="none" hidden><img src="./img/languge-icons/ru.png" alt="Флаг страны">+7</li>
-                                    <li data-value="+7"><img src="./img/languge-icons/ru.png" alt="Флаг страны">+7</li>
-                                    <li data-value="+380"><img src="./img/languge-icons/ua.png" alt="Флаг страны">+380</li>
-                                    <li data-value="+1"><img src="./img/languge-icons/usa.png" alt="Флаг страны">+1</li>
-                                    <li data-value="+4"><img src="./img/languge-icons/by.png" alt="Флаг страны">+4</li>
-                                    <li data-value="+3"><img src="./img/languge-icons/de.png" alt="Флаг страны">+3</li>
-                                </ul>
-                            </div>
-                            <label class="hero__tel-wrap">
-                                <input type="tel" name="user_phone" class="hero__tel js-hero-tel" placeholder="Ваш телефон">
-                            </label>
-                            <button class="button button_red hero__submit">Реализовать мою идею</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-            <div class="hero__aside">
-                <div class="hero__img-wrap">
-                    <div class="hero__data hero__data_col js-mouse-move" data-speed="-0.1">
-                        <img src="./img/hero_data-1.svg" alt="Иконка" class="hero__data-icon">
-                        <div class="hero__data-body">
-                            <span class="hero__data-value js-count-up" data-target="80" data-time="5000" data-format="+-/-%">+80%</span>
-                            <span class="hero__data-text">Увеличение <br> клиентов</span>
+            <div class="container">
+                <div class="hero__wrap">
+                    <div class="hero__content">
+                        <div class="hero__body">
+                            <h1 class="hero__title">От стартапов <br> до энтерпрайзов <br> и банковских решений</h1>
+                            <span class="hero__subtitle">Мы создаем первоклассные мобильные <br> и веб-приложения для решения ваших бизнес-задач.</span>
+                            <form class="hero__form">
+                                <div class="hero__phone">
+                                    <div class="hero__code dropdown js-dropdown" data-select-name="user_code" data-trigger-val="html">
+                                        <ul class="js-dropdown-select">
+                                            <li data-value="none" hidden><img src="./img/languge-icons/ru.png" alt="Флаг страны">+7</li>
+                                            <li data-value="+7"><img src="./img/languge-icons/ru.png" alt="Флаг страны">+7</li>
+                                            <li data-value="+380"><img src="./img/languge-icons/ua.png" alt="Флаг страны">+380</li>
+                                            <li data-value="+1"><img src="./img/languge-icons/usa.png" alt="Флаг страны">+1</li>
+                                            <li data-value="+4"><img src="./img/languge-icons/by.png" alt="Флаг страны">+4</li>
+                                            <li data-value="+3"><img src="./img/languge-icons/de.png" alt="Флаг страны">+3</li>
+                                        </ul>
+                                    </div>
+                                    <label class="hero__tel-wrap">
+                                        <input type="tel" name="user_phone" class="hero__tel js-hero-tel" placeholder="Ваш телефон">
+                                    </label>
+                                </div>
+                                <button class="button button_red hero__submit">Реализовать мою идею</button>
+                            </form>
                         </div>
-                    </div>
-                    <div class="hero__data js-mouse-move" data-speed="0.1">
-                        <img src="./img/hero_data-2.svg" alt="Иконка" class="hero__data-icon">
-                        <div class="hero__data-body">
-                            <span class="hero__data-value js-count-up" data-target="1000000" data-time="20000000" data-format="-/-+">1 000 000+</span>
-                            <span class="hero__data-text">Пользователей вашего <br> приложения</span>
-                        </div>
-                    </div>
-                    <div class="graf js-mouse-move" data-speed="0.02">
-                        <div class="graf__head">
-                            <img src="./img/graf-icon.svg" alt="Иконка" class="graf__icon">
-                            <div class="graf__text">
-                                <span class="graf__title">Рост прибыли компании</span>
-                                <span class="graf__subtitle">Развитие приложения</span>
+                        <div class="hero__data hero__data_col">
+                            <img src="./img/hero_data-1.svg" alt="Иконка" class="hero__data-icon">
+                            <div class="hero__data-body">
+                                <span class="hero__data-value js-count-up" data-target="80" data-time="5000" data-format="+-/-%">+80%</span>
+                                <span class="hero__data-text">Увеличение <br> клиентов</span>
                             </div>
                         </div>
-                        <div class="graf__body">
-                            <svg class="graf__path" width="241" height="138" stroke-dasharray="380" viewBox="0 0 241 138" fill="none">
-                                <path d="M3 136.5C9.83333 122.833 28.6 89.3998 63 80.9998C106 70.4998 139 100.5 168 71.9998C197 43.4998 189 0.499809 240 2.99981" stroke="#FFD02C" stroke-width="5"/>
-                                <animate attributeName="stroke-dashoffset" fill="freeze" dur="10s" values="380;0;" repeatCount="indefinite"/>
-                            </svg>
-                            <div class="graf__cell">
-                                <span class="graf__cell-val">400</span>
+                        <div class="hero__data">
+                            <img src="./img/hero_data-2.svg" alt="Иконка" class="hero__data-icon">
+                            <div class="hero__data-body">
+                                <span class="hero__data-value js-count-up" data-target="1000000" data-time="20000000" data-format="-/-+">1 000 000+</span>
+                                <span class="hero__data-text">Пользователей вашего <br> приложения</span>
                             </div>
-                            <div class="graf__cell">
-                                <span class="graf__cell-val">300</span>
-                            </div>
-                            <div class="graf__cell">
-                                <span class="graf__cell-val">200</span>
-                            </div>
-                            <div class="graf__cell">
-                                <span class="graf__cell-val">100</span>
-                            </div>
-                            <div class="graf__cell"></div>
-                            <div class="graf__cell"></div>
-                            <div class="graf__cell"></div>
-                            <div class="graf__cell"></div>
-                            <div class="graf__cell"></div>
-                            <div class="graf__cell"></div>
-                            <div class="graf__cell"></div>
-                            <div class="graf__cell"></div>
-                            <div class="graf__cell"></div>
-                            <div class="graf__cell"></div>
-                            <div class="graf__cell"></div>
-                            <div class="graf__cell"></div>
-                            <div class="graf__cell"></div>
-                            <div class="graf__cell"></div>
-                            <div class="graf__cell"></div>
-                            <div class="graf__cell"></div>
-                            <div class="graf__cell"></div>
-                            <div class="graf__cell"></div>
-                            <div class="graf__cell"></div>
-                            <div class="graf__cell"></div>
-                            <div class="graf__cell"></div>
-                            <div class="graf__cell"></div>
-                            <div class="graf__cell"></div>
-                            <div class="graf__cell"></div>
-                            <div class="graf__cell"></div>
-                            <div class="graf__cell"></div>
-                            <div class="graf__cell"></div>
-                            <div class="graf__cell"></div>
                         </div>
                     </div>
-                    <img loading="lazy" src="./img/deco-items/deco-triangle.svg" alt="Треугольник" class="hero__deco-triangle js-mouse-move" data-speed="0.3">
-                    <img loading="lazy" src="./img/deco-items/deco-dots.svg" alt="Точки" class="hero__deco-dots js-mouse-move" data-speed="0.1">
-                    <picture>
-                        <source srcset="./img/girl.webp" type="image/webp">
-                        <img loading="lazy" src="./img/girl.png" alt="Фото девушки" class="hero__img">
-                    </picture>
+                    <div class="hero__aside">
+                        <div class="hero__img-wrap">
+                            <div class="hero__data hero__data_col js-mouse-move" data-speed="-0.1">
+                                <img src="./img/hero_data-1.svg" alt="Иконка" class="hero__data-icon">
+                                <div class="hero__data-body">
+                                    <span class="hero__data-value js-count-up" data-target="80" data-time="5000" data-format="+-/-%">+80%</span>
+                                    <span class="hero__data-text">Увеличение <br> клиентов</span>
+                                </div>
+                            </div>
+                            <div class="hero__data js-mouse-move" data-speed="0.1">
+                                <img src="./img/hero_data-2.svg" alt="Иконка" class="hero__data-icon">
+                                <div class="hero__data-body">
+                                    <span class="hero__data-value js-count-up" data-target="1000000" data-time="20000000" data-format="-/-+">1 000 000+</span>
+                                    <span class="hero__data-text">Пользователей вашего <br> приложения</span>
+                                </div>
+                            </div>
+                            <div class="graf js-mouse-move" data-speed="0.02">
+                                <div class="graf__head">
+                                    <img src="./img/graf-icon.svg" alt="Иконка" class="graf__icon">
+                                    <div class="graf__text">
+                                        <span class="graf__title">Рост прибыли компании</span>
+                                        <span class="graf__subtitle">Развитие приложения</span>
+                                    </div>
+                                </div>
+                                <div class="graf__body">
+                                    <svg class="graf__path" width="241" height="138" stroke-dasharray="380" viewBox="0 0 241 138" fill="none">
+                                        <path d="M3 136.5C9.83333 122.833 28.6 89.3998 63 80.9998C106 70.4998 139 100.5 168 71.9998C197 43.4998 189 0.499809 240 2.99981" stroke="#FFD02C" stroke-width="5"/>
+                                        <animate attributeName="stroke-dashoffset" fill="freeze" dur="10s" values="380;0;" repeatCount="indefinite"/>
+                                    </svg>
+                                    <div class="graf__cell">
+                                        <span class="graf__cell-val">400</span>
+                                    </div>
+                                    <div class="graf__cell">
+                                        <span class="graf__cell-val">300</span>
+                                    </div>
+                                    <div class="graf__cell">
+                                        <span class="graf__cell-val">200</span>
+                                    </div>
+                                    <div class="graf__cell">
+                                        <span class="graf__cell-val">100</span>
+                                    </div>
+                                    <div class="graf__cell"></div>
+                                    <div class="graf__cell"></div>
+                                    <div class="graf__cell"></div>
+                                    <div class="graf__cell"></div>
+                                    <div class="graf__cell"></div>
+                                    <div class="graf__cell"></div>
+                                    <div class="graf__cell"></div>
+                                    <div class="graf__cell"></div>
+                                    <div class="graf__cell"></div>
+                                    <div class="graf__cell"></div>
+                                    <div class="graf__cell"></div>
+                                    <div class="graf__cell"></div>
+                                    <div class="graf__cell"></div>
+                                    <div class="graf__cell"></div>
+                                    <div class="graf__cell"></div>
+                                    <div class="graf__cell"></div>
+                                    <div class="graf__cell"></div>
+                                    <div class="graf__cell"></div>
+                                    <div class="graf__cell"></div>
+                                    <div class="graf__cell"></div>
+                                    <div class="graf__cell"></div>
+                                    <div class="graf__cell"></div>
+                                    <div class="graf__cell"></div>
+                                    <div class="graf__cell"></div>
+                                    <div class="graf__cell"></div>
+                                    <div class="graf__cell"></div>
+                                    <div class="graf__cell"></div>
+                                    <div class="graf__cell"></div>
+                                </div>
+                            </div>
+                            <img loading="lazy" src="./img/deco-items/deco-triangle.svg" alt="Треугольник" class="hero__deco-triangle js-mouse-move" data-speed="0.3">
+                            <img loading="lazy" src="./img/deco-items/deco-dots.svg" alt="Точки" class="hero__deco-dots js-mouse-move" data-speed="0.1">
+                            <picture>
+                                <source srcset="./img/girl.webp" type="image/webp">
+                                <img loading="lazy" src="./img/girl.png" alt="Фото девушки" class="hero__img">
+                            </picture>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -360,8 +378,8 @@
                     </article>
                     <article class="project portfolio__item js-portfolio-item">
                         <div class="project__content">
-                            <h3 class="project__title">VR Симулятор</h3>
-                            <p class="project__description js-project-description">Мы разработали VR-решение для иммерсивного образования! Теперь ученики смогут изучить в виртуальном мире, как правильно вести себя в чрезвычайной ситуации</p>
+                            <h3 class="project__title">Zoomr</h3>
+                            <p class="project__description js-project-description">Zoomr – это не простое приложение для знакомств. Загружайте селфи и видеоклипы, чтобы сделать общение более интересным! Доступны только настоящие и активные профили в ленте</p>
                             <ul class="project__platforms">
                                 <li class="project__platform-item">
                                     <img src="./img/android.svg" alt="Иконка" class="project__platform-icon">
@@ -397,7 +415,44 @@
                     </article>
                     <article class="project portfolio__item js-portfolio-item">
                         <div class="project__content">
-                            <h3 class="project__title">VR Симулятор</h3>
+                            <h3 class="project__title">StarShot</h3>
+                            <p class="project__description js-project-description">StarShot – это невероятное приложение, чтобы найти новых друзей, пообщаться с ними в чате и поделиться новыми фотографиями, видео и сториз.</p>
+                            <ul class="project__platforms">
+                                <li class="project__platform-item">
+                                    <img src="./img/android.svg" alt="Иконка" class="project__platform-icon">
+                                </li>
+                                <li class="project__platform-item">
+                                    <img src="./img/apple.svg" alt="Иконка" class="project__platform-icon">
+                                </li>
+                            </ul>
+                            <a href="#" class="project__link">Смотреть кейс</a>
+                        </div>
+                        <div class="project__swiper js-project-swiper">
+                            <div class="project__pagination js-project-swiper-pagination"></div>
+                            <div class="swiper-wrapper">
+                                <div class="project__slide swiper-slide">
+                                        <img class="project__slide-img swiper-lazy" data-srcset="./img/mockup.webp" data-src="./img/mockup.png" alt="Фото в слайлере">
+                                    <div class="swiper-lazy-preloader"></div>
+                                </div>
+                                <div class="project__slide swiper-slide">
+                                        <img class="project__slide-img swiper-lazy" data-srcset="./img/mockup.webp" data-src="./img/mockup.png" alt="Фото в слайлере">
+                                    <div class="swiper-lazy-preloader"></div>
+                                </div>
+                                <div class="project__slide swiper-slide">
+                                        <img class="project__slide-img swiper-lazy" data-srcset="./img/mockup.webp" data-src="./img/mockup.png" alt="Фото в слайлере">
+                                    <div class="swiper-lazy-preloader"></div>
+                                </div>
+                            </div>
+                            <img src="./img/project-logo.png" alt="Лого проекта" class="project__logo">
+                            <div class="project__data">
+                                <h3 class="project__data-title">Лекторий "Прямая речь"</h3>
+                                <p class="project__data-description">Признанный лидер в области интеллектуального досуга</p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="project portfolio__item js-portfolio-item">
+                        <div class="project__content">
+                            <h3 class="project__title">Прямая речь</h3>
                             <p class="project__description js-project-description">Мы разработали VR-решение для иммерсивного образования! Теперь ученики смогут изучить в виртуальном мире, как правильно вести себя в чрезвычайной ситуации</p>
                             <ul class="project__platforms">
                                 <li class="project__platform-item">
@@ -427,9 +482,7 @@
                     </article>
                 </div>
                 <div class="button-holder">
-                    <a href="#" class="button button_purple">
-                        Еще работы
-                    </a>
+                    <a href="#" class="button button_purple">Еще работы</a>
                 </div>
             </div>
         </div>
