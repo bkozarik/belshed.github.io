@@ -1,0 +1,325 @@
+@media screen and ( max-width: 1440px )
+    .hero
+        &__body
+            max-width: 620px
+
+    .project
+        &__logo
+            right: 30px
+
+@media screen and ( max-width: 1200px )
+    .service-item
+        padding: 30px
+        picture
+            display: initial
+            position: static
+        &__img
+            max-width: 120%
+
+@media screen and ( max-width: 1120px )
+    .service-item
+        justify-content: space-between
+        &__media
+            min-width: 350px
+            min-height: 350px
+        &__content
+            max-width: 470px
+        &__tags
+            grid-template-columns: repeat(3, min-content)
+
+@media screen and ( max-width: 970px )
+    .footer
+        padding: 25px 0px 40px
+        &__wrap
+            flex-direction: column
+            .nav
+                max-width: none
+                margin-bottom: 25px
+        &__socials
+            margin-bottom: 25px
+            max-width: 300px
+            width: 100%
+            justify-content: space-between
+
+    .service-item
+        &__title
+            font-size: 38px
+            line-height: 45px
+        &__tag
+            font-size: 16px
+        &__description
+            font-size: 16px
+
+    .project
+        &__logo
+            max-height: 50px
+
+@media screen and ( max-width: 920px )
+    .header
+        .header
+            &__buttons
+            &__whatsapp
+                font-size: 0
+                width: auto
+                img, svg
+                    margin-right: 0
+
+    .articles
+        &__item
+            &-wrap
+                height: 250px
+                margin-bottom: 20px
+            &-title
+                font-size: 16px
+                line-height: 22px
+
+    .form
+        padding: 45px 60px 80px
+        &__manager
+            max-width: 200px
+        &__img
+            height: 200px
+        &__name
+            font-size: 22px
+            line-height: 30px
+        &__position
+            font-size: 18px
+            line-height: 24px
+        &__link
+            font-size: 16px
+            font-weight: 500
+            line-height: 25px
+        &__links-item
+            & + &
+                margin-top: 0
+        &__fields
+            margin-bottom: 40px
+        &__body
+            margin-left: 45px
+        &__agreement
+            font-size: 14px
+            line-height: 20px
+            margin-left: 20px
+
+    .section-title
+        font-size: 38px
+        line-height: 42px
+
+    .service-item
+        &__content
+            max-width: 690px
+        &__media
+            max-width: 350px
+            margin-left: 0
+            margin-bottom: 30px
+            margin-top: 30px
+
+@media screen and ( max-width: 770px )
+    .form
+        padding: 25px 40px 60px
+        &__body
+            margin-left: 25px
+        &__agreement
+            font-size: 12px
+            line-height: 18px
+            margin-left: 15px
+
+    .project
+        & + &
+            margin-top: 50px
+        &__link
+            margin-top: 15px
+        &__logo
+            right: 20px
+        &__content
+            max-width: none
+        &__pagination
+            left: 20px
+            width: calc( 100% - 40px)
+            &-item
+                & + &
+                    margin-left: 5px
+        &__description
+            font-size: 16px
+            line-height: 26px
+        &__data
+            bottom: 30px
+            left: 20px
+        &__swiper
+            margin-left: 0
+            margin-bottom: 20px
+
+    .articles
+        &__item
+            &-wrap
+                height: 200px
+
+@media screen and ( max-width: 740px )
+    .section-title
+        font-size: 32px
+        line-height: 38px
+
+    .burger
+        display: inline-block
+
+    .header
+        &__wrap
+            padding: 25px 0px 0px
+        .header
+            &__buttons
+                display: none
+        .nav
+            display: none
+        &.fixed
+            .header
+                &__wrap
+                    padding: 10px 0px
+
+    .benefits
+        &__container
+            justify-items: center
+            row-gap: 40px
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr))
+
+    .benefit-item
+        display: flex
+        flex-direction: column
+        align-items: center
+        &__icon
+            height: 50px
+            width: 50px
+            margin-bottom: 10px
+        &__title
+            text-align: center
+            font-size: 16px
+            max-width: 250px
+
+    .form
+        &__body
+            margin-left: 0px
+            margin-bottom: 35px
+        &__wrap
+            margin-top: 40px
+            flex-direction: column-reverse
+        &__button
+            min-width: 200px
+        &__input
+            padding: 10px 0px
+            font-size: 16px
+        &__block
+            &:first-of-type
+                flex-shrink: 0
+            & + &
+                margin-left: 15px
+        &__img
+            width: 200px
+        &__manager
+            width: 100%
+            max-width: none
+            align-items: flex-start
+            justify-content: flex-start
+            flex-direction: row
+
+@media screen and ( max-width: 660px )
+    
+    .articles
+        &__item
+            &-wrap
+                height: 250px
+
+@media screen and ( max-width: 530px )
+    .footer
+        &__socials
+            margin-bottom: 30px
+        .nav
+            margin-bottom: 30px
+            &__list
+                display: grid
+                grid-template-columns: repeat(3, 1fr)
+                justify-items: center
+                row-gap: 20px
+                column-gap: 20px
+
+    .articles
+        &__item
+            &-wrap
+                height: 220px
+
+    .popup
+        &__text
+            font-size: 18px
+        &__body
+            padding: 50px 20px 40px
+            .section-title
+                font-size: 28px
+                line-height: 38px
+
+    .service-item
+        &__tags
+            grid-template-columns: repeat(2, min-content)
+
+@media screen and ( max-width: 490px )
+    .section-title
+        font-size: 24px
+        line-height: 30px
+
+    .service-item
+        &__title
+            font-size: 32px
+            line-height: 38px
+
+    .form
+        &__wrap
+            margin-top: 30px
+        &__agreement
+            width: 100%
+            text-align: center
+            margin-top: 10px
+        &__img
+            width: 170px
+            height: 170px
+        &__name
+            font-size: 18px
+            line-height: 24px
+            margin-bottom: 10px
+        &__position
+            font-size: 14px
+            line-height: 20px
+        &__bottom
+            flex-direction: column
+
+    .articles
+        &__control svg
+            height: 21px
+
+@media screen and ( max-width: 465px )
+    .form
+        padding: 30px 20px 40px
+        &__manager
+            flex-direction: column
+            align-items: center
+        &__name, &__position, &__link
+            width: 100%
+            text-align: center
+    
+    .popup
+        &__body
+            padding: 50px 20px 40px
+            .section-title
+                font-size: 22px
+                line-height: 30px
+
+    .service-item
+        padding: 20px
+        &__media
+            min-height: auto
+            min-width: auto
+            height: 100%
+            padding-bottom: 100%
+        &__tag
+            padding: 10px 20px
+
+    .articles
+        &__item
+            &-wrap
+                height: 260px

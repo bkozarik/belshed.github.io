@@ -2,6 +2,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const header = document.querySelector('.header');
     const dropdownItems = document.querySelectorAll('.js-dropdown');
 
+    const burger = document.querySelector('.js-burger');
+    const menu = document.querySelector('.js-menu');
+
     const mouseMoveElements = document.querySelectorAll('.js-mouse-move');
     const parallaxElements = document.querySelectorAll('.js-parallax');
 
@@ -9,6 +12,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const mainForm = document.querySelector('.js-main-form');
     const popupForm = document.querySelector('.js-popup-form');
     const telInputs = document.querySelectorAll('input[type="tel"]');
+
+    const portfolioItems = document.querySelectorAll('.js-portfolio-item');
+    const serviceItems = document.querySelectorAll('.js-service-item');
 
     const popupTriggers = document.querySelectorAll('.js-toggle-popup');
     const popupCloseTriggers = document.querySelectorAll('.js-popup-close');
@@ -19,10 +25,33 @@ document.addEventListener('DOMContentLoaded', () => {
         const logosSwiper = document.querySelector('.js-logos-swiper');
 
         let logosSwiperObj = new Swiper(logosSwiper, {
-            slidesPerView: 8,
+            spaceBetween: 20,
             freeMode: true,
             loop: true,
             grabCursor: true,
+            breakpoints: {
+                1510: {
+                    slidesPerView: 8,
+                },
+                1310: {
+                    slidesPerView: 7,
+                },
+                1110: {
+                    slidesPerView: 6,
+                },
+                880: {
+                    slidesPerView: 5,
+                },
+                590: {
+                    slidesPerView: 4,
+                },
+                490: {
+                    slidesPerView: 3,
+                },
+                300: {
+                    slidesPerView: 2,
+                },
+            }
         });
 
         logosSwiper_swiper = logosSwiper.swiper;
@@ -131,6 +160,46 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    const resizeHandler = () => {
+        if(window.innerWidth <= 920){
+            serviceItems.forEach(item => {
+                const content = item.querySelector('.service-item__content');
+                const description = item.querySelector('.service-item__description');
+                const media = item.querySelector('.service-item__media');
+
+                content.insertBefore(media, description);
+            });
+        }
+        else{
+            serviceItems.forEach(item => {
+                const media = item.querySelector('.service-item__media');
+
+                item.appendChild(media);
+            });
+        }
+
+        if(window.innerWidth <= 770){
+            portfolioItems.forEach(item => {
+                const content = item.querySelector('.project__content');
+                const description = item.querySelector('.js-project-description');
+                const swiper = item.querySelector('.js-project-swiper');
+
+                content.insertBefore(swiper, description);
+            });
+        }
+        else{
+            portfolioItems.forEach(item => {
+                const swiper = item.querySelector('.js-project-swiper');
+
+                item.appendChild(swiper);
+            });
+        }
+
+        if(window.innerWidth > 740) {
+            toggleMenu(false);
+        }
+    }
+
     const countUp = () => {
         document.querySelectorAll('.js-count-up').forEach(item => {
 
@@ -154,6 +223,19 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    const toggleMenu = (state = null) => {
+        if(state == null){
+            return () => {
+                burger.classList.toggle('active');
+                menu.classList.toggle('active');
+            }
+        }
+        else{
+            state ? burger.classList.add('active') : burger.classList.remove('active');
+            state ? menu.classList.add('active') : menu.classList.remove('active');
+        }
+    }
+
     const parallax = () => {
         parallaxElements.forEach(element => {
             let itemYCoord = element.getBoundingClientRect().y * 100;
@@ -173,14 +255,13 @@ document.addEventListener('DOMContentLoaded', () => {
         window.pageYOffset > 60 ? header.classList.add('fixed') : header.classList.remove('fixed');
 
         parallax();
-        
+
         logosSwiper_swiper.setTranslate(-1 * window.pageYOffset * 0.5);
     }
 
     const articlesSwiperInit = () => {
 
         const articlesSwiper = new Swiper('.js-articles-swiper', {
-            slidesPerView: 'auto',
             spaceBetween: 30,
             lazy: {
                 loadPrevNext: true,
@@ -190,6 +271,20 @@ document.addEventListener('DOMContentLoaded', () => {
             navigation: {
                 prevEl: '.articles__control_prev',
                 nextEl: '.articles__control_next',
+            },
+            breakpoints: {
+                1210: {
+                    slidesPerView: 'auto',
+                },
+                660: {
+                    slidesPerView: 3,
+                },
+                465: {
+                    slidesPerView: 2,
+                },
+                300: {
+                    slidesPerView: 1,
+                },
             }
         });
     }
@@ -234,10 +329,16 @@ document.addEventListener('DOMContentLoaded', () => {
             input.addEventListener("focus", mask, false);
             input.addEventListener("blur", mask, false);
         });
+
+        const herTelInput = document.querySelector('.js-hero-tel');
+
+        herTelInput.addEventListener('change', () => checkInputState(event.target));
+        herTelInput.addEventListener('input', () => checkInputState(event.target));
+        herTelInput.addEventListener('blur', () => checkInputState(event.target));
     }
 
     const portfolioSwipersInit = () => {
-        document.querySelectorAll('.js-portfolio-item').forEach((item, index) => {
+        portfolioItems.forEach((item, index) => {
 
             const portfolioSlides = item.querySelectorAll('.swiper-slide');
 
@@ -449,6 +550,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     const openPopup = target => {
+        toggleMenu(false);
+
         const targetPopup = document.querySelector(target);
 
         targetPopup.classList.add('active');
@@ -460,21 +563,29 @@ document.addEventListener('DOMContentLoaded', () => {
         popups.forEach(popup => popup.classList.remove('active'));
     }
 
+    const animationInit = () => {
+        AOS.init();
+    }
+
     window.addEventListener('scroll', scrollHandler);
+    window.addEventListener('resize', resizeHandler);
     document.addEventListener('mousemove', mousemoveHandler);
 
     forms.forEach(form => form.addEventListener('submit', formSubmitHandler));
+
     popupTriggers.forEach(trigger => trigger.addEventListener('click', () => openPopup(trigger.dataset.target)));
     popupCloseTriggers.forEach(trigger => trigger.addEventListener('click', event => {
         if(event.target.classList.contains('js-popup-close')) popups.forEach(popup => popup.classList.remove('active'));
     }));
 
-    document.querySelector('.js-hero-tel').addEventListener('change', () => checkInputState(event.target));
-    document.querySelector('.js-hero-tel').addEventListener('input', () => checkInputState(event.target));
-    document.querySelector('.js-hero-tel').addEventListener('blur', () => checkInputState(event.target));
+    openPopup('.js-popup-main')
+
+    burger.addEventListener('click', toggleMenu());
 
     countUp();
     maskInit();
+    animationInit();
+    resizeHandler();
     logosSwiperInit();
     scrollHandler();
     mousemoveHandler();

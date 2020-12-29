@@ -6,8 +6,10 @@ $text-black: #121B30
 
 $err-red: #ff4848
 
+$transition-duration: .25s
+
 @mixin transition($prop)
-    transition: $prop .3s ease-in-out 0s
+    transition: $prop $transition-duration ease-in-out 0s
 
 *, *::before, *::after
     margin: 0
@@ -115,8 +117,11 @@ body
         justify-content: space-between
         @include transition(padding)
     &__buttons
+        margin-left: 20px
         display: flex
         align-items: stretch
+        .button
+            flex-shrink: 0
     &__whatsapp
         font-size: 17px
         padding: 10px
@@ -201,6 +206,84 @@ body
             @include transition(transform)
         &:hover::before
             transform: scaleX(1)
+
+.burger
+    width: 43px
+    height: 43px
+    flex-shrink: 0
+    display: none
+    &:hover
+        background-color: $main-red
+    span, &::before, &::after
+        content: ''
+        display: inline-block
+        width: 25px
+        height: 2px
+        background-color: #ffffff
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        transition:  top $transition-duration ease-in-out $transition-duration, transform $transition-duration ease-in-out 0s, opacity .1s ease-in-out $transition-duration
+    &::before
+        top: calc( 9px + 50% )
+    &::after
+        top: calc( -9px + 50% )
+    span
+        transform: translate(-50%, -50%)
+    &.active
+        span, &::before, &::after
+            transform: translate(-50%, -50%)
+            top: 50%
+            transition:  top $transition-duration ease-in-out 0s, transform $transition-duration ease-in-out $transition-duration, opacity $transition-duration ease-in-out .1s
+        span
+            opacity: 0
+        &::before
+            transform: translate(-50%, -50%) rotate(45deg)
+        &::after
+            transform: translate(-50%, -50%) rotate(-45deg)
+
+.menu
+    position: fixed
+    z-index: 9
+    width: 100%
+    height: 100%
+    backdrop-filter: blur(10px)
+    background-color: rgba(76, 29, 210, 0.8)
+    visibility: hidden
+    overflow-y: auto
+    left: 0
+    top: 0
+    transform: translate(0, -100%)
+    @include transition(all)
+    padding: 80px 15px 15px
+    .service-item__button
+        margin-top: 20px
+    .nav__item + .nav__item 
+        margin-top: 10px
+    .nav
+        &__list
+            align-items: flex-start
+            flex-direction: column
+        &__link
+            font-weight: 500
+            font-size: 18px
+            padding: 5px 0px
+    .header
+        &__buttons
+            margin-left: 0
+            margin-top: 30px
+            .button
+                height: 44px
+                width: 44px
+        &__whatsapp
+            font-size: 0
+            width: auto
+            svg, img
+                margin-right: 0
+    &.active
+        visibility: visible
+        transform: translate(0, 0%)
 
 .hero
     background-color: $main-purple
@@ -529,10 +612,11 @@ body
     margin: 50px 0px 40px
     .swiper-wrapper
         align-items: center
-        // transition: all .2s linear 0s !important
     &__item
         display: flex
         justify-content: center
+    &__img
+        max-width: 100%
 
 .portfolio
     margin-bottom: 100px
@@ -564,7 +648,9 @@ body
         position: absolute
         top: 50px
         right: 50px
+        max-height: 70px
         z-index: 3
+        width: auto
     &__platform
         &-item
             display: flex
@@ -604,9 +690,11 @@ body
         &:hover::after
             transform: scaleX(0.5)
     &__swiper
+        margin-left: 20px
         flex-basis: 50%
-        min-height: 370px
+        min-height: 340px
         width: 100%
+        flex-shrink: 0
         overflow: hidden
         border-radius: 21px
         background-color: peachpuff
@@ -628,6 +716,8 @@ body
         &-img
             max-width: 100%
             width: 100%
+            height: 100%
+            object-fit: cover
             position: absolute
             bottom: 0
             right: 0
@@ -705,7 +795,6 @@ body
         display: grid
         column-gap: 25px
         row-gap: 25px
-        justify-items: center
         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr))
 
 .benefit-item
@@ -765,12 +854,18 @@ body
         position: relative
         z-index: 3
     &__media
+        margin-left: 40px
         position: relative
         background-color: #fff
         padding-right: 40%
         padding-bottom: 40%
         border-radius: 50%
         flex-shrink: 0
+        picture
+            display: block
+            position: absolute
+            top: 50%
+            left: 50%
     &__img
         position: absolute
         top: 50%
@@ -873,17 +968,19 @@ body
         flex-shrink: 0
         display: flex
         flex-direction: column
-        align-items: flex-start
-        justify-content: flex-start
+        align-items: stretch
+        justify-content: space-between
         max-width: 230px
     &__img
         color: #ffffff
         border-radius: 15px
         overflow: hidden
         width: auto
+        object-fit: cover
         max-width: 100%
         height: 210px
         margin-bottom: 20px
+        flex-shrink: 0
     &__name
         font-weight: 700
         color: #ffffff
@@ -896,6 +993,10 @@ body
         line-height: 26px
         font-weight: 300
         margin-bottom: 20px
+        display: inline-block
+    &__block
+        display: flex
+        flex-direction: column
     &__links
         list-style-type: none
         margin-top: auto
@@ -905,6 +1006,7 @@ body
     &__link
         display: inline-block
         padding-bottom: 2px
+        white-space: nowrap
         position: relative
         font-weight: 700
         color: #ffffff
@@ -941,7 +1043,7 @@ body
         background-color: transparent
         border: none
         border-bottom: 1px solid #585C65
-        padding: 15px 0px 15px
+        padding: 15px 0px
         color: #ffffff
         &:-webkit-autofill
             -webkit-box-shadow: inset 0 0 0 50px $text-black !important
@@ -1041,6 +1143,7 @@ body
 
 .popup
     position: fixed
+    padding: 10px
     top: 0
     left: 0
     width: 100%

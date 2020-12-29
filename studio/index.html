@@ -51,9 +51,49 @@
                         </ul>
                     </div>
                 </div>
+                <button class="button button_purple burger js-burger"><span></span></button>
             </div>
         </div>
     </header>
+    <div class="menu js-menu">
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a href="#" class="nav__link">Услуги</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#" class="nav__link">Клиенты</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#" class="nav__link">Кейсы</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#" class="nav__link">Отзывы</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#" class="nav__link">Блог</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#" class="nav__link">Контакты</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="header__buttons">
+            <a href="#" class="button button_purple header__whatsapp" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <path d="m256 0c-140.609375 0-256 115.390625-256 256 0 46.40625 12.511719 91.582031 36.238281 131.105469l-36.238281 124.894531 124.894531-36.238281c39.523438 23.726562 84.699219 36.238281 131.105469 36.238281 140.609375 0 256-115.390625 256-256s-115.390625-256-256-256zm160.054688 364.167969-11.910157 11.910156c-16.851562 16.851563-55.605469 15.515625-80.507812 10.707031-82.800781-15.992187-179.335938-109.5625-197.953125-190.59375-9.21875-40.140625-4.128906-75.039062 9.183594-88.355468l11.910156-11.910157c6.574218-6.570312 17.253906-6.5625 23.820312 0l47.648438 47.652344c3.179687 3.179687 4.921875 7.394531 4.921875 11.90625s-1.742188 8.730469-4.921875 11.898437l-11.90625 11.921876c-13.125 13.15625-13.125 34.527343 0 47.652343l78.683594 77.648438c13.164062 13.164062 34.46875 13.179687 47.652343 0l11.910157-11.90625c6.148437-6.183594 17.632812-6.203125 23.832031 0l47.636719 47.636719c6.46875 6.441406 6.714843 17.113281 0 23.832031zm0 0"/>
+                </svg>
+                Whatsapp</a>
+            <div class="language dropdown js-dropdown" data-trigger-val="text">
+                <ul class="js-dropdown-select">
+                    <li data-value="none" hidden><a href="#">Ru</a></li>
+                    <li data-value="Ru"><a href="#">Ru</a></li>
+                    <li data-value="En"><a href="#">En</a></li>
+                </ul>
+            </div>
+        </div>
+        <button class="button button_red service-item__button js-toggle-popup" data-target=".js-popup-main">Получить оценку</button>
+    </div>
     <main class="main">
         <section class="hero">
             <div class="deco-item deco-item_cross"></div>
@@ -224,7 +264,7 @@
                     <article class="project portfolio__item js-portfolio-item">
                         <div class="project__content">
                             <h3 class="project__title">VR Симулятор</h3>
-                            <p class="project__description">Мы разработали VR-решение для иммерсивного образования! Теперь ученики смогут изучить в виртуальном мире, как правильно вести себя в чрезвычайной ситуации</p>
+                            <p class="project__description js-project-description">Мы разработали VR-решение для иммерсивного образования! Теперь ученики смогут изучить в виртуальном мире, как правильно вести себя в чрезвычайной ситуации</p>
                             <ul class="project__platforms">
                                 <li class="project__platform-item">
                                     <img src="./img/android.svg" alt="Иконка" class="project__platform-icon">
@@ -321,7 +361,7 @@
                     <article class="project portfolio__item js-portfolio-item">
                         <div class="project__content">
                             <h3 class="project__title">VR Симулятор</h3>
-                            <p class="project__description">Мы разработали VR-решение для иммерсивного образования! Теперь ученики смогут изучить в виртуальном мире, как правильно вести себя в чрезвычайной ситуации</p>
+                            <p class="project__description js-project-description">Мы разработали VR-решение для иммерсивного образования! Теперь ученики смогут изучить в виртуальном мире, как правильно вести себя в чрезвычайной ситуации</p>
                             <ul class="project__platforms">
                                 <li class="project__platform-item">
                                     <img src="./img/android.svg" alt="Иконка" class="project__platform-icon">
@@ -358,7 +398,7 @@
                     <article class="project portfolio__item js-portfolio-item">
                         <div class="project__content">
                             <h3 class="project__title">VR Симулятор</h3>
-                            <p class="project__description">Мы разработали VR-решение для иммерсивного образования! Теперь ученики смогут изучить в виртуальном мире, как правильно вести себя в чрезвычайной ситуации</p>
+                            <p class="project__description js-project-description">Мы разработали VR-решение для иммерсивного образования! Теперь ученики смогут изучить в виртуальном мире, как правильно вести себя в чрезвычайной ситуации</p>
                             <ul class="project__platforms">
                                 <li class="project__platform-item">
                                     <img src="./img/android.svg" alt="Иконка" class="project__platform-icon">
@@ -387,9 +427,9 @@
                     </article>
                 </div>
                 <div class="button-holder">
-                    <button class="button button_purple">
+                    <a href="#" class="button button_purple">
                         Еще работы
-                    </button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -426,7 +466,7 @@
         </section>
         <div class="services">
             <div class="container">
-                <article class="service-item">
+                <article class="service-item js-service-item">
                     <div class="service-item__content">
                         <h3 class="service-item__title">Мобильная разработка</h3>
                         <ul class="service-item__tags">
@@ -438,13 +478,13 @@
                         <button class="button button_red service-item__button js-toggle-popup" data-target=".js-popup-main">Получить оценку</button>
                     </div>
                     <div class="service-item__media">
-                        <picture>
+                        <picture data-aos-duration="1000" data-aos="fade-left" data-aos-once="true">
                             <source srcset="./img/service-1.webp" type="image/webp">
                             <img loading="lazy" src="./img/service-1.png" alt="Картинка" class="service-item__img js-mouse-move" data-center="true" data-speed="0.025">
                         </picture>
                     </div>
                 </article>
-                <article class="service-item">
+                <article class="service-item js-service-item">
                     <div class="service-item__content">
                         <h3 class="service-item__title">Web разработка</h3>
                         <ul class="service-item__tags">
@@ -457,7 +497,7 @@
                         <button class="button button_red service-item__button js-toggle-popup" data-target=".js-popup-main">Получить оценку</button>
                     </div>
                     <div class="service-item__media">
-                        <picture>
+                        <picture data-aos-duration="1000" data-aos="fade-left" data-aos-once="true">
                             <source srcset="./img/service-2.webp" type="image/webp">
                             <img loading="lazy" src="./img/service-2.png" alt="Картинка" class="service-item__img js-mouse-move" data-center="true" data-speed="-0.02">
                         </picture>
@@ -537,17 +577,21 @@
                         <h2 class="section-title section-title_tac section-title_white">Давайте вместе создадим крутой проект!</h2>
                         <div class="form__wrap">
                             <div class="form__manager">
-                                <img loading="lazy" src="./img/manager.png" alt="Фото менеджера" class="form__img">
-                                <span class="form__name">Александр Михайлов</span>
-                                <span class="form__position">Специалист по продажам</span>
-                                <ul class="form__links">
-                                    <li class="form__links-item">
-                                        <a href="tel:88002508478" class="form__link">8 (800) 250-84-78</a>
-                                    </li>
-                                    <li class="form__links-item">
-                                        <a href="mailto:hello@mail.ru" class="form__link">hello@mail.ru</a>
-                                    </li>
-                                </ul>
+                                <div class="form__block">
+                                    <img loading="lazy" src="./img/manager.png" alt="Фото менеджера" class="form__img">
+                                </div>
+                                <div class="form__block">
+                                    <span class="form__name">Александр Михайлов</span>
+                                    <span class="form__position">Специалист по продажам</span>
+                                    <ul class="form__links">
+                                        <li class="form__links-item">
+                                            <a href="tel:88002508478" class="form__link">8 (800) 250-84-78</a>
+                                        </li>
+                                        <li class="form__links-item">
+                                            <a href="mailto:hello@mail.ru" class="form__link">hello@mail.ru</a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                             <div class="form__body">
                                 <div class="form__fields">
@@ -691,6 +735,7 @@
             </form>
         </div>
     </div>
+    <script src="./js/aos.js"></script>
     <script src="./js/swiper-bundle.min.js"></script>
 </body>
 </html>
