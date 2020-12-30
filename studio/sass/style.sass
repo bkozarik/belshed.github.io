@@ -446,8 +446,9 @@ body
 
 .deco-item
     position: absolute
-    height: 40px
-    width: 40px
+    &:not(&_bubble)
+        height: 40px
+        width: 40px
     &::after, &::before
         content: ''
         display: inline-block
@@ -458,13 +459,13 @@ body
         transform: translate(-50%, -50%)
     &_bubble
         z-index: 0
-        filter: blur(27px)
-        opacity: .4
+        filter: blur(32px)
+        opacity: .9
         animation: bubbles-move 25s linear infinite
         &:nth-of-type(2)
+            animation: bubbles-move 35s linear infinite
             left: 940px
             top: 220px
-            animation-delay: 2s
     &_circle
         z-index: 1
         left: 980px

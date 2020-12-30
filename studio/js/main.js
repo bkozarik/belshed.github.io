@@ -486,7 +486,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const formSubmitHandler = async () => {
         event.preventDefault();
 
-        const url = '';
+        const url = './php/ajax-mail.php';
         const targetForm = event.target;
 
         targetForm.querySelectorAll('input').forEach(input => {
@@ -503,30 +503,32 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const formData = new FormData(targetForm);
 
-        // await fetch(url, {
-        //     method: 'POST',
-        //     body: formData,
-        // })
-        // .then(response => if(response.ok) response.json())
-        // .then(response => {
-        //     closePopup();   
-        //     if(response.status == 1){
-        //         openPopup('.js-popup-thx');
-        //     }
-        //     else{
-        //         openPopup('.js-popup-err');
-        //     }
-        // })
-        // .catch(response => {
-        //     console.log(response);
-        // });
+        if(targetForm.classList.contains('hero__form')){
+            formData.set('user_phone', `${formData.get('user_code')} ${formData.get('user_phone')}`);
+        }
+
+        await fetch(url, {
+            method: 'POST',
+            body: formData,
+        })
+        .then(response => {if(response.ok) return response.json()})
+        .then(response => {
+            closePopup();
+            
+            if(response.status == true){
+                openPopup('.js-popup-thx');
+            }
+            else{
+                openPopup('.js-popup-err');
+            }
+            setTimeout(closePopup, 2500);
+        })
+        .catch(response => {
+            console.log(response);
+        });
 
         targetForm.reset();
         targetForm.querySelectorAll('input').forEach(input => checkInputState(input));
-
-        closePopup();
-        openPopup('.js-popup-thx');
-        setTimeout(closePopup, 1500);
     }
 
     const checkInputState = (input) => {

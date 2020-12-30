@@ -96,10 +96,10 @@
     </div>
     <main class="main">
         <section class="hero">
-            <div class="deco-item deco-item_cross js-parallax" data-speed="4"></div>
-            <div class="deco-item deco-item_cross js-parallax" data-speed="4"></div>
-            <div class="deco-item deco-item_cross js-parallax" data-speed="4"></div>
-            <div class="deco-item deco-item_circle js-parallax" data-speed="4"></div>
+            <div class="deco-item deco-item_cross js-mouse-move" data-speed="0.2"></div>
+            <div class="deco-item deco-item_cross js-mouse-move" data-speed="0.3"></div>
+            <div class="deco-item deco-item_cross js-mouse-move" data-speed="0.4"></div>
+            <div class="deco-item deco-item_circle js-mouse-move" data-speed="-0.2"></div>
             <img class="deco-item deco-item_bubble" loading="lazy" src="./img/bubble.png" alt="Пузырик">
             <img class="deco-item deco-item_bubble" loading="lazy" src="./img/bubble.png" alt="Пузырик">
             <div class="container">
@@ -121,7 +121,7 @@
                                         </ul>
                                     </div>
                                     <label class="hero__tel-wrap">
-                                        <input type="tel" name="user_phone" class="hero__tel js-hero-tel" placeholder="Ваш телефон">
+                                        <input type="tel" name="user_phone" autocomplete="off" class="hero__tel js-hero-tel" placeholder="Ваш телефон">
                                     </label>
                                 </div>
                                 <button class="button button_red hero__submit">Реализовать мою идею</button>
@@ -144,21 +144,21 @@
                     </div>
                     <div class="hero__aside">
                         <div class="hero__img-wrap">
-                            <div class="hero__data hero__data_col js-mouse-move" data-speed="-0.1">
+                            <div class="hero__data hero__data_col">
                                 <img src="./img/hero_data-1.svg" alt="Иконка" class="hero__data-icon">
                                 <div class="hero__data-body">
                                     <span class="hero__data-value js-count-up" data-target="80" data-time="5000" data-format="+-/-%">+80%</span>
                                     <span class="hero__data-text">Увеличение <br> клиентов</span>
                                 </div>
                             </div>
-                            <div class="hero__data js-mouse-move" data-speed="0.1">
+                            <div class="hero__data">
                                 <img src="./img/hero_data-2.svg" alt="Иконка" class="hero__data-icon">
                                 <div class="hero__data-body">
                                     <span class="hero__data-value js-count-up" data-target="1000000" data-time="20000000" data-format="-/-+">1 000 000+</span>
                                     <span class="hero__data-text">Пользователей вашего <br> приложения</span>
                                 </div>
                             </div>
-                            <div class="graf js-mouse-move" data-speed="0.02">
+                            <div class="graf">
                                 <div class="graf__head">
                                     <img src="./img/graf-icon.svg" alt="Иконка" class="graf__icon">
                                     <div class="graf__text">
@@ -214,7 +214,7 @@
                                 </div>
                             </div>
                             <img loading="lazy" src="./img/deco-items/deco-triangle.svg" alt="Треугольник" class="hero__deco-triangle js-mouse-move" data-speed="0.3">
-                            <img loading="lazy" src="./img/deco-items/deco-dots.svg" alt="Точки" class="hero__deco-dots js-mouse-move" data-speed="0.1">
+                            <img loading="lazy" src="./img/deco-items/deco-dots.svg" alt="Точки" class="hero__deco-dots js-mouse-move" data-speed="0.05">
                             <picture>
                                 <source srcset="./img/girl.webp" type="image/webp">
                                 <img loading="lazy" src="./img/girl.png" alt="Фото девушки" class="hero__img">
@@ -772,20 +772,9 @@
     <div class="popup js-popup js-popup-err js-popup-close">
         <div class="popup__body">
             <button class="button popup__close js-popup-close"></button>
-            <h2 class="section-title section-title_tac">Оставьте заявку и мы оценим ваш проект</h2>
-            <form class="popup__form js-popup-form">
-                <label class="form__input-wrap">
-                    <input type="text" class="form__input" name="user_name" placeholder="Ваше имя">
-                </label>
-                <label class="form__input-wrap">
-                    <input type="email" class="form__input" name="user_mail" placeholder="E-mail">
-                </label>
-                <label class="form__input-wrap">
-                    <input type="text" class="form__input" name="user_project" placeholder="Пара слов о проекте">
-                </label>
-                <button class="button button_red form__button">Отправить</button>
-                <small class="form__agreement">Нажимая на кнопку, вы соглашаетесь c политикой конфиденциальности</small>
-            </form>
+            <h2 class="section-title section-title_tac">Извините, у нас произошла ошибка!</h2>
+            <p class="popup__text">Попробуйте немного позже.</p>
+            <button class="button button_red form__button form__button_close js-popup-close">Закрыть</button>
         </div>
     </div>
     <script src="./js/aos.js"></script>
