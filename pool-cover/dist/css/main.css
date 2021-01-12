@@ -1082,6 +1082,21 @@ section {
   }
 }
 
+@font-face {
+  font-family: 'Proxima Nova';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/PROXIMANOVACOND-REGULAR.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 700;
+  src: url(../fonts/PROXIMANOVA-BOLD.woff2) format("woff2");
+}
 
 .footer {
   padding: 55px 0px 0px;
