@@ -300,6 +300,7 @@
   display: flex;
   align-items: center;
   list-style-type: none;
+  flex-wrap: wrap;
 }
 
 .breadcrumbs__item + .breadcrumbs__item {
