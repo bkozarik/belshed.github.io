@@ -1460,11 +1460,11 @@ section {
 }
 
 .form__input-wrap_mail::after {
-  background-image: url(../img/phone-call_2.svg);
+  background-image: url(../img/email.svg);
 }
 
 .form__input-wrap_addr::after {
-  background-image: url(../img/phone-call_2.svg);
+  background-image: url(../img/adr.svg);
 }
 
 .form__input:focus {
