@@ -23,6 +23,7 @@ const compileStyles = () => {
             .pipe(gulpConcat('main.css'))
         .pipe(sourcemaps.write('./'))
         .pipe(dest('dist/css/'))
+        .pipe(dest('src/css/'))
         .pipe(browserSync.stream());
 }
 
@@ -36,11 +37,19 @@ const transferFiles = () => {
     src('src/*.html')
         .pipe(dest('dist/'))
         .pipe(browserSync.stream());
+    
+    src('src/css/vendors/*.css')
+        .pipe(dest('dist/css'))
+        .pipe(browserSync.stream());
         
     src(['src/fonts/*.woff2', 'src/fonts/*.woff'])
         .pipe(dest('dist/fonts'));
+        
+    src('src/video/*')
+        .pipe(dest('dist/video'))
+        .pipe(browserSync.stream());
 
-    return src(['src/img/*.jpg', 'src/img/*.png', 'src/img/*.jpeg', 'src/img/*.svg', 'src/img/*.webp'])
+    return src('src/img/*')
         .pipe(dest('dist/img'))
         .pipe(browserSync.stream());
 }
@@ -55,6 +64,11 @@ const convertFonts = () => {
 }
 
 const minifyJS = () => {
+    
+    src('src/js/vendors/*.js')
+        .pipe(dest('dist/js/'))
+        .pipe(browserSync.stream());
+
     return src('src/js/*.js')
         .pipe(jsmin())
         .pipe(dest('dist/js/'))
@@ -73,12 +87,8 @@ const watchFiles = () => {
     });
   
     watch('./src/sass/**/*.sass', compileStyles);
-    watch('./src/js/**/*.js', minifyJS);
-    watch('./src/*.html', transferFiles);
-    watch('./src/img/**.jpg', transferFiles);
-    watch('./src/img/**.jpeg', transferFiles);
-    watch('./src/img/**.png', transferFiles);
-    watch('./src/img/**.webp', transferFiles);
+    watch('./src/js/*.js', minifyJS);
+    watch(['./src/*.html', './src/img/*.svg', './src/img/**.jpg', './src/img/**.jpeg', './src/img/**.png', './src/img/**.webp'], transferFiles);
     watch('./src/fonts/**', series(convertFonts, transferFiles));
   }
 

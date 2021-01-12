@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="ru-Ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Document</title>
+
+    <script src="./js/main.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <div class="header__top">
+            <span class="text_white">Павильоны для бассейнов из Чехии</span>
+            <div class="header__top-content">
+                <a href="#" target="_blank" class="text_white header__tel"><img src="./img/map-icon.png" alt="Иконка">Салон-бутик: Центр дизайна ArtPlay, г. Москва, ул. Нижняя Сыромятническая, 10</a>
+                <div class="header__contact">
+                    <a href="tel:+74957262067" class="text_white header__tel"><img src="./img/tel-icon.png" alt="Иконка">+7 (495) 726-20-67</a>
+                    <button class="button header__recall js-popup-trigger" data-target=".js-popup-recall">заказать звонок</button>
+                </div>
+                <ul class="header__top-social">
+                    <li class="header__social-item">
+                        <a href="#" class="header__social">
+                            <svg height="20" width="20" fill="white">
+                                <use xlink:href="./img/icons.svg#whatsapp"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="header__social-item">
+                        <a href="#" class="header__social">
+                            <svg height="20" width="20" fill="white">
+                                <use height="20" viewBox="0 0 24 24" width="20" xlink:href="./img/icons.svg#telegram"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="header__social-item">
+                        <a href="#" class="header__social">
+                            <svg height="20" width="20" fill="white">
+                                <use height="20" width="20" viewBox="-21 0 511 512" xlink:href="./img/icons.svg#viber"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="header__top-social">
+                    <li class="header__social-item">
+                        <a href="#" class="header__social header__social_round">
+                            <svg height="12" width="20" fill="white">
+                                <use height="12" width="20" viewBox="0 0 24 24" xlink:href="./img/icons.svg#vk"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="header__social-item">
+                        <a href="#" class="header__social header__social_round">
+                            <svg height="12" width="20" fill="white">
+                                <use height="12" width="20" viewBox="0 0 24 24" xlink:href="./img/icons.svg#fb"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="header__social-item">
+                        <a href="#" class="header__social header__social_round">
+                            <svg height="12" width="20" fill="white">
+                                <use height="12" width="20" viewBox="-21 0 511 512" xlink:href="./img/icons.svg#twitter"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="header__main">
+            <form class="search search_mobile">
+                <input type="search" class="search__input" placeholder="Поиск" required>
+                <button class="button button_blue search__enter">
+                    Найти
+                </button>
+            </form>
+            <div class="header__logos">
+                <a href="./index.html" class="logo logo_small">
+                    <svg>
+                        <use xlink:href="./img/icons.svg#bastion-logo"></use>
+                    </svg>
+                </a>
+                <a href="./index.html" class="logo logo_abs">
+                    <svg>
+                        <use xlink:href="./img/icons.svg#albixon-logo"></use>
+                    </svg>
+                </a>
+            </div>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="index.html" class="nav__link js-nav-link">
+                            <svg height="30" width="30"><use height="30" width="30" xlink:href="./img/icons.svg#home"></use></svg>
+                        </a>
+                    </li>
+                    <li class="nav__divide"></li>
+                    <li class="nav__item nav__item_contains">
+                        <a href="catalog.html" class="nav__link js-nav-link">Модели павильонов</a>
+                        <ul class="nav__dropdown">
+                            <li class="nav__dropdown-item">
+                                <a href="#" class="nav__link">Павильон</a>
+                            </li>
+                            <li class="nav__dropdown-item">
+                                <a href="#" class="nav__link">Павильон</a>
+                            </li>
+                            <li class="nav__dropdown-item">
+                                <a href="#" class="nav__link">Павильон</a>
+                            </li>
+                            <li class="nav__dropdown-item">
+                                <a href="#" class="nav__link">Павильон</a>
+                            </li>
+                            <li class="nav__dropdown-item">
+                                <a href="#" class="nav__link">Павильон</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav__divide"></li>
+                    <li class="nav__item nav__item_contains">
+                        <a href="articles.html" class="nav__link js-nav-link">Почему мы</a>
+                        <ul class="nav__dropdown">
+                            <li class="nav__dropdown-item">
+                                <a href="#" class="nav__link">Павильон</a>
+                            </li>
+                            <li class="nav__dropdown-item">
+                                <a href="#" class="nav__link">Павильон</a>
+                            </li>
+                            <li class="nav__dropdown-item">
+                                <a href="#" class="nav__link">Павильон</a>
+                            </li>
+                            <li class="nav__dropdown-item">
+                                <a href="#" class="nav__link">Павильон</a>
+                            </li>
+                            <li class="nav__dropdown-item">
+                                <a href="#" class="nav__link">Павильон</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav__divide"></li>
+                    <li class="nav__item nav__item_contains">
+                        <a href="about.html" class="nav__link js-nav-link">О павильонах</a>
+                        <ul class="nav__dropdown">
+                            <li class="nav__dropdown-item">
+                                <a href="#" class="nav__link">Павильон</a>
+                            </li>
+                            <li class="nav__dropdown-item">
+                                <a href="#" class="nav__link">Павильон</a>
+                            </li>
+                            <li class="nav__dropdown-item">
+                                <a href="#" class="nav__link">Павильон</a>
+                            </li>
+                            <li class="nav__dropdown-item">
+                                <a href="#" class="nav__link">Павильон</a>
+                            </li>
+                            <li class="nav__dropdown-item">
+                                <a href="#" class="nav__link">Павильон</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav__divide"></li>
+                    <li class="nav__item nav__item_contains">
+                        <a href="gallery-catalog.html" class="nav__link js-nav-link">Галерея накрытий</a>
+                        <ul class="nav__dropdown">
+                            <li class="nav__dropdown-item">
+                                <a href="#" class="nav__link">Павильон</a>
+                            </li>
+                            <li class="nav__dropdown-item">
+                                <a href="#" class="nav__link">Павильон</a>
+                            </li>
+                            <li class="nav__dropdown-item">
+                                <a href="#" class="nav__link">Павильон</a>
+                            </li>
+                            <li class="nav__dropdown-item">
+                                <a href="#" class="nav__link">Павильон</a>
+                            </li>
+                            <li class="nav__dropdown-item">
+                                <a href="#" class="nav__link">Павильон</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav__divide"></li>
+                    <li class="nav__item">
+                        <a href="contacts.html" class="nav__link js-nav-link">Контакты</a>
+                    </li>
+                </ul>
+            </nav>
+            <form class="search">
+                <input type="search" autocomplete="off" class="search__input" name="search">
+                <button class="button search__button">
+                    <svg height="20" width="20"><use height="20" width="20" xlink:href="./img/icons.svg#loupe"></use></svg>
+                </button>
+            </form>
+            <a href="compare.html" class="header__compare">
+                <svg height="20" width="20">
+                    <use height="20" width="20" xlink:href="./img/icons.svg#bars"></use>
+                </svg>    
+                Сравнить
+            </a>
+            <button class="button burger js-burger">
+                <span></span>
+            </button>
+        </div>
+    </header>
+    <div class="menu js-menu">
+        <nav class="nav nav_menu">
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a href="#" class="nav__link nav__link_contains js-nav-level-link">Модели павильонов</a>
+                    <ul class="nav__list nav__list_inner">
+                        <li class="nav__item">
+                            <a href="item.html" class="nav__link nav__link">Модель павильона</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="item.html" class="nav__link nav__link">Модель павильона</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="item.html" class="nav__link nav__link">Модель павильона</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="item.html" class="nav__link nav__link">Модель павильона</a>
+                        </li>
+                        <li class="nav__item nav__item_return">
+                            <a href="#" class="nav__link nav__link_return js-nav-level-link js-nav-return-link">Назад</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav__item">
+                    <a href="#" class="nav__link nav__link_contains js-nav-level-link">Почему мы</a>
+                    <ul class="nav__list nav__list_inner">
+                        <li class="nav__item">
+                            <a href="article-faq.html" class="nav__link nav__link">Статья</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="article-faq.html" class="nav__link nav__link">Статья</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="article-faq.html" class="nav__link nav__link">Статья</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="article-faq.html" class="nav__link nav__link">Статья</a>
+                        </li>
+                        <li class="nav__item nav__item_return">
+                            <a href="#" class="nav__link nav__link_return js-nav-level-link js-nav-return-link">Назад</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav__item">
+                    <a href="#" class="nav__link nav__link_contains js-nav-level-link">О павильонах</a>
+                    <ul class="nav__list nav__list_inner">
+                        <li class="nav__item">
+                            <a href="about.html" class="nav__link nav__link">О нас</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="about.html" class="nav__link nav__link">О нас</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="about.html" class="nav__link nav__link">О нас</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="about.html" class="nav__link nav__link">О нас</a>
+                        </li>
+                        <li class="nav__item nav__item_return">
+                            <a href="#" class="nav__link nav__link_return js-nav-level-link js-nav-return-link">Назад</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav__item">
+                    <a href="#" class="nav__link nav__link_contains js-nav-level-link">Галерея накрытий</a>
+                    <ul class="nav__list nav__list_inner">
+                        <li class="nav__item">
+                            <a href="gallery-item.html" class="nav__link nav__link">Модель павильона</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="gallery-item.html" class="nav__link nav__link">Модель павильона</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="gallery-item.html" class="nav__link nav__link">Модель павильона</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="gallery-item.html" class="nav__link nav__link">Модель павильона</a>
+                        </li>
+                        <li class="nav__item nav__item_return">
+                            <a href="#" class="nav__link nav__link_return js-nav-level-link js-nav-return-link">Назад</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav__item">
+                    <a href="contacts.html" class="nav__link">Контакты</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <main class="main">
+        <section class="item bg-grey">
+            <div class="container">
+                <div class="breadcrumbs">
+                    <ul class="breadcrumbs__list">
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link">Каталог павильонов</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="index-catalog__top">
+                    <button class="button button_dashed">
+                        <svg height="20px" width="20px">
+                            <use height="20px" width="20px" xlink:href="./img/icons.svg#file"></use>
+                        </svg>
+                        <span>Скачать каталог 2020</span>
+                    </button>
+                </div>
+                <div class="item__body item__body_grid">
+                    <h1 class="item__name">ПАВИЛЬОН ДЛЯ БАССЕЙНА DALLAS CLEAR B (ПРОЗРАЧНЫЙ ПК)</h1>
+                    <div class="item__slider-wrap">
+                        <div class="item__slider item-slider js-item-swiper">
+                            <button class="button item-slider__compare">
+                                <svg height="15px" width="15px">
+                                    <use height="15px" width="15px" xlink:href="./img/icons.svg#bars"></use>
+                                </svg>
+                            </button>
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide item-slider__slide">
+                                    <img src="./img/item-slide.jpg" alt="Фото в слайдере" class="item-slider__img">
+                                </div>
+                                <div class="swiper-slide item-slider__slide">
+                                    <img src="./img/item-slide.jpg" alt="Фото в слайдере" class="item-slider__img">
+                                </div>
+                                <div class="swiper-slide item-slider__slide">
+                                    <img src="./img/item-slide.jpg" alt="Фото в слайдере" class="item-slider__img">
+                                </div>
+                                <div class="swiper-slide item-slider__slide">
+                                    <img src="./img/item-slide.jpg" alt="Фото в слайдере" class="item-slider__img">
+                                </div>
+                                <div class="swiper-slide item-slider__slide">
+                                    <img src="./img/item-slide.jpg" alt="Фото в слайдере" class="item-slider__img">
+                                </div>
+                            </div>
+                            <button class="button item-slider__control item-slider__control_prev">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 444.531 444.531">
+                                    <path d="M213.13,222.409L351.88,83.653c7.05-7.043,10.567-15.657,10.567-25.841c0-10.183-3.518-18.793-10.567-25.835
+                                        l-21.409-21.416C323.432,3.521,314.817,0,304.637,0s-18.791,3.521-25.841,10.561L92.649,196.425
+                                        c-7.044,7.043-10.566,15.656-10.566,25.841s3.521,18.791,10.566,25.837l186.146,185.864c7.05,7.043,15.66,10.564,25.841,10.564
+                                        s18.795-3.521,25.834-10.564l21.409-21.412c7.05-7.039,10.567-15.604,10.567-25.697c0-10.085-3.518-18.746-10.567-25.978
+                                        L213.13,222.409z"/>
+                                </svg>
+                            </button>
+                            <button class="button item-slider__control item-slider__control_next">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 444.531 444.531">
+                                    <path d="M213.13,222.409L351.88,83.653c7.05-7.043,10.567-15.657,10.567-25.841c0-10.183-3.518-18.793-10.567-25.835
+                                        l-21.409-21.416C323.432,3.521,314.817,0,304.637,0s-18.791,3.521-25.841,10.561L92.649,196.425
+                                        c-7.044,7.043-10.566,15.656-10.566,25.841s3.521,18.791,10.566,25.837l186.146,185.864c7.05,7.043,15.66,10.564,25.841,10.564
+                                        s18.795-3.521,25.834-10.564l21.409-21.412c7.05-7.039,10.567-15.604,10.567-25.697c0-10.085-3.518-18.746-10.567-25.978
+                                        L213.13,222.409z"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="item__thumbs item-thumbs js-item-thumbs-swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide item-thumbs__item">
+                                    <img src="./img/item-slide.jpg" alt="Превью фото" class="item-thumbs__img">
+                                </div>
+                                <div class="swiper-slide item-thumbs__item">
+                                    <img src="./img/item-slide.jpg" alt="Превью фото" class="item-thumbs__img">
+                                </div>
+                                <div class="swiper-slide item-thumbs__item">
+                                    <img src="./img/item-slide.jpg" alt="Превью фото" class="item-thumbs__img">
+                                </div>
+                                <div class="swiper-slide item-thumbs__item">
+                                    <img src="./img/item-slide.jpg" alt="Превью фото" class="item-thumbs__img">
+                                </div>
+                                <div class="swiper-slide item-thumbs__item">
+                                    <img src="./img/item-slide.jpg" alt="Превью фото" class="item-thumbs__img">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item__data">
+                        <div class="item__data-block data-block">
+                            <span class="data-block__title">Габариты:</span>
+                            <ul class="data-block__list">
+                                <li class="data-block__item"><span class="data-block__item_bold">Внешняя ширина: </span>520 см.</li>
+                                <li class="data-block__item"><span class="data-block__item_bold">Внутренняя ширина: </span>478 см.</li>
+                                <li class="data-block__item"><span class="data-block__item_bold">Внешняя длина: </span>860 см.</li>
+                                <li class="data-block__item"><span class="data-block__item_bold">Внешняя высота: </span>100 см.</li>
+                            </ul>
+                        </div>
+                        <div class="item__data-block data-block">
+                            <span class="data-block__title">В упаковке:</span>
+                            <ul class="data-block__list">
+                                <li class="data-block__item"><span class="data-block__item_bold">Размер упаковки: </span>561 x 55 x 127 см</li>
+                                <li class="data-block__item"><span class="data-block__item_bold">Вес упаковки: </span>480 кг</li>
+                            </ul>
+                            <a href="./gallery-item.html" class="data-block__link">Фото в упаковке</a>
+                        </div>
+                        <div class="item__data-block data-block">
+                            <span class="data-block__title">Вариант расцветки:</span>
+                            <div class="data-block__colors">
+                                <button class="button color js-color-picker">
+                                    <span style="background-color: #0357a3;"></span>
+                                </button>
+                                <button class="button color js-color-picker">
+                                    <span style="background-color: #1f1f1f;"></span>
+                                </button>
+                            </div>
+                            <a href="./gallery-item.html" class="data-block__link">А так же по палитре RAL</a>
+                        </div>
+                        <div class="item__data-block data-block data-block_flex">
+                            <span class="data-block__price">€ 8,684</span>
+                            <small class="data-block__small-text">Расчёт является предварительным. Для точного пересчёта павильона со всеми необходимыми опциями просьба обращаться к менеджеру</small>
+                            <button class="button button_blue data-block__order js-popup-trigger" data-target=".js-popup-order">Заказать</button>
+                            <button class="button button_dashed js-popup-trigger" data-target=".js-popup-instruction">
+                                <svg height="20px" width="20px">
+                                    <use height="20px" width="20px" xlink:href="./img/icons.svg#file-2"></use>
+                                </svg>
+                                <span>Запросить инструкцию</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="item__tabs">
+                    <div class="item__tabs-top">
+                        <button class="button tab__title js-tab-title active" data-index="0">Описание</button>
+                        <button class="button tab__title js-tab-title" data-index="1">ТЕХ. ХАРАКТЕРИСТИКИ</button>
+                        <button class="button tab__title js-tab-title" data-index="2">видео</button>
+                    </div>
+                    <div class="item__body">
+                        <div class="tab js-tab active" data-index="0">
+                            <p>Если Вы собираетесь приобрести низкий павильон, и Вам нравятся закруглённые формы и изящные линии, то «DALLAS» - это лучшее решение. Павильон «DALLAS» имеет одну из самых популярных форм, поэтому подходит для любого сада.</p>
+
+                            <h4>В базовую цену включено:</h4>
+                            <ul class="no-mt">
+                                <li>павильон стандартной длины и МИНИМАЛЬНОЙ высоты</li>
+                                <li>павильон стандартной длины и МИНИМАЛЬНОЙ высоты</li>
+                                <li>павильон стандартной длины и МИНИМАЛЬНОЙ высоты</li>
+                                <li>павильон стандартной длины и МИНИМАЛЬНОЙ высоты</li>
+                            </ul>
+                            <img src="./img/item-content.png" alt="Фото в описании">
+                        </div>
+                        <div class="tab js-tab" data-index="1">
+                            <p>Профили «L» и «L+» для павильонов средних размеров и павильонов с опорой на стену. <br>
+                                Визуально подобны профилям «M», но структурно усиленные. <br>
+                                Сечение «L» 40 × 55 мм. <br></p>
+
+                            <h4>В базовую цену включено:</h4>
+                            <ul class="no-mt">
+                                <li>павильон стандартной длины и МИНИМАЛЬНОЙ высоты</li>
+                                <li>павильон стандартной длины и МИНИМАЛЬНОЙ высоты</li>
+                                <li>павильон стандартной длины и МИНИМАЛЬНОЙ высоты</li>
+                                <li>павильон стандартной длины и МИНИМАЛЬНОЙ высоты</li>
+                            </ul>
+                            <img src="./img/item-content.png" alt="Фото в описании">
+                        </div>
+                        <div class="tab js-tab" data-index="2">
+                            <p>Если Вы собираетесь приобрести низкий павильон, и Вам нравятся закруглённые формы и изящные линии, то «DALLAS» - это лучшее решение. Павильон «DALLAS» имеет одну из самых популярных форм, поэтому подходит для любого сада.</p>
+
+                            <strong>В базовую цену включено:</strong>
+                            <ul class="no-mt">
+                                <li>павильон стандартной длины и МИНИМАЛЬНОЙ высоты</li>
+                                <li>павильон стандартной длины и МИНИМАЛЬНОЙ высоты</li>
+                                <li>павильон стандартной длины и МИНИМАЛЬНОЙ высоты</li>
+                                <li>павильон стандартной длины и МИНИМАЛЬНОЙ высоты</li>
+                            </ul>
+                            <img src="./img/item-content.png" alt="Фото в описании">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="form">
+            <div class="container">
+                <div class="form__container">
+                    <h2 class="form__title text_white">получить консультацию специалиста</h2>
+                    <form class="form__body">
+                        <div class="form__row">
+                            <label class="form__input-wrap form__input-wrap_user" data-label="Ваше имя">
+                                <input class="form__input" name="user_name" type="text" required>
+                            </label>
+                            <label class="form__input-wrap form__input-wrap_phone" data-label="Номер телефона">
+                                <input class="form__input" name="user_tel" type="tel" required>
+                            </label>
+                            <button class="button button_blue">отправить заявку</button>
+                        </div>
+                        <div class="form__aic">
+                            <label class="form__agreement">
+                                <input type="checkbox" name="user_agree">
+                                <span class="form__agreement-checkbox"></span>
+                                <span class="form__agreement-text">Согласие на обработку персональных данных</span>
+                            </label>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section class="map">
+            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A5ef6cf66c8d6f0acdd4f5567f5caf9df8b291b53533b3241530c20c77c63dc65&amp;source=constructor" width="100%" height="455" frameborder="0"></iframe>
+            <div class="container">
+                <div class="map__data">
+                    <dl>
+                        <dt>Адрес:</dt>
+                        <dd>Салон-галерея:</dd>
+                        <dd>Центр Дизайна ArtPlay на Яузе</dd>
+                        <dd>г. Москва, ул. Нижняя Сыромятническая, 10 стр. 3</dd>
+                        <dt>Телефоны:</dt>
+                        <dd><a href="tel:+74957262067">+7 (495) 726-20-67</a>; <a href="tel:+74955453131">+7 (495) 545-31-31</a></dd>
+                        <dt>E-mail:</dt>
+                        <dd><a href="mailto:sale@pool-spa.ru">sale@pool-spa.ru</a></dd>
+                    </dl>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__wrap">
+                <div class="footer__section">
+                    <h3 class="footer__title">Модели павильонов</h3>
+                    <div class="footer__row">
+                        <ul class="footer__list">
+                            <li class="footer__item"><a href="#" class="footer__link footer__text">Супернизкие павильоны</a></li>
+                            <li class="footer__item"><a href="#" class="footer__link footer__text">Прозрачные павильоны</a></li>
+                            <li class="footer__item"><a href="#" class="footer__link footer__text">Высокие купальные залы</a></li>
+                            <li class="footer__item"><a href="#" class="footer__link footer__text">Классические павильоны</a></li>
+                            <li class="footer__item"><a href="#" class="footer__link footer__text">Раздвижные террасы</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer__section">
+                    <h3 class="footer__title">Информация</h3>
+                    <div class="footer__row">
+                        <ul class="footer__list footer__list_two-rows">
+                            <li class="footer__item"><a href="#" class="footer__link footer__text">Почему мы</a></li>
+                            <li class="footer__item"><a href="#" class="footer__link footer__text">О павильонах</a></li>
+                            <li class="footer__item"><a href="#" class="footer__link footer__text">Галерея накрытий</a></li>
+                            <li class="footer__item"><a href="#" class="footer__link footer__text">Контакты</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer__section">
+                    <h3 class="footer__title">Быть в курсе</h3>
+                    <span class="footer__text">Рассылка о новинках и акциях:</span>
+                    <form class="footer__subscribe">
+                        <input type="email" class="footer__subscribe-input" placeholder="E-mail" required>
+                        <button class="footer__enter">
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="484.5px" height="484.5px" viewBox="0 0 484.5 484.5" style="enable-background:new 0 0 484.5 484.5;" xml:space="preserve">
+                                <polygon fill="white" points="433.5,114.75 433.5,216.75 96.9,216.75 188.7,124.95 153,89.25 0,242.25 153,395.25 188.7,359.55 96.9,267.75 484.5,267.75 484.5,114.75"/>
+                            </svg>
+                        </button>
+                    </form>
+                    <ul class="header__top-social">
+                        <li class="header__social-item">
+                            <a href="#" class="header__social header__social_round">
+                                <svg height="15" width="20" fill="white">
+                                    <use height="15" width="20" viewBox="0 0 24 24" xlink:href="./img/icons.svg#vk"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="header__social-item">
+                            <a href="#" class="header__social header__social_round">
+                                <svg height="15" width="20" fill="white">
+                                    <use height="15" width="20" viewBox="0 0 24 24" xlink:href="./img/icons.svg#fb"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="header__social-item">
+                            <a href="#" class="header__social header__social_round">
+                                <svg height="15" width="20" fill="white">
+                                    <use height="15" width="20" viewBox="-21 0 511 512" xlink:href="./img/icons.svg#twitter"></use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="container">
+                <div class="footer__bottom-wrap">
+                    <small class="footer__copyright">© 2021 Все права защищены "Идеалкавер"</small>
+                    <a href="./policy" class="footer__copyright">Политика конфиденциальности</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="popup js-popup-close js-popup-recall">
+        <div class="popup__body popup__body_small">
+            <div class="form__container">
+                <button class="button js-popup-close popup__close"></button>
+                <h2 class="form__title text_white">получить консультацию специалиста</h2>
+                <form class="form__body">
+                    <div class="form__row">
+                        <label class="form__input-wrap form__input-wrap_user" data-label="Ваше имя">
+                            <input class="form__input" name="user_name" type="text" required>
+                        </label>
+                        <label class="form__input-wrap  form__input-wrap_phone" data-label="Номер телефона">
+                            <input class="form__input" name="user_tel" type="tel" required>
+                        </label>
+                        <button class="button button_blue">отправить заявку</button>
+                    </div>
+                    <div class="form__aic">
+                        <label class="form__agreement">
+                            <input type="checkbox" name="user_agree">
+                            <span class="form__agreement-checkbox"></span>
+                            <span class="form__agreement-text">Согласие на обработку персональных данных</span>
+                        </label>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup js-popup-close js-popup-order">
+        <div class="popup__body popup__body_big">
+            <div class="form__container">
+                <button class="button js-popup-close popup__close"></button>
+                <h2 class="form__title text_white">Заказать павильон</h2>
+                <form class="form__body">
+                    <div class="form__row">
+                        <div class="form__item">
+                            <div class="form__item-data">
+                                <img class="form__item-img" src="./img/item-slide.jpg" alt="Превью фото">
+                                <span class="form__item-name">Павильон для бассейна DALLAS CLEAR B (прозрачный пк)</span>
+                            </div>
+                            <div class="form__item-prices">
+                                <span class="form__item-price">€ 6,700</span>
+                                <span class="form__item-price form__item-price_old">€ 8,700</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form__row">
+                        <label class="form__input-wrap form__input-wrap_user" data-label="Ваше имя">
+                            <input class="form__input" name="user_name" type="text" required>
+                        </label>
+                        <label class="form__input-wrap form__input-wrap_phone" data-label="Номер телефона">
+                            <input class="form__input" name="user_tel" type="tel" required>
+                        </label>
+                        <label class="form__input-wrap form__input-wrap_mail" data-label="E-mail">
+                            <input class="form__input" name="user_mail" type="email" required>
+                        </label>
+                    </div>
+                    <div class="form__row">
+                        <label class="form__input-wrap form__input-wrap_addr" data-label="Адрес доставки">
+                            <input class="form__input" name="user_address" type="text" required>
+                        </label>
+                    </div>
+                    <div class="form__row">
+                        <label class="form__input-wrap" data-label="Комментарий">
+                            <textarea name="user_comment" rows="2" class="form__input"></textarea>
+                        </label>
+                    </div>
+                    <div class="form__aic">
+                        <button class="button button_blue">отправить заявку</button>
+                    </div>
+                    <div class="form__aic">
+                        <label class="form__agreement">
+                            <input type="checkbox" name="user_agree">
+                            <span class="form__agreement-checkbox"></span>
+                            <span class="form__agreement-text">Согласие на обработку персональных данных</span>
+                        </label>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup js-popup-close js-popup-instruction">
+        <div class="popup__body popup__body_small">
+            <div class="form__container">
+                <button class="button js-popup-close popup__close"></button>
+                <h2 class="form__title text_white">Запросить инструкцию</h2>
+                <form class="form__body">
+                    <div class="form__row">
+                        <label class="form__input-wrap form__input-wrap_user" data-label="Ваше имя">
+                            <input class="form__input" name="user_name" type="text" required>
+                        </label>
+                        <label class="form__input-wrap form__input-wrap_phone" data-label="Ваш e-mail">
+                            <input class="form__input" name="user_mail" type="email" required>
+                        </label>
+                        <button class="button button_blue">отправить заявку</button>
+                    </div>
+                    <div class="form__aic">
+                        <label class="form__agreement">
+                            <input type="checkbox" name="user_agree">
+                            <span class="form__agreement-checkbox"></span>
+                            <span class="form__agreement-text">Согласие на обработку персональных данных</span>
+                        </label>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup js-popup-close js-popup-success">
+        <div class="popup__body popup__body_small">
+            <div class="form__container">
+                <button class="button js-popup-close popup__close"></button>
+                <h2 class="form__title text_white">Ваша заявка успешно отправлена!</h2>
+                <p class="popup__subtext">Наш менеджер скоро свяжется с вами.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup js-popup-close js-popup-error">
+        <div class="popup__body popup__body_small">
+            <div class="form__container">
+                <button class="button js-popup-close popup__close"></button>
+                <h2 class="form__title text_white">Извините, у нас произошла ошибка!</h2>
+                <p class="popup__subtext">Попробуйте еще раз неного позже.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/swiper-bundle.min.js"></script>
+</body>
+</html>
