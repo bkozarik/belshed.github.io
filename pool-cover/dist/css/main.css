@@ -1414,9 +1414,14 @@ section {
   -moz-appearance: none;
   appearance: none;
   border: none;
-  padding: 15px 25px 15px 45px;
   font-size: 16px;
   border-radius: 4px;
+  padding: 15px 25px;
+  resize: none;
+}
+
+.form__input:not(textarea) {
+  padding: 15px 25px 15px 45px;
 }
 
 .form__input-wrap {
