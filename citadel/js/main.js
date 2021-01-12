@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
 
-        if(window.innerWidth < 630){
+        if(window.innerWidth < 631){
             menu.appendChild(document.querySelector('.nav'));
             menu.appendChild(document.querySelector('.language'));
         }

@@ -119,6 +119,7 @@ section
         color: $text_blue
 
 .burger
+    cursor: pointer
     display: none
     height: 40px
     width: 40px
@@ -164,8 +165,7 @@ section
     width: 100%
     left: 0
     top: 0
-    background-color: rgba(34, 35, 40, 0.7)
-    backdrop-filter: blur(5px)
+    background-color: rgba(34, 35, 40, 0.9)
     transform: translateY(-100%)
     opacity: 0
     visibility: hidden
@@ -184,6 +184,13 @@ section
         &__list
             flex-direction: column
             align-items: center
+
+@supports ((backdrop-filter: blur(5px)) or (-webkit-backdrop-filter: blur(5px)))
+    .menu
+        background-color: rgba(34, 35, 40, 0.7)
+        backdrop-filter: blur(5px)
+
+
 
 .main
     height: 100vh

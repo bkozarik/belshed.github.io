@@ -92,6 +92,7 @@
     .main
         height: auto
         margin-top: 60px
+        padding-bottom: 25px
         .swiper-wrapper
             display: block
 
@@ -135,7 +136,7 @@
             margin-right: 0
 
     .footer
-        position: absolute
+        position: relative
 
 @media screen and ( max-width: 740px )
     .portfolio
@@ -143,6 +144,24 @@
             grid-template-columns: repeat(3, 1fr)
 
 @media screen and ( max-width: 680px )
+
+    .menu
+        padding: 50px 10px 0px
+
+    .header
+        &__wrap
+            padding: 15px 0px
+
+    .language
+        &__item
+            padding: 0px 10px
+
+    .nav
+        margin: 0px 20px
+
+    .logo
+        max-width: 170px
+
     .footer
         &__contacts
             display: grid
@@ -176,10 +195,6 @@
             font-size: 32px
             line-height: 38px
 
-    .header
-        &__wrap
-            padding: 15px 0px
-
     .popup
         &_success
             padding: 40px
@@ -208,7 +223,7 @@
             margin-bottom: 30px
 
     .main
-        padding: 40px 0px 165px
+        padding: 40px 0px 25px
 
     .form
         &__button
