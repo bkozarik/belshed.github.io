@@ -498,8 +498,16 @@
         <img src="" alt="Фото в попапе" class="popup__img js-popup-img">
     </div>
 
+    <script>
+        if(/MSIE \d|Trident.*rv:/.test(navigator.userAgent) == false){
+            var scriptNode = document.createElement('script');
+            scriptNode.setAttribute('src', './js/swiper-bundle.min.js');
+            
+            document.body.insertBefore(scriptNode, document.body.querySelector('#polyfillScrypt'));
+        }
+    </script>
     <script src="./js/swiper-bundle.min.js"></script>
-    <script src="./js/polyfills.js"></script>
-    <script src="./js/main.js"></script>
+    <script id="polyfillScrypt" src="./js/polyfills.js"></script>
+    <script src="./js/main.js" ></script>
 </body>
 </html>
