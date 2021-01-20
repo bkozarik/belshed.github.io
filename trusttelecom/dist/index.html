@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
     <link rel="stylesheet" href="./css/main.css">
     <title>TrustTelecom</title>
 </head>
@@ -18,7 +19,11 @@
     </header>
     <main class="main">
         <section class="hero">
-            <div class="container">
+            <!-- <video class="hero__video" autoplay webkit-playsinline playsinline loop muted>
+                <source src=".webm" type="video/webm">
+                <source src=".mp4" type="video/mp4">
+            </video> -->
+            <div class="container container_relative">
                 <div class="hero__wrap">
                     <h1 class="hero__title">Траст Телеком</h1>
                     <div class="hero__contacts">
@@ -30,6 +35,7 @@
             </div>
         </section>
         <section id="catalog" class="catalog">
+            <img src="./img/circles.svg" alt="Декоративный элемент" class="catalog__deco js-mousemove-item" data-speed="-0.05">
             <div class="container">
                 <h2 class="section-title section-title_black section-title_left">Производство, продажа, монтаж и техническое обслуживание:</h2>
                 <ul class="catalog__list">
@@ -55,9 +61,33 @@
                     </li>
                 </ul>
             </div>
+            <div class="container container_large">
+                <div class="swiper-cover">
+                    <img src="./img/circles.svg" alt="Декоративный элемент" class="swiper-cover__deco js-mousemove-item" data-speed="0.05">
+                </div>
+                <div class="catalog__swiper js-catalog-swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide catalog__slide">
+                            <img src="./img/catalog-slide-1.jpg" alt="Фото в слайдере" class="catalog__img">
+                        </div>
+                        <div class="swiper-slide catalog__slide">
+                            <img src="./img/catalog-slide-2.jpg" alt="Фото в слайдере" class="catalog__img">
+                        </div>
+                        <div class="swiper-slide catalog__slide">
+                            <img src="./img/catalog-slide-3.jpg" alt="Фото в слайдере" class="catalog__img">
+                        </div>
+                        <div class="swiper-slide catalog__slide">
+                            <img src="./img/catalog-slide-4.jpg" alt="Фото в слайдере" class="catalog__img">
+                        </div>
+                        <div class="swiper-slide catalog__slide">
+                            <img src="./img/catalog-slide-5.jpg" alt="Фото в слайдере" class="catalog__img">
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
         <section class="requisites">
-            <div class="container">
+            <div class="container container_requisites">
                 <h2 class="section-title section-title_white">Реквизиты</h2>
                 <ul class="requisites__list">
                     <li class="requisites__item">
@@ -88,7 +118,41 @@
                 <h2 class="section-title">Наши клиенты</h2>
                 <div class="clients__controls-wrap">
                     <div class="clients__controls">
-                        
+                        <button class="clients__control clients__control_prev"></button>
+                        <div class="clients__pagination js-pagination"></div>
+                        <button class="clients__control clients__control_next"></button>
+                    </div>
+                </div>
+                <div class="clients__swiper js-clients-swiper">
+                    <div class="swiper-cover swiper-cover_reverse">
+                        <img src="./img/circles.svg" alt="Декоративный элемент" class="swiper-cover__deco js-mousemove-item" data-speed="-0.05">
+                    </div>
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide clients__slide client">
+                            <img src="./img/client-logo-6.png" alt="Логотип" class="client__logo">
+                            <span class="client__name">Стадион «Арена Химки» (г.&nbsp;Химки)</span>
+                        </div>
+                        <div class="swiper-slide clients__slide client">
+                            <img src="./img/client-logo-5.png" alt="Логотип" class="client__logo">
+                            <span class="client__name">Стадион «Арена Химки» (г.&nbsp;Химки)</span>
+                        </div>
+                        <div class="swiper-slide clients__slide client">
+                            <img src="./img/client-logo-4.png" alt="Логотип" class="client__logo">
+                            <span class="client__name">Футбольный клуб «Сочи», стадион «ФИШТ» (г.&nbsp;Сочи)</span>
+                        </div>
+                        <div class="swiper-slide clients__slide client">
+                            <img src="./img/client-logo-3.png" alt="Логотип" class="client__logo">
+                            <span class="client__name">Ледовый дворец «Красногорск Арена им. В. В. Петрова» <br>
+                                (г.&nbsp;Красногорск)</span>
+                        </div>
+                        <div class="swiper-slide clients__slide client">
+                            <img src="./img/client-logo-2.png" alt="Логотип" class="client__logo">
+                            <span class="client__name">Баскетбольный центр «Химки» (г.&nbsp;Химки)</span>
+                        </div>
+                        <div class="swiper-slide clients__slide client">
+                            <img src="./img/client-logo-1.png" alt="Логотип" class="client__logo">
+                            <span class="client__name">Стадион «Арена Химки» (г.&nbsp;Химки)</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -103,5 +167,8 @@
             </div>
         </div>
     </footer>
+
+    <script src="./js/swiper-bundle.min.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 </html>
