@@ -17,25 +17,32 @@
                 <nav class="nav nav_header">
                     <ul class="nav__list">
                         <li class="nav__item">
-                            <a href="#" class="nav__link js-scroll-link">Трансляция</a>
+                            <a href="#translation" class="nav__link js-scroll-link">Трансляция</a>
                         </li>
                         <li class="nav__item">
-                            <a href="#" class="nav__link js-scroll-link">Залы</a>
+                            <a href="#hallway" class="nav__link js-scroll-link">Залы</a>
                         </li>
                         <li class="nav__item">
-                            <a href="#" class="nav__link js-scroll-link">Программа</a>
+                            <a href="#program" class="nav__link js-scroll-link">Программа</a>
                         </li>
                         <li class="nav__item">
-                            <a href="#" class="nav__link js-scroll-link">Партнеры</a>
+                            <a href="#partners" class="nav__link js-scroll-link">Партнеры</a>
                         </li>
                         <li class="nav__item">
-                            <a href="#" class="nav__link js-scroll-link">Фотогалерея</a>
+                            <a href="#gallery" class="nav__link js-scroll-link">Фотогалерея</a>
                         </li>
                         <li class="nav__item">
-                            <a href="#" class="nav__link js-scroll-link">Help</a>
+                            <a href="#help" class="nav__link js-scroll-link">Help</a>
                         </li>
                     </ul>
                 </nav>
+                <a href="index.html" class="logo logo_powered">
+                    Powered by
+                    <img src="./img/vudu_logo.svg" alt="Логотип" class="logo__img">
+                </a>
+                <a href="./network.html" class="button message-button" data-message="1">
+                    <img class="message-button__img" src="./img/msg-btn-icon.png" alt="Иконка">
+                </a>
                 <button class="button burger js-burger"><span></span></button>
             </div>
         </div>
@@ -44,36 +51,52 @@
         <nav class="nav nav_menu">
             <ul class="nav__list">
                 <li class="nav__item">
-                    <a href="#" class="nav__link js-scroll-link">Трансляция</a>
+                    <a href="#translation" class="nav__link js-scroll-link">Трансляция</a>
                 </li>
                 <li class="nav__item">
-                    <a href="#" class="nav__link js-scroll-link">Залы</a>
+                    <a href="#hallway" class="nav__link js-scroll-link">Залы</a>
                 </li>
                 <li class="nav__item">
-                    <a href="#" class="nav__link js-scroll-link">Программа</a>
+                    <a href="#program" class="nav__link js-scroll-link">Программа</a>
                 </li>
                 <li class="nav__item">
-                    <a href="#" class="nav__link js-scroll-link">Партнеры</a>
+                    <a href="#partners" class="nav__link js-scroll-link">Партнеры</a>
                 </li>
                 <li class="nav__item">
-                    <a href="#" class="nav__link js-scroll-link">Фотогалерея</a>
+                    <a href="#gallery" class="nav__link js-scroll-link">Фотогалерея</a>
                 </li>
                 <li class="nav__item">
-                    <a href="#" class="nav__link js-scroll-link">Help</a>
+                    <a href="#help" class="nav__link js-scroll-link">Help</a>
                 </li>
             </ul>
         </nav>
+        <a href="index.html" class="logo logo_nav">
+            Powered by
+            <img src="./img/vudu_logo.svg" alt="Логотип" class="logo__img">
+        </a>
     </div>
     <main class="main">
         <section class="translation">
             <div class="container">
+                <div class="underline underline_small-mb">
+                    <ul class="underline__list">
+                        <li class="underline__item">
+                            <a href="./hall.html" class="button tab__trigger active">Зал 1</a>
+                        </li>
+                        <li class="underline__item">
+                            <a href="./hall.html" class="button tab__trigger">Зал 2</a>
+                        </li>
+                        <li class="underline__item">
+                            <a href="./hall.html" class="button tab__trigger">Зал 3</a>
+                        </li>
+                        <li class="underline__item">
+                            <a href="./hall.html" class="button tab__trigger">Зал 4</a>
+                        </li>
+                    </ul>
+                </div>
                 <h2 class="translation__title">Открытая защита проектов-финалистов</h2>
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/XBPjVzSoepo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 <div class="translation__reaction reaction">
-                    <input id="reaction-checkbox" class="reaction__checkbox" type="checkbox" checked>
-                    <label for="reaction-checkbox" class="reaction__label">
-                        <span class="reaction__trigger"></span>
-                    </label>
                     <ul class="reaction__list">
                         <li class="reaction__item">
                             <button class="button reaction__trigger"></button>
@@ -89,22 +112,6 @@
                         </li>
                         <li class="reaction__item">
                             <button class="button reaction__trigger"></button>
-                        </li>
-                    </ul>
-                </div>
-                <div class="underline underline_small-mt">
-                    <ul class="underline__list">
-                        <li class="underline__item">
-                            <a href="./hall.html" class="underline__link active">Зал 1</a>
-                        </li>
-                        <li class="underline__item">
-                            <a href="./hall.html" class="underline__link">Зал 2</a>
-                        </li>
-                        <li class="underline__item">
-                            <a href="./hall.html" class="underline__link">Зал 3</a>
-                        </li>
-                        <li class="underline__item">
-                            <a href="./hall.html" class="underline__link">Зал 4</a>
                         </li>
                     </ul>
                 </div>
@@ -137,55 +144,52 @@
                 </div>
             </div>
         </section>
-        <section class="guests">
-            <h2 class="section-title js-section-title">›Список гостей  ›Список гостей</h2>
+        <section id="experts" class="experts">
+            <h2 class="section-title js-section-title">›Эксперты  ›Эксперты ›Эксперты  ›Эксперты</h2>
             <div class="container">
-                <ul class="guests__list">
-                    <li class="guests__item">
-                        <span class="guests__name">Иванов Иван</span>
-                        <span class="guests__position">Market Emotion, Менеджер</span>
+                <ul class="experts__grid">
+                    <li class="experts__item expert-item">
+                        <img src="./img/the-expert-1.jpg" alt="Фото эксперта" class="expert-item__img">
+                        <div class="expert-item__data">
+                            <span class="expert-item__name">МАРАТ АБДУЛЛИН</span>
+                            <span class="expert-item__position">Директор по маркетингу СберАвтопарк</span>
+                        </div>
                     </li>
-                    <li class="guests__item">
-                        <span class="guests__name">Иванов Иван</span>
-                        <span class="guests__position">Market Emotion, Менеджер</span>
+                    <li class="experts__item expert-item">
+                        <img src="./img/the-expert-1.jpg" alt="Фото эксперта" class="expert-item__img">
+                        <div class="expert-item__data">
+                            <span class="expert-item__name">МАРАТ АБДУЛЛИН</span>
+                            <span class="expert-item__position">Директор по маркетингу СберАвтопарк</span>
+                        </div>
                     </li>
-                    <li class="guests__item">
-                        <span class="guests__name">Иванов Иван</span>
-                        <span class="guests__position">Market Emotion, Менеджер</span>
+                    <li class="experts__item expert-item">
+                        <img src="./img/the-expert-1.jpg" alt="Фото эксперта" class="expert-item__img">
+                        <div class="expert-item__data">
+                            <span class="expert-item__name">МАРАТ АБДУЛЛИН</span>
+                            <span class="expert-item__position">Директор по маркетингу СберАвтопарк</span>
+                        </div>
                     </li>
-                    <li class="guests__item">
-                        <span class="guests__name">Иванов Иван</span>
-                        <span class="guests__position">Market Emotion, Менеджер</span>
+                    <li class="experts__item expert-item">
+                        <img src="./img/the-expert-1.jpg" alt="Фото эксперта" class="expert-item__img">
+                        <div class="expert-item__data">
+                            <span class="expert-item__name">МАРАТ АБДУЛЛИН</span>
+                            <span class="expert-item__position">Директор по маркетингу СберАвтопарк</span>
+                        </div>
                     </li>
-                    <li class="guests__item">
-                        <span class="guests__name">Иванов Иван</span>
-                        <span class="guests__position">Market Emotion, Менеджер</span>
-                    </li>
-                    <li class="guests__item">
-                        <span class="guests__name">Иванов Иван</span>
-                        <span class="guests__position">Market Emotion, Менеджер</span>
-                    </li>
-                    <li class="guests__item">
-                        <span class="guests__name">Иванов Иван</span>
-                        <span class="guests__position">Market Emotion, Менеджер</span>
-                    </li>
-                    <li class="guests__item">
-                        <span class="guests__name">Иванов Иван</span>
-                        <span class="guests__position">Market Emotion, Менеджер</span>
-                    </li>
-                    <li class="guests__item">
-                        <span class="guests__name">Иванов Иван</span>
-                        <span class="guests__position">Market Emotion, Менеджер</span>
-                    </li>
-                    <li class="guests__item">
-                        <span class="guests__name">Иванов Иван</span>
-                        <span class="guests__position">Market Emotion, Менеджер</span>
-                    </li>
-                    <li class="guests__item">
-                        <span class="guests__name">Иванов Иван</span>
-                        <span class="guests__position">Market Emotion, Менеджер</span>
+                    <li class="experts__item expert-item">
+                        <img src="./img/the-expert-1.jpg" alt="Фото эксперта" class="expert-item__img">
+                        <div class="expert-item__data">
+                            <span class="expert-item__name">МАРАТ АБДУЛЛИН</span>
+                            <span class="expert-item__position">Директор по маркетингу СберАвтопарк</span>
+                        </div>
                     </li>
                 </ul>
+                <div class="button-holder">
+                    <button class="button button_small button_gradient-border">Показать всех</button>
+                </div>
+                <div class="button-holder">
+                    <a href="./network.html" class="button button_big button_bg">Список гостей</a>
+                </div>
             </div>
         </section>
         <section class="help">
@@ -210,8 +214,60 @@
                 </form>
             </div>
         </section>
-        <section class="partners">
-            <h2 class="section-title js-section-title">›партнеры ›партнеры ›партнеры</h2>
+        <section id="partners" class="partners">
+            <h2 class="section-title js-section-title">›партнеры ›партнеры ›партнеры ›партнеры ›партнеры ›партнеры</h2>
+            <div class="container">
+                <ul class="partners__list">
+                    <li class="partner-item">
+                        <img src="./img/partner-logo-4.png" alt="Лого партнёра" class="partner-item__img">
+                    </li>
+                    <li class="partner-item">
+                        <img src="./img/partner-logo-3.png" alt="Лого партнёра" class="partner-item__img">
+                    </li>
+                    <li class="partner-item">
+                        <img src="./img/partner-logo-2.png" alt="Лого партнёра" class="partner-item__img">
+                    </li>
+                    <li class="partner-item">
+                        <img src="./img/partner-logo-1.png" alt="Лого партнёра" class="partner-item__img">
+                    </li>
+                    <li class="partner-item">
+                        <img src="./img/partner-logo-4.png" alt="Лого партнёра" class="partner-item__img">
+                    </li>
+                    <li class="partner-item">
+                        <img src="./img/partner-logo-3.png" alt="Лого партнёра" class="partner-item__img">
+                    </li>
+                    <li class="partner-item">
+                        <img src="./img/partner-logo-2.png" alt="Лого партнёра" class="partner-item__img">
+                    </li>
+                    <li class="partner-item">
+                        <img src="./img/partner-logo-1.png" alt="Лого партнёра" class="partner-item__img">
+                    </li>
+                    <li class="partner-item">
+                        <img src="./img/partner-logo-4.png" alt="Лого партнёра" class="partner-item__img">
+                    </li>
+                    <li class="partner-item">
+                        <img src="./img/partner-logo-3.png" alt="Лого партнёра" class="partner-item__img">
+                    </li>
+                    <li class="partner-item">
+                        <img src="./img/partner-logo-2.png" alt="Лого партнёра" class="partner-item__img">
+                    </li>
+                    <li class="partner-item">
+                        <img src="./img/partner-logo-1.png" alt="Лого партнёра" class="partner-item__img">
+                    </li>
+                    <li class="partner-item">
+                        <img src="./img/partner-logo-4.png" alt="Лого партнёра" class="partner-item__img">
+                    </li>
+                    <li class="partner-item">
+                        <img src="./img/partner-logo-3.png" alt="Лого партнёра" class="partner-item__img">
+                    </li>
+                    <li class="partner-item">
+                        <img src="./img/partner-logo-2.png" alt="Лого партнёра" class="partner-item__img">
+                    </li>
+                    <li class="partner-item">
+                        <img src="./img/partner-logo-1.png" alt="Лого партнёра" class="partner-item__img">
+                    </li>
+                </ul>
+            </div>
         </section>
     </main>
     <footer class="footer">
@@ -232,20 +288,31 @@
                                 <img src="./img/fb-icon.png" alt="Лого в ссылке">
                             </a>
                         </li>
+                        <li class="footer__logos-item">
+                            <a href="#" class="footer__logos-link">
+                                <img src="./img/site-icon.png" alt="Лого в ссылке">
+                            </a>
+                        </li>
                     </ul>
                 </div>
-                <ul class="footer__contacts">
-                    <li class="footer__item">
-                        <a href="tel:+79100000000" class="footer__link">+7 (910) 000-00-00</a>
-                    </li>
-                    <li class="footer__item">
-                        <a href="mailto:ivanov@mail.ru" class="footer__link">Ivanov@mail.ru</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="footer__bottom">
-                <small class="footer__copyright">© 2021 best experience marketing awards!</small>
-                <a href="#" class="footer__copyright">Политикa конфиденциальности</a>
+                <div class="footer__col">
+                    <ul class="footer__contacts">
+                        <li class="footer__item">
+                            <a href="tel:+79100000000" class="footer__link">+7 (910) 000-00-00</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="mailto:ivanov@mail.ru" class="footer__link">Ivanov@mail.ru</a>
+                        </li>
+                    </ul>
+                    <small class="footer__copyright">© 2021 best experience marketing awards!</small>
+                </div>
+                <div class="footer__col">
+                    <a href="index.html" class="logo logo_footer">
+                        Powered by
+                        <img src="./img/vudu_logo.svg" alt="Логотип" class="logo__img">
+                    </a>
+                    <a href="#" class="footer__copyright">Политикa конфиденциальности</a>
+                </div>
             </div>
         </div>
     </footer>

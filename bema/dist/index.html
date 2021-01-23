@@ -17,25 +17,32 @@
                 <nav class="nav nav_header">
                     <ul class="nav__list">
                         <li class="nav__item">
-                            <a href="#" class="nav__link js-scroll-link">Трансляция</a>
+                            <a href="#hallway" class="nav__link js-scroll-link">Залы</a>
                         </li>
                         <li class="nav__item">
-                            <a href="#" class="nav__link js-scroll-link">Залы</a>
+                            <a href="#program" class="nav__link js-scroll-link">Программа</a>
                         </li>
                         <li class="nav__item">
-                            <a href="#" class="nav__link js-scroll-link">Программа</a>
+                            <a href="#gallery" class="nav__link js-scroll-link">bema!Backstage</a>
                         </li>
                         <li class="nav__item">
-                            <a href="#" class="nav__link js-scroll-link">Партнеры</a>
+                            <a href="#help" class="nav__link js-scroll-link">Help</a>
                         </li>
                         <li class="nav__item">
-                            <a href="#" class="nav__link js-scroll-link">Фотогалерея</a>
+                            <a href="#founders" class="nav__link js-scroll-link">Учредители</a>
                         </li>
                         <li class="nav__item">
-                            <a href="#" class="nav__link js-scroll-link">Help</a>
+                            <a href="#partners" class="nav__link js-scroll-link">Партнеры</a>
                         </li>
                     </ul>
                 </nav>
+                <a href="index.html" class="logo logo_powered">
+                    Powered by
+                    <img src="./img/vudu_logo.svg" alt="Логотип" class="logo__img">
+                </a>
+                <a href="./network.html" class="button message-button message-button_has-message" data-message="1">
+                    <img class="message-button__img" src="./img/msg-btn-icon.png" alt="Иконка">
+                </a>
                 <button class="button burger js-burger"><span></span></button>
             </div>
         </div>
@@ -44,25 +51,29 @@
         <nav class="nav nav_menu">
             <ul class="nav__list">
                 <li class="nav__item">
-                    <a href="#" class="nav__link js-scroll-link">Трансляция</a>
+                    <a href="#translation" class="nav__link js-scroll-link">Трансляция</a>
                 </li>
                 <li class="nav__item">
-                    <a href="#" class="nav__link js-scroll-link">Залы</a>
+                    <a href="#hallway" class="nav__link js-scroll-link">Залы</a>
                 </li>
                 <li class="nav__item">
-                    <a href="#" class="nav__link js-scroll-link">Программа</a>
+                    <a href="#program" class="nav__link js-scroll-link">Программа</a>
                 </li>
                 <li class="nav__item">
-                    <a href="#" class="nav__link js-scroll-link">Партнеры</a>
+                    <a href="#partners" class="nav__link js-scroll-link">Партнеры</a>
                 </li>
                 <li class="nav__item">
-                    <a href="#" class="nav__link js-scroll-link">Фотогалерея</a>
+                    <a href="#gallery" class="nav__link js-scroll-link">Фотогалерея</a>
                 </li>
                 <li class="nav__item">
-                    <a href="#" class="nav__link js-scroll-link">Help</a>
+                    <a href="#help" class="nav__link js-scroll-link">Help</a>
                 </li>
             </ul>
         </nav>
+        <a href="index.html" class="logo logo_nav">
+            Powered by
+            <img src="./img/vudu_logo.svg" alt="Логотип" class="logo__img">
+        </a>
     </div>
     <main class="main">
         <section class="hero">
@@ -84,7 +95,7 @@
                 </div>
             </div>
         </section>
-        <nav class="hallway">
+        <nav id="hallway" class="hallway">
             <div class="container">
                 <ul class="hallway__list">
                     <li class="hallway__item">
@@ -102,295 +113,300 @@
                 </ul>
             </div>
         </nav>
-        <section class="program">
+        <section id="program" class="program">
             <h2 class="section-title js-section-title">Программа›  Программа› Программа›  Программа›</h2>
             <div class="container">
                 <ul class="tab__triggers">
                     <li class="tab__item">
                         <button class="button tab__trigger js-tab-trigger" data-target="0">
-                            <span>9.02</span>
+                            <span>9 Февраля</span>
                         </button>
                     </li>
                     <li class="tab__item">
                         <button class="button tab__trigger js-tab-trigger" data-target="1">
-                            <span>10.02</span>
+                            <span>10 Февраля</span>
                         </button>
                     </li>
                     <li class="tab__item">
                         <button class="button tab__trigger js-tab-trigger" data-target="2">
-                            <span>11.02</span>
+                            <span>11 Февраля</span>
                         </button>
                     </li>
                 </ul>
                 <h3 class="program__title">Открытая защита проектов-финалистов</h3>
-                <div class="program__table program-table tab__body js-tab" data-index="0">
-                    <div class="program-table__row">
-                        <div class="program-table__main-column">
-                            <div class="program-table__cell program-table__cell_head">Зал 1</div>
-                            <div class="program-table__column">
-                                <div class="program-table__cell">
-                                    <span class="program-table__time">10:30</span>
-                                    <span class="program-table__name">лучшее автомобильное событие</span>
+                <div class="program__tables">
+                    <div class="program__table program-table tab__body js-tab" data-index="0">
+                        <div class="program-table__row">
+                            <div class="program-table__main-column">
+                                <div class="program-table__cell program-table__cell_head">Зал 1</div>
+                                <div class="program-table__column">
+                                    <div class="program-table__cell">
+                                        <span class="program-table__time">10:30</span>
+                                        <span class="program-table__name">лучшее автомобильное событие</span>
+                                    </div>
+                                    <div class="program-table__cell accent">
+                                        <span class="program-table__time">10:30</span>
+                                        <span class="program-table__name">лучшее автомобильное событие</span>
+                                    </div>
+                                    <div class="program-table__cell">
+                                        <span class="program-table__time">10:30</span>
+                                        <span class="program-table__name">лучшее событие</span>
+                                    </div>
+                                    <div class="program-table__cell">
+                                        <span class="program-table__time">10:30</span>
+                                        <span class="program-table__name">лучшее автомобильное событие</span>
+                                    </div>
                                 </div>
-                                <div class="program-table__cell accent">
-                                    <span class="program-table__time">10:30</span>
-                                    <span class="program-table__name">лучшее автомобильное событие</span>
+                            </div>
+                            <div class="program-table__main-column">
+                                <div class="program-table__cell program-table__cell_head">Зал 2</div>
+                                <div class="program-table__column">
+                                    <div class="program-table__cell">
+                                        <span class="program-table__time">10:30</span>
+                                        <span class="program-table__name">лучшее автомобильное событие</span>
+                                    </div>
+                                    <div class="program-table__cell accent">
+                                        <span class="program-table__time">10:30</span>
+                                        <span class="program-table__name">лучшее автомобильное событие</span>
+                                    </div>
+                                    <div class="program-table__cell">
+                                        <span class="program-table__time">10:30</span>
+                                        <span class="program-table__name">лучшее событие</span>
+                                    </div>
+                                    <div class="program-table__cell">
+                                        <span class="program-table__time">10:30</span>
+                                        <span class="program-table__name">лучшее автомобильное событие</span>
+                                    </div>
                                 </div>
-                                <div class="program-table__cell">
-                                    <span class="program-table__time">10:30</span>
-                                    <span class="program-table__name">лучшее событие</span>
+                            </div>
+                            <div class="program-table__main-column">
+                                <div class="program-table__cell program-table__cell_head">Зал 3</div>
+                                <div class="program-table__column">
+                                    <div class="program-table__cell">
+                                        <span class="program-table__time">10:30</span>
+                                        <span class="program-table__name">лучшее автомобильное событие</span>
+                                    </div>
+                                    <div class="program-table__cell">
+                                        <span class="program-table__time">10:30</span>
+                                        <span class="program-table__name">лучшее автомобильное событие</span>
+                                    </div>
+                                    <div class="program-table__cell">
+                                        <span class="program-table__time">10:30</span>
+                                        <span class="program-table__name">лучшее событие</span>
+                                    </div>
+                                    <div class="program-table__cell">
+                                        <span class="program-table__time">10:30</span>
+                                        <span class="program-table__name">лучшее автомобильное событие</span>
+                                    </div>
                                 </div>
-                                <div class="program-table__cell">
-                                    <span class="program-table__time">10:30</span>
-                                    <span class="program-table__name">лучшее автомобильное событие</span>
+                            </div>
+                            <div class="program-table__main-column">
+                                <div class="program-table__cell program-table__cell_head">Зал 4</div>
+                                <div class="program-table__column">
+                                    <div class="program-table__cell">
+                                        <span class="program-table__time">10:30</span>
+                                        <span class="program-table__name">лучшее автомобильное событие</span>
+                                    </div>
+                                    <div class="program-table__cell">
+                                        <span class="program-table__time">10:30</span>
+                                        <span class="program-table__name">лучшее автомобильное событие</span>
+                                    </div>
+                                    <div class="program-table__cell">
+                                        <span class="program-table__time">10:30</span>
+                                        <span class="program-table__name">лучшее событие</span>
+                                    </div>
+                                    <div class="program-table__cell">
+                                        <span class="program-table__time">10:30</span>
+                                        <span class="program-table__name">лучшее автомобильное событие</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="program-table__main-column">
-                            <div class="program-table__cell program-table__cell_head">Зал 2</div>
-                            <div class="program-table__column">
-                                <div class="program-table__cell">
-                                    <span class="program-table__time">10:30</span>
-                                    <span class="program-table__name">лучшее автомобильное событие</span>
+                    </div>
+                    <div class="program__table program-table tab__body js-tab" data-index="1">
+                        <div class="program-table__row">
+                            <div class="program-table__main-column">
+                                <div class="program-table__cell program-table__cell_head">Зал 1</div>
+                                <div class="program-table__column">
+                                    <div class="program-table__cell accent">
+                                        <span class="program-table__time">10:30</span>
+                                        <span class="program-table__name">лучшее автомобильное событие</span>
+                                    </div>
+                                    <div class="program-table__cell">
+                                        <span class="program-table__time">10:30</span>
+                                        <span class="program-table__name">лучшее автомобильное событие</span>
+                                    </div>
+                                    <div class="program-table__cell">
+                                        <span class="program-table__time">10:30</span>
+                                        <span class="program-table__name">лучшее событие</span>
+                                    </div>
+                                    <div class="program-table__cell">
+                                        <span class="program-table__time">10:30</span>
+                                        <span class="program-table__name">лучшее автомобильное событие</span>
+                                    </div>
                                 </div>
-                                <div class="program-table__cell accent">
-                                    <span class="program-table__time">10:30</span>
-                                    <span class="program-table__name">лучшее автомобильное событие</span>
+                            </div>
+                            <div class="program-table__main-column">
+                                <div class="program-table__cell program-table__cell_head">Зал 2</div>
+                                <div class="program-table__column">
+                                    <div class="program-table__cell">
+                                        <span class="program-table__time">10:30</span>
+                                        <span class="program-table__name">лучшее автомобильное событие</span>
+                                    </div>
+                                    <div class="program-table__cell accent">
+                                        <span class="program-table__time">10:30</span>
+                                        <span class="program-table__name">лучшее автомобильное событие</span>
+                                    </div>
+                                    <div class="program-table__cell">
+                                        <span class="program-table__time">10:30</span>
+                                        <span class="program-table__name">лучшее событие</span>
+                                    </div>
+                                    <div class="program-table__cell">
+                                        <span class="program-table__time">10:30</span>
+                                        <span class="program-table__name">лучшее автомобильное событие</span>
+                                    </div>
                                 </div>
-                                <div class="program-table__cell">
-                                    <span class="program-table__time">10:30</span>
-                                    <span class="program-table__name">лучшее событие</span>
+                            </div>
+                            <div class="program-table__main-column">
+                                <div class="program-table__cell program-table__cell_head">Зал 3</div>
+                                <div class="program-table__column">
+                                    <div class="program-table__cell accent">
+                                        <span class="program-table__time">10:30</span>
+                                        <span class="program-table__name">лучшее автомобильное событие</span>
+                                    </div> 
+                                    <div class="program-table__cell accent">
+                                        <span class="program-table__time">10:30</span>
+                                        <span class="program-table__name">лучшее автомобильное событие</span>
+                                    </div>
+                                    <div class="program-table__cell">
+                                        <span class="program-table__time">10:30</span>
+                                        <span class="program-table__name">лучшее событие</span>
+                                    </div>
+                                    <div class="program-table__cell">
+                                        <span class="program-table__time">10:30</span>
+                                        <span class="program-table__name">лучшее автомобильное событие</span>
+                                    </div>
                                 </div>
-                                <div class="program-table__cell">
-                                    <span class="program-table__time">10:30</span>
-                                    <span class="program-table__name">лучшее автомобильное событие</span>
+                            </div>
+                            <div class="program-table__main-column">
+                                <div class="program-table__cell program-table__cell_head">Зал 4</div>
+                                <div class="program-table__column">
+                                    <div class="program-table__cell">
+                                        <span class="program-table__time">10:30</span>
+                                        <span class="program-table__name">лучшее автомобильное событие</span>
+                                    </div>
+                                    <div class="program-table__cell">
+                                        <span class="program-table__time">10:30</span>
+                                        <span class="program-table__name">лучшее автомобильное событие</span>
+                                    </div>
+                                    <div class="program-table__cell">
+                                        <span class="program-table__time">10:30</span>
+                                        <span class="program-table__name">лучшее событие</span>
+                                    </div>
+                                    <div class="program-table__cell">
+                                        <span class="program-table__time">10:30</span>
+                                        <span class="program-table__name">лучшее автомобильное событие</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="program-table__main-column">
-                            <div class="program-table__cell program-table__cell_head">Зал 3</div>
-                            <div class="program-table__column">
-                                <div class="program-table__cell">
-                                    <span class="program-table__time">10:30</span>
-                                    <span class="program-table__name">лучшее автомобильное событие</span>
-                                </div>
-                                <div class="program-table__cell">
-                                    <span class="program-table__time">10:30</span>
-                                    <span class="program-table__name">лучшее автомобильное событие</span>
-                                </div>
-                                <div class="program-table__cell">
-                                    <span class="program-table__time">10:30</span>
-                                    <span class="program-table__name">лучшее событие</span>
-                                </div>
-                                <div class="program-table__cell">
-                                    <span class="program-table__time">10:30</span>
-                                    <span class="program-table__name">лучшее автомобильное событие</span>
+                    </div>
+                    <div class="program__table program-table tab__body js-tab" data-index="2">
+                        <div class="program-table__row">
+                            <div class="program-table__main-column">
+                                <div class="program-table__cell program-table__cell_head">Зал 1</div>
+                                <div class="program-table__column">
+                                    <div class="program-table__cell">
+                                        <span class="program-table__time">10:30</span>
+                                        <span class="program-table__name">лучшее автомобильное событие</span>
+                                    </div>
+                                    <div class="program-table__cell accent">
+                                        <span class="program-table__time">10:30</span>
+                                        <span class="program-table__name">лучшее автомобильное событие</span>
+                                    </div>
+                                    <div class="program-table__cell">
+                                        <span class="program-table__time">10:30</span>
+                                        <span class="program-table__name">лучшее событие</span>
+                                    </div>
+                                    <div class="program-table__cell">
+                                        <span class="program-table__time">10:30</span>
+                                        <span class="program-table__name">лучшее автомобильное событие</span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="program-table__main-column">
-                            <div class="program-table__cell program-table__cell_head">Зал 4</div>
-                            <div class="program-table__column">
-                                <div class="program-table__cell">
-                                    <span class="program-table__time">10:30</span>
-                                    <span class="program-table__name">лучшее автомобильное событие</span>
+                            <div class="program-table__main-column">
+                                <div class="program-table__cell program-table__cell_head">Зал 2</div>
+                                <div class="program-table__column">
+                                    <div class="program-table__cell">
+                                        <span class="program-table__time">10:30</span>
+                                        <span class="program-table__name">лучшее автомобильное событие</span>
+                                    </div>
+                                    <div class="program-table__cell accent">
+                                        <span class="program-table__time">10:30</span>
+                                        <span class="program-table__name">лучшее автомобильное событие</span>
+                                    </div>
+                                    <div class="program-table__cell">
+                                        <span class="program-table__time">10:30</span>
+                                        <span class="program-table__name">лучшее событие</span>
+                                    </div>
+                                    <div class="program-table__cell">
+                                        <span class="program-table__time">10:30</span>
+                                        <span class="program-table__name">лучшее автомобильное событие</span>
+                                    </div>
                                 </div>
-                                <div class="program-table__cell">
-                                    <span class="program-table__time">10:30</span>
-                                    <span class="program-table__name">лучшее автомобильное событие</span>
+                            </div>
+                            <div class="program-table__main-column">
+                                <div class="program-table__cell program-table__cell_head">Зал 3</div>
+                                <div class="program-table__column">
+                                    <div class="program-table__cell">
+                                        <span class="program-table__time">10:30</span>
+                                        <span class="program-table__name">лучшее автомобильное событие</span>
+                                    </div>
+                                    <div class="program-table__cell">
+                                        <span class="program-table__time">10:30</span>
+                                        <span class="program-table__name">лучшее автомобильное событие</span>
+                                    </div>
+                                    <div class="program-table__cell">
+                                        <span class="program-table__time">10:30</span>
+                                        <span class="program-table__name">лучшее событие</span>
+                                    </div>
+                                    <div class="program-table__cell">
+                                        <span class="program-table__time">10:30</span>
+                                        <span class="program-table__name">лучшее автомобильное событие</span>
+                                    </div>
                                 </div>
-                                <div class="program-table__cell">
-                                    <span class="program-table__time">10:30</span>
-                                    <span class="program-table__name">лучшее событие</span>
-                                </div>
-                                <div class="program-table__cell">
-                                    <span class="program-table__time">10:30</span>
-                                    <span class="program-table__name">лучшее автомобильное событие</span>
+                            </div>
+                            <div class="program-table__main-column">
+                                <div class="program-table__cell program-table__cell_head">Зал 4</div>
+                                <div class="program-table__column">
+                                    <div class="program-table__cell">
+                                        <span class="program-table__time">10:30</span>
+                                        <span class="program-table__name">лучшее автомобильное событие</span>
+                                    </div>
+                                    <div class="program-table__cell">
+                                        <span class="program-table__time">10:30</span>
+                                        <span class="program-table__name">лучшее автомобильное событие</span>
+                                    </div>
+                                    <div class="program-table__cell">
+                                        <span class="program-table__time">10:30</span>
+                                        <span class="program-table__name">лучшее событие</span>
+                                    </div>
+                                    <div class="program-table__cell">
+                                        <span class="program-table__time">10:30</span>
+                                        <span class="program-table__name">лучшее автомобильное событие</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="program__table program-table tab__body js-tab" data-index="1">
-                    <div class="program-table__row">
-                        <div class="program-table__main-column">
-                            <div class="program-table__cell program-table__cell_head">Зал 1</div>
-                            <div class="program-table__column">
-                                <div class="program-table__cell accent">
-                                    <span class="program-table__time">10:30</span>
-                                    <span class="program-table__name">лучшее автомобильное событие</span>
-                                </div>
-                                <div class="program-table__cell">
-                                    <span class="program-table__time">10:30</span>
-                                    <span class="program-table__name">лучшее автомобильное событие</span>
-                                </div>
-                                <div class="program-table__cell">
-                                    <span class="program-table__time">10:30</span>
-                                    <span class="program-table__name">лучшее событие</span>
-                                </div>
-                                <div class="program-table__cell">
-                                    <span class="program-table__time">10:30</span>
-                                    <span class="program-table__name">лучшее автомобильное событие</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="program-table__main-column">
-                            <div class="program-table__cell program-table__cell_head">Зал 2</div>
-                            <div class="program-table__column">
-                                <div class="program-table__cell">
-                                    <span class="program-table__time">10:30</span>
-                                    <span class="program-table__name">лучшее автомобильное событие</span>
-                                </div>
-                                <div class="program-table__cell accent">
-                                    <span class="program-table__time">10:30</span>
-                                    <span class="program-table__name">лучшее автомобильное событие</span>
-                                </div>
-                                <div class="program-table__cell">
-                                    <span class="program-table__time">10:30</span>
-                                    <span class="program-table__name">лучшее событие</span>
-                                </div>
-                                <div class="program-table__cell">
-                                    <span class="program-table__time">10:30</span>
-                                    <span class="program-table__name">лучшее автомобильное событие</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="program-table__main-column">
-                            <div class="program-table__cell program-table__cell_head">Зал 3</div>
-                            <div class="program-table__column">
-                                <div class="program-table__cell accent">
-                                    <span class="program-table__time">10:30</span>
-                                    <span class="program-table__name">лучшее автомобильное событие</span>
-                                </div> 
-                                <div class="program-table__cell accent">
-                                    <span class="program-table__time">10:30</span>
-                                    <span class="program-table__name">лучшее автомобильное событие</span>
-                                </div>
-                                <div class="program-table__cell">
-                                    <span class="program-table__time">10:30</span>
-                                    <span class="program-table__name">лучшее событие</span>
-                                </div>
-                                <div class="program-table__cell">
-                                    <span class="program-table__time">10:30</span>
-                                    <span class="program-table__name">лучшее автомобильное событие</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="program-table__main-column">
-                            <div class="program-table__cell program-table__cell_head">Зал 4</div>
-                            <div class="program-table__column">
-                                <div class="program-table__cell">
-                                    <span class="program-table__time">10:30</span>
-                                    <span class="program-table__name">лучшее автомобильное событие</span>
-                                </div>
-                                <div class="program-table__cell">
-                                    <span class="program-table__time">10:30</span>
-                                    <span class="program-table__name">лучшее автомобильное событие</span>
-                                </div>
-                                <div class="program-table__cell">
-                                    <span class="program-table__time">10:30</span>
-                                    <span class="program-table__name">лучшее событие</span>
-                                </div>
-                                <div class="program-table__cell">
-                                    <span class="program-table__time">10:30</span>
-                                    <span class="program-table__name">лучшее автомобильное событие</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="program__table program-table tab__body js-tab" data-index="2">
-                    <div class="program-table__row">
-                        <div class="program-table__main-column">
-                            <div class="program-table__cell program-table__cell_head">Зал 1</div>
-                            <div class="program-table__column">
-                                <div class="program-table__cell">
-                                    <span class="program-table__time">10:30</span>
-                                    <span class="program-table__name">лучшее автомобильное событие</span>
-                                </div>
-                                <div class="program-table__cell accent">
-                                    <span class="program-table__time">10:30</span>
-                                    <span class="program-table__name">лучшее автомобильное событие</span>
-                                </div>
-                                <div class="program-table__cell">
-                                    <span class="program-table__time">10:30</span>
-                                    <span class="program-table__name">лучшее событие</span>
-                                </div>
-                                <div class="program-table__cell">
-                                    <span class="program-table__time">10:30</span>
-                                    <span class="program-table__name">лучшее автомобильное событие</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="program-table__main-column">
-                            <div class="program-table__cell program-table__cell_head">Зал 2</div>
-                            <div class="program-table__column">
-                                <div class="program-table__cell">
-                                    <span class="program-table__time">10:30</span>
-                                    <span class="program-table__name">лучшее автомобильное событие</span>
-                                </div>
-                                <div class="program-table__cell accent">
-                                    <span class="program-table__time">10:30</span>
-                                    <span class="program-table__name">лучшее автомобильное событие</span>
-                                </div>
-                                <div class="program-table__cell">
-                                    <span class="program-table__time">10:30</span>
-                                    <span class="program-table__name">лучшее событие</span>
-                                </div>
-                                <div class="program-table__cell">
-                                    <span class="program-table__time">10:30</span>
-                                    <span class="program-table__name">лучшее автомобильное событие</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="program-table__main-column">
-                            <div class="program-table__cell program-table__cell_head">Зал 3</div>
-                            <div class="program-table__column">
-                                <div class="program-table__cell">
-                                    <span class="program-table__time">10:30</span>
-                                    <span class="program-table__name">лучшее автомобильное событие</span>
-                                </div>
-                                <div class="program-table__cell">
-                                    <span class="program-table__time">10:30</span>
-                                    <span class="program-table__name">лучшее автомобильное событие</span>
-                                </div>
-                                <div class="program-table__cell">
-                                    <span class="program-table__time">10:30</span>
-                                    <span class="program-table__name">лучшее событие</span>
-                                </div>
-                                <div class="program-table__cell">
-                                    <span class="program-table__time">10:30</span>
-                                    <span class="program-table__name">лучшее автомобильное событие</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="program-table__main-column">
-                            <div class="program-table__cell program-table__cell_head">Зал 4</div>
-                            <div class="program-table__column">
-                                <div class="program-table__cell">
-                                    <span class="program-table__time">10:30</span>
-                                    <span class="program-table__name">лучшее автомобильное событие</span>
-                                </div>
-                                <div class="program-table__cell">
-                                    <span class="program-table__time">10:30</span>
-                                    <span class="program-table__name">лучшее автомобильное событие</span>
-                                </div>
-                                <div class="program-table__cell">
-                                    <span class="program-table__time">10:30</span>
-                                    <span class="program-table__name">лучшее событие</span>
-                                </div>
-                                <div class="program-table__cell">
-                                    <span class="program-table__time">10:30</span>
-                                    <span class="program-table__name">лучшее автомобильное событие</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="button-holder">
+                    <a href="./network.html" class="button button_big button_bg">Список гостей</a>
                 </div>
             </div>
         </section>
-        <section class="gallery">
-            <h2 class="section-title js-section-title">›Bema Backstage  ›Bema Backstage ›Bema Backstage  ›Bema Backstage</h2>
+        <section id="gallery" class="gallery">
+            <h2 class="section-title js-section-title">›bema!Backstage  ›bema!Backstage ›bema!Backstage  ›bema!Backstage</h2>
             <div class="container">
                 <div class="gallery__swiper-wrap">
                     <div class="gallery__swiper js-gallery-swiper">
@@ -454,7 +470,7 @@
                 </div>
             </div>
         </section>
-        <section class="help">
+        <section id="help" class="help">
             <h2 class="section-title js-section-title">›help‹ ›help‹ ›help‹ ›help‹ ›help‹ ›help‹</h2>
             <div class="container">
                 <form class="help__form form">
@@ -476,8 +492,88 @@
                 </form>
             </div>
         </section>
-        <section class="partners">
+        <section id="founders" class="founders experts">
+            <h2 class="section-title js-section-title">учредители фестиваля‹  учредители фестиваля‹  учредители фестиваля‹</h2>
+            <div class="container">
+                <ul class="experts__grid">
+                    <li class="experts__item expert-item">
+                        <img src="https://content.skyscnr.com/m/5462d448281ea355/original/GettyImages-468945589.jpg?resize=1800px:1800px&quality=100" alt="Фото эксперта" class="expert-item__img">
+                        <div class="expert-item__data">
+                            <span class="expert-item__name">МАРАТ АБДУЛЛИН</span>
+                            <span class="expert-item__position">Директор по маркетингу СберАвтопарк</span>
+                        </div>
+                    </li>
+                    <li class="experts__item expert-item">
+                        <img src="./img/the-expert-1.jpg" alt="Фото эксперта" class="expert-item__img">
+                        <div class="expert-item__data">
+                            <span class="expert-item__name">МАРАТ АБДУЛЛИН</span>
+                            <span class="expert-item__position">Директор по маркетингу СберАвтопарк</span>
+                        </div>
+                    </li>
+                    <li class="experts__item expert-item">
+                        <img src="./img/the-expert-1.jpg" alt="Фото эксперта" class="expert-item__img">
+                        <div class="expert-item__data">
+                            <span class="expert-item__name">МАРАТ АБДУЛЛИН</span>
+                            <span class="expert-item__position">Директор по маркетингу СберАвтопарк</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section id="partners" class="partners">
             <h2 class="section-title js-section-title">›партнеры ›партнеры ›партнеры ›партнеры ›партнеры ›партнеры</h2>
+            <div class="container">
+                <ul class="partners__list">
+                    <li class="partner-item">
+                        <img src="./img/partner-logo-4.png" alt="Лого партнёра" class="partner-item__img">
+                    </li>
+                    <li class="partner-item">
+                        <img src="./img/partner-logo-3.png" alt="Лого партнёра" class="partner-item__img">
+                    </li>
+                    <li class="partner-item">
+                        <img src="./img/partner-logo-2.png" alt="Лого партнёра" class="partner-item__img">
+                    </li>
+                    <li class="partner-item">
+                        <img src="./img/partner-logo-1.png" alt="Лого партнёра" class="partner-item__img">
+                    </li>
+                    <li class="partner-item">
+                        <img src="./img/partner-logo-4.png" alt="Лого партнёра" class="partner-item__img">
+                    </li>
+                    <li class="partner-item">
+                        <img src="./img/partner-logo-3.png" alt="Лого партнёра" class="partner-item__img">
+                    </li>
+                    <li class="partner-item">
+                        <img src="./img/partner-logo-2.png" alt="Лого партнёра" class="partner-item__img">
+                    </li>
+                    <li class="partner-item">
+                        <img src="./img/partner-logo-1.png" alt="Лого партнёра" class="partner-item__img">
+                    </li>
+                    <li class="partner-item">
+                        <img src="./img/partner-logo-4.png" alt="Лого партнёра" class="partner-item__img">
+                    </li>
+                    <li class="partner-item">
+                        <img src="./img/partner-logo-3.png" alt="Лого партнёра" class="partner-item__img">
+                    </li>
+                    <li class="partner-item">
+                        <img src="./img/partner-logo-2.png" alt="Лого партнёра" class="partner-item__img">
+                    </li>
+                    <li class="partner-item">
+                        <img src="./img/partner-logo-1.png" alt="Лого партнёра" class="partner-item__img">
+                    </li>
+                    <li class="partner-item">
+                        <img src="./img/partner-logo-4.png" alt="Лого партнёра" class="partner-item__img">
+                    </li>
+                    <li class="partner-item">
+                        <img src="./img/partner-logo-3.png" alt="Лого партнёра" class="partner-item__img">
+                    </li>
+                    <li class="partner-item">
+                        <img src="./img/partner-logo-2.png" alt="Лого партнёра" class="partner-item__img">
+                    </li>
+                    <li class="partner-item">
+                        <img src="./img/partner-logo-1.png" alt="Лого партнёра" class="partner-item__img">
+                    </li>
+                </ul>
+            </div>
         </section>
     </main>
     <footer class="footer">
@@ -498,20 +594,31 @@
                                 <img src="./img/fb-icon.png" alt="Лого в ссылке">
                             </a>
                         </li>
+                        <li class="footer__logos-item">
+                            <a href="#" class="footer__logos-link">
+                                <img src="./img/site-icon.png" alt="Лого в ссылке">
+                            </a>
+                        </li>
                     </ul>
                 </div>
-                <ul class="footer__contacts">
-                    <li class="footer__item">
-                        <a href="tel:+79100000000" class="footer__link">+7 (910) 000-00-00</a>
-                    </li>
-                    <li class="footer__item">
-                        <a href="mailto:ivanov@mail.ru" class="footer__link">Ivanov@mail.ru</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="footer__bottom">
-                <small class="footer__copyright">© 2021 best experience marketing awards!</small>
-                <a href="#" class="footer__copyright">Политикa конфиденциальности</a>
+                <div class="footer__col">
+                    <ul class="footer__contacts">
+                        <li class="footer__item">
+                            <a href="tel:+79100000000" class="footer__link">+7 (910) 000-00-00</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="mailto:ivanov@mail.ru" class="footer__link">Ivanov@mail.ru</a>
+                        </li>
+                    </ul>
+                    <small class="footer__copyright">© 2021 best experience marketing awards!</small>
+                </div>
+                <div class="footer__col">
+                    <a href="index.html" class="logo logo_footer">
+                        Powered by
+                        <img src="./img/vudu_logo.svg" alt="Логотип" class="logo__img">
+                    </a>
+                    <a href="#" class="footer__copyright">Политикa конфиденциальности</a>
+                </div>
             </div>
         </div>
     </footer>
