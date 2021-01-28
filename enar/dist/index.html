@@ -374,12 +374,12 @@
                             </div>
                             <div class="form__col">
                                 <div class="form__input">
-                                    <input name="user_phone" type="tel" placeholder="Номер телефона">
+                                    <input name="user_phone" type="tel" placeholder="Номер телефона" required>
                                 </div>
                             </div>
                             <div class="form__col">
                                 <div class="form__input">
-                                    <input name="user_mail" type="email" placeholder="Электронная почта">
+                                    <input name="user_mail" type="email" placeholder="Электронная почта" required>
                                 </div>
                             </div>
                         </div>
@@ -409,12 +409,12 @@
                     </div>
                     <div class="form__col">
                         <div class="form__input">
-                            <input name="user_phone" type="tel" placeholder="Номер телефона">
+                            <input name="user_phone" type="tel" placeholder="Номер телефона" required>
                         </div>
                     </div>
                     <div class="form__col">
                         <div class="form__input">
-                            <input name="user_mail" type="email" placeholder="Адрес электронной почты">
+                            <input name="user_mail" type="email" placeholder="Адрес электронной почты" required>
                         </div>
                     </div>
                     <div class="form__col">
@@ -645,37 +645,10 @@
         </div>
     </div>
 
-    <div class="popup popup_more js-popup js-popup-close js-popup-map">
+    <div class="popup popup_map js-popup js-popup-close js-popup-map">
         <div class="popup__body">
-            <div class="popup__container">
-                <button class="button popup__close js-popup-close" style="margin-bottom: 70px;"></button>
-                <h2 class="popup__title">Оформление <br> разрешительной документации</h2>
-                <p class="popup__text">Мы возьмем на себя обязательства по подготовке полного перечня необходимых разрешительных документов.</p>
-                <ul class="popup__list">
-                    <li>
-                        Декларация соответствия
-                    </li>
-                    <li>
-                        Сертификат соответствия
-                    </li>
-                    <li>
-                        Нотификации ФСБ
-                    </li>
-                    <li>
-                        Лицензии
-                    </li>
-                    <li>
-                        Заключение ФСТЭК
-                    </li>
-                    <li>
-                        Фитосанитарные сертификаты
-                    </li>
-                    <li>
-                        Разрешение на временный ввоз и др.
-                    </li>
-                </ul>
-                <button class="button popup__request js-popup-trigger" data-target=".js-popup-send-request"><span class="popup__request-deco"></span>Отправить запрос</button>
-            </div>
+            <button class="button popup__close js-popup-close" style="margin-bottom: 70px;"></button>
+            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Aacafae6f2d769f30f160456fdc3fd09fb354f1bdf8b0c47c8baa16fc4263174b&amp;source=constructor" width="100%" height="300" frameborder="0"></iframe>
         </div>
     </div>
 
