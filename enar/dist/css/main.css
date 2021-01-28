@@ -185,7 +185,7 @@
 @media screen and (max-width: 400px) and (max-height: 750px) {
   .about {
     overflow-y: auto;
-    padding-bottom: 30px;
+    padding-bottom: 70px;
     padding-top: 130px;
   }
 }
@@ -216,7 +216,8 @@
 }
 
 .body {
-  height: 100vh;
+  height: 100%;
+  max-height: 100vh;
   position: relative;
 }
 
@@ -433,6 +434,10 @@ body.no-scroll, html.no-scroll {
 
 section {
   position: relative;
+}
+
+section:not(.swiper-slide-active) {
+  pointer-events: none;
 }
 
 @media screen and (max-width: 920px) {
@@ -841,6 +846,7 @@ section {
 @media screen and (max-width: 920px) {
   .faq {
     padding-top: 130px;
+    position: relative;
   }
   .faq__wrap {
     -ms-flex-direction: column;
@@ -855,7 +861,10 @@ section {
     max-width: none;
   }
   .faq__answers-list {
-    position: static;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
   }
   .faq__trigger {
     background-color: rgba(19, 24, 28, 0.68);
@@ -866,7 +875,7 @@ section {
   }
   .faq__answer {
     display: block;
-    height: 100%;
+    height: 100vh;
     left: 0;
     top: 0;
     z-index: 10;
@@ -875,6 +884,9 @@ section {
     background-color: #fff;
     transition: all 0.3s ease-out 0s;
     visibility: hidden;
+  }
+  .faq__answer-content {
+    overflow-y: auto;
   }
   .faq__answer.active {
     visibility: visible;
@@ -940,9 +952,7 @@ section {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-column-gap: 30px;
-  column-gap: 30px;
-  row-gap: 30px;
+  gap: 30px;
 }
 
 .form__row + .form__row {
@@ -1038,9 +1048,7 @@ section {
 
 @media screen and (max-width: 1640px) {
   .form__row {
-    row-gap: 25px;
-    -webkit-column-gap: 25px;
-    column-gap: 25px;
+    gap: 25px;
   }
   .form__row + .form__row {
     margin-top: 25px;
@@ -1470,6 +1478,24 @@ section {
     padding-top: 80px;
     overflow: hidden;
   }
+  .main__control {
+    font-size: 0;
+    width: 24px;
+    height: 35px;
+    background-image: url(../img/slide-next-m.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: translate(0%, 0%) rotate(0deg);
+    left: 15px;
+    bottom: 20px;
+  }
+  .main__control_back {
+    background-image: url(../img/slide-back-m.png);
+    transform: translate(0%, 0%) rotate(0deg);
+  }
+  .main__control svg {
+    display: none;
+  }
 }
 
 @media screen and (max-height: 700px) {
@@ -1588,6 +1614,18 @@ section {
   }
 }
 
+@media screen and (max-width: 720px) {
+  .outsource {
+    padding-top: 110px;
+  }
+  .outsource__content ul {
+    margin-bottom: 1em;
+  }
+  .outsource .section-title {
+    margin-bottom: 10px;
+  }
+}
+
 @media screen and (max-height: 700px) {
   .outsource {
     padding-top: 140px;
@@ -1607,7 +1645,7 @@ section {
     overflow-y: auto;
   }
   .outsource__content {
-    padding-bottom: 30px;
+    padding-bottom: 60px;
   }
 }
 
