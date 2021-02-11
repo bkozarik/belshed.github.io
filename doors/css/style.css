@@ -2752,6 +2752,10 @@ input#maxprice{
     color: #61C100;
 }
 
+.burger + a{
+    display: block;
+}
+
 .similar .slick-dots{
     display: flex;
     justify-content: space-between;

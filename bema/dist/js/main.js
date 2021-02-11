@@ -18,7 +18,7 @@ function toggleScroll(state){state=typeof state=='object'?null:state;var body=do
 else{body.classList.toggle('no-scroll');html.classList.toggle('no-scroll');}}
 function toggleMenu(state){state=typeof state=='object'?null:state;if(state==null){return function(){burger.classList.toggle('active');menu.classList.toggle('active');toggleScroll();}}
 else{state?burger.classList.add('active'):burger.classList.remove('active');state?menu.classList.add('active'):menu.classList.remove('active');state?toggleScroll(false):toggleScroll(true);}}
-function scrollLinkClick(){event.preventDefault();var targetLink=event.target;var offset=-100;toggleMenu(false);var href=targetLink.getAttribute('href');try{window.scrollTo({top:document.querySelector(href).offsetTop+offset,behavior:'smooth'});}
+function scrollLinkClick(){event.preventDefault();var targetLink=event.target;var offset=-100;toggleMenu(false);var href=targetLink.getAttribute('href');try{window.scrollTo({top:window.pageYOffset+document.querySelector(href).getBoundingClientRect().top+offset,behavior:'smooth'});}
 catch(e){console.log("Элемент "+href+" не найден!");}}
 function togglePasswordView(item){item.classList.toggle('active');var type=item.classList.contains('active')?'text':'password';item.parentNode.querySelector('input').setAttribute('type',type);}
 function dialogLinkClick(){event.preventDefault();dialogLinks.forEach(function(link){link.classList.remove('active');});this.classList.toggle('active');}

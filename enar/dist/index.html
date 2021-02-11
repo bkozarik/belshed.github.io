@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <title>Enar Logistics</title>
     <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./css/aos.css">
     <link rel="stylesheet" href="./css/main.css">
 </head>
 <body class="body">
@@ -16,10 +17,14 @@
     <header class="header">
         <div class="container container_header">
             <div class="header__wrap">
-                <a href="0" class="logo js-scroll-link">
+                <a href="#" class="logo js-scroll-link">
                     <img src="./img/logo.svg" class="logo__img" alt="Логотип">
                 </a>
-                <nav class="nav js-nav-header">
+                <div class="valutes">
+                    <ul class="valutes__list js-valutes"></ul>
+                    <a href="https://www.cbr-xml-daily.ru/" class="valutes__link">Виджет курсов валют</a>
+                </div>
+                <nav class="nav nav_header active js-nav-header">
                     <ul class="nav__list">
                         <li class="nav__item">
                             <a href="1" class="nav__link js-scroll-link">услуги</a>
@@ -47,10 +52,10 @@
     <aside class="aside">
         <ul class="button-list">
             <li class="button-list__item">
-                <button class="button button-list__button button-list__button_menu js-popup-trigger" data-target=".js-popup-menu"></button>
+                <button class="button button-list__button button-list__button_menu js-nav-trigger"></button>
             </li>
             <li class="button-list__item">
-                <button class="button button-list__button button-list__button_phone js-popup-trigger" data-target=".js-popup-recall"></button>
+                <a href="#" class="button button-list__button button-list__button_phone"></a>
             </li>
             <li class="button-list__item">
                 <button class="button button-list__button button-list__button_mail js-popup-trigger" data-target=".js-popup-send-request"></button>
@@ -95,15 +100,15 @@
             <section class="swiper-slide hero">
                 <div class="container container_shrink">
                     <div class="hero__body">
-                        <h1 class="hero__title">Доставка товаров из&nbsp;любой точки мира</h1>
-                        <ul class="hero__list">
-                            <li class="hero__item">
+                        <h1 class="hero__title" data-aos-duration="800" data-aos="fade-up">Доставка товаров из&nbsp;любой точки мира</h1>
+                        <ul class="hero__list" >
+                            <li class="hero__item" data-aos="fade-up" data-aos="fade-up" data-aos-duration="800" data-aos-delay="0">
                                 Международная логистика
                             </li>
-                            <li class="hero__item">
+                            <li class="hero__item" data-aos="fade-up" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
                                 Таможенное оформление
                             </li>
-                            <li class="hero__item">
+                            <li class="hero__item" data-aos="fade-up" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
                                 Комплексный аутсорсинг ВЭД
                             </li>
                         </ul>
@@ -302,7 +307,7 @@
                             </li>
                         </ul>
                     </div>
-                </div>
+                </div> 
             </section>
             <section class="swiper-slide about">
                 <div class="container container_large">
@@ -389,7 +394,7 @@
                         <div class="form__row">
                             <div class="form__col">
                                 <div class="form__input">
-                                    <input name="user_question" type="text" placeholder="Ваш запрос">
+                                    <textarea name="user_question" class="js-limited-textarea" placeholder="Ваш запрос"></textarea>
                                 </div>
                             </div>
                         </div>
@@ -425,7 +430,7 @@
                     </div>
                     <div class="form__col">
                         <div class="form__input">
-                            <input name="user_question" type="text" placeholder="Ваш запрос">
+                            <textarea name="user_question" class="js-limited-textarea" placeholder="Ваш запрос"></textarea>
                         </div>
                     </div>
                 </div>
@@ -471,15 +476,15 @@
                             <li class="popup__mark js-popup-mark" tabindex="0" data-index="8">
                                 Сингапур
                             </li>
+                            <li class="popup__mark js-popup-mark" tabindex="0" data-index="9"></li>
                             <li class="popup__mark js-popup-mark" tabindex="0" data-index="9">
                                 Малайзия <br>(Порт-Кланг, Пинанг, Пасир Гуданг)
                             </li>
-                            <li class="popup__mark js-popup-mark" tabindex="0" data-index="9"></li>
+                            <li class="popup__mark js-popup-mark" tabindex="0" data-index="10"></li>
                             <li class="popup__mark js-popup-mark" tabindex="0" data-index="10"></li>
                             <li class="popup__mark js-popup-mark" tabindex="0" data-index="10">
                                 Индия <br>(Нью-Дели, Калькутта, Нава-Шева)
                             </li>
-                            <li class="popup__mark js-popup-mark" tabindex="0" data-index="10"></li>
                             <li class="popup__mark js-popup-mark" tabindex="0" data-index="11">
                                 Индонезия <br>(Джакарта, Сурабая)
                             </li>
@@ -659,7 +664,8 @@
     </div>
 
     <script src="./js/swiper-bundle.min.js"></script>
+    <script src="./js/aos.js"></script>
     <script src="./js/polyfills.js"></script>
     <script src="./js/main.js"></script>
-</body> 
+</body>
 </html>
