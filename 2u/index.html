@@ -8,7 +8,7 @@
     <style>
         * {
             margin: 0;
-            font-family: 'Arial', sans-serif;
+            font-family: Arial, sans-serif;
         }
         img {
             height: auto;
@@ -131,6 +131,54 @@
             padding-top: 55px;
             padding-bottom: 55px;
         }
+        .thanks__body {
+            max-width: 600px;
+            width: 100%;
+            margin: 0 auto;
+        }
+        .thanks__message {
+            font-size: 16px;
+            font-style: italic;
+            color: #333333;
+        }
+        .thanks__position {
+            display: block;
+            padding-top: 10px;
+            padding-bottom: 5px;
+            font-size: 13px;
+            color: #5db4a8;
+        }
+        .thanks__name {
+            font-size: 14px;
+            color: #8d9499;
+        }
+
+        .footer {
+            padding-top: 30px;
+            padding-bottom: 30px;
+            width: 100%;
+        }
+        .footer__body {
+            max-width: 600px;
+            width: 100%;
+            margin: 0 auto;
+        }
+        .footer__download-link + .footer__download-link{
+            margin-left: 10px;
+        }
+        .footer__download-link {
+            display: inline-block;
+            color: #ffffff;
+        }
+        .footer__small {
+            font-size: 11px;
+            color: #b5b5b5;
+            line-height: 17px;
+        }
+        .footer__small a {
+            color: inherit;
+            font-size: inherit;
+        }
     </style>
 </head>
 <body>
@@ -230,14 +278,49 @@
                     </tr>
                 </table>
                 <table class="thanks" bgcolor="#eaeaea">
-                    <tr valign="middle">
+                    <tr>
                         <td>
-                            <img src="https://belshed.github.io/2u/img/manager.png" alt="Managers photo">
+                            <table class="thanks__body">
+                                <tr align="left" valign="middle">
+                                    <td width="125px">
+                                        <img src="https://raw.githubusercontent.com/Belshed/belshed.github.io/master/2u/img/manager.png" alt="Managers photo">
+                                    </td>
+                                    <td style="padding-left: 40px;">
+                                        <span class="thanks__message">“Thank you for your attention”</span>
+                                        <span class="thanks__position">Manager ToYou</span>
+                                        <span class="thanks__name">Ekaterina Novikova</span>
+                                    </td>
+                                </tr>
+                            </table>
                         </td>
-                        <td style="place-content: 40px;">
-                            <span class="thanks__message">“Thank you for your attention”</span>
-                            <span class="thanks__position">Manager ToYou</span>
-                            <span class="thanks__name">Ekaterina Novikova</span>
+                    </tr>
+                </table>
+                <table class="footer" bgcolor="#414141">
+                    <tr>
+                        <td>
+                            <table class="footer__body">
+                                <tr valign="middle">
+                                    <td>
+                                        <a class="footer__download-link" href="">
+                                            <img src="https://raw.githubusercontent.com/Belshed/belshed.github.io/master/2u/img/download-ios.png" alt="Download for iOS">
+                                        </a>
+                                        <a class="footer__download-link" href="">
+                                            <img src="https://raw.githubusercontent.com/Belshed/belshed.github.io/master/2u/img/download-android.png" alt="Download for Android">
+                                        </a>
+                                    </td>
+                                    <td>
+                                        
+                                    </td>
+                                </tr>
+                                <tr valign="bottom">
+                                    <td style="padding-top: 15px;">
+                                        <span class="footer__small">You received this email because you are registered on toyou.io. <br> This letter does not require a response. <a href="#">Unsubscribe</a></span>
+                                    </td>
+                                    <td align="right">
+                                        <span class="footer__small">© 2021 Aram Meem LLC</span>
+                                    </td>
+                                </tr>
+                            </table>
                         </td>
                     </tr>
                 </table>
