@@ -11,8 +11,10 @@
             font-family: 'Arial', sans-serif;
         }
         img {
+            height: auto;
             max-width: 100%;
         }
+
         .header {
             padding-top: 10px;
             width: 100%;
@@ -21,9 +23,11 @@
             font-size: 11px;
             color: #939292;
         }
+
         .logo {
             padding-top: 20px;
         }
+
         .hero {
             padding-top: 15px;
         }
@@ -75,16 +79,50 @@
             border: 2px solid #ffffff;
             padding: 5px 20px;
         }
+
         .benefits{
             max-width: 640px;
             width: 100%;
             margin: 0 auto;
+            padding-top: 60px;
         }
         .benefits__text {
             max-width: 180px;
             font-size: 14px;
             line-height: 22px;
             padding-top: 22px;
+        }
+        .benefits__img {
+            height: 60px;
+            width: auto;
+        }
+
+        .buy {
+            padding-top: 40px;
+            max-width: 640px;
+        }
+        .buy__title {
+            font-size: 42px;
+            color: #020102;
+            text-align: center;
+        }
+        .buy__list {
+            padding-top: 25px;
+        }
+        
+        .buy-item__title{
+            font-weight: bold;
+            padding-top: 15px;
+            display: block;
+        }
+        .buy-item__text {
+            padding-top: 5px;
+        }
+        .buy-item__title, .buy-item__text {
+            font-size: 17px;
+            text-align: center;
+            max-width: 190px;
+            color: #343434;
         }
     </style>
 </head>
@@ -140,17 +178,47 @@
                 </table>
                 <table class="benefits" align="center">
                     <tr>
-                        <td align="center">
+                        <td valign="top" align="center">
                             <img src="https://raw.githubusercontent.com/Belshed/belshed.github.io/master/2u/img/benefit-1.png" alt="Icon" class="benefits__img">
                             <p class="benefits__text">M-commerce, logistics, and a full-scope chat system. All on one platform.</p>
                         </td>
-                        <td align="center" style="border-left: 30px solid transparent;">
+                        <td valign="top" align="center" style="border-left: 30px solid transparent;">
                             <img src="https://raw.githubusercontent.com/Belshed/belshed.github.io/master/2u/img/benefit-2.png" alt="Icon" class="benefits__img">
                             <p class="benefits__text">Serving everyone. From customers to businesses. And from licensed service providers to vehicle owners.</p>
                         </td>
-                        <td align="center" style="border-left: 30px solid transparent;">
+                        <td valign="top" align="center" style="border-left: 30px solid transparent;">
                             <img src="https://raw.githubusercontent.com/Belshed/belshed.github.io/master/2u/img/benefit-3.png" alt="Icon" class="benefits__img">
                             <p class="benefits__text">ToYou brings a world of opportunities to everyone; it revives businesses.</p>
+                        </td>
+                    </tr>
+                </table>
+                <table class="buy">
+                    <tr>
+                        <td>
+                            <h2 class="buy__title">What are you looking to buy?</h2>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <table class="buy__list">
+                                <tr>
+                                    <td class="buy-item" align="center" valign="top">
+                                        <img src="https://belshed.github.io/2u/img/buy-1.png" alt="" class="buy-item__img">
+                                        <span class="buy-item__title">Promotions</span>
+                                        <p class="buy-item__text">Delivery from 5 SAR</p>
+                                    </td>
+                                    <td class="buy-item" align="center" valign="top" style="padding-left: 22px;">
+                                        <img src="https://belshed.github.io/2u/img/buy-2.png" alt="" class="buy-item__img">
+                                        <span class="buy-item__title">Fire Delivery</span>
+                                        <p class="buy-item__text">90% discount on shipping</p>
+                                    </td>
+                                    <td class="buy-item" align="center" valign="top" style="padding-left: 22px;">
+                                        <img src="https://belshed.github.io/2u/img/buy-3.png" alt="" class="buy-item__img">
+                                        <span class="buy-item__title">Free Delivery</span>
+                                        <p class="buy-item__text">For all cities</p>
+                                    </td>
+                                </tr>
+                            </table>
                         </td>
                     </tr>
                 </table>
