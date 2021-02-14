@@ -11,6 +11,7 @@
             font-family: Arial, sans-serif;
         }
         img {
+            display: block;
             height: auto;
             max-width: 100%;
         }
@@ -49,16 +50,17 @@
             font-size: 14px;
             font-weight: bold;
             color: #ffffff;
-            background-color: #5db4a8;
-            padding: 10px 40px;
-            text-decoration: none;
-            border-radius: 30px;
+        }
+        .hero__button img {
+            height: 30px;
+            width: 100px;
         }
 
         .allah {
             width: 100%;
             padding-top: 74px;
             padding-bottom: 84px;
+            background-color: #308ba5;
             background-image: url(https://raw.githubusercontent.com/Belshed/belshed.github.io/master/2u/img/background_church.jpg);
             background-repeat: no-repeat;
             background-position: center;
@@ -75,26 +77,34 @@
         }
         .allah__link {
             text-transform: uppercase;
-            color: #ffffff;
+            color: #000000;
             font-size: 14px;
             text-decoration: none;
-            border-radius: 30px;
-            font-weight: bold;
-            border: 2px solid #ffffff;
-            padding: 5px 20px;
+        }
+        .allah__link img {
+            width: 125px;
+            height: 30px;
         }
 
         .benefits{
-            max-width: 640px;
+            max-width: 700px;
             width: 100%;
             margin: 0 auto;
             padding-top: 60px;
+        }
+        .benefits__item {
+            display: inline-block;
+            vertical-align: top;
+            padding-right: 20px;
+            padding-left: 20px;
+            padding-bottom: 20px;
         }
         .benefits__text {
             max-width: 180px;
             font-size: 14px;
             line-height: 22px;
             padding-top: 22px;
+            text-align: center;
         }
         .benefits__img {
             height: 60px;
@@ -102,9 +112,9 @@
         }
 
         .buy {
-            padding-top: 40px;
-            padding-bottom: 50px;
-            max-width: 640px;
+            padding-top: 20px;
+            padding-bottom: 30px;
+            max-width: 720px;
         }
         .buy__title {
             font-size: 42px;
@@ -115,10 +125,16 @@
             padding-top: 25px;
         }
         
+        .buy-item {
+            display: inline-block;
+            vertical-align: top;
+            padding-right: 20px;
+            padding-left: 20px;
+            padding-bottom: 20px;
+        }
         .buy-item__title{
             font-weight: bold;
             padding-top: 15px;
-            display: block;
         }
         .buy-item__text {
             padding-top: 5px;
@@ -128,6 +144,7 @@
             text-align: center;
             max-width: 190px;
             color: #343434;
+            display: block;
         }
 
         .thanks {
@@ -159,7 +176,7 @@
 
         .footer {
             padding-top: 30px;
-            padding-bottom: 30px;
+            padding-bottom: 20px;
             width: 100%;
         }
         .footer__body {
@@ -167,17 +184,34 @@
             width: 100%;
             margin: 0 auto;
         }
-        .footer__download-link + .footer__download-link{
-            margin-left: 10px;
+        .footer__body td, tr {
+            width: 100%;
+        }
+        .footer__col {
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 95px;
+        }
+        .footer__col + .footer__col {
+            text-align: right;
+            margin-right: 0px;
         }
         .footer__download-link {
             display: inline-block;
+            margin-right: 15px;
+            margin-bottom: 15px;
             color: #ffffff;
         }
         .footer__small {
+            display: inline-block;
             font-size: 11px;
             color: #b5b5b5;
             line-height: 17px;
+            margin-right: 155px;
+            padding-bottom: 10px;
+        }
+        .footer__small + .footer__small {
+            margin-right: 0px;
         }
         .footer__small a {
             color: inherit;
@@ -185,6 +219,7 @@
         }
         .footer__social {
             display: inline-block;
+            margin-bottom: 15px;
         }
         .footer__social + .footer__social {
             margin-left: 15px;
@@ -195,26 +230,10 @@
             .hero__title, .buy__title {
                 font-size: 36px;
             }
-
-            .benefits td, .buy__list td, .footer__body td {
-                display: block;
-                padding-bottom: 20px;
-                padding-left: 0 !important;
-            }
-
-            .footer__download-link {
-                display: block;
-            }
-            .footer__download-link + .footer__download-link{
-                margin-left: 0px;
-                margin-top: 15px;
-            }
-            .footer__social + .footer__social {
-                margin-left: 5px;
-            }
-
-            .footer__body td {
-                text-align: left;
+            
+            .allah {
+                padding-top: 50px;
+                padding-bottom: 50px;
             }
 
             .thanks__body td + td {
@@ -226,9 +245,22 @@
                 width: 110px;
             }
 
-            .allah {
-                padding-top: 50px;
-                padding-bottom: 50px;
+            .footer__body td {
+                display: block;
+                padding-bottom: 20px;
+                padding-left: 0 !important;
+            }
+
+            .footer__social + .footer__social {
+                margin-left: 5px;
+            }
+
+            .footer__body td {
+                text-align: left;
+            }
+
+            .footer__small, .footer__col {
+                margin-right: 55px;
             }
         }
     </style>
@@ -262,7 +294,9 @@
                     </tr>
                     <tr align="center">
                         <td style="padding-top: 20px;">
-                            <a href="https://toyou.io/en" class="hero__button">Try</a>
+                            <a href="https://toyou.io/en" class="hero__button">
+                                <img src="https://raw.githubusercontent.com/Belshed/belshed.github.io/master/2u/img/try.png" alt="Try">
+                            </a>
                         </td>
                     </tr>
                     <tr align="center">
@@ -274,28 +308,99 @@
                 <table class="allah" align="center" cellpadding="0" cellspacing="0">
                     <tr>
                         <td align="center">
+                            <!--[if mso]>
+                                <center>
+                                <table><tr><td width="375">
+                                <![endif]-->
                             <p class="allah__text">May Allah bring lots of happiness and blessings to your lives. Happy Ramadan Kareem! Don't forget to order something for your family in ToYou app.</p>
+                            <!--[if mso]>
+                                </td></tr></table>
+                                </center>
+                                <![endif]--> 
                         </td>
                     </tr>
                     <tr>
                         <td align="center" style="padding-top: 20px;">
-                            <a href="https://toyou.io/en" class="allah__link">To order</a>
+                            <a href="https://toyou.io/en" class="allah__link">
+                                <img src="https://raw.githubusercontent.com/Belshed/belshed.github.io/master/2u/img/2order.png" alt="To order">
+                            </a>
                         </td>
                     </tr>
                 </table>
                 <table class="benefits" align="center">
                     <tr>
                         <td valign="top" align="center">
-                            <img src="https://raw.githubusercontent.com/Belshed/belshed.github.io/master/2u/img/benefit-1.png" alt="Icon" class="benefits__img">
-                            <p class="benefits__text">M-commerce, logistics, and a full-scope chat system. All on one platform.</p>
-                        </td>
-                        <td valign="top" align="center" style="padding-left: 30px;">
-                            <img src="https://raw.githubusercontent.com/Belshed/belshed.github.io/master/2u/img/benefit-2.png" alt="Icon" class="benefits__img">
-                            <p class="benefits__text">Serving everyone. From customers to businesses. And from licensed service providers to vehicle owners.</p>
-                        </td>
-                        <td valign="top" align="center" style="padding-left: 30px;">
-                            <img src="https://raw.githubusercontent.com/Belshed/belshed.github.io/master/2u/img/benefit-3.png" alt="Icon" class="benefits__img">
-                            <p class="benefits__text">ToYou brings a world of opportunities to everyone; it revives businesses.</p>
+                            <!--[if mso]>
+                            <table>
+                            <tr><td>
+                            <![endif]-->
+                            <div class="benefits__item">
+                                <table>
+                                    <tr align="center">
+                                        <td>
+                                            <img src="https://raw.githubusercontent.com/Belshed/belshed.github.io/master/2u/img/benefit-1.png" alt="Icon" class="benefits__img">
+                                            <!--[if mso]>
+                                            <center>
+                                            <table><tr><td width="180">
+                                            <![endif]-->
+                                            <p class="benefits__text">M-commerce, logistics, and a full-scope chat system. All on one platform.</p>
+                                            <!--[if mso]>
+                                            </td></tr></table>
+                                            </center>
+                                            <![endif]--> 
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <!--[if mso]>
+                            </td>
+                            <td>
+                            <![endif]-->
+                            <div class="benefits__item">
+                                <table>
+                                    <tr align="center">
+                                        <td>
+                                            <img src="https://raw.githubusercontent.com/Belshed/belshed.github.io/master/2u/img/benefit-2.png" alt="Icon" class="benefits__img">
+                                            <!--[if mso]>
+                                            <center>
+                                            <table><tr><td width="180">
+                                            <![endif]-->
+                                            <p class="benefits__text">Serving everyone. From customers to businesses. And from licensed service providers to vehicle owners.</p>
+                                            <!--[if mso]>
+                                            </td></tr></table>
+                                            </center>
+                                            <![endif]--> 
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <!--[if mso]>
+                            </td>
+                            <td>
+                            <![endif]-->
+                            <div class="benefits__item">
+                                <table>
+                                    <tr align="center">
+                                        <td>
+                                            <img src="https://raw.githubusercontent.com/Belshed/belshed.github.io/master/2u/img/benefit-3.png" alt="Icon" class="benefits__img">
+                                            <!--[if mso]>
+                                            <center>
+                                            <table><tr><td width="180">
+                                            <![endif]-->
+                                            <p class="benefits__text">ToYou brings a world of opportunities to everyone; it revives businesses.</p>
+                                            <!--[if mso]>
+                                            </td></tr></table>
+                                            </center>
+                                            <![endif]--> 
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <!--[if mso]>
+                            </td>
+                            </tr>
+                            <table>
+                            <![endif]-->
                         </td>
                     </tr>
                 </table>
@@ -309,20 +414,73 @@
                         <td>
                             <table class="buy__list">
                                 <tr>
-                                    <td class="buy-item" align="center" valign="top">
-                                        <img src="https://belshed.github.io/2u/img/buy-1.png" alt="" class="buy-item__img">
-                                        <span class="buy-item__title">Promotions</span>
-                                        <p class="buy-item__text">Delivery from 5 SAR</p>
-                                    </td>
-                                    <td class="buy-item" align="center" valign="top" style="padding-left: 22px;">
-                                        <img src="https://belshed.github.io/2u/img/buy-2.png" alt="" class="buy-item__img">
-                                        <span class="buy-item__title">Fire Delivery</span>
-                                        <p class="buy-item__text">90% discount on shipping</p>
-                                    </td>
-                                    <td class="buy-item" align="center" valign="top" style="padding-left: 22px;">
-                                        <img src="https://belshed.github.io/2u/img/buy-3.png" alt="" class="buy-item__img">
-                                        <span class="buy-item__title">Free Delivery</span>
-                                        <p class="buy-item__text">For all cities</p>
+                                    <td align="center">
+                                        <div class="buy-item">
+                                            <!--[if mso]>
+                                            <center>
+                                            <table style="padding-bottom: 20px;"><tr><td align="center">
+                                            <![endif]-->
+                                            <img src="https://belshed.github.io/2u/img/buy-1.png" alt="Icon" class="buy-item__img">
+                                            <!--[if mso]>
+                                            </td></tr>
+                                            <tr><td align="center">
+                                            <![endif]-->
+                                            <span class="buy-item__title">Promotions</span>
+                                            <!--[if mso]>
+                                            </td></tr>
+                                            <tr><td align="center">
+                                            <![endif]-->
+                                            <p class="buy-item__text">Delivery from 5 SAR</p>
+                                            <!--[if mso]>
+                                            </td></tr>
+                                            </table>
+                                            </center>
+                                            <![endif]-->
+                                        </div>
+                                        <div class="buy-item">
+                                            <!--[if mso]>
+                                            <center>
+                                            <table style="padding-bottom: 20px;"><tr><td align="center">
+                                            <![endif]-->
+                                            <img src="https://belshed.github.io/2u/img/buy-2.png" alt="Icon" class="buy-item__img">
+                                            <!--[if mso]>
+                                            </td></tr>
+                                            <tr><td align="center">
+                                            <![endif]-->
+                                            <span class="buy-item__title">Fire Delivery</span>
+                                            <!--[if mso]>
+                                            </td></tr>
+                                            <tr><td align="center">
+                                            <![endif]-->
+                                            <p class="buy-item__text">90% discount on shipping</p>
+                                            <!--[if mso]>
+                                            </td></tr>
+                                            </table>
+                                            </center>
+                                            <![endif]-->
+                                        </div>
+                                        <div class="buy-item">
+                                            <!--[if mso]>
+                                            <center>
+                                            <table style="padding-bottom: 20px;"><tr><td align="center">
+                                            <![endif]-->
+                                            <img src="https://belshed.github.io/2u/img/buy-3.png" alt="Icon" class="buy-item__img">
+                                            <!--[if mso]>
+                                            </td></tr>
+                                            <tr><td align="center">
+                                            <![endif]-->
+                                            <span class="buy-item__title">Free Delivery</span>
+                                            <!--[if mso]>
+                                            </td></tr>
+                                            <tr><td align="center">
+                                            <![endif]-->
+                                            <p class="buy-item__text">For all cities</p>
+                                            <!--[if mso]>
+                                            </td></tr>
+                                            </table>
+                                            </center>
+                                            <![endif]-->
+                                        </div>
                                     </td>
                                 </tr>
                             </table>
@@ -332,6 +490,10 @@
                 <table class="thanks" bgcolor="#eaeaea">
                     <tr>
                         <td>
+                            <!--[if mso]>
+                            <center>
+                            <table><tr><td width="600">
+                            <![endif]-->
                             <table class="thanks__body">
                                 <tr align="left" valign="middle">
                                     <td width="125px">
@@ -344,43 +506,67 @@
                                     </td>
                                 </tr>
                             </table>
+                            <!--[if mso]>
+                            </td></tr></table>
+                            </center>
+                            <![endif]--> 
                         </td>
                     </tr>
                 </table>
                 <table class="footer" bgcolor="#414141">
                     <tr>
                         <td>
+                            <!--[if mso]>
+                            <center>
+                            <table><tr><td width="600">
+                            <![endif]-->
                             <table class="footer__body">
-                                <tr valign="middle">
+                                <tr>
                                     <td>
-                                        <a class="footer__download-link" href="https://apps.apple.com/app/id1196302015">
-                                            <img src="https://raw.githubusercontent.com/Belshed/belshed.github.io/master/2u/img/download-ios.png" alt="Download for iOS">
-                                        </a>
-                                        <a class="footer__download-link" href="https://play.google.com/store/apps/details?id=com.arammeem.android.apps.toyou">
-                                            <img src="https://raw.githubusercontent.com/Belshed/belshed.github.io/master/2u/img/download-android.png" alt="Download for Android">
-                                        </a>
-                                    </td>
-                                    <td align="right">
-                                        <a class="footer__social" href="https://www.facebook.com/ToYouKSA/">
-                                            <img src="https://raw.githubusercontent.com/Belshed/belshed.github.io/master/2u/img/fb.png" alt="Our facebook">
-                                        </a>
-                                        <a class="footer__social" href="https://twitter.com/toyouksa">
-                                            <img src="https://raw.githubusercontent.com/Belshed/belshed.github.io/master/2u/img/tw.png" alt="Our twitter">
-                                        </a>
-                                        <a class="footer__social" href="https://www.instagram.com/toyouksa/">
-                                            <img src="https://raw.githubusercontent.com/Belshed/belshed.github.io/master/2u/img/inst.png" alt="Our instagram">
-                                        </a>
+                                        <!--[if mso]>
+                                        <table>
+                                        <tr><td align="left">
+                                        <![endif]-->
+                                        <div class="footer__col">
+                                            <a class="footer__download-link" href="https://apps.apple.com/app/id1196302015">
+                                                <img src="https://raw.githubusercontent.com/Belshed/belshed.github.io/master/2u/img/download-ios.png" alt="Download for iOS">
+                                            </a>
+                                            <a class="footer__download-link" href="https://play.google.com/store/apps/details?id=com.arammeem.android.apps.toyou">
+                                                <img src="https://raw.githubusercontent.com/Belshed/belshed.github.io/master/2u/img/download-android.png" alt="Download for Android">
+                                            </a>
+                                        </div>
+                                        <!--[if mso]>
+                                        </td></tr>
+                                        <tr><td align="right">
+                                        <![endif]-->
+                                        <div class="footer__col">
+                                            <a class="footer__social" href="https://www.facebook.com/ToYouKSA/">
+                                                <img src="https://raw.githubusercontent.com/Belshed/belshed.github.io/master/2u/img/fb.png" alt="Our facebook">
+                                            </a>
+                                            <a class="footer__social" href="https://twitter.com/toyouksa">
+                                                <img src="https://raw.githubusercontent.com/Belshed/belshed.github.io/master/2u/img/tw.png" alt="Our twitter">
+                                            </a>
+                                            <a class="footer__social" href="https://www.instagram.com/toyouksa/">
+                                                <img src="https://raw.githubusercontent.com/Belshed/belshed.github.io/master/2u/img/inst.png" alt="Our instagram">
+                                            </a>
+                                        </div>
+                                        <!--[if mso]>
+                                        </td></tr>
+                                        </table>
+                                        <![endif]--> 
                                     </td>
                                 </tr>
                                 <tr valign="bottom">
-                                    <td style="padding-top: 15px;">
+                                    <td>
                                         <span class="footer__small">You received this email because you are registered on toyou.io. <br> This letter does not require a response. <a href="#">Unsubscribe</a></span>
-                                    </td>
-                                    <td align="right">
                                         <span class="footer__small">© 2021 Aram Meem LLC</span>
                                     </td>
                                 </tr>
                             </table>
+                            <!--[if mso]>
+                            </td></tr></table>
+                            </center>
+                            <![endif]--> 
                         </td>
                     </tr>
                 </table>
