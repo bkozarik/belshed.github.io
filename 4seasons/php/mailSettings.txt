@@ -1,5 +1,0 @@
-Email: почта яндекс отправителя
-Password: пароль
-Smtp host: smtp.yandex.ru
-Smtp port: 465
-To: info@club4s.ru
