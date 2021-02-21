@@ -246,6 +246,38 @@ section {
   }
 }
 
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-display: swap;
+  font-size: 300;
+  src: url(../fonts/Montserrat-Light.woff2) format(woff2), url(../fonts/Montserrat-Light.woff) format(woff);
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-display: swap;
+  font-size: 400;
+  src: url(../fonts/Montserrat-Regular.woff2) format(woff2), url(../fonts/Montserrat-Regular.woff) format(woff);
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-display: swap;
+  font-size: 500;
+  src: url(../fonts/Montserrat-Medium.woff2) format(woff2), url(../fonts/Montserrat-Medium.woff) format(woff);
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-display: swap;
+  font-size: 700;
+  src: url(../fonts/Montserrat-Bold.woff2) format(woff2), url(../fonts/Montserrat-Bold.woff) format(woff);
+}
+
 .footer {
   -ms-flex-positive: 0;
   flex-grow: 0;
@@ -285,6 +317,7 @@ section {
   opacity: 0;
   transition: all 0.3s ease-out 0s;
   transition-duration: .5s;
+  border-radius: 40px;
 }
 
 .form__label_focused::before {
@@ -313,6 +346,7 @@ section {
   margin: 1px;
   color: #ffffff;
   border-radius: 40px;
+  overflow: hidden;
 }
 
 .form .button {
