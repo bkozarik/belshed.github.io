@@ -668,6 +668,7 @@ section {
   overflow: hidden;
   background-color: #595959;
   position: relative;
+  display: block;
 }
 
 .form__label::before {
