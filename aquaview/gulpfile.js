@@ -22,10 +22,15 @@ const compileStyles = () => {
                 cascade: false,
             }))
             .pipe(dest('src/css/'))
-            .pipe(gulpConcat('main.css'))
         .pipe(sourcemaps.write('./'))
-        .pipe(dest('dist/css/'))
         .pipe(dest('src/css/'))
+        .pipe(browserSync.stream());
+}
+
+const concatCSS = () => {
+    return src(['src/css/vendors/*.css', 'src/css/*.css'])
+        .pipe(gulpConcat('index.css'))
+        .pipe(dest('dist/css/'))
         .pipe(browserSync.stream());
 }
 
@@ -38,10 +43,6 @@ const minifyStyles = () => {
 const transferFiles = () => {
     src('src/*.html')
         .pipe(dest('dist/'))
-        .pipe(browserSync.stream());
-    
-    src('src/css/vendors/*.css')
-        .pipe(dest('dist/css'))
         .pipe(browserSync.stream());
         
     src(['src/fonts/*.woff2', 'src/fonts/*.woff'])
@@ -65,22 +66,20 @@ const convertFonts = () => {
       .pipe(dest('dist/fonts/'));
 }
 
-const compileJS = () => {
-    
-    src('src/js/vendors/*.js')
-        .pipe(dest('dist/js/'))
-        .pipe(browserSync.stream());
-
-    return src('src/js/**/*.js')
-        .pipe(sourcemaps.init())
+const compileJS = () => {    
+    return src('src/js/*.js')
         .pipe(rollup({
             "format": "iife",
-            entry: './src/js/main.js'}))
-        .pipe(gulpConcat('main.js'))
+            input: 'src/js/main.js'}))
         .pipe(jsmin())
-        .pipe(sourcemaps.write('.'))
-        .pipe(dest('dist/js/'))
-        .pipe(browserSync.stream());
+        .pipe(dest('dist/js/'));
+}
+
+const concatJS = () => {
+    return src(['src/js/vendors/*.js', 'dist/js/**/*.js'])
+        .pipe(gulpConcat('main.js'))
+        .pipe(dest('dist/js/'));
+
 }
 
 const wipe = () => {
@@ -94,11 +93,11 @@ const watchFiles = () => {
       },
     });
   
-    watch('./src/sass/**/*.sass', compileStyles);
-    watch('./src/js/*.js', compileJS);
+    watch('./src/sass/**/*.sass', series(compileStyles, concatCSS));
+    watch('./src/js/**/*.js', series(compileJS, concatJS));
     watch(['./src/*.html', './src/img/*.svg', './src/img/**.jpg', './src/img/**.jpeg', './src/img/**.png', './src/img/**.webp'], transferFiles);
     watch('./src/fonts/**', transferFiles);
   }
 
-exports.build = series(wipe, parallel(convertFonts, series(compileStyles, minifyStyles), compileJS, transferFiles));
-exports.default = series(wipe, parallel(convertFonts, compileStyles), compileJS, transferFiles, watchFiles);
+exports.build = series(wipe, parallel(convertFonts, series(compileStyles, concatCSS, minifyStyles), compileJS, concatJS, transferFiles));
+exports.default = series(wipe, parallel(convertFonts, series(compileStyles, concatCSS)), compileJS, concatJS, transferFiles, watchFiles);
