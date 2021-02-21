@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="246" height="24" viewBox="0 0 246 24">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 24px;
+        fill: #ffc670;
+        font-family: Montserrat;
+        font-weight: 800;
+      }
+
+      .cls-2 {
+        fill: #fff;
+        font-weight: 300;
+      }
+    </style>
+  </defs>
+  <text id="Aquaview_Premium" data-name="Aquaview Premium" class="cls-1" x="1.004" y="18.68">Aquaview<tspan class="cls-2"> Premium</tspan></text>
+</svg>
