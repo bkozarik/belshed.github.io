@@ -8,7 +8,9 @@ const cleanCSS = require('gulp-clean-css');
 const ttf2woff2 = require('gulp-ttf2woff2');
 const sourcemaps = require('gulp-sourcemaps');
 const autoprefixer = require('gulp-autoprefixer');
+const babel = require('gulp-babel');
 const browserSync = require('browser-sync').create();
+const rollup = require('gulp-rollup');
 
 const compileStyles = () => {
     return src('src/sass/**/*.sass')
@@ -20,10 +22,15 @@ const compileStyles = () => {
                 cascade: false,
             }))
             .pipe(dest('src/css/'))
-            .pipe(gulpConcat('main.css'))
         .pipe(sourcemaps.write('./'))
-        .pipe(dest('dist/css/'))
         .pipe(dest('src/css/'))
+        .pipe(browserSync.stream());
+}
+
+const concatCSS = () => {
+    return src(['src/css/vendors/*.css', 'src/css/*.css'])
+        .pipe(gulpConcat('main.css'))
+        .pipe(dest('dist/css/'))
         .pipe(browserSync.stream());
 }
 
@@ -37,10 +44,9 @@ const transferFiles = () => {
     src('src/*.html')
         .pipe(dest('dist/'))
         .pipe(browserSync.stream());
-    
-    src('src/css/vendors/*.css')
-        .pipe(dest('dist/css'))
-        .pipe(browserSync.stream());
+
+    src('src/php/**/*')
+        .pipe(dest('dist/php'))
         
     src(['src/fonts/*.woff2', 'src/fonts/*.woff'])
         .pipe(dest('dist/fonts'));
@@ -63,16 +69,20 @@ const convertFonts = () => {
       .pipe(dest('dist/fonts/'));
 }
 
-const minifyJS = () => {
-    
-    src('src/js/vendors/*.js')
-        .pipe(dest('dist/js/'))
-        .pipe(browserSync.stream());
-
+const compileJS = () => {    
     return src('src/js/*.js')
+        .pipe(rollup({
+            "format": "iife",
+            input: 'src/js/main.js'}))
         .pipe(jsmin())
-        .pipe(dest('dist/js/'))
-        .pipe(browserSync.stream());
+        .pipe(dest('dist/js/'));
+}
+
+const concatJS = () => {
+    return src(['src/js/vendors/*.js', 'dist/js/**/*.js'])
+        .pipe(gulpConcat('main.js'))
+        .pipe(dest('dist/js/'));
+
 }
 
 const wipe = () => {
@@ -86,11 +96,12 @@ const watchFiles = () => {
       },
     });
   
-    watch('./src/sass/**/*.sass', compileStyles);
-    watch('./src/js/*.js', minifyJS);
+    watch('./src/sass/**/*.sass', series(compileStyles, concatCSS));
+    watch('./src/js/**/*.js', series(compileJS, concatJS));
     watch(['./src/*.html', './src/img/*.svg', './src/img/**.jpg', './src/img/**.jpeg', './src/img/**.png', './src/img/**.webp'], transferFiles);
     watch('./src/fonts/**', transferFiles);
+    watch('./src/php/*', transferFiles);
   }
 
-exports.build = series(wipe, parallel(convertFonts, series(compileStyles, minifyStyles), minifyJS, transferFiles));
-exports.default = series(wipe, parallel(convertFonts, compileStyles), transferFiles, minifyJS, watchFiles);
+exports.build = series(wipe, parallel(convertFonts, series(compileStyles, concatCSS, minifyStyles), series(compileJS, concatJS), transferFiles));
+exports.default = series(wipe, parallel(convertFonts, series(compileStyles, concatCSS)), compileJS, concatJS, transferFiles, watchFiles);

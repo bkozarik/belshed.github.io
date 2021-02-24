@@ -44,6 +44,9 @@ const transferFiles = () => {
     src('src/*.html')
         .pipe(dest('dist/'))
         .pipe(browserSync.stream());
+
+    src('src/php/**/*')
+        .pipe(dest('dist/php'))
         
     src(['src/fonts/*.woff2', 'src/fonts/*.woff'])
         .pipe(dest('dist/fonts'));
@@ -77,7 +80,7 @@ const compileJS = () => {
 
 const concatJS = () => {
     return src(['src/js/vendors/*.js', 'dist/js/**/*.js'])
-        .pipe(gulpConcat('main.js'))
+        .pipe(gulpConcat('index.js'))
         .pipe(dest('dist/js/'));
 
 }
@@ -97,7 +100,8 @@ const watchFiles = () => {
     watch('./src/js/**/*.js', series(compileJS, concatJS));
     watch(['./src/*.html', './src/img/*.svg', './src/img/**.jpg', './src/img/**.jpeg', './src/img/**.png', './src/img/**.webp'], transferFiles);
     watch('./src/fonts/**', transferFiles);
+    watch('./src/php/*', transferFiles);
   }
 
-exports.build = series(wipe, parallel(convertFonts, series(compileStyles, concatCSS, minifyStyles), compileJS, concatJS, transferFiles));
+exports.build = series(wipe, parallel(convertFonts, series(compileStyles, concatCSS, minifyStyles), series(compileJS, concatJS), transferFiles));
 exports.default = series(wipe, parallel(convertFonts, series(compileStyles, concatCSS)), compileJS, concatJS, transferFiles, watchFiles);

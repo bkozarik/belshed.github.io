@@ -243,10 +243,8 @@ $(document).ready(() => {
 
     const findVideos = () => {
         let videos = document.querySelectorAll('.review');
-    
-        for (let i = 0; i < videos.length; i++) {
-            setupVideo(videos[i]);
-        }
+        
+        videos.forEach(video => setupVideo(video));
     }
     
     const setupVideo = video => {
@@ -258,8 +256,10 @@ $(document).ready(() => {
         video.addEventListener('click', () => {
             let iframe = createIframe(id);
 
-            $('.js-popup-player').find('.popup_video').get(0).appendChild(iframe);
-            togglePopup('.js-popup-player', true);
+            while(video.firstChild){
+                video.firstChild.remove();
+            }
+            video.appendChild(iframe);
         });
     
         link.removeAttribute('href');
