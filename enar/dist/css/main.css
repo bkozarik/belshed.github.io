@@ -570,7 +570,7 @@ section:not(.swiper-slide-active) {
 }
 
 .contacts__copyright {
-  position: absolute;
+  position: fixed;
   bottom: 40px;
   font-size: 14px;
   color: #B2B2B2;
