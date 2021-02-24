@@ -1714,7 +1714,7 @@ section:not(.swiper-slide-active) {
 }
 
 .main__control {
-  position: absolute;
+  position: fixed;
   color: #4F5B5F;
   font-size: 12px;
   text-align: left;
