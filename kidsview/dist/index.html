@@ -5,22 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/index.css">
+    <script src="./js/main.js" defer></script>
     <title>KidsView</title>
 </head>
 <body>
-    <header class="header">
+    <header class="header js-header">
         <div class="container">
             <div class="header__wrap">
                 <nav class="nav header__nav">
                     <ul class="nav__list">
                         <li class="nav__item">
-                            <a href="#" class="nav__link js-scroll-link">Главная</a>
+                            <a href="#hero" class="nav__link js-scroll-link">Главная</a>
                         </li>
                         <li class="nav__item">
-                            <a href="#" class="nav__link js-scroll-link">Преимущества</a>
+                            <a href="#advantages" class="nav__link js-scroll-link">Преимущества</a>
                         </li>
                         <li class="nav__item">
-                            <a href="#" class="nav__link js-scroll-link">Модельный ряд</a>
+                            <a href="#catalog" class="nav__link js-scroll-link">Модельный ряд</a>
                         </li>
                     </ul>
                 </nav>
@@ -30,24 +31,49 @@
                 <nav class="nav header__nav">
                     <ul class="nav__list">
                         <li class="nav__item">
-                            <a href="#" class="nav__link nav__link_dark js-scroll-link">Дилерам</a>
+                            <a href="#areas" class="nav__link nav__link_dark js-scroll-link">Дилерам</a>
                         </li>
                         <li class="nav__item">
-                            <a href="#" class="nav__link nav__link_dark js-scroll-link">Контакты</a>
+                            <a href="#contacts" class="nav__link nav__link_dark js-scroll-link">Контакты</a>
                         </li>
                         <li class="nav__item">
-                            <button class="button button_yellow js-popup-trigger" data-trigger=".js-popup-order">Заказать</button>
+                            <button class="button button_yellow js-popup-trigger" data-target=".js-popup-order">Заказать</button>
                         </li>
                     </ul>
                 </nav>
-                <button class="button burger header__burger">
+                <button class="button burger header__burger js-burger">
                     <span></span>
                 </button>
             </div>
         </div>
     </header>
+    <div class="menu js-menu">
+        <nav class="nav menu__nav">
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a href="#hero" class="nav__link nav__link_dark js-scroll-link">Главная</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#advantages" class="nav__link nav__link_dark js-scroll-link">Преимущества</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#catalog" class="nav__link nav__link_dark js-scroll-link">Модельный ряд</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#areas" class="nav__link nav__link_dark js-scroll-link">Дилерам</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#contacts" class="nav__link nav__link_dark js-scroll-link">Контакты</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="menu__recall">
+            <span class="menu__recall-text">Заказать звонок</span>
+            <button class="button button_transparent menu__recall-button button_black js-popup-trigger" data-target=".js-popup-order">Заказать</button>
+        </div>
+    </div>
     <main class="main">
-        <section class="hero">
+        <section id="hero" class="hero">
             <div class="container">
                 <div class="hero__body">
                     <div class="hero__content">
@@ -58,7 +84,7 @@
                 </div>
             </div>
         </section>
-        <section class="advantages">
+        <section id="advantages" class="advantages">
             <div class="container">
                 <h2 class="section-title advantages__title">Преимущества</h2>
                 <div class="advantages__body">
@@ -66,7 +92,7 @@
                 </div>
             </div>
         </section>
-        <section class="catalog">
+        <section id="catalog" class="catalog">
             <div class="container">
                 <h2 class="section-title catalog__title">KidsView <span class="section-title__subtitle">выпускаются в трех направлениях</span></h2>
                 <div class="catalog__list">
@@ -100,7 +126,7 @@
                 </div>
             </div>
         </section>
-        <section class="areas">
+        <section id="areas" class="areas">
             <div class="container">
                 <header class="areas__header">
                     <h2 class="section-title areas__title">Области применения</h2>
@@ -137,7 +163,7 @@
                 </div>
             </div>
         </section>
-        <section class="contacts">
+        <section id="contacts" class="contacts">
             <div class="contacts__body">
                 <div class="container">
                     <div class="contacts__content">
@@ -162,7 +188,7 @@
                 </div>
             </div>
             <div class="contacts__map">
-                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A50907ac6bddfaeb3b1a7d923ba0f3c347be643a455d1fd9f582652fb473ffbdb&amp;source=constructor" width="100%" height="522" frameborder="0"></iframe>
+                <iframe class="js-lazy-map" data-src="https://yandex.ru/map-widget/v1/?um=constructor%3A50907ac6bddfaeb3b1a7d923ba0f3c347be643a455d1fd9f582652fb473ffbdb&amp;source=constructor" height="522"></iframe>
             </div>
         </section>
         <section class="callback">
@@ -171,9 +197,11 @@
                     <h2 class="section-title callback__title">Оставьте номер телефона</h2>
                     <span class="callback__text">и мы подберем решение под ваш проект</span>
                     <form class="callback__form form form_horizontal">
-                        <input type="text" class="form__input" name="user_name" placeholder="Ваше имя">
-                        <input type="tel" class="form__input" name="user_tel" placeholder="Ваш телефон">
-                        <button class="button button_yellow form__submit">Отправить</button>
+                        <div class="form__row">
+                            <input type="text" class="form__input" name="user_name" placeholder="Ваше имя">
+                            <input type="tel" class="form__input" name="user_tel" placeholder="Ваш телефон">
+                            <button class="button button_yellow form__submit">Отправить</button>
+                        </div>
                     </form>
                 </div>
             </div>
@@ -188,29 +216,68 @@
                 <nav class="nav footer__nav">
                     <ul class="nav__list">
                         <li class="nav__item">
-                            <a href="#" class="nav__link nav__link_dark js-scroll-link">Главная</a>
+                            <a href="#hero" class="nav__link nav__link_dark js-scroll-link">Главная</a>
                         </li>
                         <li class="nav__item">
-                            <a href="#" class="nav__link nav__link_dark js-scroll-link">Преимущества</a>
+                            <a href="#advantages" class="nav__link nav__link_dark js-scroll-link">Преимущества</a>
                         </li>
                         <li class="nav__item">
-                            <a href="#" class="nav__link nav__link_dark js-scroll-link">Модельный ряд</a>
+                            <a href="#catalog" class="nav__link nav__link_dark js-scroll-link">Модельный ряд</a>
                         </li>
                         <li class="nav__item">
-                            <a href="#" class="nav__link nav__link_dark js-scroll-link">Дилерам</a>
+                            <a href="#areas" class="nav__link nav__link_dark js-scroll-link">Дилерам</a>
                         </li>
                         <li class="nav__item">
-                            <a href="#" class="nav__link nav__link_dark js-scroll-link">Контакты</a>
+                            <a href="#contacts" class="nav__link nav__link_dark js-scroll-link">Контакты</a>
                         </li>
                     </ul>
                 </nav>
                 <div class="footer__recall">
                     <span class="footer__recall-text">Заказать звонок</span>
-                    <button class="button button_transparent footer__recall-button button_black js-popup-trigger" data-trigger=".js-popup-order">Заказать</button>
+                    <button class="button button_transparent footer__recall-button button_black js-popup-trigger" data-target=".js-popup-order">Заказать</button>
                 </div>
             </div>
         </div>
     </footer>
-    <script src="./js/main.js"></script>
+    
+    <div class="popup js-popup-order js-popup-close">
+        <div class="popup__body popup__body_big">
+            <button class="button popup__close js-popup-close"></button>
+            <div class="popup__head">
+                <h2 class="popup__title">Оставьте номер телефона</h2>
+                <span class="popup__text">и мы подберём решение под ваш проект</span>
+            </div>
+            <form class="callback__form form form_horizontal">
+                <div class="form__row">
+                    <input type="text" class="form__input" name="user_name" placeholder="Ваше имя">
+                    <input type="tel" class="form__input" name="user_tel" placeholder="Ваш телефон">
+                </div>
+                <div class="form__row">
+                    <button class="button button_yellow form__submit">Отправить</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <div class="popup js-popup-success js-popup-close">
+        <div class="popup__body popup__body_small">
+            <button class="button popup__close js-popup-close"></button>
+            <div class="popup__head">
+                <h2 class="popup__title">Благодарим за заявку!</h2>
+            </div>
+            <span class="popup__text">Менеджер свяжется с Вами <br>
+                в ближайшее время.</span>
+        </div>
+    </div>
+    
+    <div class="popup js-popup-error js-popup-close">
+        <div class="popup__body popup__body_small">
+            <button class="button popup__close js-popup-close"></button>
+            <div class="popup__head">
+                <h2 class="popup__title">У нас произошла ошибка!</h2>
+            </div>
+            <span class="popup__text">Попробуйте еще раз немного позже.</span>
+        </div>
+    </div>
 </body>
 </html>
