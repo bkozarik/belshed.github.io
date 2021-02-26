@@ -47,8 +47,8 @@ if(!empty($mail_settings_string)){
 
 }
 
-$subject = 'Заявка с сайта Aquaview';
-$message = '<h3>Новая заявка на сайте</h3> <br> ';
+$subject = 'Заявка с сайта KidsView';
+$message = '<h3>Новая заявка на сайте!</h3> <br> ';
 
 $smtp->setFrom($from, 'Aquaview Premium');
 $smtp->addReplyTo($from);
