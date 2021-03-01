@@ -1,0 +1,2145 @@
+$green_gradient: linear-gradient(90.06deg, #0DC180 0%, #04B474 100%)
+$green: #0DC180
+$soft_blue: #ECF2F9
+
+
+*, *::before, *::after
+    transition: all .2s ease-in-out 0s
+    font-family: 'Geometria', sans-serif
+    box-sizing: border-box
+
+body
+    display: flex
+    flex-direction: column
+    overflow-x: hidden
+    overflow-y: auto
+
+html
+    overflow-x: hidden
+
+span.uk-h1, span.uk-h2, span.uk-h3, span.uk-h4, span.uk-h5, h1, h2, h3, h4, h5
+    display: inline-block
+    position: relative
+
+.no-overflow
+    overflow: visible !important
+
+.green-link
+    color: $green
+    display: inline-block
+    position: relative
+    font-size: 12px
+    &::after
+        content: ''
+        display: inline-block
+        background-size: cover
+        background-repeat: no-repeat
+        background-position: center center
+        background-image: url(../img/arrow-h.png)
+        height: 8px
+        width: 6px
+        margin-left: 5px
+    &:hover
+        text-decoration: none
+        color: $green
+        &::after
+            width: 10px
+            background-image: url(../img/inline-arrow.svg)
+    &.spoiler-link
+        flex: none
+        width: auto
+        &::before
+            content: ''
+            display: inline-block
+            width: 100%
+            height: 1px
+            background-color: $green
+            bottom: 0
+            position: absolute
+            left: 0
+            transform-origin: left
+            transform: scaleX(0)
+        &::after
+            content: '>'
+            background-image: none
+            transform: rotate(90deg)
+            position: absolute
+            right: -20px
+            top: 4px
+        &:hover
+            &::before
+                transform: scaleX(1)
+            &::after
+                width: 6px
+
+.mw
+    &_no
+        max-width: none !important
+    &_550
+        max-width: 550px !important
+
+.header
+    padding: 20px 0px
+    flex-grow: 0
+    position: relative
+    background-color: #fff
+    z-index: 100
+    width: 100%
+    max-width: 100vw
+    &__wrap
+        dt
+            font-size: 11px
+        dd
+            font-size: 14px
+            font-weight: 500
+            color: #2F3241
+        dd.uk-flex
+            margin-top: 3px
+        .uk-description-list
+            margin-top: 0
+            margin-bottom: 0
+    &__link + &__link
+        margin-left: 8px
+    &__link
+        max-width: 26px
+        &:hover
+            transform: scale(1.1)
+    &__menu
+        &-btn
+            display: none
+            width: 30px
+            height: 30px
+            position: relative
+            border: none
+            background-color: transparent
+            padding: 0
+            span, &::before, &::after
+                width: 26px
+                height: 1px
+                background-color: $green
+                position: absolute
+                left: 50%
+                top: 50%
+                transform: translate(-50%, -50%)
+                display: inline-block
+                content: ''
+            &::before
+                transform: translate(-50%, -8px)
+            &::after
+                transform: translate(-50%, 8px)
+            &.active
+                span
+                    opacity: 0
+                &::before
+                    transform: translate(-50%, -50%) rotate(45deg)
+                &::after
+                    transform: translate(-50%, -50%) rotate(-45deg)
+    &__main-link
+        &:hover
+            transform: scale(1.05)
+    &__dropdown
+        position: relative
+        &::after
+            content: ''
+            display: inline-block
+            width: 20px
+            height: 10px
+            margin: 0px 10px 0px 2px
+            background-image: url(../img/arrow-h.png)
+            background-size: contain
+            background-repeat: no-repeat
+            background-position: center center
+            transform: rotate(90deg)
+        &-container
+            .footer__dd-link
+                display: inline-block
+                white-space: nowrap
+        &-trigger
+            &:hover .header__dropdown-card
+                display: block
+                min-width: 220px
+        &-span img
+            vertical-align: middle
+            height: 20px
+            width: 20px
+            margin-left: 10px
+        &-card
+            position: absolute
+            z-index: 10
+            background-color: #fff
+            top: 52%
+            transform: translateX(4px)
+            display: none
+            box-shadow: 0px 4px 50px rgba(20, 43, 61, 0.15)
+            &::before
+                content: ''
+                display: inline-block
+                height: 40px
+                width: 40px
+                border-radius: 50%
+                background-color: #fff
+                position: absolute
+                left: 50%
+                top: 0
+                transform: translate(-50%, -50%)
+            &::after
+                content: ''
+                display: inline-block
+                height: 20px
+                width: 20px
+                background-image: url(../img/info.svg)
+                background-position: center center
+                background-repeat: no-repeat
+                background-size: contain
+                position: absolute
+                left: 50%
+                top: 0
+                transform: translate(-50%, -50%)
+    .uk-navbar-dropdown-nav
+        a img
+            max-width: 10px
+
+.nav
+    background: $green_gradient
+    box-shadow: inset 0px 10px 30px rgba(21, 36, 45, 0.15)
+    flex-grow: 0
+    &__link
+        color: #fff
+        display: inline-block
+        position: relative
+        font-weight: 600
+        font-size: 12px
+        line-height: 14px
+        min-height: auto
+        padding: 18px 0px
+        text-decoration: none !important
+        text-transform: uppercase
+        &::after
+            content: ''
+            display: inline-block
+            width: 100%
+            position: absolute
+            height: 4px
+            background-color: #fff
+            opacity: 0
+            bottom: 0
+            left: 0
+        &:focus
+            color: #fff
+        &:hover
+            color: #fff
+            &::after
+                opacity: 1
+    &__inner
+        position: absolute
+        top: 0
+        background-color: #fff
+        opacity: 0
+        visibility: hidden
+        right: 0
+        transform: translateX(100%)
+    .uk-nav>li
+        position: relative
+    .uk-nav>li:hover .nav__inner
+        opacity: 1
+        visibility: visible
+    .uk-navbar-nav
+        width: 100%
+        &>li>a
+            color: #fff
+            display: inline-block
+            position: relative
+            font-weight: 600
+            font-size: 12px
+            line-height: 14px
+            min-height: auto
+            padding: 18px 0px
+            &::after
+               content: ''
+               display: inline-block
+               width: 100%
+               position: absolute
+               height: 4px
+               background-color: #fff
+               opacity: 0
+               bottom: 0
+               left: 0
+            &:focus
+                color: #fff                
+            &:hover
+                color: #fff
+                &::after
+                    opacity: 1
+        .nav__order
+            background-color: #fff
+            border-radius: 3px
+            padding: 11px 18px
+            color: #2F3241
+            text-transform: none
+            font-size: 12px
+            overflow: hidden
+            margin-top: 4px
+            border-radius: 3px
+            img
+                transform: translateY(-2px)
+                display: none
+            &:hover
+                color: $green
+                padding-left: 16px
+                padding-right: 7px
+                transform: scale(1.07)
+                img
+                    width: 10px
+                    height: auto
+                    display: inline-block
+    .uk-navbar-center
+        width: 100%
+        max-width: 1260px
+        padding: 0px 30px
+        box-sizing: border-box
+
+    .uk-navbar-dropdown-nav
+        a
+            font-size: 15px
+            color: #737578
+            padding: 8px 30px
+            display: inline-block
+            width: 100%
+            img
+                max-width: 10px
+                transform: translateY(-2px)
+                margin-right: 3px
+                width: 0
+            &:hover
+                color: #fff
+                background: $green_gradient
+                img
+                    width: auto
+    &__dropdown
+        &-link
+            display: inline-block
+            position: relative
+            &::before
+                content: ''
+                display: inline-block
+                position: absolute
+                right: -8px
+                top: 52%
+                width: 10px
+                height: 10px
+                margin-left: 5px
+                background-image: url(/dentko/img/arrow-h-w.png)
+                background-size: contain
+                background-repeat: no-repeat
+                transform: translate(100%, -50%) rotate(90deg)
+                z-index: 2
+    .uk-navbar-nav
+        &>li
+            position: relative
+    .uk-navbar-dropdown
+        width: 240px
+        padding: 0
+
+ul:not([class]) li
+    list-style-image: url(../img/list-img.png)
+    li
+        &::before
+            display: none
+    ul:not([class])
+        margin-left: 2em
+        list-style-image: url(../img/swoosh.png)
+
+.mobile-menu
+    position: fixed
+    left: 0
+    top: 0
+    z-index: 20
+    width: 100vw
+    overflow: hidden
+    height: 100%
+    background-color: $green
+    transform: translateY(-100%)
+    overflow-y: auto
+    padding: 80px 20px
+    &__services
+        margin-top: 30px
+        margin-bottom: 20px
+    &__title
+        font-size: 1.2rem
+        color: #fff
+        font-weight: 600
+    &__inner
+        padding: 0
+        li
+            margin: 0
+            padding: 0
+            list-style-type: none
+    &__accordion
+        font-size: 12px
+        text-transform: uppercase
+        font-weight: 500
+        position: relative
+        display: inline-block
+        overflow: visible
+        &::before
+            width: 1em
+            height: 1em
+            position: absolute
+            float: none
+            right: -20px
+            top: 1px
+            background-image: url(/dentko/img/arrow-h-w.png)
+            transform: rotate(90deg)
+        &, &:hover, &:visited
+            color: #fff
+    
+    .uk-accordion
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+    .uk-open>.uk-accordion-title::before
+        background-image: url(/dentko/img/arrow-h-w.png)
+        transform: rotate(0deg)
+
+    &.active
+        transform: translateY(0%)
+    .nav
+        background: none
+        box-shadow: none
+        &__link
+            padding: 12px 0px
+            font-weight: 600
+            &::after
+               height: 1px
+               bottom: 3px 
+        .uk-navbar-center
+            padding: 0
+        .uk-navbar-nav
+            &>li>a
+                padding: 18px 25px
+                margin-top: 20px
+            &>li>a:not(.popup-request-open)
+                margin-top: 0
+                padding: 13px 0px
+        ul
+            flex-direction: column
+            align-items: flex-start
+    .header
+        &__item
+            margin-top: 25px
+            .uk-flex, .uk-flex-inline
+                margin-top: 10px
+                max-width: 120px
+            dd, dt
+                color: #fff
+        &__dropdown
+            a
+                color: #fff
+            &-card
+                color: #000
+                transform: translateX(27px)
+        &__link
+            width: 30px
+            height: 30px
+            max-width: none
+            display: inline-block
+            &-img
+                width: 100%
+                height: 100%
+
+.main
+    flex-grow: 1
+    &>*:not(.form)
+        overflow: hidden
+
+.uk-h1, h1
+    font-family: 'Geometria', sans-serif
+    font-size: 40px
+    font-weight: 700
+    letter-spacing: 0.01em
+    margin-bottom: 0
+
+.slider
+    max-height: 660px
+    &__body
+        max-width: 515px
+        margin-top: -30px !important
+        h1, h2, h3, &>span
+            display: block
+        .uk-text-large
+            display: inline-block 
+            margin-bottom: 20px
+            font-size: 16px
+            line-height: 24px
+            margin-top: 15px
+    &__pagination
+        font-size: 24px
+        color: $green
+        line-height: 24px
+        &-total
+            font-size: 16px
+            color: #2F3241
+            opacity: .3
+    &-button + &-button
+        margin: 0px 10px
+    &-button
+        &:hover
+            transform: scale(1.1)
+    &-next, &-prev
+        display: inline-block
+        border-radius: 50%
+        height: 50px
+        width: 50px
+        background: $green_gradient
+        text-align: center
+        line-height: 50px
+        position: relative
+        &:focus
+            outline: none
+        &:hover
+            transform: scale(1.1)
+        &::after
+            display: inline-block
+            content: ''
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            width: 15px
+            height: 12px
+            color: #fff
+            background-image: url(../img/inline-arrow-w.svg)
+        &.uk-invisible
+            display: none
+    &__controls
+        width: 22%
+        display: flex
+        align-items: center
+        justify-content: space-between
+    &-prev
+        margin-right: 10px
+        &::after
+            transform: translate(-50%, -50%) rotate(180deg)
+    .uk-height-large
+        height: 650px
+
+.banner__swiper
+    overflow: hidden
+    .uk-height-large
+        height: 550px
+    .swiper__pagination
+        height: 3px
+        width: 250px
+        .swiper-pagination
+            height: 1px
+            width: 250px
+            background-color: $green
+            .swiper-pagination-progressbar-fill
+                height: 3px
+                margin-top: -1px
+                background-color: $green
+
+.swiper
+    &__controls
+        width: 80%
+        justify-content: space-between
+        display: flex
+        flex-wrap: wrap
+        align-items: center
+
+.benefits
+    position: relative
+    z-index: 2
+    margin-top: -114px
+    padding: 32px 0px
+    background-color: rgba(255, 255, 255, .8)
+
+.appointment
+    padding: 15px 0px
+    display: none
+    .header__dropdown::after
+        background-image: url(../img/arrow-h.png) !important
+    &__btn
+        padding: 10px 30px
+        img
+            display: none
+        &-wrap
+            margin-top: 15px
+    .footer__dd-link
+        font-size: 16px
+
+.benefit
+    position: relative
+    overflow: hidden
+    &__head
+        max-width: 260px
+    &__header
+        margin: 0
+        font-weight: bold
+        font-size: 18px
+    &__img
+        margin-right: 20px 
+    &:hover
+        overflow: visible
+        .uk-card
+            opacity: 1
+            transform: translateY(0px)
+            transition: all .2s ease-out 0s
+            visibility: visible
+    .uk-card
+        background-color: #fff
+        bottom: -32px
+        opacity: 0
+        position: absolute
+        width: 285px
+        transition: all .2s ease-out 0s
+        transform: translateY(-10px)
+        visibility: hidden
+        z-index: 3
+        &-body
+            padding: 30px 20px
+            .benefit__head
+                margin-bottom: 20px
+
+.about
+    .uk-list
+        list-style-image: url(../img/list-img.png)
+        li
+            &::before
+                display: none
+        .uk-list
+            margin-left: 2em
+            list-style-image: url(../img/swoosh.png)
+    h2.uk-h1, span.uk-h1, h2, h1, h3, h4, h5
+        position: relative
+        &::after
+            content: ''
+            display: inline-block
+            width: 40px
+            height: 5px
+            position: absolute
+            bottom: -4px
+            left: 0
+            background-color: $green
+    .button
+        padding-top: 10px
+        padding-bottom: 10px
+        img
+            display: none
+        &:hover
+            padding-left: 28px
+            padding-right: 14px
+            img
+                display: inline-block
+    &__side
+        &-stiky + &-stiky
+            margin-left: 60px
+        &-stiky
+            width: 50%
+    &_padding
+        padding-top: 100px
+    &__section + &__section
+        margin-top: 30px
+    &__section
+        &-header
+            font-size: 18px
+    &__links
+        margin-top: 20px
+    &__link
+        color: $green
+        &:hover
+            color: $green
+    .uk-flex
+        .about__side + .about__side
+            margin-left: 60px
+    &__sticky + .about__side
+        width: 50%
+        margin-left: 60px
+    &__sticky
+        position: sticky
+        top: 100px
+        &.fixed
+            position: fixed
+            top: 120px
+    &__flexbox
+        width: 100%
+        display: flex
+        justify-content: center
+        align-items: center
+    &__text-wrap
+        position: relative
+        max-height: 520px
+        overflow-y: hidden
+        .uk-list
+            padding-left: 30px
+            margin-bottom: 0
+        &::after
+            content: ''
+            z-index: 2
+            display: inline-block
+            height: 250px
+            background: linear-gradient(180deg, rgba(255,255,255,0) 30%, rgba(255,255,255,1) 100%)
+            width: 100%
+            position: absolute
+            bottom: 0px
+            left: 0
+        &.open
+            &::after
+                opacity: 0
+                
+    &__img
+        border-radius: 3px
+        &_pa
+            bottom: 0
+            left: 50%
+            transform: translateX(-50%)
+            position: absolute
+        &-bg
+            height: 540px
+            width: 100%
+            border-radius: 3px
+            background-color: $soft_blue
+        &-wrap
+            position: relative
+            &::before
+                position: absolute
+                content: ''
+                display: block
+                height: 100%
+                width: 80%
+                border-radius: 3px
+                top: 0
+                left: 0
+                transform: translate(-30px, -30px)
+                background: $green_gradient
+                z-index: -1
+            &_sticky
+                height: 90%
+                position: sticky
+                top: 150px
+            &_another
+                &::before
+                    transform: translate(90px, -30px)
+    &__btn
+        &-wrap
+            display: flex
+    &__container
+        width: 100%
+        align-items: stretch
+    &__row
+        display: flex
+        justify-content: space-between
+        margin-top: 40px
+        & + &
+            margin-top: 20px
+        &-date
+            font-weight: bold
+            font-size: 12px
+            white-space: nowrap
+            color: $green
+        &-list
+            max-width: 440px
+            margin: 0
+            list-style-image: url(../img/swoosh.png)
+            li + li
+                margin-top: 20px
+    &__slider
+        margin-top: 40px
+        &-container
+            overflow: hidden
+        &-controls
+            margin-top: 30px
+            display: flex
+            align-items: center
+            position: relative
+        .swiper-pagination
+            flex-grow: 1
+            position: relative
+            height: 1px
+            right: 0
+            background-color: $green
+            span
+                height: 3px
+                background-color: $green
+                margin-top: -1px
+
+.uk-h2, h2
+    font-weight: bold
+    font-size: 40px
+    margin-bottom: 0
+
+.services
+    padding-bottom: 80px
+    .uk-card
+        overflow-y: auto
+        background-color: #F6F9FB
+        box-shadow: none
+        transition: all .2s ease-out 0s
+    .uk-card-title, h2, h3, h4, h5, h1
+        text-align: center
+        font-size: 18px
+        font-weight: bold
+        width: 100%
+    &__head
+        padding: 10px 0px
+    .uk-slider-items
+        margin-top: 40px
+    li
+        position: relative
+        perspective: 1000px
+        overflow: hidden
+        &>*
+            backface-visibility: hidden
+        img
+            width: 100%
+            height: auto
+        &:hover
+            .service__front
+                transform: rotateY(180deg)
+            .service__back
+                transform: rotateY(360deg)
+
+.service
+    &__back
+        position: absolute
+        width: 87%
+        height: 100%
+        top: 0
+        left: 0
+        transform: rotateY(180deg)
+        margin-left: 40px
+        padding: 30px 0px
+        .uk-card-title
+            margin-bottom: 10px
+    &__links
+        display: flex
+        flex-direction: column
+    &__link
+        display: inline-block
+        padding: 10px 20px
+        text-decoration: none
+        color: #737578
+        font-size: 13px
+        line-height: 14px
+        &:hover
+            color: #fff
+            text-decoration: none
+            background-color: $green
+            &::before
+                content: ''
+                display: inline-block
+                background-image: url(../img/inline-arrow-w.svg)
+                background-size: contain
+                background-repeat: no-repeat
+                margin-right: 3px
+                width: 10px
+                height: 8px
+
+.doctor-banner
+    position: relative
+    &__bg
+        position: absolute
+        width: 100vw
+        height: 225px
+        background-color: $soft_blue
+        bottom: 0
+        left: 0
+        z-index: -1
+    h2.uk-h1, h2, h1, h3, h4, h5
+        position: relative
+        &::after
+            content: ''
+            display: inline-block
+            width: 40px
+            height: 5px
+            position: absolute
+            bottom: -20px
+            left: 0
+            background-color: $green
+    &__title
+        margin-top: 120px
+    &__data
+        margin-top: 50px
+        max-width: 400px
+        dt
+            text-transform: none
+            font-size: 16px
+            color: #737578
+        dd
+            margin-top: 5px
+            max-width: 190px
+            font-size: 14px
+        .uk-description-list
+            &:first-child
+                margin-right: 15px
+    &__quote
+        font-size: 20px
+        line-height: 26px
+        font-style: italic
+        color: #737578
+        position: relative
+        display: inline-block
+        &::before, &::after
+            content: ''
+            display: inline-block
+            height: 20px
+            width: 15px
+            position: absolute
+            background-size: contain
+            background-repeat: no-repeat
+            background-position: center center
+            background-image: url(../img/quotes.png)
+        &::before
+            transform: translate(-110%, -90%)
+        &::after
+            transform: translate(110%, 90%) rotate(180deg)
+        &-wrap
+            padding: 30px
+            margin: 110px 0px 20px
+    &__author
+        font-size: 12px
+        color: #737578
+        display: block
+        margin-top: 30px
+
+.gallery
+    margin: 50px 0px 120px
+    &__photos
+        img + img
+            margin-left: 30px
+
+.form
+    margin-top: 40px
+    margin-bottom: 50px
+    &_fullscreen
+        background: $green_gradient
+        .form__body
+            background: none !important
+    &__schedule
+        color: #fff
+        white-space: nowrap
+        margin-left: 10px
+        opacity: .6
+        position: relative
+        display: inline-block
+        margin-right: 5px
+        padding-bottom: 2px
+        border-bottom: 2px dashed #fff
+        &:hover
+            color: #fff
+            cursor: pointer
+    &__inputs
+        flex-basis: 80%
+        width: 100%
+    &__err
+        font-size: 10px
+        color: #ED0000
+        margin-left: 10px
+        display: none
+    &__body
+        padding: 80px 100px 100px
+        background: $green_gradient
+        border-radius: 3px
+    &__rate
+        display: inline-block
+        position: relative
+        width: 120px
+        height: 22px
+        background-image: url(../img/rate_off.png)
+        background-size: 24px auto
+        background-repeat: repeat-x
+        vertical-align: middle
+        &-span
+            display: inline-block
+            opacity: .5
+            vertical-align: middle
+            margin-top: 6px
+            margin-right: 10px
+        &-wrap
+            min-width: 250px
+            padding: 13px !important
+        &, & *
+            flex-shrink: 0
+    &__radio
+        display: inline-block
+        position: absolute
+        font-size: inherit
+        top: 0
+        left: 0
+        appearance: none
+        height: 22px
+        margin: 0
+        border: none
+        transition-duration: 0s
+        &:focus
+            outline: none
+        &:hover, &:checked
+            background-image: url(../img/rate_on.png)
+        &:hover ~ &
+            background-image: url(../img/rate_off.png)
+        &:nth-child(1)
+            width: 24px
+            z-index: 5
+        &:nth-child(2)
+            width: 48px
+            z-index: 4
+        &:nth-child(3)
+            width: 72px
+            z-index: 3
+        &:nth-child(4)
+            width: 96px
+            z-index: 2
+        &:nth-child(5)
+            width: 120px
+            z-index: 1
+        
+    &__dropdown
+        &-card
+            background-color: $green
+            color: #ffffff93
+            visibility: hidden
+            opacity: 0
+            transform: translateY(-20px)
+            transition: all .2s ease-out 0s
+            right: -125px
+            top: 50%
+            box-shadow: 0px 4px 50px rgba(20, 43, 61, 0.15)
+            &::before
+                content: ''
+                display: inline-block
+                height: 40px
+                width: 40px
+                border-radius: 50%
+                background-color: $green
+                position: absolute
+                left: 50%
+                top: 0
+                transform: translate(-50%, -50%)
+            &::after
+                content: ''
+                display: inline-block
+                height: 24px
+                width: 24px
+                background-image: url(../img/info-w.svg)
+                background-position: center center
+                background-repeat: no-repeat
+                background-size: contain
+                position: absolute
+                left: 50%
+                top: 0
+                transform: translate(-35%, -50%)
+            .footer__card-header
+                color: #fff
+        &-wrap:hover
+            .form__dropdown-card
+                transition: all .2s ease-out 0s
+                visibility: visible
+                opacity: 1
+                transform: translateY(0px)
+    .uk-h2, .uk-text-meta, h2, h3, h4, h1
+        color: #fff
+        margin: 0
+    .uk-text-meta
+        margin-bottom: 20px
+    .uk-input, .form__textarea
+        font-size: 14px
+        line-height: 20px
+        padding: 16px 10px
+        background-color: transparent
+        border-radius: 3px
+        line-height: 20px
+        border: none
+        display: inline-block
+        height: auto
+        box-shadow: inset 0px 0px 50px rgba(0, 0, 0, 0.15)
+        &::placeholder
+            color: #ffffff7e
+        &:not([type="submit"])
+            color: #fff
+        &[type="submit"]
+            background-color: #fff
+            padding: 16px 10px
+            max-width: 200px
+            line-height: 18px
+            font-weight: bold
+            color: #686b79
+            box-shadow: none
+            &::after
+                display: none
+                content: ''
+                background-image: url(../img/inline-arrow.svg)
+                background-size: contain
+                background-repeat: no-repeat
+                background-position: center center
+                height: 10px
+                width: 10px
+                margin-left: 5px
+                vertical-align: middle
+            &:hover
+                cursor: pointer
+                color: $green
+                padding: 16px 5px
+                &::after
+                    display: inline-block
+    .uk-input + .uk-input
+        margin-left: 10px
+    &__row
+        & + &
+            margin-top: 10px
+    &__submit
+        margin-left: 30px
+        max-width: 220px
+        padding-bottom: 5px
+        .uk-text-small
+            font-size: 10px
+            color: #ffffff
+            opacity: .7
+            line-height: 12px
+    &__spread
+        flex-basis: 100%
+    .form__textarea
+        transition-duration: 0s
+        width: 100%
+        height: 100%
+        display: inline-block
+        box-sizing: border-box
+    select.uk-input
+        color: #ffffff7e !important
+        &:hover
+            cursor: pointer
+    .uk-input
+        option
+            color: #000
+    &__div
+        position: relative
+        padding: 0 !important
+        box-shadow: none !important
+        position: relative !important
+        &.valid-err
+            .form__err
+                display: inline
+            .uk-input
+                border: 1px solid #ED0000
+        &.select::before
+            position: absolute
+            top: 26px
+            right: 15px
+            display: inline-block
+            content: ''
+            width: 6px
+            height: 15px 
+            transform: translate(0, -50%)
+            background-image: url(../img/select-arrows.png)
+            background-repeat: no-repeat
+            background-position: center center
+
+.action
+    box-shadow: 0px 4px 50px rgba(20, 43, 61, 0.15)
+    border-radius: 3px
+    & + &
+        margin-left: 30px
+    &__wrap
+        margin-top: 30px
+    &__header
+        color: $green
+        font-size: 14px
+        font-weight: 500
+    &__title, &__body h1, &__body h2, &__body h3, &__body h4, &__body h5
+        color: $green
+        font-size: 24px
+        font-weight: 900
+        text-transform: uppercase
+        margin: 0
+    &__percentage
+        color: $green
+        font-size: 54px
+        font-weight: 900
+        text-transform: uppercase
+        line-height: 50px
+
+.portfolio
+    padding-top: 120px
+    .uk-card
+        box-shadow: none
+    .uk-card + .uk-card
+        margin-left: 30px
+    .uk-card-media-top
+        .portfolio__img-wrap
+            width: 100%
+            img
+                width: 100%
+                height: auto
+        .portfolio__img-wrap + .portfolio__img-wrap
+            display: none
+        &:hover
+            .portfolio__img-wrap:first-child
+                display: none
+            .portfolio__img-wrap + .portfolio__img-wrap
+                display: block
+    .uk-card-body
+        padding: 20px 0px 0px
+    .uk-card-title
+        font-size: 18px
+        font-weight: bold
+        line-height: 22px
+        margin-bottom: 10px
+    p
+        font-size: 14px
+        line-height: 20px
+        color: #737578
+        margin: 0
+    &__title
+        margin-bottom: 50px
+    &__img
+        &-wrap
+        &-meta
+            left: 10px
+            bottom: 10px
+            text-transform: uppercase
+            font-size: 12px
+            font-weight: bold
+            color: #fff
+            opacity: .4
+
+.text
+    &__item
+        padding-left: 20px
+        position: relative
+        &::before
+            content: ''
+            display: inline-block
+            position: absolute
+            top: 0
+            left: -5px
+            height: 20px
+            width: 20px
+            background-image: url(../img/list-img.png)
+            background-size: contain
+            background-repeat: no-repeat
+            background-position: center
+    &_fullscreen
+        padding: 120px 0px
+        .uk-h1, h1, h2, h3, h4, h5
+            position: relative
+            margin-bottom: 30px
+            &::after
+                content: ''
+                display: inline-block
+                width: 40px
+                height: 5px
+                position: absolute
+                bottom: -10px
+                left: 0
+                background-color: $green
+    .uk-column-1-2
+        margin-top: 30px
+
+.colored_text
+    &__body
+        padding: 80px 100px
+        background-color: $soft_blue
+        img
+            max-width: 100px
+            height: auto
+            margin-right: 70px
+        .uk-text
+            line-height: 24px
+
+.accordion
+    &__content-item
+        padding: 25px
+        background-color: #fff
+        & + &
+            border-top: 1px solid $soft_blue
+    .uk-accordion-title
+        background-color: $soft_blue
+        padding: 25px 30px
+    li.uk-open
+        position: relative
+        z-index: 2
+        box-shadow: 0px 4px 50px rgba(20, 43, 61, 0.15)
+
+.reviews
+    padding-top: 120px
+    padding-bottom: 90px
+    &__slider
+        margin-top: 50px
+        overflow: hidden
+        padding: 15px 0px
+    &__wrap
+        margin-top: 120px
+    &__pagination
+        margin-top: 50px
+    .uk-slider-container
+        max-width: 1140px
+        flex-grow: 1
+        width: 100%
+        overflow: visible
+    .uk-slider-items
+        li + li
+            margin-left: 40px
+
+.doctors
+    padding-top: 70px
+    &__bg
+        bottom: 0
+        &_green
+            background: $green_gradient
+            height: 300px
+            width: 50vw
+            z-index: -1
+        &_gray
+            background-color: $soft_blue
+            height: 225px
+            width: 50vw
+            z-index: -1
+
+.doctor
+    &__data
+        padding-bottom: 50px
+    &__link
+        color: #ffffff
+        &:hover
+            color: #fff
+    &__name
+        font-size: 30px
+        color: #fff
+        &::after
+            display: inline-block
+            content: ''
+            height: 5px
+            width: 40px
+            background-color: #fff
+            bottom: -30px
+            left: 0
+            position: absolute
+    &__specialty
+        margin-top: 45px
+        color: #fff
+    &__link
+        margin-top: 20px
+        max-width: 150px
+        &::after
+            background-image: url(../img/arrow-h-w.png)
+        &:hover
+            &::after
+                background-image: url(../img/arrow-w.png)
+    &__img
+        img
+            max-width: 320px
+            height: auto
+            object-fit: contain
+    &__bottom
+        display: flex
+        flex-direction: column
+        
+    &__control
+        padding-bottom: 30px
+        padding-left: 30px
+        right: 0
+        bottom: 0
+        width: 50%
+
+.review
+    border-radius: 3px
+    box-shadow: 0 5px 12px rgba(0,0,0,.15)
+    &__head
+        padding-bottom: 10px
+    &__bottom
+        padding-top: 10px
+    &__name
+        font-weight: bold
+        font-size: 18px
+        line-height: 22px
+        margin-bottom: 0
+        margin-right: 10px
+    &__body
+        position: relative
+        max-width: 810px
+        &::before, &::after
+            content: ''
+            display: inline-block
+            width: 20px
+            height: 15px
+            position: absolute
+            background-image: url(../img/quotes.png)
+            background-size: contain
+            background-repeat: no-repeat
+            background-position: center center
+        &::before
+            left: 0
+            top: 0
+            transform: translate(-120%, -100%)
+        &::after
+            right: 0
+            bottom: 0
+            transform: translate(120%, 90%) rotate(180deg)
+    &__info
+        display: flex
+        flex-wrap: wrap
+        align-items: center
+    &__rating
+        flex-grow: 0
+        height: 100%
+        background-repeat-x: repeat
+        background-size: contain
+        background-image: url(../img/rate_off-g.png)
+        height: 13px
+        width: 70px
+        flex-shrink: 0
+        position: relative
+        &_0 .review__stars
+            width: calc( 0 * 14px )
+        &_1 .review__stars
+            width: calc( 1 * 14px )
+        &_2 .review__stars
+            width: calc( 2 * 14px )
+        &_3 .review__stars
+            width: calc( 3 * 14px )
+        &_4 .review__stars
+            width: calc( 4 * 14px )
+        &_5 .review__stars
+            width: calc( 5 * 14px )
+        &_0-5 .review__stars
+            width: calc( 0.5 * 14px )
+        &_1-5 .review__stars
+            width: calc( 1.5 * 14px )
+        &_2-5 .review__stars
+            width: calc( 2.5 * 14px )
+        &_3-5 .review__stars
+            width: calc( 3.5 * 14px )
+        &_4-5 .review__stars
+            width: calc( 4.5 * 14px )
+    &__stars
+        position: absolute
+        width: 14px
+        height: 100%
+        background-image: url(../img/rate_on.png)
+        background-repeat-x: repeat
+        background-size: contain
+        left: 0
+        filter: grayscale(0)
+        margin: 0 !important
+    &__page
+        box-shadow: none
+        padding-right: 70px
+        &:last-child
+            border-bottom: 1px solid #CFD5DC
+        & + &
+            border-top: 1px solid #CFD5DC
+    .uk-text-small
+        font-size: 14px
+        line-height: 20px
+
+.reviews
+    &_video
+        .uk-card
+            box-shadow: 0px 4px 50px rgba(20, 43, 61, 0.15)
+        .reviews
+            &__slider
+                margin: 0
+                &:first-child
+                    flex-basis: 80%
+    &__slider + &__slider
+            margin-left: 30px
+    &__sliders
+        margin-top: 50px
+        display: flex
+        overflow: hidden
+        padding: 30px
+        .swiper-wrapper
+            max-height: 540px
+        .gallery-thumbs
+            .review
+                &__video
+                    max-height: 135px
+    &__slider
+        &_thumbs
+            .swiper-container
+                height: 100%
+                max-height: 460px
+    .swiper
+        &__buttons
+            a + a
+                margin-left: 15px
+        &__controls
+            margin-top: 30px
+            display: flex
+            justify-content: space-between
+            align-items: center
+        &__pagination
+            color: $green
+            font-size: 24px
+            &-total
+                font-size: 16px
+                color: #2f324165
+            
+.video
+    overflow: hidden
+    max-height: 540px
+    &__data
+        margin-top: 25px
+        span
+            line-height: 20px
+    &__title
+        margin-bottom: 10px
+        font-size: 18px
+        line-height: 22px
+    img, video, iframe
+        max-height: 460px
+        max-width: none
+        width: 100%
+        object-fit: cover
+        height: 100%
+
+.test
+    &-block
+        background-color: peachpuff
+        border-radius: 3px
+        height: 300px
+        position: sticky
+        top: 200px
+        width: 100%
+    &-sibling
+        width: 50%
+        height: 1300px
+        background-color: aqua
+
+.beradcrumbs
+    padding: 20px 0px
+    margin-bottom: -65px
+    z-index: 9
+    position: relative
+    &__list
+        list-style-type: none
+        padding: 0
+        margin-left: -.5em
+    &__item
+        display: inline
+        & + &
+            &::before
+                content: '/'
+                transform: translateX(-0.5em)
+                display: inline-block
+                color: $green
+                font-size: 12px
+        &:last-child
+            &::before
+                color: #8F9194
+    &__link
+        padding: 0em .5em 0em 0em
+        font-size: 12px
+        text-decoration: none
+        position: relative
+        color: $green
+        &::after
+            display: inline-block
+            position: absolute
+            bottom: -2px
+            width: calc(100% - 1em)
+            height: 1px
+            background-color: $green
+            transform-origin: left
+            content: ''
+            left: .5em
+            transform: scaleX(0)
+        &:hover
+            color: $green
+            text-decoration: none
+            &::after
+                transform: scaleX(1)
+        &.reviews__control_disabled
+            color: #8F9194
+            &:hover
+                cursor: default
+            &::after
+                display: none
+
+.uk-pagination
+    a, .reviews__control, .uk-active>span
+        display: inline-block
+        border-radius: 50%
+        height: 50px
+        width: 50px
+        text-align: center
+        line-height: 50px
+        position: relative
+        color: #2F3241
+        font-size: 16px
+        font-weight: bold
+    a, .uk-active>span
+        background: $soft_blue
+    .uk-active>span
+        box-shadow: 0 0 0 1px $green
+        transition: all .3s ease-out 0s
+    .reviews__page
+        &:hover a
+            box-shadow: 0 0 0 1px $green
+            transition: all .2s ease-out 0s
+    .reviews__control
+        background: $green_gradient
+        &_disabled
+            cursor: default
+            opacity: .35
+        &:hover
+            transform: scale(1.1)
+        &::after
+            display: inline-block
+            content: ''
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            width: 15px
+            height: 12px
+            color: #fff
+            background-image: url(../img/inline-arrow-w.svg)
+            &.uk-invisible
+                display: none
+        &-prev
+            &::after
+                transform: translate(-50%, -50%) rotate(180deg)
+
+.button
+    width: auto !important
+    flex: unset !important
+    border-radius: 3px
+    background: $green_gradient
+    border: none
+    color: #ffffff
+    font-weight: bold
+    font-size: 14px
+    img
+        height: 10px
+        width: 10px
+        object-fit: contain
+        margin-left: 5px
+        vertical-align: baseline
+        opacity: 0
+    &:hover
+        color: #ffffff
+        border: none
+        img
+            opacity: 1
+    &_big
+        padding-top: 15px
+        padding-bottom: 15px
+        padding-right: 15px
+    &_transparent
+        background: transparent
+        border: 1px solid $green
+        color: $green
+        &:hover
+            background: $green_gradient
+            border: 1px solid $green
+            color: #ffffff
+
+.team
+    padding: 120px 0px
+    &__wrapper
+        margin-top: 50px
+        display: grid
+        grid-gap: 30px
+        grid-template-columns: repeat(2, 1fr)
+    &__member
+        display: block
+
+.member
+    background-color: $soft_blue
+    padding: 0 !important
+    border-radius: 3px
+    overflow: hidden
+    &__img
+        max-width: 265px
+        width: 100%
+        height: 100%
+        object-fit: cover
+    &__name
+        position: relative
+        &::after
+            position: absolute
+            display: inline-block
+            height: 5px
+            width: 40px
+            content: ''
+            background: $green
+            left: 0
+            bottom: -30px
+    &__body
+        padding-left: 20px
+        padding-right: 20px
+    &__row
+        dl
+            margin: 0
+        dt
+            color: #737578
+        dd
+            font-size: 14px
+            color: #2F3241
+    &:hover
+        text-decoration: none
+        box-shadow: 0px 0px 30px rgba(21, 36, 45, 0.15)
+
+.banner
+    padding: 140px 0px
+    .button
+        padding: 10px 26px
+    .button + .button
+        margin-left: 10px
+
+.faqs
+    padding: 120px 0px
+    .swiper-container-horizontal>.swiper-pagination-progressbar
+        top: auto
+        bottom: -8px
+        max-width: 400px
+        display: none
+        left: 50%
+        transform: translateX(-50%)
+        height: 1px
+        margin: 10px
+        .swiper-pagination-progressbar-fill
+            height: 3px
+            background-color: $green
+            margin-top: -1px
+    &__themes
+        margin: 50px 0px 120px
+        overflow: hidden
+        position: relative
+    &__theme
+        padding: 20px
+        box-shadow: 0px 0px 30px rgba(21, 36, 45, 0.15)
+        border: 1px solid #fff
+        &-img
+            fill: #CFD5DC
+        &-span
+            display: inline-block
+            margin-top: 5px
+            color: #666666
+        &:hover, &.active
+            text-decoration: none
+            border: 1px solid $green
+            .faqs__theme-img
+                fill: $green
+
+.faq
+    padding: 30px 20px
+    & + &
+        border-top: 1px solid #CFD5DC
+        margin: 0
+    &:last-child
+        border-bottom: 1px solid #CFD5DC
+    &__title
+        p
+            max-width: 1020px
+            margin: 0
+
+.map
+    padding: 90px 0px 120px
+    &__item
+        margin-top: 50px
+        filter: drop-shadow(0px 4px 50px rgba(20, 43, 61, 0.15))
+
+.price
+    margin-bottom: 120px
+    &__list
+        margin-top: 50px
+    &__item
+        padding: 25px
+        background-color: $soft_blue
+        & + &
+            margin-top: 10px
+        .uk-text
+            max-width: 900px
+    &__price
+        white-space: nowrap
+        color: $green
+
+.more
+    background: linear-gradient(100.48deg, #F1F6FC 0%, #EAF0F8 100%)
+    padding: 110px 0px
+    &__button
+        width: 100%
+        text-align: center
+        margin-top: auto
+        font-weight: 500
+        font-size: 12px
+        border-radius: 3px
+        color: $green
+        border: 1px solid $green
+        &:hover
+            border: 1px solid $green
+            background-color: $green
+            color: #fff
+            &::after
+                display: inline-block
+        &::after
+            content: ''
+            display: none
+            background-image: url(../img/inline-arrow-w.svg)
+            background-repeat: no-repeat
+            background-size: contain
+            background-position: center center
+            vertical-align: baseline
+            margin-left: 5px
+            height: 8px
+            width: 11px
+            
+    &__article
+        &:hover
+            box-shadow: 0px 0px 30px rgba(21, 36, 45, 0.15)
+            text-decoration: none
+            .more__button
+                border: 1px solid $green
+                background-color: $green
+                color: #fff
+                &::after
+                    display: inline-block
+    .uk-card + .uk-card
+        margin-left: 30px
+    .uk-card
+        &-title
+            font-size: 18px
+            font-weight: bold
+            line-height: 22px
+        &-body
+            flex-grow: 1
+            padding: 20px
+            font-size: 14px
+            line-height: 20px
+            color: #737578
+            display: flex
+            flex-direction: column
+            min-height: 270px
+        &-media-top
+            img
+                width: 100%
+                height: auto
+      
+.agit
+    background: $green_gradient
+    padding: 50px 0px
+    .uk-text-large
+        color: #fff
+    .button
+        background: #fff
+        white-space: nowrap
+        padding: 16px 20px
+        line-height: 18px
+        font-weight: bold
+        color: #686b79
+        border: none
+        &::after
+            display: none
+            content: ''
+            background-image: url(../img/inline-arrow.svg)
+            background-size: contain
+            background-repeat: no-repeat
+            height: 15px
+            width: 15px
+            margin-left: 5px
+            vertical-align: middle
+        &:hover
+            cursor: pointer
+            color: $green
+            padding: 16px 10px 16px 10px
+            border: none
+            &::after
+                display: inline-block
+
+.footer
+    padding: 50px 0px 25px
+    flex-grow: 0
+    &__nav
+        flex-basis: 83%
+        &-link
+            text-transform: uppercase
+            color: $green
+            font-size: 11px
+            line-height: 24px
+            font-weight: bold
+            position: relative
+            display: inline-block
+            &::after
+                content: ''
+                display: inline-block
+                position: absolute
+                left: 0
+                bottom: -3px
+                transform: scaleX(0)
+                transform-origin: left
+                width: 100%
+                height: 2px
+                background: $green_gradient
+            &:hover
+                color: $green
+                text-decoration: none
+                &::after
+                    transform: scaleX(1)
+        ul, li
+            margin: 0 !important
+        ul
+            flex-grow: 1
+    &__body
+        margin-top: 50px
+        margin-bottom: 50px !important
+        flex-wrap: wrap
+        &>*
+            margin: 10px
+        .footer__nav
+            flex-basis: auto
+        .uk-description-list
+            max-width: 230px
+            max-height: 175px
+            margin-top: 0
+        dt
+            font-size: 11px
+            color: #2F3241
+            opacity: .6
+            text-transform: uppercase
+        dd
+            font-size: 14px
+            font-weight: 500
+            color: #2F3241
+            margin-top: .8em
+            .footer__green-link
+                color: $green
+        dd + dd
+            margin-top: .3em
+        dd:last-child
+            margin-top: auto
+        .uk-card
+            max-height: 180px
+        .uk-card-body
+            background-color: #F1F5F9
+            border-radius: 3px
+    &__card-body
+        min-width: 160px
+    &__card-header
+        text-align: center
+        font-size: 14px
+        margin-bottom: 10px
+    &__card-col
+        span
+            font-size: 14px
+    &__dd-link
+        color: #000
+        font-size: 14px
+        line-height: 20px
+        display: inline-block
+        position: relative
+        white-space: nowrap
+        & + & 
+            margin-top: 5px
+        &::after
+            display: inline-block
+            position: absolute
+            content: ''
+            left: 20px
+            bottom: 0
+            width: calc( 100% - 18px )
+            height: 1px
+            transform: scaleX(0)
+            background-color: $green
+            transform-origin: left 
+        img
+            max-width: 15px
+            width: 100% !important
+            height: auto !important
+            object-fit: contain
+            margin-left: 0 !important
+            margin-right: 3px
+        &:hover
+            text-decoration: none
+            color: #000
+            &::after
+                transform: scaleX(1)
+    &__2reviews
+        
+    &__schedule
+        position: relative
+        &::before
+            content: ''
+            display: inline-block
+            height: 40px
+            width: 40px
+            border-radius: 50%
+            background-color: $soft_blue
+            position: absolute
+            left: 50%
+            top: 0
+            transform: translate(-50%, -50%)
+        &::after
+            content: ''
+            display: inline-block
+            height: 26px
+            width: 26px
+            background-color: $soft_blue
+            background-image: url(../img/clock.png)
+            background-position: center center
+            background-repeat: no-repeat
+            background-size: contain
+            position: absolute
+            left: 50%
+            top: 0
+            transform: translate(-50%, -50%)
+    &__outer
+        height: 30px
+        width: 30px
+        max-width: none
+        img
+            object-fit: cover
+            height: 100%
+            width: 100%
+    &__bottom
+        &-col
+            span
+                white-space: nowrap
+
+.popup
+    background-color: #fff
+    box-shadow: 0px 4px 50px rgba(20, 43, 61, 0.15)
+    border-radius: 3px
+    visibility: hidden
+    opacity: 0
+    transform: translateY(-50px)
+    width: 100%
+    max-height: 98vh
+    &_request
+        padding: 80px 100px 90px
+        max-width: 1140px
+    &_sucsess
+        max-width: 620px
+        width: 100%
+        padding: 80px 80px 90px
+    &__close
+        display: inline-block
+        height: 27px
+        width: 27px
+        right: 0
+        top: 0
+        transform: translate(120%, 0%)
+        &::before, &::after
+            width: 28px
+            height: 2px
+            background-color: #fff
+            display: inline-block
+            position: absolute
+            content: ''
+            left: 50%
+            top: 50%
+        &::before
+            transform: translate(-50%, -50%) rotate(-45deg)
+        &::after
+            transform: translate(-50%, -50%) rotate(45deg)
+        &:hover
+            cursor: pointer
+            &::before
+                transform: translate(-50%, -50%) rotate(-45deg) scaleX(1.1)
+            &::after
+                transform: translate(-50%, -50%) rotate(45deg) scaleX(1.1)
+    &__wrapper
+        z-index: 1000
+        position: fixed
+        display: flex
+        justify-content: center
+        align-items: center
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        background-color: #2f32417e
+        visibility: hidden
+        opacity: 0
+        padding: 0px 40px
+        &.active
+            visibility: visible
+            opacity: 1
+    &__body
+        .uk-input
+            padding: 16px 10px
+            font-size: 14px
+            line-height: 20px
+            height: auto
+            border-radius: 3px
+            background: linear-gradient(100.48deg, rgba(241, 246, 252, 0.3) 0%, rgba(234, 240, 248, 0.3) 100%)
+            box-shadow: inset 0px 0px 50px rgba(0, 0, 0, 0.05)
+            border: none
+        .uk-input + .uk-input
+            margin-left: 10px
+    &__row + &__row
+        margin-top: 10px
+    &__row:last-child
+        margin-top: 25px
+    &__info
+        position: absolute
+        top: 14px
+        left: 95px
+        &-card
+            position: absolute
+            padding: 12px
+            background-color: #fff
+            z-index: 2
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1)
+            visibility: hidden
+            opacity: 0
+            transform: translateY(-20px)
+            width: 240px
+            border-radius: 3px
+            top: -44px
+            left: 8px
+            p
+                font-size: 10px
+                margin: 7px 0px
+                &:first-child
+                    margin-top: 0px
+                &:last-child
+                    margin-bottom: 0
+            &::before, &::after
+                content: ''
+                display: inline-block
+                position: absolute
+                top: 50%
+                left: 0
+                background-color: #fff
+                z-index: 2
+                border-radius: 50%
+                transform: translate(-50%, -50%)
+            &::before
+                height: 24px
+                width: 24px
+            &::after
+                height: 12px
+                width: 12px
+                background-image: url(../img/popup-info.svg)
+                background-repeat: no-repeat
+                background-position: center center
+                background-size: contain
+        &:hover
+            .popup__info-card
+                visibility: visible
+                opacity: 1
+                transform: translateY(0px)
+    &__submit
+        color: #ffffff
+        font-size: 14px
+        line-height: 18px
+        font-weight: bold
+        padding: 17px 26px
+        background: linear-gradient(90.06deg, #0DC180 0%, #04B474 100%)
+        border-radius: 3px
+        img
+            width: 0px
+            object-fit: contain
+            margin-left: 3px
+            transform: translateY(-2px)
+            transition-duration: 0s
+        &:hover
+            padding: 17px 21px 17px 20px
+            img
+                transition-duration: 0s
+                width: 11px
+    &.active
+        visibility: visible
+        opacity: 1
+        transform: translateY(0px)

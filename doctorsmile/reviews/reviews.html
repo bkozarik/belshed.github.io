@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="ru-Ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dentko - стоматологии</title>
+    <link rel="stylesheet" href="/dentko/css/uikit.min.css"/>
+    <link rel="stylesheet" href="/dentko/css/fonts.css"/>
+    <link rel="stylesheet" href="/dentko/css/style.css"/>
+    <link rel="stylesheet" href="/dentko/css/media.css"/>
+    <script src="/dentko/js/uikit.min.js"></script>
+    <script src="/dentko/js/uikit-icons.min.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="uk-container">
+            <div class="uk-flex uk-flex-between uk-flex-bottom header__wrap">
+                <a href="/dentko/index.html" class="header__main-link"><img src="/dentko/img/logo.svg" alt="Логотип" class="header__logo"></a>
+                <dl class="uk-description-list header__item">
+                    <dt>Контакты:</dt>
+                    <dd>г. Минск, пр-кт Независимости, 58</dd>
+                </dl>
+                <dl class="uk-description-list header__item">
+                    <dt>Время работы:</dt>
+                    <dd class="uk-inline">
+                        <div class="uk-inline header__dropdown-trigger">
+                            <span class="header__dropdown-span">Без выходных <img src="/dentko/img/info.svg"></span>
+                            <div class="uk-card uk-card-body uk-margin-remove-top header__dropdown-card">
+                                <span class="footer__card-header uk-text-bold">Время работы:</span>
+                                <div class="footer__card-body uk-flex uk-flex-between">
+                                    <div class="footer__card-col uk-flex uk-flex-column">
+                                        <span>пн-пт:</span>
+                                        <span>сб:</span>
+                                        <span>вс:</span>
+                                    </div>
+                                    <div class="footer__card-col uk-flex uk-flex-column">
+                                        <span>09:00 — 21:00</span>
+                                        <span>09:00 — 20:00</span>
+                                        <span>09:00 — 17:00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </dd>
+                </dl>
+                <dl class="uk-description-list header__item">
+                    <dt>Мы в соц.сетях:</dt>
+                    <dd class="uk-flex uk-flex-between">
+                        <a href="#" class="header__link"><img src="/dentko/img/facebook.png" alt="Иконка" class="header__link-img"></a>
+                        <a href="#" class="header__link"><img src="/dentko/img/vk.png" alt="Иконка" class="header__link-img"></a>
+                        <a href="#" class="header__link"><img src="/dentko/img/instagram.png" alt="Иконка" class="header__link-img"></a>
+                    </dd>
+                </dl>
+                <dl class="uk-description-list header__item">
+                    <dt>Телефоны:</dt>
+                    <dd>
+                        <div class="uk-inline">
+                            <span class="header__dropdown"><a href="tel:+375291101212" class="footer__dd-link"><img src="/dentko/img/operator1.png">+375 (29) 110-12-12</a></span>
+                            <div class="header__dropdown-container" uk-dropdown>
+                                <a href="tel:+375291101212" class="footer__dd-link"><img src="/dentko/img/operator1.png">+375 (29) 110-12-12</a>
+                                <a href="tel:+375336601313" class="footer__dd-link"><img src="/dentko/img/operator2.png">+375 (33) 660-13-13</a>
+                                <a href="tel:+375251101212" class="footer__dd-link"><img src="/dentko/img/operator3.png">+375 (25) 110-12-12</a>
+                                <a href="tel:+375172844511" class="footer__dd-link"><img src="/dentko/img/operator4.png">+375 (17) 284-45-11</a>
+                            </div>
+                        </div>
+                        <div class="uk-flex-inline uk-flex-between">
+                            <a href="#" class="header__link"><img src="/dentko/img/telegram.png" alt="Иконка" class="header__link-img"></a>
+                            <a href="#" class="header__link"><img src="/dentko/img/viber.png" alt="Иконка" class="header__link-img"></a>
+                            <a href="#" class="header__link"><img src="/dentko/img/whatsapp.png" alt="Иконка" class="header__link-img"></a>
+                        </div>
+                    </dd>
+                </dl>
+                <button class="header__menu-btn menu-open"><span></span></button>
+            </div>
+        </div>
+    </header>
+    <nav class="nav" uk-navbar>
+        <div class="uk-navbar-center">
+            <ul class="uk-navbar-nav uk-flex-between uk-flex-middle">
+                <li><a href="/dentko/about.html">о компании</a></li>
+                <li>
+                    <a href="/dentko/service.html" class="nav__dropdown-link">услуги</a>
+                    <div class="uk-navbar-dropdown">
+                        <ul class="uk-nav uk-navbar-dropdown-nav">
+                            <li>
+                                <a href="/dentko/service.html"><img src="/dentko/img/inline-arrow-w.svg">Лечение</a>
+                                <ul class="nav__inner">
+                                    <li><a href="#" class="service__link">Лечение пульпита</a></li>
+                                    <li><a href="#" class="service__link">Детская стоматология</a></li>
+                                    <li><a href="#" class="service__link">Лечение каналов</a></li>
+                                    <li><a href="#" class="service__link">Лечение корня зуба</a></li>
+                                    <li><a href="#" class="service__link">Лечение зубов под микроскопом</a></li>
+                                    <li><a href="#" class="service__link">Лечение зубов иностранным гражданам</a></li>
+                                    <li><a href="#" class="service__link">Центр эстетической стоматологии</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="/dentko/service.html"><img src="/dentko/img/inline-arrow-w.svg">Протезирование</a>
+                                <ul class="nav__inner">
+                                    <li><a href="#" class="service__link">Протезирование зубов</a></li>
+                                    <li><a href="#" class="service__link">Реставрация зубов</a></li>
+                                    <li><a href="#" class="service__link">Съемные зубные протезы</a></li>
+                                    <li><a href="#" class="service__link">Бюгельное протезирование</a></li>
+                                    <li><a href="#" class="service__link">Ремонт зубных протезов</a></li>
+                                    <li><a href="#" class="service__link">Люминиры</a></li>
+                                    <li><a href="#" class="service__link">Компониры</a></li>
+                                    <li><a href="#" class="service__link">Керамические виниры</a></li>
+                                    <li><a href="#" class="service__link">Безметалловая керамика</a></li>
+                                    <li><a href="#" class="service__link">Металлокерамические коронки</a></li>
+                                    <li><a href="#" class="service__link">Пластмассовый протез для зубов</a></li>
+                                    <li><a href="#" class="service__link">Нейлоновые протезы</a></li>
+                                    <li><a href="#" class="service__link">Зубной мост</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="/dentko/service.html"><img src="/dentko/img/inline-arrow-w.svg">Хирургия</a>
+                                <ul class="nav__inner">
+                                    <li><a href="#" class="service__link">Имплантация зубов (импланты)</a></li>
+                                    <li><a href="#" class="service__link">Наращивание костной ткани</a></li>
+                                    <li><a href="#" class="service__link">Стоматологическая хирургия</a></li>
+                                    <li><a href="#" class="service__link">Удаление зуба мудрости</a></li>
+                                    <li><a href="#" class="service__link">Удаление зубов</a></li>
+                                    <li><a href="#" class="service__link">Удаление зубов у детей</a></li>
+                                    <li><a href="#" class="service__link">Пластика уздечки языка</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="/dentko/service.html"><img src="/dentko/img/inline-arrow-w.svg">Ортодонтия</a>
+                                <ul class="nav__inner">
+                                    <li><a href="#" class="service__link">Установка брекет-систем</a></li>
+                                    <li><a href="#" class="service__link">Металлические брекеты</a></li>
+                                    <li><a href="#" class="service__link">Сапфировые брекеты</a></li>
+                                    <li><a href="#" class="service__link">Самолигирующие брекеты</a></li>
+                                    <li><a href="#" class="service__link">Керамические брекеты</a></li>
+                                    <li><a href="#" class="service__link">Брекеты Damon</a></li>
+                                    <li><a href="#" class="service__link">Услуги ортодонта в Минске</a></li>
+                                    <li><a href="#" class="service__link">Детский ортодонт</a></li>
+                                    <li><a href="#" class="service__link">Трейнеры для зубов</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="/dentko/service.html"><img src="/dentko/img/inline-arrow-w.svg">Отбеливание</a>
+                                <ul class="nav__inner">
+                                    <li><a href="#" class="service__link">Отбеливание зубов</a></li>
+                                    <li><a href="#" class="service__link">Офисное отбеливание зубов</a></li>
+                                    <li><a href="#" class="service__link">Отбеливание зубов капами</a></li>
+                                    <li><a href="#" class="service__link">Домашнее отбеливание зубов</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="/dentko/service.html"><img src="/dentko/img/inline-arrow-w.svg">Профилактика</a>
+                                <ul class="nav__inner">
+                                    <li><a href="#" class="service__link">Профессиональная чистка зубов и профилактика</a></li>
+                                    <li><a href="#" class="service__link">Герметизация фиссур</a></li>
+                                    <li><a href="#" class="service__link">Ультразвуковая чистка</a></li>
+                                    <li><a href="#" class="service__link">Профессиональная гигиена полости рта</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="/dentko/service.html"><img src="/dentko/img/inline-arrow-w.svg">Парадонтология</a>
+                                <ul class="nav__inner">
+                                    <li><a href="#" class="service__link">Пародонтология</a></li>
+                                    <li><a href="#" class="service__link">Лечение пародонтита</a></li>
+                                    <li><a href="#" class="service__link">Лечение гингивита</a></li>
+                                    <li><a href="#" class="service__link">Лечение пародонтоза</a></li>
+                                    <li><a href="#" class="service__link">Шинирование зубов в Минске</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="/dentko/service.html"><img src="/dentko/img/inline-arrow-w.svg">Косметология</a>
+                                <ul class="nav__inner">
+                                    <li><a href="#" class="service__link">Терапевтическая косметология</a></li>
+                                    <li><a href="#" class="service__link">Контурная пластика</a></li>
+                                    <li><a href="#" class="service__link">Пилинг</a></li>
+                                    <li><a href="#" class="service__link">Косметологическая клиника Дентко</a></li>
+                                    <li><a href="#" class="service__link">Массаж лица</a></li>
+                                    <li><a href="#" class="service__link">Чистка лица</a></li>
+                                    <li><a href="#" class="service__link">Микротоки для лица</a></li>
+                                    <li><a href="#" class="service__link">Ультразвуковая чистка лица</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="/dentko/service.html"><img src="/dentko/img/inline-arrow-w.svg">Диагностика</a>
+                                <ul class="nav__inner">
+                                    <li><a href="/dentko/service.html"><img src="/dentko/img/inline-arrow-w.svg">Панорамный снимок зубов</a></li>
+                                    <li><a href="/dentko/service.html"><img src="/dentko/img/inline-arrow-w.svg">3D компьютерная томография зубов</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="/dentko/price.html">цены</a></li>
+                <li><a href="/dentko/payment.html">оплата и рассрочка</a></li>
+                <li><a href="/dentko/reviews/reviews.html">отзывы</a></li>
+                <li><a href="/dentko/team.html">специалисты</a></li>
+                <li><a href="/dentko/faq/faq.html">вопрос-ответ</a></li>
+                <li><a href="/dentko/contacts.html">контакты</a></li>
+                <li><a class="nav__order popup-request-open" href="#">Записаться на прием <img src="/dentko/img/inline-arrow.svg"></a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="appointment">
+        <div class="uk-container">
+            <div class="uk-container">
+                <div class="uk-flex uk-flex-column uk-flex-middle">
+                    <div class="uk-inline">
+                        <span class="header__dropdown"><a href="tel:+375291101212" class="footer__dd-link"><img src="/dentko/img/operator1.png">+375 (29) 110-12-12</a></span>
+                        <div class="header__dropdown-container" uk-dropdown>
+                            <a href="tel:+375291101212" class="footer__dd-link"><img src="/dentko/img/operator1.png">+375 (29) 110-12-12</a>
+                            <a href="tel:+375336601313" class="footer__dd-link"><img src="/dentko/img/operator2.png">+375 (33) 660-13-13</a>
+                            <a href="tel:+375251101212" class="footer__dd-link"><img src="/dentko/img/operator3.png">+375 (25) 110-12-12</a>
+                            <a href="tel:+375172844511" class="footer__dd-link"><img src="/dentko/img/operator4.png">+375 (17) 284-45-11</a>
+                        </div>
+                    </div>
+                    <div class="about__btn-wrap appointment__btn-wrap">
+                        <button class="uk-button uk-button-default button about__btn appointment__btn popup-request-open">Записаться на прием <img src="/dentko/img/inline-arrow-w.svg"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mobile-menu">
+        <div class="mobile-menu__services">
+            <span class="mobile-menu__title">Наши услуги</span>
+            <ul uk-accordion>
+                <li>
+                    <a class="uk-accordion-title mobile-menu__accordion" href="#">Лечение зубов</a>
+                    <div class="uk-accordion-content">
+                        <ul class="mobile-menu__inner">
+                            <li><a href="#" class="nav__link">Лечение зубов (кариеса)</a></li>
+                            <li><a href="#" class="nav__link">Лечение пульпита</a></li>
+                            <li><a href="#" class="nav__link">Детская стоматология</a></li>
+                            <li><a href="#" class="nav__link">Лечение каналов</a></li>
+                            <li><a href="#" class="nav__link">Лечение корня зуба</a></li>
+                            <li><a href="#" class="nav__link">Лечение зубов под микроскопом</a></li>
+                            <li><a href="#" class="nav__link">Лечение зубов иностранным гражданам</a></li>
+                            <li><a href="#" class="nav__link">Центр эстетической стоматологии</a></li>
+                            <li><a href="#" class="nav__link">Лечение зубов детям</a></li>
+                            <li><a href="#" class="nav__link">Пломбирование зубов</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a class="uk-accordion-title mobile-menu__accordion" href="#">Протезирование</a>
+                    <div class="uk-accordion-content">
+                        <ul class="mobile-menu__inner">
+                            <li><a href="#" class="nav__link">Протезирование зубов</a></li>
+                            <li><a href="#" class="nav__link">Реставрация зубов</a></li>
+                            <li><a href="#" class="nav__link">Съемные зубные протезы</a></li>
+                            <li><a href="#" class="nav__link">Бюгельное протезирование</a></li>
+                            <li><a href="#" class="nav__link">Ремонт зубных протезов</a></li>
+                            <li><a href="#" class="nav__link">Люминиры</a></li>
+                            <li><a href="#" class="nav__link">Компониры</a></li>
+                            <li><a href="#" class="nav__link">Керамические виниры</a></li>
+                            <li><a href="#" class="nav__link">Безметалловая керамика</a></li>
+                            <li><a href="#" class="nav__link">Металлокерамические коронки</a></li>
+                            <li><a href="#" class="nav__link">Пластмассовый протез для зубов</a></li>
+                            <li><a href="#" class="nav__link">Нейлоновые протезы</a></li>
+                            <li><a href="#" class="nav__link">Зубной мост</a></li>
+                            <li><a href="#" class="nav__link">Наращивание зубов</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a class="uk-accordion-title mobile-menu__accordion" href="#">Хирургия</a>
+                    <div class="uk-accordion-content">
+                        <ul class="mobile-menu__inner">
+                            <li><a href="#" class="nav__link">Имплантация зубов (импланты)</a></li>
+                            <li><a href="#" class="nav__link">Наращивание костной ткани</a></li>
+                            <li><a href="#" class="nav__link">Стоматологическая хирургия</a></li>
+                            <li><a href="#" class="nav__link">Удаление зуба мудрости</a></li>
+                            <li><a href="#" class="nav__link">Удаление зубов</a></li>
+                            <li><a href="#" class="nav__link">Удаление зубов у детей</a></li>
+                            <li><a href="#" class="nav__link">Пластика уздечки языка</a></li>
+                            <li><a href="#" class="nav__link">Дентальная имплантация зубов</a></li>
+                            <li><a href="#" class="nav__link">Одномоментная имплантация зубов</a></li>
+                            <li><a href="#" class="nav__link">Двухэтапная имплантация зубов</a></li>
+                            <li><a href="#" class="nav__link">Имплантация All-on-4 / All-on-6</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a class="uk-accordion-title mobile-menu__accordion" href="#">Ортодонтия</a>
+                    <div class="uk-accordion-content">
+                        <ul class="mobile-menu__inner">
+                            <li><a href="#" class="nav__link">Установка брекет-систем</a></li>
+                            <li><a href="#" class="nav__link">Металлические брекеты</a></li>
+                            <li><a href="#" class="nav__link">Сапфировые брекеты</a></li>
+                            <li><a href="#" class="nav__link">Самолигирующие брекеты</a></li>
+                            <li><a href="#" class="nav__link">Керамические брекеты</a></li>
+                            <li><a href="#" class="nav__link">Брекеты Damon</a></li>
+                            <li><a href="#" class="nav__link">Услуги ортодонта в Минске</a></li>
+                            <li><a href="#" class="nav__link">Детский ортодонт</a></li>
+                            <li><a href="#" class="nav__link">Трейнеры для зубов</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a class="uk-accordion-title mobile-menu__accordion" href="#">Отбеливание</a>
+                    <div class="uk-accordion-content">
+                        <ul class="mobile-menu__inner">
+                            <li><a href="#" class="nav__link">Отбеливание зубов</a></li>
+                            <li><a href="#" class="nav__link">Офисное отбеливание зубов</a></li>
+                            <li><a href="#" class="nav__link">Отбеливание зубов капами</a></li>
+                            <li><a href="#" class="nav__link">Домашнее отбеливание зубов</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a class="uk-accordion-title mobile-menu__accordion" href="#">Профилактика</a>
+                    <div class="uk-accordion-content">
+                        <ul class="mobile-menu__inner">
+                            <li><a href="#" class="nav__link">Профессиональная чистка зубов и профилактика</a></li>
+                            <li><a href="#" class="nav__link">Герметизация фиссур</a></li>
+                            <li><a href="#" class="nav__link">Ультразвуковая чистка</a></li>
+                            <li><a href="#" class="nav__link">Профессиональная гигиена полости рта</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a class="uk-accordion-title mobile-menu__accordion" href="#">Парадонтология</a>
+                    <div class="uk-accordion-content">
+                        <ul class="mobile-menu__inner">
+                            <li><a href="#" class="nav__link">Пародонтология</a></li>
+                            <li><a href="#" class="nav__link">Лечение пародонтита</a></li>
+                            <li><a href="#" class="nav__link">Лечение гингивита</a></li>
+                            <li><a href="#" class="nav__link">Лечение пародонтоза</a></li>
+                            <li><a href="#" class="nav__link">Шинирование зубов в Минске</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a class="uk-accordion-title mobile-menu__accordion" href="#">Косметология</a>
+                    <div class="uk-accordion-content">
+                        <ul class="mobile-menu__inner">
+                            <li><a href="#" class="nav__link">Терапевтическая косметология</a></li>
+                            <li><a href="#" class="nav__link">Контурная пластика</a></li>
+                            <li><a href="#" class="nav__link">Пилинг</a></li>
+                            <li><a href="#" class="nav__link">Косметологическая клиника Дентко</a></li>
+                            <li><a href="#" class="nav__link">Массаж лица</a></li>
+                            <li><a href="#" class="nav__link">Чистка лица</a></li>
+                            <li><a href="#" class="nav__link">Микротоки для лица</a></li>
+                            <li><a href="#" class="nav__link">Ультразвуковая чистка лица</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a class="uk-accordion-title mobile-menu__accordion" href="#">Диагностика</a>
+                    <div class="uk-accordion-content">
+                        <ul class="mobile-menu__inner">
+                            <li><a href="#" class="nav__link">Панорамный снимок зубов</a></li>
+                            <li><a href="#" class="nav__link">3D компьютерная томография зубов</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>      
+    </div>
+    <div class="mobile-menu">
+        <div class="mobile-menu__services">
+            <span class="mobile-menu__title">Наши услуги</span>
+            <ul uk-accordion>
+                <li>
+                    <a class="uk-accordion-title mobile-menu__accordion" href="#">Лечение зубов</a>
+                    <div class="uk-accordion-content">
+                        <ul class="mobile-menu__inner">
+                            <li><a href="#" class="nav__link">Лечение зубов (кариеса)</a></li>
+                            <li><a href="#" class="nav__link">Лечение пульпита</a></li>
+                            <li><a href="#" class="nav__link">Детская стоматология</a></li>
+                            <li><a href="#" class="nav__link">Лечение каналов</a></li>
+                            <li><a href="#" class="nav__link">Лечение корня зуба</a></li>
+                            <li><a href="#" class="nav__link">Лечение зубов под микроскопом</a></li>
+                            <li><a href="#" class="nav__link">Лечение зубов иностранным гражданам</a></li>
+                            <li><a href="#" class="nav__link">Центр эстетической стоматологии</a></li>
+                            <li><a href="#" class="nav__link">Лечение зубов детям</a></li>
+                            <li><a href="#" class="nav__link">Пломбирование зубов</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a class="uk-accordion-title mobile-menu__accordion" href="#">Протезирование</a>
+                    <div class="uk-accordion-content">
+                        <ul class="mobile-menu__inner">
+                            <li><a href="#" class="nav__link">Протезирование зубов</a></li>
+                            <li><a href="#" class="nav__link">Реставрация зубов</a></li>
+                            <li><a href="#" class="nav__link">Съемные зубные протезы</a></li>
+                            <li><a href="#" class="nav__link">Бюгельное протезирование</a></li>
+                            <li><a href="#" class="nav__link">Ремонт зубных протезов</a></li>
+                            <li><a href="#" class="nav__link">Люминиры</a></li>
+                            <li><a href="#" class="nav__link">Компониры</a></li>
+                            <li><a href="#" class="nav__link">Керамические виниры</a></li>
+                            <li><a href="#" class="nav__link">Безметалловая керамика</a></li>
+                            <li><a href="#" class="nav__link">Металлокерамические коронки</a></li>
+                            <li><a href="#" class="nav__link">Пластмассовый протез для зубов</a></li>
+                            <li><a href="#" class="nav__link">Нейлоновые протезы</a></li>
+                            <li><a href="#" class="nav__link">Зубной мост</a></li>
+                            <li><a href="#" class="nav__link">Наращивание зубов</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a class="uk-accordion-title mobile-menu__accordion" href="#">Хирургия</a>
+                    <div class="uk-accordion-content">
+                        <ul class="mobile-menu__inner">
+                            <li><a href="#" class="nav__link">Имплантация зубов (импланты)</a></li>
+                            <li><a href="#" class="nav__link">Наращивание костной ткани</a></li>
+                            <li><a href="#" class="nav__link">Стоматологическая хирургия</a></li>
+                            <li><a href="#" class="nav__link">Удаление зуба мудрости</a></li>
+                            <li><a href="#" class="nav__link">Удаление зубов</a></li>
+                            <li><a href="#" class="nav__link">Удаление зубов у детей</a></li>
+                            <li><a href="#" class="nav__link">Пластика уздечки языка</a></li>
+                            <li><a href="#" class="nav__link">Дентальная имплантация зубов</a></li>
+                            <li><a href="#" class="nav__link">Одномоментная имплантация зубов</a></li>
+                            <li><a href="#" class="nav__link">Двухэтапная имплантация зубов</a></li>
+                            <li><a href="#" class="nav__link">Имплантация All-on-4 / All-on-6</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a class="uk-accordion-title mobile-menu__accordion" href="#">Ортодонтия</a>
+                    <div class="uk-accordion-content">
+                        <ul class="mobile-menu__inner">
+                            <li><a href="#" class="nav__link">Установка брекет-систем</a></li>
+                            <li><a href="#" class="nav__link">Металлические брекеты</a></li>
+                            <li><a href="#" class="nav__link">Сапфировые брекеты</a></li>
+                            <li><a href="#" class="nav__link">Самолигирующие брекеты</a></li>
+                            <li><a href="#" class="nav__link">Керамические брекеты</a></li>
+                            <li><a href="#" class="nav__link">Брекеты Damon</a></li>
+                            <li><a href="#" class="nav__link">Услуги ортодонта в Минске</a></li>
+                            <li><a href="#" class="nav__link">Детский ортодонт</a></li>
+                            <li><a href="#" class="nav__link">Трейнеры для зубов</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a class="uk-accordion-title mobile-menu__accordion" href="#">Отбеливание</a>
+                    <div class="uk-accordion-content">
+                        <ul class="mobile-menu__inner">
+                            <li><a href="#" class="nav__link">Отбеливание зубов</a></li>
+                            <li><a href="#" class="nav__link">Офисное отбеливание зубов</a></li>
+                            <li><a href="#" class="nav__link">Отбеливание зубов капами</a></li>
+                            <li><a href="#" class="nav__link">Домашнее отбеливание зубов</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a class="uk-accordion-title mobile-menu__accordion" href="#">Профилактика</a>
+                    <div class="uk-accordion-content">
+                        <ul class="mobile-menu__inner">
+                            <li><a href="#" class="nav__link">Профессиональная чистка зубов и профилактика</a></li>
+                            <li><a href="#" class="nav__link">Герметизация фиссур</a></li>
+                            <li><a href="#" class="nav__link">Ультразвуковая чистка</a></li>
+                            <li><a href="#" class="nav__link">Профессиональная гигиена полости рта</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a class="uk-accordion-title mobile-menu__accordion" href="#">Парадонтология</a>
+                    <div class="uk-accordion-content">
+                        <ul class="mobile-menu__inner">
+                            <li><a href="#" class="nav__link">Пародонтология</a></li>
+                            <li><a href="#" class="nav__link">Лечение пародонтита</a></li>
+                            <li><a href="#" class="nav__link">Лечение гингивита</a></li>
+                            <li><a href="#" class="nav__link">Лечение пародонтоза</a></li>
+                            <li><a href="#" class="nav__link">Шинирование зубов в Минске</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a class="uk-accordion-title mobile-menu__accordion" href="#">Косметология</a>
+                    <div class="uk-accordion-content">
+                        <ul class="mobile-menu__inner">
+                            <li><a href="#" class="nav__link">Терапевтическая косметология</a></li>
+                            <li><a href="#" class="nav__link">Контурная пластика</a></li>
+                            <li><a href="#" class="nav__link">Пилинг</a></li>
+                            <li><a href="#" class="nav__link">Косметологическая клиника Дентко</a></li>
+                            <li><a href="#" class="nav__link">Массаж лица</a></li>
+                            <li><a href="#" class="nav__link">Чистка лица</a></li>
+                            <li><a href="#" class="nav__link">Микротоки для лица</a></li>
+                            <li><a href="#" class="nav__link">Ультразвуковая чистка лица</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a class="uk-accordion-title mobile-menu__accordion" href="#">Диагностика</a>
+                    <div class="uk-accordion-content">
+                        <ul class="mobile-menu__inner">
+                            <li><a href="#" class="nav__link">Панорамный снимок зубов</a></li>
+                            <li><a href="#" class="nav__link">3D компьютерная томография зубов</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>      
+    </div>
+    <main class="main">
+        <section class="beradcrumbs">
+            <div class="uk-container">
+                <ul class="beradcrumbs__list">
+                    <li class="beradcrumbs__item"><a href="/dentko/index.html" class="beradcrumbs__link">Главная</a></li>
+                    <li class="beradcrumbs__item"><a href="#" class="beradcrumbs__link reviews__control_disabled">Отзывы</a></li>
+                </ul>
+            </div>
+        </section>
+        <section class="reviews reviews_page">
+            <div class="uk-container">
+                <div class="uk-flex uk-flex-between uk-flex-middle reviews__header">
+                    <span class="uk-h1">Отзывы наших клиентов</span>
+                    <button class="uk-button uk-button-default button button_big">Оставить отзыв<img src="/dentko/img/inline-arrow-w.svg"></button>
+                </div>
+                <div class="reviews__wrap uk-child-width-1-1">
+                    <div class="uk-card uk-card-body review review__page">
+                        <div class="review__head uk-flex uk-flex-between uk-flex-top">
+                            <div class="review__info">
+                                <span class="review__name">Виктория</span>
+                                <!-- .review__rating_3-5  задает количество звездочек с шагом 0.5 от 0 до 5. В данном случае рейтинг будет 3.5 -->
+                                <span class="review__rating review__rating_3-5"> 
+                                    <span class="review__stars"></span>
+                                </span>
+                            </div>
+                            <div class="review__body">
+                                <p class="uk-text">Отличная клиника! Теперь буду ходить только сюда, наконец-то я нашла "свою" стоматологию. Цены здесь средние, а качество оборудования, материалов и само отношение персонала на высоте!</p>
+                                <p class="uk-text uk-text-small review__date">12.06.2020, 07:56</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="uk-card uk-card-body review review__page">
+                        <div class="review__head uk-flex uk-flex-between uk-flex-top">
+                            <div class="review__info">
+                                <span class="review__name">Виктория</span>
+                                <span class="review__rating review__rating_2">
+                                    <span class="review__stars"></span>
+                                </span>
+                            </div>
+                            <div class="review__body">
+                                <p class="uk-text">Отличная клиника! Теперь буду ходить только сюда, наконец-то я нашла "свою" стоматологию. Цены здесь средние, а качество оборудования, материалов и само отношение персонала на высоте!</p>
+                                <p class="uk-text uk-text-small review__date">12.06.2020, 07:56</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="uk-card uk-card-body review review__page">
+                        <div class="review__head uk-flex uk-flex-between uk-flex-top">
+                            <div class="review__info">
+                                <span class="review__name">Виктория</span>
+                                <span class="review__rating review__rating_3">
+                                    <span class="review__stars"></span>
+                                </span>
+                            </div>
+                            <div class="review__body">
+                                <p class="uk-text">Отличная клиника! Теперь буду ходить только сюда, наконец-то я нашла "свою" стоматологию. Цены здесь средние, а качество оборудования, материалов и само отношение персонала на высоте!</p>
+                                <p class="uk-text uk-text-small review__date">12.06.2020, 07:56</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="uk-card uk-card-body review review__page">
+                        <div class="review__head uk-flex uk-flex-between uk-flex-top">
+                            <div class="review__info">
+                                <span class="review__name">Виктория</span>
+                                <span class="review__rating review__rating_5">
+                                    <span class="review__stars"></span>
+                                </span>
+                            </div>
+                            <div class="review__body">
+                                <p class="uk-text">Отличная клиника! Теперь буду ходить только сюда, наконец-то я нашла "свою" стоматологию. Цены здесь средние, а качество оборудования, материалов и само отношение персонала на высоте!</p>
+                                <p class="uk-text uk-text-small review__date">12.06.2020, 07:56</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="uk-card uk-card-body review review__page">
+                        <div class="review__head uk-flex uk-flex-between uk-flex-top">
+                            <div class="review__info">
+                                <span class="review__name">Виктория</span>
+                                <span class="review__rating review__rating_3">
+                                    <span class="review__stars"></span>
+                                </span>
+                            </div>
+                            <div class="review__body">
+                                <p class="uk-text">Отличная клиника! Теперь буду ходить только сюда, наконец-то я нашла "свою" стоматологию. Цены здесь средние, а качество оборудования, материалов и само отношение персонала на высоте!</p>
+                                <p class="uk-text uk-text-small review__date">12.06.2020, 07:56</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="uk-card uk-card-body review review__page">
+                        <div class="review__head uk-flex uk-flex-between uk-flex-top">
+                            <div class="review__info">
+                                <span class="review__name">Виктория</span>
+                                <span class="review__rating review__rating_3">
+                                    <span class="review__stars"></span>
+                                </span>
+                            </div>
+                            <div class="review__body">
+                                <p class="uk-text">Отличная клиника! Теперь буду ходить только сюда, наконец-то я нашла "свою" стоматологию. Цены здесь средние, а качество оборудования, материалов и само отношение персонала на высоте!</p>
+                                <p class="uk-text uk-text-small review__date">12.06.2020, 07:56</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="uk-card uk-card-body review review__page">
+                        <div class="review__head uk-flex uk-flex-between uk-flex-top">
+                            <div class="review__info">
+                                <span class="review__name">Виктория</span>
+                                <span class="review__rating review__rating_3">
+                                    <span class="review__stars"></span>
+                                </span>
+                            </div>
+                            <div class="review__body">
+                                <p class="uk-text">Отличная клиника! Теперь буду ходить только сюда, наконец-то я нашла "свою" стоматологию. Цены здесь средние, а качество оборудования, материалов и само отношение персонала на высоте!</p>
+                                <p class="uk-text uk-text-small review__date">12.06.2020, 07:56</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="uk-width-1-1 uk-flex uk-flex-middle uk-flex-center">
+                    <div class="reviews__pagination">
+                        <ul class="uk-pagination" uk-margin>
+                            <li><a href="#"><span class="reviews__control reviews__control_disabled reviews__control-prev"></span></a></li>
+                            <li class="reviews__page uk-active"><span>1</span></li>
+                            <li class="reviews__page"><a href="./page/2.html">2</a></li>
+                            <li class="reviews__page"><a href="./page/3.html">3</a></li>
+                            <li><a href="./page/2.html"><span class="reviews__control reviews__control-next"></span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="form" class="form">
+            <div class="uk-container">
+                <div class="form__body">
+                    <span class="uk-h2">Оставить отзыв</span>
+                    <p class="uk-text-meta">Пожалуйста, проверьте правильность введенных данных.</p>
+                    <form class="uk-flex uk-flex-bottom">
+                        <div class="form__inputs">
+                            <div class="uk-flex uk-flex-top uk-flex-between form__row">
+                                <div class="uk-input form__rate-wrap">
+                                    <span class="form__rate-span">Ваша оценка:</span>
+                                    <div class="form__rate">
+                                        <input class="form__radio" type="radio" name="rate" value="1" checked>
+                                        <input class="form__radio" type="radio" name="rate" value="2">
+                                        <input class="form__radio" type="radio" name="rate" value="3">
+                                        <input class="form__radio" type="radio" name="rate" value="4">
+                                        <input class="form__radio" type="radio" name="rate" value="5">
+                                    </div>
+                                </div>
+                                <div class="uk-input form__div">
+                                    <input class="uk-input" type="text" name="name" placeholder="Ваше имя">
+                                    <span class="form__err">В формате А-Я,а-я и минимум 2 символа</span>
+                                </div>
+                                <div class="uk-input form__div">
+                                    <input class="uk-input" type="email" name="mail" placeholder="Ваш e-mail">
+                                    <span class="form__err">Неверный формат E-mail адреса</span>
+                                </div>
+                            </div>
+                            <div class="form__row">
+                                <textarea class="form__textarea" placeholder="Напишите ваш отзыв" name="comment" rows="1"></textarea>
+                            </div>
+                        </div>
+                        <div class="form__submit">
+                            <p class="uk-text uk-text-small">Email служит для оповещения об ответе, он не будет опубликован на сайте.</p>
+                            <button class="uk-input" type="submit">Оставить отзыв</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="uk-container">
+            <div class="uk-flex uk-flex-between uk-flex-middle footer__wrap">
+                <img src="/dentko/img/logo.svg" alt="Логотип" class="header__logo">
+                <nav class="footer__nav uk-flex uk-flex-middle">
+                    <ul class="uk-list uk-flex uk-flex-between uk-flex-middle">
+                        <li><a href="/dentko/service.html" class="footer__nav-link">лечение</a></li>
+                        <li><a href="/dentko/service.html" class="footer__nav-link">протезирование</a></li>
+                        <li><a href="/dentko/service.html" class="footer__nav-link">хирургия</a></li>
+                        <li><a href="/dentko/service.html" class="footer__nav-link">ортодонтия</a></li>
+                        <li><a href="/dentko/service.html" class="footer__nav-link">отбеливание</a></li>
+                        <li><a href="/dentko/service.html" class="footer__nav-link">профилактика</a></li>
+                        <li><a href="/dentko/service.html" class="footer__nav-link">пародонтология</a></li>
+                        <li><a href="/dentko/service.html" class="footer__nav-link">косметология</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer__body uk-flex uk-flex-between uk-flex-stretch">
+                <nav class="footer__nav uk-flex">
+                    <ul class="uk-list">
+                        <li><a href="/dentko/about.html" class="footer__nav-link">о компании</a></li>
+                        <li><a href="/dentko/price.html" class="footer__nav-link">цены</a></li>
+                        <li><a href="/dentko/payment.html" class="footer__nav-link">оплата и рассрочка</a></li>
+                        <li><a href="/dentko/reviews.html" class="footer__nav-link">отзывы</a></li>
+                        <li><a href="/dentko/team.html" class="footer__nav-link">специалисты</a></li>
+                        <li><a href="/dentko/" class="footer__nav-link">статьи</a></li>
+                        <li><a href="/dentko/faq.html" class="footer__nav-link">вопрос-ответ</a></li>
+                        <li><a href="/dentko/contacts.html" class="footer__nav-link">контакты</a></li>
+                    </ul>
+                </nav>
+                <dl class="uk-description-list uk-flex uk-flex-column footer__contacts">
+                    <dt>Контактные данные:</dt>
+                    <dd>ООО "Дентко-Мед", 220005</dd>
+                    <dd>г. Минск, пр. Независимости, 58, п. 142 (3 этаж). <a href="/dentko/contacts.html" class="footer__green-link">Карта проезда</a></dd>
+                    <dd>
+                        <div class="uk-flex-inline uk-flex-between">
+                            <a href="#" class="header__link footer__outer"><img src="/dentko/img/facebook.png" alt="Иконка" class="header__link-img"></a>
+                            <a href="#" class="header__link footer__outer"><img src="/dentko/img/vk.png" alt="Иконка" class="header__link-img"></a>
+                            <a href="#" class="header__link footer__outer"><img src="/dentko/img/instagram.png" alt="Иконка" class="header__link-img"></a>
+                        </div>
+                    </dd>
+                </dl>
+                <dl class="uk-description-list uk-flex uk-flex-column footer__contacts">
+                    <dt>Телефоны:</dt>
+                    <dd><a href="tel:+375291101212" class="footer__dd-link"><img src="/dentko/img/operator1.png">+375 (29) 110-12-12</a></dd>
+                    <dd><a href="tel:+375336601313" class="footer__dd-link"><img src="/dentko/img/operator2.png">+375 (33) 660-13-13</a></dd>
+                    <dd><a href="tel:+375251101212" class="footer__dd-link"><img src="/dentko/img/operator3.png">+375 (25) 110-12-12</a></dd>
+                    <dd><a href="tel:+375172844511" class="footer__dd-link"><img src="/dentko/img/operator4.png">+375 (17) 284-45-11</a></dd>
+                    <dd>
+                        <div class="uk-flex-inline uk-flex-between">
+                            <a href="#" class="header__link footer__outer"><img src="/dentko/img/telegram.png" alt="Иконка" class="header__link-img"></a>
+                            <a href="#" class="header__link footer__outer"><img src="/dentko/img/viber.png" alt="Иконка" class="header__link-img"></a>
+                            <a href="#" class="header__link footer__outer"><img src="/dentko/img/whatsapp.png" alt="Иконка" class="header__link-img"></a>
+                        </div>
+                    </dd>
+                </dl>
+                <div class="uk-card uk-card-body footer__schedule">
+                    <span class="footer__card-header uk-text-bold">Время работы:</span>
+                    <div class="footer__card-body uk-flex uk-flex-between">
+                        <div class="footer__card-col uk-flex uk-flex-column">
+                            <span>пн-пт:</span>
+                            <span>сб:</span>
+                            <span>вс:</span>
+                        </div>
+                        <div class="footer__card-col uk-flex uk-flex-column">
+                            <span>09:00 — 21:00</span>
+                            <span>09:00 — 20:00</span>
+                            <span>09:00 — 17:00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="uk-flex uk-flex-between uk-child-width-1-3@s footer__bottom">
+                <div class="footer__bottom-col">
+                    <span class="uk-text uk-text-meta">© 1997 - 2020. Медицинский центр <br>"Дентко".</span>
+                </div>
+                <div class="uk-flex uk-flex-middle uk-flex-column footer__bottom-col">
+                    <span class="uk-text uk-text-meta">Рейтинг Медицинского центра "Дентко" - <img src="/dentko/img/rating.png"><a href="/dentko/reviews/reviews.html" class="footer__2reviews"> 4,9 балла (10 голосов)</a></span>
+                    <a href="#" class="green-link uk-link">Продвижение сайта - hata.by</a>
+                </div>
+                <div class="footer__bottom-col">
+                    <span class="uk-text uk-text-meta"></span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="popup__wrapper popup-request">
+        <div class="uk-position-relative popup popup_request">
+            <span class="uk-position-absolute popup__close popup-close"></span>
+            <form class="popup__body">
+                <span class="uk-h1">Записаться на прием</span>
+                <p class="uk-text uk-text-small">Наш администратор свяжется с Вами для корректировки времени.</p>
+                <div class="uk-flex uk-flex-between uk-child-width-1-3 popup__row">
+                    <div class="uk-input form__div">
+                        <input class="uk-input" type="text" name="name" placeholder="Ваше имя">
+                        <span class="form__err">В формате А-Я,а-я и минимум 2 символа</span>
+                    </div>
+                    <div class="uk-input form__div">
+                        <input class="uk-input" type="tel" name="tel" placeholder="Ваш телефон">
+                        <span class="form__err">Введите номер в международном формате</span>
+                    </div>
+                    <div class="uk-input form__div">
+                        <input class="uk-input" type="email" name="mail" placeholder="Ваш e-mail">
+                        <div class="popup__info">
+                            <img src="/dentko/img/popup-info.svg" alt="" class="popup__info-img">
+                            <div class="popup__info-card">
+                                <p>Email служит для оповещения об ответе, он не будет опубликован на сайте.</p>
+                                <p>Не является обязательным полем для заполнения</p>
+                            </div>
+                        </div>
+                        <span class="form__err">Неверный формат E-mail адреса</span>
+                    </div>
+                </div>
+                <div class="popup__row">
+                    <textarea class="uk-input" rows="2" name="comment" placeholder="Что вас беспокоит?"></textarea>
+                </div>
+                <div class="uk-flex uk-flex-between uk-width-1-1 popup__row">
+                    <button type="submit" class="uk-button popup__submit">Записаться на прием <img src="/dentko/img/inline-arrow-w.svg"></button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="popup__wrapper popup-sucsess">
+        <div class="uk-position-relative popup popup_sucsess">
+            <span class="uk-position-absolute popup__close popup-close"></span>
+            <div class="popup__body">
+                <span class="uk-h1 uk-text-center">Ваша заявка принята!</span>
+                <p class="uk-text uk-text-center uk-text-small">Наш администратор свяжется с Вами для корректировки времени.</p>
+            </div>
+        </div>
+    </div>
+    <div class="popup__wrapper popup-error">
+        <div class="uk-position-relative popup popup_sucsess">
+            <span class="uk-position-absolute popup__close popup-close"></span>
+            <div class="popup__body">
+                <span class="uk-h1 uk-text-center">Произошла ошибка!</span>
+                <p class="uk-text uk-text-center uk-text-small">По техническим причинам ваша заявка не была принята, попробуйте немного позже.</p>
+            </div>
+        </div>
+    </div>
+    <script src="/dentko/js/main.js"></script>
+</body>
+</html>
