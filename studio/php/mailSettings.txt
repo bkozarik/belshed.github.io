@@ -1,5 +1,0 @@
-Email: hkiop1@yandex.ru
-Password: canofender5
-Smtp host: smtp.yandex.ru
-Smtp port: 465
-To: hkiop1@yandex.ru

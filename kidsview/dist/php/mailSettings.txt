@@ -1,5 +1,0 @@
-Email: hkiop1@yandex.ru
-Password: workingBitch228
-Smtp host: smtp.yandex.ru
-Smtp port: 465
-To: st07@yandex.ru
