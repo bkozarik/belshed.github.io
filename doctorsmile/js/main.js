@@ -14,7 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
     let mobileSwiperSW = document.querySelector('.faqs__themes');
     const pagePath = window.location.pathname;
 
-
     const toggleSpoiler = () => {
         event.preventDefault();
 
@@ -222,7 +221,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
         else{
-            let menuWrap = document.querySelector('.header__wrap');
+            let menuWrap = document.querySelector('.header__content');
 
             headerItems.forEach(item => {
                 menuWrap.appendChild(item);
@@ -392,20 +391,34 @@ document.addEventListener('DOMContentLoaded', () => {
     
     window.addEventListener('resize', mobileCheck);
 
+    if(1){
+        new Swiper('.js-doctors-swiper', {
+            speed: 600,
+            navigation: {
+                nextEl: '.doctors .slider-next',
+                prevEl: '.doctors .slider-prev',
+            },
+            pagination: {
+                type: 'bullets',
+                el: '.doctors__navigation'
+            }
+        });
+    }
+
     try{
-        let bannerSwiper = new Swiper('.banner__swiper', {
+        let bannerSwiper = new Swiper('.js-hero-swiper', {
             spaceBetween: 0,
             loop: true,
             slidesPerView: 1,
             updateOnWindowResize: true,
             speed: 600,
             navigation: {
-                nextEl: '.swiper__controls .slider-next',
-                prevEl: '.swiper__controls .slider-prev',
+                nextEl: '.slider-next',
+                prevEl: '.slider-prev',
             },
             pagination: {
-                el: '.banner__swiper .swiper__pagination>.swiper-pagination',
-                type: 'progressbar',
+                el: '.swiper-pagination',
+                type: 'bullets',
             }
         });
 
