@@ -2153,6 +2153,13 @@ section:not(.swiper-slide-active) {
   .outsource {
     padding-top: 110px;
   }
+  .outsource__content {
+    font-size: 12px !important;
+  }
+  .outsource .section-title {
+    font-size: 16px !important;
+    line-height: 20px !important;
+  }
 }
 
 /*# sourceMappingURL=outsource.css.map */
