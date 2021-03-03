@@ -2084,6 +2084,11 @@ section:not(.swiper-slide-active) {
   transition-delay: .6s;
 }
 
+.outsource__content ul, .outsource__content p, .outsource__content li {
+  font-size: inherit;
+  line-height: inherit;
+}
+
 .outsource__content ul {
   list-style-type: none;
   margin-bottom: 1.2em;
@@ -2154,7 +2159,7 @@ section:not(.swiper-slide-active) {
     padding-top: 110px;
   }
   .outsource__content {
-    font-size: 12px !important;
+    font-size: 10px !important;
   }
   .outsource .section-title {
     font-size: 16px !important;
