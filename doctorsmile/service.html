@@ -14,69 +14,52 @@
 <body>
     <header class="header">
         <div class="uk-container">
-            <div class="uk-flex uk-flex-between uk-flex-bottom header__wrap">
-                <a href="./index.html" class="header__main-link"><img src="./img/logo.svg" alt="Логотип" class="header__logo"></a>
-                <dl class="uk-description-list header__item">
-                    <dt>Контакты:</dt>
-                    <dd>г. Минск, пр-кт Независимости, 58</dd>
-                </dl>
-                <dl class="uk-description-list header__item">
-                    <dt>Время работы:</dt>
-                    <dd class="uk-inline">
-                        <div class="uk-inline header__dropdown-trigger">
-                            <span class="header__dropdown-span">Без выходных <img src="./img/info.svg"></span>
-                            <div class="uk-card uk-card-body uk-margin-remove-top header__dropdown-card">
-                                <span class="footer__card-header uk-text-bold">Время работы:</span>
-                                <div class="footer__card-body uk-flex uk-flex-between">
-                                    <div class="footer__card-col uk-flex uk-flex-column">
-                                        <span>пн-пт:</span>
-                                        <span>сб:</span>
-                                        <span>вс:</span>
-                                    </div>
-                                    <div class="footer__card-col uk-flex uk-flex-column">
-                                        <span>09:00 — 21:00</span>
-                                        <span>09:00 — 20:00</span>
-                                        <span>09:00 — 17:00</span>
-                                    </div>
+            <div class="uk-flex uk-flex-between uk-flex-top header__wrap">
+                <a href="./index.html" class="header__main-link"><img src="./img/logo_2.svg" alt="Логотип" class="header__logo"></a>
+                <div class="uk-flex uk-flex-between header__content">
+                    <dl class="uk-description-list header__item">
+                        <dt>Контакты:</dt>
+                        <dd>г. Минск, ул. Маяковского, 24</dd>
+                    </dl>
+                    <dl class="uk-description-list header__item">
+                        <dt>Время работы:</dt>
+                        <dd>пн-пт: 09:00 - 21:00</dd>
+                        <dd>сб-вс: 10:00 - 18:00</dd>
+                    </dl>
+                    <dl class="uk-description-list header__item">
+                        <dt>Телефоны:</dt>
+                        <dd>
+                            <div class="uk-inline">
+                                <span class="header__dropdown"><a href="tel:+375291101212" class="footer__dd-link"><img src="./img/operator1.png">+375 (29) 110-12-12</a></span>
+                                <div class="header__dropdown-container" uk-dropdown>
+                                    <a href="tel:+375291101212" class="footer__dd-link"><img src="./img/operator1.png">+375 (29) 110-12-12</a>
+                                    <a href="tel:+375336601313" class="footer__dd-link"><img src="./img/operator2.png">+375 (33) 660-13-13</a>
+                                    <a href="tel:+375251101212" class="footer__dd-link"><img src="./img/operator3.png">+375 (25) 110-12-12</a>
+                                    <a href="tel:+375172844511" class="footer__dd-link"><img src="./img/operator4.png">+375 (17) 284-45-11</a>
                                 </div>
                             </div>
-                        </div>
-                    </dd>
-                </dl>
-                <dl class="uk-description-list header__item">
-                    <dt>Мы в соц.сетях:</dt>
-                    <dd class="uk-flex uk-flex-between">
-                        <a href="#" class="header__link"><img src="./img/facebook.png" alt="Иконка" class="header__link-img"></a>
-                        <a href="#" class="header__link"><img src="./img/vk.png" alt="Иконка" class="header__link-img"></a>
-                        <a href="#" class="header__link"><img src="./img/instagram.png" alt="Иконка" class="header__link-img"></a>
-                    </dd>
-                </dl>
-                <dl class="uk-description-list header__item">
-                    <dt>Телефоны:</dt>
-                    <dd>
-                        <div class="uk-inline">
-                            <span class="header__dropdown"><a href="tel:+375291101212" class="footer__dd-link"><img src="./img/operator1.png">+375 (29) 110-12-12</a></span>
-                            <div class="header__dropdown-container" uk-dropdown>
-                                <a href="tel:+375291101212" class="footer__dd-link"><img src="./img/operator1.png">+375 (29) 110-12-12</a>
-                                <a href="tel:+375336601313" class="footer__dd-link"><img src="./img/operator2.png">+375 (33) 660-13-13</a>
-                                <a href="tel:+375251101212" class="footer__dd-link"><img src="./img/operator3.png">+375 (25) 110-12-12</a>
-                                <a href="tel:+375172844511" class="footer__dd-link"><img src="./img/operator4.png">+375 (17) 284-45-11</a>
+                            <div class="uk-flex">
+                                <a href="tg://msg?text=&to=+375291101212" class="header__link"><img src="./img/telegram.png" alt="Иконка" class="header__link-img"></a>
+                                <a href="viber://chat?number=375291101212" class="header__link"><img src="./img/viber.png" alt="Иконка" class="header__link-img"></a>
+                                <a href="whatsapp://send?phone=375291101212" class="header__link"><img src="./img/whatsapp.png" alt="Иконка" class="header__link-img"></a>
                             </div>
-                        </div>
-                        <div class="uk-flex-inline uk-flex-between">
-                            <a href="#" class="header__link"><img src="./img/telegram.png" alt="Иконка" class="header__link-img"></a>
-                            <a href="#" class="header__link"><img src="./img/viber.png" alt="Иконка" class="header__link-img"></a>
-                            <a href="#" class="header__link"><img src="./img/whatsapp.png" alt="Иконка" class="header__link-img"></a>
-                        </div>
-                    </dd>
-                </dl>
+                        </dd>
+                    </dl>
+                    <dl class="uk-description-list header__item">
+                        <dt>Мы в соц.сетях:</dt>
+                        <dd class="uk-flex">
+                            <a href="https://www.facebook.com/dentko.stom" class="header__link header__link_big"><img src="./img/facebook.png" alt="Иконка" class="header__link-img"></a>
+                            <a href="#" class="header__link header__link_big"><img src="./img/instagram.png" alt="Иконка" class="header__link-img"></a>
+                        </dd>
+                    </dl>
+                </div>
                 <button class="header__menu-btn menu-open"><span></span></button>
             </div>
         </div>
     </header>
     <nav class="nav" uk-navbar>
-        <div class="uk-navbar-center">
-            <ul class="uk-navbar-nav uk-flex-between uk-flex-middle">
+        <div class="uk-container uk-flex uk-flex-middle uk-flex-between">
+            <ul class="uk-navbar-nav uk-flex-between uk-flex-center nav__list">
                 <li><a href="./about.html">о компании</a></li>
                 <li>
                     <a href="./service.html" class="nav__dropdown-link">услуги</a>
@@ -190,13 +173,13 @@
                     </div>
                 </li>
                 <li><a href="./price.html">цены</a></li>
-                <li><a href="./payment.html">оплата и рассрочка</a></li>
                 <li><a href="./reviews/reviews.html">отзывы</a></li>
                 <li><a href="./team.html">специалисты</a></li>
-                <li><a href="./faq/faq.html">вопрос-ответ</a></li>
+                <li><a href="./faq/faq.html">Блог</a></li>
                 <li><a href="./contacts.html">контакты</a></li>
-                <li><a class="nav__order popup-request-open" href="#">Записаться на прием <img src="./img/inline-arrow.svg"></a></li>
+                <li><a href="./covid.html" style="color: #EA0000;">covid-19</a></li>
             </ul>
+            <button class="nav__order popup-request-open">Записаться на прием</button>
         </div>
     </nav>
     <div class="appointment">
@@ -357,637 +340,182 @@
         </div>      
     </div>
     <main class="main">
-        <section class="beradcrumbs">
+        <section class="breadcrumbs">
             <div class="uk-container">
-                <ul class="beradcrumbs__list">
-                    <li class="beradcrumbs__item"><a href="./service.html" class="beradcrumbs__link">Услуги</a></li>
-                    <li class="beradcrumbs__item"><a href="#" class="beradcrumbs__link reviews__control_disabled">Лечение зубов</a></li>
+                <ul class="breadcrumbs__list">
+                    <li class="breadcrumbs__item"><a href="./service.html" class="breadcrumbs__link">Услуги</a></li>
+                    <li class="breadcrumbs__item"><a class="breadcrumbs__link">Лечение зубов</a></li>
                 </ul>
             </div>
         </section>
         <section class="banner uk-background-cover" style="background-image: url(./img/banner_bg.jpg);">
-            <div class="uk-container uk-height-large uk-position-relative">
-                <div class="slider__body uk-position-center-left mw_no">
-                    <h1>Лечение зубов (кариеса)</h1>
-                    <p class="uk-text-large mw_550">По информации Белстата, 68% людей сталкиваются с кариесом еще в детском возрасте, а 97% взрослых имеют опыт лечения зубов. Очевидно, что без помощи квалифицированного стоматолога никому не обойтись. Частная клиника «Дентко» в Минске предлагает полный комплекс услуг по лечению зубов у детей и взрослых. К нам вы можете обратиться за помощью в любой ситуации. Мы же сделаем все, чтобы сохранить зубы, восстановить их эстетику и избавить вас от боли.</p>
-                    <div class="uk-flex banner__buttons">
-                        <button class="uk-button uk-button-default button popup-request-open">Записаться на прием<img src="./img/inline-arrow-w.svg"></button>
-                        <button class="uk-button uk-button-default button button_transparent popup-faq-open">Консультация стоматолога</button>
-                    </div>
+            <div class="uk-container">
+                <div class="slider__body mw_no">
+                    <span class="uk-h2">Лечение зубов</span>
+                    <p class="banner__text uk-text-large mw_550">Лечение зубов – целый комплекс стоматологических процедур от установки пломбы до протезирования. Они нацелены на то, чтобы сделать улыбку красивой и здоровой при минимальном дискомфорте и боли.</p>
+                    <button class="button button_green button_big hero__button popup-request-open">Записаться на прием</button>
                 </div>
             </div>
         </section>
-        <section class="text text_fullscreen">
+        <section class="benefits no-overflow">
             <div class="uk-container">
-                <span class="uk-h1">Сколько стоит вылечить зуб?</span>
-                <p class="uk-text uk-text-medium">Цена стоматологических услуг напрямую зависит от вашего терпения и способности откладывать поход к врачу. Ведь сложность оказания помощи возрастает с каждым днем:</p>
-                <div class="uk-column-1-2@s uk-width-child-1-2">
-                    <p class="uk-text text__item">На стадии пятна вылечить кариес можно без бормашины и страха. Достаточно выполнить профессиональную чистку и нанести фторсодержащий лак – искусственное восстановление эмали полностью останавливает развитие болезни;</p>
-                    <p class="uk-text text__item">Вы бежите лечить зубы только после бессонной ночи, страдая от пульсирующей боли? Будьте готовы добавить к стоимости и лечение пульпита, пломбировку корней;</p>
-                    <p class="uk-text text__item">Небольшая кариозная полость уже требует препарирования и пломбировки. И стоить это будет дороже, чем шлифовка с нанесением лака. Ведь качественные композитные материалы увеличивают стоимость лечения;</p>
-                    <p class="uk-text text__item">Но больше всех за лечение зубов в Минске платят те, кто дождался потребности в протезировании. Установка имплантатов и коронок на них вместо утраченных природных зубов обходится дороже всего.</p>
-                </div>
-            </div>
-        </section>
-        <section class="price">
-            <div class="uk-container">
-                <span class="uk-h1">Стоимость услуги</span>
-                <div class="price__list">
-                    <div class="price__item uk-flex uk-flex-between">
-                        <p class="uk-text">Консультация стоматолога с выдачей консультативного заключения и плана дальнейшего лечения</p>
-                        <span class="price__price uk-text-bold">25,00 руб</span>
-                    </div>
-                    <div class="price__item uk-flex uk-flex-between">
-                        <p class="uk-text">Лечение кариеса</p>
-                        <span class="price__price uk-text-bold">от 89,42 руб</span>
-                    </div>
-                    <div class="price__item uk-flex uk-flex-between">
-                        <p class="uk-text">Лечение пульпита (процедура включает: первичный осмотр, анестезия, удаление нерва, инструментальная обработка канала, антисептическая обработка канала, пломбировка канала, контрольные RWG снимки, временная пломба)</p>
-                        <span class="price__price uk-text-bold">от 113,00 руб</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="form">
-            <div class="uk-container">
-                <div class="form__body">
-                    <span class="uk-h2">Консультация стоматолога</span>
-                    <p class="uk-text-meta">Запишитесь на прием к стоматологу в «Дентко» - и мы поможем вам обрести здоровую и счастливую улыбку.</p>
-                    <form class="uk-flex uk-flex-middle">
-                        <div class="uk-input form__div">
-                            <input class="uk-input" type="text" name="name" placeholder="Ваше имя">
-                            <span class="form__err">В формате А-Я,а-я и минимум 2 символа</span>
+                <div class="uk-flex uk-child-width-1-2@s uk-flex-between benefits__wrap">
+                    <div class="benefit">
+                        <div class="benefit__head uk-flex uk-flex-middle">
+                            <img src="./img/benefit1.png" class="benefit__img">
+                            <span class="benefit__header">Стоматологии высшей категории</span>
                         </div>
-                        <div class="uk-input form__div">
-                            <input class="uk-input" type="tel" name="tel" placeholder="Ваш телефон">
-                            <span class="form__err">Введите номер в международном формате</span>
-                        </div>
-                        <button class="uk-input" type="submit">Записаться на прием</button>
-                        <div class="uk-position-relative form__dropdown-wrap">
-                            <span class="form__schedule">Посмотреть режим работы  <img src="./img/info-w.svg"></span>
-                            <div class="uk-position-absolute uk-card uk-card-body uk-margin-remove-top form__dropdown-card">
-                                <span class="footer__card-header uk-text-bold">Время работы:</span>
-                                <div class="footer__card-body uk-flex uk-flex-between">
-                                    <div class="footer__card-col uk-flex uk-flex-column">
-                                        <span>пн-пт:</span>
-                                        <span>сб:</span>
-                                        <span>вс:</span>
-                                    </div>
-                                    <div class="footer__card-col uk-flex uk-flex-column">
-                                        <span>09:00 — 21:00</span>
-                                        <span>09:00 — 20:00</span>
-                                        <span>09:00 — 17:00</span>
-                                    </div>
-                                </div>
+                        <div class="uk-card uk-card-body">
+                            <div class="benefit__head uk-flex uk-flex-middle">
+                                <img src="./img/benefit1.png" class="benefit__img">
+                                <span class="benefit__header">Стоматологии высшей категории</span>
                             </div>
+                            <span>Наши врачи имеют высшую либо первую категорию, множество дипломов и наград и постоянно совершенствуют свое мастерство в Беларуси и за рубежом</span>
                         </div>
-                    </form>
-                </div>
-            </div>
-        </section>
-        <section class="about">
-            <div class="uk-container">
-                <div class="uk-section">
-                    <div class="uk-grid-match uk-child-width-1-1@s uk-child-width-1-2@m" uk-grid>
-                        <div class="about__side">
-                            <span class="uk-h1">«Дентко»: лечить зубы – это не страшно!</span>
-                            <p class="uk-text-normal">Наша клиника оказывает услуги лечения зубов в Минске детям и взрослым. При этом мы готовы гарантировать комфортную обстановку, высокое качество и полную безболезненность каждому пациенту. Ведь мы практикуем персональный подход:</p>
-                            <ul class="uk-list">
-                                <li>Подбираем действенный способ анестезии. Для людей, испытывающих панический страх, мы готовы предложить сочетанную анестезию и даже наркоз;</li>
-                                <li>Уговорим даже самого капризного малыша. Поход к стоматологу в нашей клинике превращается в увлекательный квест, где ребенок сам вовлекается во вселенскую борьбу за здоровье зубов;</li>
-                                <li>Найдем способы лечения даже в сложных ситуациях. В отличие от государственных клиник, мы не направляем пациентов с периодонтитом на удаление – мы лечим болезнь и сохраняем зуб для последующего протезирования;</li>
-                            </ul>
-                            <div class="about__btn-wrap">
-                                <button class="uk-button uk-button-default button about__btn popup-request-open">Записаться на прием <img src="./img/inline-arrow-w.svg"></button>
-                            </div>
+                    </div>
+                    <div class="benefit">
+                        <div class="benefit__head uk-flex uk-flex-middle">
+                            <img src="./img/benefit2.png" class="benefit__img">
+                            <span class="benefit__header">Новейшее оборудование</span>
                         </div>
-                        <div class="about__side">
-                            <div class="about__img-wrap">
-                                <img class="about__img" src="./img/nofear.png" alt="" uk-img>
+                        <div class="uk-card uk-card-body">
+                            <div class="benefit__head uk-flex uk-flex-middle">
+                                <img src="./img/benefit2.png" class="benefit__img">
+                                <span class="benefit__header">Новейшее оборудование</span>
                             </div>
+                            <span>Клиника оснащена современным оборудованием, которое отвечает мировым стандартам и позволяет проводить лечение на самом высоком уровне</span>
+                        </div>
+                    </div>
+                    <div class="benefit">
+                        <div class="benefit__head uk-flex uk-flex-middle">
+                            <img src="./img/benefit3.png" class="benefit__img">
+                            <span class="benefit__header">Находимся в центре Минска</span>
+                        </div>
+                        <div class="uk-card uk-card-body">
+                            <div class="benefit__head uk-flex uk-flex-middle">
+                                <img src="./img/benefit3.png" class="benefit__img">
+                                <span class="benefit__header">Находимся в центре Минска</span>
+                            </div>
+                            <span>Клиника "Дентко" размещается в центре города на пр. Независимости в 400 м от ст. м. Якуба Коласа и 600 м от ст. м. Академия наук. Мы в центре Минска — Вы в центре внимания!</span>
+                        </div>
+                    </div>
+                    <div class="benefit">
+                        <div class="benefit__head uk-flex uk-flex-middle">
+                            <img src="./img/benefit4.png" class="benefit__img">
+                            <span class="benefit__header">Индивидуальный подход</span>
+                        </div>
+                        <div class="uk-card uk-card-body">
+                            <div class="benefit__head uk-flex uk-flex-middle">
+                                <img src="./img/benefit4.png" class="benefit__img">
+                                <span class="benefit__header">Индивидуальный подход</span>
+                            </div>
+                            <span>Мы искренне хотим Вам помочь! Учтем все Ваши пожелания и опасения и сделаем все, чтобы визит к стоматологу не ассоциировался со страхом и болью</span>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="colored_text">
+        <section class="service-page">
             <div class="uk-container">
-                <div class="uk-flex colored_text__body">
-                    <img src="./img/big-tooth.svg" alt="Иконка зуба">
-                    <p class="uk-text uk-text-italic">Безупречная эстетика и надежность – принципы, которые соблюдаются врачами нашей клиники неукоснительно. Мы используем импортные композитные материалы, которые в точности имитируют зубную эмаль и обладают повышенным коэффициентом адгезии – эти пломбы<br>не склонны к выпадению.</p>
-                </div>
-            </div>
-        </section>
-        <section class="text text_fullscreen">
-            <div class="uk-container">
-                <span class="uk-h1">Современные технологии на страже здоровья ваших зубов</span>
-                <p class="uk-text uk-text-medium">Около 20% людей сталкиваются с потребностью повторного лечения зубов. Так, через несколько месяцев после установки пломбы или коронки некоторые люди вновь ощущают боль. А это прямое свидетельство некачественного препарирования и повторного развития инфекции. В клинике «Дентко» применяются инновационные технологии, <span class="uk-text-bold">которые на 100% гарантируют качество оказанных услуг:</span></p>
-                <div class="uk-column-1-2@s uk-width-child-1-2">
-                    <p class="uk-text text__item"><span class="uk-text-bold">Лечение зубов под микроскопом. </span>Мощная оптика безупречно демонстрирует ткани, не позволяя упустить ни единой частички разложившегося кариозного дентина;</p>
-                    <p class="uk-text text__item"><span class="uk-text-bold">Пломбирование каналов горячей гуттаперчей </span>под контролем апекслокатора полностью исключает вероятность образования пустот или выхода материала за пределы зубного корня;</p>
-                    <p class="uk-text text__item"><span class="uk-text-bold">Рентгенологический контроль. </span>Любое лечение пульпита и периодонтита мы завершаем анализом снимка, что гарантирует вам полное отсутствие проблем с пролеченным зубом в дальнейшем.</p>
-                </div>
-            </div>
-        </section>
-        <section class="form">
-            <div class="uk-container">
-                <div class="form__body">
-                    <span class="uk-h2">Записаться на прием</span>
-                    <p class="uk-text-meta">Запишитесь на прием к специалисту для первичной диагностики.</p>
-                    <form class="uk-flex uk-flex-middle">
-                        <div class="uk-input form__div">
-                            <input class="uk-input" type="text" name="name" placeholder="Ваше имя">
-                            <span class="form__err">В формате А-Я,а-я и минимум 2 символа</span>
+                <div class="service-page__wrap">
+                    <aside class="service-page__aside service-aside">
+                        <div class="service-aside__head uk-flex uk-flex-center">
+                            <img src="./img/dentist_1.png" alt="Иконка">
+                            <span class="uk-text-bold uk-text-large uk-text-uppercase">наши услуги</span>
                         </div>
-                        <div class="uk-input form__div">
-                            <input class="uk-input" type="tel" name="tel" placeholder="Ваш телефон">
-                            <span class="form__err">Введите номер в международном формате</span>
-                        </div>
-                        <button class="uk-input" type="submit">Записаться на прием</button>
-                        <div class="uk-position-relative form__dropdown-wrap">
-                            <span class="form__schedule">Посмотреть режим работы  <img src="./img/info-w.svg"></span>
-                            <div class="uk-position-absolute uk-card uk-card-body uk-margin-remove-top form__dropdown-card">
-                                <span class="footer__card-header uk-text-bold">Время работы:</span>
-                                <div class="footer__card-body uk-flex uk-flex-between">
-                                    <div class="footer__card-col uk-flex uk-flex-column">
-                                        <span>пн-пт:</span>
-                                        <span>сб:</span>
-                                        <span>вс:</span>
-                                    </div>
-                                    <div class="footer__card-col uk-flex uk-flex-column">
-                                        <span>09:00 — 21:00</span>
-                                        <span>09:00 — 20:00</span>
-                                        <span>09:00 — 17:00</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-                <div class="uk-flex uk-flex-between uk-flex-middle uk-child-width-1-2@l action__wrap">
-                    <div class="uk-card action">
-                        <div class="uk-card-body">
-                            <span class="action__header">Акция</span>
-                            <div class="uk-flex uk-flex-between action__body">
-                                <h3 class="action__title">На проф гигиену полости рта скидка</h3>
-                                <span class="action__percentage">30%</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="uk-card action">
-                        <div class="uk-card-body">
-                            <span class="action__header">При предъявлении скриншота экрана</span>
-                            <div class="uk-flex uk-flex-between action__body">
-                                <span class="action__title">акция. На все услуги косметологии скидка</span>
-                                <span class="action__percentage">10%</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="doctors uk-position-relative">
-            <div class="uk-flex uk-flex-bottom uk-position-absolute doctors__bg">
-                <div class="doctors__bg_green"></div>
-                <div class="doctors__bg_gray"></div>
-            </div>
-            <div class="uk-container">
-                <span class="uk-h2">Наши врачи</span>
-                <div class="uk-slider-container" uk-slider="finite: true">
-                    <ul class="uk-slider-items uk-child-width-1-1 doctors__slider">
-                        <li class="uk-position-relative uk-flex uk-flex-bottom uk-child-width-1-2 doctor">
-                            <div class="uk-flex uk-flex-column uk-flex-left uk-flex-between doctor__data">
-                                <span class="uk-text-bold uk-position-relative doctor__name">Дубина <br>Иван Владимирович</span>
-                                <div class="doctor__bottom">
-                                    <span class="uk-text doctor__specialty">врач-стоматолог-ортопед</span>
-                                    <a href="#" class="green-link doctor__link">Подробнее</a>
-                                </div>
-                            </div>
-                            <div class="uk-flex uk-flex-center doctor__img">
-                                <img src="./img/doctor1.png" alt="Доктор">
-                            </div>
-                            <div class="uk-position-absolute uk-flex uk-flex-between uk-flex-middle doctor__control">
-                                <div class="doctor__buttons">
-                                    <a href="#" class="slider-button slider-prev" uk-slider-item="previous"></a>
-                                    <a href="#" class="slider-button slider-next" uk-slider-item="next"></a>
-                                </div>
-                                <span class="slider__pagination"><span class="slider__pagination-active">1</span>/<span class="slider__pagination-total">8</span></span>
-                            </div>
-                        </li>
-                        <li class="uk-position-relative uk-flex uk-flex-bottom uk-child-width-1-2 doctor">
-                            <div class="uk-flex uk-flex-column uk-flex-between doctor__data">
-                                <span class="uk-text-bold uk-position-relative doctor__name">Дубина <br>Иван Владимирович</span>
-                                <span class="uk-text doctor__specialty">врач-стоматолог-ортопед</span>
-                                <a href="#" class="green-link doctor__link">Подробнее</a>
-                            </div>
-                            <div class="uk-flex uk-flex-center doctor__img">
-                                <img src="./img/doctor1.png" alt="Доктор">
-                            </div>
-                            <div class="uk-position-absolute uk-flex uk-flex-between uk-flex-middle doctor__control">
-                                <div class="doctor__buttons">
-                                    <a href="#" class="slider-button slider-prev" uk-slider-item="previous"></a>
-                                    <a href="#" class="slider-button slider-next" uk-slider-item="next"></a>
-                                </div>
-                                <span class="slider__pagination"><span class="slider__pagination-active">1</span>/<span class="slider__pagination-total">8</span></span>
-                            </div>
-                        </li>
-                        <li class="uk-position-relative uk-flex uk-flex-bottom uk-child-width-1-2 doctor">
-                            <div class="uk-flex uk-flex-column uk-flex-between doctor__data">
-                                <span class="uk-text-bold uk-position-relative doctor__name"> <br>Иван Владимирович</span>
-                                <span class="uk-text doctor__specialty">врач-стоматолог-ортопед</span>
-                                <a href="#" class="green-link doctor__link">Подробнее</a>
-                            </div>
-                            <div class="uk-flex uk-flex-center doctor__img">
-                                <img src="./img/doctor1.png" alt="Доктор">
-                            </div>
-                            <div class="uk-position-absolute uk-flex uk-flex-between uk-flex-middle doctor__control">
-                                <div class="doctor__buttons">
-                                    <a href="#" class="slider-button slider-prev" uk-slider-item="previous"></a>
-                                    <a href="#" class="slider-button slider-next" uk-slider-item="next"></a>
-                                </div>
-                                <span class="slider__pagination"><span class="slider__pagination-active">1</span>/<span class="slider__pagination-total">8</span></span>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-        <section class="reviews">
-            <div class="uk-container">
-                <div class="uk-flex uk-flex-between uk-flex-middle">
-                    <span class="uk-h2">Отзывы наших клиентов</span>
-                    <a href="#" class="uk-link green-link">Все отзывы</a>
-                </div>
-                <div class="uk-flex uk-flex-center reviews__slider" uk-slider="finite: true; center: true;">
-                    <div class="uk-slider-container uk-child-width-1-1">
-                        <ul class="uk-slider-items uk-child-width-1-1">
-                            <li>
-                                <div class="uk-card uk-card-body review">
-                                    <div class="review__head uk-flex uk-flex-between uk-flex-middle">
-                                        <div class="review__info">
-                                            <span class="review__name">Виктория</span>
-                                            <span class="review__rating review__rating_5">
-                                                <span class="review__stars"></span>
-                                            </span>
-                                        </div>
-                                        <div class="review__body">
-                                            <p class="uk-text">Отличная клиника! Теперь буду ходить только сюда, наконец-то я нашла "свою" стоматологию. Цены здесь средние, а качество оборудования, материалов и само отношение персонала на высоте!</p>
-                                        </div>
-                                    </div>
-                                    <hr>
-                                    <div class="review__bottom uk-flex uk-flex-between uk-flex-middle">
-                                        <div class="review__info">
-                                            <span class="review__name">Оказание услуги:</span>
-                                            <span class="uk-text uk-text-small">Лечение кариеса</span>
-                                        </div>
-                                        <div class="review__controls uk-flex uk-flex-middle">
-                                            <div class="review__buttons">
-                                                <a href="#" class="slider-button slider-prev" uk-slider-item="previous"></a>
-                                                <a href="#" class="slider-button slider-next" uk-slider-item="next"></a>
-                                            </div>
-                                            <span class="slider__pagination"><span class="slider__pagination-active">1</span>/<span class="slider__pagination-total">8</span></span>
-                                        </div>
-                                    </div>
-                                </div>
+                        <ul class="service-aside__list">
+                            <li class="service-aside__item">
+                                <a href="./service.html" class="service-aside__link">Профилактический приём</a>
                             </li>
-                            <li>
-                                <div class="uk-card uk-card-body review">
-                                    <div class="review__head uk-flex uk-flex-between uk-flex-middle">
-                                        <div class="review__info">
-                                            <span class="review__name">Виктория</span>
-                                            <span class="review__rating review__rating_5">
-                                                <span class="review__stars"></span>
-                                            </span>
-                                        </div>
-                                        <div class="review__body">
-                                            <p class="uk-text">Отличная клиника! Теперь буду ходить только сюда, наконец-то я нашла "свою" стоматологию. Цены здесь средние, а качество оборудования, материалов и само отношение персонала на высоте!</p>
-                                        </div>
-                                    </div>
-                                    <hr>
-                                    <div class="review__bottom uk-flex uk-flex-between uk-flex-middle">
-                                        <div class="review__info">
-                                            <span class="review__name">Оказание услуги:</span>
-                                            <span class="uk-text uk-text-small">Лечение кариеса</span>
-                                        </div>
-                                        <div class="review__controls uk-flex uk-flex-middle">
-                                            <div class="review__buttons">
-                                                <a href="#" class="slider-button slider-prev" uk-slider-item="previous"></a>
-                                                <a href="#" class="slider-button slider-next" uk-slider-item="next"></a>
-                                            </div>
-                                            <span class="slider__pagination"><span class="slider__pagination-active">1</span>/<span class="slider__pagination-total">8</span></span>
-                                        </div>
-                                    </div>
-                                </div>
+                            <li class="service-aside__item">
+                                <details>
+                                    <summary class="service-aside__link">Лечение зубов и дёсен</summary>
+                                    <ul class="service-aside__list">
+                                        <li class="service-aside__item">
+                                            <a href="./service.html" class="service-aside__link">Хирургия 1</a>
+                                        </li>
+                                        <li class="service-aside__item">
+                                            <a href="./service.html" class="service-aside__link">Хирургия 2</a>
+                                        </li>
+                                        <li class="service-aside__item">
+                                            <a href="./service.html" class="service-aside__link">Хирургия 3</a>
+                                        </li>
+                                    </ul>
+                                </details>
                             </li>
-                            <li>
-                                <div class="uk-card uk-card-body review">
-                                    <div class="review__head uk-flex uk-flex-between uk-flex-middle">
-                                        <div class="review__info">
-                                            <span class="review__name">Виктория</span>
-                                            <span class="review__rating review__rating_5">
-                                                <span class="review__stars"></span>
-                                            </span>
-                                        </div>
-                                        <div class="review__body">
-                                            <p class="uk-text">Отличная клиника! Теперь буду ходить только сюда, наконец-то я нашла "свою" стоматологию. Цены здесь средние, а качество оборудования, материалов и само отношение персонала на высоте!</p>
-                                        </div>
-                                    </div>
-                                    <hr>
-                                    <div class="review__bottom uk-flex uk-flex-between uk-flex-middle">
-                                        <div class="review__info">
-                                            <span class="review__name">Оказание услуги:</span>
-                                            <span class="uk-text uk-text-small">Лечение кариеса</span>
-                                        </div>
-                                        <div class="review__controls uk-flex uk-flex-middle">
-                                            <div class="review__buttons">
-                                                <a href="#" class="slider-button slider-prev" uk-slider-item="previous"></a>
-                                                <a href="#" class="slider-button slider-next" uk-slider-item="next"></a>
-                                            </div>
-                                            <span class="slider__pagination"><span class="slider__pagination-active">1</span>/<span class="slider__pagination-total">8</span></span>
-                                        </div>
-                                    </div>
-                                </div>
+                            <li class="service-aside__item">
+                                <a href="./service.html" class="service-aside__link">Детская стоматология</a>
                             </li>
-                            <li>
-                                <div class="uk-card uk-card-body review">
-                                    <div class="review__head uk-flex uk-flex-between uk-flex-middle">
-                                        <div class="review__info">
-                                            <span class="review__name">Виктория</span>
-                                            <span class="review__rating review__rating_5">
-                                                <span class="review__stars"></span>
-                                            </span>
-                                        </div>
-                                        <div class="review__body">
-                                            <p class="uk-text">Отличная клиника! Теперь буду ходить только сюда, наконец-то я нашла "свою" стоматологию. Цены здесь средние, а качество оборудования, материалов и само отношение персонала на высоте!</p>
-                                        </div>
-                                    </div>
-                                    <hr>
-                                    <div class="review__bottom uk-flex uk-flex-between uk-flex-middle">
-                                        <div class="review__info">
-                                            <span class="review__name">Оказание услуги:</span>
-                                            <span class="uk-text uk-text-small">Лечение кариеса</span>
-                                        </div>
-                                        <div class="review__controls uk-flex uk-flex-middle">
-                                            <div class="review__buttons">
-                                                <a href="#" class="slider-button slider-prev" uk-slider-item="previous"></a>
-                                                <a href="#" class="slider-button slider-next" uk-slider-item="next"></a>
-                                            </div>
-                                            <span class="slider__pagination"><span class="slider__pagination-active">1</span>/<span class="slider__pagination-total">8</span></span>
-                                        </div>
-                                    </div>
-                                </div>
+                            <li class="service-aside__item">
+                                <details>
+                                    <summary class="service-aside__link">Эстетическая стоматология</summary>
+                                    <ul class="service-aside__list">
+                                        <li class="service-aside__item">
+                                            <a href="./service.html" class="service-aside__link">Хирургия 1</a>
+                                        </li>
+                                        <li class="service-aside__item">
+                                            <a href="./service.html" class="service-aside__link">Хирургия 2</a>
+                                        </li>
+                                        <li class="service-aside__item">
+                                            <a href="./service.html" class="service-aside__link">Хирургия 3</a>
+                                        </li>
+                                    </ul>
+                                </details>
                             </li>
-                            <li>
-                                <div class="uk-card uk-card-body review">
-                                    <div class="review__head uk-flex uk-flex-between uk-flex-middle">
-                                        <div class="review__info">
-                                            <span class="review__name">Виктория</span>
-                                            <span class="review__rating review__rating_5">
-                                                <span class="review__stars"></span>
-                                            </span>
-                                        </div>
-                                        <div class="review__body">
-                                            <p class="uk-text">Отличная клиника! Теперь буду ходить только сюда, наконец-то я нашла "свою" стоматологию. Цены здесь средние, а качество оборудования, материалов и само отношение персонала на высоте!</p>
-                                        </div>
-                                    </div>
-                                    <hr>
-                                    <div class="review__bottom uk-flex uk-flex-between uk-flex-middle">
-                                        <div class="review__info">
-                                            <span class="review__name">Оказание услуги:</span>
-                                            <span class="uk-text uk-text-small">Лечение кариеса</span>
-                                        </div>
-                                        <div class="review__controls uk-flex uk-flex-middle">
-                                            <div class="review__buttons">
-                                                <a href="#" class="slider-button slider-prev" uk-slider-item="previous"></a>
-                                                <a href="#" class="slider-button slider-next" uk-slider-item="next"></a>
-                                            </div>
-                                            <span class="slider__pagination"><span class="slider__pagination-active">1</span>/<span class="slider__pagination-total">8</span></span>
-                                        </div>
-                                    </div>
-                                </div>
+                            <li class="service-aside__item">
+                                <a href="./service.html" class="service-aside__link">Протезирование зубов</a>
+                            </li>
+                            <li class="service-aside__item">
+                                <details>
+                                    <summary class="service-aside__link">Хирургия</summary>
+                                    <ul class="service-aside__list">
+                                        <li class="service-aside__item">
+                                            <a href="./service.html" class="service-aside__link">Хирургия 1</a>
+                                        </li>
+                                        <li class="service-aside__item">
+                                            <a href="./service.html" class="service-aside__link">Хирургия 2</a>
+                                        </li>
+                                        <li class="service-aside__item">
+                                            <a href="./service.html" class="service-aside__link">Хирургия 3</a>
+                                        </li>
+                                    </ul>
+                                </details>
+                            </li>
+                            <li class="service-aside__item">
+                                <a href="./service.html" class="service-aside__link">Имплантация зубов</a>
+                            </li>
+                            <li class="service-aside__item">
+                                <a href="./service.html" class="service-aside__link">Рентген-диагностика</a>
                             </li>
                         </ul>
+                    </aside>
+                    <div class="service-page__content">
+                        <span class="uk-h1">Лечение зубов</span>
+                        <p>Лечить зубы не любят не только дети, но и взрослые, ведь кресло стоматолога ассоциируется с неприятными ощущениями и болью. Мы откладываем приём как можно дольше, пока симптомы не перетекают в более серьёзные последствия.</p>
+                        <p class="about__lined">Лечение зубов – целый комплекс стоматологических процедур от установки пломбы до протезирования. Они нацелены на то, чтобы сделать улыбку красивой и здоровой при минимальном дискомфорте и боли.</p>
+                        <span class="uk-h3">Когда пора обращаться к стоматологу?</span>
+                        <p>Одно из самых распространённых заболеваний зубов, которое может испортить не только улыбку, но и уверенность в себе – это кариес. Более половины Беларуси сталкивается с ним ещё в детском возрасте.</p>
+                        <p>Кариес кажется безобидным заболеванием для тех, кто не имел с ним дело. На ранних стадиях кариозное поражение зубов выглядит как лёгкое пятно, которое можно спутать с зубным налётом. Со временем заболевание прогрессирует и может привести к воспалению зубного нерва и тканей, которое вызывает мучительные болевые ощущения. Если кариес запустить, он может перетечь в последнюю стадию – потерю зуба или заболеванию мышечно-костной системы.</p>
+                        <p>Кариес появляется по разным причинам:</p>
+                        <ul>
+                            <li>Плохая гигиена полости рта</li>
+                            <li>Наследственная предрасположенность</li>
+                            <li>Неправильное питание</li>
+                            <li>Слабый иммунитет</li>
+                            <li>Травмирование зубной эмали</li>
+                            <li>Приём лекарств</li>
+                        </ul>
+                        <p class="about__lined">Иногда самостоятельно заметить кариозное образование невозможно. Только профессиональный осмотр всей полости рта поможет выявить проблему и назначить своевременное лечение.
+                            <br><br> Чтобы предупредить развитие патологии и сохранить зуб, необходимо вовремя обратиться за профессиональной помощью.</p>
                     </div>
-                </div>
-            </div>
-        </section>
-        <section class="services">
-            <div class="uk-container">
-                <div class="uk-slider-container" uk-slider="finite: true">
-                    <div class="uk-flex uk-flex-between services__head">
-                        <span class="uk-h2">Наши услуги</span>
-                        <div class="uk-flex uk-flex-middle uk-flex-between slider__controls">
-                            <div class="slider__buttons">
-                                <a href="#" class="slider-button slider-prev" uk-slider-item="previous"></a>
-                                <a href="#" class="slider-button slider-next" uk-slider-item="next"></a>
-                            </div>
-                            <span class="slider__pagination"><span class="slider__pagination-active">1</span>/<span class="slider__pagination-total">8</span></span>
-                        </div>
-                    </div>
-                    <ul class="uk-slider-items uk-child-width-1-3@s uk-child-width-1-4@m uk-grid">
-                        <li>
-                            <div class="uk-card uk-card-default service__front">
-                                <div class="uk-card-body">
-                                    <span class="uk-card-title">Ленчение</span>
-                                </div>
-                                <div class="uk-card-media-bottom">
-                                    <img src="./img/service1.png" alt="">
-                                </div>
-                            </div>
-                            <div class="uk-card uk-card-default service__back">
-                                <span class="uk-card-title">Ленчение</span>
-                                <div class="service__links">
-                                    <a href="#" class="service__link">Лечение пульпита</a>
-                                    <a href="#" class="service__link">Детская стоматология</a>
-                                    <a href="#" class="service__link">Лечение каналов</a>
-                                    <a href="#" class="service__link">Лечение корня зуба</a>
-                                    <a href="#" class="service__link">Лечение зубов под микроскопом</a>
-                                    <a href="#" class="service__link">Лечение зубов иностранным гражданам</a>
-                                    <a href="#" class="service__link">Центр эстетической стоматологии</a>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="uk-card uk-card-default service__front">
-                                <div class="uk-card-body">
-                                    <span class="uk-card-title">Протезирование</span>
-                                </div>
-                                <div class="uk-card-media-bottom">
-                                    <img src="./img/service2.png" alt="">
-                                </div>
-                            </div>
-                            <div class="uk-card uk-card-default service__back">
-                                <span class="uk-card-title">Протезирование</span>
-                                <div class="service__links">
-                                    <a href="#" class="service__link">Протезирование зубов</a>
-                                    <a href="#" class="service__link">Реставрация зубов</a>
-                                    <a href="#" class="service__link">Съемные зубные протезы</a>
-                                    <a href="#" class="service__link">Бюгельное протезирование</a>
-                                    <a href="#" class="service__link">Ремонт зубных протезов</a>
-                                    <a href="#" class="service__link">Люминиры</a>
-                                    <a href="#" class="service__link">Компониры</a>
-                                    <a href="#" class="service__link">Керамические виниры</a>
-                                    <a href="#" class="service__link">Безметалловая керамика</a>
-                                    <a href="#" class="service__link">Металлокерамические коронки</a>
-                                    <a href="#" class="service__link">Пластмассовый протез для зубов</a>
-                                    <a href="#" class="service__link">Нейлоновые протезы</a>
-                                    <a href="#" class="service__link">Зубной мост</a>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="uk-card uk-card-default service__front">
-                                <div class="uk-card-body">
-                                    <span class="uk-card-title">Хирургия</span>
-                                </div>
-                                <div class="uk-card-media-bottom">
-                                    <img src="./img/service3.png" alt="">
-                                </div>
-                            </div>
-                            <div class="uk-card uk-card-default service__back">
-                                <span class="uk-card-title">Хирургия</span>
-                                <div class="service__links">
-                                    <a href="#" class="service__link">Имплантация зубов (импланты)</a>
-                                    <a href="#" class="service__link">Наращивание костной ткани</a>
-                                    <a href="#" class="service__link">Стоматологическая хирургия</a>
-                                    <a href="#" class="service__link">Удаление зуба мудрости</a>
-                                    <a href="#" class="service__link">Удаление зубов</a>
-                                    <a href="#" class="service__link">Удаление зубов у детей</a>
-                                    <a href="#" class="service__link">Пластика уздечки языка</a>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="uk-card uk-card-default service__front">
-                                <div class="uk-card-body">
-                                    <span class="uk-card-title">Ортодонтия</span>
-                                </div>
-                                <div class="uk-card-media-bottom">
-                                    <img src="./img/service4.png" alt="">
-                                </div>
-                            </div>
-                            <div class="uk-card uk-card-default service__back">
-                                <span class="uk-card-title">Ортодонтия</span>
-                                <div class="service__links">
-                                    <a href="#" class="service__link">Установка брекет-систем</a>
-                                    <a href="#" class="service__link">Металлические брекеты</a>
-                                    <a href="#" class="service__link">Сапфировые брекеты</a>
-                                    <a href="#" class="service__link">Самолигирующие брекеты</a>
-                                    <a href="#" class="service__link">Керамические брекеты</a>
-                                    <a href="#" class="service__link">Брекеты Damon</a>
-                                    <a href="#" class="service__link">Услуги ортодонта в Минске</a>
-                                    <a href="#" class="service__link">Детский ортодонт</a>
-                                    <a href="#" class="service__link">Трейнеры для зубов</a>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="uk-card uk-card-default service__front">
-                                <div class="uk-card-body">
-                                    <span class="uk-card-title">Отбеливание</span>
-                                </div>
-                                <div class="uk-card-media-bottom">
-                                    <img src="./img/service1.png" alt="">
-                                </div>
-                            </div>
-                            <div class="uk-card uk-card-default service__back">
-                                <span class="uk-card-title">Отбеливание</span>
-                                <div class="service__links">
-                                    <a href="#" class="service__link">Отбеливание зубов</a>
-                                    <a href="#" class="service__link">Офисное отбеливание зубов</a>
-                                    <a href="#" class="service__link">Отбеливание зубов капами</a>
-                                    <a href="#" class="service__link">Домашнее отбеливание зубов</a>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="uk-card uk-card-default service__front">
-                                <div class="uk-card-body">
-                                    <span class="uk-card-title">Профилактика</span>
-                                </div>
-                                <div class="uk-card-media-bottom">
-                                    <img src="./img/service1.png" alt="">
-                                </div>
-                            </div>
-                            <div class="uk-card uk-card-default service__back">
-                                <span class="uk-card-title">Профилактика</span>
-                                <div class="service__links">
-                                    <a href="#" class="service__link">Профессиональная чистка зубов и профилактика</a>
-                                    <a href="#" class="service__link">Герметизация фиссур</a>
-                                    <a href="#" class="service__link">Ультразвуковая чистка</a>
-                                    <a href="#" class="service__link">Профессиональная гигиена полости рта</a>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="uk-card uk-card-default service__front">
-                                <div class="uk-card-body">
-                                    <span class="uk-card-title">Пародонтология</span>
-                                </div>
-                                <div class="uk-card-media-bottom">
-                                    <img src="./img/service2.png" alt="">
-                                </div>
-                            </div>
-                            <div class="uk-card uk-card-default service__back">
-                                <span class="uk-card-title">Пародонтология</span>
-                                <div class="service__links">
-                                    <a href="#" class="service__link">Пародонтология</a>
-                                    <a href="#" class="service__link">Лечение пародонтита</a>
-                                    <a href="#" class="service__link">Лечение гингивита</a>
-                                    <a href="#" class="service__link">Лечение пародонтоза</a>
-                                    <a href="#" class="service__link">Шинирование зубов в Минске</a>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="uk-card uk-card-default service__front">
-                                <div class="uk-card-body">
-                                    <span class="uk-card-title">Косметология</span>
-                                </div>
-                                <div class="uk-card-media-bottom">
-                                    <img src="./img/service3.png" alt="">
-                                </div>
-                            </div>
-                            <div class="uk-card uk-card-default service__back">
-                                <span class="uk-card-title">Косметология</span>
-                                <div class="service__links">
-                                    <a href="#" class="service__link">Терапевтическая косметология</a>
-                                    <a href="#" class="service__link">Контурная пластика</a>
-                                    <a href="#" class="service__link">Пилинг</a>
-                                    <a href="#" class="service__link">Косметологическая клиника Дентко</a>
-                                    <a href="#" class="service__link">Массаж лица</a>
-                                    <a href="#" class="service__link">Чистка лица</a>
-                                    <a href="#" class="service__link">Микротоки для лица</a>
-                                    <a href="#" class="service__link">Ультразвуковая чистка лица</a>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="uk-card uk-card-default service__front">
-                                <div class="uk-card-body">
-                                    <span class="uk-card-title">Диагностика</span>
-                                </div>
-                                <div class="uk-card-media-bottom">
-                                    <img src="./img/service4.png" alt="">
-                                </div>
-                            </div>
-                            <div class="uk-card uk-card-default service__back">
-                                <span class="uk-card-title">Диагностика</span>
-                                <div class="service__links">
-                                    <a href="#" class="service__link">Панорамный снимок зубов</a>
-                                    <a href="#" class="service__link">3D компьютерная томография зубов</a>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
                 </div>
             </div>
         </section>
         <section class="agit">
             <div class="uk-container">
-                <div class="uk-flex uk-flex-between uk-flex-middle">
-                    <p class="uk-text-bold uk-text-large">Запишитесь на прием к врачу в «Дентко» и получите план лечения и протезирования ваших зубов!</p>
-                    <button class="uk-button uk-button-default button popup-request-open">Записаться на прием</button>
+                <div class="uk-flex uk-flex-between uk-flex-middle uk-flex-column">
+                    <p class="uk-text-bold uk-text-center uk-text-large">Запишитесь на прием к врачу и получите план лечения и протезирования ваших зубов!</p>
+                    <button class="button button_white button_big popup-request-open">Записаться на прием</button>
                 </div>
             </div>
         </section>
@@ -1159,6 +687,7 @@
             </div>
         </div>
     </div>
+    <script src="./js/swiper-bundle.min.js"></script>
     <script src="./js/main.js" defer></script>
 </body>
 </html>

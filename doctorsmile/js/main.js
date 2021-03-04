@@ -400,7 +400,8 @@ document.addEventListener('DOMContentLoaded', () => {
             },
             pagination: {
                 type: 'bullets',
-                el: '.doctors__navigation'
+                el: '.doctors__navigation',
+                clickable: true,
             }
         });
     }
@@ -419,6 +420,7 @@ document.addEventListener('DOMContentLoaded', () => {
             pagination: {
                 el: '.swiper-pagination',
                 type: 'bullets',
+                clickable: true,
             }
         });
 

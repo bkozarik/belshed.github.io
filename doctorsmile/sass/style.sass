@@ -389,11 +389,14 @@ button
         width: 240px
         padding: 0
 
-ul:not([class]) li
-    list-style-image: url(../img/list-img.png)
+ul:not([class])
     li
+        list-style-image: url(../img/list-img.png)
+        vertical-align: middle
         &::before
             display: none
+    li + li
+        margin-top: 15px
     ul:not([class])
         margin-left: 2em
         list-style-image: url(../img/swoosh.png)
@@ -503,10 +506,11 @@ ul:not([class]) li
 
 .uk-h1, h1
     font-family: 'Geometria', sans-serif
-    font-size: 40px
+    font-size: 42px
     font-weight: 700
     letter-spacing: 0.01em
     margin-bottom: 0
+    color: #333
 
 .uk-block
     display: block !important
@@ -532,9 +536,15 @@ ul:not([class]) li
         width: 100%
         max-width: 1320px
     &__pagination
-        height: 3px
-        width: 250px
+        width: 100%
+        display: flex
+        align-items: center
+        justify-content: center
+        transform: translateY(-40px)
+        position: relative
+        z-index: 3
         .swiper-pagination
+            position: relative
 
 .hero-slide
     padding: 10% 0px
@@ -581,15 +591,16 @@ ul:not([class]) li
         margin: 0
         font-weight: bold
         font-size: 18px
+        color: #333
     &__img
         margin-right: 20px 
-    &:hover
-        overflow: visible
-        .uk-card
-            opacity: 1
-            transform: translateY(0px)
-            transition: all .2s ease-out 0s
-            visibility: visible
+    // &:hover
+    //     overflow: visible
+    //     .uk-card
+    //         opacity: 1
+    //         transform: translateY(0px)
+    //         transition: all .2s ease-out 0s
+    //         visibility: visible
     .uk-card
         background-color: #fff
         bottom: -32px
@@ -604,6 +615,104 @@ ul:not([class]) li
             padding: 30px 20px
             .benefit__head
                 margin-bottom: 20px
+
+.service-page
+    &__wrap
+        display: flex
+        align-items: flex-start
+        padding: 100px 0px
+    &__content
+        font-size: 18px
+        line-height: 28px
+        color: #333
+        .uk-h3
+            margin: 0
+            font-weight: 700
+            color: inherit
+        p, ul, li
+            font-size: inherit
+            line-height: inherit
+            color: inherit
+    &__aside + &__content
+        margin-left: 65px
+    &__aside
+        flex-shrink: 0
+        width: 325px
+
+.service-aside
+    &__head
+        img
+            object-fit: contain
+            margin-right: 10px
+            flex: 0 0 auto
+        span
+            color: $green
+    &__list
+        box-shadow: 0px 5px 20px rgba(20, 43, 61, 0.07)
+        border-radius: 30px
+        overflow: hidden
+        list-style: none
+        padding-left: 0
+        & &
+            margin-top: 0
+            padding-left: 50px
+            box-shadow: none
+            .service-aside__link
+                padding: 3px 0px
+            .service-aside__item + .service-aside__item
+                border: none
+    details[open] summary.service-aside__link
+        color: $green
+        &::before
+            background-color: $green
+        &::after
+            background-image: url(../img/det-marker-g.png)
+    summary.service-aside__link
+        cursor: pointer
+        &::after
+            top: 50%
+            right: 23px
+            transform: translateY(-50%)
+            height: 7px
+            width: 13px
+            position: absolute
+            content: ''
+            background-repeat: no-repeat
+            background-size: contain
+            background-position: center
+            background-image: url(../img/det-marker-b.png)
+    &__link
+        user-select: none
+        color: #333
+        font-size: 18px
+        outline: none
+        position: relative
+        &::before
+            transition: .2s ease-in
+            content: ''
+            display: inline-block
+            top: 50%
+            left: 0
+            transform: translate(0, -50%)
+            position: absolute
+            width: 2px
+            height: 34px
+            background-color: transparent
+        &::-webkit-details-marker
+            display: none
+        &:hover
+            text-decoration: none
+            color: $green
+    &__item
+        & + &
+            border-top: 1px solid rgba(51, 51, 51, 0.1)
+        .service-aside__link, .uk-accordion-title
+            width: 100%
+            display: inline-block
+            padding: 20px 30px
+            font-size: 18px
+    .uk-accordion>:nth-child(n+2)
+        margin-top: 0
 
 .about
     .uk-list, ul, ol
@@ -1363,8 +1472,6 @@ ul:not([class]) li
         display: block
         font-size: 22px
         
-    
-
 .review
     border-radius: 3px
     box-shadow: 0 5px 12px rgba(0,0,0,.15)
@@ -1530,7 +1637,7 @@ ul:not([class]) li
         height: 1300px
         background-color: aqua
 
-.beradcrumbs
+.breadcrumbs
     padding: 20px 0px
     margin-bottom: -65px
     z-index: 9
@@ -1554,31 +1661,32 @@ ul:not([class]) li
     &__link
         padding: 0em .5em 0em 0em
         font-size: 12px
-        text-decoration: none
+        text-decoration: none !important
         position: relative
-        color: $green
-        &::after
-            display: inline-block
-            position: absolute
-            bottom: -2px
-            width: calc(100% - 1em)
-            height: 1px
-            background-color: $green
-            transform-origin: left
-            content: ''
-            left: .5em
-            transform: scaleX(0)
-        &:hover
+        cursor: default
+        color: #8F9194
+        &[href]
             color: $green
-            text-decoration: none
+            cursor: pointer
             &::after
-                transform: scaleX(1)
-        &.reviews__control_disabled
-            color: #8F9194
+                display: inline-block
+                position: absolute
+                bottom: -2px
+                width: calc(100% - 1em)
+                height: 1px
+                background-color: $green
+                transform-origin: left
+                content: ''
+                left: 0em
+                transform: scaleX(0)
+        &:not([href])
+            color: #8F9194 !important
+        &[href]
             &:hover
-                cursor: default
-            &::after
-                display: none
+                color: $green
+                text-decoration: none
+                &::after
+                    transform: scaleX(1)
 
 .uk-pagination
     a, .reviews__control, .uk-active>span
@@ -1695,11 +1803,14 @@ ul:not([class]) li
         box-shadow: 0px 0px 30px rgba(21, 36, 45, 0.15)
 
 .banner
-    padding: 140px 0px
-    .button
-        padding: 10px 26px
-    .button + .button
-        margin-left: 10px
+    padding: 140px 0px 255px
+    &__text
+        font-size: 18px
+        color: #333
+    .uk-h2, h1, h2, h3
+        color: #333
+        font-size: 42px
+        margin-bottom: 0
 
 .advantages
     padding: 100px 0px
