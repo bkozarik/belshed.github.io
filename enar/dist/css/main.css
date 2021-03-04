@@ -2167,8 +2167,8 @@ section:not(.swiper-slide-active) {
     line-height: 16px !important;
   }
   .outsource__content ul, .outsource__content p, .outsource__content li {
-    font-size: 8px !important;
-    line-height: 10px !important;
+    font-size: 6px !important;
+    line-height: 8px !important;
   }
 }
 
