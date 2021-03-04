@@ -2163,12 +2163,12 @@ section:not(.swiper-slide-active) {
     margin-bottom: 5px !important;
   }
   .outsource__title, .outsource__title * {
-    font-size: 16px !important;
-    line-height: 20px !important;
+    font-size: 14px !important;
+    line-height: 16px !important;
   }
   .outsource__content ul, .outsource__content p, .outsource__content li {
     font-size: 8px !important;
-    line-height: 12px !important;
+    line-height: 10px !important;
   }
 }
 
