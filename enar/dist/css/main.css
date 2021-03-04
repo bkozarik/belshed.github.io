@@ -2154,7 +2154,7 @@ section:not(.swiper-slide-active) {
   }
 }
 
-@media screen and (max-height: 500px) {
+@media (orientation: landscape) and (max-width: 800px) {
   .outsource {
     padding-top: 120px;
   }
