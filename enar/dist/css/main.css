@@ -2161,11 +2161,13 @@ section:not(.swiper-slide-active) {
   .outsource__title {
     padding-right: 25px;
     margin-bottom: 5px !important;
-    font-size: 2px !important;
-    line-height: 6px !important;
   }
-  .outsource__content {
-    font-size: 2px !important;
+  .outsource__title, .outsource__title * {
+    font-size: 16px !important;
+    line-height: 20px !important;
+  }
+  .outsource__content ul, .outsource__content p, .outsource__content li {
+    font-size: 8px !important;
   }
 }
 
