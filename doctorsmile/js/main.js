@@ -14,6 +14,21 @@ document.addEventListener('DOMContentLoaded', () => {
     let mobileSwiperSW = document.querySelector('.faqs__themes');
     const pagePath = window.location.pathname;
 
+    const isExists = element => {
+        if(typeof(element) == 'string'){
+            return document.querySelector(element) ? true : false;
+        }
+        else if(typeof(element) == 'object'){
+            if(Array.isArray(element)){
+                return element[0] ? true : false;
+            }
+            else if(NodeList.prototype.isPrototypeOf(element)){
+                return element[0] ? true : false;
+            }
+            return element ? true : false;
+        }
+    }
+
     const toggleSpoiler = () => {
         event.preventDefault();
 
@@ -236,7 +251,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
             mobileMenuContainer.insertBefore(navBar, document.querySelector('.mobile-menu__services'));
             mobileMenuContainer.insertBefore(headerItems[headerItems.length - 1], headerItems[headerItems.length - 2]);
-            document.querySelector('.mobile-menu .header__dropdown-span img').setAttribute('src', '/dentko/img/info-w.svg');
         }
         else{
             let header = document.querySelector('.header');
@@ -340,7 +354,7 @@ document.addEventListener('DOMContentLoaded', () => {
             let formInputs = targetForm.querySelectorAll('input.uk-input');
             let request = new XMLHttpRequest();
 
-            request.open('POST', '/dentko/ajax-mail.php');
+            request.open('POST', './php/ajax-mail.php');
 
             request.onreadystatechange = function () {
                 
@@ -391,7 +405,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     window.addEventListener('resize', mobileCheck);
 
-    if(1){
+    if(isExists('.js-doctors-swiper')){
         new Swiper('.js-doctors-swiper', {
             speed: 600,
             navigation: {
@@ -403,6 +417,67 @@ document.addEventListener('DOMContentLoaded', () => {
                 el: '.doctors__navigation',
                 clickable: true,
             }
+        });
+    }
+    
+    if(isExists('.js-sertificates-swiper')){
+        new Swiper('.js-sertificates-swiper', {
+            slidesPerView: 4,
+            spaceBetween: 30,
+            navigation: {
+                nextEl: '.sertificates .slider-next',
+                prevEl: '.sertificates .slider-prev',
+            },
+            breakpoints: {
+                1080: {
+                    slidesPerView: 4,
+                },
+                900: {
+                    slidesPerView: 3,
+                },
+                440: {
+                    slidesPerView: 2,
+                },
+                200: {
+                    slidesPerView: 1,
+                },
+            },
+            pagination: {
+                type: 'bullets',
+                el: '.sertificates__pagination',
+                clickable: true,
+            }
+        });
+    }
+
+    if(isExists('.js-reviews-swiper')){
+        new Swiper('.js-reviews-swiper', {
+            slidesPerGroup: 3,
+            spaceBetween: 30,
+            watchSlidesVisibility: true,
+            speed: 600,
+            navigation: {
+                nextEl: '.reviews__control-next',
+                prevEl: '.reviews__control-prev',
+            },
+            breakpoints: {
+                900: {
+                    slidesPerView: 3,
+                },
+                640: {
+                    slidesPerView: 2,
+                },
+                200: {
+                    slidesPerView: 1,
+                },
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+                renderBullet: function (index, className) {
+                    return '<li class="reviews__page ' + className + '"><span>' + (index + 1) + '</span></li>';
+                },
+            },
         });
     }
 

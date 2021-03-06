@@ -4,86 +4,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dentko - стоматологии</title>
-    <link rel="stylesheet" href="/dentko/css/uikit.min.css"/>
-    <link rel="stylesheet" href="/dentko/css/fonts.css"/>
-    <link rel="stylesheet" href="/dentko/css/style.css"/>
-    <link rel="stylesheet" href="/dentko/css/media.css"/>
-    <script src="/dentko/js/uikit.min.js"></script>
-    <script src="/dentko/js/uikit-icons.min.js"></script>
+    <link rel="stylesheet" href="./css/uikit.min.css"/>
+    <link rel="stylesheet" href="./css/fonts.css"/>
+    <link rel="stylesheet" href="./css/style.css"/>
+    <link rel="stylesheet" href="./css/media.css"/>
+    <script src="./js/uikit.min.js"></script>
+    <script src="./js/uikit-icons.min.js"></script>
 </head>
 <body>
     <header class="header">
         <div class="uk-container">
-            <div class="uk-flex uk-flex-between uk-flex-bottom header__wrap">
-                <a href="/dentko/index.html" class="header__main-link"><img src="/dentko/img/logo.svg" alt="Логотип" class="header__logo"></a>
-                <dl class="uk-description-list header__item">
-                    <dt>Контакты:</dt>
-                    <dd>г. Минск, пр-кт Независимости, 58</dd>
-                </dl>
-                <dl class="uk-description-list header__item">
-                    <dt>Время работы:</dt>
-                    <dd class="uk-inline">
-                        <div class="uk-inline header__dropdown-trigger">
-                            <span class="header__dropdown-span">Без выходных <img src="/dentko/img/info.svg"></span>
-                            <div class="uk-card uk-card-body uk-margin-remove-top header__dropdown-card">
-                                <span class="footer__card-header uk-text-bold">Время работы:</span>
-                                <div class="footer__card-body uk-flex uk-flex-between">
-                                    <div class="footer__card-col uk-flex uk-flex-column">
-                                        <span>пн-пт:</span>
-                                        <span>сб:</span>
-                                        <span>вс:</span>
-                                    </div>
-                                    <div class="footer__card-col uk-flex uk-flex-column">
-                                        <span>09:00 — 21:00</span>
-                                        <span>09:00 — 20:00</span>
-                                        <span>09:00 — 17:00</span>
-                                    </div>
+            <div class="uk-flex uk-flex-between uk-flex-top header__wrap">
+                <a href="./index.html" class="header__main-link"><img src="./img/logo_2.svg" alt="Логотип" class="header__logo"></a>
+                <div class="uk-flex uk-flex-between header__content">
+                    <dl class="uk-description-list header__item">
+                        <dt>Контакты:</dt>
+                        <dd>г. Минск, ул. Маяковского, 24</dd>
+                    </dl>
+                    <dl class="uk-description-list header__item">
+                        <dt>Время работы:</dt>
+                        <dd>пн-пт: 09:00 - 21:00</dd>
+                        <dd>сб-вс: 10:00 - 18:00</dd>
+                    </dl>
+                    <dl class="uk-description-list header__item">
+                        <dt>Телефоны:</dt>
+                        <dd>
+                            <div class="uk-inline">
+                                <span class="header__dropdown"><a href="tel:+375291101212" class="footer__dd-link"><img src="./img/operator1.png">+375 (29) 110-12-12</a></span>
+                                <div class="header__dropdown-container" uk-dropdown>
+                                    <a href="tel:+375291101212" class="footer__dd-link"><img src="./img/operator1.png">+375 (29) 110-12-12</a>
+                                    <a href="tel:+375336601313" class="footer__dd-link"><img src="./img/operator2.png">+375 (33) 660-13-13</a>
+                                    <a href="tel:+375251101212" class="footer__dd-link"><img src="./img/operator3.png">+375 (25) 110-12-12</a>
+                                    <a href="tel:+375172844511" class="footer__dd-link"><img src="./img/operator4.png">+375 (17) 284-45-11</a>
                                 </div>
                             </div>
-                        </div>
-                    </dd>
-                </dl>
-                <dl class="uk-description-list header__item">
-                    <dt>Мы в соц.сетях:</dt>
-                    <dd class="uk-flex uk-flex-between">
-                        <a href="#" class="header__link"><img src="/dentko/img/facebook.png" alt="Иконка" class="header__link-img"></a>
-                        <a href="#" class="header__link"><img src="/dentko/img/vk.png" alt="Иконка" class="header__link-img"></a>
-                        <a href="#" class="header__link"><img src="/dentko/img/instagram.png" alt="Иконка" class="header__link-img"></a>
-                    </dd>
-                </dl>
-                <dl class="uk-description-list header__item">
-                    <dt>Телефоны:</dt>
-                    <dd>
-                        <div class="uk-inline">
-                            <span class="header__dropdown"><a href="tel:+375291101212" class="footer__dd-link"><img src="/dentko/img/operator1.png">+375 (29) 110-12-12</a></span>
-                            <div class="header__dropdown-container" uk-dropdown>
-                                <a href="tel:+375291101212" class="footer__dd-link"><img src="/dentko/img/operator1.png">+375 (29) 110-12-12</a>
-                                <a href="tel:+375336601313" class="footer__dd-link"><img src="/dentko/img/operator2.png">+375 (33) 660-13-13</a>
-                                <a href="tel:+375251101212" class="footer__dd-link"><img src="/dentko/img/operator3.png">+375 (25) 110-12-12</a>
-                                <a href="tel:+375172844511" class="footer__dd-link"><img src="/dentko/img/operator4.png">+375 (17) 284-45-11</a>
+                            <div class="uk-flex">
+                                <a href="tg://msg?text=&to=+375291101212" class="header__link"><img src="./img/telegram.png" alt="Иконка" class="header__link-img"></a>
+                                <a href="viber://chat?number=375291101212" class="header__link"><img src="./img/viber.png" alt="Иконка" class="header__link-img"></a>
+                                <a href="whatsapp://send?phone=375291101212" class="header__link"><img src="./img/whatsapp.png" alt="Иконка" class="header__link-img"></a>
                             </div>
-                        </div>
-                        <div class="uk-flex-inline uk-flex-between">
-                            <a href="#" class="header__link"><img src="/dentko/img/telegram.png" alt="Иконка" class="header__link-img"></a>
-                            <a href="#" class="header__link"><img src="/dentko/img/viber.png" alt="Иконка" class="header__link-img"></a>
-                            <a href="#" class="header__link"><img src="/dentko/img/whatsapp.png" alt="Иконка" class="header__link-img"></a>
-                        </div>
-                    </dd>
-                </dl>
+                        </dd>
+                    </dl>
+                    <dl class="uk-description-list header__item">
+                        <dt>Мы в соц.сетях:</dt>
+                        <dd class="uk-flex">
+                            <a href="https://www.facebook.com/dentko.stom" class="header__link header__link_big"><img src="./img/facebook.png" alt="Иконка" class="header__link-img"></a>
+                            <a href="#" class="header__link header__link_big"><img src="./img/instagram.png" alt="Иконка" class="header__link-img"></a>
+                        </dd>
+                    </dl>
+                </div>
                 <button class="header__menu-btn menu-open"><span></span></button>
             </div>
         </div>
     </header>
     <nav class="nav" uk-navbar>
-        <div class="uk-navbar-center">
-            <ul class="uk-navbar-nav uk-flex-between uk-flex-middle">
-                <li><a href="/dentko/about.html">о компании</a></li>
+        <div class="uk-container uk-flex uk-flex-middle uk-flex-between">
+            <ul class="uk-navbar-nav uk-flex-between uk-flex-center nav__list">
+                <li><a href="./about.html">о компании</a></li>
                 <li>
-                    <a href="/dentko/service.html" class="nav__dropdown-link">услуги</a>
+                    <a href="./service.html" class="nav__dropdown-link">услуги</a>
                     <div class="uk-navbar-dropdown">
                         <ul class="uk-nav uk-navbar-dropdown-nav">
                             <li>
-                                <a href="/dentko/service.html"><img src="/dentko/img/inline-arrow-w.svg">Лечение</a>
+                                <a href="./service.html"><img src="./img/inline-arrow-w.svg">Лечение</a>
                                 <ul class="nav__inner">
                                     <li><a href="#" class="service__link">Лечение пульпита</a></li>
                                     <li><a href="#" class="service__link">Детская стоматология</a></li>
@@ -95,7 +78,7 @@
                                 </ul>
                             </li>
                             <li>
-                                <a href="/dentko/service.html"><img src="/dentko/img/inline-arrow-w.svg">Протезирование</a>
+                                <a href="./service.html"><img src="./img/inline-arrow-w.svg">Протезирование</a>
                                 <ul class="nav__inner">
                                     <li><a href="#" class="service__link">Протезирование зубов</a></li>
                                     <li><a href="#" class="service__link">Реставрация зубов</a></li>
@@ -113,7 +96,7 @@
                                 </ul>
                             </li>
                             <li>
-                                <a href="/dentko/service.html"><img src="/dentko/img/inline-arrow-w.svg">Хирургия</a>
+                                <a href="./service.html"><img src="./img/inline-arrow-w.svg">Хирургия</a>
                                 <ul class="nav__inner">
                                     <li><a href="#" class="service__link">Имплантация зубов (импланты)</a></li>
                                     <li><a href="#" class="service__link">Наращивание костной ткани</a></li>
@@ -125,7 +108,7 @@
                                 </ul>
                             </li>
                             <li>
-                                <a href="/dentko/service.html"><img src="/dentko/img/inline-arrow-w.svg">Ортодонтия</a>
+                                <a href="./service.html"><img src="./img/inline-arrow-w.svg">Ортодонтия</a>
                                 <ul class="nav__inner">
                                     <li><a href="#" class="service__link">Установка брекет-систем</a></li>
                                     <li><a href="#" class="service__link">Металлические брекеты</a></li>
@@ -139,7 +122,7 @@
                                 </ul>
                             </li>
                             <li>
-                                <a href="/dentko/service.html"><img src="/dentko/img/inline-arrow-w.svg">Отбеливание</a>
+                                <a href="./service.html"><img src="./img/inline-arrow-w.svg">Отбеливание</a>
                                 <ul class="nav__inner">
                                     <li><a href="#" class="service__link">Отбеливание зубов</a></li>
                                     <li><a href="#" class="service__link">Офисное отбеливание зубов</a></li>
@@ -148,7 +131,7 @@
                                 </ul>
                             </li>
                             <li>
-                                <a href="/dentko/service.html"><img src="/dentko/img/inline-arrow-w.svg">Профилактика</a>
+                                <a href="./service.html"><img src="./img/inline-arrow-w.svg">Профилактика</a>
                                 <ul class="nav__inner">
                                     <li><a href="#" class="service__link">Профессиональная чистка зубов и профилактика</a></li>
                                     <li><a href="#" class="service__link">Герметизация фиссур</a></li>
@@ -157,7 +140,7 @@
                                 </ul>
                             </li>
                             <li>
-                                <a href="/dentko/service.html"><img src="/dentko/img/inline-arrow-w.svg">Парадонтология</a>
+                                <a href="./service.html"><img src="./img/inline-arrow-w.svg">Парадонтология</a>
                                 <ul class="nav__inner">
                                     <li><a href="#" class="service__link">Пародонтология</a></li>
                                     <li><a href="#" class="service__link">Лечение пародонтита</a></li>
@@ -167,7 +150,7 @@
                                 </ul>
                             </li>
                             <li>
-                                <a href="/dentko/service.html"><img src="/dentko/img/inline-arrow-w.svg">Косметология</a>
+                                <a href="./service.html"><img src="./img/inline-arrow-w.svg">Косметология</a>
                                 <ul class="nav__inner">
                                     <li><a href="#" class="service__link">Терапевтическая косметология</a></li>
                                     <li><a href="#" class="service__link">Контурная пластика</a></li>
@@ -180,23 +163,23 @@
                                 </ul>
                             </li>
                             <li>
-                                <a href="/dentko/service.html"><img src="/dentko/img/inline-arrow-w.svg">Диагностика</a>
+                                <a href="./service.html"><img src="./img/inline-arrow-w.svg">Диагностика</a>
                                 <ul class="nav__inner">
-                                    <li><a href="/dentko/service.html"><img src="/dentko/img/inline-arrow-w.svg">Панорамный снимок зубов</a></li>
-                                    <li><a href="/dentko/service.html"><img src="/dentko/img/inline-arrow-w.svg">3D компьютерная томография зубов</a></li>
+                                    <li><a href="./service.html"><img src="./img/inline-arrow-w.svg">Панорамный снимок зубов</a></li>
+                                    <li><a href="./service.html"><img src="./img/inline-arrow-w.svg">3D компьютерная томография зубов</a></li>
                                 </ul>
                             </li>
                         </ul>
                     </div>
                 </li>
-                <li><a href="/dentko/price.html">цены</a></li>
-                <li><a href="/dentko/payment.html">оплата и рассрочка</a></li>
-                <li><a href="/dentko/reviews/reviews.html">отзывы</a></li>
-                <li><a href="/dentko/team.html">специалисты</a></li>
-                <li><a href="/dentko/faq/faq.html">вопрос-ответ</a></li>
-                <li><a href="/dentko/contacts.html">контакты</a></li>
-                <li><a class="nav__order popup-request-open" href="#">Записаться на прием <img src="/dentko/img/inline-arrow.svg"></a></li>
+                <li><a href="./price.html">цены</a></li>
+                <li><a href="./reviews/reviews.html">отзывы</a></li>
+                <li><a href="./team.html">специалисты</a></li>
+                <li><a href="./faq/faq.html">Блог</a></li>
+                <li><a href="./contacts.html">контакты</a></li>
+                <li><a href="./covid.html" style="color: #EA0000;">covid-19</a></li>
             </ul>
+            <button class="nav__order popup-request-open">Записаться на прием</button>
         </div>
     </nav>
     <div class="appointment">
@@ -204,16 +187,16 @@
             <div class="uk-container">
                 <div class="uk-flex uk-flex-column uk-flex-middle">
                     <div class="uk-inline">
-                        <span class="header__dropdown"><a href="tel:+375291101212" class="footer__dd-link"><img src="/dentko/img/operator1.png">+375 (29) 110-12-12</a></span>
+                        <span class="header__dropdown"><a href="tel:+375291101212" class="footer__dd-link"><img src="./img/operator1.png">+375 (29) 110-12-12</a></span>
                         <div class="header__dropdown-container" uk-dropdown>
-                            <a href="tel:+375291101212" class="footer__dd-link"><img src="/dentko/img/operator1.png">+375 (29) 110-12-12</a>
-                            <a href="tel:+375336601313" class="footer__dd-link"><img src="/dentko/img/operator2.png">+375 (33) 660-13-13</a>
-                            <a href="tel:+375251101212" class="footer__dd-link"><img src="/dentko/img/operator3.png">+375 (25) 110-12-12</a>
-                            <a href="tel:+375172844511" class="footer__dd-link"><img src="/dentko/img/operator4.png">+375 (17) 284-45-11</a>
+                            <a href="tel:+375291101212" class="footer__dd-link"><img src="./img/operator1.png">+375 (29) 110-12-12</a>
+                            <a href="tel:+375336601313" class="footer__dd-link"><img src="./img/operator2.png">+375 (33) 660-13-13</a>
+                            <a href="tel:+375251101212" class="footer__dd-link"><img src="./img/operator3.png">+375 (25) 110-12-12</a>
+                            <a href="tel:+375172844511" class="footer__dd-link"><img src="./img/operator4.png">+375 (17) 284-45-11</a>
                         </div>
                     </div>
                     <div class="about__btn-wrap appointment__btn-wrap">
-                        <button class="uk-button uk-button-default button about__btn appointment__btn popup-request-open">Записаться на прием <img src="/dentko/img/inline-arrow-w.svg"></button>
+                        <button class="button button_big button_green about__btn appointment__btn popup-request-open">Записаться на прием <img src="./img/inline-arrow-w.svg"></button>
                     </div>
                 </div>
             </div>
@@ -497,16 +480,16 @@
         <section class="breadcrumbs">
             <div class="uk-container">
                 <ul class="breadcrumbs__list">
-                    <li class="breadcrumbs__item"><a href="/dentko/index.html" class="breadcrumbs__link">Главная</a></li>
-                    <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link reviews__control_disabled">Отзывы</a></li>
+                    <li class="breadcrumbs__item"><a href="./service.html" class="breadcrumbs__link">Услуги</a></li>
+                    <li class="breadcrumbs__item"><a class="breadcrumbs__link">Лечение зубов</a></li>
                 </ul>
             </div>
         </section>
         <section class="reviews reviews_page">
             <div class="uk-container">
-                <div class="uk-flex uk-flex-between uk-flex-middle reviews__header">
+                <div class="uk-flex uk-flex-between uk-flex-middle reviews__header uk-margin-medium-bottom">
                     <span class="uk-h1">Отзывы наших клиентов</span>
-                    <button class="uk-button uk-button-default button button_big">Оставить отзыв<img src="/dentko/img/inline-arrow-w.svg"></button>
+                    <button class="button button_green button_big">Оставить отзыв</button>
                 </div>
                 <div class="reviews__wrap uk-child-width-1-1">
                     <div class="uk-card uk-card-body review review__page">
@@ -622,12 +605,12 @@
                 </div>
             </div>
         </section>
-        <section id="form" class="form">
+        <section id="form" class="form form_wide">
             <div class="uk-container">
                 <div class="form__body">
-                    <span class="uk-h2">Оставить отзыв</span>
-                    <p class="uk-text-meta">Пожалуйста, проверьте правильность введенных данных.</p>
-                    <form class="uk-flex uk-flex-bottom">
+                    <span class="uk-h2 uk-text-center">Оставить отзыв</span>
+                    <p class="uk-text-meta uk-text-center">Пожалуйста, проверьте правильность введенных данных.</p>
+                    <form class="uk-flex uk-flex-column">
                         <div class="form__inputs">
                             <div class="uk-flex uk-flex-top uk-flex-between form__row">
                                 <div class="uk-input form__rate-wrap">
@@ -654,8 +637,7 @@
                             </div>
                         </div>
                         <div class="form__submit">
-                            <p class="uk-text uk-text-small">Email служит для оповещения об ответе, он не будет опубликован на сайте.</p>
-                            <button class="uk-input" type="submit">Оставить отзыв</button>
+                            <button class="button button_white button_big uk-input" type="submit">Оставить отзыв</button>
                         </div>
                     </form>
                 </div>
@@ -665,56 +647,56 @@
     <footer class="footer">
         <div class="uk-container">
             <div class="uk-flex uk-flex-between uk-flex-middle footer__wrap">
-                <img src="/dentko/img/logo.svg" alt="Логотип" class="header__logo">
+                <img src="./img/logo.svg" alt="Логотип" class="header__logo">
                 <nav class="footer__nav uk-flex uk-flex-middle">
                     <ul class="uk-list uk-flex uk-flex-between uk-flex-middle">
-                        <li><a href="/dentko/service.html" class="footer__nav-link">лечение</a></li>
-                        <li><a href="/dentko/service.html" class="footer__nav-link">протезирование</a></li>
-                        <li><a href="/dentko/service.html" class="footer__nav-link">хирургия</a></li>
-                        <li><a href="/dentko/service.html" class="footer__nav-link">ортодонтия</a></li>
-                        <li><a href="/dentko/service.html" class="footer__nav-link">отбеливание</a></li>
-                        <li><a href="/dentko/service.html" class="footer__nav-link">профилактика</a></li>
-                        <li><a href="/dentko/service.html" class="footer__nav-link">пародонтология</a></li>
-                        <li><a href="/dentko/service.html" class="footer__nav-link">косметология</a></li>
+                        <li><a href="./service.html" class="footer__nav-link">лечение</a></li>
+                        <li><a href="./service.html" class="footer__nav-link">протезирование</a></li>
+                        <li><a href="./service.html" class="footer__nav-link">хирургия</a></li>
+                        <li><a href="./service.html" class="footer__nav-link">ортодонтия</a></li>
+                        <li><a href="./service.html" class="footer__nav-link">отбеливание</a></li>
+                        <li><a href="./service.html" class="footer__nav-link">профилактика</a></li>
+                        <li><a href="./service.html" class="footer__nav-link">пародонтология</a></li>
+                        <li><a href="./service.html" class="footer__nav-link">косметология</a></li>
                     </ul>
                 </nav>
             </div>
             <div class="footer__body uk-flex uk-flex-between uk-flex-stretch">
                 <nav class="footer__nav uk-flex">
                     <ul class="uk-list">
-                        <li><a href="/dentko/about.html" class="footer__nav-link">о компании</a></li>
-                        <li><a href="/dentko/price.html" class="footer__nav-link">цены</a></li>
-                        <li><a href="/dentko/payment.html" class="footer__nav-link">оплата и рассрочка</a></li>
-                        <li><a href="/dentko/reviews.html" class="footer__nav-link">отзывы</a></li>
-                        <li><a href="/dentko/team.html" class="footer__nav-link">специалисты</a></li>
-                        <li><a href="/dentko/" class="footer__nav-link">статьи</a></li>
-                        <li><a href="/dentko/faq.html" class="footer__nav-link">вопрос-ответ</a></li>
-                        <li><a href="/dentko/contacts.html" class="footer__nav-link">контакты</a></li>
+                        <li><a href="./about.html" class="footer__nav-link">о компании</a></li>
+                        <li><a href="./price.html" class="footer__nav-link">цены</a></li>
+                        <li><a href="./payment.html" class="footer__nav-link">оплата и рассрочка</a></li>
+                        <li><a href="./reviews.html" class="footer__nav-link">отзывы</a></li>
+                        <li><a href="./team.html" class="footer__nav-link">специалисты</a></li>
+                        <li><a href="./" class="footer__nav-link">статьи</a></li>
+                        <li><a href="./faq.html" class="footer__nav-link">вопрос-ответ</a></li>
+                        <li><a href="./contacts.html" class="footer__nav-link">контакты</a></li>
                     </ul>
                 </nav>
                 <dl class="uk-description-list uk-flex uk-flex-column footer__contacts">
                     <dt>Контактные данные:</dt>
                     <dd>ООО "Дентко-Мед", 220005</dd>
-                    <dd>г. Минск, пр. Независимости, 58, п. 142 (3 этаж). <a href="/dentko/contacts.html" class="footer__green-link">Карта проезда</a></dd>
+                    <dd>г. Минск, пр. Независимости, 58, п. 142 (3 этаж). <a href="./contacts.html" class="footer__green-link">Карта проезда</a></dd>
                     <dd>
                         <div class="uk-flex-inline uk-flex-between">
-                            <a href="#" class="header__link footer__outer"><img src="/dentko/img/facebook.png" alt="Иконка" class="header__link-img"></a>
-                            <a href="#" class="header__link footer__outer"><img src="/dentko/img/vk.png" alt="Иконка" class="header__link-img"></a>
-                            <a href="#" class="header__link footer__outer"><img src="/dentko/img/instagram.png" alt="Иконка" class="header__link-img"></a>
+                            <a href="#" class="header__link footer__outer"><img src="./img/facebook.png" alt="Иконка" class="header__link-img"></a>
+                            <a href="#" class="header__link footer__outer"><img src="./img/vk.png" alt="Иконка" class="header__link-img"></a>
+                            <a href="#" class="header__link footer__outer"><img src="./img/instagram.png" alt="Иконка" class="header__link-img"></a>
                         </div>
                     </dd>
                 </dl>
                 <dl class="uk-description-list uk-flex uk-flex-column footer__contacts">
                     <dt>Телефоны:</dt>
-                    <dd><a href="tel:+375291101212" class="footer__dd-link"><img src="/dentko/img/operator1.png">+375 (29) 110-12-12</a></dd>
-                    <dd><a href="tel:+375336601313" class="footer__dd-link"><img src="/dentko/img/operator2.png">+375 (33) 660-13-13</a></dd>
-                    <dd><a href="tel:+375251101212" class="footer__dd-link"><img src="/dentko/img/operator3.png">+375 (25) 110-12-12</a></dd>
-                    <dd><a href="tel:+375172844511" class="footer__dd-link"><img src="/dentko/img/operator4.png">+375 (17) 284-45-11</a></dd>
+                    <dd><a href="tel:+375291101212" class="footer__dd-link"><img src="./img/operator1.png">+375 (29) 110-12-12</a></dd>
+                    <dd><a href="tel:+375336601313" class="footer__dd-link"><img src="./img/operator2.png">+375 (33) 660-13-13</a></dd>
+                    <dd><a href="tel:+375251101212" class="footer__dd-link"><img src="./img/operator3.png">+375 (25) 110-12-12</a></dd>
+                    <dd><a href="tel:+375172844511" class="footer__dd-link"><img src="./img/operator4.png">+375 (17) 284-45-11</a></dd>
                     <dd>
                         <div class="uk-flex-inline uk-flex-between">
-                            <a href="#" class="header__link footer__outer"><img src="/dentko/img/telegram.png" alt="Иконка" class="header__link-img"></a>
-                            <a href="#" class="header__link footer__outer"><img src="/dentko/img/viber.png" alt="Иконка" class="header__link-img"></a>
-                            <a href="#" class="header__link footer__outer"><img src="/dentko/img/whatsapp.png" alt="Иконка" class="header__link-img"></a>
+                            <a href="#" class="header__link footer__outer"><img src="./img/telegram.png" alt="Иконка" class="header__link-img"></a>
+                            <a href="#" class="header__link footer__outer"><img src="./img/viber.png" alt="Иконка" class="header__link-img"></a>
+                            <a href="#" class="header__link footer__outer"><img src="./img/whatsapp.png" alt="Иконка" class="header__link-img"></a>
                         </div>
                     </dd>
                 </dl>
@@ -740,7 +722,11 @@
                     <span class="uk-text uk-text-meta">© 1997 - 2020. Медицинский центр <br>"Дентко".</span>
                 </div>
                 <div class="uk-flex uk-flex-middle uk-flex-column footer__bottom-col">
-                    <span class="uk-text uk-text-meta">Рейтинг Медицинского центра "Дентко" - <img src="/dentko/img/rating.png"><a href="/dentko/reviews/reviews.html" class="footer__2reviews"> 4,9 балла (10 голосов)</a></span>
+                    <span class="uk-text uk-text-meta">Рейтинг Медицинского центра "Дентко" - 
+                    <!-- .review__rating_3-5  задает количество звездочек с шагом 0.5 от 0 до 5. В данном случае рейтинг будет 3.5 -->
+                    <span class="review__rating review__rating_dib review__rating_3-5"> 
+                        <span class="review__stars"></span>
+                    </span> 4,9 балла (10 голосов)</a></span>
                     <a href="#" class="green-link uk-link">Продвижение сайта - hata.by</a>
                 </div>
                 <div class="footer__bottom-col">
@@ -768,7 +754,7 @@
                     <div class="uk-input form__div">
                         <input class="uk-input" type="email" name="mail" placeholder="Ваш e-mail">
                         <div class="popup__info">
-                            <img src="/dentko/img/popup-info.svg" alt="" class="popup__info-img">
+                            <img src="./img/popup-info.svg" alt="" class="popup__info-img">
                             <div class="popup__info-card">
                                 <p>Email служит для оповещения об ответе, он не будет опубликован на сайте.</p>
                                 <p>Не является обязательным полем для заполнения</p>
@@ -781,7 +767,7 @@
                     <textarea class="uk-input" rows="2" name="comment" placeholder="Что вас беспокоит?"></textarea>
                 </div>
                 <div class="uk-flex uk-flex-between uk-width-1-1 popup__row">
-                    <button type="submit" class="uk-button popup__submit">Записаться на прием <img src="/dentko/img/inline-arrow-w.svg"></button>
+                    <button type="submit" class="uk-button popup__submit">Записаться на прием <img src="./img/inline-arrow-w.svg"></button>
                 </div>
             </form>
         </div>
@@ -804,6 +790,7 @@
             </div>
         </div>
     </div>
-    <script src="/dentko/js/main.js"></script>
+    <script src="./js/swiper-bundle.min.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 </html>

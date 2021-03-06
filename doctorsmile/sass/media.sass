@@ -7,6 +7,10 @@
             width: auto
     
 @media screen and ( max-width: 1275px )
+    .hero
+        &__buttons
+            display: none
+
     .about
         &__buttons
             flex-direction: column
@@ -79,6 +83,12 @@
     
 @media screen and ( max-width: 1100px )
     .form
+        .uk-h2.uk-text-center
+            font-size: 32px
+            line-height: 40px
+        .uk-text-meta.uk-text-center
+            font-size: 16px
+            line-height: 23px
         &__body
             padding: 60px 20px 
         &__schedule
@@ -109,6 +119,16 @@
         &__wrap
             flex-wrap: wrap
             
+    .service-page
+        &__wrap
+            flex-direction: column
+        &__aside + &__content
+            margin-left: 0
+            margin-top: 30px 
+        &__aside
+            width: 100%
+            max-width: 500px
+            margin: 0 auto
 
     .footer
         &__wrap
@@ -133,6 +153,9 @@
 
 @media screen and ( max-width: 960px )
     
+    .more, .doctors, .advantages, .services
+        padding: 70px 0px
+
     h2.uk-h1, h2.uk-h2, .uk-h1, .uk-h2
         font-size: 36px
 
@@ -175,6 +198,9 @@
                 margin: 20px !important
 
     .text
+        .uk-h1
+            font-size: 26px
+            line-height: 32px
         &_fullscreen
             padding: 40px 0px
 
@@ -202,7 +228,7 @@
         &__img
             width: auto
             object-fit: contain
-            border-radius: 3px
+            border-radius: 15px
             &-wrap
                 display: flex
                 justify-content: center
@@ -260,7 +286,10 @@
         .form__div
             width: 100%
 
-    .form   
+    .form
+        &__div, &__div input, .button
+            width: 100% !important
+            max-width: none !important
         &__row
             flex-direction: column
             align-items: center
@@ -270,7 +299,6 @@
         form.uk-flex
             justify-content: center
             margin-top: 30px
-            align-items: center
             flex-direction: column
         &__schedule
             img
@@ -278,9 +306,26 @@
         button.uk-input
             font-size: 12px
 
+    .hero
+        &__item
+            padding-bottom: 15%
+
+@media screen and ( max-width: 920px )
+    .doctor
+        &__body
+            padding: 30px 20px
+
 @media screen and ( max-width: 860px )
     .appointment
         display: block
+
+    .form
+        &__submit
+            max-width: none !important
+        &_wide
+            .form
+                &__body
+                    padding: 50px 30px
 
     .reviews
         &__header
@@ -298,20 +343,29 @@
             margin-right: 50px
 
     .doctor-banner
+        padding-top: 70px
+        padding-bottom: 50px
         &__wrap
             flex-direction: column
+        &__position
+            display: block
         &__side
+            padding-top: 0
+            padding-bottom: 60px
             width: 100%
             & + &
                 display: none
         &__title
-            margin-top: 60px
+            margin-top: 0px
+            font-size: 32px
         &__quote
             &-wrap
                 margin: 60px 0px 20px
                 padding: 15px
 
     .about
+        .uk-text-small
+            font-size: 16px
         &_doctor
             margin-top: 20px
             .uk-section
@@ -340,6 +394,15 @@
                     margin-bottom: 50px
 
     .reviews
+        &__page, &__control
+            $size: 30px
+
+            padding: 0 !important
+            height: $size !important
+            width: $size !important
+            line-height: $size !important
+            span
+                font-size: 14px
         &__slider + &__slider
             margin: 0
         .swiper__controls
@@ -372,6 +435,10 @@
             font-size: 1rem
             margin-bottom: 0
 
+    .map
+        .uk-h1
+            font-size: 28px
+
     .footer
         &__schedule
             margin-bottom: 30px
@@ -383,44 +450,21 @@
             .uk-flex-between
                 margin-top: 15px
 
+@media screen and ( max-width: 780px )
+    .doctor
+        flex-direction: column
+        &__img
+            max-width: none
+            max-height: 500px
+            border-radius: 30px
+            width: auto
+
 @media screen and ( max-width: 720px )
     .doctors
         &__slider
             margin-top: 20px !important
             min-height: 400px
-    .doctor
-        overflow: hidden
-        &__bg
-            &_green
-                height: 270px
-        &__img
-            position: absolute
-            left: 50%
-            transform: translateX(0%)
-            img
-                max-width: 40vw
-                max-height: 350px
-        &__control
-            width: 100%
-            bottom: auto
-            top: 0
-            padding: 0
-        &__data
-            position: relative
-            z-index: 3
-            padding: 0
-            width: 100%
-            margin-bottom: 30px
-        &__bottom
-            margin-top: 20px
-        &__name
-            &::after
-                display: none
-        &__name, &__specialty, &__link
-            margin: 0
-        &__link
-            margin-top: 3px
-    
+        
     .colored_text
         &__body
             padding: 30px 40px
@@ -428,6 +472,10 @@
             align-items: center
             img
                 margin: 0
+
+    .hero
+        &__item
+            padding-bottom: 25%
 
 @media screen and ( max-width: 660px )
     h2.uk-h1, h2.uk-h2
@@ -439,6 +487,7 @@
 
     .banner
         .slider__body
+            padding: 0 0px 
             margin-top: 0px !important
         &__buttons
             flex-direction: column
@@ -483,12 +532,6 @@
     .green-link
         font-size: 10px
 
-    .uk-pagination
-        a, .reviews__control, .uk-active>span
-            height: 40px
-            width: 40px
-            line-height: 40px
-
     .member
         &__img
             height: auto
@@ -502,8 +545,11 @@
                 font-size: 12px
 
     .portfolio
+        &__wrap
+            margin-left: -10px
+            margin-right: -10px
         .uk-card
-            max-width: 200px
+            max-width: 320px
 
     .agit
         .uk-flex
@@ -531,7 +577,15 @@
         &__themes
             padding: 20px 10px
 
+
+
     .form
+        &__submit
+            max-width: none !important
+        &_wide
+            .form
+                &__body
+                    padding: 40px 20px
         &__dropdown
             &-card
                 left: 50%
@@ -583,6 +637,8 @@
         margin-top: 0
 
     .about
+        h2.uk-h1, span.uk-h1, h2, h1
+            font-size: 26px
         &__row
             flex-direction: column
             align-items: flex-start
@@ -609,6 +665,9 @@
             padding-right: 15px
 
     .member
+        &__name
+            display: block
+            margin-bottom: 30px
         &__body
             padding: 10px
         &__img

@@ -851,11 +851,8 @@ section:not(.swiper-slide-active) {
     height: 1100vh;
     overflow-y: hidden;
   }
-  .contacts__copyright {
-    display: none;
-  }
   .contacts__form {
-    transform: translateY(-60px);
+    transform: translateY(-80px);
     height: 100%;
     margin-top: 0;
     padding-top: 10px;

@@ -15,69 +15,52 @@
 <body class="no-overflow">
     <header class="header">
         <div class="uk-container">
-            <div class="uk-flex uk-flex-between uk-flex-bottom header__wrap">
-                <a href="./index.html" class="header__main-link"><img src="./img/logo.svg" alt="Логотип" class="header__logo"></a>
-                <dl class="uk-description-list header__item">
-                    <dt>Контакты:</dt>
-                    <dd>г. Минск, пр-кт Независимости, 58</dd>
-                </dl>
-                <dl class="uk-description-list header__item">
-                    <dt>Время работы:</dt>
-                    <dd class="uk-inline">
-                        <div class="uk-inline header__dropdown-trigger">
-                            <span class="header__dropdown-span">Без выходных <img src="./img/info.svg"></span>
-                            <div class="uk-card uk-card-body uk-margin-remove-top header__dropdown-card">
-                                <span class="footer__card-header uk-text-bold">Время работы:</span>
-                                <div class="footer__card-body uk-flex uk-flex-between">
-                                    <div class="footer__card-col uk-flex uk-flex-column">
-                                        <span>пн-пт:</span>
-                                        <span>сб:</span>
-                                        <span>вс:</span>
-                                    </div>
-                                    <div class="footer__card-col uk-flex uk-flex-column">
-                                        <span>09:00 — 21:00</span>
-                                        <span>09:00 — 20:00</span>
-                                        <span>09:00 — 17:00</span>
-                                    </div>
+            <div class="uk-flex uk-flex-between uk-flex-top header__wrap">
+                <a href="./index.html" class="header__main-link"><img src="./img/logo_2.svg" alt="Логотип" class="header__logo"></a>
+                <div class="uk-flex uk-flex-between header__content">
+                    <dl class="uk-description-list header__item">
+                        <dt>Контакты:</dt>
+                        <dd>г. Минск, ул. Маяковского, 24</dd>
+                    </dl>
+                    <dl class="uk-description-list header__item">
+                        <dt>Время работы:</dt>
+                        <dd>пн-пт: 09:00 - 21:00</dd>
+                        <dd>сб-вс: 10:00 - 18:00</dd>
+                    </dl>
+                    <dl class="uk-description-list header__item">
+                        <dt>Телефоны:</dt>
+                        <dd>
+                            <div class="uk-inline">
+                                <span class="header__dropdown"><a href="tel:+375291101212" class="footer__dd-link"><img src="./img/operator1.png">+375 (29) 110-12-12</a></span>
+                                <div class="header__dropdown-container" uk-dropdown>
+                                    <a href="tel:+375291101212" class="footer__dd-link"><img src="./img/operator1.png">+375 (29) 110-12-12</a>
+                                    <a href="tel:+375336601313" class="footer__dd-link"><img src="./img/operator2.png">+375 (33) 660-13-13</a>
+                                    <a href="tel:+375251101212" class="footer__dd-link"><img src="./img/operator3.png">+375 (25) 110-12-12</a>
+                                    <a href="tel:+375172844511" class="footer__dd-link"><img src="./img/operator4.png">+375 (17) 284-45-11</a>
                                 </div>
                             </div>
-                        </div>
-                    </dd>
-                </dl>
-                <dl class="uk-description-list header__item">
-                    <dt>Мы в соц.сетях:</dt>
-                    <dd class="uk-flex uk-flex-between">
-                        <a href="#" class="header__link"><img src="./img/facebook.png" alt="Иконка" class="header__link-img"></a>
-                        <a href="#" class="header__link"><img src="./img/vk.png" alt="Иконка" class="header__link-img"></a>
-                        <a href="#" class="header__link"><img src="./img/instagram.png" alt="Иконка" class="header__link-img"></a>
-                    </dd>
-                </dl>
-                <dl class="uk-description-list header__item">
-                    <dt>Телефоны:</dt>
-                    <dd>
-                        <div class="uk-inline">
-                            <span class="header__dropdown"><a href="tel:+375291101212" class="footer__dd-link"><img src="./img/operator1.png">+375 (29) 110-12-12</a></span>
-                            <div class="header__dropdown-container" uk-dropdown>
-                                <a href="tel:+375291101212" class="footer__dd-link"><img src="./img/operator1.png">+375 (29) 110-12-12</a>
-                                <a href="tel:+375336601313" class="footer__dd-link"><img src="./img/operator2.png">+375 (33) 660-13-13</a>
-                                <a href="tel:+375251101212" class="footer__dd-link"><img src="./img/operator3.png">+375 (25) 110-12-12</a>
-                                <a href="tel:+375172844511" class="footer__dd-link"><img src="./img/operator4.png">+375 (17) 284-45-11</a>
+                            <div class="uk-flex">
+                                <a href="tg://msg?text=&to=+375291101212" class="header__link"><img src="./img/telegram.png" alt="Иконка" class="header__link-img"></a>
+                                <a href="viber://chat?number=375291101212" class="header__link"><img src="./img/viber.png" alt="Иконка" class="header__link-img"></a>
+                                <a href="whatsapp://send?phone=375291101212" class="header__link"><img src="./img/whatsapp.png" alt="Иконка" class="header__link-img"></a>
                             </div>
-                        </div>
-                        <div class="uk-flex-inline uk-flex-between">
-                            <a href="#" class="header__link"><img src="./img/telegram.png" alt="Иконка" class="header__link-img"></a>
-                            <a href="#" class="header__link"><img src="./img/viber.png" alt="Иконка" class="header__link-img"></a>
-                            <a href="#" class="header__link"><img src="./img/whatsapp.png" alt="Иконка" class="header__link-img"></a>
-                        </div>
-                    </dd>
-                </dl>
+                        </dd>
+                    </dl>
+                    <dl class="uk-description-list header__item">
+                        <dt>Мы в соц.сетях:</dt>
+                        <dd class="uk-flex">
+                            <a href="https://www.facebook.com..stom" class="header__link header__link_big"><img src="./img/facebook.png" alt="Иконка" class="header__link-img"></a>
+                            <a href="#" class="header__link header__link_big"><img src="./img/instagram.png" alt="Иконка" class="header__link-img"></a>
+                        </dd>
+                    </dl>
+                </div>
                 <button class="header__menu-btn menu-open"><span></span></button>
             </div>
         </div>
     </header>
     <nav class="nav" uk-navbar>
-        <div class="uk-navbar-center">
-            <ul class="uk-navbar-nav uk-flex-between uk-flex-middle">
+        <div class="uk-container uk-flex uk-flex-middle uk-flex-between">
+            <ul class="uk-navbar-nav uk-flex-between uk-flex-center nav__list">
                 <li><a href="./about.html">о компании</a></li>
                 <li>
                     <a href="./service.html" class="nav__dropdown-link">услуги</a>
@@ -191,13 +174,13 @@
                     </div>
                 </li>
                 <li><a href="./price.html">цены</a></li>
-                <li><a href="./payment.html">оплата и рассрочка</a></li>
-                <li><a href="./reviews/reviews.html">отзывы</a></li>
+                <li><a href="./reviews.html">отзывы</a></li>
                 <li><a href="./team.html">специалисты</a></li>
-                <li><a href="./faq/faq.html">вопрос-ответ</a></li>
+                <li><a href="./faq/faq.html">Блог</a></li>
                 <li><a href="./contacts.html">контакты</a></li>
-                <li><a class="nav__order popup-request-open" href="#">Записаться на прием <img src="./img/inline-arrow.svg"></a></li>
+                <li><a href="./covid.html" style="color: #EA0000;">covid-19</a></li>
             </ul>
+            <button class="nav__order popup-request-open">Записаться на прием</button>
         </div>
     </nav>
     <div class="appointment">
@@ -214,7 +197,7 @@
                         </div>
                     </div>
                     <div class="about__btn-wrap appointment__btn-wrap">
-                        <button class="uk-button uk-button-default button about__btn appointment__btn popup-request-open">Записаться на прием <img src="./img/inline-arrow-w.svg"></button>
+                        <button class="button button_big button_green about__btn appointment__btn popup-request-open">Записаться на прием <img src="./img/inline-arrow-w.svg"></button>
                     </div>
                 </div>
             </div>
@@ -362,340 +345,341 @@
             <div class="uk-container">
                 <ul class="breadcrumbs__list">
                     <li class="breadcrumbs__item"><a href="./service.html" class="breadcrumbs__link">Услуги</a></li>
-                    <li class="breadcrumbs__item"><a href="./team.html" class="breadcrumbs__link">Наши специалисты</a></li>
-                    <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link reviews__control_disabled">Титок Наталья Викторовна</a></li>
+                    <li class="breadcrumbs__item"><a class="breadcrumbs__link">Лечение зубов</a></li>
                 </ul>
             </div>
         </section>
         <section class="doctor-banner">
-            <div class="doctor-banner__bg"></div>
             <div class="uk-container">
-                <div class="doctor-banner__wrap uk-flex uk-child-width-1-2">
+                <div class="doctor-banner__wrap uk-flex uk-flex-between">
                     <div class="doctor-banner__side">
                         <span class="uk-h1 doctor-banner__title">Титок Наталья Викторовна</span>
-                        <div class="uk-flex uk-flex-between doctor-banner__data">
-                            <dl class="uk-description-list">
-                                <dt>Специализация:</dt> 
-                                <dd class="uk-inline">врач-стоматолог-терапевт, хирург-пародонтолог</dd>
-                            </dl>
-                            <dl class="uk-description-list uk-margin-remove">
-                                <dt>Категория:</dt>
-                                <dd class="uk-inline">первая</dd>
-                            </dl>
-                        </div>
-                        <div class="doctor-banner__quote-wrap">
-                            <span class="doctor-banner__quote">Хороший стоматолог спасет если не от болезни, то хотя бы от плохого стоматолога.</span>
-                            <span class="doctor-banner__author">— Титок Наталья Викторовна</span>
-                        </div>
+                        <span class="doctor-banner__position">Врач стоматолог-терапевт</span>
+                        <p>Первая квалификационная категория. <br> Стаж работы с 1981 года.</p>
+                        <p>Профилактика стоматологических заболеваний, лечение всех видов кариеса, эндодонтия, пародонтология, лечение лазером.</p>
+                        <button class="button button_green button_big hero__button popup-request-open">Записаться на прием</button>
                     </div>
-                    <div class="doctor-banner__side uk-flex uk-flex-center uk-flex-bottom">
-                        <img src="./img/doctor.png" alt="" class="doctor-banner__img">
+                    <img src="./img/doctor1.png" alt="" class="doctor-banner__img">
+                </div>
+            </div>
+        </section>
+        <section class="about about_doctor no-overflow">
+            <div class="uk-container">
+                <div class="uk-section">
+                    <div class="uk-grid-match uk-child-width-1-1@s uk-child-width-1-2@m" uk-grid>
+                        <div class="about__side about__side_img-container uk-flex-top">
+                            <div class="about__img-wrap about__img-wrap_sticky">
+                                <img class="about__img" src="./img/about_photo.jpg" alt="" uk-img>
+                            </div>
+                        </div>
+                        <div class="about__side">
+                            <div class="about__text">
+                                <span class="uk-h1">Профессиональные умения и навыки</span>
+                                <p>Обеспечивает стоматологическую терапевтическую помощь взрослым и детям.</p>
+                                <p>Знает, умеет и выполняет все технологии и методики диагностики, профилактики и лечения стоматологических заболеваний. Владеет реставрационной техникой с различными пломбировочными композитными материалами. Успешно работает со сложными случаями эндодонтического лечения зубов. Занимается лечением заболеваний маргинального периодонта и слизистой оболочки полости рта.</p>
+                                <span class="about__title">Образование</span>
+                                <ul>
+                                    <li>
+                                        <span>10 лет работы.</span> Наш стаж говорит сам за себя. 10 лет мы успешно дарим нашим пациентам здоровье и красоту зубов. Нас выбирают не только за высокую квалификацию наших специалистов, но и многолетний опыт в стоматологии.
+                                    </li>
+                                    <li>
+                                        <span>Команда специалистов.</span> Для вас работают сертифицированные врачи узких направлений с первой квалификационной категорией.
+                                    </li>
+                                    <li>
+                                        <span>Полное обследование.</span> У нас вы можете получить консультацию и пройти полное обследование. Благодаря оборудованному стоматологическому кабинету, для вас доступны услуги рентгена и компьютерной томографии.
+                                    </li>
+                                    <li>
+                                        <span>Качественные материалы.</span> Мы выбираем материалы и инструменты лучшего качества от мировых производителей. Коронки, протезы и брекеты имеют высокий уровень приживления и долгий срок службы.
+                                    </li>
+                                    <li>
+                                        <span>Цены.</span> Наши цены – ваша зона комфорта. Мы предлагаем качественную стоматологию и доступное платное лечение в Минске.
+                                    </li>
+                                    <li>
+                                        <span>Отзывы.</span> Довольные пациенты – лучшее подтверждение качества нашей работы.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="about about_doctor">
+        <section class="sertificates">
             <div class="uk-container">
-                <div class="uk-section">
-                    <div class="uk-flex uk-flex-between about__container">
-                        <div class="about__side-stiky">
-                            <div class="about__sticky">
-                                <div class="about__img-wrap">
-                                    <div class="uk-position-relative about__img-bg">
-                                        <img class="about__img about__img_pa" src="./img/doctor.png" uk-img>
-                                    </div>
-                                </div>
-                                <div class="uk-flex uk-flex-between uk-margin-medium-top about__buttons">
-                                    <button class="uk-button uk-button-default button popup-request-open">Записаться на прием<img src="./img/inline-arrow-w.svg"></button>
-                                    <button class="uk-button uk-button-default button button_transparent popup-faq-open">Консультация стоматолога</button>
-                                </div>
+                <div class="uk-flex uk-flex-between uk-flex-middle advantages__title">
+                    <span class="uk-h2 uk-text-center uk-block uk-margin-medium-bottom">Сертификаты</span>
+                </div>
+                <div class="sertificates__container">
+                    <div class="sertificates__swiper js-sertificates-swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide sertificates__item">
+                                <img src="./img/sertificate1.png" alt="" class="sertificates__img">
                             </div>
-                            
-                        </div>
-                        <div class="about__side-stiky">
-                            <span class="uk-h1">Профессиональные умения и навыки</span>
-                            <ul class="uk-list">
-                                <li class="uk-text uk-text-bold">Высокий профессиональный уровень в области терапевтической  стоматологии.</li>
-                                <li class="uk-text uk-text-bold">Опыт работы  в качестве врача-стоматолога – более 25 лет.</li>
-                                <li class="uk-text uk-text-bold">Автор статей по  терапевтическим стоматологическим проблемам.</li>
-                                <li class="uk-text uk-text-bold">Умение устанавливать доброжелательные отношения с пациентами.</li>
-                            </ul>
-                            <p class="uk-text">Обеспечивает стоматологическую терапевтическую помощь взрослым и детям.</p>
-                            <p class="uk-text">Знает, умеет и выполняет все технологии и методики диагностики, профилактики и лечения стоматологических заболеваний. Владеет реставрационной техникой с различными пломбировочными композитными материалами. Успешно работает со сложными случаями эндодонтического лечения зубов. Занимается лечением заболеваний маргинального периодонта и слизистой оболочки полости рта.</p>
-                            <span class="uk-h1">Образование и сертификаты</span>
-                            <div class="about__row">
-                                <span class="about__row-date">1994</span>
-                                <ul class="about__row-list">
-                                    <li>Минский государственный медицинский институт, стоматологический факультет.</li>
-                                </ul>
+                            <div class="swiper-slide sertificates__item">
+                                <img src="./img/sertificate2.png" alt="" class="sertificates__img">
                             </div>
-                            <div class="about__row">
-                                <span class="about__row-date">1994-1995</span>
-                                <ul class="about__row-list">
-                                    <li>Стажировка в Территориальном медицинском объединении № 1 г. Гродно.</li>
-                                </ul>
+                            <div class="swiper-slide sertificates__item">
+                                <img src="./img/sertificate3.png" alt="" class="sertificates__img">
                             </div>
-                            <div class="about__row">
-                                <span class="about__row-date">1995-2020</span>
-                                <ul class="about__row-list">
-                                    <li>Курсы усовершенствования врачей в Белорусской Медицинской Академии Постдипломного Образования по всем стоматологическим направлениям каждые 2-3 года.</li>
-                                    <li>Врач-стоматолог первой квалификационной  категории с 2007 года.</li>
-                                    <li>Участник Международных Стоматологических Конгрессов и выставок.</li>
-                                </ul>
+                            <div class="swiper-slide sertificates__item">
+                                <img src="./img/sertificate1.png" alt="" class="sertificates__img">
                             </div>
-                            <div class="about__slider">
-                                <div class="about__slider-container">
-                                    <div class="swiper-wrapper" uk-lightbox="animation: slide">
-                                        <div class="swiper-slide">
-                                            <a class="uk-inline" href="./img/big-sert1.png" data-caption="Caption 1">
-                                                <img src="./img/sertificate1.png" alt="" class="about__slider-img">
-                                            </a>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <a class="uk-inline" href="./img/big-sert2.png" data-caption="Caption 1">
-                                                <img src="./img/sertificate2.png" alt="" class="about__slider-img">
-                                            </a>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <a class="uk-inline" href="./img/big-sert3.png" data-caption="Caption 1">
-                                                <img src="./img/sertificate3.png" alt="" class="about__slider-img">
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="about__slider-controls">
-                                    <div class="about__slider-buttons">
-                                        <a href="#" class="slider-button slider-prev about__slider-prev"></a>
-                                        <a href="#" class="slider-button slider-next about__slider-next"></a>
-                                    </div>
-                                    <div class="swiper-pagination"></div>
-                                </div>
+                            <div class="swiper-slide sertificates__item">
+                                <img src="./img/sertificate2.png" alt="" class="sertificates__img">
+                            </div>
+                            <div class="swiper-slide sertificates__item">
+                                <img src="./img/sertificate3.png" alt="" class="sertificates__img">
+                            </div>
+                            <div class="swiper-slide sertificates__item">
+                                <img src="./img/sertificate1.png" alt="" class="sertificates__img">
                             </div>
                         </div>
                     </div>
+                    <button class="sertificates__control swiper__control swiper__control_prev slider-prev"></button>
+                    <button class="sertificates__control swiper__control swiper__control_next slider-next"></button>
+                    <div class="sertificates__pagination"></div>
                 </div>
             </div>
         </section>
         <section class="reviews">
             <div class="uk-container">
-                <div class="uk-flex uk-flex-between uk-flex-middle">
-                    <span class="uk-h2">Отзывы наших клиентов</span>
-                    <a href="#" class="uk-link green-link">Все отзывы</a>
+                <div class="uk-flex uk-flex-between uk-flex-middle advantages__title">
+                    <span class="uk-h2 uk-text-center uk-block uk-margin-medium-bottom">Отзывы клиентов</span>
                 </div>
-                <div class="uk-flex uk-flex-center reviews__slider" uk-slider="finite: true; center: true;">
-                    <div class="uk-slider-container uk-child-width-1-1">
-                        <ul class="uk-slider-items uk-child-width-1-1">
-                            <li>
-                                <div class="uk-card uk-card-body review">
-                                    <div class="review__head uk-flex uk-flex-between uk-flex-middle">
-                                        <div class="review__info">
-                                            <span class="review__name">Виктория</span>
-                                            <img src="./img/rating.png" alt="Рейтинг" class="review__rating">
-                                        </div>
-                                        <div class="review__body">
-                                            <p class="uk-text">Отличная клиника! Теперь буду ходить только сюда, наконец-то я нашла "свою" стоматологию. Цены здесь средние, а качество оборудования, материалов и само отношение персонала на высоте!</p>
-                                        </div>
-                                    </div>
-                                    <hr>
-                                    <div class="review__bottom uk-flex uk-flex-between uk-flex-middle">
-                                        <div class="review__info">
-                                            <span class="review__name">Оказание услуги:</span>
-                                            <span class="uk-text uk-text-small">Лечение кариеса</span>
-                                        </div>
-                                        <div class="review__controls uk-flex uk-flex-middle">
-                                            <div class="review__buttons">
-                                                <a href="#" class="slider-button slider-prev" uk-slider-item="previous"></a>
-                                                <a href="#" class="slider-button slider-next" uk-slider-item="next"></a>
-                                            </div>
-                                            <span class="slider__pagination"><span class="slider__pagination-active">1</span>/<span class="slider__pagination-total">8</span></span>
+                <div class="reviews__slider js-reviews-swiper">
+                    <div class="swiper-wrapper">
+                        <div class="reviews__slide swiper-slide">
+                            <div class="review-item">
+                                <div class="review-item__head">
+                                    <img src="./img/review-avatar.png" alt="Аватарка" class="review-item__avatar">
+                                    <div class="review-item__title">
+                                        <span class="review-item__name uk-text-large">Виктория</span>
+                                        <!-- .review__rating_3-5  задает количество звездочек с шагом 0.5 от 0 до 5. В данном случае рейтинг будет 3.5 -->
+                                        <div class="review__rating review__rating_3-5"> 
+                                            <span class="review__stars"></span>
                                         </div>
                                     </div>
                                 </div>
-                            </li>
-                            <li>
-                                <div class="uk-card uk-card-body review">
-                                    <div class="review__head uk-flex uk-flex-between uk-flex-middle">
-                                        <div class="review__info">
-                                            <span class="review__name">Виктория</span>
-                                            <img src="./img/rating.png" alt="Рейтинг" class="review__rating">
-                                        </div>
-                                        <div class="review__body">
-                                            <p class="uk-text">Отличная клиника! Теперь буду ходить только сюда, наконец-то я нашла "свою" стоматологию. Цены здесь средние, а качество оборудования, материалов и само отношение персонала на высоте!</p>
-                                        </div>
-                                    </div>
-                                    <hr>
-                                    <div class="review__bottom uk-flex uk-flex-between uk-flex-middle">
-                                        <div class="review__info">
-                                            <span class="review__name">Оказание услуги:</span>
-                                            <span class="uk-text uk-text-small">Лечение кариеса</span>
-                                        </div>
-                                        <div class="review__controls uk-flex uk-flex-middle">
-                                            <div class="review__buttons">
-                                                <a href="#" class="slider-button slider-prev" uk-slider-item="previous"></a>
-                                                <a href="#" class="slider-button slider-next" uk-slider-item="next"></a>
-                                            </div>
-                                            <span class="slider__pagination"><span class="slider__pagination-active">1</span>/<span class="slider__pagination-total">8</span></span>
+                                <div class="review-item__body">
+                                    <p class="review-item__text uk-text-small">Отличная клиника! Качество оборудования, материалов и само отношение персонала на высоте!</p>
+                                    <time class="uk-text-small" datetime="21.02.2021">21.02.2021</time>
+                                </div>
+                                <div class="review-item__footer">
+                                    <img src="./img/review-example.png" class="review-item__example" alt="Фото в отзыве">
+                                    <img src="./img/review-example.png" class="review-item__example" alt="Фото в отзыве">
+                                </div>
+                            </div>
+                            <div class="review-item">
+                                <div class="review-item__head">
+                                    <img src="./img/review-avatar.png" alt="Аватарка" class="review-item__avatar">
+                                    <div class="review-item__title">
+                                        <span class="review-item__name uk-text-large">Виктория</span>
+                                        <!-- .review__rating_3-5  задает количество звездочек с шагом 0.5 от 0 до 5. В данном случае рейтинг будет 3.5 -->
+                                        <div class="review__rating review__rating_3-5"> 
+                                            <span class="review__stars"></span>
                                         </div>
                                     </div>
                                 </div>
-                            </li>
-                            <li>
-                                <div class="uk-card uk-card-body review">
-                                    <div class="review__head uk-flex uk-flex-between uk-flex-middle">
-                                        <div class="review__info">
-                                            <span class="review__name">Виктория</span>
-                                            <img src="./img/rating.png" alt="Рейтинг" class="review__rating">
-                                        </div>
-                                        <div class="review__body">
-                                            <p class="uk-text">Отличная клиника! Теперь буду ходить только сюда, наконец-то я нашла "свою" стоматологию. Цены здесь средние, а качество оборудования, материалов и само отношение персонала на высоте!</p>
-                                        </div>
-                                    </div>
-                                    <hr>
-                                    <div class="review__bottom uk-flex uk-flex-between uk-flex-middle">
-                                        <div class="review__info">
-                                            <span class="review__name">Оказание услуги:</span>
-                                            <span class="uk-text uk-text-small">Лечение кариеса</span>
-                                        </div>
-                                        <div class="review__controls uk-flex uk-flex-middle">
-                                            <div class="review__buttons">
-                                                <a href="#" class="slider-button slider-prev" uk-slider-item="previous"></a>
-                                                <a href="#" class="slider-button slider-next" uk-slider-item="next"></a>
-                                            </div>
-                                            <span class="slider__pagination"><span class="slider__pagination-active">1</span>/<span class="slider__pagination-total">8</span></span>
+                                <div class="review-item__body">
+                                    <p class="review-item__text uk-text-small">Отличная клиника! Теперь буду ходить только сюда, наконец-то я нашла "свою" стоматологию. Цены здесь средние, а качество оборудования, материалов и само отношение персонала на высоте!</p>
+                                </div>
+                                <div class="review-item__footer uk-text-meta">
+                                    <a href="#" class="review-item__link uk-text-meta">Читать полностью</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reviews__slide swiper-slide">
+                            <div class="review-item">
+                                <div class="review-item__head">
+                                    <img src="./img/review-avatar.png" alt="Аватарка" class="review-item__avatar">
+                                    <div class="review-item__title">
+                                        <span class="review-item__name uk-text-large">Виктория</span>
+                                        <!-- .review__rating_3-5  задает количество звездочек с шагом 0.5 от 0 до 5. В данном случае рейтинг будет 3.5 -->
+                                        <div class="review__rating review__rating_3-5"> 
+                                            <span class="review__stars"></span>
                                         </div>
                                     </div>
                                 </div>
-                            </li>
-                            <li>
-                                <div class="uk-card uk-card-body review">
-                                    <div class="review__head uk-flex uk-flex-between uk-flex-middle">
-                                        <div class="review__info">
-                                            <span class="review__name">Виктория</span>
-                                            <img src="./img/rating.png" alt="Рейтинг" class="review__rating">
-                                        </div>
-                                        <div class="review__body">
-                                            <p class="uk-text">Отличная клиника! Теперь буду ходить только сюда, наконец-то я нашла "свою" стоматологию. Цены здесь средние, а качество оборудования, материалов и само отношение персонала на высоте!</p>
-                                        </div>
-                                    </div>
-                                    <hr>
-                                    <div class="review__bottom uk-flex uk-flex-between uk-flex-middle">
-                                        <div class="review__info">
-                                            <span class="review__name">Оказание услуги:</span>
-                                            <span class="uk-text uk-text-small">Лечение кариеса</span>
-                                        </div>
-                                        <div class="review__controls uk-flex uk-flex-middle">
-                                            <div class="review__buttons">
-                                                <a href="#" class="slider-button slider-prev" uk-slider-item="previous"></a>
-                                                <a href="#" class="slider-button slider-next" uk-slider-item="next"></a>
-                                            </div>
-                                            <span class="slider__pagination"><span class="slider__pagination-active">1</span>/<span class="slider__pagination-total">8</span></span>
+                                <div class="review-item__body">
+                                    <p class="review-item__text uk-text-small">Отличная клиника! Теперь буду ходить только сюда, наконец-то я нашла "свою" стоматологию. Цены здесь средние, а качество оборудования, материалов и само отношение персонала на высоте!</p>
+                                    <time class="uk-text-small" datetime="21.02.2021">21.02.2021</time>
+                                </div>
+                            </div>
+                            <div class="review-item">
+                                <div class="review-item__head">
+                                    <img src="./img/review-avatar.png" alt="Аватарка" class="review-item__avatar">
+                                    <div class="review-item__title">
+                                        <span class="review-item__name uk-text-large">Виктория</span>
+                                        <!-- .review__rating_3-5  задает количество звездочек с шагом 0.5 от 0 до 5. В данном случае рейтинг будет 3.5 -->
+                                        <div class="review__rating review__rating_3-5"> 
+                                            <span class="review__stars"></span>
                                         </div>
                                     </div>
                                 </div>
-                            </li>
-                            <li>
-                                <div class="uk-card uk-card-body review">
-                                    <div class="review__head uk-flex uk-flex-between uk-flex-middle">
-                                        <div class="review__info">
-                                            <span class="review__name">Виктория</span>
-                                            <img src="./img/rating.png" alt="Рейтинг" class="review__rating">
-                                        </div>
-                                        <div class="review__body">
-                                            <p class="uk-text">Отличная клиника! Теперь буду ходить только сюда, наконец-то я нашла "свою" стоматологию. Цены здесь средние, а качество оборудования, материалов и само отношение персонала на высоте!</p>
-                                        </div>
-                                    </div>
-                                    <hr>
-                                    <div class="review__bottom uk-flex uk-flex-between uk-flex-middle">
-                                        <div class="review__info">
-                                            <span class="review__name">Оказание услуги:</span>
-                                            <span class="uk-text uk-text-small">Лечение кариеса</span>
-                                        </div>
-                                        <div class="review__controls uk-flex uk-flex-middle">
-                                            <div class="review__buttons">
-                                                <a href="#" class="slider-button slider-prev" uk-slider-item="previous"></a>
-                                                <a href="#" class="slider-button slider-next" uk-slider-item="next"></a>
-                                            </div>
-                                            <span class="slider__pagination"><span class="slider__pagination-active">1</span>/<span class="slider__pagination-total">8</span></span>
+                                <div class="review-item__body">
+                                    <p class="review-item__text uk-text-small">Отличная клиника! Теперь буду ходить только сюда, наконец-то я нашла "свою" стоматологию. Цены здесь средние, а качество оборудования, материалов и само отношение персонала на высоте!</p>
+                                    <time class="uk-text-small" datetime="21.02.2021">21.02.2021</time>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reviews__slide swiper-slide">
+                            <div class="review-item">
+                                <div class="review-item__head">
+                                    <img src="./img/review-avatar.png" alt="Аватарка" class="review-item__avatar">
+                                    <div class="review-item__title">
+                                        <span class="review-item__name uk-text-large">Виктория</span>
+                                        <!-- .review__rating_3-5  задает количество звездочек с шагом 0.5 от 0 до 5. В данном случае рейтинг будет 3.5 -->
+                                        <div class="review__rating review__rating_3-5"> 
+                                            <span class="review__stars"></span>
                                         </div>
                                     </div>
                                 </div>
-                            </li>
-                        </ul>
+                                <div class="review-item__body">
+                                    <p class="review-item__text uk-text-small">Отличная клиника! Теперь буду ходить только сюда, наконец-то я нашла "свою" стоматологию. Цены здесь средние, а качество оборудования, материалов и само отношение персонала на высоте!</p>
+                                    <time class="uk-text-small" datetime="21.02.2021">21.02.2021</time>
+                                </div>
+                            </div>
+                            <div class="review-item">
+                                <div class="review-item__head">
+                                    <img src="./img/review-avatar.png" alt="Аватарка" class="review-item__avatar">
+                                    <div class="review-item__title">
+                                        <span class="review-item__name uk-text-large">Виктория</span>
+                                        <!-- .review__rating_3-5  задает количество звездочек с шагом 0.5 от 0 до 5. В данном случае рейтинг будет 3.5 -->
+                                        <div class="review__rating review__rating_3-5"> 
+                                            <span class="review__stars"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="review-item__body">
+                                    <p class="review-item__text uk-text-small">Отличная клиника! Теперь буду ходить только сюда, наконец-то я нашла "свою" стоматологию. Цены здесь средние, а качество оборудования, материалов и само отношение персонала на высоте!</p>
+                                    <time class="uk-text-small" datetime="21.02.2021">21.02.2021</time>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reviews__slide swiper-slide">
+                            <div class="review-item">
+                                <div class="review-item__head">
+                                    <img src="./img/review-avatar.png" alt="Аватарка" class="review-item__avatar">
+                                    <div class="review-item__title">
+                                        <span class="review-item__name uk-text-large">Виктория</span>
+                                        <!-- .review__rating_3-5  задает количество звездочек с шагом 0.5 от 0 до 5. В данном случае рейтинг будет 3.5 -->
+                                        <div class="review__rating review__rating_3-5"> 
+                                            <span class="review__stars"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="review-item__body">
+                                    <p class="review-item__text uk-text-small">Отличная клиника! Теперь буду ходить только сюда, наконец-то я нашла "свою" стоматологию. Цены здесь средние, а качество оборудования, материалов и само отношение персонала на высоте!</p>
+                                    <time class="uk-text-small" datetime="21.02.2021">21.02.2021</time>
+                                </div>
+                            </div>
+                            <div class="review-item">
+                                <div class="review-item__head">
+                                    <img src="./img/review-avatar.png" alt="Аватарка" class="review-item__avatar">
+                                    <div class="review-item__title">
+                                        <span class="review-item__name uk-text-large">Виктория</span>
+                                        <!-- .review__rating_3-5  задает количество звездочек с шагом 0.5 от 0 до 5. В данном случае рейтинг будет 3.5 -->
+                                        <div class="review__rating review__rating_3-5"> 
+                                            <span class="review__stars"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="review-item__body">
+                                    <p class="review-item__text uk-text-small">Отличная клиника! Теперь буду ходить только сюда, наконец-то я нашла "свою" стоматологию. Цены здесь средние, а качество оборудования, материалов и само отношение персонала на высоте!</p>
+                                    <time class="uk-text-small" datetime="21.02.2021">21.02.2021</time>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reviews__slide swiper-slide">
+                            <div class="review-item">
+                                <div class="review-item__head">
+                                    <img src="./img/review-avatar.png" alt="Аватарка" class="review-item__avatar">
+                                    <div class="review-item__title">
+                                        <span class="review-item__name uk-text-large">Виктория</span>
+                                        <!-- .review__rating_3-5  задает количество звездочек с шагом 0.5 от 0 до 5. В данном случае рейтинг будет 3.5 -->
+                                        <div class="review__rating review__rating_3-5"> 
+                                            <span class="review__stars"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="review-item__body">
+                                    <p class="review-item__text uk-text-small">Отличная клиника! Теперь буду ходить только сюда, наконец-то я нашла "свою" стоматологию. Цены здесь средние, а качество оборудования, материалов и само отношение персонала на высоте!</p>
+                                    <time class="uk-text-small" datetime="21.02.2021">21.02.2021</time>
+                                </div>
+                            </div>
+                            <div class="review-item">
+                                <div class="review-item__head">
+                                    <img src="./img/review-avatar.png" alt="Аватарка" class="review-item__avatar">
+                                    <div class="review-item__title">
+                                        <span class="review-item__name uk-text-large">Виктория</span>
+                                        <!-- .review__rating_3-5  задает количество звездочек с шагом 0.5 от 0 до 5. В данном случае рейтинг будет 3.5 -->
+                                        <div class="review__rating review__rating_3-5"> 
+                                            <span class="review__stars"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="review-item__body">
+                                    <p class="review-item__text uk-text-small">Отличная клиника! Теперь буду ходить только сюда, наконец-то я нашла "свою" стоматологию. Цены здесь средние, а качество оборудования, материалов и само отношение персонала на высоте!</p>
+                                    <time class="uk-text-small" datetime="21.02.2021">21.02.2021</time>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reviews__slide swiper-slide">
+                            <div class="review-item">
+                                <div class="review-item__head">
+                                    <img src="./img/review-avatar.png" alt="Аватарка" class="review-item__avatar">
+                                    <div class="review-item__title">
+                                        <span class="review-item__name uk-text-large">Виктория</span>
+                                        <!-- .review__rating_3-5  задает количество звездочек с шагом 0.5 от 0 до 5. В данном случае рейтинг будет 3.5 -->
+                                        <div class="review__rating review__rating_3-5"> 
+                                            <span class="review__stars"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="review-item__body">
+                                    <p class="review-item__text uk-text-small">Отличная клиника! Теперь буду ходить только сюда, наконец-то я нашла "свою" стоматологию. Цены здесь средние, а качество оборудования, материалов и само отношение персонала на высоте!</p>
+                                    <time class="uk-text-small" datetime="21.02.2021">21.02.2021</time>
+                                </div>
+                            </div>
+                            <div class="review-item">
+                                <div class="review-item__head">
+                                    <img src="./img/review-avatar.png" alt="Аватарка" class="review-item__avatar">
+                                    <div class="review-item__title">
+                                        <span class="review-item__name uk-text-large">Виктория</span>
+                                        <!-- .review__rating_3-5  задает количество звездочек с шагом 0.5 от 0 до 5. В данном случае рейтинг будет 3.5 -->
+                                        <div class="review__rating review__rating_3-5"> 
+                                            <span class="review__stars"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="review-item__body">
+                                    <p class="review-item__text uk-text-small">Отличная клиника! Теперь буду ходить только сюда, наконец-то я нашла "свою" стоматологию. Цены здесь средние, а качество оборудования, материалов и само отношение персонала на высоте!</p>
+                                    <time class="uk-text-small" datetime="21.02.2021">21.02.2021</time>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </section>
-        <section class="doctors uk-position-relative uk-margin-xlarge-bottom">
-            <div class="uk-flex uk-flex-bottom uk-position-absolute doctors__bg">
-                <div class="doctors__bg_green"></div>
-                <div class="doctors__bg_gray"></div>
-            </div>
-            <div class="uk-container">
-                <span class="uk-h2">Наши врачи</span>
-                <div class="uk-slider-container" uk-slider="finite: true">
-                    <ul class="uk-slider-items uk-child-width-1-1 doctors__slider">
-                        <li class="uk-position-relative uk-flex uk-flex-bottom uk-child-width-1-2 doctor">
-                            <div class="uk-flex uk-flex-column uk-flex-left uk-flex-between doctor__data">
-                                <span class="uk-text-bold uk-position-relative doctor__name">Дубина <br>Иван Владимирович</span>
-                                <div class="doctor__bottom">
-                                    <span class="uk-text doctor__specialty">врач-стоматолог-ортопед</span>
-                                    <a href="#" class="green-link doctor__link">Подробнее</a>
-                                </div>
-                            </div>
-                            <div class="uk-flex uk-flex-center doctor__img">
-                                <img src="./img/doctor1.png" alt="Доктор">
-                            </div>
-                            <div class="uk-position-absolute uk-flex uk-flex-between uk-flex-middle doctor__control">
-                                <div class="doctor__buttons">
-                                    <a href="#" class="slider-button slider-prev" uk-slider-item="previous"></a>
-                                    <a href="#" class="slider-button slider-next" uk-slider-item="next"></a>
-                                </div>
-                                <span class="slider__pagination"><span class="slider__pagination-active">1</span>/<span class="slider__pagination-total">8</span></span>
-                            </div>
-                        </li>
-                        <li class="uk-position-relative uk-flex uk-flex-bottom uk-child-width-1-2 doctor">
-                            <div class="uk-flex uk-flex-column uk-flex-between doctor__data">
-                                <span class="uk-text-bold uk-position-relative doctor__name">Дубина <br>Иван Владимирович</span>
-                                <span class="uk-text doctor__specialty">врач-стоматолог-ортопед</span>
-                                <a href="#" class="green-link doctor__link">Подробнее</a>
-                            </div>
-                            <div class="uk-flex uk-flex-center doctor__img">
-                                <img src="./img/doctor1.png" alt="Доктор">
-                            </div>
-                            <div class="uk-position-absolute uk-flex uk-flex-between uk-flex-middle doctor__control">
-                                <div class="doctor__buttons">
-                                    <a href="#" class="slider-button slider-prev" uk-slider-item="previous"></a>
-                                    <a href="#" class="slider-button slider-next" uk-slider-item="next"></a>
-                                </div>
-                                <span class="slider__pagination"><span class="slider__pagination-active">1</span>/<span class="slider__pagination-total">8</span></span>
-                            </div>
-                        </li>
-                        <li class="uk-position-relative uk-flex uk-flex-bottom uk-child-width-1-2 doctor">
-                            <div class="uk-flex uk-flex-column uk-flex-between doctor__data">
-                                <span class="uk-text-bold uk-position-relative doctor__name">Дубина <br>Иван Владимирович</span>
-                                <span class="uk-text doctor__specialty">врач-стоматолог-ортопед</span>
-                                <a href="#" class="green-link doctor__link">Подробнее</a>
-                            </div>
-                            <div class="uk-flex uk-flex-center doctor__img">
-                                <img src="./img/doctor1.png" alt="Доктор">
-                            </div>
-                            <div class="uk-position-absolute uk-flex uk-flex-between uk-flex-middle doctor__control">
-                                <div class="doctor__buttons">
-                                    <a href="#" class="slider-button slider-prev" uk-slider-item="previous"></a>
-                                    <a href="#" class="slider-button slider-next" uk-slider-item="next"></a>
-                                </div>
-                                <span class="slider__pagination"><span class="slider__pagination-active">1</span>/<span class="slider__pagination-total">8</span></span>
-                            </div>
-                        </li>
-                    </ul>
+                    <div class="uk-width-1-1 uk-flex uk-flex-middle uk-flex-center">
+                        <div class="reviews__pagination">
+                            <button class="button reviews__control reviews__control-prev"></button>
+                            <ul class="uk-pagination swiper-pagination" uk-margin>
+                                <li class="reviews__page uk-active"><span>1</span></li>
+                                <li class="reviews__page"><a href="./faq/page/2.html">2</a></li>
+                                <li class="reviews__page"><a href="./faq/page/3.html">3</a></li>
+                                <li class="reviews__page"><a href="./faq/page/4.html">4</a></li>
+                                <li class="reviews__page"><a href="./faq/page/5.html">5</a></li>
+                            </ul>
+                            <button class="button reviews__control reviews__control-next"></button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
         <section class="agit">
             <div class="uk-container">
-                <div class="uk-flex uk-flex-between uk-flex-middle">
-                    <p class="uk-text-bold uk-text-large">Запишитесь на прием к врачу в «Дентко» и получите план лечения и протезирования ваших зубов!</p>
-                    <button class="uk-button uk-button-default button popup-request-open">Записаться на прием</button>
+                <div class="uk-flex uk-flex-between uk-flex-middle uk-flex-column">
+                    <p class="uk-text-bold uk-text-center uk-text-large">Запишитесь на прием к врачу и получите план лечения и протезирования ваших зубов!</p>
+                    <button class="button button_white button_big popup-request-open">Записаться на прием</button>
                 </div>
             </div>
         </section>
@@ -778,7 +762,11 @@
                     <span class="uk-text uk-text-meta">© 1997 - 2020. Медицинский центр <br>"Дентко".</span>
                 </div>
                 <div class="uk-flex uk-flex-middle uk-flex-column footer__bottom-col">
-                    <span class="uk-text uk-text-meta">Рейтинг Медицинского центра "Дентко" - <img src="./img/rating.png"><a href="/dentko/reviews/reviews.html" class="footer__2reviews"> 4,9 балла (10 голосов)</a></span>
+                    <span class="uk-text uk-text-meta">Рейтинг Медицинского центра "Дентко" - 
+                    <!-- .review__rating_3-5  задает количество звездочек с шагом 0.5 от 0 до 5. В данном случае рейтинг будет 3.5 -->
+                    <span class="review__rating review__rating_dib review__rating_3-5"> 
+                        <span class="review__stars"></span>
+                    </span> 4,9 балла (10 голосов)</a></span>
                     <a href="#" class="green-link uk-link">Продвижение сайта - hata.by</a>
                 </div>
                 <div class="footer__bottom-col">
@@ -806,7 +794,7 @@
                     <div class="uk-input form__div">
                         <input class="uk-input" type="email" name="mail" placeholder="Ваш e-mail">
                         <div class="popup__info">
-                            <img src="/dentko/img/popup-info.svg" alt="" class="popup__info-img">
+                            <img src="./img/popup-info.svg" alt="" class="popup__info-img">
                             <div class="popup__info-card">
                                 <p>Email служит для оповещения об ответе, он не будет опубликован на сайте.</p>
                                 <p>Не является обязательным полем для заполнения</p>
@@ -819,7 +807,7 @@
                     <textarea class="uk-input" rows="2" name="comment" placeholder="Что вас беспокоит?"></textarea>
                 </div>
                 <div class="uk-flex uk-flex-between uk-width-1-1 popup__row">
-                    <button type="submit" class="uk-button popup__submit">Записаться на прием <img src="/dentko/img/inline-arrow-w.svg"></button>
+                    <button type="submit" class="uk-button popup__submit">Записаться на прием <img src="./img/inline-arrow-w.svg"></button>
                 </div>
             </form>
         </div>
@@ -849,6 +837,42 @@
             </form>
         </div>
     </div>
+    <div class="popup__wrapper popup-request">
+        <div class="uk-position-relative popup popup_request">
+            <span class="uk-position-absolute popup__close popup-close"></span>
+            <form class="popup__body">
+                <span class="uk-h1">Записаться на прием</span>
+                <p class="uk-text uk-text-small">Наш администратор свяжется с Вами для корректировки времени.</p>
+                <div class="uk-flex uk-flex-between uk-child-width-1-3 popup__row">
+                    <div class="uk-input form__div">
+                        <input class="uk-input" type="text" name="name" placeholder="Ваше имя">
+                        <span class="form__err">В формате А-Я,а-я и минимум 2 символа</span>
+                    </div>
+                    <div class="uk-input form__div">
+                        <input class="uk-input" type="tel" name="tel" placeholder="Ваш телефон">
+                        <span class="form__err">Введите номер в международном формате</span>
+                    </div>
+                    <div class="uk-input form__div">
+                        <input class="uk-input" type="email" name="mail" placeholder="Ваш e-mail">
+                        <div class="popup__info">
+                            <img src="./img/popup-info.svg" alt="" class="popup__info-img">
+                            <div class="popup__info-card">
+                                <p>Email служит для оповещения об ответе, он не будет опубликован на сайте.</p>
+                                <p>Не является обязательным полем для заполнения</p>
+                            </div>
+                        </div>
+                        <span class="form__err">Неверный формат E-mail адреса</span>
+                    </div>
+                </div>
+                <div class="popup__row">
+                    <textarea class="uk-input" rows="2" name="comment" placeholder="Что вас беспокоит?"></textarea>
+                </div>
+                <div class="uk-flex uk-flex-between uk-width-1-1 popup__row">
+                    <button type="submit" class="uk-button popup__submit">Записаться на прием <img src="./img/inline-arrow-w.svg"></button>
+                </div>
+            </form>
+        </div>
+    </div>
     <div class="popup__wrapper popup-sucsess">
         <div class="uk-position-relative popup popup_sucsess">
             <span class="uk-position-absolute popup__close popup-close"></span>
@@ -867,6 +891,7 @@
             </div>
         </div>
     </div>
+
     <script src="./js/swiper-bundle.min.js"></script>
     <script src="./js/main.js"></script>
 </body>
