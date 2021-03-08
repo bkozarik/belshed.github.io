@@ -14,6 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
     let mobileSwiperSW = document.querySelector('.faqs__themes');
     const pagePath = window.location.pathname;
 
+    let portfoloiSwiper;
+
     const isExists = element => {
         if(typeof(element) == 'string'){
             return document.querySelector(element) ? true : false;
@@ -207,6 +209,98 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             catch{}
         }
+
+        if(window.innerWidth <= 960){
+            if(isExists('.js-gallery-swiper') && !document.querySelector('.js-gallery-swiper').classList.contains('swiper-container-initialized')){
+                portfoloiSwiper = new Swiper('.js-gallery-swiper', {
+                    speed: 600,
+                    spaceBetween: 20,
+                    navigation: {
+                        nextEl: '.gallery .slider-next',
+                        prevEl: '.gallery .slider-prev',
+                    },
+                    pagination: {
+                        type: 'bullets',
+                        el: '.gallery__pagination',
+                        clickable: true,
+                    },
+                    breakpoints: {
+                        530: {
+                            slidesPerView: 2,
+                        },
+                        300: {
+                            slidesPerView: 1,
+                        },
+                    }
+                });
+            }
+        }
+        else{
+            if(isExists('.js-gallery-swiper') && document.querySelector('.js-gallery-swiper').classList.contains('swiper-container-initialized')){
+                document.querySelector('.js-gallery-swiper').swiper.destroy();
+            }
+        }
+
+        if(window.innerWidth <= 700){
+            if(isExists('.js-portfolio-swiper') && !document.querySelector('.js-portfolio-swiper').classList.contains('swiper-container-initialized')){
+                portfoloiSwiper = new Swiper('.js-portfolio-swiper', {
+                    speed: 600,
+                    spaceBetween: 20,
+                    navigation: {
+                        nextEl: '.portfolio .slider-next',
+                        prevEl: '.portfolio .slider-prev',
+                    },
+                    pagination: {
+                        type: 'bullets',
+                        el: '.portfolio__pagination',
+                        clickable: true,
+                    },
+                    breakpoints: {
+                        530: {
+                            slidesPerView: 2,
+                            slidesPerGroup: 2,
+                        },
+                        300: {
+                            slidesPerView: 1,
+                        },
+                    }
+                });
+            }
+            
+            if(isExists('.js-more-swiper') && !document.querySelector('.js-more-swiper').classList.contains('swiper-container-initialized')){
+                portfoloiSwiper = new Swiper('.js-more-swiper', {
+                    speed: 600,
+                    spaceBetween: 20,
+                    navigation: {
+                        nextEl: '.more .slider-next',
+                        prevEl: '.more .slider-prev',
+                    },
+                    pagination: {
+                        type: 'bullets',
+                        el: '.more__pagination',
+                        clickable: true,
+                    },
+                    breakpoints: {
+                        530: {
+                            slidesPerView: 2,
+                            slidesPerGroup: 2,
+                        },
+                        300: {
+                            slidesPerView: 1,
+                        },
+                    }
+                });
+            }
+        }
+        else{
+            if(isExists('.js-portfolio-swiper') && document.querySelector('.js-portfolio-swiper').classList.contains('swiper-container-initialized')){
+                document.querySelector('.js-portfolio-swiper').swiper.destroy();
+            }
+            
+            if(isExists('.js-more-swiper') && document.querySelector('.js-more-swiper').classList.contains('swiper-container-initialized')){
+                document.querySelector('.js-more-swiper').swiper.destroy();
+            }
+        }
     }
 
     const scrollHandler = () => {
@@ -226,6 +320,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const mobileCheck = () => {
+        addServices();
+        mobileSwiperCheck();
+        
         let headerItems = document.querySelectorAll('.header__item');
 
         if(window.innerWidth <= 1100){
@@ -243,7 +340,6 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
         
-        addServices();
         
         if(window.innerWidth <= 990){
             let mobileMenuContainer = document.querySelector('.mobile-menu');
@@ -287,8 +383,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             catch{}
         }
-
-        mobileSwiperCheck();
     }
 
     const addServices = () => {
@@ -452,8 +546,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if(isExists('.js-reviews-swiper')){
         new Swiper('.js-reviews-swiper', {
-            slidesPerGroup: 3,
-            spaceBetween: 30,
             watchSlidesVisibility: true,
             speed: 600,
             navigation: {
@@ -461,11 +553,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 prevEl: '.reviews__control-prev',
             },
             breakpoints: {
-                900: {
+                1060: {
+                    spaceBetween: 30,
                     slidesPerView: 3,
+                    slidesPerColumn: 2,
                 },
                 640: {
+                    spaceBetween: 20,
                     slidesPerView: 2,
+                    slidesPerColumn: 1,
                 },
                 200: {
                     slidesPerView: 1,

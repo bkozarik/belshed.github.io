@@ -1,3 +1,8 @@
+$green_gradient: linear-gradient(334.12deg, #25A874 13.8%, #33BD86 86.73%)
+$green: #25A874
+$yellow: #FFB800
+$soft_blue: #ECF2F9
+    
 @media screen and ( min-width: 1160px )
     .faqs
         .swiper-wrapper
@@ -38,7 +43,7 @@
             flex-wrap: wrap
             justify-content: space-around
         &__article
-            margin: 20px !important
+            margin: 20px
             min-width: 270px
 
     .team
@@ -118,17 +123,17 @@
             margin-top: 30px
         &__wrap
             flex-wrap: wrap
-            
+    
+
+
     .service-page
         &__wrap
             flex-direction: column
         &__aside + &__content
             margin-left: 0
-            margin-top: 30px 
+            margin-top: 0px 
         &__aside
-            width: 100%
-            max-width: 500px
-            margin: 0 auto
+            display: none
 
     .footer
         &__wrap
@@ -172,8 +177,18 @@
         &__page
             padding: 30px
 
+    .banner
+        background-size: contain
+        background-position: center top
+        padding-bottom: 0
+        padding-top: 50% !important
+        .uk-h1, .uk-h2, .uk-h3
+            font-size: 36px
+        &__text
+            line-height: 28px
+
     .benefits
-        margin-top: -104px
+        display: none
 
     .benefit
         &__header
@@ -188,6 +203,17 @@
                 width: 100%
         .uk-slider-items
             margin-top: 20px
+        .uk-grid>*
+            padding-left: 15px
+            margin-top: 15px
+
+    .services-item
+        svg
+            margin-bottom: 15px
+        &__title
+            font-size: 16px
+        &__text
+            display: none
 
     .portfolio
         padding-top: 60px
@@ -195,7 +221,7 @@
             flex-wrap: wrap
             justify-content: space-around
             .uk-card
-                margin: 20px !important
+                margin: 20px
 
     .text
         .uk-h1
@@ -243,12 +269,6 @@
     &__img-wrap_sticky
         position: relative
         top: 0
-    .gallery
-        &__photos
-            flex-direction: column
-            img + img
-                margin-left: 0
-                margin-top: 30px
 
     .text, .about
         h2.uk-h1
@@ -315,6 +335,10 @@
         &__body
             padding: 30px 20px
 
+@media screen and ( max-width: 1060px )
+    .review-item
+        height: 100%
+
 @media screen and ( max-width: 860px )
     .appointment
         display: block
@@ -338,6 +362,20 @@
         &__wrap
             margin-top: 60px
 
+    .reviews
+        &__pagination
+        .reviews__page
+            height: 10px !important
+            width: 10px !important
+            background-color: $soft_blue
+            &.swiper-pagination-bullet-active
+                box-shadow: 0px 0px 15px rgba(20, 43, 61, .1)
+                background-color: $green
+            span
+                display: none
+        &__control
+            display: none
+
     .review
         &__info
             margin-right: 50px
@@ -351,6 +389,7 @@
             display: block
         &__side
             padding-top: 0
+            padding-right: 0
             padding-bottom: 60px
             width: 100%
             & + &
@@ -477,6 +516,84 @@
         &__item
             padding-bottom: 25%
 
+@media screen and ( min-width: 960px )
+    .gallery
+        &__pagination
+            display: none
+        &__photos
+            & > *
+                width: auto !important
+                flex-shrink: 1
+
+@media screen and ( max-width: 960px )
+    .gallery
+        &__pagination
+            display: flex
+            justify-content: center
+            align-items: center
+            // transform: translateY(30px)
+        &__photos
+            margin-bottom: 40px
+            .uk-img
+                display: block
+                margin: 0 auto
+            & > *
+                max-width: none !important
+                margin: 0
+                &:not(:last-child)
+                    margin-right: 0px
+
+@media screen and ( min-width: 700px )
+    .more
+        .swiper-wrapper
+            margin-right: -30px
+            width: 100%
+            .swiper-slide
+                flex-shrink: 1
+        &__pagination
+            display: none
+
+    .portfolio
+        &__pagination
+            display: none
+        &__wrap
+            .swiper-slide
+                flex-shrink: 1
+
+@media screen and ( max-width: 701px )
+    .portfolio
+        &__pagination
+            display: flex
+            justify-content: center
+            align-items: center
+            transform: translateY(-30px)
+        &__wrap
+            justify-content: flex-start
+            flex-wrap: nowrap
+            margin-bottom: 70px !important
+            .uk-card
+                max-width: none !important
+                margin: 0
+            .uk-card + .uk-card
+                margin-left: 0px
+    
+    .more
+        &__pagination
+            display: flex
+            justify-content: center
+            align-items: center
+            transform: translateY(-30px)
+        &__articles
+            flex-wrap: nowrap !important
+            justify-content: flex-start
+            margin-bottom: 70px !important
+        &__article
+            max-width: none !important
+            margin: 0
+            min-width: auto !important
+        &__article + &__article
+                margin-left: 0px !important
+
 @media screen and ( max-width: 660px )
     h2.uk-h1, h2.uk-h2
         font-size: 28px
@@ -543,13 +660,6 @@
                 font-size: 14px
             dd
                 font-size: 12px
-
-    .portfolio
-        &__wrap
-            margin-left: -10px
-            margin-right: -10px
-        .uk-card
-            max-width: 320px
 
     .agit
         .uk-flex

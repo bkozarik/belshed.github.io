@@ -383,7 +383,7 @@
         <section class="services">
             <div class="uk-container">
                 <span class="section-title section-title_mb uk-h2">Наши услуги</span>
-                <div class="services__grid uk-child-width-1-4@l uk-child-width-1-3@m uk-child-width-1-2@s" uk-grid>
+                <div class="services__grid uk-child-width-1-4@l uk-child-width-1-3@m uk-child-width-1-2" uk-grid>
                     <div>
                         <div class="uk-flex uk-flex-column uk-flex-middle services__item services-item">
                             <svg width="61" height="60" viewBox="0 0 61 60" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -672,12 +672,12 @@
             </div>
         </section>
         <section class="portfolio">
-            <div class="uk-container">
+            <div class="uk-container js-portfolio-swiper">
                 <div class="uk-flex uk-flex-between uk-flex-middle portfolio__title">
                     <span class="uk-h2 uk-text-center uk-block">Улыбки наших пациентов</span>
                 </div>
-                <div class="uk-flex uk-margin-medium-bottom uk-flex-between uk-child-width-1-3@s uk-child-width-1-4@m portfolio__wrap">
-                    <div class="uk-card uk-card-default">
+                <div class="uk-flex swiper-wrapper uk-margin-medium-bottom uk-flex-between uk-child-width-1-3@s uk-child-width-1-4@m portfolio__wrap">
+                    <div class="swiper-slide uk-card uk-card-default">
                         <div class="uk-card-media-top">
                             <div class="uk-position-relative portfolio__img-wrap">
                                 <img class="portfolio__img" src="./img/portfolio1_1.png">
@@ -693,7 +693,7 @@
                             <p>Имплантация зубов, протезирование зубов</p>
                         </div>
                     </div>
-                    <div class="uk-card uk-card-default">
+                    <div class="swiper-slide uk-card uk-card-default">
                         <div class="uk-card-media-top">
                             <div class="uk-position-relative portfolio__img-wrap">
                                 <img class="portfolio__img" src="./img/portfolio2_1.png">
@@ -709,7 +709,7 @@
                             <p>Протезирование зубов</p>
                         </div>
                     </div>
-                    <div class="uk-card uk-card-default">
+                    <div class="swiper-slide uk-card uk-card-default">
                         <div class="uk-card-media-top">
                             <div class="uk-position-relative portfolio__img-wrap">
                                 <img class="portfolio__img" src="./img/portfolio3_1.png">
@@ -725,7 +725,7 @@
                             <p>Виниры, имплантация зубов, протезирование зубов</p>
                         </div>
                     </div>
-                    <div class="uk-card uk-card-default">
+                    <div class="swiper-slide uk-card uk-card-default">
                         <div class="uk-card-media-top">
                             <div class="uk-position-relative portfolio__img-wrap">
                                 <img class="portfolio__img" src="./img/portfolio4_1.png">
@@ -742,18 +742,19 @@
                         </div>
                     </div>
                 </div>
+                <div class="portfolio__pagination"></div>
                 <div class="uk-flex uk-flex-center uk-flex-middle">
                     <a href="#" class="button button_big button_green">Посмотреть все работы</a>
                 </div>
             </div>
         </section>
         <section class="more">
-            <div class="uk-container">
+            <div class="uk-container js-more-swiper">
                 <div class="uk-flex uk-flex-between uk-flex-middle portfolio__title">
                     <span class="uk-h2 uk-text-center uk-block">Блог</span>
                 </div>
-                <div class="uk-flex uk-margin-medium-bottom uk-flex-between uk-child-width-1-4 uk-margin-medium-top more__articles">
-                    <a href="#" class="uk-card uk-card-default uk-flex uk-flex-column more__article">
+                <div class="uk-flex swiper-wrapper uk-margin-medium-bottom uk-flex-between uk-child-width-1-4 uk-margin-medium-top more__articles">
+                    <a href="#" class="uk-card uk-card-default uk-flex uk-flex-column swiper-slide more__article">
                         <div class="uk-card-media-top">
                             <img class="more__img" src="./img/more1.png">
                         </div>
@@ -762,7 +763,7 @@
                             <p class="uk-margin-small-top">Пришеечный кариес: что такое, симптомы, как лечить - рекомендации медицинского центра Дентко!</p>
                         </div>
                     </a>
-                    <a href="#" class="uk-card uk-card-default uk-flex uk-flex-column more__article">
+                    <a href="#" class="uk-card uk-card-default uk-flex uk-flex-column swiper-slide more__article">
                         <div class="uk-card-media-top">
                             <img class="more__img" src="./img/more2.png">
                         </div>
@@ -771,7 +772,7 @@
                             <p class="uk-margin-small-top">Зубные протезы: что из себя представляют, разновидности, материалы изготовления, показания к установке - рассказывает медицинский центр Дентко!</p>
                         </div>
                     </a>
-                    <a href="#" class="uk-card uk-card-default uk-flex uk-flex-column more__article">
+                    <a href="#" class="uk-card uk-card-default uk-flex uk-flex-column swiper-slide more__article">
                         <div class="uk-card-media-top">
                             <img class="more__img" src="./img/more3.png">
                         </div>
@@ -780,7 +781,7 @@
                             <p class="uk-margin-small-top">Пародонтит: клинические симптомы, причины возникновения, рекомендации и лечение - рассказывает клиника Дентко!</p>
                         </div>
                     </a>
-                    <a href="#" class="uk-card uk-card-default uk-flex uk-flex-column more__article">
+                    <a href="#" class="uk-card uk-card-default uk-flex uk-flex-column swiper-slide more__article">
                         <div class="uk-card-media-top">
                             <img class="more__img" src="./img/more4.png">
                         </div>
@@ -790,6 +791,7 @@
                         </div>
                     </a>
                 </div>
+                <div class="more__pagination"></div>
                 <div class="uk-flex uk-flex-center uk-flex-middle">
                     <a href="./blog.html" class="button button_big button_green">Посмотреть все работы</a>
                 </div>
