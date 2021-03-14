@@ -1,0 +1,205 @@
+@import ./variables
+
+@media screen and ( max-width: 935px )
+    .shiseido-hero
+        padding-right: 10px
+        &__content
+            max-width: 375px
+        &__item
+            &:nth-child(2)
+                left: 50px
+            &:nth-child(3)
+                left: 20px
+
+    .shiseido-formula
+        &__img
+            max-width: 350px
+
+@media screen and ( max-width: 835px )
+    .shiseido-hero
+        &__item
+            &:nth-child(2)
+                max-width: 150px
+            &:nth-child(3)
+                max-width: 150px
+
+@media screen and ( max-width: 780px )
+    .shiseido-hero
+        &__bg
+            width: 107%
+            max-width: none
+        &__item
+            &:nth-child(2)
+                left: 20px
+            &:nth-child(3)
+                left: 0px
+
+@media screen and ( max-width: 720px )
+    .shiseido-shiseido
+        &__img
+            max-width: 50%
+            width: 100%
+            object-fit: cover
+        &__container
+            flex-shrink: 0
+            flex-grow: 1
+            min-width: 220px
+            max-width: 50%
+
+@media screen and ( max-width: 700px )
+    .shiseido-hero
+        &__content
+            max-width: 300px
+        &__bg
+            width: 122%
+            
+    .shiseido-formula
+        &__content
+            margin-bottom: 20px
+            width: 100% !important
+        &__img
+            max-width: 470px
+            object-fit: contain
+            width: 100%
+            margin-right: 0
+            margin-bottom: 55px
+            &_pa
+                position: static
+                max-width: none !important
+                object-fit: cover
+        &__wrap
+            padding: 0px 15px
+            flex-direction: column
+
+@media screen and ( max-width: 620px )
+
+    .shiseido-about
+        margin-bottom: 45px
+
+    .shiseido-text
+        font-size: 16px
+
+    .shiseido-section-title
+        font-size: 26px
+
+    .shiseido-video, .shiseido-formula
+        padding-bottom: 45px
+
+    .shiseido-hero
+        padding-top: 0
+        padding-right: 0
+        flex-direction: column-reverse
+        padding-bottom: 50px
+        &__wrap
+            display: flex
+            flex-direction: column
+            align-items: center
+            padding: 0px 10px 25px
+        &__bg
+            position: static
+            z-index: 0
+            width: 150%
+        &__new
+            display: none
+        &__text, &__title
+            text-align: center
+        &__title
+            font-size: 32px
+        &__text
+            font-size: 16px
+            margin-bottom: 20px
+        &__content
+            max-width: none
+        &__item
+            position: static
+            & + &
+                margin-top: 20px
+            &-title
+                text-align: center
+            &-text
+                text-align: center
+
+@media screen and ( max-width: 570px )
+
+    .shiseido-collection
+        padding-bottom: 70px
+
+    .shiseido-shiseido
+        padding-bottom: 50px
+        &__wrap
+            flex-direction: column
+        &__img, &__container
+            max-width: 100%
+
+@media screen and ( max-width: 530px )
+    .shiseido-together
+        &__catalog
+            flex-direction: column
+        &__item
+            & + &
+                margin-top: 40px
+
+@media screen and ( max-width: 485px )
+    .shiseido-header
+        padding: 25px 0px
+        &__wrap
+            justify-content: center
+        &__small-logo, &__fake
+            display: none
+
+@media screen and ( max-width: 420px )
+
+    .shiseido-together
+        padding: 0px 15px
+        &__item
+            align-items: stretch
+            &-name
+                font-size: 18px
+            &-link
+                max-width: 100%
+            &-img
+                max-height: 245px
+                width: auto
+                object-fit: contain
+        &__title
+            display: none
+        &__banner
+            margin-bottom: 23px
+
+    .shiseido-formula-item
+        &__head
+            margin-right: 20px
+        &__text, &__title
+            font-size: 16px
+            br
+                display: none
+
+    .shiseido-section-title
+        font-size: 22px
+        br
+            display: none
+
+    .shiseido-hero
+        padding-bottom: 45px
+        &__title
+            font-size: 22px
+        &__bg
+            position: relative
+            left: -70px
+            width: 220%
+
+@media screen and ( max-width: 400px )
+    .shiseido-formula-item
+        flex-direction: column
+        &__head
+            margin-right: 0
+            margin-bottom: 10px
+        &__text
+            text-align: center
+
+    .shiseido-formula
+        &__item
+            & + &
+                margin-top: 45px
+        .shiseido-video__small
+            text-align: center

@@ -1,0 +1,29 @@
+@import ./_variables
+
+.list
+    margin-bottom: 130px
+    &:last-child, &:only-child
+        margin-bottom: 0
+    &__head
+        display: flex
+        align-items: center
+        justify-content: space-between
+        margin-bottom: 50px
+    &__title
+        display: inline-block
+        font-weight: 400
+        font-size: 36px
+        position: relative
+        color: $app-black
+        &::after
+            content: ''
+            display: inline-block
+            position: absolute
+            height: 2px
+            width: 100%
+            bottom: 0
+            left: 0
+            background-color: currentColor
+    &__item
+        margin-bottom: 35px
+        

@@ -1,0 +1,86 @@
+@import ./_variables
+
+.task
+    width: 100%
+    position: relative
+    border: 2px solid $app-black
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: 40px 25px
+    background-color: $app-white
+    &__remove
+        width: 40px 
+        height: 40px
+        flex-shrink: 0
+        padding: 0
+        &::after, &::before
+            content: ''
+            display: inline-block
+            width: 35px
+            height: 2px
+            background-color: $app-black
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+        &::after
+            transform: translate(-50%, -50%) rotate(-45deg)
+        &::before
+            transform: translate(-50%, -50%) rotate(45deg)
+        &:hover
+            background-color: $app-red
+    &__head
+        display: flex
+    &__check
+        margin-right: 20px
+        cursor: pointer
+        &-input:checked + &-fake
+            background-color: $check-green
+            &::after
+                opacity: 1
+        &-input
+            height: 1px
+            width: 1px
+            position: absolute
+            visibility: hidden
+            opacity: 0
+        &-fake
+            background-color: #fff
+            @include trans(background-color)
+            display: inline-block
+            width: 40px
+            height: 40px
+            flex-shrink: 0
+            border-radius: 100%
+            border: 1px solid $app-black
+            position: relative
+            &::after
+                opacity: 0
+                @include trans(opacity)
+                content: ''
+                display: inline-block
+                position: absolute
+                top: 50%
+                left: 50%
+                transform: translate(-50%, -50%)
+                width: 21px
+                height: 16px
+                background-size: cover
+                background-repeat: no-repeat
+                background-position: center
+                background-image: url(../icons/success.svg)
+    &__name
+        font-size: 36px
+        line-height: 36px
+        font-weight: 400
+    &::after
+        content: ''
+        position: absolute
+        top: 11px
+        left: 10px
+        width: 100%
+        height: 100%
+        z-index: -1
+        background-color: #fff
+        border: 2px solid $app-black

@@ -1,0 +1,132 @@
+@import ./variables
+
+@media screen and ( max-width: 875px )
+    .shiseido-compare
+        &__new
+            position: static
+            margin-bottom: 15px
+
+@media screen and ( max-width: 840px )
+    .shiseido-wetting
+        flex-direction: column
+        align-items: center
+        &__img
+            margin-right: 0
+            margin-bottom: 30px
+        &__title, &__text
+            text-align: center
+        &__title
+            margin-bottom: 20px
+      
+    .shiseido-about
+        &__img
+            max-width: 50%
+        &__list
+            padding: 60px 0px 60px 20px
+
+@media screen and ( max-width: 730px )
+    .shiseido-compare
+        margin-bottom: 60px
+        &__wrap
+            flex-direction: column
+            align-items: stretch
+        &__card
+            &::before
+                display: none
+        &__name
+            strong br
+                display: none
+
+    .shiseido-catalog
+        &__row
+            flex-wrap: wrap
+            justify-content: space-around
+        &__item
+            margin-left: 10px
+            margin-right: 10px
+            margin-bottom: 45px
+            &-img, &-brand, &-name
+                margin-bottom: 20px
+            &-img
+                margin-top: 0 !important
+                height: 235px !important
+
+    .shiseido-formula
+        margin-bottom: 60px
+
+    .shiseido-collection
+        margin-bottom: 20px
+        &__wrap
+            flex-wrap: wrap
+            justify-content: space-around
+        &__item
+            margin-bottom: 40px
+            margin-left: 10px
+            margin-right: 10px
+            &:last-child
+                margin-right: 10px
+            &-img
+                margin-bottom: 20px
+            &-name
+                margin-bottom: 15px
+                line-height: 18px
+            &-text
+                @include font('AvenirNext', 12px, 500, 16px)
+
+    .shiseido-hero
+        margin-bottom: 65px
+
+@media screen and ( max-width: 620px )
+    .shiseido-section-title
+        font-size: 26px
+
+    .shiseido-wetting
+        padding: 15px 15px 35px
+
+    .shiseido-hero
+        &__img
+            &:first-child
+                width: 100%
+                flex-shrink: 0
+
+    .shiseido-about
+        &__img
+            max-width: 100%
+        &__features
+            flex-direction: column
+            align-items: center
+            margin-left: 15px
+            margin-right: 15px
+        &__item
+            text-align: center
+            & + &
+                margin-top: 13px
+        &__list
+            padding: 40px 0px
+
+    .shiseido-text
+        font-size: 16px
+        line-height: 24px
+
+@media screen and ( max-width: 485px )
+    .shiseido-header
+        padding: 25px 0px
+        &__wrap
+            padding: 0
+            justify-content: center
+        &__small-logo, &__fake
+            display: none
+
+@media screen and ( max-width: 420px )
+    .shiseido-section-title
+        font-size: 22px
+        br
+            display: none
+
+    .shiseido-about
+        &__list
+            padding: 25px 0px
+
+    .shiseido-text
+        br
+            display: none
