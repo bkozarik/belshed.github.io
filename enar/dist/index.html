@@ -34,7 +34,7 @@
                             <a href="3" class="nav__link js-scroll-link">Отзывы</a>
                         </li>
                         <li class="nav__item">
-                            <a href="4" class="nav__link js-scroll-link nav__link_no-text-transform">FAQs</a>
+                            <a href="4" class="nav__link js-scroll-link nav__link_no-text-transform">FAQ</a>
                         </li>
                         <li class="nav__item">
                             <a href="5" class="nav__link js-scroll-link">о компании</a>
@@ -53,7 +53,8 @@
                 <button class="button button-list__button button-list__button_menu js-nav-trigger"></button>
             </li>
             <li class="button-list__item">
-                <a href="#" class="button button-list__button button-list__button_phone"></a>
+                <a href="#" class="button button-list__button button-list__button_phone js-button-phone"></a>
+                <a href="#" class="button-list__popup">89999999999</a>
             </li>
             <li class="button-list__item">
                 <button class="button button-list__button button-list__button_mail js-popup-trigger" data-target=".js-popup-send-request"></button>
@@ -98,16 +99,16 @@
             <section class="swiper-slide hero">
                 <div class="container container_shrink">
                     <div class="hero__body">
-                        <h1 class="hero__title" style="color: peru;" data-aos-duration="800" data-aos="fade-up" data-aos-delay="0">Доставка товаров из&nbsp;любой точки мира</h1>
+                        <h1 class="hero__title" data-aos-duration="800" data-aos="fade-up" data-aos-delay="0">Доставка товаров из&nbsp;любой точки мира</h1>
                         <ul class="hero__list" >
                             <li class="hero__item" data-aos="fade-up" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
-                                Международная логистика
+                                <a href="1" class="js-scroll-link">Международная логистика</a>
                             </li>
                             <li class="hero__item" data-aos="fade-up" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
-                                Таможенное оформление
+                                <a href="1" class="js-scroll-link">Таможенное оформление</a>
                             </li>
                             <li class="hero__item" data-aos="fade-up" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
-                                Комплексный аутсорсинг ВЭД
+                                <a href="2" class="js-scroll-link">Комплексный аутсорсинг ВЭД</a>
                             </li>
                         </ul>
                     </div>
@@ -118,7 +119,7 @@
                     <ul class="services__list">
                         <li class="services__item service-item">
                             <h3 class="service-item__title">Международные перевозки сборных грузов</h3>
-                            <p class="service-item__descr">Доставка сборных грузов из Европы, Азии,<br> Северной Америки, Австралии.</p>
+                            <p class="service-item__descr">Регулярная отправка сборных грузов из Европы, Азии,<br> Северной Америки, Австралии.</p>
                             <div class="service-item__bottom">
                                 <button class="button service-item__request js-popup-trigger" data-target=".js-popup-send-request"><span class="service-item__request-deco"></span>Отправить запрос</button>
                                 <button class="button service-item__more js-popup-trigger" data-target=".js-popup-more-1">Подробнее</button>
@@ -176,16 +177,16 @@
                             <div class="swiper-wrapper">
                                 <article class="swiper-slide reviews__slide review-item">
                                     <div class="review-item__top">
-                                        <img src="./img/review-person.png" alt="Фото клиента" class="review-item__img">
+                                        <img src="./img/partner-logo-1.png" alt="Фото клиента" class="review-item__img">
                                         <div class="review-item__data">
-                                            <h3 class="review-item__name">Елена Пешкина</h3>
-                                            <span class="review-item__info">Генеральный деректор крупной фирмы</span>
-                                            <span class="review-item__info">Москва</span>
+                                            <h3 class="review-item__name">Константин Шарыгин</h3>
+                                            <span class="review-item__info">Технический директор</span>
+                                            <span class="review-item__info">ООО "АРАЙД"</span>
                                         </div>
                                     </div>
                                     <div class="review-item__body">
                                         <p>
-                                            Feugiat mauris, nulla sit consectetur amet libero in. In vitae, sed nibh ut sed ipsum suspendisse fames orci. Nam semper mi vel nulla nulla leo proin. Magna id sed nisl ultrices iaculis tortor dui vestibulum lacus. Eget diam eu vulputate non massa consectetur nulla lectus. Vitae nunc auctor vel quis quis diam. Nunc suspendisse turpis pretium, risus elementum fringilla. Magna tellus id pharetra, risus, et dolor viverra mi aliquam. Convallis varius urna sed ac, diam sed lectus pulvinar mi. Neque, nisl sit lacus sit habitasse. Donec pellentesque gravida amet sem. Adipiscing amet risus adipiscing sit duis amet morbi orci. Id vel feugiat molestie vel sed vitae nunc massa. Elit in euismod diam vulputate.
+                                            Мы начали наше сотрудничество в 2017 году по рекомендации знакомых из Новосибирска. Как оказалось, мы получили в партнеры абсолютного профессионала, который закрыл для нас процесс закупки и доставки комплектующих из Китая «от и до». Хочется отметить высокий уровень знания специфики процессов таможенного оформления, надежные логистические цепочки, дающие соответствие заявленных и реальных сроков поставок, а также высокую скорость реакции на любые вопросы и тщательный подход к их решению. Именно поэтому мы связываем успех нашего бизнеса с наличием у нас такого надёжного партнёра как Энар.
                                         </p>
                                     </div>
                                 </article>
@@ -193,14 +194,16 @@
                                     <div class="review-item__top">
                                         <img src="./img/review-person.png" alt="Фото клиента" class="review-item__img">
                                         <div class="review-item__data">
-                                            <h3 class="review-item__name">Елена Пешкина</h3>
-                                            <span class="review-item__info">Генеральный деректор крупной фирмы</span>
-                                            <span class="review-item__info">Москва</span>
+                                            <h3 class="review-item__name">Борисова Наталья</h3>
+                                            <span class="review-item__info">Деректор</span>
+                                            <span class="review-item__info">MODA в метрах</span>
                                         </div>
                                     </div>
                                     <div class="review-item__body">
                                         <p>
-                                            Feugiat mauris, nulla sit consectetur amet libero in. In vitae, sed nibh ut sed ipsum suspendisse fames orci. Nam semper mi vel nulla nulla leo proin. Magna id sed nisl ultrices iaculis tortor dui vestibulum lacus. Eget diam eu vulputate non massa consectetur nulla lectus. Vitae nunc auctor vel quis quis diam. Nunc suspendisse turpis pretium, risus elementum fringilla. Magna tellus id pharetra, risus, et dolor viverra mi aliquam. Convallis varius urna sed ac, diam sed lectus pulvinar mi. Neque, nisl sit lacus sit habitasse. Donec pellentesque gravida amet sem. Adipiscing amet risus adipiscing sit duis amet morbi orci. Id vel feugiat molestie vel sed vitae nunc massa. Elit in euismod diam vulputate.
+                                            С компанией Enar logistics, сотрудничаем более 10 лет. За такой длительный период работы можно однозначно утверждать, что Enar logistics, абсолютно надежный, делающий свою работу на 100% качественно - партнер, что в свою очередь позволяет нам,  сконцентрироваться на наших профессиональных задачах не отвлекаясь на логистику. Все процессы коммуникаций отточены и занимают минимум времени. 
+                                            Высокий уровень квалификации специалистов компании, позволяет оперативно реагировать на изменения во внешней среде и потребности клиента; соблюсти сроки перевозок  и обеспечить сохранность грузов; обеспечивает прозрачность статусов нахождения грузов на всем пути. Это однозначно клиентоориентированная компания, нацеленная на долгосрочные, доверительные отношения.
+                                            Сотрудничество с  Enar logistics позволило нашей компании повысить конкурентоспособность за счет оперативности доставляемых товаров и оптимизации логистических затрат.
                                         </p>
                                     </div>
                                 </article>
@@ -438,7 +441,7 @@
             <div class="popup__container">
                 <button class="button popup__close js-popup-close" style="margin-bottom: 45px;"></button>
                 <h2 class="popup__title">Международные перевозки сборных грузов</h2>
-                <p class="popup__text">Доставка сборных грузов из Европы, Азии, Северной Америки, Австралии.</p>
+                <p class="popup__text">Регулярная отправка сборных грузов из Европы, Азии, Северной Америки, Австралии.</p>
                 <h3 class="popup__subtitle">Склады консолидации:</h3>
                 <div class="popup__map-wrapper">
                     <div class="popup__map">
