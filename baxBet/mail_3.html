@@ -61,6 +61,8 @@
 
         .hero_black {
             background-color: #000;
+            background-repeat: no-repeat;
+            background-position: left center;
         }
 
         .hero__img {
@@ -297,6 +299,23 @@
         }
         
 
+        .text_title-big {
+            font-size: 25px;
+            line-height: 30px;
+        }
+
+        .text_title-big span {
+            color: #fa6d1d;
+        }
+
+        .hero__content td {
+            padding: 60px 10px 70px;
+        }
+
+        .hero__content h1 {
+            margin-bottom: 35px;
+        }
+
         @media screen and (max-width: 580px) {
             .inner td{
                 padding-left: 25px;
@@ -305,6 +324,10 @@
 
             .header {
                 padding: 10px;
+            }
+
+            .hero_black {
+                background-position: 60% center;
             }
 
             .text {
@@ -328,6 +351,12 @@
 
             .hero__img_cards {
                 transform: translate(-20px, 2px);
+            }
+
+            .text_title-big {
+                font-size: 20px;
+                line-height: 28px;
+                margin-bottom: 20px !important;
             }
         }
 
@@ -369,9 +398,19 @@
                 </table>
             </td>
         </tr>
-        <tr class="hero hero_black">
-            <td align="center">
-                <img src="./img/hero-2.png" class="container hero__img hero__img_cards" alt="Hero image">
+        <tr class="hero hero_black" style="background-image: url(./img/hero-3.jpg);">
+            <td>
+                <table class="container hero__content">
+                    <tr>
+                        <td>
+                            <h1 class="text text_title-big">GAMBLING: <br>
+                                CPA ДО <span>65$</span>,  <br>
+                                REVSHARE <br>
+                                ДО <span>65 %</span></h1>
+                            <a href="#" class="orange-link">Регистрация</a>   
+                        </td>
+                    </tr>
+                </table>
             </td>
         </tr>
         <tr>
@@ -379,7 +418,7 @@
                 <table cellspacing="0" border="0" class="container">
                     <tr class="inner content">
                         <td style="padding-top: 35px; padding-bottom: 35px;">
-                            <h1 class="text text_title text_center">Модели оплат</h1>
+                            <h2 class="text text_title text_center">Модели оплат</h2>
                             <p class="text text_center" style="color: #c4c4c4;">Мы всегда  щедро делимся с нашими партнерами, так как имеем собственные проекты и минимальные затраты на их поддержку.</p>
                         </td>
                     </tr>
