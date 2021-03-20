@@ -18,7 +18,7 @@
                 <div class="header__data">
                     <span class="header__text header__text_map">Иркутская обл.,Ольхонский р-н, п.Хужир, ул. Российская, 17</span>
                     <a href="tel:+78002507684" class="header__text header__text_tel">+7 (800) 250-76-84</a>
-                    <button class="button button_dashed header__button js-popup-trigger" data-target="js-popup-recall">Заказать звонок</button>
+                    <button class="button button_dashed header__button js-popup-trigger" data-target=".js-popup-recall">Заказать звонок</button>
                 </div>
             </div>
         </div>
@@ -100,7 +100,11 @@
                 </div>
             </div>
         </section>
-        <section class="quiz">
+        <section id="quiz" class="quiz">
+            <picture class="quiz__bg">
+                <source srcset="./img/big-bg.jpg" type="image/jpg">
+                <img src="./img/big-bg.jpg" alt="Фон">
+            </picture>
             <div class="container">
                 <h2 class="section-title quiz__title">Составить индивидуальный тур</h2>
                 <div class="quiz__body js-quiz">
@@ -133,30 +137,30 @@
                         <ul class="quiz__pages js-quiz-track">
                             <li class="quiz__page quiz-page js-quiz-page">
                                 <h3 class="quiz-page__title">Выберите маршрут</h3>
-                                <div class="quiz-page__content">
-                                    <div class="quiz-page__select dropdown js-dropdown" data-trigger-val="text">
+                                <div class="quiz-page__content js-tab-container">
+                                    <div class="quiz-page__select dropdown js-dropdown" data-select-name="path" data-trigger-val="text">
                                         <ul class="js-dropdown-select">
                                             <li data-value="none" hidden><button>Название маршрута</button></li>
-                                            <li data-value="Название маршрута"><button>Название маршрута</button></li>
-                                            <li data-value="Название маршрута 2"><button>Название маршрута 2</button></li>
-                                            <li data-value="Название маршрута 3"><button>Название маршрута 3</button></li>
-                                            <li data-value="Название маршрута 4"><button>Название маршрута 4</button></li>
+                                            <li data-value="Название маршрута"><button class="js-tab-trigger" data-target-id="0">Название маршрута</button></li>
+                                            <li data-value="Название маршрута 2"><button class="js-tab-trigger" data-target-id="1">Название маршрута 2</button></li>
+                                            <li data-value="Название маршрута 3"><button class="js-tab-trigger" data-target-id="2">Название маршрута 3</button></li>
+                                            <li data-value="Название маршрута 4"><button class="js-tab-trigger" data-target-id="3">Название маршрута 4</button></li>
                                         </ul>
                                     </div>
                                     <ul class="quiz-page__paths">
-                                        <li class="quiz-page__path active">
+                                        <li class="quiz-page__path js-tab-content active" data-id="0">
                                             <h4 class="quiz-page__name">Название маршрута</h4>
                                             <p class="quiz-page__text">Короткое описание маршрута - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Metus lacinia morbi rhoncus orci cursus vivamus vitae proin. Tortor urna mi nunc in facilisis pharetra. Quis donec ac mi posuere diam, viverra commodo, gravida. Egestas eget justo, proin porttitor a mattis hac. Sem convallis ut ut sagittis enim et varius volutpat tincidunt. Eget donec lobortis arcu egestas sociis et, convallis tristique. Nunc integer orci placerat sollicitudin. </p>
                                         </li>
-                                        <li class="quiz-page__path">
+                                        <li class="quiz-page__path js-tab-content" data-id="1">
                                             <h4 class="quiz-page__name">Название маршрута 2</h4>
                                             <p class="quiz-page__text">Короткое описание маршрута - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Metus lacinia morbi rhoncus orci cursus vivamus vitae proin. Tortor urna mi nunc in facilisis pharetra. Quis donec ac mi posuere diam, viverra commodo, gravida. Egestas eget justo, proin porttitor a mattis hac. Sem convallis ut ut sagittis enim et varius volutpat tincidunt. Eget donec lobortis arcu egestas sociis et, convallis tristique. Nunc integer orci placerat sollicitudin. </p>
                                         </li>
-                                        <li class="quiz-page__path">
+                                        <li class="quiz-page__path js-tab-content" data-id="2">
                                             <h4 class="quiz-page__name">Название маршрута 3</h4>
                                             <p class="quiz-page__text">Короткое описание маршрута - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Metus lacinia morbi rhoncus orci cursus vivamus vitae proin. Tortor urna mi nunc in facilisis pharetra. Quis donec ac mi posuere diam, viverra commodo, gravida. Egestas eget justo, proin porttitor a mattis hac. Sem convallis ut ut sagittis enim et varius volutpat tincidunt. Eget donec lobortis arcu egestas sociis et, convallis tristique. Nunc integer orci placerat sollicitudin. </p>
                                         </li>
-                                        <li class="quiz-page__path">
+                                        <li class="quiz-page__path js-tab-content" data-id="3">
                                             <h4 class="quiz-page__name">Название маршрута 4</h4>
                                             <p class="quiz-page__text">Короткое описание маршрута - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Metus lacinia morbi rhoncus orci cursus vivamus vitae proin. Tortor urna mi nunc in facilisis pharetra. Quis donec ac mi posuere diam, viverra commodo, gravida. Egestas eget justo, proin porttitor a mattis hac. Sem convallis ut ut sagittis enim et varius volutpat tincidunt. Eget donec lobortis arcu egestas sociis et, convallis tristique. Nunc integer orci placerat sollicitudin. </p>
                                         </li>
@@ -165,34 +169,63 @@
                             </li>
                             <li class="quiz__page quiz-page js-quiz-page">
                                 <h3 class="quiz-page__title">Выберите свободные даты</h3>
-                                
+                                <div class="quiz__calendar calendar js-calendar">
+                                    <div class="calendar__head">
+                                        <div class="calendar__navigation">
+                                            <button class="button calendar__control calendar__control_prev js-calendar-navigation js-calendar-prev-year">
+                                                <svg width="9" height="11" viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M1.82361 4.5L5.021 0.164915C5.07039 0.0984374 5.02582 0 4.9451 0H4.01383C3.9548 0 3.89818 0.0294035 3.86204 0.077983L0.786321 4.24815C0.733053 4.32018 0.704102 4.40908 0.704102 4.50064C0.704102 4.59219 0.733053 4.6811 0.786321 4.75312L3.86204 8.92202C3.89818 8.97188 3.9548 9 4.01383 9H4.9451C5.02582 9 5.07039 8.90156 5.021 8.83508L1.82361 4.5ZM5.48603 4.5L8.68343 0.164915C8.73282 0.0984374 8.68824 0 8.60753 0H7.67626C7.61723 0 7.5606 0.0294035 7.52446 0.077983L4.44875 4.24815C4.39548 4.32018 4.36653 4.40908 4.36653 4.50064C4.36653 4.59219 4.39548 4.6811 4.44875 4.75312L7.52446 8.92202C7.5606 8.97188 7.61723 9 7.67626 9H8.60753C8.68824 9 8.73282 8.90156 8.68343 8.83508L5.48603 4.5Z"/>
+                                                </svg>
+                                            </button>
+                                            <button class="button calendar__control calendar__control_prev js-calendar-navigation js-calendar-prev-month">
+                                                <svg width="7" height="11" viewBox="0 0 7 11" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M6.89553 1.77159V0.790244C6.89553 0.705186 6.79777 0.658213 6.73176 0.710264L1.00871 5.18028C0.960084 5.2181 0.920739 5.26652 0.893673 5.32185C0.866608 5.37719 0.852539 5.43797 0.852539 5.49957C0.852539 5.56117 0.866608 5.62195 0.893673 5.67729C0.920739 5.73262 0.960084 5.78104 1.00871 5.81886L6.73176 10.2889C6.79904 10.3409 6.89553 10.294 6.89553 10.2089V9.22755C6.89553 9.16534 6.86633 9.10567 6.81809 9.06759L2.24777 5.50021L6.81809 1.93155C6.86633 1.89347 6.89553 1.8338 6.89553 1.77159Z"/>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                        <span class="calendar__date js-calendar-date">Май 2021</span>
+                                        <div class="calendar__navigation">
+                                            <button class="button calendar__control calendar__control_next js-calendar-navigation js-calendar-next-month">
+                                                <svg width="7" height="11" viewBox="0 0 7 11" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M6.89553 1.77159V0.790244C6.89553 0.705186 6.79777 0.658213 6.73176 0.710264L1.00871 5.18028C0.960084 5.2181 0.920739 5.26652 0.893673 5.32185C0.866608 5.37719 0.852539 5.43797 0.852539 5.49957C0.852539 5.56117 0.866608 5.62195 0.893673 5.67729C0.920739 5.73262 0.960084 5.78104 1.00871 5.81886L6.73176 10.2889C6.79904 10.3409 6.89553 10.294 6.89553 10.2089V9.22755C6.89553 9.16534 6.86633 9.10567 6.81809 9.06759L2.24777 5.50021L6.81809 1.93155C6.86633 1.89347 6.89553 1.8338 6.89553 1.77159Z"/>
+                                                </svg>
+                                            </button>
+                                            <button class="button calendar__control calendar__control_next js-calendar-navigation js-calendar-next-year">
+                                                <svg width="9" height="11" viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M1.82361 4.5L5.021 0.164915C5.07039 0.0984374 5.02582 0 4.9451 0H4.01383C3.9548 0 3.89818 0.0294035 3.86204 0.077983L0.786321 4.24815C0.733053 4.32018 0.704102 4.40908 0.704102 4.50064C0.704102 4.59219 0.733053 4.6811 0.786321 4.75312L3.86204 8.92202C3.89818 8.97188 3.9548 9 4.01383 9H4.9451C5.02582 9 5.07039 8.90156 5.021 8.83508L1.82361 4.5ZM5.48603 4.5L8.68343 0.164915C8.73282 0.0984374 8.68824 0 8.60753 0H7.67626C7.61723 0 7.5606 0.0294035 7.52446 0.077983L4.44875 4.24815C4.39548 4.32018 4.36653 4.40908 4.36653 4.50064C4.36653 4.59219 4.39548 4.6811 4.44875 4.75312L7.52446 8.92202C7.5606 8.97188 7.61723 9 7.67626 9H8.60753C8.68824 9 8.73282 8.90156 8.68343 8.83508L5.48603 4.5Z"/>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="calendar__body js-calendar-body"></div>
+                                </div>
                             </li>
                             <li class="quiz__page quiz-page js-quiz-page">
                                 <h3 class="quiz-page__title">Места для посещения</h3>
-                                <div class="quiz-page__content">
-                                    <div class="quiz-page__select dropdown js-dropdown" data-trigger-val="text">
+                                <div class="quiz-page__content js-tab-container">
+                                    <div class="quiz-page__select dropdown js-dropdown" data-select-name="place" data-trigger-val="text">
                                         <ul class="js-dropdown-select">
-                                            <li data-value="none" hidden><a href="#">Название маршрута</a></li>
-                                            <li data-value="Название маршрута"><a href="#">Название маршрута</a></li>
-                                            <li data-value="Название маршрута 2"><a href="#">Название маршрута 2</a></li>
-                                            <li data-value="Название маршрута 3"><a href="#">Название маршрута 3</a></li>
-                                            <li data-value="Название маршрута 4"><a href="#">Название маршрута 4</a></li>
+                                            <li data-value="none" hidden><button>Название маршрута</button></li>
+                                            <li data-value="Название маршрута"><button class="js-tab-trigger" data-target-id="0">Название маршрута</button></li>
+                                            <li data-value="Название маршрута 2"><button class="js-tab-trigger" data-target-id="1">Название маршрута 2</button></li>
+                                            <li data-value="Название маршрута 3"><button class="js-tab-trigger" data-target-id="2">Название маршрута 3</button></li>
+                                            <li data-value="Название маршрута 4"><button class="js-tab-trigger" data-target-id="3">Название маршрута 4</button></li>
                                         </ul>
                                     </div>
                                     <ul class="quiz-page__paths">
-                                        <li class="quiz-page__path active">
+                                        <li class="quiz-page__path js-tab-content active" data-id="0">
                                             <h4 class="quiz-page__name">Название маршрута</h4>
                                             <p class="quiz-page__text">Короткое описание маршрута - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Metus lacinia morbi rhoncus orci cursus vivamus vitae proin. Tortor urna mi nunc in facilisis pharetra. Quis donec ac mi posuere diam, viverra commodo, gravida. Egestas eget justo, proin porttitor a mattis hac. Sem convallis ut ut sagittis enim et varius volutpat tincidunt. Eget donec lobortis arcu egestas sociis et, convallis tristique. Nunc integer orci placerat sollicitudin. </p>
                                         </li>
-                                        <li class="quiz-page__path">
+                                        <li class="quiz-page__path js-tab-content" data-id="1">
                                             <h4 class="quiz-page__name">Название маршрута 2</h4>
                                             <p class="quiz-page__text">Короткое описание маршрута - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Metus lacinia morbi rhoncus orci cursus vivamus vitae proin. Tortor urna mi nunc in facilisis pharetra. Quis donec ac mi posuere diam, viverra commodo, gravida. Egestas eget justo, proin porttitor a mattis hac. Sem convallis ut ut sagittis enim et varius volutpat tincidunt. Eget donec lobortis arcu egestas sociis et, convallis tristique. Nunc integer orci placerat sollicitudin. </p>
                                         </li>
-                                        <li class="quiz-page__path">
+                                        <li class="quiz-page__path js-tab-content" data-id="2">
                                             <h4 class="quiz-page__name">Название маршрута 3</h4>
                                             <p class="quiz-page__text">Короткое описание маршрута - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Metus lacinia morbi rhoncus orci cursus vivamus vitae proin. Tortor urna mi nunc in facilisis pharetra. Quis donec ac mi posuere diam, viverra commodo, gravida. Egestas eget justo, proin porttitor a mattis hac. Sem convallis ut ut sagittis enim et varius volutpat tincidunt. Eget donec lobortis arcu egestas sociis et, convallis tristique. Nunc integer orci placerat sollicitudin. </p>
                                         </li>
-                                        <li class="quiz-page__path">
+                                        <li class="quiz-page__path js-tab-content" data-id="3">
                                             <h4 class="quiz-page__name">Название маршрута 4</h4>
                                             <p class="quiz-page__text">Короткое описание маршрута - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Metus lacinia morbi rhoncus orci cursus vivamus vitae proin. Tortor urna mi nunc in facilisis pharetra. Quis donec ac mi posuere diam, viverra commodo, gravida. Egestas eget justo, proin porttitor a mattis hac. Sem convallis ut ut sagittis enim et varius volutpat tincidunt. Eget donec lobortis arcu egestas sociis et, convallis tristique. Nunc integer orci placerat sollicitudin. </p>
                                         </li>
@@ -201,30 +234,30 @@
                             </li>
                             <li class="quiz__page quiz-page js-quiz-page">
                                 <h3 class="quiz-page__title">Условия по размещению</h3>
-                                <div class="quiz-page__content">
-                                    <div class="quiz-page__select dropdown js-dropdown" data-trigger-val="text">
+                                <div class="quiz-page__content js-tab-container">
+                                    <div class="quiz-page__select dropdown js-dropdown" data-select-name="condition" data-trigger-val="text">
                                         <ul class="js-dropdown-select">
-                                            <li data-value="none" hidden><a href="#">Название маршрута</a></li>
-                                            <li data-value="Название маршрута"><a href="#">Название маршрута</a></li>
-                                            <li data-value="Название маршрута 2"><a href="#">Название маршрута 2</a></li>
-                                            <li data-value="Название маршрута 3"><a href="#">Название маршрута 3</a></li>
-                                            <li data-value="Название маршрута 4"><a href="#">Название маршрута 4</a></li>
+                                            <li data-value="none" hidden><button>Название маршрута</button></li>
+                                            <li data-value="Название маршрута"><button class="js-tab-trigger" data-target-id="0">Название маршрута</button></li>
+                                            <li data-value="Название маршрута 2"><button class="js-tab-trigger" data-target-id="1">Название маршрута 2</button></li>
+                                            <li data-value="Название маршрута 3"><button class="js-tab-trigger" data-target-id="2">Название маршрута 3</button></li>
+                                            <li data-value="Название маршрута 4"><button class="js-tab-trigger" data-target-id="3">Название маршрута 4</button></li>
                                         </ul>
                                     </div>
                                     <ul class="quiz-page__paths">
-                                        <li class="quiz-page__path active">
+                                        <li class="quiz-page__path js-tab-content active" data-id="0">
                                             <h4 class="quiz-page__name">Название маршрута</h4>
                                             <p class="quiz-page__text">Короткое описание маршрута - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Metus lacinia morbi rhoncus orci cursus vivamus vitae proin. Tortor urna mi nunc in facilisis pharetra. Quis donec ac mi posuere diam, viverra commodo, gravida. Egestas eget justo, proin porttitor a mattis hac. Sem convallis ut ut sagittis enim et varius volutpat tincidunt. Eget donec lobortis arcu egestas sociis et, convallis tristique. Nunc integer orci placerat sollicitudin. </p>
                                         </li>
-                                        <li class="quiz-page__path">
+                                        <li class="quiz-page__path js-tab-content" data-id="1">
                                             <h4 class="quiz-page__name">Название маршрута 2</h4>
                                             <p class="quiz-page__text">Короткое описание маршрута - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Metus lacinia morbi rhoncus orci cursus vivamus vitae proin. Tortor urna mi nunc in facilisis pharetra. Quis donec ac mi posuere diam, viverra commodo, gravida. Egestas eget justo, proin porttitor a mattis hac. Sem convallis ut ut sagittis enim et varius volutpat tincidunt. Eget donec lobortis arcu egestas sociis et, convallis tristique. Nunc integer orci placerat sollicitudin. </p>
                                         </li>
-                                        <li class="quiz-page__path">
+                                        <li class="quiz-page__path js-tab-content" data-id="2">
                                             <h4 class="quiz-page__name">Название маршрута 3</h4>
                                             <p class="quiz-page__text">Короткое описание маршрута - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Metus lacinia morbi rhoncus orci cursus vivamus vitae proin. Tortor urna mi nunc in facilisis pharetra. Quis donec ac mi posuere diam, viverra commodo, gravida. Egestas eget justo, proin porttitor a mattis hac. Sem convallis ut ut sagittis enim et varius volutpat tincidunt. Eget donec lobortis arcu egestas sociis et, convallis tristique. Nunc integer orci placerat sollicitudin. </p>
                                         </li>
-                                        <li class="quiz-page__path">
+                                        <li class="quiz-page__path js-tab-content" data-id="3">
                                             <h4 class="quiz-page__name">Название маршрута 4</h4>
                                             <p class="quiz-page__text">Короткое описание маршрута - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Metus lacinia morbi rhoncus orci cursus vivamus vitae proin. Tortor urna mi nunc in facilisis pharetra. Quis donec ac mi posuere diam, viverra commodo, gravida. Egestas eget justo, proin porttitor a mattis hac. Sem convallis ut ut sagittis enim et varius volutpat tincidunt. Eget donec lobortis arcu egestas sociis et, convallis tristique. Nunc integer orci placerat sollicitudin. </p>
                                         </li>
@@ -233,30 +266,30 @@
                             </li>
                             <li class="quiz__page quiz-page js-quiz-page">
                                 <h3 class="quiz-page__title">Выбор трансфера</h3>
-                                <div class="quiz-page__content">
-                                    <div class="quiz-page__select dropdown js-dropdown" data-trigger-val="text">
+                                <div class="quiz-page__content js-tab-container">
+                                    <div class="quiz-page__select dropdown js-dropdown" data-select-name="transfer" data-trigger-val="text">
                                         <ul class="js-dropdown-select">
-                                            <li data-value="none" hidden><a href="#">Название маршрута</a></li>
-                                            <li data-value="Название маршрута"><a href="#">Название маршрута</a></li>
-                                            <li data-value="Название маршрута 2"><a href="#">Название маршрута 2</a></li>
-                                            <li data-value="Название маршрута 3"><a href="#">Название маршрута 3</a></li>
-                                            <li data-value="Название маршрута 4"><a href="#">Название маршрута 4</a></li>
+                                            <li data-value="none" hidden><button>Название маршрута</button></li>
+                                            <li data-value="Название маршрута"><button class="js-tab-trigger" data-target-id="0">Название маршрута</button></li>
+                                            <li data-value="Название маршрута 2"><button class="js-tab-trigger" data-target-id="1">Название маршрута 2</button></li>
+                                            <li data-value="Название маршрута 3"><button class="js-tab-trigger" data-target-id="2">Название маршрута 3</button></li>
+                                            <li data-value="Название маршрута 4"><button class="js-tab-trigger" data-target-id="3">Название маршрута 4</button></li>
                                         </ul>
                                     </div>
                                     <ul class="quiz-page__paths">
-                                        <li class="quiz-page__path active">
+                                        <li class="quiz-page__path js-tab-content active" data-id="0">
                                             <h4 class="quiz-page__name">Название маршрута</h4>
                                             <p class="quiz-page__text">Короткое описание маршрута - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Metus lacinia morbi rhoncus orci cursus vivamus vitae proin. Tortor urna mi nunc in facilisis pharetra. Quis donec ac mi posuere diam, viverra commodo, gravida. Egestas eget justo, proin porttitor a mattis hac. Sem convallis ut ut sagittis enim et varius volutpat tincidunt. Eget donec lobortis arcu egestas sociis et, convallis tristique. Nunc integer orci placerat sollicitudin. </p>
                                         </li>
-                                        <li class="quiz-page__path">
+                                        <li class="quiz-page__path js-tab-content" data-id="1">
                                             <h4 class="quiz-page__name">Название маршрута 2</h4>
                                             <p class="quiz-page__text">Короткое описание маршрута - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Metus lacinia morbi rhoncus orci cursus vivamus vitae proin. Tortor urna mi nunc in facilisis pharetra. Quis donec ac mi posuere diam, viverra commodo, gravida. Egestas eget justo, proin porttitor a mattis hac. Sem convallis ut ut sagittis enim et varius volutpat tincidunt. Eget donec lobortis arcu egestas sociis et, convallis tristique. Nunc integer orci placerat sollicitudin. </p>
                                         </li>
-                                        <li class="quiz-page__path">
+                                        <li class="quiz-page__path js-tab-content" data-id="2">
                                             <h4 class="quiz-page__name">Название маршрута 3</h4>
                                             <p class="quiz-page__text">Короткое описание маршрута - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Metus lacinia morbi rhoncus orci cursus vivamus vitae proin. Tortor urna mi nunc in facilisis pharetra. Quis donec ac mi posuere diam, viverra commodo, gravida. Egestas eget justo, proin porttitor a mattis hac. Sem convallis ut ut sagittis enim et varius volutpat tincidunt. Eget donec lobortis arcu egestas sociis et, convallis tristique. Nunc integer orci placerat sollicitudin. </p>
                                         </li>
-                                        <li class="quiz-page__path">
+                                        <li class="quiz-page__path js-tab-content" data-id="3">
                                             <h4 class="quiz-page__name">Название маршрута 4</h4>
                                             <p class="quiz-page__text">Короткое описание маршрута - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Metus lacinia morbi rhoncus orci cursus vivamus vitae proin. Tortor urna mi nunc in facilisis pharetra. Quis donec ac mi posuere diam, viverra commodo, gravida. Egestas eget justo, proin porttitor a mattis hac. Sem convallis ut ut sagittis enim et varius volutpat tincidunt. Eget donec lobortis arcu egestas sociis et, convallis tristique. Nunc integer orci placerat sollicitudin. </p>
                                         </li>
@@ -265,67 +298,73 @@
                             </li>
                             <li class="quiz__page quiz-page js-quiz-page">
                                 <h3 class="quiz-page__title">Личные предпочтения</h3>
-                                <div class="quiz-page__content">
-                                    <div class="quiz-page__select dropdown js-dropdown" data-trigger-val="text">
-                                        <ul class="js-dropdown-select">
-                                            <li data-value="none" hidden><a href="#">Название маршрута</a></li>
-                                            <li data-value="Название маршрута"><a href="#">Название маршрута</a></li>
-                                            <li data-value="Название маршрута 2"><a href="#">Название маршрута 2</a></li>
-                                            <li data-value="Название маршрута 3"><a href="#">Название маршрута 3</a></li>
-                                            <li data-value="Название маршрута 4"><a href="#">Название маршрута 4</a></li>
-                                        </ul>
-                                    </div>
-                                    <ul class="quiz-page__paths">
-                                        <li class="quiz-page__path active">
-                                            <h4 class="quiz-page__name">Название маршрута</h4>
-                                            <p class="quiz-page__text">Короткое описание маршрута - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Metus lacinia morbi rhoncus orci cursus vivamus vitae proin. Tortor urna mi nunc in facilisis pharetra. Quis donec ac mi posuere diam, viverra commodo, gravida. Egestas eget justo, proin porttitor a mattis hac. Sem convallis ut ut sagittis enim et varius volutpat tincidunt. Eget donec lobortis arcu egestas sociis et, convallis tristique. Nunc integer orci placerat sollicitudin. </p>
-                                        </li>
-                                        <li class="quiz-page__path">
-                                            <h4 class="quiz-page__name">Название маршрута 2</h4>
-                                            <p class="quiz-page__text">Короткое описание маршрута - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Metus lacinia morbi rhoncus orci cursus vivamus vitae proin. Tortor urna mi nunc in facilisis pharetra. Quis donec ac mi posuere diam, viverra commodo, gravida. Egestas eget justo, proin porttitor a mattis hac. Sem convallis ut ut sagittis enim et varius volutpat tincidunt. Eget donec lobortis arcu egestas sociis et, convallis tristique. Nunc integer orci placerat sollicitudin. </p>
-                                        </li>
-                                        <li class="quiz-page__path">
-                                            <h4 class="quiz-page__name">Название маршрута 3</h4>
-                                            <p class="quiz-page__text">Короткое описание маршрута - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Metus lacinia morbi rhoncus orci cursus vivamus vitae proin. Tortor urna mi nunc in facilisis pharetra. Quis donec ac mi posuere diam, viverra commodo, gravida. Egestas eget justo, proin porttitor a mattis hac. Sem convallis ut ut sagittis enim et varius volutpat tincidunt. Eget donec lobortis arcu egestas sociis et, convallis tristique. Nunc integer orci placerat sollicitudin. </p>
-                                        </li>
-                                        <li class="quiz-page__path">
-                                            <h4 class="quiz-page__name">Название маршрута 4</h4>
-                                            <p class="quiz-page__text">Короткое описание маршрута - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Metus lacinia morbi rhoncus orci cursus vivamus vitae proin. Tortor urna mi nunc in facilisis pharetra. Quis donec ac mi posuere diam, viverra commodo, gravida. Egestas eget justo, proin porttitor a mattis hac. Sem convallis ut ut sagittis enim et varius volutpat tincidunt. Eget donec lobortis arcu egestas sociis et, convallis tristique. Nunc integer orci placerat sollicitudin. </p>
-                                        </li>
-                                    </ul>
+                                <div class="quiz__grid js-quiz-grid">
+                                    <label class="quiz__addon js-quiz-addon">
+                                        <input name="Питание" type="checkbox" class="quiz__addon-checkbox">
+                                        <span class="quiz__addon-fake"></span>
+                                        <span class="quiz__addon-text">Питание</span>
+                                    </label>
+                                    <label class="quiz__addon js-quiz-addon">
+                                        <input name="Питание" type="checkbox" class="quiz__addon-checkbox">
+                                        <span class="quiz__addon-fake"></span>
+                                        <span class="quiz__addon-text">Питание</span>
+                                    </label>
+                                    <label class="quiz__addon js-quiz-addon">
+                                        <input name="Питание" type="checkbox" class="quiz__addon-checkbox">
+                                        <span class="quiz__addon-fake"></span>
+                                        <span class="quiz__addon-text">Питание</span>
+                                    </label>
+                                    <label class="quiz__addon js-quiz-addon">
+                                        <input name="Питание" type="checkbox" class="quiz__addon-checkbox">
+                                        <span class="quiz__addon-fake"></span>
+                                        <span class="quiz__addon-text">Питание</span>
+                                    </label>
+                                    <label class="quiz__addon js-quiz-addon">
+                                        <input name="Питание" type="checkbox" class="quiz__addon-checkbox">
+                                        <span class="quiz__addon-fake"></span>
+                                        <span class="quiz__addon-text">Питание</span>
+                                    </label>
+                                    <label class="quiz__addon js-quiz-addon">
+                                        <input name="Питание" type="checkbox" class="quiz__addon-checkbox">
+                                        <span class="quiz__addon-fake"></span>
+                                        <span class="quiz__addon-text">Питание</span>
+                                    </label>
+                                    <label class="quiz__addon js-quiz-addon">
+                                        <input name="Питание" type="checkbox" class="quiz__addon-checkbox">
+                                        <span class="quiz__addon-fake"></span>
+                                        <span class="quiz__addon-text">Питание</span>
+                                    </label>
+                                    <label class="quiz__addon js-quiz-addon">
+                                        <input name="Питание" type="checkbox" class="quiz__addon-checkbox">
+                                        <span class="quiz__addon-fake"></span>
+                                        <span class="quiz__addon-text">Питание</span>
+                                    </label>
                                 </div>
                             </li>
                             <li class="quiz__page quiz-page js-quiz-page">
                                 <h3 class="quiz-page__title">Оформить индивидуальный тур</h3>
-                                <div class="quiz-page__content">
-                                    <div class="quiz-page__select dropdown js-dropdown" data-trigger-val="text">
-                                        <ul class="js-dropdown-select">
-                                            <li data-value="none" hidden><a href="#">Название маршрута</a></li>
-                                            <li data-value="Название маршрута"><a href="#">Название маршрута</a></li>
-                                            <li data-value="Название маршрута 2"><a href="#">Название маршрута 2</a></li>
-                                            <li data-value="Название маршрута 3"><a href="#">Название маршрута 3</a></li>
-                                            <li data-value="Название маршрута 4"><a href="#">Название маршрута 4</a></li>
-                                        </ul>
+                                <form class="form quiz__form js-quiz-form">
+                                    <div class="form__grid">
+                                        <label class="form__item">
+                                            <span class="form__label">Как вас зовут?</span>
+                                            <input type="text" name="user_name" class="form__input" placeholder="Иван Иванов">
+                                        </label>
+                                        <label class="form__item">
+                                            <span class="form__label">Ваш номер телефона</span>
+                                            <input type="tel" name="user_tel" class="form__input" placeholder="+7 (___) ___ __ __">
+                                        </label>
+                                        <label class="form__item">
+                                            <span class="form__label">Адрес электронной почты</span>
+                                            <input type="text" name="user_name" class="form__input" placeholder="example@ex.com">
+                                        </label>
                                     </div>
-                                    <ul class="quiz-page__paths">
-                                        <li class="quiz-page__path active">
-                                            <h4 class="quiz-page__name">Название маршрута</h4>
-                                            <p class="quiz-page__text">Короткое описание маршрута - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Metus lacinia morbi rhoncus orci cursus vivamus vitae proin. Tortor urna mi nunc in facilisis pharetra. Quis donec ac mi posuere diam, viverra commodo, gravida. Egestas eget justo, proin porttitor a mattis hac. Sem convallis ut ut sagittis enim et varius volutpat tincidunt. Eget donec lobortis arcu egestas sociis et, convallis tristique. Nunc integer orci placerat sollicitudin. </p>
-                                        </li>
-                                        <li class="quiz-page__path">
-                                            <h4 class="quiz-page__name">Название маршрута 2</h4>
-                                            <p class="quiz-page__text">Короткое описание маршрута - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Metus lacinia morbi rhoncus orci cursus vivamus vitae proin. Tortor urna mi nunc in facilisis pharetra. Quis donec ac mi posuere diam, viverra commodo, gravida. Egestas eget justo, proin porttitor a mattis hac. Sem convallis ut ut sagittis enim et varius volutpat tincidunt. Eget donec lobortis arcu egestas sociis et, convallis tristique. Nunc integer orci placerat sollicitudin. </p>
-                                        </li>
-                                        <li class="quiz-page__path">
-                                            <h4 class="quiz-page__name">Название маршрута 3</h4>
-                                            <p class="quiz-page__text">Короткое описание маршрута - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Metus lacinia morbi rhoncus orci cursus vivamus vitae proin. Tortor urna mi nunc in facilisis pharetra. Quis donec ac mi posuere diam, viverra commodo, gravida. Egestas eget justo, proin porttitor a mattis hac. Sem convallis ut ut sagittis enim et varius volutpat tincidunt. Eget donec lobortis arcu egestas sociis et, convallis tristique. Nunc integer orci placerat sollicitudin. </p>
-                                        </li>
-                                        <li class="quiz-page__path">
-                                            <h4 class="quiz-page__name">Название маршрута 4</h4>
-                                            <p class="quiz-page__text">Короткое описание маршрута - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Metus lacinia morbi rhoncus orci cursus vivamus vitae proin. Tortor urna mi nunc in facilisis pharetra. Quis donec ac mi posuere diam, viverra commodo, gravida. Egestas eget justo, proin porttitor a mattis hac. Sem convallis ut ut sagittis enim et varius volutpat tincidunt. Eget donec lobortis arcu egestas sociis et, convallis tristique. Nunc integer orci placerat sollicitudin. </p>
-                                        </li>
-                                    </ul>
-                                </div>
+                                    <div class="quiz__agreement">
+                                        <input type="checkbox" id="user_agreement" class="quiz__agreement-checkbox" checked>
+                                        <span class="quiz__agreement-fake"></span>
+                                        <label for="user_agreement" class="quiz__agreement-label">Я согласен на обработку моих данных</label>
+                                        <button type="button" class="button quiz__agreement-button js-popup-trigger" data-target=".js-popup-policy">Ознакомится с политикой конфиденциальности данных</button>
+                                    </div>
+                                </form>
                             </li>
                         </ul>
                         <div class="quiz__control">
@@ -347,8 +386,26 @@
                         </div>
                     </div>
                     <ul class="quiz__pictures js-quiz-pictures">
-                        <li class="quiz__pictures-item">
+                        <li class="quiz__pictures-item js-quiz-pic active">
                             <img src="./img/quiz-img-1.jpg" alt="Фото в квизе" class="quiz__pictures-img">
+                        </li>
+                        <li class="quiz__pictures-item js-quiz-pic">
+                            <img src="./img/quiz-img-1.jpg" alt="Фото в квизе" class="quiz__pictures-img">
+                        </li>
+                        <li class="quiz__pictures-item js-quiz-pic">
+                            <img src="./img/quiz-img-2.jpg" alt="Фото в квизе" class="quiz__pictures-img">
+                        </li>
+                        <li class="quiz__pictures-item js-quiz-pic">
+                            <img src="./img/quiz-img-3.jpg" alt="Фото в квизе" class="quiz__pictures-img">
+                        </li>
+                        <li class="quiz__pictures-item js-quiz-pic">
+                            <img src="./img/quiz-img-4.jpg" alt="Фото в квизе" class="quiz__pictures-img">
+                        </li>
+                        <li class="quiz__pictures-item js-quiz-pic">
+                            <img src="./img/quiz-img-5.jpg" alt="Фото в квизе" class="quiz__pictures-img">
+                        </li>
+                        <li class="quiz__pictures-item js-quiz-pic">
+                            <img src="./img/quiz-img-6.jpg" alt="Фото в квизе" class="quiz__pictures-img">
                         </li>
                     </ul>
                 </div>
@@ -378,7 +435,7 @@
                                 <h3 class="place-item__name">Скала Шаманка</h3>
                                 <p class="place-item__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Metus lacinia morbi rhoncus orci cursus vivamus vitae proin. Tortor urna mi nunc in facilisis pharetra. Quis donec ac mi posuere diam, viverra commodo, gravida. Egestas eget justo, proin porttitor a mattis hac. Sem convallis ut ut sagittis enim et varius volutpat tincidunt. Eget donec lobortis arcu egestas sociis et, convallis tristique. Nunc integer orci placerat sollicitudin.</p>
                                 <div class="place-item__bottom">
-                                    <button class="button place-item__play js-popup-trigger">
+                                    <button class="button place-item__play js-media-popup-trigger" data-media-link="https://www.youtube.com/embed/RXPcR8Whuj0" data-media-type="video">
                                         <svg width="50" height="50" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
                                             <circle class="circle" cx="25" cy="25" r="25"/>
                                             <path d="M32 23.2679C33.3333 24.0377 33.3333 25.9623 32 26.7321L23 31.9282C21.6667 32.698 20 31.7358 20 30.1962L20 19.8038C20 18.2642 21.6667 17.302 23 18.0718L32 23.2679Z" fill="black" fill-opacity="0.37"/>
@@ -386,13 +443,19 @@
                                         Посмотрите видео
                                     </button>
                                     <div class="place-item__examples">
-                                        <button class="button place-item__example example">
+                                        <button class="button place-item__example example js-media-popup-slider-trigger" data-slide-index="0">
                                             <img src="./img/place-example-1.jpg" alt="Фото примера" class="example__img">
                                         </button>
-                                        <button class="button place-item__example example">
+                                        <button class="button place-item__example example js-media-popup-slider-trigger" data-slide-index="1">
                                             <img src="./img/place-example-2.jpg" alt="Фото примера" class="example__img">
                                         </button>
-                                        <button class="button place-item__example example">
+                                        <button class="button place-item__example example js-media-popup-slider-trigger" data-slide-index="1">
+                                            <img src="./img/place-example-3.jpg" alt="Фото примера" class="example__img">
+                                        </button>
+                                        <button class="button place-item__example example js-media-popup-slider-trigger" data-slide-index="1">
+                                            <img src="./img/place-example-3.jpg" alt="Фото примера" class="example__img">
+                                        </button>
+                                        <button class="button place-item__example example js-media-popup-slider-trigger" data-slide-index="1">
                                             <img src="./img/place-example-3.jpg" alt="Фото примера" class="example__img">
                                         </button>
                                     </div>
@@ -404,7 +467,7 @@
                                 <h3 class="place-item__name">Скала Шаманка</h3>
                                 <p class="place-item__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Metus lacinia morbi rhoncus orci cursus vivamus vitae proin. Tortor urna mi nunc in facilisis pharetra. Quis donec ac mi posuere diam, viverra commodo, gravida. Egestas eget justo, proin porttitor a mattis hac. Sem convallis ut ut sagittis enim et varius volutpat tincidunt. Eget donec lobortis arcu egestas sociis et, convallis tristique. Nunc integer orci placerat sollicitudin.</p>
                                 <div class="place-item__bottom">
-                                    <button class="button place-item__play js-popup-trigger">
+                                    <button class="button place-item__play js-media-popup-trigger" data-media-link="https://www.youtube.com/embed/RXPcR8Whuj0" data-media-type="video">
                                         <svg width="50" height="50" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
                                             <circle class="circle" cx="25" cy="25" r="25"/>
                                             <path d="M32 23.2679C33.3333 24.0377 33.3333 25.9623 32 26.7321L23 31.9282C21.6667 32.698 20 31.7358 20 30.1962L20 19.8038C20 18.2642 21.6667 17.302 23 18.0718L32 23.2679Z" fill="black" fill-opacity="0.37"/>
@@ -412,13 +475,19 @@
                                         Посмотрите видео
                                     </button>
                                     <div class="place-item__examples">
-                                        <button class="button place-item__example example">
+                                        <button class="button place-item__example example js-media-popup-slider-trigger" data-slide-index="1">
                                             <img src="./img/place-example-1.jpg" alt="Фото примера" class="example__img">
                                         </button>
-                                        <button class="button place-item__example example">
+                                        <button class="button place-item__example example js-media-popup-slider-trigger" data-slide-index="1">
                                             <img src="./img/place-example-2.jpg" alt="Фото примера" class="example__img">
                                         </button>
-                                        <button class="button place-item__example example">
+                                        <button class="button place-item__example example js-media-popup-slider-trigger" data-slide-index="1">
+                                            <img src="./img/place-example-3.jpg" alt="Фото примера" class="example__img">
+                                        </button>
+                                        <button class="button place-item__example example js-media-popup-slider-trigger" data-slide-index="1">
+                                            <img src="./img/place-example-3.jpg" alt="Фото примера" class="example__img">
+                                        </button>
+                                        <button class="button place-item__example example js-media-popup-slider-trigger" data-slide-index="1">
                                             <img src="./img/place-example-3.jpg" alt="Фото примера" class="example__img">
                                         </button>
                                     </div>
@@ -430,7 +499,7 @@
                                 <h3 class="place-item__name">Скала Шаманка</h3>
                                 <p class="place-item__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Metus lacinia morbi rhoncus orci cursus vivamus vitae proin. Tortor urna mi nunc in facilisis pharetra. Quis donec ac mi posuere diam, viverra commodo, gravida. Egestas eget justo, proin porttitor a mattis hac. Sem convallis ut ut sagittis enim et varius volutpat tincidunt. Eget donec lobortis arcu egestas sociis et, convallis tristique. Nunc integer orci placerat sollicitudin.</p>
                                 <div class="place-item__bottom">
-                                    <button class="button place-item__play js-popup-trigger">
+                                    <button class="button place-item__play js-media-popup-trigger" data-media-link="https://www.youtube.com/embed/RXPcR8Whuj0" data-media-type="video">
                                         <svg width="50" height="50" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
                                             <circle class="circle" cx="25" cy="25" r="25"/>
                                             <path d="M32 23.2679C33.3333 24.0377 33.3333 25.9623 32 26.7321L23 31.9282C21.6667 32.698 20 31.7358 20 30.1962L20 19.8038C20 18.2642 21.6667 17.302 23 18.0718L32 23.2679Z" fill="black" fill-opacity="0.37"/>
@@ -438,13 +507,19 @@
                                         Посмотрите видео
                                     </button>
                                     <div class="place-item__examples">
-                                        <button class="button place-item__example example">
+                                        <button class="button place-item__example example js-media-popup-slider-trigger" data-slide-index="1">
                                             <img src="./img/place-example-1.jpg" alt="Фото примера" class="example__img">
                                         </button>
-                                        <button class="button place-item__example example">
+                                        <button class="button place-item__example example js-media-popup-slider-trigger" data-slide-index="1">
                                             <img src="./img/place-example-2.jpg" alt="Фото примера" class="example__img">
                                         </button>
-                                        <button class="button place-item__example example">
+                                        <button class="button place-item__example example js-media-popup-slider-trigger" data-slide-index="1">
+                                            <img src="./img/place-example-3.jpg" alt="Фото примера" class="example__img">
+                                        </button>
+                                        <button class="button place-item__example example js-media-popup-slider-trigger" data-slide-index="1">
+                                            <img src="./img/place-example-3.jpg" alt="Фото примера" class="example__img">
+                                        </button>
+                                        <button class="button place-item__example example js-media-popup-slider-trigger" data-slide-index="1">
                                             <img src="./img/place-example-3.jpg" alt="Фото примера" class="example__img">
                                         </button>
                                     </div>
@@ -460,10 +535,14 @@
                 <div class="hotel__wrap">
                     <div class="hotel__content">
                         <h2 class="section-title hotel__title">Размещение</h2>
-                        <p class="hotel__text"><strong>Отель Baikal View</strong> <br>расположен в потрясающем месте с впечатляющими горными ландшафтами и видом самое глубокое озеро в мире - Байкал. Оно существует уже около 25 млн. лет и является крупнейшим пресноводным водоемом с высококачественной чистой водой.
-
-                        </p>
+                        <p class="hotel__text"><strong>Отель Baikal View</strong> <br>расположен в потрясающем месте с впечатляющими горными ландшафтами и видом самое глубокое озеро в мире - Байкал. Оно существует уже около 25 млн. лет и является крупнейшим пресноводным водоемом с высококачественной чистой водой.</p>
                         <p class="hotel__text">Отель Baikal View Hotel на Ольхоне был основан в 2012 году. Вся территория острова является частью Прибайкальского национального парка, внесенного в список Всемирного природного наследия ЮНЕСКО. <br> Развитая инфаструктура  отеля позволяет каждому гостю найти занятие и развлечение на любой вкус. Территория обустроена спортивной и детской площадкой, зоной барбекю, бассейном, сауной и библиотекой.</p>
+                        <a href="#quiz" class="hotel__link js-scroll-link">
+                            Составить индивидуальный тур
+                            <svg width="22" height="8" viewBox="0 0 22 8" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M21.3536 4.35355C21.5488 4.15829 21.5488 3.84171 21.3536 3.64645L18.1716 0.464466C17.9763 0.269204 17.6597 0.269204 17.4645 0.464466C17.2692 0.659728 17.2692 0.976311 17.4645 1.17157L20.2929 4L17.4645 6.82843C17.2692 7.02369 17.2692 7.34027 17.4645 7.53553C17.6597 7.7308 17.9763 7.7308 18.1716 7.53553L21.3536 4.35355ZM0 4.5H21V3.5H0V4.5Z"/>
+                            </svg>
+                        </a>
                     </div>
                     <div class="hotel__swiper js-hotel-swiper">
                         <div class="swiper-wrapper">
@@ -489,60 +568,60 @@
             <div class="container">
                 <h2 class="section-title gallery__title">Фото наших туристов</h2>
             </div>
-            <div class="gallery__container">
+            <div class="gallery__container js-gallery">
                 <div class="gallery__column">
-                    <a href="#" class="gallery__item">
-                        <img src="./img/gallery-img-1.jpg" alt="Фото в галерее" class="gallery__img">
+                    <a href="#" class="gallery__item js-gallery-item" data-slide-index="1">
+                        <img src="./img/gallery-img-1.jpg" alt="Фото в галерее" class="gallery__img" loading="lazy">
                     </a>
-                    <a href="#" class="gallery__item">
-                        <img src="./img/gallery-img-2.jpg" alt="Фото в галерее" class="gallery__img">
+                    <a href="#" class="gallery__item js-gallery-item" data-slide-index="0">
+                        <img src="./img/gallery-img-2.jpg" alt="Фото в галерее" class="gallery__img" loading="lazy">
                     </a>
-                    <a href="#" class="gallery__item">
-                        <img src="./img/gallery-img-3.jpg" alt="Фото в галерее" class="gallery__img">
+                    <a href="#" class="gallery__item js-gallery-item" data-slide-index="1">
+                        <img src="./img/gallery-img-3.jpg" alt="Фото в галерее" class="gallery__img" loading="lazy">
                     </a>
                 </div>
                 <div class="gallery__column">
-                    <a href="#" class="gallery__item">
-                        <img src="./img/gallery-img-3.jpg" alt="Фото в галерее" class="gallery__img">
+                    <a href="#" class="gallery__item js-gallery-item" data-slide-index="0">
+                        <img src="./img/gallery-img-3.jpg" alt="Фото в галерее" class="gallery__img" loading="lazy">
                     </a>
-                    <a href="#" class="gallery__item">
-                        <img src="./img/gallery-img-3.jpg" alt="Фото в галерее" class="gallery__img">
+                    <a href="#" class="gallery__item js-gallery-item" data-slide-index="0">
+                        <img src="./img/gallery-img-3.jpg" alt="Фото в галерее" class="gallery__img" loading="lazy">
                     </a>
-                    <a href="#" class="gallery__item">
-                        <img src="./img/gallery-img-1.jpg" alt="Фото в галерее" class="gallery__img">
-                    </a>
-                </div>
-                <div class="gallery__column">
-                    <a href="#" class="gallery__item">
-                        <img src="./img/gallery-img-1.jpg" alt="Фото в галерее" class="gallery__img">
-                    </a>
-                    <a href="#" class="gallery__item">
-                        <img src="./img/gallery-img-2.jpg" alt="Фото в галерее" class="gallery__img">
-                    </a>
-                    <a href="#" class="gallery__item">
-                        <img src="./img/gallery-img-3.jpg" alt="Фото в галерее" class="gallery__img">
+                    <a href="#" class="gallery__item js-gallery-item" data-slide-index="0">
+                        <img src="./img/gallery-img-1.jpg" alt="Фото в галерее" class="gallery__img" loading="lazy">
                     </a>
                 </div>
                 <div class="gallery__column">
-                    <a href="#" class="gallery__item">
-                        <img src="./img/gallery-img-2.jpg" alt="Фото в галерее" class="gallery__img">
+                    <a href="#" class="gallery__item js-gallery-item" data-slide-index="1">
+                        <img src="./img/gallery-img-1.jpg" alt="Фото в галерее" class="gallery__img" loading="lazy">
                     </a>
-                    <a href="#" class="gallery__item">
-                        <img src="./img/gallery-img-2.jpg" alt="Фото в галерее" class="gallery__img">
+                    <a href="#" class="gallery__item js-gallery-item" data-slide-index="1">
+                        <img src="./img/gallery-img-2.jpg" alt="Фото в галерее" class="gallery__img" loading="lazy">
                     </a>
-                    <a href="#" class="gallery__item">
-                        <img src="./img/gallery-img-3.jpg" alt="Фото в галерее" class="gallery__img">
+                    <a href="#" class="gallery__item js-gallery-item" data-slide-index="1">
+                        <img src="./img/gallery-img-3.jpg" alt="Фото в галерее" class="gallery__img" loading="lazy">
                     </a>
                 </div>
                 <div class="gallery__column">
-                    <a href="#" class="gallery__item">
-                        <img src="./img/gallery-img-3.jpg" alt="Фото в галерее" class="gallery__img">
+                    <a href="#" class="gallery__item js-gallery-item" data-slide-index="1">
+                        <img src="./img/gallery-img-2.jpg" alt="Фото в галерее" class="gallery__img" loading="lazy">
                     </a>
-                    <a href="#" class="gallery__item">
-                        <img src="./img/gallery-img-3.jpg" alt="Фото в галерее" class="gallery__img">
+                    <a href="#" class="gallery__item js-gallery-item" data-slide-index="1">
+                        <img src="./img/gallery-img-2.jpg" alt="Фото в галерее" class="gallery__img" loading="lazy">
                     </a>
-                    <a href="#" class="gallery__item">
-                        <img src="./img/gallery-img-3.jpg" alt="Фото в галерее" class="gallery__img">
+                    <a href="#" class="gallery__item js-gallery-item" data-slide-index="1">
+                        <img src="./img/gallery-img-3.jpg" alt="Фото в галерее" class="gallery__img" loading="lazy">
+                    </a>
+                </div>
+                <div class="gallery__column">
+                    <a href="#" class="gallery__item js-gallery-item" data-slide-index="1">
+                        <img src="./img/gallery-img-3.jpg" alt="Фото в галерее" class="gallery__img" loading="lazy">
+                    </a>
+                    <a href="#" class="gallery__item js-gallery-item" data-slide-index="0">
+                        <img src="./img/gallery-img-3.jpg" alt="Фото в галерее" class="gallery__img" loading="lazy">
+                    </a>
+                    <a href="#" class="gallery__item js-gallery-item" data-slide-index="0">
+                        <img src="./img/gallery-img-3.jpg" alt="Фото в галерее" class="gallery__img" loading="lazy">
                     </a>
                 </div>
             </div>
@@ -616,7 +695,7 @@
                             <span class="form__label">Ваш номер телефона</span>
                             <input type="tel" name="user_tel" class="form__input" placeholder="+7 (___) ___ __ __">
                         </label>
-                        <button class="button form__submit">Отправить</button>
+                        <button class="button button_normal form__submit">Отправить</button>
                     </form>
                 </div>
             </div>
@@ -631,14 +710,134 @@
                 <div class="footer__data">
                     <span class="footer__text footer__text_map">Иркутская обл., <br> Ольхонский р-н, п.Хужир, ул. Российская, 17</span>
                     <a href="tel:+78002507684" class="footer__text footer__text_tel">+7 (800) 250-76-84</a>
-                    <button class="button button_dashed footer__button js-popup-trigger" data-target="js-popup-recall">Заказать звонок</button>
+                    <button class="button button_dashed footer__button js-popup-trigger" data-target=".js-popup-recall">Заказать звонок</button>
                 </div>
             </div>
             <div class="footer__wrap">
-                <button class="button footer__small js-popup-trigger" data-target="js-popup-policy">Политика конфиденциальности</button>
+                <button class="button footer__small js-popup-trigger" data-target=".js-popup-policy">Политика конфиденциальности</button>
                 <span class="footer__small">Сайт создан на <a href="#"> Zavod</a></span>
             </div>
         </div>
     </footer>
+
+    <div class="popup js-popup js-popup-close js-popup-recall">
+        <div class="popup__body popup__body_medium">
+            <button class="button popup__close js-popup-close"></button>
+            <h2 class="section-title section-title_center popup__title">Заказажите звонок</h2>
+            <p class="popup__subtitle">Заполните форму, и мы вам перезвоним и ответим на все вопросы</p>
+            <form class="form popup__form">
+                <label class="form__item">
+                    <span class="form__label">Как вас зовут?</span>
+                    <input type="text" name="user_name" class="form__input" placeholder="Иван Иванов">
+                </label>
+                <label class="form__item">
+                    <span class="form__label">Ваш номер телефона</span>
+                    <input type="tel" name="user_tel" class="form__input" placeholder="+7 (___) ___ __ __">
+                </label>
+                <button class="button button_normal form__submit">Отправить</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="popup js-popup js-popup-close js-popup-policy">
+        <div class="popup__body popup__body_large">
+            <button class="button popup__close js-popup-close"></button>
+            <h2 class="section-title popup__title">Политика конфиденциальности</h2>
+            <p class="popup__subtitle popup__subtitle_left">Политика конфиденциальности </p>
+            <div class="popup__content">
+                <p>
+                    <h3>1. Общие положения</h3>
+                    Настоящая политика обработки персональных данных составлена в соответствии с требованиями Федерального закона от 27.07.2006. №152-ФЗ «О персональных данных» и определяет порядок обработки персональных данных и меры по обеспечению безопасности персональных данных, предпринимаемые Михайловым Иваном Сергеевичем (далее – Оператор).
+                    1.1. Оператор ставит своей важнейшей целью и условием осуществления своей деятельности соблюдение прав и свобод человека и гражданина при обработке его персональных данных, в том числе защиты прав на неприкосновенность частной жизни, личную и семейную тайну.
+                    1.2. Настоящая политика Оператора в отношении обработки персональных данных (далее – Политика) применяется ко всей информации, которую Оператор может получить о посетителях веб-сайта httpsː//thismywebsite·com.
+                    
+                    2. Основные понятия, используемые в Политике
+                    <ol>
+                        <li>2.1. Автоматизированная обработка персональных данных – обработка персональных данных с помощью средств вычислительной техники;</li>
+                        <li>2.1. Автоматизированная обработка персональных данных – обработка персональных данных с помощью средств вычислительной техники;</li>
+                        <li>2.1. Автоматизированная обработка персональных данных – обработка персональных данных с помощью средств вычислительной техники;</li>
+                    </ol>
+                    2.4. Информационная система персональных данных — совокупность содержащихся в базах данных персональных данных, и обеспечивающих их обработку информационных технологий и технических средств;
+                    2.5. Обезличивание персональных данных — действия, в результате которых невозможно определить без использования дополнительной информации принадлежность персональных данных конкретному Пользователю или иному субъекту персональных данных;
+                    2.6. Обработка персональных данных – любое действие (операция) или совокупность действий (операций), совершаемых с использованием средств автоматизации или без использования таких средств с персональными данными, включая сбор, запись, систематизацию, накопление, хранение, уточнение (обновление, изменение), извлечение, использование, передачу (распространение, предоставление, доступ), обезличивание, блокирование, удаление, уничтожение персональных данных;</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup js-popup js-popup-close js-popup-success">
+        <div class="popup__body popup__body_large">
+            <button class="button popup__close js-popup-close"></button>
+            <h2 class="section-title section-title_center popup__title">Спасибо! <br> Вша заявка отправлена.</h2>
+            <p class="popup__subtitle">Мы скоро вам перезвоним</p>
+            <button class="button button_normal popup__button js-popup-close">Закрыть</button>
+        </div>
+    </div>
+
+    <div class="popup js-popup js-popup-close js-popup-error">
+        <div class="popup__body popup__body_large">
+            <button class="button popup__close js-popup-close"></button>
+            <h2 class="section-title section-title_center popup__title">Извините! <br> У нас произошла ошибка.</h2>
+            <p class="popup__subtitle">Попробуйте отправить заявку еще раз.</p>
+            <button class="button button_normal popup__button js-popup-close">Закрыть</button>
+        </div>
+    </div>
+    
+    <div class="popup js-popup js-popup-close js-popup-media">
+        <div class="popup__body popup__body_media">
+            <button class="button popup__close popup__close_media js-popup-close"></button>
+        </div>
+    </div>
+    
+    <div class="popup js-popup js-popup-close js-popup-slider">
+        <div class="popup__body popup__body_slider js-popup-swiper-container">
+            <button class="button popup__close popup__close_media js-popup-close"></button>
+            <div class="swiper-wrapper">
+                <div class="swiper-slide popup__slide">
+                    <img data-src="./img/place-1.jpg" alt="Фото в слайдере" class="popup__img swiper-lazy">
+                    <div class="swiper-lazy-preloader"></div>
+                </div>
+                <div class="swiper-slide popup__slide">
+                    <img data-src="./img/place-1.jpg" alt="Фото в слайдере" class="popup__img swiper-lazy">
+                    <div class="swiper-lazy-preloader"></div>
+                </div>
+                <div class="swiper-slide popup__slide">
+                    <img data-src="./img/place-1.jpg" alt="Фото в слайдере" class="popup__img swiper-lazy">
+                    <div class="swiper-lazy-preloader"></div>
+                </div>
+                <div class="swiper-slide popup__slide">
+                    <img data-src="./img/place-1.jpg" alt="Фото в слайдере" class="popup__img swiper-lazy">
+                    <div class="swiper-lazy-preloader"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="popup js-popup js-popup-close js-popup-gallery-slider">
+        <div class="popup__body popup__body_slider js-popup-swiper-container">
+            <button class="button popup__close popup__close_media js-popup-close"></button>
+            <div class="swiper-wrapper">
+                <div class="swiper-slide popup__slide">
+                    <img data-src="./img/place-1.jpg" alt="Фото в слайдере" class="popup__img swiper-lazy">
+                    <div class="swiper-lazy-preloader"></div>
+                </div>
+                <div class="swiper-slide popup__slide">
+                    <img data-src="./img/place-1.jpg" alt="Фото в слайдере" class="popup__img swiper-lazy">
+                    <div class="swiper-lazy-preloader"></div>
+                </div>
+                <div class="swiper-slide popup__slide">
+                    <img data-src="./img/place-1.jpg" alt="Фото в слайдере" class="popup__img swiper-lazy">
+                    <div class="swiper-lazy-preloader"></div>
+                </div>
+                <div class="swiper-slide popup__slide">
+                    <img data-src="./img/place-1.jpg" alt="Фото в слайдере" class="popup__img swiper-lazy">
+                    <div class="swiper-lazy-preloader"></div>
+                </div>
+                <div class="swiper-slide popup__slide">
+                    <img data-src="./img/place-1.jpg" alt="Фото в слайдере" class="popup__img swiper-lazy">
+                    <div class="swiper-lazy-preloader"></div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
