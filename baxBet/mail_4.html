@@ -23,7 +23,7 @@
         }
 
         a {
-            color: inherit;
+            color: inherit !important;
         }
 
         .body{
@@ -46,7 +46,7 @@
 
         .header__link {
             font-weight: 700;
-            color: #fff;
+            color: #fff !important;
             font-size: 17px;
         }
 
@@ -63,7 +63,8 @@
         .hero__img {
             max-width: none;
             width: calc(100% + 3px);
-            transform: translate(-1px, -1px);
+            margin-left: -1px;
+            margin-top: -1px;
         }
 
         .hero__img_cards {
@@ -124,7 +125,7 @@
 
         .bottom__link {
             display: inline-block;
-            color: #fff;
+            color: #fff !important;
             text-decoration: none;
         }
 
@@ -295,23 +296,32 @@
             .hero__img_cards {
                 transform: translate(-20px, 2px);
             }
-        }
-
-        @media screen and (max-width: 440px) {
+            
             .card__body {
-                padding: 30px 45px !important;
+                padding: 30px 25px !important;
                 background-image: none !important;
-            }
-
-            .card__title, .card__subtitle {
-                text-align: center !important;
-                width: 100% !important;
-                display: block !important;
             }
 
             .card__body > * {
                 display: block !important;
                 max-width: none !important;
+                text-align: center !important;
+                width: 100% !important;
+            }
+
+            .card__title, .card__subtitle, .card__button {
+                display: block !important;
+                max-width: none !important;
+                text-align: center !important;
+                width: 100% !important;
+            }
+        }
+
+        @media screen and (max-width: 440px) {
+            .card__body {
+                background-position-y: top !important;
+                background-position-x: 105% !important;
+                background-size: 165% !important;
             }
 
             .bottom td td {
@@ -336,7 +346,7 @@
                             <img src="https://belshed.github.io/baxBet/img/logo.png" alt="Logo">
                         </td>
                         <td align="right">
-                            <a href="#" class="header__link">Вход</a>
+                            <a href="https://www.baxbet.com" class="header__link">Вход</a>
                         </td>
                     </tr>
                 </table>
@@ -346,7 +356,7 @@
             <td>
                 <table cellspacing="0" border="0" class="container wrapper">
                     <tr class="hero">
-                        <td>
+                        <td style="padding: 0 !important;">
                             <img src="https://belshed.github.io/baxBet/img/hero-4.png" class="hero__img" alt="Hero image">
                         </td>
                     </tr>
@@ -358,7 +368,7 @@
                     <tr class="inner">
                         <td style="padding-bottom: 45px;">
                             <p style="margin-bottom: 30px;" class="text text_center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
-                            <a href="#" style="margin: 0 auto; display: block; max-width: 180px;" class="card__button">Кнопка</a>
+                            <a href="https://www.baxbet.com" style="margin: 0 auto; display: block; max-width: 180px;" class="card__button">Кнопка</a>
                         </td>
                     </tr>
                     <tr class="inner content table__wrap">
@@ -413,7 +423,7 @@
                             <div class="card__body">
                                 <span class="text text_center text_yellow text_title card__title">Бонус код</span>
                                 <span class="text text_center text_yellow card__subtitle">Призыв к действию</span>
-                                <a href="#" class="card__button">Кнопка</a>
+                                <a href="https://www.baxbet.com" class="card__button">Кнопка</a>
                             </div>
                         </td>
                     </tr>
@@ -444,7 +454,7 @@
         </tr>
         <tr>
             <td>
-                <p style="padding: 30px; display: block;" class="container text text_center text_small">Вы получили это письмо, потому что дали согласие на получение рассылки на boxbet Casino. Ознакомится с правилами использования сайта можно <a href="#">здесь</a>. В любой момент Вы можете <a href="#">отказаться</a> от получения рассылки.</p>
+                <p style="padding: 30px; display: block;" class="container text text_center text_small">Вы получили это письмо, потому что дали согласие на получение рассылки на boxbet Casino. Ознакомится с правилами использования сайта можно <a href="https://www.baxbet.com">здесь</a>. В любой момент Вы можете <a href="https://www.baxbet.com">отказаться</a> от получения рассылки.</p>
             </td>
         </tr>
     </table>

@@ -1,0 +1,199 @@
+@import ./variables
+
+*, *::before, *::after
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+img, video
+    max-width: 100%
+    display: block
+    border: none
+
+.global-container
+    width: 100%
+    max-width: 948px
+    margin: 0 auto
+    overflow-x: hidden
+    background-color: $text-black
+
+.section-title
+    @include font('AvenirNext', 40px, 700, normal)
+    color: $text-white
+    text-align: center
+    text-transform: uppercase
+
+.header
+    display: flex
+    justify-content: center
+    padding: 40px
+    &__img
+        width: 100%
+        max-width: 355px
+        height: auto
+
+.hero
+    padding: 30px 0px 60px
+    background-repeat: no-repeat
+    background-size: cover
+    background-image: url(../img/hero-bg.jpg)
+    background-position-x: right
+    position: relative
+    &::after
+        content: ''
+        display: block
+        height: 100%
+        width: 15px
+        position: absolute
+        right: 0
+        top: 0
+        background-color: $red
+    &__container
+        width: 100%
+        max-width: 690px
+        margin: 0 auto
+    &__content
+        display: flex
+        flex-direction: column
+        align-items: center
+        max-width: 230px
+    &__logo
+        max-width: 225px
+        width: 100%
+    &__img
+        margin: 25px 0px
+    &__text
+        color: $text-white
+        @include font('AvenirNext', 26px, 500, normal)
+    &__name
+        position: absolute
+        display: inline-block
+        @include font('AvenirNext', 14px, 500, normal)
+        color: $text-white
+        bottom: 13px
+        left: 13px
+
+.about
+    padding-top: 55px
+    position: relative
+    display: flex
+    flex-direction: column
+    &__deco
+        &:nth-of-type(1)
+            position: absolute
+            left: 0px
+        &:nth-of-type(2)
+            position: absolute
+            top: 1030px
+            z-index: 0
+            right: 0px
+    &__title
+        margin-bottom: 100px
+        order: 0
+    &__item
+        order: 1
+        & + &
+            margin-top: 135px
+        &:last-of-type
+            margin-bottom: 150px
+    &__text
+        order: 1
+        @include font('AvenirNext', 24px, 400, normal)
+        color: $text-white
+        &_center
+            text-align: center
+        &_block
+            margin: 100px auto 120px
+            max-width: 560px
+            display: block
+            width: 100%
+
+.feature
+    display: flex
+    align-items: flex-end
+    justify-content: center
+    flex-direction: column
+    height: 430px
+    flex-wrap: wrap
+    text-align: right
+    position: relative
+    &__title
+        text-transform: uppercase
+        @include font('AvenirNext', 30px, 500, normal)
+        margin-bottom: 30px
+        color: $text-white
+    &__content + &__media
+        margin-left: 50px
+    &__media + &__content
+        margin-left: 50px
+    &__content
+        width: 100%
+        position: relative
+    &__text
+        @include font('AvenirNext', 24px, 400, normal)
+        color: $text-white
+        max-width: 370px
+    &__media
+        height: 430px
+        max-width: 45%
+        width: 100%
+        order: 1
+        object-fit: cover
+    &_reverse
+        text-align: left
+        justify-content: center
+        align-items: flex-start
+        .feature__content + .feature__media
+            margin-right: 50px
+            margin-left: 0px
+        .feature__text, .feature__title
+            order: 2
+
+.catalog
+    padding-bottom: 370px
+    background-repeat: no-repeat
+    background-size: contain
+    background-position: center bottom
+    background-image: url(../img/catalog-bg.png)
+    &__container
+        width: 100%
+        max-width: 725px
+        margin: 0 auto
+    &__title
+        margin-bottom: 75px
+    &__wrap
+        display: flex
+        justify-content: space-between
+    &__item
+        margin-bottom: 25px
+        & + &
+            margin-left: 30px
+
+.item
+    display: flex
+    flex-direction: column
+    align-items: center
+    &__img
+        margin-bottom: 30px
+        margin-left: -15px
+    &__name
+        @include font('AvenirNext', 18px, 400, normal)
+        color: $text-white
+        text-align: center
+        display: inline-block
+        margin-bottom: 30px
+    &__link
+        display: inline-block
+        width: 100%
+        max-width: 285px
+        background-color: $text-white
+        color: $text-black
+        text-transform: uppercase
+        @include font('AvenirNext', 18px, 500, normal)
+        text-decoration: none
+        text-align: center
+        padding: 18px
+
+
+#detach-button-host
+    display: none
