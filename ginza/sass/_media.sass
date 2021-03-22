@@ -2,22 +2,22 @@
 
 
 @media screen and ( max-width: 840px )
-    .about
+    .ginza-about
         &__deco
             &:nth-of-type(2)
                 display: none
 
-    .hero
+    .ginza-hero
         background-position-x: -10%
 
 @media screen and ( max-width: 740px )
 
-    .header
+    .ginza-header
         padding: 20px 0px 30px
         &__img
             max-width: 200px
 
-    .hero
+    .ginza-hero
         background-position-x: 60%
         padding: 30px 0px
         &::after            
@@ -30,16 +30,16 @@
         &__text
             font-size: 16px
 
-    .global-container
+    .ginza-global-container
         padding: 0px 10px
 
-    .section-title
+    .ginza-section-title
         font-size: 23px
         line-height: 30px
         br
             display: none
 
-    .about
+    .ginza-about
         &__title
             margin-bottom: 35px
         &__text
@@ -51,7 +51,7 @@
             &:nth-of-type(1)
                 display: none
 
-    .feature
+    .ginza-feature
         height: auto
         align-items: flex-start !important
         margin-top: 0 !important
@@ -59,6 +59,11 @@
         &__title
             order: 0 !important
             text-align: left
+            &_dots
+                &::before
+                    content: ''
+                &::after
+                    content: '...'
         &__media
             order: 1 !important
             text-align: left
@@ -71,7 +76,7 @@
             line-height: 24px
             text-align: left
 
-    .catalog
+    .ginza-catalog
         background-image: none
         padding-bottom: 0px
         &__title
@@ -80,7 +85,7 @@
             margin-bottom: 50px
 
 @media screen and ( max-width: 520px )
-    .catalog
+    .ginza-catalog
         &__wrap
             flex-direction: column
             align-items: stretch
@@ -88,7 +93,7 @@
             & + &
                 margin-left: 0
 
-    .item
+    .ginza-item
         &__name
             br
                 &:nth-of-type(2)
@@ -98,7 +103,7 @@
             line-height: 15px
 
 @media screen and ( max-width: 390px )
-    .hero
+    .ginza-hero
         padding: 20px 0px
         &__content
             max-width: 100px

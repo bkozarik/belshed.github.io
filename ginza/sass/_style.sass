@@ -10,20 +10,20 @@ img, video
     display: block
     border: none
 
-.global-container
+.ginza-global-container
     width: 100%
     max-width: 948px
     margin: 0 auto
     overflow-x: hidden
     background-color: $text-black
 
-.section-title
+.ginza-section-title
     @include font('AvenirNext', 40px, 700, normal)
     color: $text-white
     text-align: center
     text-transform: uppercase
 
-.header
+.ginza-header
     display: flex
     justify-content: center
     padding: 40px
@@ -31,8 +31,9 @@ img, video
         width: 100%
         max-width: 355px
         height: auto
+        flex-shrink: 0
 
-.hero
+.ginza-hero
     padding: 30px 0px 60px
     background-repeat: no-repeat
     background-size: cover
@@ -73,7 +74,7 @@ img, video
         bottom: 13px
         left: 13px
 
-.about
+.ginza-about
     padding-top: 55px
     position: relative
     display: flex
@@ -108,7 +109,7 @@ img, video
             display: block
             width: 100%
 
-.feature
+.ginza-feature
     display: flex
     align-items: flex-end
     justify-content: center
@@ -122,6 +123,9 @@ img, video
         @include font('AvenirNext', 30px, 500, normal)
         margin-bottom: 30px
         color: $text-white
+        &_dots
+            &::before
+                content: '...'
     &__content + &__media
         margin-left: 50px
     &__media + &__content
@@ -143,13 +147,13 @@ img, video
         text-align: left
         justify-content: center
         align-items: flex-start
-        .feature__content + .feature__media
+        .ginza-feature__content + .ginza-feature__media
             margin-right: 50px
             margin-left: 0px
-        .feature__text, .feature__title
+        .ginza-feature__text, .ginza-feature__title
             order: 2
 
-.catalog
+.ginza-catalog
     padding-bottom: 370px
     background-repeat: no-repeat
     background-size: contain
@@ -169,7 +173,7 @@ img, video
         & + &
             margin-left: 30px
 
-.item
+.ginza-item
     display: flex
     flex-direction: column
     align-items: center
