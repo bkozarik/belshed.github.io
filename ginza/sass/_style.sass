@@ -31,7 +31,10 @@ img, video
         width: 100%
         max-width: 355px
         height: auto
+        flex-grow: 0
         flex-shrink: 0
+        object-fit: contain
+        display: block
 
 .ginza-hero
     padding: 30px 0px 60px
@@ -120,7 +123,7 @@ img, video
     position: relative
     &__title
         text-transform: uppercase
-        @include font('AvenirNext', 30px, 500, normal)
+        @include font('AvenirNext', 33px, 500, 45px)
         margin-bottom: 30px
         color: $text-white
         &_dots
@@ -170,6 +173,7 @@ img, video
         justify-content: space-between
     &__item
         margin-bottom: 25px
+        max-width: 47%
         & + &
             margin-left: 30px
 
@@ -180,6 +184,7 @@ img, video
     &__img
         margin-bottom: 30px
         margin-left: -15px
+        max-height: 293px
     &__name
         @include font('AvenirNext', 18px, 400, normal)
         color: $text-white
