@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,OAAO,AAAC,CACJ,OAAO,CAAE,YAAY,CACrB,aAAa,CAAE,GAAG,CAClB,eAAe,CAAE,IAAI,CACrB,UAAU,CAAE,MAAM,CAClB,UAAU,CAAE,IAAI,CAChB,MAAM,CAAE,OAAO,CACf,gBAAgB,CAAE,WAAW,CAC7B,MAAM,CAAE,IAAI,CACZ,QAAQ,CAAE,QAAQ,CAClB,OAAO,CAAE,IAAI,CACb,QAAQ,CAAE,MAAM,CAAG",
+    "sources": [
+        "../sass/button.sass",
+        "../sass/varaibles.sass"
+    ],
+    "names": [],
+    "file": "button.css"
+}

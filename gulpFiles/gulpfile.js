@@ -75,13 +75,15 @@ const compileJS = () => {
             "format": "iife",
             input: 'src/js/main.js'}))
         .pipe(jsmin())
-        .pipe(dest('dist/js/'));
+        .pipe(dest('dist/js/'))
+        .pipe(browserSync.stream());
 }
 
 const concatJS = () => {
     return src(['src/js/vendors/*.js', 'dist/js/**/*.js'])
-        .pipe(gulpConcat('index.js'))
-        .pipe(dest('dist/js/'));
+        .pipe(gulpConcat('main.js'))
+        .pipe(dest('dist/js/'))
+        .pipe(browserSync.stream());
 
 }
 

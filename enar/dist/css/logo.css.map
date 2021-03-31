@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,KAAK,AAAC,CACF,OAAO,CAAE,KAAK,CACd,KAAK,CAAE,IAAI,CACX,WAAW,CAAE,CAAC,CACd,SAAS,CAAE,KAAK,CAGK,AAFpB,AAAD,UAAM,AAAC,CACH,KAAK,CAAE,IAAI,CACX,MAAM,CAAE,IAAI,CAAG",
+    "sources": [
+        "../sass/logo.sass",
+        "../sass/varaibles.sass"
+    ],
+    "names": [],
+    "file": "logo.css"
+}

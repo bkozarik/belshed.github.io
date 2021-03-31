@@ -4,7 +4,8 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "gulp",
+    "build": "gulp build"
   },
   "author": "",
   "license": "ISC",
@@ -44,6 +45,7 @@
     "node-sass": "^5.0.0"
   },
   "dependencies": {
-    "normalize.css": "^8.0.1"
+    "normalize.css": "^8.0.1",
+    "swiper": "^6.5.0"
   }
 }

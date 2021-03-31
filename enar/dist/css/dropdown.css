@@ -1,0 +1,2 @@
+.dropdown{position:relative}.dropdown__list{position:absolute;-webkit-transition:all .3s ease-out 0s;transition:all .3s ease-out 0s;opacity:0;visibility:hidden;list-style-type:none}.dropdown__list.active{opacity:1;visibility:visible}.dropdown .js-dropdown-select,.dropdown select{opacity:0;position:absolute;visibility:hidden;font-size:0}
+/*# sourceMappingURL=dropdown.css.map */

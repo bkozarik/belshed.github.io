@@ -1,0 +1,2 @@
+.valutes{margin-right:auto;-ms-flex-negative:0;flex-shrink:0;margin-left:70px;visibility:hidden;-webkit-transition:all .3s ease-out 0s;transition:all .3s ease-out 0s;opacity:0}.valutes__list{list-style-type:none}.valutes__item{font-size:13px}.valutes__link{opacity:0;visibility:hidden;font-size:0;position:absolute}.valutes_visible{opacity:1;visibility:visible}@media screen and (max-width: 400px){.valutes{margin-left:auto}}@media (max-height: 500px) and (orientation: landscape){.valutes{margin-left:25px}}
+/*# sourceMappingURL=valutes.css.map */

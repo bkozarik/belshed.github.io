@@ -18,11 +18,11 @@ img
     width: 100%
     margin: 0 auto
     max-width: 880px
-    padding: 0px 15px
+    padding: 0px
 
 .shiseido-section-title
     text-align: center
-    @include font('AvenirNext', 37px, 700, normal)
+    @include font(37px, 700, normal)
 
 .shiseido-header
     .shiseido-wrap
@@ -41,9 +41,16 @@ img
     display: flex
     align-items: stretch
     margin-bottom: 90px
+    max-height: 400px
+    height: 100%
+    &__img
+        object-fit: cover
+        &:first-child
+            max-width: 33%
+            object-position: right center
 
 .shiseido-text
-    @include font('AvenirNext', 20px, 500, 29px)
+    @include font(20px, 500, 29px)
     &_center
         text-align: center
     strong
@@ -57,8 +64,6 @@ img
         background-image: url(../img/about-bg.jpg)
         display: flex
         align-items: stretch
-        margin-left: 30px
-        margin-right: 30px
     &__list
         list-style-type: none
     &__img
@@ -68,12 +73,12 @@ img
     &__title
         margin-bottom: 30px
     &__text
-        margin-bottom: 65px
+        margin-bottom: 65px !important
         line-height: 29px
     &__list
         padding: 75px 0px 75px 30px
     &__item
-        @include font('AvenirNext', 20px, 500, normal)
+        @include font(20px, 500, normal)
         & + &
             margin-top: 17px
     
@@ -87,10 +92,10 @@ img
         text-align: center
         text-decoration: underline
         text-transform: uppercase
-        @include font('AvenirNext', 16px, 500, normal)
+        @include font(16px, 500, normal)
         position: absolute
-        top: 80px
-        right: 60px
+        top: 70px
+        right: 50px
     &__img
         object-fit: cover
         flex-shrink: 0
@@ -117,7 +122,7 @@ img
             display: block
             position: absolute
     &__name
-        @include font('AvenirNext', 16px, 400, normal)
+        @include font(16px, 400, normal)
         text-align: center
         strong
             text-transform: uppercase
@@ -127,7 +132,7 @@ img
     &__title
         margin-bottom: 30px
     &__text
-        margin-bottom: 50px
+        margin-bottom: 50px !important
     &__video
         width: 100%
 
@@ -142,7 +147,7 @@ img
     &__img
         margin-right: 50px
     &__title
-        @include font('AvenirNext', 26px, 700, normal)
+        @include font(26px, 700, normal)
         margin-bottom: 35px
     &__text
         font-weight: 500
@@ -161,7 +166,7 @@ img
     &__item
         max-width: 270px
         width: 100%
-        margin-right: 35px
+        margin-right: 25px
         &-img
             width: 100%
             height: auto
@@ -169,11 +174,11 @@ img
             margin-bottom: 25px
         &-name
             text-align: center
-            @include font('AvenirNext', 16px, 700, 24px)
+            @include font(16px, 700, 24px)
             margin-bottom: 22px
         &-text
             text-align: center
-            @include font('AvenirNext', 14px, 500, 20px)
+            @include font(14px, 500, 20px)
         &:last-child
             margin-right: 0
     .shiseido-wrap
@@ -212,7 +217,7 @@ img
             height: 300px
             margin-top: 65px
         &-step
-            @include font('AvenirNext', 17px, 700, normal)
+            @include font(17px, 700, normal)
             display: inline-block
             margin-bottom: 30px
             color: #d6001d
@@ -223,14 +228,14 @@ img
             margin-bottom: 45px
         &-brand
             margin-bottom: 30px
-            @include font('AvenirNext', 20px, 700, normal)
+            @include font(20px, 700, normal)
         &-name
             margin-bottom: 20px
-            @include font('AvenirNext', 20px, 500, normal)
+            @include font(20px, 500, normal)
         &-link
             display: inline-block
             margin-top: auto
-            @include font('AvenirNext', 18px, 400, 18px)
+            @include font(18px, 400, 18px)
             text-align: center
             text-decoration: none
             text-transform: uppercase
@@ -239,6 +244,9 @@ img
             padding: 14px
             color: #fff
             background-color: #000
+            &:hover
+                color: #fff
+                text-decoration: none
         & > *
             text-align: center
     .shiseido-wrap

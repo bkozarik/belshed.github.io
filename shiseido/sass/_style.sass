@@ -37,13 +37,13 @@ img
     &__content
         max-width: 435px
     &__new
-        @include font('AvenirNext', 20px, 400, normal)
+        @include font(20px, 400, normal)
         text-transform: uppercase
     &__title
-        @include font('AvenirNext', 40px, 700, normal)
+        @include font(40px, 700, normal)
         margin-bottom: 10px
     &__text
-        @include font('AvenirNext', 17px, 500, normal)
+        @include font(17px, 500, normal)
     &__item
         position: absolute
         &-title
@@ -52,16 +52,16 @@ img
             text-decoration: underline
             text-transform: uppercase
             margin-bottom: 5px
-            @include font('AvenirNext', 14px, 500, normal)
+            @include font(14px, 500, normal)
         &-text
             text-align: right
-            @include font('AvenirNext', 12px, 500, normal)
+            @include font(12px, 500, normal)
         &:nth-child(2)
-            left: 110px
+            left: 50px
             top: 60px
             max-width: 150px
         &:nth-child(3)
-            left: 70px
+            left: 0px
             top: 185px
             max-width: 175px
 
@@ -78,13 +78,13 @@ img
         margin-bottom: 20px
 
 .shiseido-text
-    @include font('AvenirNext', 20px, 500, normal)
+    @include font(20px, 500, normal)
     &_center
         text-align: center
 
 .shiseido-section-title
     text-align: center
-    @include font('AvenirNext', 33px, 700, normal)
+    @include font(33px, 700, normal)
 
 .shiseido-video
     padding-bottom: 100px
@@ -97,7 +97,7 @@ img
         pointer-events: none
     &__small
         display: block
-        @include font('AvenirNext', 12px, 500, normal)
+        @include font(12px, 500, normal)
 
 .shiseido-formula
     padding-bottom: 85px
@@ -117,10 +117,10 @@ img
                     // width: calc( 100% - 0px )
                     width: 50%
     &__title
-        @include font('AvenirNext', 25px, 700, normal)
+        @include font(25px, 700, normal)
         margin-bottom: 15px
     &__text
-        @include font('AvenirNext', 16px, 500, normal)
+        @include font(16px, 500, normal)
         margin-bottom: 20px
     &__img
         margin-right: 20px
@@ -142,7 +142,7 @@ img
     &_center
         flex-direction: column
     &__title
-        @include font('AvenirNext', 20px, 700, normal)
+        @include font(20px, 700, normal)
         text-align: center
         margin-bottom: 3px
         color: #a78c63
@@ -155,12 +155,12 @@ img
             color: $purple
             text-align: center
         &-num
-            @include font('AvenirNext', 40px, 700, normal)
+            @include font(40px, 700, normal)
         &-women
-            @include font('AvenirNext', 15px, 400, normal)
+            @include font(15px, 400, normal)
             text-transform: uppercase
     &__text
-        @include font('AvenirNext', 20px, 500, normal)
+        @include font(20px, 500, normal)
         &_center
             font-size: 16px
             text-align: center
@@ -184,24 +184,24 @@ img
     &__example
         margin-bottom: 10px
     &__brand
-        @include font('AvenirNext', 16px, 700, normal)
+        @include font(16px, 700, normal)
         text-transform: uppercase
     &__name
-        @include font('AvenirNext', 16px, 500, normal)
+        @include font(16px, 500, normal)
         display: inline-block
         margin: 10px 0px
     &__text
         text-align: center
-        @include font('AvenirNext', 12px, 500, normal)
+        @include font(12px, 500, normal)
 
 .shiseido-collection
     padding-bottom: 90px
     overflow: hidden
     &__title
-        @include font('AvenirNext', 27px, 700, normal)
+        @include font(27px, 700, normal)
         margin-bottom: 15px
     &__text
-        @include font('AvenirNext', 20px, 400, normal)
+        @include font(20px, 400, normal)
         margin-bottom: 25px
         display: block
     &__image
@@ -221,14 +221,14 @@ img
     margin-bottom: 75px
     &__title
         margin-bottom: 35px
-        @include font('AvenirNext', 27px, 700, normal)
+        @include font(27px, 700, normal)
     &__banner
         background-color: $purple
         padding: 15px
         text-align: center
         text-transform: uppercase
         color: #fff
-        @include font('AvenirNext', 18px, 400, normal)
+        @include font(18px, 400, normal)
         margin-bottom: 60px
     &__catalog
         display: flex
@@ -240,14 +240,14 @@ img
         align-items: center
         &-name
             text-align: center
-            @include font('AvenirNext', 21px, 500, normal)
+            @include font(21px, 500, normal)
             margin-bottom: 30px
         &-img
             margin-bottom: 30px
         &-link
             display: inline-block
             text-decoration: none
-            @include font('AvenirNext', 21px, 400, normal)
+            @include font(21px, 400, normal)
             text-transform: uppercase
             background-color: #000
             color: #fff
@@ -255,3 +255,6 @@ img
             text-align: center
             width: 100%
             max-width: 200px
+            &:hover
+                color: #fff
+                text-decoration: none
