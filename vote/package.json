@@ -12,7 +12,8 @@
   "dependencies": {
     "core-js": "^3.6.5",
     "vue": "^3.0.7",
-    "vue-router": "^4.0.5"
+    "vue-router": "^4.0.5",
+    "vuex": "^4.0.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
@@ -31,8 +32,8 @@
   "eslintConfig": {
     "root": true,
     "env": {
-        "es2020": true,
-        "node": true
+      "es2020": true,
+      "node": true
     },
     "extends": [
       "plugin:vue/vue3-essential",
