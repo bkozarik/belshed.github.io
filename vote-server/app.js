@@ -1,14 +1,33 @@
-const http = require('http');
+const express = require('express');
+const { MongoClient } = require("mongodb");
 
-const hostname = '127.0.0.1';
-const port = 3000;
+const dbURI = 'mongodb://localhost:27017/api';
 
-const server = http.createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/html');
-  res.end('Hello World');
+const dbClient = MongoClient(dbURI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+})
+
+const server = express();
+
+server.get('/', (req, res) => {
+  
 });
 
-server.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
-});
+// server.listen(1337, () => {
+//   console.log(`server started at ${new Date()}`);
+// })
+
+async function run() {
+  try {
+    await dbClient.connect();
+    const database = dbClient.db('vote_db');
+    const collection = database.collection('registration_data');
+    
+    const obj = { title: 'Back to the Future' };
+    const movie = await collection.deleteOne(obj);
+  } finally {
+    await dbClient.close();
+  }
+}
+run().catch(console.dir);

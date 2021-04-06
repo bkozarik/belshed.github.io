@@ -69,12 +69,18 @@ const convertFonts = () => {
       .pipe(dest('dist/fonts/'));
 }
 
+const minifyJs = () => {
+    return src('dist/js/*.js')
+    .pipe(jsmin())
+    .pipe(dest('dist/js/'))
+    .pipe(browserSync.stream());
+}
+
 const compileJS = () => {    
     return src('src/js/*.js')
         .pipe(rollup({
             "format": "iife",
             input: 'src/js/main.js'}))
-        .pipe(jsmin())
         .pipe(dest('dist/js/'))
         .pipe(browserSync.stream());
 }
@@ -84,7 +90,6 @@ const concatJS = () => {
         .pipe(gulpConcat('main.js'))
         .pipe(dest('dist/js/'))
         .pipe(browserSync.stream());
-
 }
 
 const wipe = () => {
@@ -105,5 +110,5 @@ const watchFiles = () => {
     watch('./src/php/*', transferFiles);
   }
 
-exports.build = series(wipe, parallel(convertFonts, series(compileStyles, concatCSS, minifyStyles), series(compileJS, concatJS), transferFiles));
+exports.build = series(wipe, parallel(convertFonts, series(compileStyles, concatCSS, minifyStyles), series(compileJS, concatJS, minifyJs), transferFiles));
 exports.default = series(wipe, parallel(convertFonts, series(compileStyles, concatCSS)), compileJS, concatJS, transferFiles, watchFiles);
