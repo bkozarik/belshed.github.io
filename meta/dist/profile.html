@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>Meta Profile - Profile</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <div class="app" id="profile">
+        <div class="profile">
+            <div class="container profile__container">
+                <header class="profile__header">
+                    <a href="#" class="profile__prev">
+                        <img src="./img/arrow-back.png" alt="Иконка" class="profile__prev-img">
+                        <span class="profile__prev-text">
+                            Новый профиль - 1
+                        </span>
+                    </a>
+                    <div class="profile__controls">
+                        <button class="button button_pill button_grey-border profile__copy">Дублировать</button>
+                        <a href="#" class="profile__link"></a>
+                        <a href="#" class="profile__link"></a>
+                    </div>
+                </header>
+                <div class="profile__body">
+                    <ul class="profile__bars">
+                        <li class="profile__column">
+                            <bar label="ГИПЕРТИМ" name="hypertim" first="true"></bar>
+                            <bar label="ГИПОТИМ" name="hypotim"></bar>
+                        </li>
+                        <li class="profile__column">
+                            <bar label="ИСТЕРОИД" name="hypertim" first="true"></bar>
+                            <bar label="ШИЗОИД" name="hypotim"></bar>
+                        </li>
+                        <li class="profile__column">
+                            <bar label="ПАРАНОЯЛ" name="hypertim" first="true"></bar>
+                            <bar label="ЭПИЛЕПТОИД" name="hypotim"></bar>
+                        </li>
+                        <li class="profile__column">
+                            <bar label="ЭМОТИВ" name="hypertim" first="true"></bar>
+                            <bar label="ТРЕВОЖНЫЙ" name="hypotim"></bar>
+                        </li>
+                    </ul>
+                    <div class="profile__row">
+                        <div class="profile__group">
+                            <profile-button steps="3" name="v"></profile-button>
+                            <profile-button steps="3" name="a"></profile-button>
+                            <profile-button steps="3" name="k"></profile-button>
+                            <profile-button steps="3" name="o"></profile-button>
+                            <profile-button steps="3" name="g"></profile-button>
+                        </div>
+                        <div class="profile__group">
+                            <profile-button steps="3" name="деньги"></profile-button>
+                            <profile-button steps="3" name="связи"></profile-button>
+                            <profile-button steps="3" name="навыки"></profile-button>
+                            <profile-button steps="3" name="знания"></profile-button>
+                            <profile-button steps="3" name="время"></profile-button>
+                        </div>
+                        <div class="profile__group">
+                            <profile-button steps="3" name="п"></profile-button>
+                            <profile-button steps="3" name="ж"></profile-button>
+                            <profile-button steps="3" name="с"></profile-button>
+                        </div>
+                    </div>
+                    <div class="profile__row">
+                        <div class="profile__group">
+                            <profile-button steps="3" name="к"></profile-button>
+                            <profile-button steps="3" name="от"></profile-button>
+                        </div>
+                        <div class="profile__group">
+                            <profile-button steps="3" name="акт"></profile-button>
+                            <profile-button steps="3" name="рефл"></profile-button>
+                        </div>
+                        <div class="profile__group">
+                            <profile-button steps="3" name="люди"></profile-button>
+                            <profile-button steps="3" name="ценности"></profile-button>
+                            <profile-button steps="3" name="события"></profile-button>
+                            <profile-button steps="3" name="инф"></profile-button>
+                            <profile-button steps="3" name="место"></profile-button>
+                        </div>
+                    </div>
+                    <div class="profile__row">
+                        <div class="profile__group">
+                            <profile-button steps="3" name="асс"></profile-button>
+                            <profile-button steps="3" name="дис"></profile-button>
+                        </div>
+                        <div class="profile__group">
+                            <profile-button steps="3" name="I"></profile-button>
+                            <profile-button steps="3" name="II"></profile-button>
+                            <profile-button steps="3" name="iii"></profile-button>
+                        </div>
+                        <div class="profile__group">
+                            <profile-button steps="3" name="возм"></profile-button>
+                            <profile-button steps="3" name="проц"></profile-button>
+                        </div>
+                        <div class="profile__group">
+                            <profile-button steps="3" name="общее"></profile-button>
+                            <profile-button steps="3" name="детали"></profile-button>
+                        </div>
+                        <div class="profile__group">
+                            <profile-button steps="3" name="сх"></profile-button>
+                            <profile-button steps="3" name="сх+разл"></profile-button>
+                            <profile-button steps="3" name="разл"></profile-button>
+                        </div>
+                    </div>
+                    <div class="profile__row">
+                        <div class="profile__group">
+                            <profile-button steps="3" name="п"></profile-button>
+                            <profile-button steps="3" name="н"></profile-button>
+                            <profile-button steps="3" name="б"></profile-button>
+                        </div>
+                        <div class="profile__group">
+                            <profile-button steps="3" name="кол-во"></profile-button>
+                            <profile-button steps="3" name="время"></profile-button>
+                            <profile-button steps="3" name="интенс"></profile-button>
+                        </div>
+                        <div class="profile__group">
+                            <profile-button steps="3" name="внут"></profile-button>
+                            <profile-button steps="3" name="внеш"></profile-button>
+                        </div>
+                    </div>
+                    <div class="profile__row profile__row_center">
+                        <div class="profile__group profile__group_vertical">
+                            <label class="button profile__button profile__button_label">
+                                <span class="profile__button-text">печаль</span>
+                                <select name="emotion_1" class="profile__select">
+                                    <option value="none" hidden>...</option>
+                                    <option value="Печаль">Печаль</option>
+                                    <option value="Грусть">Грусть</option>
+                                    <option value="Радость">Радость</option>
+                                    <option value="Печаль22">Печаль22</option>
+                                </select>
+                            </label>
+                            <label class="button profile__button profile__button_label">
+                                <span class="profile__button-text">радость</span>
+                                <select name="emotion_2" class="profile__select">
+                                    <option value="none" hidden>...</option>
+                                    <option value="Печаль">Печаль</option>
+                                    <option value="Грусть">Грусть</option>
+                                    <option value="Радость">Радость</option>
+                                    <option value="Печаль22">Печаль22</option>
+                                </select>
+                            </label>
+                            <label class="button profile__button profile__button_label">
+                                <span class="profile__button-text">Удивление</span>
+                                <select name="emotion_3" class="profile__select">
+                                    <option value="none" hidden>...</option>
+                                    <option value="Печаль">Печаль</option>
+                                    <option value="Грусть">Грусть</option>
+                                    <option value="Радость">Радость</option>
+                                    <option value="Печаль22">Печаль22</option>
+                                </select>
+                            </label>
+                            <label class="button profile__button profile__button_label">
+                                <span class="profile__button-text">сравнивание</span>
+                                <select name="emotion_4" class="profile__select">
+                                    <option value="none" hidden>...</option>
+                                    <option value="Печаль">Печаль</option>
+                                    <option value="Грусть">Грусть</option>
+                                    <option value="Радость">Радость</option>
+                                    <option value="Печаль22">Печаль22</option>
+                                </select>
+                            </label>
+                        </div>
+                        <div class="profile__group profile__group_grid">
+                            <profile-button steps="5" name="ик"></profile-button>
+                            <profile-button steps="5" name="мм"></profile-button>
+                            <profile-button steps="5" name="пкс"></profile-button>
+                            <profile-button steps="5" name="ик"></profile-button>
+                            <profile-button steps="5" name="рд"></profile-button>
+                            <profile-button steps="5" name="об"></profile-button>
+                            <profile-button steps="5" name="пе"></profile-button>
+                            <profile-button steps="5" name="мф"></profile-button>
+                            <profile-button steps="5" name="на"></profile-button>
+                            <profile-button steps="5" name="пп"></profile-button>
+                            <profile-button steps="5" name="др"></profile-button>
+                            <profile-button steps="5" name="по"></profile-button>
+                            <profile-button steps="5" name="сф"></profile-button>
+                            <profile-button steps="5" name="рф"></profile-button>
+                            <profile-button steps="5" name="ан"></profile-button>
+                            <profile-button steps="5" name="ср"></profile-button>
+                        </div>
+                        <div class="profile__group profile__group_vertical">
+                            <label class="button profile__button profile__button_label">
+                                <span class="profile__button-text">отвращение</span>
+                                <select name="emotion_5" class="profile__select">
+                                    <option value="none" hidden>...</option>
+                                    <option value="Печаль">Печаль</option>
+                                    <option value="Грусть">Грусть</option>
+                                    <option value="Радость">Радость</option>
+                                    <option value="Печаль22">Печаль22</option>
+                                </select>
+                            </label>
+                            <label class="button profile__button profile__button_label">
+                                <span class="profile__button-text">гнев</span>
+                                <select name="emotion_6" class="profile__select">
+                                    <option value="none" hidden>...</option>
+                                    <option value="Печаль">Печаль</option>
+                                    <option value="Грусть">Грусть</option>
+                                    <option value="Радость">Радость</option>
+                                    <option value="Печаль22">Печаль22</option>
+                                </select>
+                            </label>
+                            <label class="button profile__button profile__button_label">
+                                <span class="profile__button-text">страх</span>
+                                <select name="emotion_7" class="profile__select">
+                                    <option value="none" hidden>...</option>
+                                    <option value="Печаль">Печаль</option>
+                                    <option value="Грусть">Грусть</option>
+                                    <option value="Радость">Радость</option>
+                                    <option value="Печаль22">Печаль22</option>
+                                </select>
+                            </label>
+                            <label class="button profile__button profile__button_label">
+                                <span class="profile__button-text">спокойствие</span>
+                                <select name="emotion_8" class="profile__select">
+                                    <option value="none" hidden>...</option>
+                                    <option value="Печаль">Печаль</option>
+                                    <option value="Грусть">Грусть</option>
+                                    <option value="Радость">Радость</option>
+                                    <option value="Печаль22">Печаль22</option>
+                                </select>
+                            </label>
+                            
+                            
+                            
+                            
+                        </div>
+                    </div>
+                    <div class="profile__row">
+                        <div class="profile__group profile__group_stretch">
+                            <profile-button steps="3" name="размер"></profile-button>
+                            <profile-button steps="3" name="расстояние"></profile-button>
+                            <profile-button steps="3" name="локация"></profile-button>
+                            <profile-button steps="3" name="цвет"></profile-button>
+                            <profile-button steps="3" name="громкость"></profile-button>
+                            <profile-button steps="3" name="яркость"></profile-button>
+                            <profile-button steps="3" name="четкость"></profile-button>
+                        </div>
+                    </div>
+                </div>
+                <ul class="profile__list">
+                    <li class="profile__tag tag" v-for="(tag, index) in tags" :key="tag">
+                        <button class="button tag__delete" @click="deleteTag(tag)"></button>
+                        <input class="tag__input" contenteditable='true' autocomplete="off" :value="tag.text"
+                            @keyup='updateItem(index)'
+                            @blur='updateItem(index)'
+                            @paste='updateItem(index)'
+                            @delete='updateItem(index)'
+                        />
+                    </li>
+                </ul>
+                <button class="button profile__add" @click="addTag"></button>
+            </div>                
+        </div>
+    </div>
+    <script src="./js/main.js"></script>
+</body>
+</html>
