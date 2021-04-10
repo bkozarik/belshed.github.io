@@ -25,22 +25,22 @@
                     </div>
                 </header>
                 <div class="profile__body">
-                    <ul class="profile__bars">
+                    <ul class="profile__bars" >
                         <li class="profile__column">
-                            <bar label="ГИПЕРТИМ" name="hypertim" first="true"></bar>
-                            <bar label="ГИПОТИМ" name="hypotim"></bar>
+                            <bar label="ГИПЕРТИМ" name="hypertim" highestBar="highestBar" @bar-move="getBarData" first="true"></bar>
+                            <bar label="ГИПОТИМ" name="hypotim" highestBar="highestBar" @bar-move="getBarData"></bar>
                         </li>
                         <li class="profile__column">
-                            <bar label="ИСТЕРОИД" name="hypertim" first="true"></bar>
-                            <bar label="ШИЗОИД" name="hypotim"></bar>
+                            <bar label="ИСТЕРОИД" name="isteroid" first="true" highestBar="highestBar" @bar-move="getBarData"></bar>
+                            <bar label="ШИЗОИД" name="shizoid" highestBar="highestBar" @bar-move="getBarData"></bar>
                         </li>
                         <li class="profile__column">
-                            <bar label="ПАРАНОЯЛ" name="hypertim" first="true"></bar>
-                            <bar label="ЭПИЛЕПТОИД" name="hypotim"></bar>
+                            <bar label="ПАРАНОЯЛ" name="paranoyal" first="true" highestBar="highestBar" @bar-move="getBarData"></bar>
+                            <bar label="ЭПИЛЕПТОИД" name="epileptoid" highestBar="highestBar" @bar-move="getBarData"></bar>
                         </li>
                         <li class="profile__column">
-                            <bar label="ЭМОТИВ" name="hypertim" first="true"></bar>
-                            <bar label="ТРЕВОЖНЫЙ" name="hypotim"></bar>
+                            <bar label="ЭМОТИВ" name="emotiv" first="true" highestBar="highestBar" @bar-move="getBarData"></bar>
+                            <bar label="ТРЕВОЖНЫЙ" name="anxious" highestBar="highestBar" @bar-move="getBarData"></bar>
                         </li>
                     </ul>
                     <div class="profile__row">
@@ -244,7 +244,7 @@
                 <ul class="profile__list">
                     <li class="profile__tag tag" v-for="(tag, index) in tags" :key="tag">
                         <button class="button tag__delete" @click="deleteTag(tag)"></button>
-                        <input class="tag__input" contenteditable='true' autocomplete="off" :value="tag.text"
+                        <input class="tag__input" contenteditable='true' autocomplete="off" v-model:value="tag.text"
                             @keyup='updateItem(index)'
                             @blur='updateItem(index)'
                             @paste='updateItem(index)'
