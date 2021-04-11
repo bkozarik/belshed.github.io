@@ -14,10 +14,8 @@
                 <header class="profile__header">
                     <a href="#" class="profile__prev">
                         <img src="./img/arrow-back.png" alt="Иконка" class="profile__prev-img">
-                        <span class="profile__prev-text">
-                            Новый профиль - 1
-                        </span>
                     </a>
+                    <input class="profile__prev-text" name="profile_name" value="Новый профиль - 1" placeholder="Имя профиля">
                     <div class="profile__controls">
                         <button type="button" class="button button_pill button_grey-border profile__copy">Дублировать</button>
                         <a href="#" class="profile__link"></a>
@@ -243,7 +241,7 @@
                         <span class="tag__text" contenteditable="true" tabindex="1"
                             @blur='updateItem(index)'
                         >{{ tag.text }}</span>
-                        <input class="tag__input" type="hidden" v-model:value="tag.text"/>
+                        <input class="tag__input" type="hidden" :name="'tag_' + index" v-model:value="tag.text"/>
                     </li>
                 </ul>
                 <button type="button" class="button profile__add" @click="addTag"></button>
