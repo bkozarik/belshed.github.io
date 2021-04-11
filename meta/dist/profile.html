@@ -240,11 +240,8 @@
                 <ul class="profile__list">
                     <li class="profile__tag tag" v-for="(tag, index) in tags" :key="tag">
                         <button class="button tag__delete" type="button" @click="deleteTag(tag)"></button>
-                        <span class="tag__text" contenteditable="true"
-                            @keyup='updateItem(index)'
+                        <span class="tag__text" contenteditable="true" tabindex="1"
                             @blur='updateItem(index)'
-                            @paste='updateItem(index)'
-                            @delete='updateItem(index)'
                         >{{ tag.text }}</span>
                         <input class="tag__input" type="hidden" v-model:value="tag.text"/>
                     </li>
