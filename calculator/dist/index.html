@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="./js/main.js" defer></script>
+</head>
+<body class="fullheight-body">
+    <div class="container">
+        <div class="calculator js-calculator">
+            <ul class="calculator__fields">
+                <li class="calculator__item input js-input">
+                    <span class="input__label js-input-label">Входящие счета в месяц:</span>
+                    <div class="input__range js-range" data-coefficient="3" data-start="60" data-range-min="10" data-range-max="100"></div>
+                    <div class="input__pips js-range-pips"></div>
+                </li>
+                <li class="calculator__item input js-input">
+                    <span class="input__label js-input-label">Исходящие счета в месяц:</span>
+                    <div class="input__range js-range" data-coefficient="3" data-start="90" data-range-min="10" data-range-max="100"></div>
+                    <div class="input__pips js-range-pips"></div>
+                </li>
+                <li class="calculator__item input js-input">
+                    <span class="input__label js-input-label">Сотрудники:</span>
+                    <div class="input__range js-range" data-coefficient="10" data-start="4" data-range-min="1" data-range-max="10"></div>
+                    <div class="input__pips js-range-pips"></div>
+                </li>
+                <li class="calculator__item input js-input">
+                    <span class="input__label js-input-label">Банковские транзакции в месяц:</span>
+                    <div class="input__range js-range" data-coefficient="1" data-start="20" data-range-min="10" data-range-max="100"></div>
+                    <div class="input__pips js-range-pips"></div>
+                </li>
+            </ul>
+            <label class="input vat">
+                <span class="input__label">VAT-номер</span>
+                <input class="vat__input js-vat" type="checkbox" name="vat">
+                <div class="vat__track">
+                    <span class="vat__state">Да</span>
+                    <span class="vat__state">Нет</span>
+                    <span class="vat__handle"></span>
+                </div>
+            </label>
+            <div class="diagram">
+                <div class="diagram__body">
+                    <div class="diagram__circle circle">
+                        <div class="circle__text">
+                            <span class="circle__price js-circle-price"></span>
+                            <span class="circle__subtitle">Месячный платеж</span>
+                        </div>
+                        <svg class="circle__svg js-circle" viewBox="0 0 50 50">
+                            <circle class="circle__unit" r="15.9" cx="50%" cy="50%"></circle>
+                            <circle class="circle__unit" r="15.9" cx="50%" cy="50%"></circle>
+                            <circle class="circle__unit" r="15.9" cx="50%" cy="50%"></circle>
+                            <circle class="circle__unit" r="15.9" cx="50%" cy="50%"></circle>
+                            <circle class="circle__unit js-vat-unit" r="15.9" cx="50%" cy="50%"></circle>
+                        </svg>
+                    </div>
+                    <div class="diagram__content">
+                        <span class="diagram__title">Стоимость бухгалтерских услуг</span>
+                        <ul class="diagram__legend js-diagram-legend"></ul>
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </div>
+    <div class="popup js-popup js-popup-personal js-popup-close">
+        <div class="popup__body">
+            <button class="popup__close js-popup-close"></button>
+            <h2 class="popup__title">Получить персональное предложение от профессионального бухгалтера</h2>
+            <p class="popup__subtitle">Для этого, пожалуйста, подтвердите Ваш запрос!</p>
+            <form class="popup__form form">
+                <input type="text" class="form__input" placeholder="Ваше имя">
+                <input type="email" class="form__input" placeholder="Ваш Email" required>
+                <button class="form__button">Отправить</button>
+            </form>
+            <p class="popup__policy">
+                Оставляя заявку вы соглашаетесь с нашей <a href="#">политикой конфиденциальности</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
