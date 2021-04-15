@@ -268,7 +268,7 @@ body.no-scroll {
   transition: box-shadow .3s ease-in-out 0s;
   border-radius: 40px;
   background-repeat: no-repeat;
-  background-position: 28px 16px;
+  background-position: 28px center;
   background-image: url(../img/paper-plane.png);
   margin-top: -40px;
   margin-right: 20px;
@@ -340,6 +340,21 @@ body.no-scroll {
   position: relative;
   margin-top: -40px;
   margin-right: 25px;
+}
+
+.circle::before {
+  display: block;
+  z-index: -1;
+  content: '';
+  position: absolute;
+  top: 49%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  height: 71%;
+  width: 75%;
+  border-radius: 100%;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.4);
 }
 
 .circle__text {
@@ -550,6 +565,18 @@ body.no-scroll {
   padding: 13px;
   outline: none;
   cursor: pointer;
+}
+
+@media screen and (max-width: 1090px) {
+  .diagram {
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+  }
+  .diagram__button {
+    margin-right: 0;
+    margin-top: 20px;
+    font-size: 17px;
+  }
 }
 
 @media screen and (max-width: 1040px) {
