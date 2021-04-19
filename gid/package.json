@@ -4,7 +4,7 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "prod": "cross-env NODE_ENV=production webpack --mode production",
+    "prod": "gulp build",
     "dev": "gulp",
     "setup": "npm i"
   },

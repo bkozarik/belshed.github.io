@@ -1,74 +1,5 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"> -->
-    <link rel="stylesheet" href="./css/index.css">
-    <title>Главная</title>
-</head>
-<body>
-<header class="header js-header ">
-    <div class="container header__container">
-        <button class="button burger header__menu js-menu-trigger">
-            <span></span>
-        </button>
-        <a href="/" class="logo header__logo">
-            <img src="./img/logo.svg" alt="Логотип" class="logo__img">
-        </a>
-        <button class="button header__phone js-popup-trigger" data-target=".js-popup-recall">
-            <svg width="29" height="29" viewBox="0 0 29 29" xmlns="http://www.w3.org/2000/svg">
-                <path d="M19.3346 20.6101L21.8317 18.1119C22.1681 17.7796 22.5936 17.5521 23.0567 17.4571C23.5198 17.3621 24.0005 17.4036 24.4404 17.5766L27.4839 18.7922C27.9284 18.9728 28.3097 19.2809 28.5795 19.6779C28.8493 20.0748 28.9956 20.5428 29 21.0228V26.5991C28.9974 26.9256 28.9288 27.2482 28.7983 27.5475C28.6678 27.8468 28.4781 28.1166 28.2406 28.3406C28.0031 28.5646 27.7228 28.7383 27.4165 28.8511C27.1102 28.9638 26.7842 29.0134 26.4582 28.9969C5.13184 27.6697 0.82866 9.60246 0.0148465 2.68783C-0.0229313 2.34827 0.0115853 2.00456 0.116125 1.67931C0.220665 1.35405 0.39286 1.05463 0.62138 0.800733C0.8499 0.546836 1.12957 0.344221 1.44198 0.206217C1.7544 0.0682136 2.09248 -0.00205115 2.43399 4.55797e-05H7.81854C8.29904 0.00146842 8.76812 0.146666 9.16545 0.416964C9.56279 0.687261 9.87021 1.0703 10.0482 1.5168L11.2633 4.56147C11.442 4.99985 11.4875 5.48116 11.3944 5.9453C11.3012 6.40944 11.0734 6.83582 10.7394 7.17119L8.24217 9.66938C8.24217 9.66938 9.68028 19.4056 19.3346 20.6101Z"/>
-            </svg>
-        </button>
-    </div>
-</header>
-<div class="menu js-menu">
-    <ul class="menu__list">
-        <li class="menu__item">
-            <a href="./" class="menu__link js-menu-link">Главная</a>
-        </li>
-        <li class="menu__item">
-            <a href="./" class="menu__link js-menu-link">3D-Дизайн</a>
-        </li>
-        <li class="menu__item">
-            <a href="./" class="menu__link js-menu-link">Ремонт</a>
-        </li>
-        <li class="menu__item">
-            <a href="./" class="menu__link js-menu-link">Строительство</a>
-        </li>
-        <li class="menu__item">
-            <a href="./" class="menu__link js-menu-link">Проекты</a>
-        </li>
-        <li class="menu__item">
-            <a href="./" class="menu__link js-menu-link">Ландшафтный дизайн</a>
-        </li>
-    </ul>
-    <ul class="menu__socials socials-list">
-        <li class="socials-list__item">
-            <a href="#" class="socials-list__link" target="_blank">
-                <svg width="42" height="42" viewBox="0 0 42 42" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M20.9944 13.997C17.1383 13.997 13.9915 17.1439 13.9915 21C13.9915 24.8561 17.1383 28.003 20.9944 28.003C24.8504 28.003 27.9972 24.8561 27.9972 21C27.9972 17.1439 24.8504 13.997 20.9944 13.997ZM41.9977 21C41.9977 18.1 42.0239 15.2263 41.8611 12.3316C41.6982 8.96937 40.9312 5.98536 38.4726 3.52669C36.0087 1.06278 33.03 0.301015 29.6678 0.138155C26.7679 -0.0247052 23.8943 0.00156264 20.9996 0.00156264C18.0997 0.00156264 15.2261 -0.0247052 12.3314 0.138155C8.9692 0.301015 5.98524 1.06803 3.52663 3.52669C1.06276 5.99061 0.301009 8.96937 0.138152 12.3316C-0.0247047 15.2316 0.00156261 18.1053 0.00156261 21C0.00156261 23.8947 -0.0247047 26.7737 0.138152 29.6684C0.301009 33.0306 1.06801 36.0146 3.52663 38.4733C5.9905 40.9372 8.9692 41.699 12.3314 41.8618C15.2313 42.0247 18.105 41.9984 20.9996 41.9984C23.8995 41.9984 26.7732 42.0247 29.6678 41.8618C33.03 41.699 36.014 40.932 38.4726 38.4733C40.9365 36.0094 41.6982 33.0306 41.8611 29.6684C42.0292 26.7737 41.9977 23.9 41.9977 21ZM20.9944 31.775C15.0317 31.775 10.2195 26.9628 10.2195 21C10.2195 15.0372 15.0317 10.225 20.9944 10.225C26.957 10.225 31.7692 15.0372 31.7692 21C31.7692 26.9628 26.957 31.775 20.9944 31.775ZM32.2105 12.3001C30.8183 12.3001 29.6941 11.1759 29.6941 9.78367C29.6941 8.39148 30.8183 7.26722 32.2105 7.26722C33.6026 7.26722 34.7269 8.39148 34.7269 9.78367C34.7273 10.1143 34.6625 10.4417 34.5362 10.7472C34.4099 11.0527 34.2245 11.3302 33.9908 11.564C33.757 11.7978 33.4794 11.9831 33.174 12.1094C32.8685 12.2357 32.541 12.3005 32.2105 12.3001Z" />
-                </svg>
-            </a>
-        </li>
-        <li class="socials-list__item">
-            <a href="#" class="socials-list__link" target="_blank">
-                <svg width="42" height="42" viewBox="0 0 42 42" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M27.447 0H14.553C2.793 0 0 2.793 0 14.553V27.447C0 39.207 2.793 42 14.553 42H27.447C39.207 42 42 39.207 42 27.447V14.553C42 2.793 39.207 0 27.447 0ZM33.915 29.967H30.849C29.694 29.967 29.337 29.022 27.3 26.943C25.452 25.2 24.654 24.948 24.213 24.948C23.604 24.948 23.415 25.116 23.415 25.998V28.749C23.415 29.484 23.184 29.946 21.231 29.946C17.997 29.946 14.406 27.972 11.886 24.339C8.085 19.005 7.056 14.973 7.056 14.175C7.056 13.734 7.203 13.314 8.085 13.314H11.172C11.949 13.314 12.243 13.65 12.537 14.49C14.049 18.9 16.569 22.68 17.598 22.68C17.997 22.68 18.165 22.491 18.165 21.525V17.01C18.06 14.952 16.947 14.763 16.947 14.028C16.947 13.65 17.241 13.314 17.724 13.314H22.533C23.184 13.314 23.415 13.65 23.415 14.448V20.517C23.415 21.168 23.688 21.399 23.898 21.399C24.276 21.399 24.612 21.168 25.305 20.454C27.51 17.997 29.085 14.196 29.085 14.196C29.295 13.755 29.631 13.335 30.45 13.335H33.453C34.377 13.335 34.587 13.818 34.377 14.469C33.999 16.254 30.261 21.525 30.303 21.525C29.967 22.05 29.841 22.281 30.303 22.89C30.618 23.331 31.689 24.255 32.403 25.074C33.705 26.565 34.713 27.804 34.986 28.665C35.217 29.526 34.797 29.967 33.915 29.967Z" />
-                </svg>
-            </a>
-        </li>
-        <li class="socials-list__item">
-            <a href="#" class="socials-list__link" target="_blank">
-                <svg width="41" height="41" viewBox="0 0 41 41" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M7.48635 0C3.33924 0 0 3.33924 0 7.48634V33.5136C0 37.6607 3.33924 41 7.48635 41H21.5929V24.9715H17.3546V19.2008H21.5929V14.2706C21.5929 10.3971 24.0972 6.84059 29.866 6.84059C32.2016 6.84059 33.9288 7.06482 33.9288 7.06482L33.793 12.4538C33.793 12.4538 32.0315 12.4371 30.1094 12.4371C28.0291 12.4371 27.6955 13.3956 27.6955 14.9868V19.2008H33.9583L33.6854 24.9716H27.6955V41H33.5136C37.6608 41 41 37.6608 41 33.5137V7.48638C41 3.33928 37.6608 4.09999e-05 33.5136 4.09999e-05H7.48631L7.48635 0Z" />
-                </svg>                            
-            </a>
-        </li>
-    </ul>
-</div>
+@include('./html/head.html', {title: 'Главная'})
+@include('./html/header.html', {class: ''})
 
 <main id="main" class="main">
     <section class="hero">
@@ -88,63 +19,115 @@
     <div class="benefits" id="benefits">
         <div class="container benefits__container">
             <ul class="benefits__list">
-                <li class="benefit-item benefits__item benefit-item_dark">
-    <h3 class="benefit-item__title">100+</h3>
-    <span class="benefit-item__subtitle">Реализованные проекты</span>
-    <p class="benefit-item__text">Работаем с любой недвижимостью – от дворцов до квартир</p>
-</li><li class="benefit-item benefits__item benefit-item_dark">
-    <h3 class="benefit-item__title">10 лет</h3>
-    <span class="benefit-item__subtitle">Безупречная репутация</span>
-    <p class="benefit-item__text">Наши специалисты постоянно стажируются у лидеров строительных работ</p>
-</li><li class="benefit-item benefits__item benefit-item_dark">
-    <h3 class="benefit-item__title">3 года</h3>
-    <span class="benefit-item__subtitle">Гарантии на все работы</span>
-    <p class="benefit-item__text">Мы внимательно изучаем рынок отделочных материалов и инновационной техники</p>
-</li><li class="benefit-item benefits__item benefit-item_dark">
-    <h3 class="benefit-item__title">Сроки</h3>
-    <span class="benefit-item__subtitle">Процесс</span>
-    <p class="benefit-item__text">Нужно лучшее – закажи это у лучших!</p>
-</li>
+                @loop('./html/benefit-item.html', [
+                    { "class": 'benefits__item benefit-item_dark', "title": "100+", "subtitle": 'Реализованные проекты', "text": "Работаем с любой недвижимостью – от дворцов до квартир" },
+                    { "class": 'benefits__item benefit-item_dark', "title": "10 лет", "subtitle": 'Безупречная репутация', "text": "Наши специалисты постоянно стажируются у лидеров строительных работ" },
+                    { "class": 'benefits__item benefit-item_dark', "title": "3 года", "subtitle": 'Гарантии на все работы', "text": "Мы внимательно изучаем рынок отделочных материалов и инновационной техники" },
+                    { "class": 'benefits__item benefit-item_dark', "title": "Сроки", "subtitle": 'Процесс', "text": "Нужно лучшее – закажи это у лучших!" }
+                ])
             </ul>
         </div>
     </div>
-    <section id="quiz" class="quiz">
-    <h2 class="section-title section-title_center section-title_small section-title_white">Пройдите короткий опрос и мы точно будем знать, <br> что вам предложить</h2>
-    <div class="container quiz__container js-quiz">
-        <ul class="quiz__questions questions js-questions">
-            <li class="questions__question active js-questions-item">
-                <span class="questions__index">Вопрос 1:</span>
-                <p class="questions__body">Какой размер помещения <br> вашего проекта?</p>
-            </li>
-            <li class="questions__question js-questions-item">
-                <span class="questions__index">Вопрос 2:</span>
-                <p class="questions__body">Какой стиль лучше подходит <br> для вашего проекта?</p>
-            </li>
-            <li class="questions__question js-questions-item">
-                <span class="questions__index">Вопрос 3:</span>
-                <p class="questions__body">Когда примерно планируете начинать <br> работы над проектом?</p>
-            </li>
-            <li class="questions__question js-questions-item">
-                <span class="questions__index">Завершение</span>
-            </li>
-        </ul>
-        <div class="quiz__track js-quiz-track">
-            <div class="quiz__page quiz-page js-quiz-page">
-                <ul class="quiz-page__squares">
-                    <li class="quiz-page__square-item js-square-item" tabindex="0">
-                        <span>от 50 до 80 м2</span>
-                    </li>
-                    <li class="quiz-page__square-item js-square-item" tabindex="0">
-                        <span>от 80 до 120 м2</span>
-                    </li>
-                    <li class="quiz-page__square-item js-square-item" tabindex="0">
-                        <span>более 120 м2</span>
-                    </li>
-                </ul>
+    @include('./html/quiz.html')
+    <section class="services">
+        <h2 class="section-title services__title">Основные услуги</h2>
+        <div class="container services__container">
+            @loop('./html/service.html', [
+                { "img": './img/service_1', "title": "3D-дизайн", "text": "Идейные соображения высшего порядка, а также внедрение современных методик обеспечивает актуальность глубокомысленных рассуждений. " },
+                { "img": './img/service_2', "title": "Ремонт", "text": "Мы вынуждены отталкиваться от того, что глубокий уровень погружения допускает внедрение своевременного выполнения сверхзадачи." },
+                { "img": './img/service_3', "title": "Строительство",  "text": "Мы вынуждены отталкиваться от того, что глубокий уровень погружения допускает внедрение своевременного выполнения сверхзадачи." },
+                { "img": './img/service_4', "title": "Ландшафтный дизайн", "text": "Идейные соображения высшего порядка обеспечивает актуальность глубокомысленных рассуждений. " }
+            ])
+        </div>
+    </section>
+    <section class="portfolio">
+        <h2 class="section-title portfolio__title">НАШИ ПРОЕКТЫ</h2>
+        <div class="container portfolio__container">
+            @loop('./html/project.html', [
+                { "img": './img/service_1',"class": 'portfolio__item', "name": "Квартира на Академической", "style": "Стиль - Лофт", "square": '94 м2' },
+                { "img": './img/service_2',"class": 'portfolio__item', "name": "Квартира на Рижской", "style": "Стиль - Лофт", "square": '94 м2' },
+                { "img": './img/service_3',"class": 'portfolio__item', "name": "Квартира на Тверской",  "style": "Стиль - Лофт", "square": '94 м2' },
+                { "img": './img/service_4',"class": 'portfolio__item', "name": "Квартира на Патриарших Прудах", "style": "Стиль - Лофт", "square": '94 м2' },
+                { "img": './img/service_1',"class": 'portfolio__item', "name": "Квартира на Академической", "style": "Стиль - Лофт", "square": '94 м2' },
+                { "img": './img/service_2',"class": 'portfolio__item', "name": "Квартира на Рижской", "style": "Стиль - Лофт", "square": '94 м2' }
+            ])
+        </div>
+        <button class="button button_black portfolio__button">
+            <svg width="25" height="25" viewBox="0 0 25 25" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.65907 0H9.9924V8.33811H8.32573V2.48976C6.01685 3.45651 4.1136 5.19314 2.93925 7.40469C1.76489 9.61624 1.39184 12.1663 1.88345 14.6219C2.37506 17.0774 3.70103 19.287 5.63614 20.8753C7.57124 22.4636 9.99617 23.3327 12.4991 23.335C15.1568 23.3376 17.7227 22.3626 19.7087 20.5955C21.6947 18.8284 22.9622 16.3925 23.2701 13.7512C23.5779 11.1099 22.9047 8.44748 21.3784 6.27051C19.8522 4.09353 17.5794 2.55387 14.9924 1.94445V0.236803C17.8579 0.820193 20.4282 2.39029 22.2563 4.67391C24.0843 6.95754 25.0544 9.81015 24.9976 12.7354C24.9409 15.6607 23.861 18.4736 21.9458 20.6845C20.0306 22.8955 17.4013 24.3646 14.5154 24.8363C11.6294 25.3081 8.66958 24.7525 6.15072 23.2664C3.63187 21.7802 1.71346 19.4575 0.729271 16.7024C-0.254918 13.9472 -0.242593 10.934 0.7641 8.18702C1.77079 5.44003 3.70814 3.1331 6.23907 1.66762H1.65907V0Z"/>
+            </svg>
+            Еще проекты
+        </button>
+    </section>
+    <section class="steps">
+        <h2 class="section-title steps__title">6 ЭТАПОВ ОТ ЗАЯВКИ ДО СДАЧИ ГОТОВОГО ОБЪЕКТА</h2>
+        <div class="container steps__container">
+            <div class="steps__wrap">
+                @loop('./html/step.html', [
+                { "number": '01', "img": './img/step-icon_1.png', "class": 'steps__item', "name": "Заявка", "text": 'Оставляйте заявку на сайте и получите 2 варианта планировки квартиры БЕСПЛАТНО', "button-text": 'Оставить заявку'},
+                { "number": '02', "img": './img/step-icon_2.png', "class": 'steps__item', "name": "Дизайн", "text": 'Собираете на сайте стиль из четырех готовых решений с возможностью редактирования', "button-text": 'Выбрать дизайн'},
+                { "number": '03', "img": './img/step-icon_3.png', "class": 'steps__item', "name": "Расчет",  "text": 'Расчитываете финальную стоимость ремонта с помощью онлайн-калькулятора', "button-text": 'Посчитать'},
+                { "number": '04', "img": './img/step-icon_4.png', "class": 'steps__item', "name": "Договор", "text": 'Собираете на сайте стиль из четырех готовых решений с возможностью редактирования', "button-text": 'Оставить заявку'},
+                { "number": '05', "img": './img/step-icon_5.png', "class": 'steps__item', "name": "Ремонт", "text": 'Собираете на сайте стиль из четырех готовых решений с возможностью редактирования', "button-text": 'Оставить заявку'},
+                { "number": '06', "img": './img/step-icon_6.png', "class": 'steps__item', "name": "Сдача объекта", "text": 'Расчитываете финальную стоимость ремонта с помощью онлайн-калькулятора', "button-text": ''}
+            ])
             </div>
-            <div class="quiz__page quiz-page quiz-page_styles js-swiper-quiz-page js-quiz-page">
-                <div class="swiper-wrapper">
-                    <figure class="swiper-slide quiz-page__figure js-style-item" tabindex="0">
+            <button class="button steps__button"> 
+                Начать
+                <svg width="117" height="16" viewBox="0 0 117 16" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M116.707 8.70712C117.098 8.31659 117.098 7.68343 116.707 7.2929L110.343 0.928942C109.953 0.538417 109.319 0.538417 108.929 0.928942C108.538 1.31947 108.538 1.95263 108.929 2.34316L114.586 8.00001L108.929 13.6569C108.538 14.0474 108.538 14.6806 108.929 15.0711C109.319 15.4616 109.953 15.4616 110.343 15.0711L116.707 8.70712ZM-8.74228e-08 9L116 9.00001L116 7.00001L8.74228e-08 7L-8.74228e-08 9Z"/>
+                </svg>                    
+            </button>
+        </div>
+    </section>
+    <section class="we">
+        <div class="container we__container">
+            <h2 class="we__title">МЫ ТАМ, ГДЕ:</h2>
+            <ul class="we__list">
+                <li class="we__item">Требуется высокое качество ремонтных работ</li>
+                <li class="we__item">Нужно четко соблюсти Бюджет</li>
+                <li class="we__item">Необходимо ответственно подойти к процессу</li>
+            </ul>
+        </div>
+    </section>
+    <div class="instagram">
+        <div class="container instagram__container">
+            <img src="./img/insta-logo.png" alt="Логотип" class="instagram__logo">
+            <ul class="instagram__list">
+                <li class="instagram__item">
+                    <img src="./img/insta_1.jpg" alt="Фото из инсты" class="instagram__img" loading="lazy">
+                </li>
+                <li class="instagram__item">
+                    <img src="./img/insta_2.jpg" alt="Фото из инсты" class="instagram__img" loading="lazy">
+                </li>
+                <li class="instagram__item">
+                    <img src="./img/insta_3.jpg" alt="Фото из инсты" class="instagram__img" loading="lazy">
+                </li>
+                <li class="instagram__item">
+                    <img src="./img/insta_1.jpg" alt="Фото из инсты" class="instagram__img" loading="lazy">
+                </li>
+                <li class="instagram__item">
+                    <img src="./img/insta_2.jpg" alt="Фото из инсты" class="instagram__img" loading="lazy">
+                </li>
+                <li class="instagram__item">
+                    <img src="./img/insta_3.jpg" alt="Фото из инсты" class="instagram__img" loading="lazy">
+                </li>
+                <li class="instagram__item">
+                    <img src="./img/insta_2.jpg" alt="Фото из инсты" class="instagram__img" loading="lazy">
+                </li>
+                <li class="instagram__item">
+                    <img src="./img/insta_3.jpg" alt="Фото из инсты" class="instagram__img" loading="lazy">
+                </li>
+            </ul>
+        </div>
+    </div>
+    <section class="get-catalog">
+        <h2 class="section-title get-catalog__title">Получите каталог наших проектов</h2>
+        @include('./html/get-catalog.html')
+    </section>
+</main> 
+
+@include('./html/footer.html')z-page__figure js-style-item" tabindex="0">
                         <div class="quiz-page__img-wrap">
                             <img srcset="./img/quiz_style-1.webp" src="./img/quiz_style-1.jpg" alt="Минимализм" class="quiz-page__img">
                         </div>
