@@ -1609,6 +1609,7 @@ img {
   align-items: center;
   justify-content: flex-end;
   width: auto;
+  pointer-events: none;
 }
 
 .hero__title {
@@ -1621,6 +1622,7 @@ img {
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  pointer-events: none;
 }
 
 .hero__controls {
@@ -1635,6 +1637,7 @@ img {
   flex: 1 1 300px;
   max-width: 350px;
   margin: 10px 25px;
+  pointer-events: all;
 }
 
 .hero__scroll-link {
@@ -1647,6 +1650,7 @@ img {
   background-repeat: no-repeat;
   background-position: center 0;
   transition: all 0.25s ease-in-out 0s;
+  pointer-events: all;
 }
 
 .hero__scroll-link:hover {

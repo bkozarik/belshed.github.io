@@ -687,7 +687,7 @@ if (typeof exports === 'object' && typeof module !== 'undefined') {
 
     				if ( isUserInteracting === false ) {
 
-    					lon += 0.1;
+    					lon += 0.03;
 
     				}
 
