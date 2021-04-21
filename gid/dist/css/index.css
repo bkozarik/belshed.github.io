@@ -1576,6 +1576,7 @@ img {
 .hero {
   height: 100vh;
   min-height: 790px;
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -3964,6 +3965,21 @@ img {
   width: 90px;
   flex-shrink: 0;
   background-image: url(../img/play-button.svg);
+}
+
+@media screen and (max-width: 700px) {
+  .youtube {
+    padding: 20% 0px 25%;
+  }
+  .youtube__title {
+    font-size: 34px;
+    line-height: 42px;
+    margin-bottom: 35px;
+  }
+  .youtube__link {
+    height: 60px;
+    width: 60px;
+  }
 }
 
 /*# sourceMappingURL=youtube.css.map */
