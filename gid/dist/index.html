@@ -72,6 +72,7 @@
 
 <main id="main" class="main">
     <section class="hero">
+        <div class="hero__panorama js-panorama" data-image="../img/panorama.jpg"></div>
         <div class="container hero__container">
             <h1 class="hero__title">Лучшее для лучших</h1>
             <div class="hero__controls"> 
@@ -456,14 +457,14 @@
             </button>
         </div>
     </section>
-    <section class="we">
-        <div class="container we__container">
-            <h2 class="we__title">МЫ ТАМ, ГДЕ:</h2>
-            <ul class="we__list">
-                <li class="we__item">Требуется высокое качество ремонтных работ</li>
-                <li class="we__item">Нужно четко соблюсти Бюджет</li>
-                <li class="we__item">Необходимо ответственно подойти к процессу</li>
-            </ul>
+    <section class="youtube">
+        <video class="youtube__video" autoplay loop playsinline muted preload="metadata">
+            <source src="./video/video-bg.webm" type="video/webm">
+            <source src="./video/video-bg.mp4" type="video/mp4">
+        </video>
+        <div class="youtube__body">
+            <h2 class="youtube__title">Наш YouTube канал</h2>
+            <a href="https://www.youtube.com/" target="_blank" class="youtube__link"></a>
         </div>
     </section>
     <div class="instagram">
@@ -522,7 +523,7 @@
     </div>
 </div>
     </section>
-</main> 
+</main>
 
     <footer class="footer">
         <div class="container footer__container">
@@ -625,7 +626,7 @@
                 <button class="button button_full-yellow form__button">Оставить заявку</button> 
             </form>
         </div>
-    </div>
+    </div> 
 
     <script src="./js/main.js" defer></script>
 </body>
