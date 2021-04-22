@@ -673,8 +673,22 @@ template {
   color: #fff;
 }
 
-.button_dark:hover {
-  background-color: #111111;
+.button_dark::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transition: transform 0.25s ease-in-out 0s;
+  transform-origin: left;
+  transform: scaleX(0);
+  z-index: -1;
+}
+
+.button_dark:hover::before, .button_dark.active::before {
+  transform: scaleX(1);
 }
 
 .button_black {
