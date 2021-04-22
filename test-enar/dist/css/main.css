@@ -38,11 +38,12 @@
     }
 }
 
-@media screen and (min-height: 650px) and (max-height: 920px) and (max-width: 520px){
+@media screen and (min-height: 650px) and (max-height: 920px) and (max-width: 720px){
     .hero__body {
         margin-top: -60px;
     }
     .contacts__copyright {
+        position: absolute;
         bottom: 135px;
         z-index: 2;
     }
