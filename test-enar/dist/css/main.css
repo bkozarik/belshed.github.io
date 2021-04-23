@@ -38,7 +38,7 @@
     }
 }
 
-@media (min-height: 620px) and (max-width: 920px){
+@media (min-height: 620px) and (max-width: 921px){
     .hero__body {
         margin-top: -60px;
     }
