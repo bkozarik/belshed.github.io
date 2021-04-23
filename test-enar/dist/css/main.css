@@ -42,10 +42,12 @@
     .hero__body {
         margin-top: -60px;
     }
-    
+
     .contacts__copyright {
         position: absolute;
         bottom: 135px;
+        top: auto;
+        display: inline-block;
         z-index: 2;
     }
 }
