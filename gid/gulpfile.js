@@ -82,7 +82,7 @@ const convertFonts = () => {
 }
 
 const minifyJs = () => {
-    return src('dist/js/*.js')
+    return src('src/js/*.js')
     .pipe(jsmin())
     .pipe(dest('dist/js/'))
     .pipe(browserSync.stream());
@@ -124,5 +124,5 @@ const watchFiles = () => {
     watch('./src/html/*.html', htmlInclude);
   }
 
-exports.build = series(wipe, parallel(convertFonts, series(compileStyles, concatCSS, minifyStyles), series(compileJS, concatJS, minifyJs), transferFiles, htmlInclude));
+exports.build = series(wipe, parallel(convertFonts, series(compileStyles, concatCSS, minifyStyles), series(compileJS, minifyJs, concatJS), transferFiles, htmlInclude));
 exports.default = series(wipe, parallel(convertFonts, series(compileStyles, concatCSS)), compileJS, concatJS, transferFiles, htmlInclude, watchFiles);
