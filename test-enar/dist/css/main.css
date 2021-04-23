@@ -42,12 +42,21 @@
     .hero__body {
         margin-top: -60px;
     }
-
+    .contacts {
+        padding-bottom: 0;
+    }
+    .contacts__form {
+        padding-bottom: 30px;
+    }
     .contacts__copyright {
         position: absolute;
-        bottom: 135px;
+        transform: translate(-50%, -135px);
         top: auto;
         display: inline-block;
         z-index: 2;
-    }
+        -webkit-transform: translate(-50%, -135px);
+        -moz-transform: translate(-50%, -135px);
+        -ms-transform: translate(-50%, -135px);
+        -o-transform: translate(-50%, -135px);
+}
 }
