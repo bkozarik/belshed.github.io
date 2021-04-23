@@ -38,7 +38,7 @@
     }
 }
 
-@media (min-height: 620px) and (max-width: 921px){
+@media (min-height: 590px) and (max-width: 921px){
     .hero__body {
         margin-top: -60px;
     }
@@ -58,5 +58,5 @@
         -moz-transform: translate(-50%, -135px);
         -ms-transform: translate(-50%, -135px);
         -o-transform: translate(-50%, -135px);
-}
+    }
 }
