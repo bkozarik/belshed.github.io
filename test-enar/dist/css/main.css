@@ -59,15 +59,15 @@
         -ms-transform: translate(-50%, -75px);
         -o-transform: translate(-50%, -75px);
 }
-}  
+}
 
-@media (min-height: 590px) and (max-width: 921px){
+@media (min-height: 650px) and (max-width: 921px){
     .contacts__copyright {
-        /* transform: translate(-50%, -135px);
+        transform: translate(-50%, -135px);
         -webkit-transform: translate(-50%, -135px);
         -moz-transform: translate(-50%, -135px);
         -ms-transform: translate(-50%, -135px);
-        -o-transform: translate(-50%, -135px); */
+        -o-transform: translate(-50%, -135px);
 }
 
 }
