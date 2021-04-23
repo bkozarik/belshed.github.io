@@ -36,7 +36,7 @@
     .outsource {   
         align-items: flex-start;
     }
-}
+}  
 
 @media (min-height: 550px) and (max-width: 921px){
     .hero__body {
