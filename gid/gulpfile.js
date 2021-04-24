@@ -91,8 +91,11 @@ const minifyJs = () => {
 const compileJS = () => {    
     return src('src/js/*.js')
         .pipe(rollup({
-            "format": "iife",
-            input: 'src/js/main.js'}))
+            output: {
+                "format": "iife",
+            },
+            input: 'src/js/main.js'
+        }))
         .pipe(dest('dist/js/'))
         .pipe(browserSync.stream());
 }
