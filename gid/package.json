@@ -55,8 +55,8 @@
     "webpack-dev-server": "^3.11.2"
   },
   "dependencies": {
+    "aos": "^2.3.4",
     "normalize.css": "^8.0.1",
-    "swiper": "^6.5.4",
-    "aos": "^2.3.4"
+    "swiper": "^6.5.4"
   }
 }
