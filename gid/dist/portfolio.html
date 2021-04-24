@@ -6,9 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"> -->
     <link rel="stylesheet" href="./css/index.css">
+    <script src="./js/preloader-script.js"></script>
+    <script src="./js/main.js" defer></script>
     <title>Портфолио</title>
 </head>
 <body>
+<div class="preloader js-preloader">
+    <video class="preloader__video" autoplay loop muted playsinline>
+        <source src="./video/gid_preloader-1-c.webm" type="video/webm">
+        <source src="./video/gid_preloader-1-c.mp4" type="video/webm">
+    </video>
+</div>
+
 <header class="header js-header header_inner">
     <div class="container header__container">
         <button class="button burger header__menu js-menu-trigger">
@@ -24,6 +33,7 @@
         </button>
     </div>
 </header>
+
 <nav class="menu js-menu">
     <ul class="menu__list">
         <li class="menu__item">
@@ -575,6 +585,5 @@
         </div>
     </div>
 </div>
-<script src="./js/main.js" defer></script>
 </body>
 </html>

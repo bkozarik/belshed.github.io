@@ -98,7 +98,11 @@ const compileJS = () => {
 }
 
 const concatJS = () => {
-    return src(['src/js/vendors/*.js', 'dist/js/**/*.js'])
+    src('src/js/transfer/*.js')
+        .pipe(dest('dist/js/'))
+        .pipe(browserSync.stream());
+
+    return src(['src/js/vendors/*.js', 'dist/js/*.js'])
         .pipe(gulpConcat('main.js'))
         .pipe(dest('dist/js/'))
         .pipe(browserSync.stream());
