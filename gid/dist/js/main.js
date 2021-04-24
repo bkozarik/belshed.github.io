@@ -519,6 +519,8 @@ if (typeof exports === 'object' && typeof module !== 'undefined') {
     document.addEventListener('DOMContentLoaded', () => {
         const header = document.querySelector('.js-header');
 
+        const lazyVideos = document.querySelectorAll('.js-lazy-video');
+
         let windowScroll = window.pageYOffset;
 
         const menu = document.querySelector('.js-menu');
@@ -545,8 +547,15 @@ if (typeof exports === 'object' && typeof module !== 'undefined') {
             return !!element;
         };
 
+        const testWepP = () => {
+            return document.createElement('canvas').toDataURL('image/webp').indexOf('data:image/webp') == 0;
+         };
+
         const panoramaInit = el => {
-            const image = el.dataset.image;
+            const imageJpeg = el.dataset.image;
+            const imageWebp = el.dataset.imageWebp;
+            const image = testWepP() ? imageWebp : imageJpeg;
+            
             const container = el;
 
             let camera, scene, renderer;
@@ -920,6 +929,15 @@ if (typeof exports === 'object' && typeof module !== 'undefined') {
         }
 
         const scrollHandler = () => {
+
+            const createSource = (path, type) => {
+                const source = document.createElement('source');
+                source.setAttribute('src', path);
+                source.setAttribute('type', `video/${type}`);
+
+                return source;
+            };
+
             const currScroll = window.pageYOffset;
             window.pageYOffset > 0 ? header.classList.add('fixed') : header.classList.remove('fixed');
 
@@ -928,6 +946,18 @@ if (typeof exports === 'object' && typeof module !== 'undefined') {
             direction == true ? header.classList.add('hidden') : header.classList.remove('hidden');
 
             windowScroll = currScroll;
+
+            lazyVideos.forEach(video => {
+                const videoOffset = Math.abs(video.getBoundingClientRect().y);
+
+                if(videoOffset < 1500 && !video.childElementCount){
+                    const webmSrc = video.dataset.srcWebm;
+                    const mp4Src = video.dataset.srcMp4;
+
+                    video.appendChild(createSource(webmSrc, 'webm'));
+                    video.appendChild(createSource(mp4Src, 'mp4'));
+                }
+            });
         };
 
         const mousemoveHandler = () => {
@@ -974,3 +1004,13 @@ if (typeof exports === 'object' && typeof module !== 'undefined') {
     });
 
 }());
+
+window.onload = () => {
+    const preloader = document.querySelector('.js-preloader');
+    const header = document.querySelector('.js-header');
+
+    setTimeout(() => {
+        preloader.querySelector('.preloader__video').style.maxWidth = header.querySelector('.header__logo').getBoundingClientRect().width + 50 + 'px';
+        preloader.classList.add('loaded');
+    }, 1000);
+};

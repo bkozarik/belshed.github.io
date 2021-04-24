@@ -82,7 +82,7 @@
 
 <main id="main" class="main main_nopt">
     <section class="hero">
-        <div class="hero__panorama js-panorama" data-image="./img/panorama.jpg"></div>
+        <div class="hero__panorama js-panorama" data-image="./img/panorama.jpg" data-image-webp="./img/panorama.webp"></div>
         <div class="container hero__container">
             <h1 class="hero__title">Лучшее для лучших</h1>
             <div class="hero__controls"> 
@@ -317,10 +317,7 @@
         </div>
     </section>
     <section class="youtube">
-        <video class="youtube__video" autoplay loop playsinline muted preload="metadata">
-            <source src="./video/video-bg.webm" type="video/webm">
-            <source src="./video/video-bg.mp4" type="video/mp4">
-        </video>
+        <video class="youtube__video js-lazy-video" data-src-mp4="./video/video-bg.mp4" data-src-webm="./video/video-bg.webm" autoplay loop playsinline muted preload="metadata"></video>
         <div class="youtube__body">
             <h2 class="youtube__title">Наш YouTube канал</h2>
             <a href="https://www.youtube.com/" target="_blank" class="youtube__link"></a>
