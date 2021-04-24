@@ -3218,7 +3218,7 @@ img, video, iframe {
   height: auto;
   max-width: 530px;
   object-fit: contain;
-  transition: all 0.6s ease-in-out 0s, max-width 0.3s ease-in-out 0s;
+  transition: 0.6s ease-in-out 0s, max-width 0.3s ease-in-out 0s, opacity 0.6s ease-in-out 0.1s;
 }
 
 .preloader.loaded {
@@ -3229,6 +3229,7 @@ img, video, iframe {
 .preloader.loaded .preloader__video {
   top: 80px;
   transform: translate(calc( 15px - 50%), -50%);
+  opacity: 0;
 }
 
 /*# sourceMappingURL=preloader.css.map */
