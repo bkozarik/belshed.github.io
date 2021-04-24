@@ -532,9 +532,8 @@ const openPopup=element=>{closePopups();const targetPopup=typeof element=='strin
 const openPopupByTrigger=()=>{let target=event.target;while(!target.classList.contains('js-popup-trigger')){target=target.parentNode;}
 openPopup(target.dataset.target);}
 const closePopups=()=>{const popups=document.querySelectorAll('.js-popup');popups.forEach(function(popup){popup.classList.remove('active');if(isExists(popup.querySelector('video'))){popup.querySelector('video').pause();}});toggleScroll(true);}
-const toggleScroll=(state=null)=>{const scrollWidth=getScrollWidth();const body=document.querySelector('body');const html=document.querySelector('html');if(state!=null){state?body.classList.remove('no-scroll'):body.classList.add('no-scroll');state?html.classList.remove('no-scroll'):html.classList.add('no-scroll');}
-else{body.classList.toggle('no-scroll');html.classList.toggle('no-scroll');}
-body.style.marginRight=body.classList.contains('no-scroll')?`${scrollWidth}px`:`${0}px`;}
+const toggleScroll=(state=null)=>{const body=document.querySelector('body');const html=document.querySelector('html');if(state!=null){state?body.classList.remove('no-scroll'):body.classList.add('no-scroll');state?html.classList.remove('no-scroll'):html.classList.add('no-scroll');state?document.removeEventListener('touchmove',iphoneScrollLock):document.addEventListener('touchmove',iphoneScrollLock);}
+else{body.classList.toggle('no-scroll');html.classList.toggle('no-scroll');}}
 const constrain=(val,min,max)=>{return val>max?max:val<min?min:val;}
 const scrollTo=(selector,offset=-100)=>{try{window.scrollTo({top:window.pageYOffset+document.querySelector(selector).getBoundingClientRect().top+offset,behavior:'smooth'});}
 catch(e){console.log(`Элемент ${selector} не найден!`);}}
@@ -551,6 +550,7 @@ else{this.el.querySelector('.js-popup-trigger').classList.remove('visible');this
 changeQuestion(page){this.questions.forEach((item,index)=>{item.classList.remove('active');if(index===page){item.classList.add('active');}});}
 slideToPage(page){this.currentPage=constrain(page,0,this.pages.length-1);this.setPageToActive(this.currentPage);this.changeQuestion(this.currentPage);this.toggleControls();this.setActivePaginationItem(this.currentPage);this.updateDimentions();}
 getCurrentPage(){return this.pages[this.currentPage];}}
+const iphoneScrollLock=event=>{event.preventDefault();}
 const scrollHandler=()=>{const createSource=(path,type)=>{const source=document.createElement('source');source.setAttribute('src',path);source.setAttribute('type',`video/${type}`);return source;}
 const currScroll=window.pageYOffset;window.pageYOffset>0?header.classList.add('fixed'):header.classList.remove('fixed');const direction=windowScroll<currScroll?true:false;direction==true?header.classList.add('hidden'):header.classList.remove('hidden');windowScroll=currScroll;lazyVideos.forEach(video=>{const videoOffset=Math.abs(video.getBoundingClientRect().y);if(videoOffset<1500&&!video.childElementCount){const webmSrc=video.dataset.srcWebm;const mp4Src=video.dataset.srcMp4;video.appendChild(createSource(webmSrc,'webm'));video.appendChild(createSource(mp4Src,'mp4'));}});}
 const mousemoveHandler=()=>{const y=event.clientY;const x=event.clientX;}
