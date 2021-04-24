@@ -24,5 +24,5 @@ window.onload = () => {
     setTimeout(() => {
         preloaderVideo.style.maxWidth = logo.getBoundingClientRect().width + 50 + 'px';
         preloader.classList.add('loaded');
-    }, 1000);
+    }, 2500);
 };
