@@ -44,7 +44,7 @@ const minifyStyles = () => {
 const htmlInclude = () => {
     return src(['./src/*.html'])
       .pipe(fileInclude({
-        prefix: '@',
+        prefix: '@@',
         basepath: '@file'
       }))
       .pipe(dest('./dist'))
