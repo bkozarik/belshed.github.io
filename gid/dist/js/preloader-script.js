@@ -1,5 +1,5 @@
 window.onload = () => {
-    const isDev = true;
+    const isDev = false;
 
     const preloader = document.querySelector('.js-preloader');
     const preloaderVideo = preloader.querySelector('.preloader__video');
