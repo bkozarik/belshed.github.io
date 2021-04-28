@@ -8,14 +8,14 @@
     <link rel="stylesheet" href="./css/index.css">
     <script src="./js/preloader-script.js"></script>
     <script src="./js/main.js" defer></script>
-    <title>Ремонт</title>
+    <title>3D Дизайн</title>
 </head>
 <body>
 <div class="preloader js-preloader ">
     <video class="preloader__video" data-videos="./video/gid_preloader-1-c, ./video/gid_preloader-2-c" autoplay loop playsinline muted preload="auto"></video>
 </div>
 
-<header class="header js-header header_inner">
+<header class="header js-header ">
     <div class="container header__container">
         <button class="button burger header__menu js-menu-trigger">
             <span></span>
@@ -77,85 +77,53 @@
     </ul>
 </nav>
 
-<main id="main" class="main">
-    <section class="hero hero_video">
-        <video class="hero__media" preload="metadata">
-            <source src="./video/video-bg.webm" type="video/webm">
-            <source src="./video/video-bg.mp4" type="video/mp4">
-        </video>
-        <button class="button play-button"></button>
-        <h2 class="hero__title">Видео работы GID</h2>
+<main id="main" class="main main_nopt">
+    <section class="hero hero_center">
+        <div class="hero__panorama hero__panorama_touch-action js-panorama" data-image="./img/panorama.jpg" data-image-webp="./img/panorama.webp"></div>
+        <h2 class="hero__title hero__title_big hero__title_black">3D Дизайн</h2>
     </section>
     <div class="benefits benefits_grey" id="benefits">
         <div class="container benefits__container">
             <ul class="benefits__list benefits__list_default">
-                <li class="benefit-item benefits__item benefit-item_renovation">
-    <h3 class="benefit-item__title">24/7</h3>
-    <span class="benefit-item__subtitle">Ваш личный менеджер всегда на связи</span>
-    <p class="benefit-item__text"></p>
-</li><li class="benefit-item benefits__item benefit-item_renovation">
-    <h3 class="benefit-item__title">Наблюдение</h3>
-    <span class="benefit-item__subtitle">На объекте ведётся круглосуточное видеонаблюдение</span>
-    <p class="benefit-item__text"></p>
-</li><li class="benefit-item benefits__item benefit-item_renovation">
-    <h3 class="benefit-item__title">7 лет</h3>
-    <span class="benefit-item__subtitle">Гарантии на все работы</span>
-    <p class="benefit-item__text"></p>
-</li><li class="benefit-item benefits__item benefit-item_renovation">
-    <h3 class="benefit-item__title">Документация</h3>
-    <span class="benefit-item__subtitle">Подготовим и утвердим всю проектную документацию</span>
-    <p class="benefit-item__text"></p>
-</li>
+                <li class="benefit-item benefits__item benefit-item_dark">
+                    <h3 class="benefit-item__title">25 <span class="benefit-item__title-samll">проектов</span></h3>
+                    <span class="benefit-item__subtitle">Сделали за прошлый год. Все - уникальны.</span>
+                </li>
+                <li class="benefit-item benefits__item benefit-item_dark">
+                    <h3 class="benefit-item__title">37 <span class="benefit-item__title-samll">лет</span></h3>
+                    <span class="benefit-item__subtitle">Суммарный опыт специалистов студии в дизайне</span>
+                </li>
+                <li class="benefit-item benefits__item benefit-item_dark">
+                    <h3 class="benefit-item__title">30 <span class="benefit-item__title-samll">млн. руб.</span></h3>
+                    <span class="benefit-item__subtitle">Сумма, сэкономленная клиентам при закупке мебели</span>
+                </li>
+                <li class="benefit-item benefits__item benefit-item_dark">
+                    <img src="./img/infinite-title.png" alt="Удовольствие от возможности взять всё под свой контроль." class="benefit-item__title">
+                    <span class="benefit-item__subtitle">Удовольствие от возможности взять всё под свой контроль.</span>
+                </li>
             </ul>
         </div>
     </div>
-    <section class="main-services">
-        <h2 class="section-title main-services__title">ОСНОВНЫЕ УСЛУГИ</h2>
-        <div class="container main-services__container">
-            <article class="main-services__item main-service">
-                <img src="./img/main-service_1.svg" alt="Тариф 'со своим дизайн проектом'" class="main-service__icon">
-                <h3 class="main-service__title">
-                    <a href="./service.html" class="main-service__link">Тариф "со своим дизайн проектом"</a>
-                </h3>
-                <ul class="main-service__list">
-                    <li class="main-service__list-item">Ваш дизайн проект</li>
-                    <li class="main-service__list-item">Наш ремонт</li>
-                </ul>
-            </article>
-            <article class="main-services__item main-service">
-                <img src="./img/main-service_2.svg" alt="Тариф 'ремонт под ключ'" class="main-service__icon">
-                <h3 class="main-service__title">
-                    <a href="./service.html" class="main-service__link">Тариф "ремонт под ключ"</a>
-                </h3>
-                <ul class="main-service__list">
-                    <li class="main-service__list-item">Планировочное решение</li>
-                    <li class="main-service__list-item">Дизайн-концепция</li>
-                    <li class="main-service__list-item">3Д Визуализации</li>
-                    <li class="main-service__list-item">Подбор материалов</li>
-                    <li class="main-service__list-item">Строительные чертежи</li>
-                    <li class="main-service__list-item">Строительные чертежи</li>
-                </ul>
-            </article>
-            <article class="main-services__item main-service">
-                <img src="./img/main-service_3.svg" alt="Тариф 'все включено'" class="main-service__icon">
-                <h3 class="main-service__title">
-                    <a href="./service.html" class="main-service__link">Тариф "все включено"</a>
-                </h3>
-                <ul class="main-service__list">
-                    <li class="main-service__list-item">Планировочное решение</li>
-                    <li class="main-service__list-item">Дизайн-концепция</li>
-                    <li class="main-service__list-item">3Д Визуализации</li>
-                    <li class="main-service__list-item">Строительные чертежи</li>
-                    <li class="main-service__list-item">Подбор материалов</li>
-                    <li class="main-service__list-item">Ремонт объекта </li>
-                    <li class="main-service__list-item">Организация поставки мебели и материалов</li>
-                    <li class="main-service__list-item">Финальное декорирование</li>
-                </ul>
-            </article>
+    <section id="quiz" class="quiz-section quiz-section_design">
+    <h2 class="section-title quiz-section__title">СТОИМОСТЬ ПРОЕКТА</h2>
+    <div class="container quiz-section__container">
+        <div class="quiz-section__content">
+            <h2 class="quiz-section__title">Узнайте стоимость дизайн-проекта, ответив на 3 вопроса</h2>
+            <p class="quiz-section__subtitle">Пройдите короткий тест, узнайте цену, получите консультацию по будущему проекту</p>
+            <button class="button button_black button_hover-white quiz-section__button js-popup-trigger" data-target=".js-popup-quiz">Узнать стоимость</button>
         </div>
-    </section>
+        <div class="quiz-section__aside">
+            <img src="./img/quiz-img.svg" alt="Узнайте стоимость дизайн-проекта, ответив на 3 вопроса" class="quiz-section__img">
+            <dl class="quiz-section__list">
+                <dt class="quiz-section__list-title">Бонусы:</dt>
+                <dd class="quiz-section__list-item">чек листы на 5 ошибок в строительстве</dd>
+                <dd class="quiz-section__list-item">5 трендов 2021 года на дизайн интерьеров</dd>
+            </dl>
+        </div>
+    </div>
+</section>
     <section class="portfolio-swiper">
-        <h2 class="section-title portfolio-swiper__title">ВЫПОЛНЕННЫЕ РАБОТЫ</h2>
+        <h2 class="section-title portfolio-swiper__title">Портфолио</h2>
         <div class="container portfolio-swiper__container js-portfolio-swiper">
             <div class="portfolio-swiper__track swiper-wrapper">
                 <article class="project portfolio-swiper__item swiper-slide">
@@ -266,171 +234,100 @@
             Портфолио
         </a>
     </section>
-    <section class="get-catalog">
-        <h2 class="section-title get-catalog__title">ЕЩЕ НЕ ГОТОВЫ ЗАКАЗАТЬ РЕМОНТ?</h2>
-        <div class="container get-catalog__container">
-    <picture class="get-catalog__picture">
-        <source srcset="./img/get-catalog-img.webp" type="image/webp">
-        <img src="./img/get-catalog-img.jpg" alt="Получите каталог наших проектов" class="get-catalog__img">
-    </picture>
-    <div class="get-catalog__content">
-        <h3 class="get-catalog__small-title">Оставьте ваш E-mail, чтобы получить каталог наших проектов</h3>
-        <p class="get-catalog__subtitle">Каталог поможет вам выбрать стиль и продумать планировку квартиры</p>
-        <form class="get-catalog__form form">
-            <input type="email" placeholder="Введите ваш E-mail" class="form__input" required>
-            <div class="form__checkbox checkbox">
-                <input type="checkbox" name="agreement" id="agreement-1" class="checkbox__input" checked>
-                <label for="agreement-1" class="checkbox__label">
-                    <span class="checkbox__fake"></span>
-                    <span class="checkbox__text">Я согласен на </span>
-                </label>
-                <a href="#" class="checkbox__text">обработку персональных данных</a>
-            </div>
-            <button class="button button_black button_hover-white form__button">Получить каталог</button> 
-        </form>
-    </div>
-</div>
-    </section>
-    <section class="team">
-        <h2 class="section-title team__title">НАША КОМАНДА</h2>
-        <div class="container team__container">
-            <article class="team-member team__member team-member_small">
-    <img src="./img/service_1.jpg" alt="Александр Троицкий" loading="lazy" class="team-member__img">
-    <div class="team-member__content">
-        <h3 class="team-member__name">Александр Троицкий</h3>
-        <small class="team-member__position">Арт-директор GID</small>
-        <p class="team-member__bio">20 лет в ремонтной компании. Курирует крупные проекты.</p>
-    </div>
-</article><article class="team-member team__member team-member_small">
-    <img src="./img/service_2.jpg" alt="Александр Троицкий" loading="lazy" class="team-member__img">
-    <div class="team-member__content">
-        <h3 class="team-member__name">Александр Троицкий</h3>
-        <small class="team-member__position">Арт-директор GID</small>
-        <p class="team-member__bio">20 лет в ремонтной компании. Курирует крупные проекты.</p>
-    </div>
-</article><article class="team-member team__member team-member_small">
-    <img src="./img/service_3.jpg" alt="Александр Троицкий" loading="lazy" class="team-member__img">
-    <div class="team-member__content">
-        <h3 class="team-member__name">Александр Троицкий</h3>
-        <small class="team-member__position">Арт-директор GID</small>
-        <p class="team-member__bio">20 лет в ремонтной компании. Курирует крупные проекты.</p>
-    </div>
-</article><article class="team-member team__member team-member_small">
-    <img src="./img/service_4.jpg" alt="Маргарита Тимосян" loading="lazy" class="team-member__img">
-    <div class="team-member__content">
-        <h3 class="team-member__name">Маргарита Тимосян</h3>
-        <small class="team-member__position">Арт-директор GID</small>
-        <p class="team-member__bio">20 лет в ремонтной компании. Курирует крупные проекты.</p>
-    </div>
-</article>
+    <section class="destination">
+        <h2 class="section-title destination__title">Для кого это</h2>
+        <div class="container destination__container">
+            <p class="destination__text">Мы делаем дизайн интерьеров для людей, которые хотят доверить нам весь процесс: дизайн-проект, ремонт, закупку материалов и мебели.</p>
+            <ul class="destination__list">
+                <li class="destination__item">
+                    <h3 class="destination__item-title">Для тех, кто ценит эстетику</h3>
+                    <p class="destination__item-text">Ежегодно посещаем зарубежные выставки, поэтому используем последние мировые тенденции в дизайне. Работаем только с проверенными решениями.</p>
+                </li>
+                <li class="destination__item">
+                    <h3 class="destination__item-title">Кому важна экспертность</h3>
+                    <p class="destination__item-text">В процессе работы над дизайн-проектом мы консультируемся с опытными строителями, чтобы получить технически реализуемые решения.</p>
+                </li>
+                <li class="destination__item">
+                    <h3 class="destination__item-title">Кому нужен тройной контроль</h3>
+                    <p class="destination__item-text">На каждый проект назначается группа из пяти человек. Это позволяет выдержать сроки, учесть нюансы, не упустить детали и досконально продумать интерьер.</p>
+                </li>
+            </ul>
         </div>
-        <a href="./team.html" class="button button_black button_hover-white team__link">
-            <svg width="25" height="25" viewBox="0 0 25 25" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1.65907 0H9.9924V8.33811H8.32573V2.48976C6.01685 3.45651 4.1136 5.19314 2.93925 7.40469C1.76489 9.61624 1.39184 12.1663 1.88345 14.6219C2.37506 17.0774 3.70103 19.287 5.63614 20.8753C7.57124 22.4636 9.99617 23.3327 12.4991 23.335C15.1568 23.3376 17.7227 22.3626 19.7087 20.5955C21.6947 18.8284 22.9622 16.3925 23.2701 13.7512C23.5779 11.1099 22.9047 8.44748 21.3784 6.27051C19.8522 4.09353 17.5794 2.55387 14.9924 1.94445V0.236803C17.8579 0.820193 20.4282 2.39029 22.2563 4.67391C24.0843 6.95754 25.0544 9.81015 24.9976 12.7354C24.9409 15.6607 23.861 18.4736 21.9458 20.6845C20.0306 22.8955 17.4013 24.3646 14.5154 24.8363C11.6294 25.3081 8.66958 24.7525 6.15072 23.2664C3.63187 21.7802 1.71346 19.4575 0.729271 16.7024C-0.254918 13.9472 -0.242593 10.934 0.7641 8.18702C1.77079 5.44003 3.70814 3.1331 6.23907 1.66762H1.65907V0Z"/>
-            </svg>
-            Еще сотрудники
-        </a>
     </section>
-    <section class="steps">
-        <h2 class="section-title steps__title">Этапы выполнения работ</h2>
-        <div class="container steps__container">
-            <div class="steps__wrap steps__wrap_process">
-                <article class="step steps__item">
-    <img src="./img/step-icon_7.png" alt="Черновой" class="step__icon">
-    <h3 class="step__name" data-num="01">Черновой</h3>
-    <p class="step__text">Работы по демонтажу, штукатурке, стяжке и другие</p>
-    <button class="button step__button"></button>
-</article><article class="step steps__item">
-    <img src="./img/step-icon_8.png" alt="Инженерные работы" class="step__icon">
-    <h3 class="step__name" data-num="02">Инженерные работы</h3>
-    <p class="step__text">Электротехнические работы, отопление, водоснабжение и другие</p>
-    <button class="button step__button"></button>
-</article><article class="step steps__item">
-    <img src="./img/step-icon_9.png" alt="Предчистовая отделка" class="step__icon">
-    <h3 class="step__name" data-num="03">Предчистовая отделка</h3>
-    <p class="step__text">Гипсокартонные работы, шпатлевка, напольные покрытия и другое</p>
-    <button class="button step__button"></button>
-</article><article class="step steps__item">
-    <img src="./img/step-icon_10.png" alt="Чистовая отделка" class="step__icon">
-    <h3 class="step__name" data-num="04">Чистовая отделка</h3>
-    <p class="step__text">Монтаж и декоративные покрытия</p>
-    <button class="button step__button"></button>
-</article><article class="step steps__item">
-    <img src="./img/step-icon_11.png" alt="Заключительный этап" class="step__icon">
-    <h3 class="step__name" data-num="05">Заключительный этап</h3>
-    <p class="step__text">Меблировка, декорирование и клининг</p>
-    <button class="button step__button"></button>
+    <section class="youtube">
+        <video class="youtube__video js-lazy-video" data-src-mp4="./video/video-bg.mp4" data-src-webm="./video/video-bg.webm" autoplay loop playsinline muted preload="metadata"></video>
+        <div class="youtube__body">
+            <h2 class="youtube__title">Наш YouTube канал</h2>
+            <a href="https://www.youtube.com/" target="_blank" class="youtube__link"></a>
+        </div>
+    </section>
+    <section class="how">
+        <h2 class="section-title how__title">КАК МЫ РАБОТАЕМ</h2>
+        <div class="container how__container">
+            <article class="how-item how__item">
+    <div class="how-item__head">
+        <img src="./img/how-item_1.png" alt="Определение стиля" class="how-item__icon">
+        <h3 class="how-item__title">Определение стиля</h3>
+    </div>
+    <p class="how-item__text">Переносим утвержденный дизайн интерьера на бумагу. В результате вы получаете комплект дизайнерских документов: строительные чертежи, фотореалистичные визуализации, и необходимые спецификации.</p>
+</article><article class="how-item how__item">
+    <div class="how-item__head">
+        <img src="./img/how-item_2.png" alt="Цветовые решения" class="how-item__icon">
+        <h3 class="how-item__title">Цветовые решения</h3>
+    </div>
+    <p class="how-item__text">Переносим утвержденный дизайн интерьера на бумагу. В результате вы получаете комплект дизайнерских документов: строительные чертежи, фотореалистичные визуализации, и необходимые спецификации.</p>
+</article><article class="how-item how__item">
+    <div class="how-item__head">
+        <img src="./img/how-item_3.png" alt="Планировочные решения" class="how-item__icon">
+        <h3 class="how-item__title">Планировочные решения</h3>
+    </div>
+    <p class="how-item__text">Переносим утвержденный дизайн интерьера на бумагу. В результате вы получаете комплект дизайнерских документов: строительные чертежи, фотореалистичные визуализации, и необходимые спецификации.</p>
+</article><article class="how-item how__item">
+    <div class="how-item__head">
+        <img src="./img/how-item_4.png" alt="Бюджет" class="how-item__icon">
+        <h3 class="how-item__title">Бюджет</h3>
+    </div>
+    <p class="how-item__text">Переносим утвержденный дизайн интерьера на бумагу. В результате вы получаете комплект дизайнерских документов: строительные чертежи, фотореалистичные визуализации, и необходимые спецификации.</p>
+</article><article class="how-item how__item">
+    <div class="how-item__head">
+        <img src="./img/how-item_5.png" alt="Материалы и предметы" class="how-item__icon">
+        <h3 class="how-item__title">Материалы и предметы</h3>
+    </div>
+    <p class="how-item__text">Переносим утвержденный дизайн интерьера на бумагу. В результате вы получаете комплект дизайнерских документов: строительные чертежи, фотореалистичные визуализации, и необходимые спецификации.</p>
+</article><article class="how-item how__item">
+    <div class="how-item__head">
+        <img src="./img/how-item_6.png" alt="Визуализация" class="how-item__icon">
+        <h3 class="how-item__title">Визуализация</h3>
+    </div>
+    <p class="how-item__text">Переносим утвержденный дизайн интерьера на бумагу. В результате вы получаете комплект дизайнерских документов: строительные чертежи, фотореалистичные визуализации, и необходимые спецификации.</p>
+</article><article class="how-item how__item">
+    <div class="how-item__head">
+        <img src="./img/how-item_7.png" alt="Чертежи и проекты" class="how-item__icon">
+        <h3 class="how-item__title">Чертежи и проекты</h3>
+    </div>
+    <p class="how-item__text">Переносим утвержденный дизайн интерьера на бумагу. В результате вы получаете комплект дизайнерских документов: строительные чертежи, фотореалистичные визуализации, и необходимые спецификации.</p>
 </article>
-            <button class="button steps__button steps__button_in-wrap"> 
-                Начать
-                <svg width="117" height="16" viewBox="0 0 117 16" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M116.707 8.70712C117.098 8.31659 117.098 7.68343 116.707 7.2929L110.343 0.928942C109.953 0.538417 109.319 0.538417 108.929 0.928942C108.538 1.31947 108.538 1.95263 108.929 2.34316L114.586 8.00001L108.929 13.6569C108.538 14.0474 108.538 14.6806 108.929 15.0711C109.319 15.4616 109.953 15.4616 110.343 15.0711L116.707 8.70712ZM-8.74228e-08 9L116 9.00001L116 7.00001L8.74228e-08 7L-8.74228e-08 9Z"/>
-                </svg>                    
-            </button>
-            </div>
         </div>
     </section>
     <section class="result">
-        <h2 class="section-title result__title">РЕЗУЛЬТАТ</h2>
-        <div class="container result__container">
-            <div class="result__item result-item @@class">
-    <img src="./img/result-icon_1.png" alt="Полностью готовый ремонт “под ключ” (с&nbsp;соблюдением всех сроков и бюджета)" class="result-item__icon">
-    <p class="result-item__text">Полностью готовый ремонт “под ключ” (с&nbsp;соблюдением всех сроков и бюджета)</p>
-</div><div class="result__item result-item @@class">
-    <img src="./img/result-icon_2.png" alt="Сохраненное время и нервы" class="result-item__icon">
-    <p class="result-item__text">Сохраненное время и нервы</p>
-</div><div class="result__item result-item @@class">
-    <img src="./img/result-icon_3.png" alt="Гарантия на ремонт до 6 лет" class="result-item__icon">
-    <p class="result-item__text">Гарантия на ремонт до 6 лет</p>
-</div><div class="result__item result-item @@class">
-    <img src="./img/result-icon_4.png" alt="Рекомендации друзьям" class="result-item__icon">
-    <p class="result-item__text">Рекомендации друзьям</p>
+        <h2 class="section-title result__title">Что вы получите</h2>
+        <div class="container result__container result__container_full-grey">
+            <div class="result__item result-item result__item_high">
+    <img src="./img/result-icon_5.png" alt="Функциональность" class="result-item__icon">
+    <p class="result-item__text">Функциональность</p>
+</div><div class="result__item result-item result__item_high">
+    <img src="./img/result-icon_6.png" alt="Эстетику" class="result-item__icon">
+    <p class="result-item__text">Эстетику</p>
+</div><div class="result__item result-item result__item_high">
+    <img src="./img/result-icon_7.png" alt="Качественный ремонт" class="result-item__icon">
+    <p class="result-item__text">Качественный ремонт</p>
+</div><div class="result__item result-item result__item_high">
+    <img src="./img/result-icon_8.png" alt="Уникальные условия" class="result-item__icon">
+    <p class="result-item__text">Уникальные условия</p>
 </div>
         </div>
     </section>
-    <section class="blog-section">
-        <h2 class="section-title blog-section__title">НАШ БЛОГ</h2>
-        <div class="container blog-section__container">
-            <div class="blog-section__articles">
-                <article class="blog-preview blog-section__article">
-    <time class="blog-preview__date" datetime="2021-03-22">2021, Март</time>
-    <h3 class="blog-preview__title">
-        <a href="./article.html">Как определить компетенцию дизайнера ничего не зная о дизайне интерьера?</a>
-    </h3>
-    <p class="blog-preview__text">Сегодня вопрос профессиональной подготовки дизайнеров интерьера весьма актуален. Существует множество...</p>
-    <a href="./article.html" class="button button_black-border button_hover-black blog-preview__link">Читать полностью</a>
-</article><article class="blog-preview blog-section__article">
-    <time class="blog-preview__date" datetime="2021-03-22">2021, Март</time>
-    <h3 class="blog-preview__title">
-        <a href="./article.html">Как определить компетенцию дизайнера ничего не зная о дизайне интерьера?</a>
-    </h3>
-    <p class="blog-preview__text">Сегодня вопрос профессиональной подготовки дизайнеров интерьера весьма актуален. Существует множество...</p>
-    <a href="./article.html" class="button button_black-border button_hover-black blog-preview__link">Читать полностью</a>
-</article><article class="blog-preview blog-section__article">
-    <time class="blog-preview__date" datetime="2021-03-22">2021, Март</time>
-    <h3 class="blog-preview__title">
-        <a href="./article.html">Как определить компетенцию дизайнера ничего не зная о дизайне интерьера?</a>
-    </h3>
-    <p class="blog-preview__text">Сегодня вопрос профессиональной подготовки дизайнеров интерьера весьма актуален. Существует множество...</p>
-    <a href="./article.html" class="button button_black-border button_hover-black blog-preview__link">Читать полностью</a>
-</article><article class="blog-preview blog-section__article">
-    <time class="blog-preview__date" datetime="2021-03-22">2021, Март</time>
-    <h3 class="blog-preview__title">
-        <a href="./article.html">Как определить компетенцию дизайнера ничего не зная о дизайне интерьера?</a>
-    </h3>
-    <p class="blog-preview__text">Сегодня вопрос профессиональной подготовки дизайнеров интерьера весьма актуален. Существует множество...</p>
-    <a href="./article.html" class="button button_black-border button_hover-black blog-preview__link">Читать полностью</a>
-</article>
-            </div>
-            <a href="./blog.html" class="button button_black-border button_hover-black blog-section__link"> 
-                Перейти в блог
-                <svg width="117" height="16" viewBox="0 0 117 16" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M116.707 8.70712C117.098 8.31659 117.098 7.68343 116.707 7.2929L110.343 0.928942C109.953 0.538417 109.319 0.538417 108.929 0.928942C108.538 1.31947 108.538 1.95263 108.929 2.34316L114.586 8.00001L108.929 13.6569C108.538 14.0474 108.538 14.6806 108.929 15.0711C109.319 15.4616 109.953 15.4616 110.343 15.0711L116.707 8.70712ZM-8.74228e-08 9L116 9.00001L116 7.00001L8.74228e-08 7L-8.74228e-08 9Z"/>
-                </svg>                    
-            </a>
-        </div>
-    </section>
-    <section class="reviews @@class">
+    <section class="reviews reviews_border-bottom">
     <h2 class="section-title reviews__title">ОТЗЫВЫ НАШИХ КЛИЕНТОВ</h2>
     <div class="container reviews__container js-reviews-swiper">
         <div class="swiper-wrapper reviews__track">
@@ -484,6 +381,113 @@
         <div class="reviews__pagination"></div>
     </div>
 </section>
+    <section class="team">
+        <h2 class="section-title team__title">НАША КОМАНДА</h2>
+        <div class="container team__container">
+            <article class="team-member team__member team-member_small">
+    <img src="./img/service_1.jpg" alt="Александр Троицкий" loading="lazy" class="team-member__img">
+    <div class="team-member__content">
+        <h3 class="team-member__name">Александр Троицкий</h3>
+        <small class="team-member__position">Арт-директор GID</small>
+        <p class="team-member__bio">20 лет в ремонтной компании. Курирует крупные проекты.</p>
+    </div>
+</article><article class="team-member team__member team-member_small">
+    <img src="./img/service_2.jpg" alt="Александр Троицкий" loading="lazy" class="team-member__img">
+    <div class="team-member__content">
+        <h3 class="team-member__name">Александр Троицкий</h3>
+        <small class="team-member__position">Арт-директор GID</small>
+        <p class="team-member__bio">20 лет в ремонтной компании. Курирует крупные проекты.</p>
+    </div>
+</article><article class="team-member team__member team-member_small">
+    <img src="./img/service_3.jpg" alt="Александр Троицкий" loading="lazy" class="team-member__img">
+    <div class="team-member__content">
+        <h3 class="team-member__name">Александр Троицкий</h3>
+        <small class="team-member__position">Арт-директор GID</small>
+        <p class="team-member__bio">20 лет в ремонтной компании. Курирует крупные проекты.</p>
+    </div>
+</article><article class="team-member team__member team-member_small">
+    <img src="./img/service_4.jpg" alt="Маргарита Тимосян" loading="lazy" class="team-member__img">
+    <div class="team-member__content">
+        <h3 class="team-member__name">Маргарита Тимосян</h3>
+        <small class="team-member__position">Арт-директор GID</small>
+        <p class="team-member__bio">20 лет в ремонтной компании. Курирует крупные проекты.</p>
+    </div>
+</article>
+        </div>
+        <a href="./team.html" class="button button_black button_hover-white team__link">
+            <svg width="25" height="25" viewBox="0 0 25 25" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.65907 0H9.9924V8.33811H8.32573V2.48976C6.01685 3.45651 4.1136 5.19314 2.93925 7.40469C1.76489 9.61624 1.39184 12.1663 1.88345 14.6219C2.37506 17.0774 3.70103 19.287 5.63614 20.8753C7.57124 22.4636 9.99617 23.3327 12.4991 23.335C15.1568 23.3376 17.7227 22.3626 19.7087 20.5955C21.6947 18.8284 22.9622 16.3925 23.2701 13.7512C23.5779 11.1099 22.9047 8.44748 21.3784 6.27051C19.8522 4.09353 17.5794 2.55387 14.9924 1.94445V0.236803C17.8579 0.820193 20.4282 2.39029 22.2563 4.67391C24.0843 6.95754 25.0544 9.81015 24.9976 12.7354C24.9409 15.6607 23.861 18.4736 21.9458 20.6845C20.0306 22.8955 17.4013 24.3646 14.5154 24.8363C11.6294 25.3081 8.66958 24.7525 6.15072 23.2664C3.63187 21.7802 1.71346 19.4575 0.729271 16.7024C-0.254918 13.9472 -0.242593 10.934 0.7641 8.18702C1.77079 5.44003 3.70814 3.1331 6.23907 1.66762H1.65907V0Z"/>
+            </svg>
+            Еще сотрудники
+        </a>
+    </section>
+    <section class="blog-section">
+        <h2 class="section-title blog-section__title">НАШ БЛОГ</h2>
+        <div class="container blog-section__container">
+            <div class="blog-section__articles">
+                <article class="blog-preview blog-section__article">
+    <time class="blog-preview__date" datetime="2021-03-22">2021, Март</time>
+    <h3 class="blog-preview__title">
+        <a href="./article.html">Как определить компетенцию дизайнера ничего не зная о дизайне интерьера?</a>
+    </h3>
+    <p class="blog-preview__text">Сегодня вопрос профессиональной подготовки дизайнеров интерьера весьма актуален. Существует множество...</p>
+    <a href="./article.html" class="button button_black-border button_hover-black blog-preview__link">Читать полностью</a>
+</article><article class="blog-preview blog-section__article">
+    <time class="blog-preview__date" datetime="2021-03-22">2021, Март</time>
+    <h3 class="blog-preview__title">
+        <a href="./article.html">Как определить компетенцию дизайнера ничего не зная о дизайне интерьера?</a>
+    </h3>
+    <p class="blog-preview__text">Сегодня вопрос профессиональной подготовки дизайнеров интерьера весьма актуален. Существует множество...</p>
+    <a href="./article.html" class="button button_black-border button_hover-black blog-preview__link">Читать полностью</a>
+</article><article class="blog-preview blog-section__article">
+    <time class="blog-preview__date" datetime="2021-03-22">2021, Март</time>
+    <h3 class="blog-preview__title">
+        <a href="./article.html">Как определить компетенцию дизайнера ничего не зная о дизайне интерьера?</a>
+    </h3>
+    <p class="blog-preview__text">Сегодня вопрос профессиональной подготовки дизайнеров интерьера весьма актуален. Существует множество...</p>
+    <a href="./article.html" class="button button_black-border button_hover-black blog-preview__link">Читать полностью</a>
+</article><article class="blog-preview blog-section__article">
+    <time class="blog-preview__date" datetime="2021-03-22">2021, Март</time>
+    <h3 class="blog-preview__title">
+        <a href="./article.html">Как определить компетенцию дизайнера ничего не зная о дизайне интерьера?</a>
+    </h3>
+    <p class="blog-preview__text">Сегодня вопрос профессиональной подготовки дизайнеров интерьера весьма актуален. Существует множество...</p>
+    <a href="./article.html" class="button button_black-border button_hover-black blog-preview__link">Читать полностью</a>
+</article>
+            </div>
+            <a href="./blog.html" class="button button_black-border button_hover-black blog-section__link"> 
+                Перейти в блог
+                <svg width="117" height="16" viewBox="0 0 117 16" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M116.707 8.70712C117.098 8.31659 117.098 7.68343 116.707 7.2929L110.343 0.928942C109.953 0.538417 109.319 0.538417 108.929 0.928942C108.538 1.31947 108.538 1.95263 108.929 2.34316L114.586 8.00001L108.929 13.6569C108.538 14.0474 108.538 14.6806 108.929 15.0711C109.319 15.4616 109.953 15.4616 110.343 15.0711L116.707 8.70712ZM-8.74228e-08 9L116 9.00001L116 7.00001L8.74228e-08 7L-8.74228e-08 9Z"/>
+                </svg>                    
+            </a>
+        </div>
+    </section>
+    <section class="get-catalog">
+        <h2 class="section-title get-catalog__title">ЕЩЕ НЕ ГОТОВЫ ЗАКАЗАТЬ РЕМОНТ?</h2>
+        <div class="container get-catalog__container">
+    <picture class="get-catalog__picture">
+        <source srcset="./img/get-catalog-img.webp" type="image/webp">
+        <img src="./img/get-catalog-img.jpg" alt="Получите каталог наших проектов" class="get-catalog__img">
+    </picture>
+    <div class="get-catalog__content">
+        <h3 class="get-catalog__small-title">Оставьте ваш E-mail, чтобы получить каталог наших проектов</h3>
+        <p class="get-catalog__subtitle">Каталог поможет вам выбрать стиль и продумать планировку квартиры</p>
+        <form class="get-catalog__form form">
+            <input type="email" placeholder="Введите ваш E-mail" class="form__input" required>
+            <div class="form__checkbox checkbox">
+                <input type="checkbox" name="agreement" id="agreement-1" class="checkbox__input" checked>
+                <label for="agreement-1" class="checkbox__label">
+                    <span class="checkbox__fake"></span>
+                    <span class="checkbox__text">Я согласен на </span>
+                </label>
+                <a href="#" class="checkbox__text">обработку персональных данных</a>
+            </div>
+            <button class="button button_black button_hover-white form__button">Получить каталог</button> 
+        </form>
+    </div>
+</div>
+    </section>
     <section class="recall">
     <div class="container recall__container">
         <div class="recall__body">
