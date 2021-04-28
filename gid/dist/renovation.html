@@ -15,7 +15,7 @@
     <video class="preloader__video" data-videos="./video/gid_preloader-1-c, ./video/gid_preloader-2-c" autoplay loop playsinline muted preload="auto"></video>
 </div>
 
-<header class="header js-header ">
+<header class="header js-header header_inner">
     <div class="container header__container">
         <button class="button burger header__menu js-menu-trigger">
             <span></span>
@@ -77,109 +77,88 @@
     </ul>
 </nav>
 
-<main id="main" class="main main_nopt">
-    <section class="hero">
-        <div class="hero__panorama js-panorama" data-image="./img/panorama.jpg" data-image-webp="./img/panorama.webp"></div>
-        <div class="container hero__container">
-            <h2 class="hero__title">Лучшее для лучших</h2>
-            <div class="hero__controls"> 
-                <a href="./portfolio.html" class="button button_dark button_hover-black button_big hero__button">
-                    Проекты
-                </a>
-                <a href="#quiz" class="button button_dark button_hover-black button_big hero__button js-scroll-link">
-                    Расчитать стоимость
-                </a>
-            </div>
-            <a href="#benefits" class="hero__scroll-link js-scroll-link"></a>
-        </div>
+<main id="main" class="main">
+    <section class="hero hero_video">
+        <video class="hero__media" preload="metadata">
+            <source src="./video/video-bg.webm" type="video/webm">
+            <source src="./video/video-bg.mp4" type="video/mp4">
+        </video>
+        <button class="button play-button"></button>
+        <h2 class="hero__title">Видео работы GID</h2>
     </section>
-    <div class="benefits" id="benefits">
+    <div class="benefits benefits_grey" id="benefits">
         <div class="container benefits__container">
-            <ul class="benefits__list">
-                <li class="benefit-item benefits__item benefit-item_dark">
-    <h3 class="benefit-item__title">100+</h3>
-    <span class="benefit-item__subtitle">Реализованные проекты</span>
-    <p class="benefit-item__text">Работаем с любой недвижимостью – от дворцов до квартир</p>
-</li><li class="benefit-item benefits__item benefit-item_dark">
-    <h3 class="benefit-item__title">10 лет</h3>
-    <span class="benefit-item__subtitle">Безупречная репутация</span>
-    <p class="benefit-item__text">Наши специалисты постоянно стажируются у лидеров строительных работ</p>
-</li><li class="benefit-item benefits__item benefit-item_dark">
-    <h3 class="benefit-item__title">3 года</h3>
+            <ul class="benefits__list benefits__list_default">
+                <li class="benefit-item benefits__item benefit-item_renovation">
+    <h3 class="benefit-item__title">24/7</h3>
+    <span class="benefit-item__subtitle">Ваш личный менеджер всегда на связи</span>
+    <p class="benefit-item__text"></p>
+</li><li class="benefit-item benefits__item benefit-item_renovation">
+    <h3 class="benefit-item__title">Наблюдение</h3>
+    <span class="benefit-item__subtitle">На объекте ведётся круглосуточное видеонаблюдение</span>
+    <p class="benefit-item__text"></p>
+</li><li class="benefit-item benefits__item benefit-item_renovation">
+    <h3 class="benefit-item__title">7 лет</h3>
     <span class="benefit-item__subtitle">Гарантии на все работы</span>
-    <p class="benefit-item__text">Мы внимательно изучаем рынок отделочных материалов и инновационной техники</p>
-</li><li class="benefit-item benefits__item benefit-item_dark">
-    <h3 class="benefit-item__title">Сроки</h3>
-    <span class="benefit-item__subtitle">Процесс</span>
-    <p class="benefit-item__text">Нужно лучшее – закажи это у лучших!</p>
+    <p class="benefit-item__text"></p>
+</li><li class="benefit-item benefits__item benefit-item_renovation">
+    <h3 class="benefit-item__title">Документация</h3>
+    <span class="benefit-item__subtitle">Подготовим и утвердим всю проектную документацию</span>
+    <p class="benefit-item__text"></p>
 </li>
             </ul>
         </div>
     </div>
-    <section id="quiz" class="quiz-section">
-    <h2 class="section-title quiz-section__title">СТОИМОСТЬ ПРОЕКТА</h2>
-    <div class="container quiz-section__container">
-        <div class="quiz-section__content">
-            <h2 class="quiz-section__title">Узнайте стоимость дизайн-проекта, ответив на 3 вопроса</h2>
-            <p class="quiz-section__subtitle">Пройдите короткий тест, узнайте цену, получите консультацию по будущему проекту</p>
-            <button class="button button_black button_hover-white quiz-section__button js-popup-trigger" data-target=".js-popup-quiz">Узнать стоимость</button>
-        </div>
-        <div class="quiz-section__aside">
-            <img src="./img/quiz-img.svg" alt="Узнайте стоимость дизайн-проекта, ответив на 3 вопроса" class="quiz-section__img">
-            <dl class="quiz-section__list">
-                <dt class="quiz-section__list-title">Бонусы:</dt>
-                <dd class="quiz-section__list-item">чек листы на 5 ошибок в строительстве</dd>
-                <dd class="quiz-section__list-item">5 трендов 2021 года на дизайн интерьеров</dd>
-            </dl>
-        </div>
-    </div>
-</section>
-    <section class="services">
-        <h2 class="section-title services__title">Основные услуги</h2>
-        <div class="container services__container">
-            <article class="services__item service">
-    <picture class="service__img-wrap">
-        <source srcset="./img/service_1.webp" type="image/webp">
-        <img src="./img/service_1.jpg" alt="3D-дизайн" class="service__img" loading="lazy">
-    </picture>
-    <h3 class="service__title">
-        <a href="#" class="service__link">3D-дизайн</a>
-    </h3>
-    <p class="service__text">Идейные соображения высшего порядка, а также внедрение современных методик обеспечивает актуальность глубокомысленных рассуждений. </p>
-</article><article class="services__item service">
-    <picture class="service__img-wrap">
-        <source srcset="./img/service_2.webp" type="image/webp">
-        <img src="./img/service_2.jpg" alt="Ремонт" class="service__img" loading="lazy">
-    </picture>
-    <h3 class="service__title">
-        <a href="#" class="service__link">Ремонт</a>
-    </h3>
-    <p class="service__text">Мы вынуждены отталкиваться от того, что глубокий уровень погружения допускает внедрение своевременного выполнения сверхзадачи.</p>
-</article><article class="services__item service">
-    <picture class="service__img-wrap">
-        <source srcset="./img/service_3.webp" type="image/webp">
-        <img src="./img/service_3.jpg" alt="Строительство" class="service__img" loading="lazy">
-    </picture>
-    <h3 class="service__title">
-        <a href="#" class="service__link">Строительство</a>
-    </h3>
-    <p class="service__text">Мы вынуждены отталкиваться от того, что глубокий уровень погружения допускает внедрение своевременного выполнения сверхзадачи.</p>
-</article><article class="services__item service">
-    <picture class="service__img-wrap">
-        <source srcset="./img/service_4.webp" type="image/webp">
-        <img src="./img/service_4.jpg" alt="Ландшафтный дизайн" class="service__img" loading="lazy">
-    </picture>
-    <h3 class="service__title">
-        <a href="#" class="service__link">Ландшафтный дизайн</a>
-    </h3>
-    <p class="service__text">Идейные соображения высшего порядка обеспечивает актуальность глубокомысленных рассуждений. </p>
-</article>
+    <section class="main-services">
+        <h2 class="section-title main-services__title">ОСНОВНЫЕ УСЛУГИ</h2>
+        <div class="container main-services__container">
+            <article class="main-services__item main-service">
+                <img src="./img/main-service_1.svg" alt="Тариф 'со своим дизайн проектом'" class="main-service__icon">
+                <h3 class="main-service__title">
+                    <a href="./service.html" class="main-service__link">Тариф "со своим дизайн проектом"</a>
+                </h3>
+                <ul class="main-service__list">
+                    <li class="main-service__list-item">Ваш дизайн проект</li>
+                    <li class="main-service__list-item">Наш ремонт</li>
+                </ul>
+            </article>
+            <article class="main-services__item main-service">
+                <img src="./img/main-service_2.svg" alt="Тариф 'ремонт под ключ'" class="main-service__icon">
+                <h3 class="main-service__title">
+                    <a href="./service.html" class="main-service__link">Тариф "ремонт под ключ"</a>
+                </h3>
+                <ul class="main-service__list">
+                    <li class="main-service__list-item">Планировочное решение</li>
+                    <li class="main-service__list-item">Дизайн-концепция</li>
+                    <li class="main-service__list-item">3Д Визуализации</li>
+                    <li class="main-service__list-item">Подбор материалов</li>
+                    <li class="main-service__list-item">Строительные чертежи</li>
+                    <li class="main-service__list-item">Строительные чертежи</li>
+                </ul>
+            </article>
+            <article class="main-services__item main-service">
+                <img src="./img/main-service_3.svg" alt="Тариф 'все включено'" class="main-service__icon">
+                <h3 class="main-service__title">
+                    <a href="./service.html" class="main-service__link">Тариф "все включено"</a>
+                </h3>
+                <ul class="main-service__list">
+                    <li class="main-service__list-item">Планировочное решение</li>
+                    <li class="main-service__list-item">Дизайн-концепция</li>
+                    <li class="main-service__list-item">3Д Визуализации</li>
+                    <li class="main-service__list-item">Строительные чертежи</li>
+                    <li class="main-service__list-item">Подбор материалов</li>
+                    <li class="main-service__list-item">Ремонт объекта </li>
+                    <li class="main-service__list-item">Организация поставки мебели и материалов</li>
+                    <li class="main-service__list-item">Финальное декорирование</li>
+                </ul>
+            </article>
         </div>
     </section>
-    <section class="portfolio">
-        <h2 class="section-title portfolio__title">НАШИ ПРОЕКТЫ</h2>
-        <div class="container portfolio__container">
-            <article class="project portfolio__item">
+    <section class="portfolio-swiper">
+        <h2 class="section-title portfolio-swiper__title">ВЫПОЛНЕННЫЕ РАБОТЫ</h2>
+        <div class="container portfolio-swiper__container js-portfolio-swiper">
+            <div class="portfolio-swiper__track swiper-wrapper">
+                <article class="project portfolio-swiper__item swiper-slide">
     <div class="project__wrap">
         <picture>
             <source srcset="./img/service_1.webp" type="image/webp">
@@ -194,7 +173,7 @@
             </div>
         </div>
     </div>
-</article><article class="project portfolio__item">
+</article><article class="project portfolio-swiper__item swiper-slide">
     <div class="project__wrap">
         <picture>
             <source srcset="./img/service_2.webp" type="image/webp">
@@ -209,7 +188,7 @@
             </div>
         </div>
     </div>
-</article><article class="project portfolio__item">
+</article><article class="project portfolio-swiper__item swiper-slide">
     <div class="project__wrap">
         <picture>
             <source srcset="./img/service_3.webp" type="image/webp">
@@ -224,7 +203,7 @@
             </div>
         </div>
     </div>
-</article><article class="project portfolio__item">
+</article><article class="project portfolio-swiper__item swiper-slide">
     <div class="project__wrap">
         <picture>
             <source srcset="./img/service_4.webp" type="image/webp">
@@ -239,7 +218,7 @@
             </div>
         </div>
     </div>
-</article><article class="project portfolio__item">
+</article><article class="project portfolio-swiper__item swiper-slide">
     <div class="project__wrap">
         <picture>
             <source srcset="./img/service_1.webp" type="image/webp">
@@ -254,7 +233,7 @@
             </div>
         </div>
     </div>
-</article><article class="project portfolio__item">
+</article><article class="project portfolio-swiper__item swiper-slide">
     <div class="project__wrap">
         <picture>
             <source srcset="./img/service_2.webp" type="image/webp">
@@ -270,98 +249,25 @@
         </div>
     </div>
 </article>
-        </div>
-        <a href="./portfolio.html" class="button button_black portfolio__button">
-            <svg width="25" height="25" viewBox="0 0 25 25" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1.65907 0H9.9924V8.33811H8.32573V2.48976C6.01685 3.45651 4.1136 5.19314 2.93925 7.40469C1.76489 9.61624 1.39184 12.1663 1.88345 14.6219C2.37506 17.0774 3.70103 19.287 5.63614 20.8753C7.57124 22.4636 9.99617 23.3327 12.4991 23.335C15.1568 23.3376 17.7227 22.3626 19.7087 20.5955C21.6947 18.8284 22.9622 16.3925 23.2701 13.7512C23.5779 11.1099 22.9047 8.44748 21.3784 6.27051C19.8522 4.09353 17.5794 2.55387 14.9924 1.94445V0.236803C17.8579 0.820193 20.4282 2.39029 22.2563 4.67391C24.0843 6.95754 25.0544 9.81015 24.9976 12.7354C24.9409 15.6607 23.861 18.4736 21.9458 20.6845C20.0306 22.8955 17.4013 24.3646 14.5154 24.8363C11.6294 25.3081 8.66958 24.7525 6.15072 23.2664C3.63187 21.7802 1.71346 19.4575 0.729271 16.7024C-0.254918 13.9472 -0.242593 10.934 0.7641 8.18702C1.77079 5.44003 3.70814 3.1331 6.23907 1.66762H1.65907V0Z"/>
-            </svg>
-            Еще проекты
-        </a>
-    </section>
-    <section class="steps">
-        <h2 class="section-title steps__title">6 ЭТАПОВ ОТ ЗАЯВКИ ДО СДАЧИ ГОТОВОГО ОБЪЕКТА</h2>
-        <div class="container steps__container">
-            <div class="steps__wrap">
-                <article class="step steps__item">
-    <img src="./img/step-icon_1.png" alt="Заявка" class="step__icon">
-    <h3 class="step__name" data-num="01">Заявка</h3>
-    <p class="step__text">Оставляйте заявку на сайте и получите 2 варианта планировки квартиры БЕСПЛАТНО</p>
-    <button class="button step__button">Оставить заявку</button>
-</article><article class="step steps__item">
-    <img src="./img/step-icon_2.png" alt="Дизайн" class="step__icon">
-    <h3 class="step__name" data-num="02">Дизайн</h3>
-    <p class="step__text">Собираете на сайте стиль из четырех готовых решений с возможностью редактирования</p>
-    <button class="button step__button">Выбрать дизайн</button>
-</article><article class="step steps__item">
-    <img src="./img/step-icon_3.png" alt="Расчет" class="step__icon">
-    <h3 class="step__name" data-num="03">Расчет</h3>
-    <p class="step__text">Расчитываете финальную стоимость ремонта с помощью онлайн-калькулятора</p>
-    <button class="button step__button">Посчитать</button>
-</article><article class="step steps__item">
-    <img src="./img/step-icon_4.png" alt="Договор" class="step__icon">
-    <h3 class="step__name" data-num="04">Договор</h3>
-    <p class="step__text">Собираете на сайте стиль из четырех готовых решений с возможностью редактирования</p>
-    <button class="button step__button">Оставить заявку</button>
-</article><article class="step steps__item">
-    <img src="./img/step-icon_5.png" alt="Ремонт" class="step__icon">
-    <h3 class="step__name" data-num="05">Ремонт</h3>
-    <p class="step__text">Собираете на сайте стиль из четырех готовых решений с возможностью редактирования</p>
-    <button class="button step__button">Оставить заявку</button>
-</article><article class="step steps__item">
-    <img src="./img/step-icon_6.png" alt="Сдача объекта" class="step__icon">
-    <h3 class="step__name" data-num="06">Сдача объекта</h3>
-    <p class="step__text">Расчитываете финальную стоимость ремонта с помощью онлайн-калькулятора</p>
-    <button class="button step__button"></button>
-</article>
             </div>
-            <button class="button steps__button"> 
-                Начать
-                <svg width="117" height="16" viewBox="0 0 117 16" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M116.707 8.70712C117.098 8.31659 117.098 7.68343 116.707 7.2929L110.343 0.928942C109.953 0.538417 109.319 0.538417 108.929 0.928942C108.538 1.31947 108.538 1.95263 108.929 2.34316L114.586 8.00001L108.929 13.6569C108.538 14.0474 108.538 14.6806 108.929 15.0711C109.319 15.4616 109.953 15.4616 110.343 15.0711L116.707 8.70712ZM-8.74228e-08 9L116 9.00001L116 7.00001L8.74228e-08 7L-8.74228e-08 9Z"/>
-                </svg>                    
+            <div class="portfolio-swiper__pagination"></div>
+            <button class="button swiper-control-button swiper-control-button_prev portfolio-swiper__control js-swiper-prev">
+                <svg width="15" height="24" viewBox="0 0 15 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15 21.16L5.72874 12L15 2.82L12.1457 0L0 12L12.1457 24L15 21.16Z"/>
+                </svg>
+            </button>
+            <button class="button swiper-control-button swiper-control-button_next portfolio-swiper__control js-swiper-next">
+                <svg width="15" height="24" viewBox="0 0 15 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15 21.16L5.72874 12L15 2.82L12.1457 0L0 12L12.1457 24L15 21.16Z"/>
+                </svg>
             </button>
         </div>
+        <a href="./portfolio.html" class="button button_black button_hover-white portfolio-swiper__button">
+            Портфолио
+        </a>
     </section>
-    <section class="youtube">
-        <video class="youtube__video js-lazy-video" data-src-mp4="./video/video-bg.mp4" data-src-webm="./video/video-bg.webm" autoplay loop playsinline muted preload="metadata"></video>
-        <div class="youtube__body">
-            <h2 class="youtube__title">Наш YouTube канал</h2>
-            <a href="https://www.youtube.com/" target="_blank" class="youtube__link"></a>
-        </div>
-    </section>
-    <div class="instagram">
-        <div class="container instagram__container">
-            <img src="./img/insta-logo.png" alt="Логотип" class="instagram__logo">
-            <div class="instagram__list">
-                <a href="#" class="instagram__item">
-                    <img src="./img/insta_1.jpg" alt="Фото из инсты" class="instagram__img" loading="lazy">
-                </a>
-                <a href="#" class="instagram__item">
-                    <img src="./img/insta_2.jpg" alt="Фото из инсты" class="instagram__img" loading="lazy">
-                </a>
-                <a href="#" class="instagram__item">
-                    <img src="./img/insta_3.jpg" alt="Фото из инсты" class="instagram__img" loading="lazy">
-                </a>
-                <a href="#" class="instagram__item">
-                    <img src="./img/insta_1.jpg" alt="Фото из инсты" class="instagram__img" loading="lazy">
-                </a>
-                <a href="#" class="instagram__item">
-                    <img src="./img/insta_2.jpg" alt="Фото из инсты" class="instagram__img" loading="lazy">
-                </a>
-                <a href="#" class="instagram__item">
-                    <img src="./img/insta_3.jpg" alt="Фото из инсты" class="instagram__img" loading="lazy">
-                </a>
-                <a href="#" class="instagram__item">
-                    <img src="./img/insta_2.jpg" alt="Фото из инсты" class="instagram__img" loading="lazy">
-                </a>
-                <a href="#" class="instagram__item">
-                    <img src="./img/insta_3.jpg" alt="Фото из инсты" class="instagram__img" loading="lazy">
-                </a>
-            </div>
-        </div>
-    </div>
     <section class="get-catalog">
-        <h2 class="section-title get-catalog__title">Получите каталог наших проектов</h2>
+        <h2 class="section-title get-catalog__title">ЕЩЕ НЕ ГОТОВЫ ЗАКАЗАТЬ РЕМОНТ?</h2>
         <div class="container get-catalog__container">
     <picture class="get-catalog__picture">
         <source srcset="./img/get-catalog-img.webp" type="image/webp">
@@ -385,6 +291,207 @@
     </div>
 </div>
     </section>
+    <section class="team">
+        <h2 class="section-title team__title">НАША КОМАНДА</h2>
+        <div class="container team__container">
+            <article class="team-member team__member team-member_small">
+    <img src="./img/service_1.jpg" alt="Александр Троицкий" loading="lazy" class="team-member__img">
+    <div class="team-member__content">
+        <h3 class="team-member__name">Александр Троицкий</h3>
+        <small class="team-member__position">Арт-директор GID</small>
+        <p class="team-member__bio">20 лет в ремонтной компании. Курирует крупные проекты.</p>
+    </div>
+</article><article class="team-member team__member team-member_small">
+    <img src="./img/service_2.jpg" alt="Александр Троицкий" loading="lazy" class="team-member__img">
+    <div class="team-member__content">
+        <h3 class="team-member__name">Александр Троицкий</h3>
+        <small class="team-member__position">Арт-директор GID</small>
+        <p class="team-member__bio">20 лет в ремонтной компании. Курирует крупные проекты.</p>
+    </div>
+</article><article class="team-member team__member team-member_small">
+    <img src="./img/service_3.jpg" alt="Александр Троицкий" loading="lazy" class="team-member__img">
+    <div class="team-member__content">
+        <h3 class="team-member__name">Александр Троицкий</h3>
+        <small class="team-member__position">Арт-директор GID</small>
+        <p class="team-member__bio">20 лет в ремонтной компании. Курирует крупные проекты.</p>
+    </div>
+</article><article class="team-member team__member team-member_small">
+    <img src="./img/service_4.jpg" alt="Маргарита Тимосян" loading="lazy" class="team-member__img">
+    <div class="team-member__content">
+        <h3 class="team-member__name">Маргарита Тимосян</h3>
+        <small class="team-member__position">Арт-директор GID</small>
+        <p class="team-member__bio">20 лет в ремонтной компании. Курирует крупные проекты.</p>
+    </div>
+</article>
+        </div>
+        <a href="./team.html" class="button button_black button_hover-white team__link">
+            <svg width="25" height="25" viewBox="0 0 25 25" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.65907 0H9.9924V8.33811H8.32573V2.48976C6.01685 3.45651 4.1136 5.19314 2.93925 7.40469C1.76489 9.61624 1.39184 12.1663 1.88345 14.6219C2.37506 17.0774 3.70103 19.287 5.63614 20.8753C7.57124 22.4636 9.99617 23.3327 12.4991 23.335C15.1568 23.3376 17.7227 22.3626 19.7087 20.5955C21.6947 18.8284 22.9622 16.3925 23.2701 13.7512C23.5779 11.1099 22.9047 8.44748 21.3784 6.27051C19.8522 4.09353 17.5794 2.55387 14.9924 1.94445V0.236803C17.8579 0.820193 20.4282 2.39029 22.2563 4.67391C24.0843 6.95754 25.0544 9.81015 24.9976 12.7354C24.9409 15.6607 23.861 18.4736 21.9458 20.6845C20.0306 22.8955 17.4013 24.3646 14.5154 24.8363C11.6294 25.3081 8.66958 24.7525 6.15072 23.2664C3.63187 21.7802 1.71346 19.4575 0.729271 16.7024C-0.254918 13.9472 -0.242593 10.934 0.7641 8.18702C1.77079 5.44003 3.70814 3.1331 6.23907 1.66762H1.65907V0Z"/>
+            </svg>
+            Еще сотрудники
+        </a>
+    </section>
+    <section class="steps">
+        <h2 class="section-title steps__title">Этапы выполнения работ</h2>
+        <div class="container steps__container">
+            <div class="steps__wrap steps__wrap_process">
+                <article class="step steps__item">
+    <img src="./img/step-icon_7.png" alt="Черновой" class="step__icon">
+    <h3 class="step__name" data-num="01">Черновой</h3>
+    <p class="step__text">Работы по демонтажу, штукатурке, стяжке и другие</p>
+    <button class="button step__button"></button>
+</article><article class="step steps__item">
+    <img src="./img/step-icon_8.png" alt="Инженерные работы" class="step__icon">
+    <h3 class="step__name" data-num="02">Инженерные работы</h3>
+    <p class="step__text">Электротехнические работы, отопление, водоснабжение и другие</p>
+    <button class="button step__button"></button>
+</article><article class="step steps__item">
+    <img src="./img/step-icon_9.png" alt="Предчистовая отделка" class="step__icon">
+    <h3 class="step__name" data-num="03">Предчистовая отделка</h3>
+    <p class="step__text">Гипсокартонные работы, шпатлевка, напольные покрытия и другое</p>
+    <button class="button step__button"></button>
+</article><article class="step steps__item">
+    <img src="./img/step-icon_10.png" alt="Чистовая отделка" class="step__icon">
+    <h3 class="step__name" data-num="04">Чистовая отделка</h3>
+    <p class="step__text">Монтаж и декоративные покрытия</p>
+    <button class="button step__button"></button>
+</article><article class="step steps__item">
+    <img src="./img/step-icon_11.png" alt="Заключительный этап" class="step__icon">
+    <h3 class="step__name" data-num="05">Заключительный этап</h3>
+    <p class="step__text">Меблировка, декорирование и клининг</p>
+    <button class="button step__button"></button>
+</article>
+            <button class="button steps__button steps__button_in-wrap"> 
+                Начать
+                <svg width="117" height="16" viewBox="0 0 117 16" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M116.707 8.70712C117.098 8.31659 117.098 7.68343 116.707 7.2929L110.343 0.928942C109.953 0.538417 109.319 0.538417 108.929 0.928942C108.538 1.31947 108.538 1.95263 108.929 2.34316L114.586 8.00001L108.929 13.6569C108.538 14.0474 108.538 14.6806 108.929 15.0711C109.319 15.4616 109.953 15.4616 110.343 15.0711L116.707 8.70712ZM-8.74228e-08 9L116 9.00001L116 7.00001L8.74228e-08 7L-8.74228e-08 9Z"/>
+                </svg>                    
+            </button>
+            </div>
+        </div>
+    </section>
+    <section class="result">
+        <h2 class="section-title result__title">РЕЗУЛЬТАТ</h2>
+        <div class="container result__container">
+            <div class="result__item result-item">
+    <img src="./img/result-icon_1.png" alt="Полностью готовый ремонт “под ключ” (с&nbsp;соблюдением всех сроков и бюджета)" class="result-item__icon">
+    <p class="result-item__text">Полностью готовый ремонт “под ключ” (с&nbsp;соблюдением всех сроков и бюджета)</p>
+</div><div class="result__item result-item">
+    <img src="./img/result-icon_2.png" alt="Сохраненное время и нервы" class="result-item__icon">
+    <p class="result-item__text">Сохраненное время и нервы</p>
+</div><div class="result__item result-item">
+    <img src="./img/result-icon_3.png" alt="Гарантия на ремонт до 6 лет" class="result-item__icon">
+    <p class="result-item__text">Гарантия на ремонт до 6 лет</p>
+</div><div class="result__item result-item">
+    <img src="./img/result-icon_4.png" alt="Рекомендации друзьям" class="result-item__icon">
+    <p class="result-item__text">Рекомендации друзьям</p>
+</div>
+        </div>
+    </section>
+    <section class="blog-section">
+        <h2 class="section-title blog-section__title">НАШ БЛОГ</h2>
+        <div class="container blog-section__container">
+            <div class="blog-section__articles">
+                <article class="blog-preview blog-section__article">
+    <time class="blog-preview__date" datetime="2021-03-22">2021, Март</time>
+    <h3 class="blog-preview__title">
+        <a href="./article.html">Как определить компетенцию дизайнера ничего не зная о дизайне интерьера?</a>
+    </h3>
+    <p class="blog-preview__text">Сегодня вопрос профессиональной подготовки дизайнеров интерьера весьма актуален. Существует множество...</p>
+    <a href="./article.html" class="button button_black-border button_hover-black blog-preview__link">Читать полностью</a>
+</article><article class="blog-preview blog-section__article">
+    <time class="blog-preview__date" datetime="2021-03-22">2021, Март</time>
+    <h3 class="blog-preview__title">
+        <a href="./article.html">Как определить компетенцию дизайнера ничего не зная о дизайне интерьера?</a>
+    </h3>
+    <p class="blog-preview__text">Сегодня вопрос профессиональной подготовки дизайнеров интерьера весьма актуален. Существует множество...</p>
+    <a href="./article.html" class="button button_black-border button_hover-black blog-preview__link">Читать полностью</a>
+</article><article class="blog-preview blog-section__article">
+    <time class="blog-preview__date" datetime="2021-03-22">2021, Март</time>
+    <h3 class="blog-preview__title">
+        <a href="./article.html">Как определить компетенцию дизайнера ничего не зная о дизайне интерьера?</a>
+    </h3>
+    <p class="blog-preview__text">Сегодня вопрос профессиональной подготовки дизайнеров интерьера весьма актуален. Существует множество...</p>
+    <a href="./article.html" class="button button_black-border button_hover-black blog-preview__link">Читать полностью</a>
+</article><article class="blog-preview blog-section__article">
+    <time class="blog-preview__date" datetime="2021-03-22">2021, Март</time>
+    <h3 class="blog-preview__title">
+        <a href="./article.html">Как определить компетенцию дизайнера ничего не зная о дизайне интерьера?</a>
+    </h3>
+    <p class="blog-preview__text">Сегодня вопрос профессиональной подготовки дизайнеров интерьера весьма актуален. Существует множество...</p>
+    <a href="./article.html" class="button button_black-border button_hover-black blog-preview__link">Читать полностью</a>
+</article>
+            </div>
+            <a href="./blog.html" class="button button_black-border button_hover-black blog-section__link"> 
+                Перейти в блог
+                <svg width="117" height="16" viewBox="0 0 117 16" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M116.707 8.70712C117.098 8.31659 117.098 7.68343 116.707 7.2929L110.343 0.928942C109.953 0.538417 109.319 0.538417 108.929 0.928942C108.538 1.31947 108.538 1.95263 108.929 2.34316L114.586 8.00001L108.929 13.6569C108.538 14.0474 108.538 14.6806 108.929 15.0711C109.319 15.4616 109.953 15.4616 110.343 15.0711L116.707 8.70712ZM-8.74228e-08 9L116 9.00001L116 7.00001L8.74228e-08 7L-8.74228e-08 9Z"/>
+                </svg>                    
+            </a>
+        </div>
+    </section>
+    <section class="reviews">
+    <h2 class="section-title reviews__title">ОТЗЫВЫ НАШИХ КЛИЕНТОВ</h2>
+    <div class="container reviews__container js-reviews-swiper">
+        <div class="swiper-wrapper reviews__track">
+            <div class="reviews__slide review-slide swiper-slide">
+                <div class="review-slide__content">
+                    <article class="team-member team__member team-member_small review-slide__person">
+    <img src="./img/service_1.jpg" alt="Ирина Иванова" loading="lazy" class="team-member__img">
+    <div class="team-member__content">
+        <h3 class="team-member__name">Ирина Иванова</h3>
+        <small class="team-member__position">Владелица картиры в ЖК “Черемушки” </small>
+        <p class="team-member__bio">Ремонт квартиры под ключ, с выбранным стилем - Лофт</p>
+    </div>
+</article>
+                    <p class="review-slide__text">Как принято считать, стремящиеся вытеснить традиционное производство, нанотехнологии могут быть своевременно верифицированы. Противоположная точка зрения подразумевает, что стремящиеся вытеснить традиционное производство, нанотехнологии, вне зависимости от их уровня, должны быть функционально разнесены на независимые элементы...</p>
+                    <a href="./review.html" class="button button_black-border button_hover-black review-slide__link">Читать полностью</a>
+                </div>
+                <div class="review-slide__img-wrap">
+                    <img srcset="./img/apart-pic-1.webp" src="./img/apart-pic-1.jpg" alt="Ремонт квартиры под ключ, с выбранным стилем - Лофт" class="review-slide__img swiper-lazy">
+                    <div class="swiper-lazy-preloader"></div>
+                </div>
+            </div>
+            <div class="reviews__slide review-slide swiper-slide">
+                <div class="review-slide__content">
+                    <article class="team-member team__member team-member_small review-slide__person">
+    <img src="./img/service_1.jpg" alt="Ирина Иванова" loading="lazy" class="team-member__img">
+    <div class="team-member__content">
+        <h3 class="team-member__name">Ирина Иванова</h3>
+        <small class="team-member__position">Владелица картиры в ЖК “Черемушки” </small>
+        <p class="team-member__bio">Ремонт квартиры под ключ, с выбранным стилем - Лофт</p>
+    </div>
+</article>
+                    <p class="review-slide__text">Как принято считать, стремящиеся вытеснить традиционное производство, нанотехнологии могут быть своевременно верифицированы. Противоположная точка зрения подразумевает, что стремящиеся вытеснить традиционное производство, нанотехнологии, вне зависимости от их уровня, должны быть функционально разнесены на независимые элементы...</p>
+                    <a href="./review.html" class="button button_black-border button_hover-black review-slide__link">Читать полностью</a>
+                </div>
+                <div class="review-slide__img-wrap">
+                    <img srcset="./img/apart-pic-1.webp" src="./img/apart-pic-1.jpg" alt="Ремонт квартиры под ключ, с выбранным стилем - Лофт" class="review-slide__img swiper-lazy">
+                    <div class="swiper-lazy-preloader"></div>
+                </div>
+            </div>
+        </div>
+        <button class="button swiper-control-button swiper-control-button_prev reviews__control js-swiper-prev">
+            <svg width="15" height="24" viewBox="0 0 15 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15 21.16L5.72874 12L15 2.82L12.1457 0L0 12L12.1457 24L15 21.16Z"/>
+            </svg>
+        </button>
+        <button class="button swiper-control-button swiper-control-button_next reviews__control js-swiper-next">
+            <svg width="15" height="24" viewBox="0 0 15 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15 21.16L5.72874 12L15 2.82L12.1457 0L0 12L12.1457 24L15 21.16Z"/>
+            </svg>
+        </button>
+        <div class="reviews__pagination"></div>
+    </div>
+</section>
+    <section class="recall">
+    <div class="container recall__container">
+        <div class="recall__body">
+            <h2 class="recall__title">Оставьте заявку и мы поможем вам с проектом</h2>
+            <button class="button button_black recall__button js-popup-trigger" data-target=".js-popup-recall">Оставить заявку</button>
+        </div>
+    </div>
+</section>
 </main>
 
 <footer class="footer">
