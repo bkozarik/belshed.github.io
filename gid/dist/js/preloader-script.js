@@ -29,6 +29,9 @@ window.onload = () => {
             preloader.classList.add('loaded');
         }, 2500);
     }
+    else{
+        preloader.classList.add('loaded');
+    }
 
-    preloader.classList.add('loaded');
+    
 };

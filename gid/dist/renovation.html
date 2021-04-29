@@ -79,11 +79,11 @@
 
 <main id="main" class="main">
     <section class="hero hero_video">
-        <video class="hero__media" preload="metadata">
+        <video class="hero__media js-hero-video" preload="metadata">
             <source src="./video/video-bg.webm" type="video/webm">
             <source src="./video/video-bg.mp4" type="video/mp4">
         </video>
-        <button class="button play-button"></button>
+        <button class="button play-button js-play-button" data-target=".js-hero-video"></button>
         <h2 class="hero__title">Видео работы GID</h2>
     </section>
     <div class="benefits benefits_grey" id="benefits">
