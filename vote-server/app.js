@@ -16,36 +16,72 @@ const dbName = 'vote_db';
 const mongoDb = new MongoDB(dbURI, dbName);
 
 server.use(express.urlencoded({ extended: true }));
-
 server.use(express.json());
 
-server.get('/', async (req, res) => {
-    const id = await mongoDb.put('vote_data', {data: '22'});
+server.post('/vote-data', async (req, res) => {
+    const data = req.body;
 
-    const result = await mongoDb.get('vote_data', {_id: id});
+    data.name = 'vote_info';
+
+    const query = {
+        name: 'vote_info',
+    }
+
+    const dataId = await mongoDb.replace('vote_data', query, data);
     
-    res.send(result);
-});
-
-server.get('/data', (req, res) => {
     const result = {
-        das: 22231
+        status: true,
+        id: dataId,
     };
-    
+
     res.send(JSON.stringify(result));
 });
 
-server.post('/put-data', (req, res) => {
+server.get('/votes/:voteId', async (req, res) => {
+    const voteId = req.params.voteId;
+
+    let votes = await mongoDb.getMany('votes', {voteId});
+
+    res.send(JSON.stringify(votes.map(vote => vote.ciphergram)));
+});
+
+server.post('/sendVote', async (req, res) => {
+    const reqData = req.body;
+
     const result = {
-        status: true
-    
+        status: true,
     };
     
-    console.log(req.body);
+    const voteItem = {
+        voteId: reqData.voteId,
+        ciphergram: reqData.ciphergram,
+    }
+
+    await mongoDb.put('votes', voteItem);
 
     res.send(JSON.stringify(result));
+});
+
+server.get('/vote-data', async (req, res) => {
+    const query = {
+        name: 'vote_info',
+    }
+
+    let result = await mongoDb.get('vote_data', query);
+    const obj = {};
+
+    if(result){
+        obj.id = result._id;
+        result?.fieldData.forEach(item => {
+            obj[item.name] = item.value;
+    
+            return obj;
+        });
+    }
+
+    res.send(JSON.stringify(obj));
 });
 
 server.listen(port, () => {
-    console.log(`server started at http://localhost:${port}`);
-})
+    console.log(`Server started at http://localhost:${port}`);
+});

@@ -10,7 +10,7 @@ export default class MongoDB{
     }
     async get(collection, query){
         try {     
-            this.openConnection(collection);
+            await this.openConnection();
             
             const dbCollection = this.createCollection(collection);
 
@@ -21,9 +21,22 @@ export default class MongoDB{
             await this.closeConnection();
         }
     }
+    async getMany(collection, query){
+        try {     
+            await this.openConnection();
+            
+            const dbCollection = this.createCollection(collection);
+
+            const searchResult = await dbCollection.find(query).toArray();
+            
+            return searchResult;
+        } finally {
+            await this.closeConnection();
+        }
+    }
     async put(collection, doc){
         try {
-            await this.openConnection(collection);
+            await this.openConnection();
         
             const dbCollection = this.createCollection(collection);
 
@@ -35,6 +48,23 @@ export default class MongoDB{
         }
     }
     async replace(collection, query, doc){
+        try {
+            await this.openConnection();
+
+            const dbCollection = this.createCollection(collection);
+
+            dbCollection.findOneAndReplace(query, doc)
+            .then(replacedDoc => {
+                if(replacedDoc){
+                    return replacedDoc;
+                }
+                else{
+                    console.log(':/');
+                }
+            });
+        } finally {
+            await this.closeConnection();            
+        }
 
     }
     createCollection(collection){
@@ -42,7 +72,7 @@ export default class MongoDB{
 
         return this.database.collection(collection);
     }
-    async openConnection(collection){
+    async openConnection(){
         
         this.dbClient = MongoClient(this.dbURI, {
             useNewUrlParser: true,
@@ -55,29 +85,3 @@ export default class MongoDB{
         await this.dbClient.close();
     }
 }
-
-
-
-// async function run() {
-//     try {
-//         await dbClient.connect();
-//         const database = dbClient.db('vote_db');
-//         const collection = database.collection('vote_data');
-
-//         const obj = {title: 'hi'};
-
-//         const res = await collection.insertOne(obj);
-
-//         const id = res.insertedId;
-
-//         const query = {_id: id};
-
-//         const find = await collection.findOne(query);
-
-//         console.log(find);
-//     } finally {
-//         await dbClient.close();
-//     }
-// }
-
-// run().catch();
