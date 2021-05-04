@@ -22,13 +22,13 @@ export default class MongoDB{
         }
     }
     async getMany(collection, query){
-        try {     
+        try {
             await this.openConnection();
             
             const dbCollection = this.createCollection(collection);
 
             const searchResult = await dbCollection.find(query).toArray();
-            
+
             return searchResult;
         } finally {
             await this.closeConnection();
@@ -44,7 +44,7 @@ export default class MongoDB{
             
             return insert.insertedId;
         } finally {
-            await this.closeConnection();            
+            await this.closeConnection();
         }
     }
     async replace(collection, query, doc){
@@ -53,7 +53,7 @@ export default class MongoDB{
 
             const dbCollection = this.createCollection(collection);
 
-            dbCollection.findOneAndReplace(query, doc)
+            await dbCollection.findOneAndReplace(query, doc)
             .then(replacedDoc => {
                 if(replacedDoc){
                     return replacedDoc;
@@ -61,9 +61,14 @@ export default class MongoDB{
                 else{
                     console.log(':/');
                 }
+
+                this.closeConnection();
+            })
+            .catch(err => {
+                console.log(err);
             });
         } finally {
-            await this.closeConnection();            
+            await this.closeConnection();
         }
 
     }

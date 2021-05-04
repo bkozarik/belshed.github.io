@@ -28,7 +28,7 @@ server.post('/vote-data', async (req, res) => {
     }
 
     const dataId = await mongoDb.replace('vote_data', query, data);
-    
+
     const result = {
         status: true,
         id: dataId,
@@ -42,19 +42,25 @@ server.get('/votes/:voteId', async (req, res) => {
 
     let votes = await mongoDb.getMany('votes', {voteId});
 
-    res.send(JSON.stringify(votes.map(vote => vote.ciphergram)));
+    res.send(JSON.stringify(votes.map(vote => {
+        return {
+            ciphergram: vote.ciphergram,
+            voteText: vote.voteText,
+        }
+    })));
 });
 
 server.post('/sendVote', async (req, res) => {
-    const reqData = req.body;
+    const requestData = req.body;
 
     const result = {
         status: true,
     };
     
     const voteItem = {
-        voteId: reqData.voteId,
-        ciphergram: reqData.ciphergram,
+        voteId: requestData.voteId,
+        voteText: requestData.voteText,
+        ciphergram: requestData.ciphergram,
     }
 
     await mongoDb.put('votes', voteItem);
@@ -78,8 +84,44 @@ server.get('/vote-data', async (req, res) => {
             return obj;
         });
     }
-
+    
     res.send(JSON.stringify(obj));
+});
+
+server.get('/key/:type', async (req, res) => {
+    const type = req.params.type;
+    const query = {
+        name: 'keys',
+        type,
+    }
+
+    let result = await mongoDb.get('keys', query);
+    
+    if(result){
+        res.send(JSON.stringify(result));
+    }
+});
+
+server.post('/key', async (req, res) => {
+    const requestData = req.body;
+    const name = 'keys';
+
+    const data = {
+        ...requestData,
+        name,
+    }
+    
+    const query = { name };
+
+    const replacedDoc = await mongoDb.replace('keys', query, data);
+    
+    if(replacedDoc === undefined){
+        await mongoDb.put('keys', data);
+    }
+
+    if(requestData){
+        res.send(JSON.stringify({status: true}));
+    }
 });
 
 server.listen(port, () => {
