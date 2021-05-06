@@ -314,7 +314,7 @@
     <button class="button step__button"></button>
 </article>
             </div>
-            <button class="button steps__button"> 
+            <button class="button steps__button js-popup-trigger" data-target=".js-popup-calculator"> 
                 Начать
                 <svg width="117" height="16" viewBox="0 0 117 16" xmlns="http://www.w3.org/2000/svg">
                     <path d="M116.707 8.70712C117.098 8.31659 117.098 7.68343 116.707 7.2929L110.343 0.928942C109.953 0.538417 109.319 0.538417 108.929 0.928942C108.538 1.31947 108.538 1.95263 108.929 2.34316L114.586 8.00001L108.929 13.6569C108.538 14.0474 108.538 14.6806 108.929 15.0711C109.319 15.4616 109.953 15.4616 110.343 15.0711L116.707 8.70712ZM-8.74228e-08 9L116 9.00001L116 7.00001L8.74228e-08 7L-8.74228e-08 9Z"/>
@@ -675,5 +675,91 @@
         </div>
     </article>
 </div>
+
+<div class="popup calculator js-popup js-popup-close js-popup-calculator">
+    <div class="popup__body calculator__body js-calculator">
+        <header class="calculator__header">
+            <ul class="calculator__titles-list js-calculator-titles-list">
+                <li class="calculator__titles-item js-calculator-title active">
+                    <a href="0" class="calculator__titles-title js-calculator-link">Калькулятор ремонта</a>
+                </li>
+                <li class="calculator__titles-item js-calculator-title">
+                    <a href="0" class="calculator__titles-title js-calculator-link">
+                        <img src="./img/calculator-arrow.svg" class="calculator__titles-arrow" alt="Стрелочка назад">
+                        Назад к выбору стиля
+                    </a>
+                </li>
+                <li class="calculator__titles-item js-calculator-title">
+                    <a href="1" class="calculator__titles-title js-calculator-link">
+                        <img src="./img/calculator-arrow.svg" class="calculator__titles-arrow" alt="Стрелочка назад">
+                        Назад к параметрам
+                    </a>
+                </li>
+            </ul>
+            <button class="button popup__close calculator__close js-popup-close"></button>
+        </header>
+        <main class="calculator__main js-calculator-track">
+            <div class="calculator__step calculator-step calculator-step_grid js-calculator-step">
+                <figure class="calculator-renovation" tabindex="0">
+                    <picture class="calculator-renovation__picture">
+                        <source srcset="./img/quiz_style-1.webp" type="image/webp">
+                        <img src="./img/quiz_style-1.jpg" alt="Минимализм" class="calculator-renovation__img">
+                    </picture>
+                    <figcaption class="calculator-renovation__figcaption">Минимализм</figcaption>
+                </figure>
+                <figure class="calculator-renovation" tabindex="0">
+                    <picture class="calculator-renovation__picture">
+                        <source srcset="./img/quiz_style-2.webp" type="image/webp">
+                        <img src="./img/quiz_style-2.jpg" alt="Минимализм" class="calculator-renovation__img">
+                    </picture>
+                    <figcaption class="calculator-renovation__figcaption">Минимализм</figcaption>
+                </figure>
+                <figure class="calculator-renovation" tabindex="0">
+                    <picture class="calculator-renovation__picture">
+                        <source srcset="./img/quiz_style-3.webp" type="image/webp">
+                        <img src="./img/quiz_style-3.jpg" alt="Минимализм" class="calculator-renovation__img">
+                    </picture>
+                    <figcaption class="calculator-renovation__figcaption">Минимализм</figcaption>
+                </figure>
+                <figure class="calculator-renovation" tabindex="0">
+                    <picture class="calculator-renovation__picture">
+                        <source srcset="./img/quiz_style-1.webp" type="image/webp">
+                        <img src="./img/quiz_style-1.jpg" alt="Минимализм" class="calculator-renovation__img">
+                    </picture>
+                    <figcaption class="calculator-renovation__figcaption">Минимализм</figcaption>
+                </figure>
+                <figure class="calculator-renovation" tabindex="0">
+                    <picture class="calculator-renovation__picture">
+                        <source srcset="./img/quiz_style-2.webp" type="image/webp">
+                        <img src="./img/quiz_style-2.jpg" alt="Минимализм" class="calculator-renovation__img">
+                    </picture>
+                    <figcaption class="calculator-renovation__figcaption">Минимализм</figcaption>
+                </figure>
+                <figure class="calculator-renovation" tabindex="0">
+                    <picture class="calculator-renovation__picture">
+                        <source srcset="./img/quiz_style-3.webp" type="image/webp">
+                        <img src="./img/quiz_style-3.jpg" alt="Минимализм" class="calculator-renovation__img">
+                    </picture>
+                    <figcaption class="calculator-renovation__figcaption">Минимализм</figcaption>
+                </figure>
+            </div>
+            <div class="calculator__step js-calculator-step">
+
+            </div>
+            <div class="calculator__step js-calculator-step">
+
+            </div>
+        </main>
+        <footer class="calculator__footer">
+            <span class="calculator__price js-calculator-price">Стоимость ремонта: 0 руб</span>
+            <button class="button button_inlite calculator__reset js-calculator-reset">
+                Сбросить все
+                <img src="./img/calculator-cross.svg" class="calculator__reset-icon" alt="Сбросить все">
+            </button>
+            <button class="button button_black button_hover-white calculator__bottom-button js-calculator-next">Далее</button>
+        </footer>
+    </div>
+</div>
+
 </body>
 </html>
