@@ -1,6 +1,17 @@
 import { createRequire } from 'module';
 const require = createRequire(import.meta.url);
-import MongoDB from './dataBase.js';
+
+const mongoose = require("mongoose");
+const Schema = mongoose.Schema;
+ 
+const voteDataScheme = new Schema({value: String, name: String, type: String}, {versionKey: false});
+const VoteData = mongoose.model("VoteData", voteDataScheme);
+
+const keysScheme = new Schema({key: Object, type: String}, {versionKey: false});
+const KeysData = mongoose.model("KeysData", keysScheme);
+
+const votesScheme = new Schema({voteText: String, ciphergram: String}, {versionKey: false});
+const VotesData = mongoose.model("VotesData", votesScheme);
 
 const express = require('express');
 const cors = require('cors');
@@ -11,74 +22,85 @@ server.use(cors());
 
 const port = 1337;
 const dbURI = 'mongodb://localhost:27017/api';
-const dbName = 'vote_db';
 
-const mongoDb = new MongoDB(dbURI, dbName);
+mongoose.connect(dbURI, {useNewUrlParser: true, useUnifiedTopology: true})
+.then(() => console.log('Connected to database!'))
+.catch(() => console.log('Failed to connect database!'));
 
 server.use(express.urlencoded({ extended: true }));
 server.use(express.json());
 
 server.post('/vote-data', async (req, res) => {
+    if(!req.body) return res.sendStatus(400);
+
     const data = req.body;
 
-    data.name = 'vote_info';
+    data.fieldData.forEach(field => {
+        const fieldData = {
+            value: field.value,
+            name: field.name
+        }
 
-    const query = {
-        name: 'vote_info',
-    }
-
-    const dataId = await mongoDb.replace('vote_data', query, data);
+        const voteData = new VoteData(fieldData);
+        
+        VoteData.updateOne({name: field.name}, fieldData)
+        .then(dbRes => {
+            if(dbRes.n === 0){
+                console.log(`${field.name} not found :/  Saving...`);
+                voteData.save()
+                .then(dbRes => {
+                    //
+                })
+            }
+        });
+    });    
 
     const result = {
         status: true,
-        id: dataId,
     };
 
     res.send(JSON.stringify(result));
 });
 
-server.get('/votes/:voteId', async (req, res) => {
-    const voteId = req.params.voteId;
-
-    let votes = await mongoDb.getMany('votes', {voteId});
-
-    res.send(JSON.stringify(votes.map(vote => {
-        return {
-            ciphergram: vote.ciphergram,
-            voteText: vote.voteText,
-        }
-    })));
+server.get('/votes/', async (req, res) => {
+    const result = await VotesData.find({}).exec();
+    
+    res.send(JSON.stringify(result));
 });
 
 server.post('/sendVote', async (req, res) => {
-    const requestData = req.body;
+    if(!req.body) return res.sendStatus(400);
 
-    const result = {
-        status: true,
-    };
+    const requestData = req.body;
     
     const voteItem = {
-        voteId: requestData.voteId,
         voteText: requestData.voteText,
         ciphergram: requestData.ciphergram,
     }
 
-    await mongoDb.put('votes', voteItem);
+    const votesData = new VotesData(voteItem);
 
-    res.send(JSON.stringify(result));
+    VotesData.updateOne({ciphergram: voteItem.ciphergram}, voteItem)
+    .then(dbRes => {
+        if(dbRes.n === 0){
+            console.log(`Vote ${voteItem.ciphergram} not found :/  Saving...`);
+            votesData.save()
+            .then(dbRes => {
+                //
+            })
+        }
+    });
+
+    res.send(JSON.stringify({status: true}));
 });
 
 server.get('/vote-data', async (req, res) => {
-    const query = {
-        name: 'vote_info',
-    }
-
-    let result = await mongoDb.get('vote_data', query);
     const obj = {};
 
+    const result = await VoteData.find({}).exec();
+
     if(result){
-        obj.id = result._id;
-        result?.fieldData.forEach(item => {
+        result?.forEach(item => {
             obj[item.name] = item.value;
     
             return obj;
@@ -90,12 +112,8 @@ server.get('/vote-data', async (req, res) => {
 
 server.get('/key/:type', async (req, res) => {
     const type = req.params.type;
-    const query = {
-        name: 'keys',
-        type,
-    }
 
-    let result = await mongoDb.get('keys', query);
+    const result = await KeysData.findOne({type}).exec();
     
     if(result){
         res.send(JSON.stringify(result));
@@ -103,21 +121,21 @@ server.get('/key/:type', async (req, res) => {
 });
 
 server.post('/key', async (req, res) => {
+    if(!req.body) return res.sendStatus(400);
+
     const requestData = req.body;
-    const name = 'keys';
-
-    const data = {
-        ...requestData,
-        name,
-    }
-    
-    const query = { name };
-
-    const replacedDoc = await mongoDb.replace('keys', query, data);
-    
-    if(replacedDoc === undefined){
-        await mongoDb.put('keys', data);
-    }
+    const keysData = new KeysData(requestData);
+        
+    KeysData.updateOne({type: requestData.type}, requestData)
+    .then(dbRes => {
+        if(dbRes.n === 0){
+            console.log(`${requestData.type} not found :/  Saving...`);
+            keysData.save()
+            .then(dbRes => {
+                //
+            })
+        }
+    });
 
     if(requestData){
         res.send(JSON.stringify({status: true}));
