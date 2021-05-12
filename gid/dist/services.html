@@ -623,52 +623,52 @@
             <button class="button popup__close calculator__close js-popup-close"></button>
         </header>
         <main class="calculator__main js-calculator-track">
-            <div class="calculator__step calculator-step calculator-step_grid js-calculator-step">
-                <figure class="calculator-renovation" tabindex="0">
+            <div class="calculator__step calculator-step calculator-step_grid js-calculator-step js-event-emmiter">
+                <figure class="calculator-renovation js-calculator-style-item" tabindex="0">
                     <picture class="calculator-renovation__picture">
                         <source srcset="./img/quiz_style-1.webp" type="image/webp">
-                        <img src="./img/quiz_style-1.jpg" alt="Минимализм" class="calculator-renovation__img">
+                        <img src="./img/quiz_style-1.jpg" alt="Модерн" class="calculator-renovation__img">
                     </picture>
-                    <figcaption class="calculator-renovation__figcaption">Минимализм</figcaption>
+                    <figcaption class="calculator-renovation__figcaption">Модерн</figcaption>
                 </figure>
-                <figure class="calculator-renovation" tabindex="0">
+                <figure class="calculator-renovation js-calculator-style-item" tabindex="0">
                     <picture class="calculator-renovation__picture">
                         <source srcset="./img/quiz_style-2.webp" type="image/webp">
                         <img src="./img/quiz_style-2.jpg" alt="Минимализм" class="calculator-renovation__img">
                     </picture>
                     <figcaption class="calculator-renovation__figcaption">Минимализм</figcaption>
                 </figure>
-                <figure class="calculator-renovation" tabindex="0">
+                <figure class="calculator-renovation js-calculator-style-item" tabindex="0">
                     <picture class="calculator-renovation__picture">
                         <source srcset="./img/quiz_style-3.webp" type="image/webp">
-                        <img src="./img/quiz_style-3.jpg" alt="Минимализм" class="calculator-renovation__img">
+                        <img src="./img/quiz_style-3.jpg" alt="Скандинавский стиль" class="calculator-renovation__img">
                     </picture>
-                    <figcaption class="calculator-renovation__figcaption">Минимализм</figcaption>
+                    <figcaption class="calculator-renovation__figcaption">Скандинавский стиль</figcaption>
                 </figure>
-                <figure class="calculator-renovation" tabindex="0">
+                <figure class="calculator-renovation js-calculator-style-item" tabindex="0">
                     <picture class="calculator-renovation__picture">
                         <source srcset="./img/quiz_style-1.webp" type="image/webp">
-                        <img src="./img/quiz_style-1.jpg" alt="Минимализм" class="calculator-renovation__img">
+                        <img src="./img/quiz_style-1.jpg" alt="Винтаж" class="calculator-renovation__img">
                     </picture>
-                    <figcaption class="calculator-renovation__figcaption">Минимализм</figcaption>
+                    <figcaption class="calculator-renovation__figcaption">Винтаж</figcaption>
                 </figure>
-                <figure class="calculator-renovation" tabindex="0">
+                <figure class="calculator-renovation js-calculator-style-item" tabindex="0">
                     <picture class="calculator-renovation__picture">
                         <source srcset="./img/quiz_style-2.webp" type="image/webp">
-                        <img src="./img/quiz_style-2.jpg" alt="Минимализм" class="calculator-renovation__img">
+                        <img src="./img/quiz_style-2.jpg" alt="Постмодерн" class="calculator-renovation__img">
                     </picture>
-                    <figcaption class="calculator-renovation__figcaption">Минимализм</figcaption>
+                    <figcaption class="calculator-renovation__figcaption">Постмодерн</figcaption>
                 </figure>
-                <figure class="calculator-renovation" tabindex="0">
+                <figure class="calculator-renovation js-calculator-style-item" tabindex="0">
                     <picture class="calculator-renovation__picture">
                         <source srcset="./img/quiz_style-3.webp" type="image/webp">
-                        <img src="./img/quiz_style-3.jpg" alt="Минимализм" class="calculator-renovation__img">
+                        <img src="./img/quiz_style-3.jpg" alt="Метамодерн" class="calculator-renovation__img">
                     </picture>
-                    <figcaption class="calculator-renovation__figcaption">Минимализм</figcaption>
+                    <figcaption class="calculator-renovation__figcaption">Метамодерн</figcaption>
                 </figure>
             </div>
             <div class="calculator__step calculator-step calculator-addons js-calculator-step">
-                <figure class="calculator-renovation calculator-addons__figure" tabindex="0">
+                <figure class="calculator-renovation calculator-addons__figure js-calculator-chosen-style">
                     <picture class="calculator-renovation__picture calculator-addons__picture">
                         <source srcset="./img/quiz_style-2.webp" type="image/webp">
                         <img src="./img/quiz_style-2.jpg" alt="Минимализм" class="calculator-renovation__img">
@@ -679,15 +679,15 @@
                 <div class="calculator-addons__inputs">
                     <div class="calculator-addons__item">
                         <label class="calculator-addons__item-label">Площадь</label>
-                        <input type="number" min="0" class="calculator-addons__item-body calculator-addons__input" placeholder="0 м2">
+                        <input type="number" min="0" class="calculator-addons__item-body calculator-addons__input js-event-emmiter" placeholder="0 м2" required>
                     </div>
                     <div class="calculator-addons__item">
                         <label class="calculator-addons__item-label">Высота потолков</label>
-                        <input type="number" min="0" class="calculator-addons__item-body calculator-addons__input" placeholder="0 м">
+                        <input type="number" min="0" class="calculator-addons__item-body calculator-addons__input js-event-emmiter" placeholder="0 м" required>
                     </div>
                     <div class="calculator-addons__item">
                         <label class="calculator-addons__item-label">Площадь санузла</label>
-                        <input type="number" min="0" class="calculator-addons__item-body calculator-addons__input" placeholder="0 м2">
+                        <input type="number" min="0" class="calculator-addons__item-body calculator-addons__input js-event-emmiter" placeholder="0 м2" required>
                     </div>
                 </div>
                 <div class="calculator-addons__item calculator-addons__item_nomt">
@@ -699,7 +699,7 @@
                     </span>
                     <div class="calculator-addons__item-body calculator-addons__scroll-container calculator-addons__scroll-container_small js-swiper-scroll-container">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide calculator-addons__items-grid">
+                            <div class="swiper-slide calculator-addons__items-grid js-event-emmiter">
                                 <label class="calculator-addons__feature calculator-feature" style="border-color: #F2F2F2;">
                                     <input type="radio" class="calculator-feature__input" name="calculator-feature-wall-color">
                                     <div class="calculator-feature__color" style="background-color: #F2F2F2;"></div>
@@ -754,7 +754,7 @@
                     </span>
                     <div class="calculator-addons__item-body calculator-addons__scroll-container calculator-addons__scroll-container_small js-swiper-scroll-container">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide calculator-addons__items-grid">
+                            <div class="swiper-slide calculator-addons__items-grid js-event-emmiter">
                                 <label class="calculator-addons__feature calculator-feature" style="border-color: #F2F2F2;">
                                     <input type="radio" class="calculator-feature__input" name="calculator-feature-floor-color">
                                     <div class="calculator-feature__color" style="background-color: #F2F2F2;"></div>
@@ -800,7 +800,7 @@
                         <div class="swiper-scrollbar"></div>
                     </div>
                 </div>
-                <div class="calculator-addons__item calculator-addons__other">
+                <div class="calculator-addons__item calculator-addons__other js-event-emmiter">
                     <h3 class="calculator-addons__item-label calculator-addons__item_accordeon" tabindex="0">
                         <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M0 0.707001L5.657 6.364L11.314 0.707001L10.607 0L5.657 4.95L0.707 0L0 0.707001Z" fill="#4F4F4F"/>
@@ -896,7 +896,7 @@
                     <h3 class="calculator-addons__item-label">Дополнительные опции</h3>
                     <div class="calculator-addons__item-body calculator-supplements__scroll-container js-swiper-scroll-container">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide">
+                            <div class="swiper-slide js-event-emmiter">
                                 <label class="calculator-addons__feature calculator-feature calculator-feature_price" style="border-color: #F2F2F2;">
                                     <input type="checkbox" class="calculator-feature__input" name="calculator-feature-add">
                                     <div class="calculator-feature__color" style="background-color: #F2F2F2;"></div>
