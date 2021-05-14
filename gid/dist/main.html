@@ -724,349 +724,351 @@
             </ul>
             <button class="button popup__close calculator__close js-popup-close"></button>
         </header>
-        <main class="calculator__main js-calculator-track">
-            <div class="calculator__step calculator-step calculator-step_grid js-calculator-step js-event-emmiter">
-                <figure class="calculator-renovation js-calculator-style-item" data-price="2312" tabindex="0">
-                    <picture class="calculator-renovation__picture">
-                        <source srcset="./img/quiz_style-1.webp" type="image/webp">
-                        <img src="./img/quiz_style-1.jpg" alt="Модерн" class="calculator-renovation__img">
-                    </picture>
-                    <figcaption class="calculator-renovation__figcaption">Модерн</figcaption>
-                </figure>
-                <figure class="calculator-renovation js-calculator-style-item" data-price="2212421" tabindex="0">
-                    <picture class="calculator-renovation__picture">
-                        <source srcset="./img/quiz_style-2.webp" type="image/webp">
-                        <img src="./img/quiz_style-2.jpg" alt="Минимализм" class="calculator-renovation__img">
-                    </picture>
-                    <figcaption class="calculator-renovation__figcaption">Минимализм</figcaption>
-                </figure>
-                <figure class="calculator-renovation js-calculator-style-item" data-price="2311" tabindex="0">
-                    <picture class="calculator-renovation__picture">
-                        <source srcset="./img/quiz_style-3.webp" type="image/webp">
-                        <img src="./img/quiz_style-3.jpg" alt="Скандинавский стиль" class="calculator-renovation__img">
-                    </picture>
-                    <figcaption class="calculator-renovation__figcaption">Скандинавский стиль</figcaption>
-                </figure>
-                <figure class="calculator-renovation js-calculator-style-item" data-price="64353" tabindex="0">
-                    <picture class="calculator-renovation__picture">
-                        <source srcset="./img/quiz_style-1.webp" type="image/webp">
-                        <img src="./img/quiz_style-1.jpg" alt="Винтаж" class="calculator-renovation__img">
-                    </picture>
-                    <figcaption class="calculator-renovation__figcaption">Винтаж</figcaption>
-                </figure>
-                <figure class="calculator-renovation js-calculator-style-item" data-price="64563" tabindex="0">
-                    <picture class="calculator-renovation__picture">
-                        <source srcset="./img/quiz_style-2.webp" type="image/webp">
-                        <img src="./img/quiz_style-2.jpg" alt="Постмодерн" class="calculator-renovation__img">
-                    </picture>
-                    <figcaption class="calculator-renovation__figcaption">Постмодерн</figcaption>
-                </figure>
-                <figure class="calculator-renovation js-calculator-style-item" data-price="65322" tabindex="0">
-                    <picture class="calculator-renovation__picture">
-                        <source srcset="./img/quiz_style-3.webp" type="image/webp">
-                        <img src="./img/quiz_style-3.jpg" alt="Метамодерн" class="calculator-renovation__img">
-                    </picture>
-                    <figcaption class="calculator-renovation__figcaption">Метамодерн</figcaption>
-                </figure>
-            </div>
-            <div class="calculator__step calculator-step calculator-addons js-calculator-step">
-                <figure class="calculator-renovation calculator-addons__figure js-calculator-chosen-style">
-                    <picture class="calculator-renovation__picture calculator-addons__picture">
-                        <source srcset="./img/quiz_style-2.webp" type="image/webp">
-                        <img src="./img/quiz_style-2.jpg" alt="Минимализм" class="calculator-renovation__img">
-                    </picture>
-                    <figcaption class="calculator-renovation__figcaption">Минимализм</figcaption>
-                </figure>
-                <h3 class="calculator-addons__title">Введите данные о квартире, чтобы получить точную стоимость ремонта</h3>
-                <div class="calculator-addons__inputs">
-                    <div class="calculator-addons__item">
-                        <label class="calculator-addons__item-label">Площадь</label>
-                        <input type="number" min="1" class="calculator-addons__item-body calculator-addons__input js-event-emmiter" data-price="123" data-name="square" placeholder="0 м2" required>
-                    </div>
-                    <div class="calculator-addons__item">
-                        <label class="calculator-addons__item-label">Высота потолков</label>
-                        <input type="number" min="1" class="calculator-addons__item-body calculator-addons__input js-event-emmiter" data-price="123" data-name="height" placeholder="0 м" required>
-                    </div>
-                    <div class="calculator-addons__item">
-                        <label class="calculator-addons__item-label">Площадь санузла</label>
-                        <input type="number" min="1" class="calculator-addons__item-body calculator-addons__input js-event-emmiter" data-price="123" data-name="bath-square" placeholder="0 м2" required>
-                    </div>
+        <main class="calculator__main">
+            <div class="calculator__track js-calculator-track">
+                <div class="calculator__step calculator-step calculator-step_grid js-calculator-step js-event-emmiter">
+                    <figure class="calculator-renovation js-calculator-style-item" data-price="2312" tabindex="0">
+                        <picture class="calculator-renovation__picture">
+                            <source srcset="./img/quiz_style-1.webp" type="image/webp">
+                            <img src="./img/quiz_style-1.jpg" alt="Модерн" class="calculator-renovation__img">
+                        </picture>
+                        <figcaption class="calculator-renovation__figcaption">Модерн</figcaption>
+                    </figure>
+                    <figure class="calculator-renovation js-calculator-style-item" data-price="2212421" tabindex="0">
+                        <picture class="calculator-renovation__picture">
+                            <source srcset="./img/quiz_style-2.webp" type="image/webp">
+                            <img src="./img/quiz_style-2.jpg" alt="Минимализм" class="calculator-renovation__img">
+                        </picture>
+                        <figcaption class="calculator-renovation__figcaption">Минимализм</figcaption>
+                    </figure>
+                    <figure class="calculator-renovation js-calculator-style-item" data-price="2311" tabindex="0">
+                        <picture class="calculator-renovation__picture">
+                            <source srcset="./img/quiz_style-3.webp" type="image/webp">
+                            <img src="./img/quiz_style-3.jpg" alt="Скандинавский стиль" class="calculator-renovation__img">
+                        </picture>
+                        <figcaption class="calculator-renovation__figcaption">Скандинавский стиль</figcaption>
+                    </figure>
+                    <figure class="calculator-renovation js-calculator-style-item" data-price="64353" tabindex="0">
+                        <picture class="calculator-renovation__picture">
+                            <source srcset="./img/quiz_style-1.webp" type="image/webp">
+                            <img src="./img/quiz_style-1.jpg" alt="Винтаж" class="calculator-renovation__img">
+                        </picture>
+                        <figcaption class="calculator-renovation__figcaption">Винтаж</figcaption>
+                    </figure>
+                    <figure class="calculator-renovation js-calculator-style-item" data-price="64563" tabindex="0">
+                        <picture class="calculator-renovation__picture">
+                            <source srcset="./img/quiz_style-2.webp" type="image/webp">
+                            <img src="./img/quiz_style-2.jpg" alt="Постмодерн" class="calculator-renovation__img">
+                        </picture>
+                        <figcaption class="calculator-renovation__figcaption">Постмодерн</figcaption>
+                    </figure>
+                    <figure class="calculator-renovation js-calculator-style-item" data-price="65322" tabindex="0">
+                        <picture class="calculator-renovation__picture">
+                            <source srcset="./img/quiz_style-3.webp" type="image/webp">
+                            <img src="./img/quiz_style-3.jpg" alt="Метамодерн" class="calculator-renovation__img">
+                        </picture>
+                        <figcaption class="calculator-renovation__figcaption">Метамодерн</figcaption>
+                    </figure>
                 </div>
-                <div class="calculator-addons__item calculator-addons__item_nomt">
-                    <span class="calculator-addons__item-label calculator-addons__item_accordeon" tabindex="0">
-                        <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M0 0.707001L5.657 6.364L11.314 0.707001L10.607 0L5.657 4.95L0.707 0L0 0.707001Z" fill="#4F4F4F"/>
-                        </svg>
-                        Отделка стен
-                    </span>
-                    <div class="calculator-addons__item-body calculator-addons__scroll-container calculator-addons__scroll-container_small js-swiper-scroll-container">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide calculator-addons__items-grid js-event-emmiter">
-                                <label class="calculator-addons__feature calculator-feature" style="border-color: #F2F2F2;">
-                                    <input type="radio" class="calculator-feature__input" name="calculator-feature-wall-color">
-                                    <div class="calculator-feature__color" style="background-color: #F2F2F2;"></div>
-                                    <div class="calculator-feature__text">Светло-серый</div>
-                                </label>
-                                <label class="calculator-addons__feature calculator-feature" style="border-color: #F9F3E6;">
-                                    <input type="radio" class="calculator-feature__input" name="calculator-feature-wall-color">
-                                    <div class="calculator-feature__color" style="background-color: #F9F3E6;"></div>
-                                    <div class="calculator-feature__text">Светло-бежевый</div>
-                                </label>
-                                <label class="calculator-addons__feature calculator-feature" style="border-color: #BDBDBD;">
-                                    <input type="radio" class="calculator-feature__input" name="calculator-feature-wall-color">
-                                    <div class="calculator-feature__color" style="background-color: #BDBDBD;"></div>
-                                    <div class="calculator-feature__text">Темно-серый</div>
-                                </label>
-                                <label class="calculator-addons__feature calculator-feature" style="border-color: #E7D0D0;">
-                                    <input type="radio" class="calculator-feature__input" name="calculator-feature-wall-color">
-                                    <div class="calculator-feature__color" style="background-color: #E7D0D0;"></div>
-                                    <div class="calculator-feature__text">Темно-розовый</div>
-                                </label>
-                                <label class="calculator-addons__feature calculator-feature" style="border-color: #F2F2F2;">
-                                    <input type="radio" class="calculator-feature__input" name="calculator-feature-wall-color">
-                                    <div class="calculator-feature__color" style="background-color: #F2F2F2;"></div>
-                                    <div class="calculator-feature__text">Светло-серый</div>
-                                </label>
-                                <label class="calculator-addons__feature calculator-feature" style="border-color: #F9F3E6;">
-                                    <input type="radio" class="calculator-feature__input" name="calculator-feature-wall-color">
-                                    <div class="calculator-feature__color" style="background-color: #F9F3E6;"></div>
-                                    <div class="calculator-feature__text">Светло-бежевый</div>
-                                </label>
-                                <label class="calculator-addons__feature calculator-feature" style="border-color: #BDBDBD;">
-                                    <input type="radio" class="calculator-feature__input" name="calculator-feature-wall-color">
-                                    <div class="calculator-feature__color" style="background-color: #BDBDBD;"></div>
-                                    <div class="calculator-feature__text">Темно-серый</div>
-                                </label>
-                                <label class="calculator-addons__feature calculator-feature" style="border-color: #E7D0D0;">
-                                    <input type="radio" class="calculator-feature__input" name="calculator-feature-wall-color">
-                                    <div class="calculator-feature__color" style="background-color: #E7D0D0;"></div>
-                                    <div class="calculator-feature__text">Темно-розовый</div>
-                                </label>
-                            </div>
+                <div class="calculator__step calculator-step calculator-addons js-calculator-step">
+                    <figure class="calculator-renovation calculator-addons__figure js-calculator-chosen-style">
+                        <picture class="calculator-renovation__picture calculator-addons__picture">
+                            <source srcset="./img/quiz_style-2.webp" type="image/webp">
+                            <img src="./img/quiz_style-2.jpg" alt="Минимализм" class="calculator-renovation__img">
+                        </picture>
+                        <figcaption class="calculator-renovation__figcaption">Минимализм</figcaption>
+                    </figure>
+                    <h3 class="calculator-addons__title">Введите данные о квартире, чтобы получить точную стоимость ремонта</h3>
+                    <div class="calculator-addons__inputs">
+                        <div class="calculator-addons__item">
+                            <label class="calculator-addons__item-label">Площадь</label>
+                            <input type="number" min="1" value="50" class="calculator-addons__item-body calculator-addons__input js-event-emmiter" data-price="123" data-name="square" placeholder="0 м2" required>
                         </div>
-                        <div class="swiper-scrollbar"></div>
-                    </div>
-                </div>
-                <div class="calculator-addons__item calculator-addons__item_nomt">
-                    <span class="calculator-addons__item-label calculator-addons__item_accordeon" tabindex="0">
-                        <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M0 0.707001L5.657 6.364L11.314 0.707001L10.607 0L5.657 4.95L0.707 0L0 0.707001Z" fill="#4F4F4F"/>
-                        </svg>
-                        Пол
-                    </span>
-                    <div class="calculator-addons__item-body calculator-addons__scroll-container calculator-addons__scroll-container_small js-swiper-scroll-container">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide calculator-addons__items-grid js-event-emmiter">
-                                <label class="calculator-addons__feature calculator-feature" style="border-color: #F2F2F2;">
-                                    <input type="radio" class="calculator-feature__input" name="calculator-feature-floor-color">
-                                    <div class="calculator-feature__color" style="background-color: #F2F2F2;"></div>
-                                    <div class="calculator-feature__text">Светлая паркетная доска</div>
-                                </label>
-                                <label class="calculator-addons__feature calculator-feature" style="border-color: #F9F3E6;">
-                                    <input type="radio" class="calculator-feature__input" name="calculator-feature-floor-color">
-                                    <div class="calculator-feature__color" style="background-color: #F9F3E6;"></div>
-                                    <div class="calculator-feature__text">Светлая паркетная доска</div>
-                                </label>
-                                <label class="calculator-addons__feature calculator-feature" style="border-color: #BDBDBD;">
-                                    <input type="radio" class="calculator-feature__input" name="calculator-feature-floor-color">
-                                    <div class="calculator-feature__color" style="background-color: #BDBDBD;"></div>
-                                    <div class="calculator-feature__text">Темная паркетная доска</div>
-                                </label>
-                                <label class="calculator-addons__feature calculator-feature" style="border-color: #E7D0D0;">
-                                    <input type="radio" class="calculator-feature__input" name="calculator-feature-floor-color">
-                                    <div class="calculator-feature__color" style="background-color: #E7D0D0;"></div>
-                                    <div class="calculator-feature__text">Темно-розовый</div>
-                                </label>
-                                <label class="calculator-addons__feature calculator-feature" style="border-color: #F2F2F2;">
-                                    <input type="radio" class="calculator-feature__input" name="calculator-feature-floor-color">
-                                    <div class="calculator-feature__color" style="background-color: #F2F2F2;"></div>
-                                    <div class="calculator-feature__text">Светло-серый</div>
-                                </label>
-                                <label class="calculator-addons__feature calculator-feature" style="border-color: #F9F3E6;">
-                                    <input type="radio" class="calculator-feature__input" name="calculator-feature-floor-color">
-                                    <div class="calculator-feature__color" style="background-color: #F9F3E6;"></div>
-                                    <div class="calculator-feature__text">Светло-бежевый</div>
-                                </label>
-                                <label class="calculator-addons__feature calculator-feature" style="border-color: #BDBDBD;">
-                                    <input type="radio" class="calculator-feature__input" name="calculator-feature-floor-color">
-                                    <div class="calculator-feature__color" style="background-color: #BDBDBD;"></div>
-                                    <div class="calculator-feature__text">Темная паркетная доска</div>
-                                </label>
-                                <label class="calculator-addons__feature calculator-feature" style="border-color: #E7D0D0;">
-                                    <input type="radio" class="calculator-feature__input" name="calculator-feature-floor-color">
-                                    <div class="calculator-feature__color" style="background-color: #E7D0D0;"></div>
-                                    <div class="calculator-feature__text">Темно-розовый</div>
-                                </label>
-                            </div>
+                        <div class="calculator-addons__item">
+                            <label class="calculator-addons__item-label">Высота потолков</label>
+                            <input type="number" min="1" value="3" class="calculator-addons__item-body calculator-addons__input js-event-emmiter" data-price="123" data-name="height" placeholder="0 м" required>
                         </div>
-                        <div class="swiper-scrollbar"></div>
+                        <div class="calculator-addons__item">
+                            <label class="calculator-addons__item-label">Площадь санузла</label>
+                            <input type="number" min="1" value="3" class="calculator-addons__item-body calculator-addons__input js-event-emmiter" data-price="123" data-name="bath-square" placeholder="0 м2" required>
+                        </div>
                     </div>
-                </div>
-                <div class="calculator-addons__item calculator-addons__other js-event-emmiter">
-                    <h3 class="calculator-addons__item-label calculator-addons__item_accordeon" tabindex="0">
-                        <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M0 0.707001L5.657 6.364L11.314 0.707001L10.607 0L5.657 4.95L0.707 0L0 0.707001Z" fill="#4F4F4F"/>
-                        </svg>
-                        Остальное
-                    </h3>
-                    <div class="calculator-addons__item-body calculator-addons__scroll-container js-swiper-scroll-container">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div class="calculator-addons__item">
-                                    <h3 class="calculator-addons__item-label">Двери</h3>
-                                    <div class="calculator-addons__item-body calculator-other js-event-emmiter" data-price="123, 321">
-                                        <img src="./img/calculator-other-item_1.jpg" alt="Дверь с двумя филенками" class="calculator-other__img">
-                                        <label class="calculator-other__name">
-                                            <input type="checkbox" class="calculator-other__name-input">
-                                            <span class="calculator-other__name-text">Дверь с двумя филенками</span>
-                                        </label>
-                                        <div class="calculator-other__choose">
-                                            <span class="calculator-other__choose-text">Высота двери</span>
-                                            <label class="calculator-other__choise">
-                                                <input type="radio" class="js-option calculator-other__choise-input" value="2.1" name="calculator-other__choise-1" checked>
-                                                <span class="calculator-other__choise-text">2,1</span>
+                    <div class="calculator-addons__item calculator-addons__item_nomt">
+                        <span class="calculator-addons__item-label calculator-addons__item_accordeon" tabindex="0">
+                            <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 0.707001L5.657 6.364L11.314 0.707001L10.607 0L5.657 4.95L0.707 0L0 0.707001Z" fill="#4F4F4F"/>
+                            </svg>
+                            Отделка стен
+                        </span>
+                        <div class="calculator-addons__item-body calculator-addons__scroll-container calculator-addons__scroll-container_small js-swiper-scroll-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide calculator-addons__items-grid js-event-emmiter">
+                                    <label class="calculator-addons__feature calculator-feature" style="border-color: #F2F2F2;">
+                                        <input type="radio" class="calculator-feature__input" name="calculator-feature-wall-color">
+                                        <div class="calculator-feature__color" style="background-color: #F2F2F2;"></div>
+                                        <div class="calculator-feature__text">Светло-серый</div>
+                                    </label>
+                                    <label class="calculator-addons__feature calculator-feature" style="border-color: #F9F3E6;">
+                                        <input type="radio" class="calculator-feature__input" name="calculator-feature-wall-color">
+                                        <div class="calculator-feature__color" style="background-color: #F9F3E6;"></div>
+                                        <div class="calculator-feature__text">Светло-бежевый</div>
+                                    </label>
+                                    <label class="calculator-addons__feature calculator-feature" style="border-color: #BDBDBD;">
+                                        <input type="radio" class="calculator-feature__input" name="calculator-feature-wall-color">
+                                        <div class="calculator-feature__color" style="background-color: #BDBDBD;"></div>
+                                        <div class="calculator-feature__text">Темно-серый</div>
+                                    </label>
+                                    <label class="calculator-addons__feature calculator-feature" style="border-color: #E7D0D0;">
+                                        <input type="radio" class="calculator-feature__input" name="calculator-feature-wall-color">
+                                        <div class="calculator-feature__color" style="background-color: #E7D0D0;"></div>
+                                        <div class="calculator-feature__text">Темно-розовый</div>
+                                    </label>
+                                    <label class="calculator-addons__feature calculator-feature" style="border-color: #F2F2F2;">
+                                        <input type="radio" class="calculator-feature__input" name="calculator-feature-wall-color">
+                                        <div class="calculator-feature__color" style="background-color: #F2F2F2;"></div>
+                                        <div class="calculator-feature__text">Светло-серый</div>
+                                    </label>
+                                    <label class="calculator-addons__feature calculator-feature" style="border-color: #F9F3E6;">
+                                        <input type="radio" class="calculator-feature__input" name="calculator-feature-wall-color">
+                                        <div class="calculator-feature__color" style="background-color: #F9F3E6;"></div>
+                                        <div class="calculator-feature__text">Светло-бежевый</div>
+                                    </label>
+                                    <label class="calculator-addons__feature calculator-feature" style="border-color: #BDBDBD;">
+                                        <input type="radio" class="calculator-feature__input" name="calculator-feature-wall-color">
+                                        <div class="calculator-feature__color" style="background-color: #BDBDBD;"></div>
+                                        <div class="calculator-feature__text">Темно-серый</div>
+                                    </label>
+                                    <label class="calculator-addons__feature calculator-feature" style="border-color: #E7D0D0;">
+                                        <input type="radio" class="calculator-feature__input" name="calculator-feature-wall-color">
+                                        <div class="calculator-feature__color" style="background-color: #E7D0D0;"></div>
+                                        <div class="calculator-feature__text">Темно-розовый</div>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="swiper-scrollbar"></div>
+                        </div>
+                    </div>
+                    <div class="calculator-addons__item calculator-addons__item_nomt">
+                        <span class="calculator-addons__item-label calculator-addons__item_accordeon" tabindex="0">
+                            <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 0.707001L5.657 6.364L11.314 0.707001L10.607 0L5.657 4.95L0.707 0L0 0.707001Z" fill="#4F4F4F"/>
+                            </svg>
+                            Пол
+                        </span>
+                        <div class="calculator-addons__item-body calculator-addons__scroll-container calculator-addons__scroll-container_small js-swiper-scroll-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide calculator-addons__items-grid js-event-emmiter">
+                                    <label class="calculator-addons__feature calculator-feature" style="border-color: #F2F2F2;">
+                                        <input type="radio" class="calculator-feature__input" name="calculator-feature-floor-color">
+                                        <div class="calculator-feature__color" style="background-color: #F2F2F2;"></div>
+                                        <div class="calculator-feature__text">Светлая паркетная доска</div>
+                                    </label>
+                                    <label class="calculator-addons__feature calculator-feature" style="border-color: #F9F3E6;">
+                                        <input type="radio" class="calculator-feature__input" name="calculator-feature-floor-color">
+                                        <div class="calculator-feature__color" style="background-color: #F9F3E6;"></div>
+                                        <div class="calculator-feature__text">Светлая паркетная доска</div>
+                                    </label>
+                                    <label class="calculator-addons__feature calculator-feature" style="border-color: #BDBDBD;">
+                                        <input type="radio" class="calculator-feature__input" name="calculator-feature-floor-color">
+                                        <div class="calculator-feature__color" style="background-color: #BDBDBD;"></div>
+                                        <div class="calculator-feature__text">Темная паркетная доска</div>
+                                    </label>
+                                    <label class="calculator-addons__feature calculator-feature" style="border-color: #E7D0D0;">
+                                        <input type="radio" class="calculator-feature__input" name="calculator-feature-floor-color">
+                                        <div class="calculator-feature__color" style="background-color: #E7D0D0;"></div>
+                                        <div class="calculator-feature__text">Темно-розовый</div>
+                                    </label>
+                                    <label class="calculator-addons__feature calculator-feature" style="border-color: #F2F2F2;">
+                                        <input type="radio" class="calculator-feature__input" name="calculator-feature-floor-color">
+                                        <div class="calculator-feature__color" style="background-color: #F2F2F2;"></div>
+                                        <div class="calculator-feature__text">Светло-серый</div>
+                                    </label>
+                                    <label class="calculator-addons__feature calculator-feature" style="border-color: #F9F3E6;">
+                                        <input type="radio" class="calculator-feature__input" name="calculator-feature-floor-color">
+                                        <div class="calculator-feature__color" style="background-color: #F9F3E6;"></div>
+                                        <div class="calculator-feature__text">Светло-бежевый</div>
+                                    </label>
+                                    <label class="calculator-addons__feature calculator-feature" style="border-color: #BDBDBD;">
+                                        <input type="radio" class="calculator-feature__input" name="calculator-feature-floor-color">
+                                        <div class="calculator-feature__color" style="background-color: #BDBDBD;"></div>
+                                        <div class="calculator-feature__text">Темная паркетная доска</div>
+                                    </label>
+                                    <label class="calculator-addons__feature calculator-feature" style="border-color: #E7D0D0;">
+                                        <input type="radio" class="calculator-feature__input" name="calculator-feature-floor-color">
+                                        <div class="calculator-feature__color" style="background-color: #E7D0D0;"></div>
+                                        <div class="calculator-feature__text">Темно-розовый</div>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="swiper-scrollbar"></div>
+                        </div>
+                    </div>
+                    <div class="calculator-addons__item calculator-addons__other js-event-emmiter">
+                        <h3 class="calculator-addons__item-label calculator-addons__item_accordeon" tabindex="0">
+                            <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 0.707001L5.657 6.364L11.314 0.707001L10.607 0L5.657 4.95L0.707 0L0 0.707001Z" fill="#4F4F4F"/>
+                            </svg>
+                            Остальное
+                        </h3>
+                        <div class="calculator-addons__item-body calculator-addons__scroll-container js-swiper-scroll-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="calculator-addons__item">
+                                        <h3 class="calculator-addons__item-label">Двери</h3>
+                                        <div class="calculator-addons__item-body calculator-other js-event-emmiter" data-price="123, 321">
+                                            <img src="./img/calculator-other-item_1.jpg" alt="Дверь с двумя филенками" class="calculator-other__img">
+                                            <label class="calculator-other__name">
+                                                <input type="checkbox" class="calculator-other__name-input">
+                                                <span class="calculator-other__name-text">Дверь с двумя филенками</span>
                                             </label>
-                                            <label class="calculator-other__choise">
-                                                <input type="radio" class="js-option calculator-other__choise-input" value="2.4" name="calculator-other__choise-1">
-                                                <span class="calculator-other__choise-text">2,4</span>
-                                            </label>
+                                            <div class="calculator-other__choose">
+                                                <span class="calculator-other__choose-text">Высота двери</span>
+                                                <label class="calculator-other__choise">
+                                                    <input type="radio" class="js-option calculator-other__choise-input" value="2.1" name="calculator-other__choise-1" checked>
+                                                    <span class="calculator-other__choise-text">2,1</span>
+                                                </label>
+                                                <label class="calculator-other__choise">
+                                                    <input type="radio" class="js-option calculator-other__choise-input" value="2.4" name="calculator-other__choise-1">
+                                                    <span class="calculator-other__choise-text">2,4</span>
+                                                </label>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="calculator-addons__item-body calculator-other js-event-emmiter" data-price="123, 321">
-                                        <img src="./img/calculator-other-item_1.jpg" alt="Дверь с двумя филенками" class="calculator-other__img">
-                                        <label class="calculator-other__name">
-                                            <input type="checkbox" class="calculator-other__name-input">
-                                            <span class="calculator-other__name-text">Дверь с двумя филенками</span>
-                                        </label>
-                                        <div class="calculator-other__choose">
-                                            <span class="calculator-other__choose-text">Высота двери</span>
-                                            <label class="calculator-other__choise">
-                                                <input type="radio" class="js-option calculator-other__choise-input" value="2.1" name="calculator-other__choise-2" checked>
-                                                <span class="calculator-other__choise-text">2,1</span>
+                                        <div class="calculator-addons__item-body calculator-other js-event-emmiter" data-price="123, 321">
+                                            <img src="./img/calculator-other-item_1.jpg" alt="Дверь с двумя филенками" class="calculator-other__img">
+                                            <label class="calculator-other__name">
+                                                <input type="checkbox" class="calculator-other__name-input">
+                                                <span class="calculator-other__name-text">Дверь с двумя филенками</span>
                                             </label>
-                                            <label class="calculator-other__choise">
-                                                <input type="radio" class="js-option calculator-other__choise-input" value="2.4" name="calculator-other__choise-2">
-                                                <span class="calculator-other__choise-text">2,4</span>
-                                            </label>
+                                            <div class="calculator-other__choose">
+                                                <span class="calculator-other__choose-text">Высота двери</span>
+                                                <label class="calculator-other__choise">
+                                                    <input type="radio" class="js-option calculator-other__choise-input" value="2.1" name="calculator-other__choise-2" checked>
+                                                    <span class="calculator-other__choise-text">2,1</span>
+                                                </label>
+                                                <label class="calculator-other__choise">
+                                                    <input type="radio" class="js-option calculator-other__choise-input" value="2.4" name="calculator-other__choise-2">
+                                                    <span class="calculator-other__choise-text">2,4</span>
+                                                </label>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="calculator-addons__item-body calculator-other js-event-emmiter" data-price="123, 321">
-                                        <img src="./img/calculator-other-item_1.jpg" alt="Дверь с двумя филенками" class="calculator-other__img">
-                                        <label class="calculator-other__name">
-                                            <input type="checkbox" class="calculator-other__name-input">
-                                            <span class="calculator-other__name-text">Дверь с двумя филенками</span>
-                                        </label>
-                                        <div class="calculator-other__choose">
-                                            <span class="calculator-other__choose-text">Высота двери</span>
-                                            <label class="calculator-other__choise">
-                                                <input type="radio" class="js-option calculator-other__choise-input" value="2.1" name="calculator-other__choise-3" checked>
-                                                <span class="calculator-other__choise-text">2,1</span>
+                                        <div class="calculator-addons__item-body calculator-other js-event-emmiter" data-price="123, 321">
+                                            <img src="./img/calculator-other-item_1.jpg" alt="Дверь с двумя филенками" class="calculator-other__img">
+                                            <label class="calculator-other__name">
+                                                <input type="checkbox" class="calculator-other__name-input">
+                                                <span class="calculator-other__name-text">Дверь с двумя филенками</span>
                                             </label>
-                                            <label class="calculator-other__choise">
-                                                <input type="radio" class="js-option calculator-other__choise-input" value="2.4" name="calculator-other__choise-3">
-                                                <span class="calculator-other__choise-text">2,4</span>
-                                            </label>
+                                            <div class="calculator-other__choose">
+                                                <span class="calculator-other__choose-text">Высота двери</span>
+                                                <label class="calculator-other__choise">
+                                                    <input type="radio" class="js-option calculator-other__choise-input" value="2.1" name="calculator-other__choise-3" checked>
+                                                    <span class="calculator-other__choise-text">2,1</span>
+                                                </label>
+                                                <label class="calculator-other__choise">
+                                                    <input type="radio" class="js-option calculator-other__choise-input" value="2.4" name="calculator-other__choise-3">
+                                                    <span class="calculator-other__choise-text">2,4</span>
+                                                </label>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="calculator-addons__item-body calculator-other js-event-emmiter" data-price="123, 321">
-                                        <img src="./img/calculator-other-item_1.jpg" alt="Дверь с двумя филенками" class="calculator-other__img">
-                                        <label class="calculator-other__name">
-                                            <input type="checkbox" class="calculator-other__name-input">
-                                            <span class="calculator-other__name-text">Дверь с двумя филенками</span>
-                                        </label>
-                                        <div class="calculator-other__choose">
-                                            <span class="calculator-other__choose-text">Высота двери</span>
-                                            <label class="calculator-other__choise">
-                                                <input type="radio" class="js-option calculator-other__choise-input" value="2.1" name="calculator-other__choise-4" checked>
-                                                <span class="calculator-other__choise-text">2,1</span>
+                                        <div class="calculator-addons__item-body calculator-other js-event-emmiter" data-price="123, 321">
+                                            <img src="./img/calculator-other-item_1.jpg" alt="Дверь с двумя филенками" class="calculator-other__img">
+                                            <label class="calculator-other__name">
+                                                <input type="checkbox" class="calculator-other__name-input">
+                                                <span class="calculator-other__name-text">Дверь с двумя филенками</span>
                                             </label>
-                                            <label class="calculator-other__choise">
-                                                <input type="radio" class="js-option calculator-other__choise-input" value="2.4" name="calculator-other__choise-4">
-                                                <span class="calculator-other__choise-text">2,4</span>
-                                            </label>
+                                            <div class="calculator-other__choose">
+                                                <span class="calculator-other__choose-text">Высота двери</span>
+                                                <label class="calculator-other__choise">
+                                                    <input type="radio" class="js-option calculator-other__choise-input" value="2.1" name="calculator-other__choise-4" checked>
+                                                    <span class="calculator-other__choise-text">2,1</span>
+                                                </label>
+                                                <label class="calculator-other__choise">
+                                                    <input type="radio" class="js-option calculator-other__choise-input" value="2.4" name="calculator-other__choise-4">
+                                                    <span class="calculator-other__choise-text">2,4</span>
+                                                </label>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            <div class="swiper-scrollbar"></div>
                         </div>
-                        <div class="swiper-scrollbar"></div>
                     </div>
                 </div>
-            </div>
-            <div class="calculator__step calculator-addons calculator-supplements calculator-addons_top js-calculator-step">
-                <div class="calculator-addons__item calculator-supplements__body">
-                    <h3 class="calculator-addons__item-label">Дополнительные опции</h3>
-                    <div class="calculator-addons__item-body calculator-supplements__scroll-container js-swiper-scroll-container">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide js-event-emmiter">
-                                <label class="calculator-addons__feature calculator-feature calculator-feature_price js-calculator-feature" data-price="18000" style="border-color: #F2F2F2;">
-                                    <input type="checkbox" class="calculator-feature__input" name="calculator-feature-add">
-                                    <div class="calculator-feature__color" style="background-color: #F2F2F2;"></div>
-                                    <span class="calculator-feature__text">Светло-серый</span>
-                                    <span class="calculator-feature__price">от 18 000 руб</span>
-                                </label>
-                                <label class="calculator-addons__feature calculator-feature calculator-feature_price js-calculator-feature" data-price="18000" style="border-color: #F2F2F2;">
-                                    <input type="checkbox" class="calculator-feature__input" name="calculator-feature-add">
-                                    <div class="calculator-feature__color" style="background-color: #F2F2F2;"></div>
-                                    <span class="calculator-feature__text">Светло-серый</span>
-                                    <span class="calculator-feature__price">от 18 000 руб</span>
-                                </label>
-                                <label class="calculator-addons__feature calculator-feature calculator-feature_price js-calculator-feature" data-price="18000" style="border-color: #F2F2F2;">
-                                    <input type="checkbox" class="calculator-feature__input" name="calculator-feature-add">
-                                    <div class="calculator-feature__color" style="background-color: #F2F2F2;"></div>
-                                    <span class="calculator-feature__text">Светло-серый</span>
-                                    <span class="calculator-feature__price">от 18 000 руб</span>
-                                </label>
-                                <label class="calculator-addons__feature calculator-feature calculator-feature_price js-calculator-feature" data-price="18000" style="border-color: #F2F2F2;">
-                                    <input type="checkbox" class="calculator-feature__input" name="calculator-feature-add">
-                                    <div class="calculator-feature__color" style="background-color: #F2F2F2;"></div>
-                                    <span class="calculator-feature__text">Светло-серый</span>
-                                    <span class="calculator-feature__price">от 18 000 руб</span>
-                                </label>
-                                <label class="calculator-addons__feature calculator-feature calculator-feature_price js-calculator-feature" data-price="18000" style="border-color: #F2F2F2;">
-                                    <input type="checkbox" class="calculator-feature__input" name="calculator-feature-add">
-                                    <div class="calculator-feature__color" style="background-color: #F2F2F2;"></div>
-                                    <span class="calculator-feature__text">Светло-серый</span>
-                                    <span class="calculator-feature__price">от 18 000 руб</span>
-                                </label>
-                                <label class="calculator-addons__feature calculator-feature calculator-feature_price js-calculator-feature" data-price="18000" style="border-color: #F2F2F2;">
-                                    <input type="checkbox" class="calculator-feature__input" name="calculator-feature-add">
-                                    <div class="calculator-feature__color" style="background-color: #F2F2F2;"></div>
-                                    <span class="calculator-feature__text">Светло-серый</span>
-                                    <span class="calculator-feature__price">от 18 000 руб</span>
-                                </label>
-                                <label class="calculator-addons__feature calculator-feature calculator-feature_price js-calculator-feature" data-price="18000" style="border-color: #F2F2F2;">
-                                    <input type="checkbox" class="calculator-feature__input" name="calculator-feature-add">
-                                    <div class="calculator-feature__color" style="background-color: #F2F2F2;"></div>
-                                    <span class="calculator-feature__text">Светло-серый</span>
-                                    <span class="calculator-feature__price">от 18 000 руб</span>
-                                </label>
-                                <label class="calculator-addons__feature calculator-feature calculator-feature_price js-calculator-feature" data-price="18000" style="border-color: #F2F2F2;">
-                                    <input type="checkbox" class="calculator-feature__input" name="calculator-feature-add">
-                                    <div class="calculator-feature__color" style="background-color: #F2F2F2;"></div>
-                                    <span class="calculator-feature__text">Светло-серый</span>
-                                    <span class="calculator-feature__price">от 18 000 руб</span>
-                                </label>
-                                <label class="calculator-addons__feature calculator-feature calculator-feature_price js-calculator-feature" data-price="18000" style="border-color: #F2F2F2;">
-                                    <input type="checkbox" class="calculator-feature__input" name="calculator-feature-add">
-                                    <div class="calculator-feature__color" style="background-color: #F2F2F2;"></div>
-                                    <span class="calculator-feature__text">Светло-серый</span>
-                                    <span class="calculator-feature__price">от 18 000 руб</span>
-                                </label>
-                                <label class="calculator-addons__feature calculator-feature calculator-feature_price js-calculator-feature" data-price="18000" style="border-color: #F2F2F2;">
-                                    <input type="checkbox" class="calculator-feature__input" name="calculator-feature-add">
-                                    <div class="calculator-feature__color" style="background-color: #F2F2F2;"></div>
-                                    <span class="calculator-feature__text">Светло-серый</span>
-                                    <span class="calculator-feature__price">от 18 000 руб</span>
-                                </label>
+                <div class="calculator__step calculator-addons calculator-supplements calculator-addons_top js-calculator-step">
+                    <div class="calculator-addons__item calculator-supplements__body">
+                        <h3 class="calculator-addons__item-label">Дополнительные опции</h3>
+                        <div class="calculator-addons__item-body calculator-supplements__scroll-container js-swiper-scroll-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide js-event-emmiter">
+                                    <label class="calculator-addons__feature calculator-feature calculator-feature_price js-calculator-feature" data-price="18000" style="border-color: #F2F2F2;">
+                                        <input type="checkbox" class="calculator-feature__input" name="calculator-feature-add">
+                                        <div class="calculator-feature__color" style="background-color: #F2F2F2;"></div>
+                                        <span class="calculator-feature__text">Светло-серый</span>
+                                        <span class="calculator-feature__price">от 18 000 руб</span>
+                                    </label>
+                                    <label class="calculator-addons__feature calculator-feature calculator-feature_price js-calculator-feature" data-price="18000" style="border-color: #F2F2F2;">
+                                        <input type="checkbox" class="calculator-feature__input" name="calculator-feature-add">
+                                        <div class="calculator-feature__color" style="background-color: #F2F2F2;"></div>
+                                        <span class="calculator-feature__text">Светло-серый</span>
+                                        <span class="calculator-feature__price">от 18 000 руб</span>
+                                    </label>
+                                    <label class="calculator-addons__feature calculator-feature calculator-feature_price js-calculator-feature" data-price="18000" style="border-color: #F2F2F2;">
+                                        <input type="checkbox" class="calculator-feature__input" name="calculator-feature-add">
+                                        <div class="calculator-feature__color" style="background-color: #F2F2F2;"></div>
+                                        <span class="calculator-feature__text">Светло-серый</span>
+                                        <span class="calculator-feature__price">от 18 000 руб</span>
+                                    </label>
+                                    <label class="calculator-addons__feature calculator-feature calculator-feature_price js-calculator-feature" data-price="18000" style="border-color: #F2F2F2;">
+                                        <input type="checkbox" class="calculator-feature__input" name="calculator-feature-add">
+                                        <div class="calculator-feature__color" style="background-color: #F2F2F2;"></div>
+                                        <span class="calculator-feature__text">Светло-серый</span>
+                                        <span class="calculator-feature__price">от 18 000 руб</span>
+                                    </label>
+                                    <label class="calculator-addons__feature calculator-feature calculator-feature_price js-calculator-feature" data-price="18000" style="border-color: #F2F2F2;">
+                                        <input type="checkbox" class="calculator-feature__input" name="calculator-feature-add">
+                                        <div class="calculator-feature__color" style="background-color: #F2F2F2;"></div>
+                                        <span class="calculator-feature__text">Светло-серый</span>
+                                        <span class="calculator-feature__price">от 18 000 руб</span>
+                                    </label>
+                                    <label class="calculator-addons__feature calculator-feature calculator-feature_price js-calculator-feature" data-price="18000" style="border-color: #F2F2F2;">
+                                        <input type="checkbox" class="calculator-feature__input" name="calculator-feature-add">
+                                        <div class="calculator-feature__color" style="background-color: #F2F2F2;"></div>
+                                        <span class="calculator-feature__text">Светло-серый</span>
+                                        <span class="calculator-feature__price">от 18 000 руб</span>
+                                    </label>
+                                    <label class="calculator-addons__feature calculator-feature calculator-feature_price js-calculator-feature" data-price="18000" style="border-color: #F2F2F2;">
+                                        <input type="checkbox" class="calculator-feature__input" name="calculator-feature-add">
+                                        <div class="calculator-feature__color" style="background-color: #F2F2F2;"></div>
+                                        <span class="calculator-feature__text">Светло-серый</span>
+                                        <span class="calculator-feature__price">от 18 000 руб</span>
+                                    </label>
+                                    <label class="calculator-addons__feature calculator-feature calculator-feature_price js-calculator-feature" data-price="18000" style="border-color: #F2F2F2;">
+                                        <input type="checkbox" class="calculator-feature__input" name="calculator-feature-add">
+                                        <div class="calculator-feature__color" style="background-color: #F2F2F2;"></div>
+                                        <span class="calculator-feature__text">Светло-серый</span>
+                                        <span class="calculator-feature__price">от 18 000 руб</span>
+                                    </label>
+                                    <label class="calculator-addons__feature calculator-feature calculator-feature_price js-calculator-feature" data-price="18000" style="border-color: #F2F2F2;">
+                                        <input type="checkbox" class="calculator-feature__input" name="calculator-feature-add">
+                                        <div class="calculator-feature__color" style="background-color: #F2F2F2;"></div>
+                                        <span class="calculator-feature__text">Светло-серый</span>
+                                        <span class="calculator-feature__price">от 18 000 руб</span>
+                                    </label>
+                                    <label class="calculator-addons__feature calculator-feature calculator-feature_price js-calculator-feature" data-price="18000" style="border-color: #F2F2F2;">
+                                        <input type="checkbox" class="calculator-feature__input" name="calculator-feature-add">
+                                        <div class="calculator-feature__color" style="background-color: #F2F2F2;"></div>
+                                        <span class="calculator-feature__text">Светло-серый</span>
+                                        <span class="calculator-feature__price">от 18 000 руб</span>
+                                    </label>
+                                </div>
                             </div>
+                            <div class="swiper-scrollbar"></div>
                         </div>
-                        <div class="swiper-scrollbar"></div>
                     </div>
+                    <p class="calculator-supplements__text">
+                        Тёплый пол на кухне, дополнительный санузел, шторы на окна и другие опции вы сможете выбрать у нас в офисе
+                    </p>
                 </div>
-                <p class="calculator-supplements__text">
-                    Тёплый пол на кухне, дополнительный санузел, шторы на окна и другие опции вы сможете выбрать у нас в офисе
-                </p>
             </div>
         </main>
         <footer class="calculator__footer">
