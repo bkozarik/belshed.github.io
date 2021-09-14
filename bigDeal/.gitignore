@@ -1,0 +1,11 @@
+*.psd
+*.psb
+*.xd
+*.rar
+*.zip
+node_modules
+dist
+src/css/*
+!src/css/vendors
+sources
+/.vscode
