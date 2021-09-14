@@ -1,0 +1,1293 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>Главная</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="./js/main.js" defer></script>
+</head>
+<body>
+
+<header class="header">
+    <div class="header__wrap container">
+        <a href="./" class="logo header__logo">
+            <img src="./img/logo.png" alt="Logo" class="logo__img">
+        </a>
+
+        <nav class="header__nav nav">
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a href="#" class="nav__link">Наши контакты</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#" class="nav__link">Наши проекты</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#" class="nav__link">О нас</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#" class="nav__link">Контакты</a>
+                </li>
+            </ul>
+        </nav>
+
+        <ul class="socials header__socials socials_header">
+    <li class="socials__item">
+        <a href="#" class="socials__link socials__link_light-blue">
+            <svg class="socials__svg socials__svg_light-blue">
+                <use xlink:href="./img/svg-sprite.svg#vk"></use>
+            </svg>
+        </a>
+    </li>
+    <li class="socials__item">
+        <a href="#" class="socials__link socials__link_light-blue">
+            <svg class="socials__svg socials__svg_light-blue">
+                <use xlink:href="./img/svg-sprite.svg#tg"></use>
+            </svg>
+        </a>
+    </li>
+    <li class="socials__item">
+        <a href="#" class="socials__link socials__link_light-blue">
+            <svg class="socials__svg socials__svg_light-blue">
+                <use xlink:href="./img/svg-sprite.svg#fb"></use>
+            </svg>
+        </a>
+    </li>
+    <li class="socials__item">
+        <a href="#" class="socials__link socials__link_light-blue">
+            <svg class="socials__svg socials__svg_light-blue">
+                <use xlink:href="./img/svg-sprite.svg#twitter"></use>
+            </svg>
+        </a>
+    </li>
+</ul>
+            
+        <div class="recall header__recall recall_header">
+    <a href="#" class="recall__phone font-bebas recall__phone_header">8 812 987-47-29</a>
+    <button class="button button_inline recall__button recall__button_header">
+        Заказать звонок
+    </button>
+</div>
+
+        <button class="button burger header__burger js-menu-trigger">
+            <span class="burger__lines"></span>
+        </button>
+    
+        <div class="menu js-menu">
+    <div class="menu__body">
+        <nav class="menu__nav nav nav_menu">
+            <ul class="nav__list nav__list_column">
+                <li class="nav__item nav__item_menu">
+                    <a href="#" class="nav__link nav__link_menu">Наши контакты</a>
+                </li>
+                <li class="nav__item nav__item_menu">
+                    <a href="#" class="nav__link nav__link_menu">Наши проекты</a>
+                </li>
+                <li class="nav__item nav__item_menu">
+                    <a href="#" class="nav__link nav__link_menu">О нас</a>
+                </li>
+                <li class="nav__item nav__item_menu">
+                    <a href="#" class="nav__link nav__link_menu">Контакты</a>
+                </li>
+            </ul>
+        </nav>
+
+        <ul class="socials menu__socials socials_menu">
+    <li class="socials__item">
+        <a href="#" class="socials__link socials__link_menu">
+            <svg class="socials__svg socials__svg_menu">
+                <use xlink:href="./img/svg-sprite.svg#vk"></use>
+            </svg>
+        </a>
+    </li>
+    <li class="socials__item">
+        <a href="#" class="socials__link socials__link_menu">
+            <svg class="socials__svg socials__svg_menu">
+                <use xlink:href="./img/svg-sprite.svg#tg"></use>
+            </svg>
+        </a>
+    </li>
+    <li class="socials__item">
+        <a href="#" class="socials__link socials__link_menu">
+            <svg class="socials__svg socials__svg_menu">
+                <use xlink:href="./img/svg-sprite.svg#fb"></use>
+            </svg>
+        </a>
+    </li>
+    <li class="socials__item">
+        <a href="#" class="socials__link socials__link_menu">
+            <svg class="socials__svg socials__svg_menu">
+                <use xlink:href="./img/svg-sprite.svg#twitter"></use>
+            </svg>
+        </a>
+    </li>
+</ul>
+            
+        <div class="recall menu__recall recall_menu">
+    <a href="#" class="recall__phone font-bebas recall__phone_menu">8 812 987-47-29</a>
+    <button class="button button_inline recall__button recall__button_menu">
+        Заказать звонок
+    </button>
+</div>
+    </div>
+</div>
+    </div>
+</header>
+
+
+<main class="main">
+    <section class="hero">
+        <picture class="hero__bg">
+            <source srcset="./img/hero-bg.webp" type="image/wepb">
+            <img src="./img/hero-bg.jpg" alt="hero-bg">
+        </picture>
+        <div class="hero__body">
+            <div class="hero__square"></div>
+            <h1 class="hero__title font-bebas">Интернет-агенство</h1>
+            <span class="hero__name font-bebas">Крупное дело</span>
+            <p class="hero__subtitle">Делаем и продвигаем сайты с 2010 года.</p>
+            <p class="hero__subtitle">Оставьте заявку, чтобы получить консультацию по веб-разработке для вашего бизнеса</p>
+            <button 
+                class="button button_white button_border button_hover-slide text-hover-color-black hero__button" 
+                data-popup-trigger
+                data-popup-target="consult-popup"
+            >
+                Получить консультацию
+            </button>
+        </div>
+    </section>
+    <section class="services">
+        <div class="container services__container">
+            <div class="services__grid">
+                <article class="services__item service-item">
+                    <a href="#" class="service-item__title font-bebas text-weight-bold">
+                        <div class="text-color-blue font-bebas">Веб-разработка</div> сайтов
+                    </a>
+                    <div class="service-item__content">
+                        <ul class="service-item__text service-item__list">
+                            <li>Интернет магазины</li>
+                            <li>Интернет магазины</li>
+                            <li>Интернет магазины</li>
+                        </ul>
+                    </div>
+                </article>
+                
+                <article class="services__item service-item">
+                    <a href="#" class="service-item__title font-bebas text-weight-bold">
+                        <div class="text-color-blue font-bebas">Техподдержка</div> интернет-сайтов
+                    </a>
+                    <div class="service-item__content">
+                        <p class="service-item__text">
+                            Наполнение, администрирование, помощь с защитой и т.д
+                        </p>
+                    </div>
+                </article>
+                
+                <article class="services__item service-item service-item_bg-blue">
+                    <a href="#" class="service-item__title font-bebas text-weight-bold">
+                        <div class="text-color-white font-bebas">
+                            Разработка сайта
+                        </div>
+                        <span class="text-rounded text-bg-white text-color-black font-bebas">
+                            на готовом решении
+                        </span>
+                    </a>
+                    <div class="service-item__content service-item__content_no-mw">
+                        <p class="service-item__text text-color-white">
+                            У нас каталог готовых решений. Вы можете выбрать подходящее вам решение и мы сделаем его под вас
+                        </p>
+                    </div>
+                    <img src="./img/service-cards.png" class="service-item__img" alt="Разработка сайта">
+                </article>
+                
+                <article class="services__item service-item">
+                    <a href="#" class="service-item__title font-bebas text-weight-bold">
+                        <div class="font-bebas">Комплексное</div>
+                        <span class="text-bg-blue text-rounded text-color-white font-bebas">Продвижение сайта</span>
+                    </a>
+                    <div class="service-item__content service-item__content_no-mw">
+                        <ul class="service-item__text service-item__list">
+                            <li>Интернет магазины</li>
+                            <li>Интернет магазины</li>
+                            <li>Интернет магазины</li>
+                        </ul>
+                        <ul class="service-item__text service-item__list">
+                            <li>Интернет магазины</li>
+                            <li>Интернет магазины</li>
+                            <li class="no-list-style">Интернет магазины</li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+    <section class="reasons">
+        <h2 class="container section-title font-bebas reasons__title text-color-black text-weight-bold">
+            <div class="font-bebas">
+                Почему вам
+            </div>
+            <span class="text-color-white text-rounded text-bg-blue font-bebas">Выгодно с нами</span>
+        </h2>
+        <div class="container reasons__grid">
+            <article class="reasons__item reason-item">
+                <svg class="reason-item__icon">
+                    <use xlink:href="./img/svg-reasons-sprite.svg#setting"></use>
+                </svg>
+                <h3 class="reason-item__name">Короткое преимущество</h3>
+                <p class="reason-item__text">Более подробный и развернутый текст, который раскрывает ваше преимущество</p>
+            </article>
+            <article class="reasons__item reason-item">
+                <svg class="reason-item__icon">
+                    <use xlink:href="./img/svg-reasons-sprite.svg#setting"></use>
+                </svg>
+                <h3 class="reason-item__name">Короткое преимущество</h3>
+                <p class="reason-item__text">Более подробный и развернутый текст, который раскрывает ваше преимущество</p>
+            </article>
+            <article class="reasons__item reason-item">
+                <svg class="reason-item__icon">
+                    <use xlink:href="./img/svg-reasons-sprite.svg#setting"></use>
+                </svg>
+                <h3 class="reason-item__name">Короткое преимущество</h3>
+                <p class="reason-item__text">Более подробный и развернутый текст, который раскрывает ваше преимущество</p>
+            </article>
+            <article class="reasons__item reason-item">
+                <svg class="reason-item__icon">
+                    <use xlink:href="./img/svg-reasons-sprite.svg#setting"></use>
+                </svg>
+                <h3 class="reason-item__name">Короткое преимущество</h3>
+                <p class="reason-item__text">Более подробный и развернутый текст, который раскрывает ваше преимущество</p>
+            </article>
+            <article class="reasons__item reason-item">
+                <svg class="reason-item__icon">
+                    <use xlink:href="./img/svg-reasons-sprite.svg#setting"></use>
+                </svg>
+                <h3 class="reason-item__name">Короткое преимущество</h3>
+                <p class="reason-item__text">Более подробный и развернутый текст, который раскрывает ваше преимущество</p>
+            </article>
+            <article class="reasons__item reason-item">
+                <svg class="reason-item__icon">
+                    <use xlink:href="./img/svg-reasons-sprite.svg#setting"></use>
+                </svg>
+                <h3 class="reason-item__name">Короткое преимущество</h3>
+                <p class="reason-item__text">Более подробный и развернутый текст, который раскрывает ваше преимущество</p>
+            </article>
+        </div>
+    </section>
+    <section class="portfolio">
+        <picture class="portfolio__bg">
+            <source srcset="./img/portfolio-bg.webp" type="image/webp">
+            <img src="./img/portfolio-bg.jpg" alt="portfolio-bg">
+        </picture>
+        <div class="container">
+            <h2 class="section-title font-bebas portfolio__title text-color-white text-weight-bold">
+                наши работы
+            </h2>
+            <ul class="portfolio__filters-list">
+                <li class="portfolio__filter-item">
+                    <button
+                        class="button button_border button_border-bold text-weight-medium text-color-white text-active-color-blue button_active-slide button_white portfolio__filter-button active"
+                        data-tab-trigger
+                        data-tab-trigger-target="#portfolio-page-1"
+                    >
+                        Контекстная реклама
+                    </button>
+                </li>
+                <li class="portfolio__filter-item">
+                    <button
+                        class="button button_border button_border-bold text-weight-medium text-color-white text-active-color-blue button_active-slide button_white portfolio__filter-button"
+                        data-tab-trigger
+                        data-tab-trigger-target="#portfolio-page-2"
+                    >
+                        Лендинги
+                    </button>
+                </li>
+                <li class="portfolio__filter-item">
+                    <button
+                        class="button button_border button_border-bold text-weight-medium text-color-white text-active-color-blue button_active-slide button_white portfolio__filter-button"
+                        data-tab-trigger
+                        data-tab-trigger-target="#portfolio-page-3"
+                    >
+                        Интернет-магазин
+                    </button>
+                </li>
+                <li class="portfolio__filter-item">
+                    <button
+                        class="button button_border button_border-bold text-weight-medium text-color-white text-active-color-blue button_active-slide button_white portfolio__filter-button"
+                        data-tab-trigger
+                        data-tab-trigger-target="#portfolio-page-4"
+                    >
+                        Корп. сайт
+                    </button>
+                </li>
+            </ul>
+            <ul class="portfolio__content">
+                <li id="portfolio-page-1" class="portfolio__page active" data-tab-name="portfolio-tabs" data-tab-page>
+                    <div class="portfolio__grid">
+                        <article class="portfolio__item portfolio-item">
+                            <div class="portfolio-item__img" style="background-image: url(./img/portfolio-item.png);"></div>
+                            <a href="#" class="portfolio-item__body">
+                                <h3 class="portfolio-item__title text-color-white">
+                                    Лендинг для стоматологии
+                                </h3>
+                                <div class="portfolio-item__link button button_border button_white button_hover-slide text-hover-color-blue">
+                                    Посмотреть проект
+                                </div>
+                            </a>
+                        </article>
+                        <article class="portfolio__item portfolio-item">
+                            <div class="portfolio-item__img" style="background-image: url(./img/portfolio-item-2.png);"></div>
+                            <a href="#" class="portfolio-item__body">
+                                <h3 class="portfolio-item__title text-color-white">
+                                    Лендинг для стоматологии
+                                </h3>
+                                <div class="portfolio-item__link button button_border button_white button_hover-slide text-hover-color-blue">
+                                    Посмотреть проект
+                                </div>
+                            </a>
+                        </article>
+                        <article class="portfolio__item portfolio-item">
+                            <div class="portfolio-item__img" style="background-image: url(./img/portfolio-item.png);"></div>
+                            <a href="#" class="portfolio-item__body">
+                                <h3 class="portfolio-item__title text-color-white">
+                                    Лендинг для стоматологии
+                                </h3>
+                                <div class="portfolio-item__link button button_border button_white button_hover-slide text-hover-color-blue">
+                                    Посмотреть проект
+                                </div>
+                            </a>
+                        </article>
+                        <article class="portfolio__item portfolio-item">
+                            <div class="portfolio-item__img" style="background-image: url(./img/portfolio-item.png);"></div>
+                            <a href="#" class="portfolio-item__body">
+                                <h3 class="portfolio-item__title text-color-white">
+                                    Лендинг для стоматологии
+                                </h3>
+                                <div class="portfolio-item__link button button_border button_white button_hover-slide text-hover-color-blue">
+                                    Посмотреть проект
+                                </div>
+                            </a>
+                        </article>
+                        <article class="portfolio__item portfolio-item">
+                            <div class="portfolio-item__img" style="background-image: url(./img/portfolio-item-2.png);"></div>
+                            <a href="#" class="portfolio-item__body">
+                                <h3 class="portfolio-item__title text-color-white">
+                                    Лендинг для стоматологии
+                                </h3>
+                                <div class="portfolio-item__link button button_border button_white button_hover-slide text-hover-color-blue">
+                                    Посмотреть проект
+                                </div>
+                            </a>
+                        </article>
+                        <article class="portfolio__item portfolio-item">
+                            <div class="portfolio-item__img" style="background-image: url(./img/portfolio-item.png);"></div>
+                            <a href="#" class="portfolio-item__body">
+                                <h3 class="portfolio-item__title text-color-white">
+                                    Лендинг для стоматологии
+                                </h3>
+                                <div class="portfolio-item__link button button_border button_white button_hover-slide text-hover-color-blue">
+                                    Посмотреть проект
+                                </div>
+                            </a>
+                        </article>
+                        <article class="portfolio__item portfolio-item portfolio-item_big">
+                            <div class="portfolio-item__img" style="background-image: url(./img/portfolio-item-big.png);"></div>
+                            <a href="#" class="portfolio-item__body">
+                                <h3 class="portfolio-item__title text-color-white">
+                                    Лендинг для стоматологии
+                                </h3>
+                                <div class="portfolio-item__link button button_border button_white button_hover-slide text-hover-color-blue">
+                                    Посмотреть проект
+                                </div>
+                            </a>
+                        </article>
+                    </div>
+                    <div class="portfolio__swiper js-portfolio-swiper">
+                        <div class="swiper-wrapper">
+                            <article class="portfolio__item portfolio-item swiper-slide">
+                                <div class="portfolio-item__img" style="background-image: url(./img/portfolio-item.png);"></div>
+                                <a href="#" class="portfolio-item__body">
+                                    <h3 class="portfolio-item__title text-color-white">
+                                        Лендинг для стоматологии
+                                    </h3>
+                                    <div class="portfolio-item__link button button_border button_white button_hover-slide text-hover-color-blue">
+                                        Посмотреть проект
+                                    </div>
+                                </a>
+                            </article>
+                            <article class="portfolio__item portfolio-item swiper-slide">
+                                <div class="portfolio-item__img" style="background-image: url(./img/portfolio-item-2.png);"></div>
+                                <a href="#" class="portfolio-item__body">
+                                    <h3 class="portfolio-item__title text-color-white">
+                                        Лендинг для стоматологии
+                                    </h3>
+                                    <div class="portfolio-item__link button button_border button_white button_hover-slide text-hover-color-blue">
+                                        Посмотреть проект
+                                    </div>
+                                </a>
+                            </article>
+                            <article class="portfolio__item portfolio-item swiper-slide">
+                                <div class="portfolio-item__img" style="background-image: url(./img/portfolio-item.png);"></div>
+                                <a href="#" class="portfolio-item__body">
+                                    <h3 class="portfolio-item__title text-color-white">
+                                        Лендинг для стоматологии
+                                    </h3>
+                                    <div class="portfolio-item__link button button_border button_white button_hover-slide text-hover-color-blue">
+                                        Посмотреть проект
+                                    </div>
+                                </a>
+                            </article>
+                            <article class="portfolio__item portfolio-item swiper-slide">
+                                <div class="portfolio-item__img" style="background-image: url(./img/portfolio-item.png);"></div>
+                                <a href="#" class="portfolio-item__body">
+                                    <h3 class="portfolio-item__title text-color-white">
+                                        Лендинг для стоматологии
+                                    </h3>
+                                    <div class="portfolio-item__link button button_border button_white button_hover-slide text-hover-color-blue">
+                                        Посмотреть проект
+                                    </div>
+                                </a>
+                            </article>
+                            <article class="portfolio__item portfolio-item swiper-slide">
+                                <div class="portfolio-item__img" style="background-image: url(./img/portfolio-item-2.png);"></div>
+                                <a href="#" class="portfolio-item__body">
+                                    <h3 class="portfolio-item__title text-color-white">
+                                        Лендинг для стоматологии
+                                    </h3>
+                                    <div class="portfolio-item__link button button_border button_white button_hover-slide text-hover-color-blue">
+                                        Посмотреть проект
+                                    </div>
+                                </a>
+                            </article>
+                        </div>
+                    </div>
+                </li>
+                <li id="portfolio-page-2" class="portfolio__page" data-tab-name="portfolio-tabs" data-tab-page>
+                    <div class="portfolio__grid">
+                        <article class="portfolio__item portfolio-item">
+                            <div class="portfolio-item__img" style="background-image: url(./img/portfolio-item.png);"></div>
+                            <a href="#" class="portfolio-item__body">
+                                <h3 class="portfolio-item__title text-color-white">
+                                    Лендинг для стоматологии
+                                </h3>
+                                <div class="portfolio-item__link button button_border button_white button_hover-slide text-hover-color-blue">
+                                    Посмотреть проект
+                                </div>
+                            </a>
+                        </article>
+                        <article class="portfolio__item portfolio-item">
+                            <div class="portfolio-item__img" style="background-image: url(./img/portfolio-item.png);"></div>
+                            <a href="#" class="portfolio-item__body">
+                                <h3 class="portfolio-item__title text-color-white">
+                                    Лендинг для стоматологии
+                                </h3>
+                                <div class="portfolio-item__link button button_border button_white button_hover-slide text-hover-color-blue">
+                                    Посмотреть проект
+                                </div>
+                            </a>
+                        </article>
+                        <article class="portfolio__item portfolio-item">
+                            <div class="portfolio-item__img" style="background-image: url(./img/portfolio-item.png);"></div>
+                            <a href="#" class="portfolio-item__body">
+                                <h3 class="portfolio-item__title text-color-white">
+                                    Лендинг для стоматологии
+                                </h3>
+                                <div class="portfolio-item__link button button_border button_white button_hover-slide text-hover-color-blue">
+                                    Посмотреть проект
+                                </div>
+                            </a>
+                        </article>
+                        <article class="portfolio__item portfolio-item">
+                            <div class="portfolio-item__img" style="background-image: url(./img/portfolio-item.png);"></div>
+                            <a href="#" class="portfolio-item__body">
+                                <h3 class="portfolio-item__title text-color-white">
+                                    Лендинг для стоматологии
+                                </h3>
+                                <div class="portfolio-item__link button button_border button_white button_hover-slide text-hover-color-blue">
+                                    Посмотреть проект
+                                </div>
+                            </a>
+                        </article>
+                        <article class="portfolio__item portfolio-item">
+                            <div class="portfolio-item__img" style="background-image: url(./img/portfolio-item.png);"></div>
+                            <a href="#" class="portfolio-item__body">
+                                <h3 class="portfolio-item__title text-color-white">
+                                    Лендинг для стоматологии
+                                </h3>
+                                <div class="portfolio-item__link button button_border button_white button_hover-slide text-hover-color-blue">
+                                    Посмотреть проект
+                                </div>
+                            </a>
+                        </article>
+                        <article class="portfolio__item portfolio-item">
+                            <div class="portfolio-item__img" style="background-image: url(./img/portfolio-item.png);"></div>
+                            <a href="#" class="portfolio-item__body">
+                                <h3 class="portfolio-item__title text-color-white">
+                                    Лендинг для стоматологии
+                                </h3>
+                                <div class="portfolio-item__link button button_border button_white button_hover-slide text-hover-color-blue">
+                                    Посмотреть проект
+                                </div>
+                            </a>
+                        </article>
+                        <article class="portfolio__item portfolio-item portfolio-item_big">
+                            <div class="portfolio-item__img" style="background-image: url(./img/portfolio-item-big.png);"></div>
+                            <a href="#" class="portfolio-item__body">
+                                <h3 class="portfolio-item__title text-color-white">
+                                    Лендинг для стоматологии
+                                </h3>
+                                <div class="portfolio-item__link button button_border button_white button_hover-slide text-hover-color-blue">
+                                    Посмотреть проект
+                                </div>
+                            </a>
+                        </article>
+                    </div>
+                    <div class="portfolio__swiper js-portfolio-swiper">
+                        <div class="swiper-wrapper">
+                            <article class="portfolio__item portfolio-item swiper-slide">
+                                <div class="portfolio-item__img" style="background-image: url(./img/portfolio-item-2.png);"></div>
+                                <a href="#" class="portfolio-item__body">
+                                    <h3 class="portfolio-item__title text-color-white">
+                                        Лендинг для стоматологии
+                                    </h3>
+                                    <div class="portfolio-item__link button button_border button_white button_hover-slide text-hover-color-blue">
+                                        Посмотреть проект
+                                    </div>
+                                </a>
+                            </article>
+                            <article class="portfolio__item portfolio-item swiper-slide">
+                                <div class="portfolio-item__img" style="background-image: url(./img/portfolio-item.png);"></div>
+                                <a href="#" class="portfolio-item__body">
+                                    <h3 class="portfolio-item__title text-color-white">
+                                        Лендинг для стоматологии
+                                    </h3>
+                                    <div class="portfolio-item__link button button_border button_white button_hover-slide text-hover-color-blue">
+                                        Посмотреть проект
+                                    </div>
+                                </a>
+                            </article>
+                            <article class="portfolio__item portfolio-item swiper-slide">
+                                <div class="portfolio-item__img" style="background-image: url(./img/portfolio-item.png);"></div>
+                                <a href="#" class="portfolio-item__body">
+                                    <h3 class="portfolio-item__title text-color-white">
+                                        Лендинг для стоматологии
+                                    </h3>
+                                    <div class="portfolio-item__link button button_border button_white button_hover-slide text-hover-color-blue">
+                                        Посмотреть проект
+                                    </div>
+                                </a>
+                            </article>
+                            <article class="portfolio__item portfolio-item swiper-slide">
+                                <div class="portfolio-item__img" style="background-image: url(./img/portfolio-item.png);"></div>
+                                <a href="#" class="portfolio-item__body">
+                                    <h3 class="portfolio-item__title text-color-white">
+                                        Лендинг для стоматологии
+                                    </h3>
+                                    <div class="portfolio-item__link button button_border button_white button_hover-slide text-hover-color-blue">
+                                        Посмотреть проект
+                                    </div>
+                                </a>
+                            </article>
+                            <article class="portfolio__item portfolio-item swiper-slide">
+                                <div class="portfolio-item__img" style="background-image: url(./img/portfolio-item-2.png);"></div>
+                                <a href="#" class="portfolio-item__body">
+                                    <h3 class="portfolio-item__title text-color-white">
+                                        Лендинг для стоматологии
+                                    </h3>
+                                    <div class="portfolio-item__link button button_border button_white button_hover-slide text-hover-color-blue">
+                                        Посмотреть проект
+                                    </div>
+                                </a>
+                            </article>
+                        </div>
+                    </div>
+                </li>
+                <li id="portfolio-page-3" class="portfolio__page" data-tab-name="portfolio-tabs" data-tab-page>
+                    <div class="portfolio__grid">
+                        <article class="portfolio__item portfolio-item">
+                            <div class="portfolio-item__img" style="background-image: url(./img/portfolio-item-2.png);"></div>
+                            <a href="#" class="portfolio-item__body">
+                                <h3 class="portfolio-item__title text-color-white">
+                                    Лендинг для стоматологии
+                                </h3>
+                                <div class="portfolio-item__link button button_border button_white button_hover-slide text-hover-color-blue">
+                                    Посмотреть проект
+                                </div>
+                            </a>
+                        </article>
+                        <article class="portfolio__item portfolio-item">
+                            <div class="portfolio-item__img" style="background-image: url(./img/portfolio-item-2.png);"></div>
+                            <a href="#" class="portfolio-item__body">
+                                <h3 class="portfolio-item__title text-color-white">
+                                    Лендинг для стоматологии
+                                </h3>
+                                <div class="portfolio-item__link button button_border button_white button_hover-slide text-hover-color-blue">
+                                    Посмотреть проект
+                                </div>
+                            </a>
+                        </article>
+                        <article class="portfolio__item portfolio-item">
+                            <div class="portfolio-item__img" style="background-image: url(./img/portfolio-item.png);"></div>
+                            <a href="#" class="portfolio-item__body">
+                                <h3 class="portfolio-item__title text-color-white">
+                                    Лендинг для стоматологии
+                                </h3>
+                                <div class="portfolio-item__link button button_border button_white button_hover-slide text-hover-color-blue">
+                                    Посмотреть проект
+                                </div>
+                            </a>
+                        </article>
+                        <article class="portfolio__item portfolio-item">
+                            <div class="portfolio-item__img" style="background-image: url(./img/portfolio-item-2.png);"></div>
+                            <a href="#" class="portfolio-item__body">
+                                <h3 class="portfolio-item__title text-color-white">
+                                    Лендинг для стоматологии
+                                </h3>
+                                <div class="portfolio-item__link button button_border button_white button_hover-slide text-hover-color-blue">
+                                    Посмотреть проект
+                                </div>
+                            </a>
+                        </article>
+                        <article class="portfolio__item portfolio-item">
+                            <div class="portfolio-item__img" style="background-image: url(./img/portfolio-item.png);"></div>
+                            <a href="#" class="portfolio-item__body">
+                                <h3 class="portfolio-item__title text-color-white">
+                                    Лендинг для стоматологии
+                                </h3>
+                                <div class="portfolio-item__link button button_border button_white button_hover-slide text-hover-color-blue">
+                                    Посмотреть проект
+                                </div>
+                            </a>
+                        </article>
+                        <article class="portfolio__item portfolio-item">
+                            <div class="portfolio-item__img" style="background-image: url(./img/portfolio-item.png);"></div>
+                            <a href="#" class="portfolio-item__body">
+                                <h3 class="portfolio-item__title text-color-white">
+                                    Лендинг для стоматологии
+                                </h3>
+                                <div class="portfolio-item__link button button_border button_white button_hover-slide text-hover-color-blue">
+                                    Посмотреть проект
+                                </div>
+                            </a>
+                        </article>
+                        <article class="portfolio__item portfolio-item portfolio-item_big">
+                            <div class="portfolio-item__img" style="background-image: url(./img/portfolio-item-big.png);"></div>
+                            <a href="#" class="portfolio-item__body">
+                                <h3 class="portfolio-item__title text-color-white">
+                                    Лендинг для стоматологии
+                                </h3>
+                                <div class="portfolio-item__link button button_border button_white button_hover-slide text-hover-color-blue">
+                                    Посмотреть проект
+                                </div>
+                            </a>
+                        </article>
+                    </div>
+                    <div class="portfolio__swiper js-portfolio-swiper">
+                        <div class="swiper-wrapper">
+                            <article class="portfolio__item portfolio-item swiper-slide">
+                                <div class="portfolio-item__img" style="background-image: url(./img/portfolio-item-2.png);"></div>
+                                <a href="#" class="portfolio-item__body">
+                                    <h3 class="portfolio-item__title text-color-white">
+                                        Лендинг для стоматологии
+                                    </h3>
+                                    <div class="portfolio-item__link button button_border button_white button_hover-slide text-hover-color-blue">
+                                        Посмотреть проект
+                                    </div>
+                                </a>
+                            </article>
+                            <article class="portfolio__item portfolio-item swiper-slide">
+                                <div class="portfolio-item__img" style="background-image: url(./img/portfolio-item-2.png);"></div>
+                                <a href="#" class="portfolio-item__body">
+                                    <h3 class="portfolio-item__title text-color-white">
+                                        Лендинг для стоматологии
+                                    </h3>
+                                    <div class="portfolio-item__link button button_border button_white button_hover-slide text-hover-color-blue">
+                                        Посмотреть проект
+                                    </div>
+                                </a>
+                            </article>
+                            <article class="portfolio__item portfolio-item swiper-slide">
+                                <div class="portfolio-item__img" style="background-image: url(./img/portfolio-item-2.png);"></div>
+                                <a href="#" class="portfolio-item__body">
+                                    <h3 class="portfolio-item__title text-color-white">
+                                        Лендинг для стоматологии
+                                    </h3>
+                                    <div class="portfolio-item__link button button_border button_white button_hover-slide text-hover-color-blue">
+                                        Посмотреть проект
+                                    </div>
+                                </a>
+                            </article>
+                            <article class="portfolio__item portfolio-item swiper-slide">
+                                <div class="portfolio-item__img" style="background-image: url(./img/portfolio-item.png);"></div>
+                                <a href="#" class="portfolio-item__body">
+                                    <h3 class="portfolio-item__title text-color-white">
+                                        Лендинг для стоматологии
+                                    </h3>
+                                    <div class="portfolio-item__link button button_border button_white button_hover-slide text-hover-color-blue">
+                                        Посмотреть проект
+                                    </div>
+                                </a>
+                            </article>
+                            <article class="portfolio__item portfolio-item swiper-slide">
+                                <div class="portfolio-item__img" style="background-image: url(./img/portfolio-item-2.png);"></div>
+                                <a href="#" class="portfolio-item__body">
+                                    <h3 class="portfolio-item__title text-color-white">
+                                        Лендинг для стоматологии
+                                    </h3>
+                                    <div class="portfolio-item__link button button_border button_white button_hover-slide text-hover-color-blue">
+                                        Посмотреть проект
+                                    </div>
+                                </a>
+                            </article>
+                        </div>
+                    </div>
+                </li>
+                <li id="portfolio-page-4" class="portfolio__page" data-tab-name="portfolio-tabs" data-tab-page>
+                    <div class="portfolio__grid">
+                        <article class="portfolio__item portfolio-item">
+                            <div class="portfolio-item__img" style="background-image: url(./img/portfolio-item.png);"></div>
+                            <a href="#" class="portfolio-item__body">
+                                <h3 class="portfolio-item__title text-color-white">
+                                    Лендинг для стоматологии
+                                </h3>
+                                <div class="portfolio-item__link button button_border button_white button_hover-slide text-hover-color-blue">
+                                    Посмотреть проект
+                                </div>
+                            </a>
+                        </article>
+                        <article class="portfolio__item portfolio-item">
+                            <div class="portfolio-item__img" style="background-image: url(./img/portfolio-item.png);"></div>
+                            <a href="#" class="portfolio-item__body">
+                                <h3 class="portfolio-item__title text-color-white">
+                                    Лендинг для стоматологии
+                                </h3>
+                                <div class="portfolio-item__link button button_border button_white button_hover-slide text-hover-color-blue">
+                                    Посмотреть проект
+                                </div>
+                            </a>
+                        </article>
+                        <article class="portfolio__item portfolio-item">
+                            <div class="portfolio-item__img" style="background-image: url(./img/portfolio-item.png);"></div>
+                            <a href="#" class="portfolio-item__body">
+                                <h3 class="portfolio-item__title text-color-white">
+                                    Лендинг для стоматологии
+                                </h3>
+                                <div class="portfolio-item__link button button_border button_white button_hover-slide text-hover-color-blue">
+                                    Посмотреть проект
+                                </div>
+                            </a>
+                        </article>
+                        <article class="portfolio__item portfolio-item">
+                            <div class="portfolio-item__img" style="background-image: url(./img/portfolio-item-2.png);"></div>
+                            <a href="#" class="portfolio-item__body">
+                                <h3 class="portfolio-item__title text-color-white">
+                                    Лендинг для стоматологии
+                                </h3>
+                                <div class="portfolio-item__link button button_border button_white button_hover-slide text-hover-color-blue">
+                                    Посмотреть проект
+                                </div>
+                            </a>
+                        </article>
+                        <article class="portfolio__item portfolio-item">
+                            <div class="portfolio-item__img" style="background-image: url(./img/portfolio-item.png);"></div>
+                            <a href="#" class="portfolio-item__body">
+                                <h3 class="portfolio-item__title text-color-white">
+                                    Лендинг для стоматологии
+                                </h3>
+                                <div class="portfolio-item__link button button_border button_white button_hover-slide text-hover-color-blue">
+                                    Посмотреть проект
+                                </div>
+                            </a>
+                        </article>
+                        <article class="portfolio__item portfolio-item">
+                            <div class="portfolio-item__img" style="background-image: url(./img/portfolio-item-2.png);"></div>
+                            <a href="#" class="portfolio-item__body">
+                                <h3 class="portfolio-item__title text-color-white">
+                                    Лендинг для стоматологии
+                                </h3>
+                                <div class="portfolio-item__link button button_border button_white button_hover-slide text-hover-color-blue">
+                                    Посмотреть проект
+                                </div>
+                            </a>
+                        </article>
+                        <article class="portfolio__item portfolio-item portfolio-item_big">
+                            <div class="portfolio-item__img" style="background-image: url(./img/portfolio-item-big.png);"></div>
+                            <a href="#" class="portfolio-item__body">
+                                <h3 class="portfolio-item__title text-color-white">
+                                    Лендинг для стоматологии
+                                </h3>
+                                <div class="portfolio-item__link button button_border button_white button_hover-slide text-hover-color-blue">
+                                    Посмотреть проект
+                                </div>
+                            </a>
+                        </article>
+                    </div>
+                    <div class="portfolio__swiper js-portfolio-swiper">
+                        <div class="swiper-wrapper">
+                            <article class="portfolio__item portfolio-item swiper-slide">
+                                <div class="portfolio-item__img" style="background-image: url(./img/portfolio-item.png);"></div>
+                                <a href="#" class="portfolio-item__body">
+                                    <h3 class="portfolio-item__title text-color-white">
+                                        Лендинг для стоматологии
+                                    </h3>
+                                    <div class="portfolio-item__link button button_border button_white button_hover-slide text-hover-color-blue">
+                                        Посмотреть проект
+                                    </div>
+                                </a>
+                            </article>
+                            <article class="portfolio__item portfolio-item swiper-slide">
+                                <div class="portfolio-item__img" style="background-image: url(./img/portfolio-item.png);"></div>
+                                <a href="#" class="portfolio-item__body">
+                                    <h3 class="portfolio-item__title text-color-white">
+                                        Лендинг для стоматологии
+                                    </h3>
+                                    <div class="portfolio-item__link button button_border button_white button_hover-slide text-hover-color-blue">
+                                        Посмотреть проект
+                                    </div>
+                                </a>
+                            </article>
+                            <article class="portfolio__item portfolio-item swiper-slide">
+                                <div class="portfolio-item__img" style="background-image: url(./img/portfolio-item.png);"></div>
+                                <a href="#" class="portfolio-item__body">
+                                    <h3 class="portfolio-item__title text-color-white">
+                                        Лендинг для стоматологии
+                                    </h3>
+                                    <div class="portfolio-item__link button button_border button_white button_hover-slide text-hover-color-blue">
+                                        Посмотреть проект
+                                    </div>
+                                </a>
+                            </article>
+                            <article class="portfolio__item portfolio-item swiper-slide">
+                                <div class="portfolio-item__img" style="background-image: url(./img/portfolio-item.png);"></div>
+                                <a href="#" class="portfolio-item__body">
+                                    <h3 class="portfolio-item__title text-color-white">
+                                        Лендинг для стоматологии
+                                    </h3>
+                                    <div class="portfolio-item__link button button_border button_white button_hover-slide text-hover-color-blue">
+                                        Посмотреть проект
+                                    </div>
+                                </a>
+                            </article>
+                            <article class="portfolio__item portfolio-item swiper-slide">
+                                <div class="portfolio-item__img" style="background-image: url(./img/portfolio-item-2.png);"></div>
+                                <a href="#" class="portfolio-item__body">
+                                    <h3 class="portfolio-item__title text-color-white">
+                                        Лендинг для стоматологии
+                                    </h3>
+                                    <div class="portfolio-item__link button button_border button_white button_hover-slide text-hover-color-blue">
+                                        Посмотреть проект
+                                    </div>
+                                </a>
+                            </article>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="button-center">
+                <a
+                    href="#"
+                    class="button button_white button_hover-slide button_active-slide button_border button_white text-hover-color-blue text-active-color-blue text-uppercase portfolio__link"
+                >
+                    Посмотреть все проекты
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="reviews">
+        <div class="container reviews__container">
+            <h2 class="section-title font-bebas reviews__title">
+                <span class="text-color-white text-rounded text-bg-blue font-bebas">Отзывы</span> о нашей работе
+            </h2>
+            <div class="reviews__swiper swiper js-reviews-swiper">
+                <div class="swiper-wrapper reviews__track">
+                    <div class="swiper-slide reviews__slide review-item">
+                        <div class="review-item__content">
+                            <img src="./img/review-avatar.png" alt="avatar" class="review-item__avatar">
+                            <span class="review-item__name">Дмитрий Малышев</span>
+                            <small class="review-item__bio">Директор по ИТ, ЗАО «Русские Башни»</small>
+                            <div class="review-item__body">
+                                <p>
+                                    Спасибо агентству Крупное Дело за чёткое и профессиональное решение проблем с сайтом rtowers.ru, а так же корпоративным порталом Битрикс24.
+                                </p>
+                                <p>
+                                    Все работы выполнены в срок.
+                                </p>
+                                <p>
+                                    Коммуникация с агентством отличная.
+                                </p>
+                                <p>
+                                    Рекомендуем компанию как надёжных партнёров.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="review-item__letter">
+                            <img src="./img/review-letter.jpg" class="review-item__letter-img" alt="letter-preview">
+                            <span class="review-item__open">Посмотреть письмо</span>
+                        </div>
+                    </div>
+                    <div class="swiper-slide reviews__slide review-item">
+                        <div class="review-item__content">
+                            <img src="./img/review-avatar.png" alt="avatar" class="review-item__avatar">
+                            <span class="review-item__name">Дмитрий Малышев</span>
+                            <small class="review-item__bio">Директор по ИТ, ЗАО «Русские Башни»</small>
+                            <div class="review-item__body">
+                                <p>
+                                    Спасибо агентству Крупное Дело за чёткое и профессиональное решение проблем с сайтом rtowers.ru, а так же корпоративным порталом Битрикс24.
+                                </p>
+                                <p>
+                                    Все работы выполнены в срок.
+                                </p>
+                                <p>
+                                    Коммуникация с агентством отличная.
+                                </p>
+                                <p>
+                                    Рекомендуем компанию как надёжных партнёров.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="review-item__letter">
+                            <img src="./img/review-letter.jpg" class="review-item__letter-img" alt="letter-preview">
+                            <span class="review-item__open">Посмотреть письмо</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination reviews__pagination"></div>
+                <button class="button reviews__navigator reviews__navigator_prev swiper__button swiper__button_prev">
+                    <svg>
+                        <use xlink:href="./img/svg-sprite.svg#swiper-arrow"></use>
+                    </svg>
+                </button>
+                <button class="button reviews__navigator reviews__navigator_next swiper__button swiper__button_next">
+                    <svg>
+                        <use xlink:href="./img/svg-sprite.svg#swiper-arrow"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+    <section class="clients">
+        <div class="container">
+            <div class="clients__head">
+                <h2 class="section-title clients__title text-uppercase font-bebas">
+                    наши клиенты
+                </h2>
+                <p class="clients__subtitle">Короткий текст в виде подзаголовока раскрывающий суть блока</p>
+            </div>
+            <div class="clients__grid">
+                <a href="#" class="clients__item">
+                    <img src="./img/client-logo-1.png" class="clients__item-logo" alt="client-logo">
+                </a>
+                <a href="#" class="clients__item">
+                    <img src="./img/client-logo-2.png" class="clients__item-logo" alt="client-logo">
+                </a>
+                <a href="#" class="clients__item">
+                    <img src="./img/client-logo-3.png" class="clients__item-logo" alt="client-logo">
+                </a>
+                <a href="#" class="clients__item">
+                    <img src="./img/client-logo-4.png" class="clients__item-logo" alt="client-logo">
+                </a>
+                <a href="#" class="clients__item">
+                    <img src="./img/client-logo-3.png" class="clients__item-logo" alt="client-logo">
+                </a>
+                <a href="#" class="clients__item">
+                    <img src="./img/client-logo-4.png" class="clients__item-logo" alt="client-logo">
+                </a>
+                <a href="#" class="clients__item">
+                    <img src="./img/client-logo-2.png" class="clients__item-logo" alt="client-logo">
+                </a>
+                <a href="#" class="clients__item">
+                    <img src="./img/client-logo-1.png" class="clients__item-logo" alt="client-logo">
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="callback">
+        <div class="container">
+            <h2 class="section-title callback__title">
+                <span class="text-color-white font-bebas">Обсудим</span> <span class="text-color-blue text-bg-white text-rounded font-bebas">ваш проект?</span>
+            </h2>
+            <div class="callback__form">
+                <form class="recall-form callback__form-body" name="callback-form" data-recall-form>
+    <span class="recall-form__title text-weight-bold">Выберите способ связи</span>
+
+    <div class="recall-form__methods">
+        <label class="recall-form__method-label">
+            <input type="radio" class="recall-form__method-radio" name="callback-form-method" checked>
+            <span class="button button_blue button_border button_active-slide text-active-color-white recall-form__method-button">
+                <svg class="recall-form__method-svg">
+                    <use xlink:href="./img/svg-sprite.svg#phone"></use>
+                </svg>
+                Телефон
+            </span>
+        </label>
+        <label class="recall-form__method-label">
+            <input type="radio" class="recall-form__method-radio" name="callback-form-method">
+            <span class="button button_blue button_border button_active-slide text-active-color-white recall-form__method-button">
+                <svg class="recall-form__method-svg">
+                    <use xlink:href="./img/svg-sprite.svg#viber"></use>
+                </svg>
+                Viber
+            </span>
+        </label>
+        <label class="recall-form__method-label">
+            <input type="radio" class="recall-form__method-radio" name="callback-form-method">
+            <span class="button button_blue button_border button_active-slide text-active-color-white recall-form__method-button">
+                <svg class="recall-form__method-svg">
+                    <use xlink:href="./img/svg-sprite.svg#whats-app"></use>
+                </svg>
+                What'sApp
+            </span>
+        </label>
+        <label class="recall-form__method-label">
+            <input type="radio" class="recall-form__method-radio" name="callback-form-method">
+            <span class="button button_blue button_border button_active-slide text-active-color-white recall-form__method-button">
+                <svg class="recall-form__method-svg">
+                    <use xlink:href="./img/svg-sprite.svg#tg"></use>
+                </svg>
+                Telegram
+            </span>
+        </label>
+    </div>
+    <input type="tel" name="callback-form-phone" class="recall-form__input" placeholder="Введите ваш телефон">
+    <button class="button button_blue button_full-color button_rounded button_shadow text-color-white recall-form__submit">
+        Позвоните мне
+    </button>
+</form>
+            </div>
+        </div>
+    </section>
+    <section class="blog">
+        <div class="blog__content">
+            <div class="container">
+                <div class="blog__grid">
+                    <article class="blog__item article-preview">
+                        <h3 class="article-preview__title">Потеряют ли ссылки свое значение в SEO?</h3>
+                        <p class="article-preview__text">
+                            До недавнего времени ситуация была ясна: чем больше страниц (желательно наиболее ценных) ссылается в своем содержании...
+                        </p>
+                        <a href="#" class="article-preview__link text-color-blue">
+                            Читать статью
+                            <svg>
+                                <use xlink:href="./img/svg-sprite.svg#swiper-arrow"></use>
+                            </svg>
+                        </a>
+                    </article>
+                    
+                    <article class="blog__item article-preview">
+                        <h3 class="article-preview__title">Потеряют ли ссылки свое значение в SEO?</h3>
+                        <p class="article-preview__text">
+                            До недавнего времени ситуация была ясна: чем больше страниц (желательно наиболее ценных) ссылается в своем содержании...
+                        </p>
+                        <a href="#" class="article-preview__link text-color-blue">
+                            Читать статью
+                            <svg>
+                                <use xlink:href="./img/svg-sprite.svg#swiper-arrow"></use>
+                            </svg>
+                        </a>
+                    </article>
+                    
+                    <article class="blog__item article-preview">
+                        <h3 class="article-preview__title">Потеряют ли ссылки свое значение в SEO?</h3>
+                        <p class="article-preview__text">
+                            До недавнего времени ситуация была ясна: чем больше страниц (желательно наиболее ценных) ссылается в своем содержании...
+                        </p>
+                        <a href="#" class="article-preview__link text-color-blue">
+                            Читать статью
+                            <svg>
+                                <use xlink:href="./img/svg-sprite.svg#swiper-arrow"></use>
+                            </svg>
+                        </a>
+                    </article>
+                    
+                    <article class="blog__item article-preview">
+                        <h3 class="article-preview__title">Потеряют ли ссылки свое значение в SEO?</h3>
+                        <p class="article-preview__text">
+                            До недавнего времени ситуация была ясна: чем больше страниц (желательно наиболее ценных) ссылается в своем содержании...
+                        </p>
+                        <a href="#" class="article-preview__link text-color-blue">
+                            Читать статью
+                            <svg>
+                                <use xlink:href="./img/svg-sprite.svg#swiper-arrow"></use>
+                            </svg>
+                        </a>
+                    </article>
+                </div>
+
+                <div class="button-center">
+                    <a href="#" class="button button_blue button_hover-slide button_border text-hover-color-white text-uppercase blog__link">
+                        Все статьи
+                        <svg>
+                            <use xlink:href="./img/svg-sprite.svg#link-arrow"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <ul class="footer__products products">
+            <li class="products__item">
+                <img src="./img/product_1.png" alt="product_name" class="products__img">
+            </li>
+            <li class="products__item">
+                <img src="./img/product_2.png" alt="product_name" class="products__img">
+            </li>
+            <li class="products__item">
+                <img src="./img/product_3.png" alt="product_name" class="products__img">
+            </li>
+            <li class="products__item">
+                <img src="./img/product_4.png" alt="product_name" class="products__img">
+            </li>
+            <li class="products__item">
+                <img src="./img/product_5.png" alt="product_name" class="products__img">
+            </li>
+            <li class="products__item">
+                <img src="./img/product_6.png" alt="product_name" class="products__img">
+            </li>
+            <li class="products__item">
+                <img src="./img/product_7.png" alt="product_name" class="products__img">
+            </li>
+            <li class="products__item">
+                <img src="./img/product_8.png" alt="product_name" class="products__img">
+            </li>
+            <li class="products__item">
+                <img src="./img/product_9.png" alt="product_name" class="products__img">
+            </li>
+        </ul>
+
+        <div class="footer__row">
+            <a href="./" class="logo footer__logo footer__desktop">
+                <img src="./img/logo-footer.png" alt="logo" class="logo__img">
+            </a>
+
+            <a href="#" class="footer__presentation footer__desktop">
+                Посмотреть презентацию
+            </a>
+
+            <div class="footer__mobile-block">
+                <a href="./" class="logo footer__logo">
+                    <img src="./img/logo-footer.png" alt="logo" class="logo__img">
+                </a>
+
+                <a href="#" class="footer__presentation">
+                    Посмотреть презентацию
+                </a>
+            </div>
+
+            <ul class="socials footer__socials socials_footer">
+    <li class="socials__item">
+        <a href="#" class="socials__link socials__link_grey">
+            <svg class="socials__svg socials__svg_grey">
+                <use xlink:href="./img/svg-sprite.svg#vk"></use>
+            </svg>
+        </a>
+    </li>
+    <li class="socials__item">
+        <a href="#" class="socials__link socials__link_grey">
+            <svg class="socials__svg socials__svg_grey">
+                <use xlink:href="./img/svg-sprite.svg#tg"></use>
+            </svg>
+        </a>
+    </li>
+    <li class="socials__item">
+        <a href="#" class="socials__link socials__link_grey">
+            <svg class="socials__svg socials__svg_grey">
+                <use xlink:href="./img/svg-sprite.svg#fb"></use>
+            </svg>
+        </a>
+    </li>
+    <li class="socials__item">
+        <a href="#" class="socials__link socials__link_grey">
+            <svg class="socials__svg socials__svg_grey">
+                <use xlink:href="./img/svg-sprite.svg#twitter"></use>
+            </svg>
+        </a>
+    </li>
+</ul>
+            
+            <div class="footer__email">
+                <a href="mailto:info@krupnoedelo.ru" class="footer__link footer__link_normal">
+                    info@krupnoedelo.ru
+                </a>
+            </div>
+            
+            <div class="recall recall_align-start footer__recall">
+    <a href="#" class="recall__phone footer__link footer__link_normal">8 812 987-47-29</a>
+    <button class="button button_inline recall__button_blue button_hover-underline">
+        Заказать звонок
+    </button>
+</div>
+        </div>
+    </div>
+</footer>
+
+<div class="popup" data-popup="consult-popup" data-popup-close>
+    <div class="popup__body">
+        <button class="button popup__close" data-popup-close></button>
+
+        <h3 class="popup__title font-bebas">Получить консультацию</h3>
+        <form class="recall-form popup__form-body" name="popup-form" data-recall-form>
+    <span class="recall-form__title text-weight-bold">Выберите способ связи</span>
+
+    <div class="recall-form__methods">
+        <label class="recall-form__method-label">
+            <input type="radio" class="recall-form__method-radio" name="popup-form-method" checked>
+            <span class="button button_blue button_border button_active-slide text-active-color-white recall-form__method-button">
+                <svg class="recall-form__method-svg">
+                    <use xlink:href="./img/svg-sprite.svg#phone"></use>
+                </svg>
+                Телефон
+            </span>
+        </label>
+        <label class="recall-form__method-label">
+            <input type="radio" class="recall-form__method-radio" name="popup-form-method">
+            <span class="button button_blue button_border button_active-slide text-active-color-white recall-form__method-button">
+                <svg class="recall-form__method-svg">
+                    <use xlink:href="./img/svg-sprite.svg#viber"></use>
+                </svg>
+                Viber
+            </span>
+        </label>
+        <label class="recall-form__method-label">
+            <input type="radio" class="recall-form__method-radio" name="popup-form-method">
+            <span class="button button_blue button_border button_active-slide text-active-color-white recall-form__method-button">
+                <svg class="recall-form__method-svg">
+                    <use xlink:href="./img/svg-sprite.svg#whats-app"></use>
+                </svg>
+                What'sApp
+            </span>
+        </label>
+        <label class="recall-form__method-label">
+            <input type="radio" class="recall-form__method-radio" name="popup-form-method">
+            <span class="button button_blue button_border button_active-slide text-active-color-white recall-form__method-button">
+                <svg class="recall-form__method-svg">
+                    <use xlink:href="./img/svg-sprite.svg#tg"></use>
+                </svg>
+                Telegram
+            </span>
+        </label>
+    </div>
+    <input type="tel" name="popup-form-phone" class="recall-form__input" placeholder="Введите ваш телефон">
+    <button class="button button_blue button_full-color button_rounded button_shadow text-color-white recall-form__submit">
+        Позвоните мне
+    </button>
+</form>
+    </div>
+</div>
+
+<div class="popup" data-popup="success-popup" data-popup-close>
+    <div class="popup__body popup__body_center">
+        <button class="button popup__close" data-popup-close></button>
+
+        <h3 class="popup__title font-bebas">Спасибо!</h3>
+        <p class="popup__text">
+            Наш менеджер уже вводит ваш номер телефона, чтобы вам написать или позвонить
+        </p>
+    </div>
+</div>
+</body>
+</html>
