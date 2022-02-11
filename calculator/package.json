@@ -43,7 +43,7 @@
     "gulp-sass": "^4.1.0",
     "gulp-sourcemaps": "^3.0.0",
     "gulp-ttf2woff2": "^3.0.0",
-    "node-sass": "^5.0.0"
+    "node-sass": "^7.0.0"
   },
   "dependencies": {
     "normalize.css": "^8.0.1",
